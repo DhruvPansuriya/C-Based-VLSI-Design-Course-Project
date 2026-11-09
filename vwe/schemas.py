@@ -11,8 +11,9 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator
 from referencing import Registry, Resource
+from .config import data_path
 
-SCHEMA_DIR = Path(__file__).resolve().parent.parent / "schemas"
+SCHEMA_DIR = data_path("schemas")
 
 
 @lru_cache(maxsize=None)
