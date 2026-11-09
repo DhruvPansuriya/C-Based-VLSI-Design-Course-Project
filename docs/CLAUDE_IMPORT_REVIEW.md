@@ -8,7 +8,7 @@ The prototype is a useful starting point. Its 11 original tests pass locally wit
 
 | Finding | Evidence / concrete failure | Required action and status |
 |---|---|---|
-| Tool classification can report PROVED after a contract UB failure | Feeding identical SAT/Z3 results containing only `main.pointer_dereference.1: FAILURE` to `classify(..., is_assert, 'I')` returns PROVED. The selected assertion set is empty. | Confirmed by a local synthetic-result reproduction. Add fail-closed classification and regression tests before expanding harness coverage. Complete property-inventory checks remain T05. |
+| Tool classification can report PROVED after a contract UB failure | Feeding identical SAT/Z3 results containing only `main.pointer_dereference.1: FAILURE` to `classify(..., is_assert, 'I')` returns PROVED. The selected assertion set is empty. | Confirmed by a local synthetic-result reproduction; fixed in the T05 prerequisite with regression tests. Complete property-inventory, exact-witness confirmation and general harness checks remain T05. |
 | Proposed exact-region validator proves only an overapproximation | T06 proves P0 safe outside PRED and finds one UB inside. P0 UB only at x=0 and PRED=(x<=1) can satisfy both checks although x=1 is safe. | Never expose this as exact B_ub. Require both inclusions through total semantics/a certified finite model, or retain an overapproximation with no exact-region claims and abstain where exactness is needed. T06 correction required. |
 | V-4 approximation is not universal realizability | T07 asks for some x,y, including a few stored witnesses. `phi(x,y)=(x==0 && y==0)` has a witness but no valid output at x=1. | Constructive joint witness checked for every x, finite exhaustive output checking, or proper quantified queries with UNKNOWN propagation. T07 correction required. |
 | Scope disagreement is missing in decision evidence | Current Evidence has no outside-clause Ext conflict field. Example 3 can violate every narrow interpretation even though Ext accepts the larger repair. | Add explicit scope conflict/UNKNOWN veto before E2 aggregation in T08; adding reach alone cannot change Allowed. |
@@ -31,3 +31,7 @@ The prototype is a useful starting point. Its 11 original tests pass locally wit
 4. Continue T02/T03, then harnesses and the corrected region/validation design. Do not implement the unsound approximations above merely to match a task card.
 
 No human is added to the runtime decision loop. Missing facts/features produce a recorded unsupported/inconclusive result. Offline research/specification work remains separate.
+
+## Follow-up verification
+
+T00 and T01 are implemented and pushed. Hosted CI passes on Python3.10 and Python3.12, with installed Linux CBMC/Z3 golden checks. The first hosted run caught a Python3.10 dependency compatibility issue; version markers fixed it. The independent T05 prerequisite classifier now refuses contract UB, absent selected assertions, inconsistent inventories, malformed JSON, missing tool binaries and invalid process statuses. It retains a genuine common candidate-safety failure even if later candidate-safety checks remain UNKNOWN; that narrow case is explicitly declared, never used as a proof of unchecked properties. This does not complete general witness replay, linked-GOTO path-cut instrumentation, or profile/intent inference.
