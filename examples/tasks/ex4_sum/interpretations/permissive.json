@@ -1,0 +1,34 @@
+{
+  "id": "ex4_sum.permissive",
+  "provenance": {
+    "source": "handwritten"
+  },
+  "request_type": "T4",
+  "shape": {
+    "buffers": {
+      "a": "n"
+    },
+    "alias": "disjoint",
+    "bounds": {
+      "n": [
+        1,
+        4
+      ]
+    },
+    "value_bounds": {
+      "a": [
+        -1000,
+        1000
+      ]
+    }
+  },
+  "clauses": [
+    {
+      "zone": "n > 0",
+      "behaviour": "out_ret == sum(i, 0, n, a[i])"
+    }
+  ],
+  "ext": "out_ret == sum(i, 0, n, a[i])",
+  "reach": "n >= 1",
+  "nl_rendering": "Sum every logical element on the explicitly bounded caller domain."
+}
