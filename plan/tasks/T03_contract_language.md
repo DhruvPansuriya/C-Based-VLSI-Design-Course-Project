@@ -36,3 +36,8 @@ python -m vwe.contract.emit 'n == 0 ? (out_ret == INT_MIN && out_idx[0] == -1) :
 
 - Comparisons between a wide arithmetic result and a narrow output must cast the output to `wide` first.
 - Integer division by zero inside a contract is UB. V-G (T07) catches it; do not silently guard it here.
+
+
+## Implementation note — 22 November 2026
+
+Implemented under vwe/contract; API/limits: docs/T03_CONTRACTS.md. `make contracts` emits28 stored example observers, explicitly unvalidated. Arithmetic is widened to signed64, but V-G must still prove representability/UB-freedom. Old-output permission never substitutes for guarded definedness. Resource/width limits use ContractUnsupported and must remain UNKNOWN in T07. Logical/conditional guards are retained; quantifier bodies are eager across the finite range. Loop limits are exported for T04 unwinding.

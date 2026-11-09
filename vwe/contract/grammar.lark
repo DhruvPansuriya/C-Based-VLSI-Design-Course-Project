@@ -1,0 +1,38 @@
+?start: conditional
+?conditional: logical_or
+            | logical_or "?" conditional ":" conditional -> conditional
+?logical_or: logical_and (OR logical_and)* -> binary_chain
+?logical_and: bit_or (AND bit_or)* -> binary_chain
+?bit_or: bit_xor (BOR bit_xor)* -> binary_chain
+?bit_xor: bit_and (BXOR bit_and)* -> binary_chain
+?bit_and: equality (BAND equality)* -> binary_chain
+?equality: relational (EQ relational)* -> binary_chain
+?relational: shift (REL shift)* -> binary_chain
+?shift: sum_expr (SHIFT sum_expr)* -> binary_chain
+?sum_expr: product (ADD product)* -> binary_chain
+?product: unary (MUL unary)* -> binary_chain
+?unary: UNARY unary -> unary
+      | postfix
+?postfix: primary ("[" conditional "]")* -> postfix
+?primary: INT -> integer
+        | "true" -> true
+        | "false" -> false
+        | NAME "(" arguments? ")" -> call
+        | NAME -> name
+        | "(" conditional ")"
+arguments: conditional ("," conditional)*
+OR: "||"
+AND: "&&"
+BOR: "|"
+BXOR: "^"
+BAND: "&"
+EQ: "==" | "!="
+REL: "<=" | ">=" | "<" | ">"
+SHIFT.2: "<<" | ">>"
+ADD: "+" | "-"
+MUL: "*" | "/" | "%"
+UNARY: "-" | "!" | "~"
+INT: /0[xX][0-9a-fA-F]+|[0-9]+/
+NAME: /[A-Za-z_][A-Za-z0-9_]*/
+%import common.WS
+%ignore WS
