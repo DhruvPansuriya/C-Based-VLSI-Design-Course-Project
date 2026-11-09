@@ -355,6 +355,10 @@ def analyze(text: str, fn: str) -> Analysis:
     typedefs = {n.name: n.type for n in ast.ext if isinstance(n, C.Typedef)}
     structs: dict[str, C.Struct] = {}
     class Structs(C.NodeVisitor):
+        def visit_FuncDef(self, n: C.FuncDef) -> None:
+            # Block-scope tags must never overwrite the public layout map.
+            # A full scoped type resolver is outside this frontend profile.
+            pass
         def visit_Struct(self, n: C.Struct) -> None:
             if n.name and n.decls is not None: structs[n.name] = n
             self.generic_visit(n)
