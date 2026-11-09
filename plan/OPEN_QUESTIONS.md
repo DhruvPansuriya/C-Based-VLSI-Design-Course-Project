@@ -25,3 +25,5 @@ Record each answer here with the date, the command that was run and its output, 
 - Q14: the golden selector can ignore failing contract properties; reproduced as PROVED with a `main.pointer_dereference` failure. A targeted T05 prerequisite fix must precede generalization.
 
 Details and scenarios: `docs/CLAUDE_IMPORT_REVIEW.md`.
+
+- Q15: first hosted CI exposed rpds-py 2026.9.1 requiring Python>=3.11. Preserve advertised Python3.10 support with verified rpds-py0.30.0 under a Python<3.11 marker; pin typing_extensions4.15.0 for Python<3.13. Matrix jobs now run independently. The first run installed both Linux verification tools successfully, but did not complete tests.
