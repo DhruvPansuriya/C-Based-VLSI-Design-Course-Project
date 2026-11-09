@@ -12,11 +12,12 @@ Working branch: `implementation-start`. Original archive preserved in the import
 | T03 contract language | complete and pushed | 229 tests; 525 C-vs-Python cases; 28 emitted observers; loop metadata; V-G smoke test |
 | T04 harness generator | complete and pushed; hosted CI green | Seven generated job families compile, 10/10 generated verdicts match the handwritten examples, exact-shape and pointer/field regressions pass |
 | T05 tool pipeline | complete and pushed | Audited path cuts, exact malloc, initialization checks, dual backends, planned assertions, vacuity, and ESBMC adapter with Linux confirmation in CI |
-| T06 reference regions | complete locally | Exact argmax region, safe overapproximation, empty/wrong region probes, and uninitialized-read diagnostics |
-| T07–T22 | planned | corrections in the import review apply before implementing affected cards |
+| T06 reference regions | complete and pushed | Exact argmax region, safe overapproximation, empty/wrong region probes, and uninitialized-read diagnostics |
+| T07 interpretation validation | complete locally | Proven joint output tuples, explicit UNKNOWN retention, semantic class grouping, and stable freeze hashes |
+| T08–T22 | planned | corrections in the import review apply before implementing affected cards |
 
 Hosted CI is green on Python3.10 and Python3.12 for T00/T01. First hosted run exposed a Python3.10 dependency mismatch, fixed in d43a092. Safety commit c0884a5 also passed hosted CI on both Python versions: https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45022723368 . Docker, ESBMC, Vitis and live provider execution have not been repeated on this macOS host. Imported Linux logs remain labeled as imported.
 
-Next implementation card: T07 interpretation validation. The general verification CLI is still T08; no end-to-end automation is claimed yet.
+Next implementation card: T08 verification orchestration and reports. The general verification CLI is still T08; no end-to-end automation is claimed yet.
 
 T02 commit87b3909 passed hosted CI on Python3.10/3.12 while T03 work continued: https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45027090279 .
