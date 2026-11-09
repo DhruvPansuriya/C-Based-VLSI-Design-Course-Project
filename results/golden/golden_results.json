@@ -1,0 +1,185 @@
+{
+  "cbmc_version": "6.11.0 (cbmc-6.11.0)",
+  "rows": [
+    {
+      "example": "ex1_saturate",
+      "variant": "1",
+      "expected": [
+        "ACCEPT",
+        "E2"
+      ],
+      "got": [
+        "ACCEPT",
+        "E2"
+      ],
+      "reason": "satisfies every interpretation",
+      "witness": null,
+      "match": true
+    },
+    {
+      "example": "ex1_saturate",
+      "variant": "2",
+      "expected": [
+        "ACCEPT",
+        "E2"
+      ],
+      "got": [
+        "ACCEPT",
+        "E2"
+      ],
+      "reason": "satisfies every interpretation",
+      "witness": null,
+      "match": true
+    },
+    {
+      "example": "ex1_saturate",
+      "variant": "3",
+      "expected": [
+        "REJECT",
+        "E1"
+      ],
+      "got": [
+        "REJECT",
+        "E1"
+      ],
+      "reason": "regression outside B_max rejected by every Ext",
+      "witness": {
+        "a": "0",
+        "b": "0"
+      },
+      "match": true
+    },
+    {
+      "example": "ex1_saturate",
+      "variant": "4",
+      "expected": [
+        "REJECT",
+        "E2"
+      ],
+      "got": [
+        "REJECT",
+        "E2"
+      ],
+      "reason": "violates every interpretation",
+      "witness": {
+        "a": "153",
+        "b": "214"
+      },
+      "match": true
+    },
+    {
+      "example": "ex1_saturate",
+      "variant": "5",
+      "expected": [
+        "REJECT",
+        "E2"
+      ],
+      "got": [
+        "REJECT",
+        "E2"
+      ],
+      "reason": "violates every interpretation",
+      "witness": {
+        "a": "231",
+        "b": "108"
+      },
+      "match": true
+    },
+    {
+      "example": "ex2_argmax",
+      "variant": "1",
+      "expected": [
+        "ACCEPT",
+        "E2"
+      ],
+      "got": [
+        "ACCEPT",
+        "E2"
+      ],
+      "reason": "satisfies every interpretation",
+      "witness": null,
+      "match": true
+    },
+    {
+      "example": "ex2_argmax",
+      "variant": "2",
+      "expected": [
+        "REJECT",
+        "E1"
+      ],
+      "got": [
+        "REJECT",
+        "E1"
+      ],
+      "reason": "regression outside B_max rejected by every Ext",
+      "witness": {
+        "n": "3"
+      },
+      "match": true
+    },
+    {
+      "example": "ex2_argmax",
+      "variant": "3",
+      "expected": [
+        "REJECT",
+        "E0"
+      ],
+      "got": [
+        "REJECT",
+        "E0"
+      ],
+      "reason": "computed fact: E0: p1_argmax.pointer_dereference.41 dereference failure: pointer outside object bounds in a[(signed long int)i]",
+      "witness": {
+        "n": "3"
+      },
+      "match": true
+    },
+    {
+      "example": "ex4_sum",
+      "variant": "1",
+      "expected": [
+        "ACCEPT",
+        "E2"
+      ],
+      "got": [
+        "ACCEPT",
+        "E2"
+      ],
+      "reason": "satisfies every interpretation",
+      "witness": null,
+      "match": true
+    },
+    {
+      "example": "ex4_sum",
+      "variant": "2",
+      "expected": [
+        "REJECT",
+        "E0"
+      ],
+      "got": [
+        "REJECT",
+        "E0"
+      ],
+      "reason": "computed fact: E0: p1_sum.pointer_dereference.5 dereference failure: pointer outside object bounds in a[(signed long int)i]",
+      "witness": {
+        "n": "1"
+      },
+      "match": true
+    }
+  ],
+  "side_checks": {
+    "ex2_B_ub_is_n_eq_0": {
+      "P0 UB witnesses n": [
+        "0"
+      ],
+      "P0 safe for n>=1": true
+    },
+    "ex4_shape_n_minus_1_discarded_by_V_G": {
+      "contract UB under (n-1) shape": true,
+      "properties": [
+        "main.pointer_dereference.23",
+        "main.overflow.4"
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/schemas/task.schema.json",
+  "title": "BenchmarkTask",
+  "description": "One evaluation task. P_ref and Phi_ref are evaluation-only and must never be read by the verdict pipeline.",
+  "type": "object",
+  "required": ["task_id", "source", "function", "p0", "requests", "eval_only"],
+  "additionalProperties": false,
+  "properties": {
+    "task_id": {"type": "string"},
+    "source": {
+      "type": "object",
+      "required": ["suite", "origin"],
+      "properties": {
+        "suite": {"enum": ["CHStone", "MachSuite", "PolyBench", "Chrysalis-HLS", "IntroClass", "Codeflaws", "fresh", "fifo"]},
+        "origin": {"type": "string", "description": "URL + commit or archive hash"},
+        "license": {"type": "string"},
+        "adaptations": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "function": {"type": "string"},
+    "p0": {"type": "string", "description": "path to buggy C file"},
+    "requests": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "text", "origin"],
+        "properties": {
+          "id": {"type": "string"},
+          "text": {"type": "string"},
+          "origin": {"enum": ["brief_author", "paraphrase", "student_group", "ambiguous_variant", "injection_test"]},
+          "ambiguous": {"type": "boolean"},
+          "acceptable_readings": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "eval_only": {
+      "type": "object",
+      "required": ["p_ref", "phi_ref", "true_shape"],
+      "properties": {
+        "p_ref": {"type": "string"},
+        "phi_ref": {"type": "string", "description": "path to reference specification harness/expression file"},
+        "true_shape": {"type": "object"},
+        "true_change_zone": {"type": "string"}
+      }
+    }
+  }
+}

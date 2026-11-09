@@ -1,0 +1,9 @@
+flowchart LR
+  subgraph AD["Admitted inputs (per shape)"]
+    direction LR
+    K["Keep region: outside B_max<br/>old behaviour required"]
+    UU["Uncertain region U<br/>interpretations disagree"]
+    BM["Core change region B_min<br/>all interpretations require change"]
+    UB["Computed regions<br/>P0 UB / P0 nondeterministic"]
+  end
+  K --- UU --- BM --- UB
