@@ -53,9 +53,10 @@ descriptor limits and a wall timeout that kills the process group. ASan needs
 a large virtual address reservation, so a virtual-memory ulimit is deliberately
 not applied. Both sanitizers are required. Compilation uses the configured
 compiler and records its command and diagnostics. Unsupported platforms never
-fall back to unsandboxed execution. Hosted CI installs bubblewrap and the Ubuntu `apparmor-profiles` package,
-loads its `bwrap-userns-restrict` profile, and probes isolation before running
-tests. Ubuntu 24.04 restricts capabilities in unprivileged namespaces without
+fall back to unsandboxed execution. Hosted CI installs bubblewrap and loads the repository-owned
+`.github/bwrap.apparmor` profile for `/usr/bin/bwrap`, then probes isolation
+before running tests. The Ubuntu package did not contain the previously
+assumed `bwrap-userns-restrict` file on the hosted runner. Ubuntu 24.04 restricts capabilities in unprivileged namespaces without
 an application profile; see the [Ubuntu release notes](https://documentation.ubuntu.com/release-notes/24.04/#unprivileged-user-namespace-restrictions).
 The first hosted T09 run failed at loopback setup before tests; the profile
 setup is a CI prerequisite.
