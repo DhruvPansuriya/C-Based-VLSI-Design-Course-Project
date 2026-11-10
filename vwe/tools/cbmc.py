@@ -6,6 +6,7 @@ docs/technical-design/03_links_versions_and_verification_log.md).
 from __future__ import annotations
 
 import json
+import re
 import shutil
 import subprocess
 import time
@@ -65,15 +66,27 @@ def version() -> Optional[str]:
     return out.stdout.strip() if out.returncode == 0 else None
 
 
+def _trace_data(value: dict) -> str:
+    """Normalize the decimal integer tokens emitted by CBMC's C printer."""
+    data = value.get("data", "?")
+    if not isinstance(data, str):
+        return "?"
+    if value.get("name") == "integer":
+        match = re.fullmatch(r"([+-]?[0-9]+)(?:[uU](?:[lL]{1,2})?|[lL]{1,2}[uU]?)?", data)
+        if match:
+            return str(int(match[1], 10))
+    return data
+
+
 def _witness(trace: Sequence[dict], watch: Sequence[str]) -> Dict[str, str]:
     values: Dict[str, str] = {}
     for step in trace:
         if step.get("stepType") == "assignment" and step.get("lhs") in watch:
-            values[step["lhs"]] = step.get("value", {}).get("data", "?")
+            values[step["lhs"]] = _trace_data(step.get("value", {}))
         if step.get("stepType") == "output" and step.get("outputID") in watch:
             outputs = step.get("values", [])
             if len(outputs) == 1 and isinstance(outputs[0].get("data"), str):
-                values[step["outputID"]] = outputs[0]["data"]
+                values[step["outputID"]] = _trace_data(outputs[0])
     return values
 
 

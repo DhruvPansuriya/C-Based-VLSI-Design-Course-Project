@@ -62,6 +62,50 @@ def _initial_buffer_read(gen: Generator) -> tuple[str, int] | None:
     return init.name.name, index
 
 
+def _initial_buffer_write(gen: Generator) -> tuple[str, str] | None:
+    """A first, unconditional plain store with side-effect-free operands.
+
+    Only direct buffers and literal/input-scalar indices qualify. The RHS is
+    a literal, an input scalar, or another plain buffer read. Thus evaluation
+    either reaches the store or encounters an earlier undefined buffer access;
+    it cannot call a function, change the index, or avoid the write by looping.
+    """
+    analysis = gen.p0.sim.analysis
+    function = next(n for n in analysis.ast.ext if isinstance(n, C.FuncDef)
+                    and n.decl.name == analysis.function)
+    body = function.body.block_items or []
+    if not body or not isinstance(body[0], C.Assignment) or body[0].op != "=":
+        return None
+    statement = body[0]
+    buffers = {name for name, _, _ in gen.profile.lengths}
+
+    def scalar(node: C.Node) -> str | None:
+        if isinstance(node, C.ID):
+            symbol = gen.profile.env.symbols.get(node.name)
+            if symbol and symbol.role == "input" and node.name not in buffers:
+                return node.name
+        if isinstance(node, C.Constant) and node.type == "int":
+            try:
+                value = 0 if node.value == "0" else dimension(node.value)
+            except HarnessUnsupported:
+                return None
+            return str(value)
+        return None
+
+    def access(node: C.Node) -> tuple[str, str] | None:
+        if not isinstance(node, C.ArrayRef) or not isinstance(node.name, C.ID):
+            return None
+        index = scalar(node.subscript)
+        if node.name.name in buffers and index is not None:
+            return node.name.name, index
+        return None
+
+    target = access(statement.lvalue)
+    if target and (scalar(statement.rvalue) is not None or access(statement.rvalue)):
+        return target
+    return None
+
+
 def compute_regions(p0: Views, shape: Mapping[str, Any], out: Path, *,
                     proposed_ub: str | None = None, config: Config | None = None,
                     parallel: bool = True) -> RegionResult:
@@ -69,12 +113,14 @@ def compute_regions(p0: Views, shape: Mapping[str, Any], out: Path, *,
 
     Safety outside P plus a witness inside P certifies an overapproximation.
     Exactness additionally requires a universally failing operation inside P.
-    The initial direct-read certificate is one supported way to establish it.
+    Initial direct-read and plain-store certificates are supported ways to establish it.
     """
     gen = Generator(p0, p0, shape, config=config)
     read = _initial_buffer_read(gen)
     lengths = {name: length for name, length, _ in gen.profile.lengths}
-    fault = f"({lengths[read[0]]}) <= {read[1]}" if read else None
+    write = _initial_buffer_write(gen)
+    fault = f"({lengths[read[0]]}) <= {read[1]}" if read else (
+        f"({write[1]}) < 0 || ({lengths[write[0]]}) <= ({write[1]})" if write else None)
     if proposed_ub is None:
         proposed_ub = fault or "false"
     predicate = proposed_ub

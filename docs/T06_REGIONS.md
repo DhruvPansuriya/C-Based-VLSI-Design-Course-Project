@@ -29,3 +29,14 @@ nondeterminism. The tool currently certifies an empty defined-nondeterminism
 region when the exact UB region and deterministic exterior are both established.
 General exact nonempty regions and a broader uninitialized-read qualification
 remain open. All results are relative to the instrumented C subset and bounds.
+
+## Initial-store certificate (T10)
+
+The P0-only recognizer also supports a first unconditional plain store to a
+modeled buffer, using a literal or input-scalar index. The RHS must be a literal,
+input scalar, or direct buffer read with such an index. Calls, conditional
+stores and index side effects do not qualify. The fault predicate includes
+negative indices and indices at least the exact buffer length. Independent
+exterior safety and determinism proofs are still mandatory; a reachable
+interior and the universal first-operation fault certificate establish
+exactness. This is a narrow certificate, not general loop UB inference.

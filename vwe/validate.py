@@ -107,15 +107,19 @@ class Validator:
                 if outcome.outcome is Outcome.INCONCLUSIVE:
                     return verdict(State.UNKNOWN, outcome.note, outcome)
 
-            check = "V-2"
-            zone = " || ".join(f"({c['zone']})" for c in clauses) or "false"
-            bug = self.run(gen.gen_reference_safety(out / "bug_safety", zone))
-            if bug.outcome is Outcome.PROVED:
-                bug = self.run(gen.gen_validation(out / "bug", (interp,), "bug"))
-            if bug.outcome is Outcome.PROVED:
-                return verdict(State.INVALID, "P0 is safe and already satisfies all change clauses")
-            if bug.outcome is Outcome.INCONCLUSIVE:
-                return verdict(State.UNKNOWN, bug.note, bug)
+            # An empty-clause T5 reading requires preservation, not a repair.
+            preservation_only = interp.get("request_type") == "T5" and not clauses
+            bug = None
+            if not preservation_only:
+                check = "V-2"
+                zone = " || ".join(f"({c['zone']})" for c in clauses) or "false"
+                bug = self.run(gen.gen_reference_safety(out / "bug_safety", zone))
+                if bug.outcome is Outcome.PROVED:
+                    bug = self.run(gen.gen_validation(out / "bug", (interp,), "bug"))
+                if bug.outcome is Outcome.PROVED:
+                    return verdict(State.INVALID, "P0 is safe and already satisfies all change clauses")
+                if bug.outcome is Outcome.INCONCLUSIVE:
+                    return verdict(State.UNKNOWN, bug.note, bug)
 
             check = "V-3"
             # For the class generator, any old-value clause needs a full-profile

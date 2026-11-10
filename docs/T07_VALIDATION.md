@@ -26,3 +26,14 @@ validation remains unresolved and blocks a universal verdict.
 Tests cover the too-small sum profile, an already satisfied repair, inconsistent
 outputs, unsupported constructs that remain in the set, stable hashes, equivalent
 readings and the original argmax UB witness.
+
+## Additional constructive fragment (T10)
+
+For a disjunction, the witness planner can choose a constructive equality
+branch. It still proves the entire original relation for every modeled input
+after materializing the output tuple. A failed construction does not discard
+a satisfiable interpretation: it remains UNKNOWN without stronger evidence.
+An empty-clause T5 reading denotes preservation and does not require a P0 bug
+witness. It still requires the nonempty caller-domain, observer, reference
+safety/determinism and universal output checks. Empty repair readings retain
+the existing V-2 invalidity check.
