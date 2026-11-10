@@ -40,6 +40,9 @@ class Backends:
 class Native:
     cc: str = "gcc"
     sanitize: str = "address,undefined"
+    prepass_samples: int = 10000
+    seed: int = 0
+    prepass_seconds: int = 2
 
 
 @dataclass(frozen=True)
@@ -110,6 +113,12 @@ def load_config(path: str | Path | None = None) -> Config:
         raise ConfigError("native.cc must name an executable")
     if native.sanitize != "address,undefined":
         raise ConfigError("The supported native profile requires address,undefined")
+    if type(native.prepass_samples) is not int or not 0 <= native.prepass_samples <= 10000:
+        raise ConfigError("native.prepass_samples must be in 0..10000")
+    if type(native.seed) is not int:
+        raise ConfigError("native.seed must be an integer")
+    if type(native.prepass_seconds) is not int or not 1 <= native.prepass_seconds <= 600:
+        raise ConfigError("native.prepass_seconds must be in 1..600")
     llm = raw.get("llm", {})
     if not isinstance(llm, dict):
         raise ConfigError("llm must be a TOML table")

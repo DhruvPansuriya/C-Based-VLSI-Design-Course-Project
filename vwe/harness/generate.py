@@ -251,7 +251,7 @@ class _Builder:
         args=['&__vwe_in',f'&__vwe_{role}']+[f'__vwe_{role}_b{p.index}' for p in self.buffers]
         self.line('__vwe_'+tag+'_call('+', '.join(args)+');')
         self.snapshot_globals(role)
-        if self.kind in {"class", "e1", "scope"}:
+        if self.kind in {"class", "e1", "scope", "views"}:
             for j, field in enumerate(self.layout.returns):
                 if not field.pointer:
                     label = f"__vwe_out_{role}_" + field.access("ret")
