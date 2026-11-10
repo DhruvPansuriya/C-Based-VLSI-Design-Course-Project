@@ -15,16 +15,37 @@ Working branch: `implementation-start`. Original archive preserved in the import
 | T06 reference regions | complete and pushed | Exact argmax region, safe overapproximation, empty/wrong region probes, and uninitialized-read diagnostics |
 | T07 interpretation validation | complete and pushed | Proven joint output tuples, explicit UNKNOWN retention, semantic class grouping, and stable freeze hashes |
 | T08 verifier CLI and reports | complete and pushed; hosted CI green | Commit `0e060e9`; all ten public-pipeline verdicts and JSON schemas validated; hosted Python 3.10/3.12 checks passed |
-| T09 native pre-pass and witness replay | complete and pushed; hosted CI green at `1551a46` | Fixed-input SAT/Z3 rechecks, ASan/UBSan replay, executable acceptance observers and explicit discrepancy handling; `docs/T09_NATIVE.md` |
-| T10 draft golden suite (M1) | complete locally; push checkpoint | 20/20 public-pipeline golden candidates; 323 passed, 1 skipped; 77 focused fixture and soundness checks; `docs/T10_GOLDEN.md` |
-| T11–T22 | planned | corrections in the import review apply before implementing affected cards |
+| T09 native pre-pass and witness replay | complete and pushed; hosted CI green at `12fc14c` | Fixed-input SAT/Z3 rechecks, ASan/UBSan replay, executable acceptance observers and explicit discrepancy handling; `docs/T09_NATIVE.md` |
+| T10 draft golden suite (M1) | complete and pushed (`d7ebb71`) | 20/20 public-pipeline golden candidates; 323 passed, 1 skipped; 77 focused fixture and soundness checks; `docs/T10_GOLDEN.md` |
+| T11 professor demo (M2) | complete | `make demo`: 9/9 rows in 61.2 seconds, slowest 32.1 seconds; 325 tests passed, 1 skipped; `docs/DEMO_GUIDE.md` |
+| T12–T22 | planned | corrections in the import review apply before implementing affected cards |
 
 Hosted CI is green on Python3.10 and Python3.12 for T00/T01. First hosted run exposed a Python3.10 dependency mismatch, fixed in d43a092. Safety commit c0884a5 also passed hosted CI on both Python versions: https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45022723368 . Docker, ESBMC, Vitis and live provider execution have not been repeated on this macOS host. Imported Linux logs remain labeled as imported.
 
-Current implementation card: T11 professor demo. T10 completes the bounded handwritten-interpretation milestone (M1). Automatic interpretation generation, benchmark evaluation and HLS QoR measurement remain planned.
+Next implementation card: T12 provider-neutral LLM client. M1 (bounded handwritten checker) and M2 (offline professor demo) are complete. Automatic generation, benchmark evaluation and HLS QoR measurement remain planned.
 
 T02 commit87b3909 passed hosted CI on Python3.10/3.12 while T03 work continued: https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45027090279 .
 
 T10 checkpoint validation: `runs/t10-final-validation.log` (291 passed, 1 skipped), `runs/t10-resume-golden.log` (13/13), and `runs/t10-handwritten.log` (10/10). T09 replay-symbolizer fix `12fc14c` is pushed; its additional timeout regression passes.
 
 T10 completion evidence: `runs/t10-complete-validation.log` (323 passed, 1 skipped), `runs/t10-expanded-golden.log` (20/20), `runs/t10-expanded-regressions.log` (77 passed). T11 isolated demo probe: nine rows match in 97.7 seconds, slowest case 49.1 seconds; integration follows the T10 commit.
+
+## Next execution order — 23 November 2026
+
+1. T12: provider-neutral client, default deterministic mock, schema enforcement,
+   prompt cache/offline mode and P1-canary isolation tests. Pin real model IDs
+   only after checking the configured provider accounts.
+2. T13–T14: typing/shape/interpretation generation, certified computed readings,
+   frozen sets, auto verification and repetition/stability measurements.
+3. T15–T18: ingest benchmarks, build candidate pools and independent labels,
+   compare baselines, then measure risk/coverage with uncertainty intervals.
+   The planned scale is about 20 tasks and 200 candidates; it is not a result.
+4. T19–T20: prove qualified HLS pragma obligations and run Vitis to measure
+   actual area, latency and timing on a machine with the required tools.
+5. T21 is the optional FIFO extension using deterministic templates. T22
+   consolidates measured results, figures, reproducibility and final report.
+
+The T12/T13 cards have been aligned with the reviewed no-P1 information boundary
+and the requirement that incomplete UB-region evidence remain UNKNOWN.
+
+T11 completion evidence: `runs/t11-full-validation.log` (325 passed, 1 skipped), `runs/t11-demo-validation.log` (nine rows match; 61.2 seconds total; slowest case 32.1 seconds). `runs/demo/index.html` links to nine existing reports. Demo-only profiles explicitly use K=2; authoritative task profiles are preserved.

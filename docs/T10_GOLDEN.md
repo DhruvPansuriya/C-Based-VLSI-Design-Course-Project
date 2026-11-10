@@ -5,7 +5,13 @@
 if any decision or evidence class differs. The aggregate file is
 `runs/golden/golden_results.json`; each row links to its individual report.
 `--workers 1` runs sequentially; the default runs three independent cases.
-`--task ex5_add32_ambiguous` selects one task. Results print as ordered cases
+`--task ex5_add32_ambiguous` selects one task when passed to the runner:
+
+```sh
+.venv/bin/python scripts/run_golden_examples.py --task ex5_add32_ambiguous
+```
+
+Results print as ordered cases
 finish. An unknown task returns a command-line error.
 
 ## Coverage and hand-derived expectations
@@ -66,4 +72,4 @@ public-pipeline test checks all twenty cases, avoiding duplicate full sweeps.
 The 13-case checkpoint passed 291 tests with one ESBMC-unavailable skip.
 The complete 20-case suite passes: `make golden` matches 20/20; `make test`
 passes 323 tests with one ESBMC-unavailable skip. Focused fixture/soundness
-checks pass 77 tests. This completes milestone M1. The professor demo is T11.
+checks pass 77 tests. This completes milestone M1. T11 adds the [professor demo](DEMO_GUIDE.md).
