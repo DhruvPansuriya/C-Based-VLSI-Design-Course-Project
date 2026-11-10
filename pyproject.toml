@@ -21,11 +21,12 @@ include = ["vwe", "vwe.*"]
 
 [tool.setuptools.data-files]
 "share/vwe/config" = ["config/default.toml", "config/whitelist.toml", "config/llm.toml"]
-"share/vwe/schemas" = ["schemas/task.schema.json", "schemas/interpretation.schema.json", "schemas/interpretation_set.schema.json", "schemas/verdict_report.schema.json"]
+"share/vwe/schemas" = ["schemas/task.schema.json", "schemas/interpretation.schema.json", "schemas/interpretation_set.schema.json", "schemas/verdict_report.schema.json", "schemas/request_typing.schema.json", "schemas/shape_proposal.schema.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 markers = ["integration: requires installed verification tools"]
 
 [tool.setuptools.package-data]
+"vwe.llm" = ["prompts/*.md"]
 "vwe.contract" = ["grammar.lark"]

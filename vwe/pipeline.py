@@ -14,6 +14,7 @@ from .contract.ast import ContractTypeError, ContractUnsupported, GrammarError, 
 from .harness.generate import Generator
 from .harness.layout import HarnessUnsupported
 from .harness.model import HarnessBundle
+from .interpret import GeneratedSet
 from .harness.profile import plain
 from .proof_jobs import JobResult, run_job
 from .regions import compute_regions
@@ -71,10 +72,15 @@ def _witness(trace: dict[str, str] | None, names: dict[str, str]) -> dict | None
 
 def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
            interpretations: str = "handwritten", *, runs_root: Path = Path("runs"),
-           parallel: bool = True) -> VerdictReport:
+           parallel: bool = True, generated: GeneratedSet | None = None) -> VerdictReport:
     cfg = cfg or load_config()
     started = monotonic()
     task = load_pipeline_view(task_dir)
+    if interpretations not in {"handwritten", "auto"}:
+        raise TaskError(f"Unknown interpretation mode {interpretations!r}")
+    # Auto mode never falls back to the task's handwritten readings.
+    readings = task.interpretations if interpretations == "handwritten" else (
+        generated.members if generated is not None else ())
     if candidate_id not in task.candidates:
         raise TaskError(f"Unknown candidate {candidate_id!r}")
     if task.task_id in {".", ".."} or candidate_id in {".", ".."}:
@@ -119,14 +125,15 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
                 r["status"] == "confirmed" for r in replay_results)
             reported_witness["replay_results"] = replay_results
         report = VerdictReport(out, {
-            "task_id": task.task_id, "candidate_id": candidate_id, "decision": verdict.decision,
+            "task_id": task.task_id, "candidate_id": candidate_id,
+            "interpretation_mode": interpretations, "decision": verdict.decision,
             "evidence_class": verdict.evidence_class, "claim_target": verdict.claim_target,
             "reason": verdict.reason, "conditional": _conditional(verdict),
             "witness": reported_witness, "interpretation_set_sha256": digest,
             "interpretations": [{"id": i["id"], "nl_rendering": i.get("nl_rendering", ""),
                                  "validation": evaluated.get(i["id"], "not checked"),
                                  "outcome": class_status.get(i["id"], "not checked")}
-                                for i in task.interpretations],
+                                for i in readings],
             "facts": facts, "obligations": queries,
             "scope": {"K": cfg.bounds.K, "shape_min": shape, "shape_max": shape,
                       "bounded_only": True, "profiles": [shape], "reference_safe_guard": reference_guard,
@@ -181,8 +188,10 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
 
     if not cbmc.cbmc_available():
         return finish(_unknown("CBMC is unavailable"))
-    if interpretations != "handwritten":
-        return finish(_unknown("automatic interpretation generation is not configured"))
+    if interpretations == "auto" and generated is None:
+        return finish(_unknown("no automatically generated interpretation set was supplied"))
+    if interpretations == "auto" and generated.task_id != task.task_id:
+        return finish(_unknown("generated interpretation set belongs to a different task"))
     admission = admit(task, candidate_id, cfg, out_dir=out / "admission")
     if admission.verdict is not None:
         return finish(admission.verdict)
@@ -194,8 +203,9 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
     try:
         regions = compute_regions(p0, task.caller_domain, out / "regions",
                                   config=cfg, parallel=parallel)
-        frozen = freeze_interpretations(task.task_id, p0, task.interpretations,
-                                        out / "interpretations", config=cfg, parallel=parallel)
+        frozen = freeze_interpretations(
+            task.task_id, p0, readings, out / "interpretations", config=cfg, parallel=parallel,
+            generation=generated.generation if interpretations == "auto" else None)
         reference_guard = regions.reference_safe_guard
         if reference_guard is None:
             return finish(_unknown("no certified safe and deterministic reference guard"))
