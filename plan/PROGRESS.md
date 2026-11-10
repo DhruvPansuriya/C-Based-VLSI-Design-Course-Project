@@ -21,7 +21,8 @@ Working branch: `implementation-start`. Original archive preserved in the import
 | T12 LLM client | implemented locally (mock/cache/unavailable only; no live provider run) | `docs/T12_LLM.md`; `tests/test_llm_client.py`, `tests/test_llm_isolation.py` |
 | T13 interpretation generation | implemented locally with authored mock fixtures only; no live model run; computed readings not implemented | `docs/T13_INTERPRET.md`; `tests/test_interpret.py`; `results/auto_vs_handwritten.md` (10/10 same, mock fixtures) |
 | T14 repetition/stability | implemented locally with mock fixtures; no live stability measurement; monotonicity premise documented | `docs/T14_STABILITY.md`; `tests/test_stability.py` |
-| T15–T22 | planned | corrections in the import review apply before implementing affected cards |
+| T15 benchmark ingestion | 30 Chrysalis-HLS tasks adapted deterministically (pinned commits); template requests, no independent authoring; sources regenerated, not committed (licences) | `docs/T15_BENCHMARKS.md`; `benchmarks/adaptation_log.json` |
+| T16–T22 | planned | corrections in the import review apply before implementing affected cards |
 
 Hosted CI is green on Python3.10 and Python3.12 for T00/T01. First hosted run exposed a Python3.10 dependency mismatch, fixed in d43a092. Safety commit c0884a5 also passed hosted CI on both Python versions: https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45022723368 . Docker, ESBMC, Vitis and live provider execution have not been repeated on this macOS host. Imported Linux logs remain labeled as imported.
 
