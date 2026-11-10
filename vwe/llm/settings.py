@@ -17,6 +17,7 @@ class FamilySettings:
     adapter: str
     model_id: str
     api_key_env: str = ""
+    api_key_file: Path | None = None  # git-ignored local file; resolved against the project root
 
 
 @dataclass(frozen=True)
@@ -55,12 +56,16 @@ def load_llm_settings(path: str | Path | None = None) -> LLMSettings:
         raise ConfigError("client.temperature must be in 0..2")
     families: dict[str, FamilySettings] = {}
     for name, table in raw.get("families", {}).items():
-        if not isinstance(table, dict) or table.keys() - {"adapter", "model_id", "api_key_env"}:
+        if not isinstance(table, dict) or table.keys() - {"adapter", "model_id", "api_key_env", "api_key_file"}:
             raise ConfigError(f"families.{name} has unknown keys")
         if table.get("adapter") not in {"mock", "anthropic", "openai"}:
             raise ConfigError(f"families.{name}.adapter must be mock, anthropic or openai")
+        key_file = table.get("api_key_file")
+        if key_file is not None and (not isinstance(key_file, str) or not key_file.strip()):
+            raise ConfigError(f"families.{name}.api_key_file must be a path string")
+        resolved = (chosen.resolve().parent.parent / key_file) if key_file else None
         families[name] = FamilySettings(name, table["adapter"], str(table.get("model_id", "")),
-                                        str(table.get("api_key_env", "")))
+                                        str(table.get("api_key_env", "")), resolved)
     return LLMSettings(str(client.get("cache_dir", "~/.cache/vwe/llm")), retries,
                        float(temperature), timeout, runs, MappingProxyType(families))
 
@@ -73,7 +78,8 @@ def build_client(settings: LLMSettings, family: str, *, offline: bool = False,
         raise ConfigError(f"Unknown LLM family {family!r}")
     fam = settings.families[family]
     provider = make_provider(fam.adapter, fam.name, fam.model_id, fam.api_key_env,
-                             timeout_s=settings.timeout_s, fixture_dir=fixture_dir)
+                             timeout_s=settings.timeout_s, fixture_dir=fixture_dir,
+                             api_key_file=fam.api_key_file)
     return LLMClient(provider, fam.model_id, cache_dir=cache_dir or Path(settings.cache_dir),
                      offline=offline, max_retries=settings.max_retries,
                      temperature=settings.temperature, seed=seed, log_path=log_path)

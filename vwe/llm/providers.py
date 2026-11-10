@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import json
 import os
+import ssl
 from pathlib import Path
 from typing import Any, Callable, Mapping, Sequence
 import urllib.error
@@ -21,15 +22,46 @@ from .client import Message, Provider, ProviderError, ProviderUnavailable
 Transport = Callable[[str, Mapping[str, str], bytes, int], bytes]
 
 
-def urllib_transport(url: str, headers: Mapping[str, str], body: bytes, timeout_s: int) -> bytes:
-    request = urllib.request.Request(url, data=body, headers=dict(headers), method="POST")
+_SYSTEM_CA_FILES = ("/etc/ssl/cert.pem", "/etc/ssl/certs/ca-certificates.crt")
+
+
+def tls_context() -> ssl.SSLContext:
+    """Verifying TLS context. Some Python builds (python.org macOS) ship no CA store;
+    then the operating-system bundle is loaded. Verification is never disabled."""
+    context = ssl.create_default_context()
+    if not context.cert_store_stats().get("x509_ca"):
+        for path in _SYSTEM_CA_FILES:
+            if os.path.isfile(path):
+                context.load_verify_locations(cafile=path)
+                break
+    if not context.cert_store_stats().get("x509_ca"):
+        raise ProviderUnavailable("no CA certificates available for TLS verification")
+    return context
+
+
+def urllib_transport(url: str, headers: Mapping[str, str], body: bytes, timeout_s: int,
+                     method: str = "POST") -> bytes:
+    request = urllib.request.Request(url, data=body if method == "POST" else None,
+                                     headers=dict(headers), method=method)
     try:
-        with urllib.request.urlopen(request, timeout=timeout_s) as response:  # noqa: S310 - fixed https URLs
+        with urllib.request.urlopen(request, timeout=timeout_s, context=tls_context()) as response:  # noqa: S310
             return response.read()
     except urllib.error.HTTPError as exc:
-        raise ProviderError(f"HTTP {exc.code}") from None  # body may echo request data
+        raise ProviderError(f"HTTP {exc.code}{_error_code(exc)}") from None
     except (urllib.error.URLError, TimeoutError, OSError) as exc:
         raise ProviderUnavailable(f"network failure: {type(exc).__name__}") from None
+
+
+def _error_code(exc: urllib.error.HTTPError) -> str:
+    """Only the vendor's machine-readable error code/type; the message may echo request data."""
+    try:
+        err = json.loads(exc.read().decode("utf-8", "replace")).get("error", {})
+    except (ValueError, OSError, AttributeError):
+        return ""
+    if not isinstance(err, dict):
+        return ""
+    parts = [str(err[k]) for k in ("type", "code") if isinstance(err.get(k), str)]
+    return (" (" + ", ".join(dict.fromkeys(parts)) + ")") if parts else ""
 
 
 class MockProvider:
@@ -73,16 +105,21 @@ class _HttpProvider:
     url = ""
 
     def __init__(self, family: str, model_id: str, api_key_env: str, *,
-                 transport: Transport = urllib_transport, timeout_s: int = 120) -> None:
+                 transport: Transport = urllib_transport, timeout_s: int = 120,
+                 api_key_file: Path | None = None) -> None:
         self.family, self.model_id = family, model_id
+        self.api_key_file = api_key_file
         self.api_key_env, self.transport, self.timeout_s = api_key_env, transport, timeout_s
 
     def _key(self, model_id: str) -> str:
         if not model_id.strip():
             raise ProviderUnavailable(f"{self.name}: no model id is pinned in config/llm.toml")
-        key = os.environ.get(self.api_key_env, "").strip()
+        key = os.environ.get(self.api_key_env, "").strip() if self.api_key_env else ""
+        if not key and self.api_key_file is not None and self.api_key_file.is_file():
+            key = self.api_key_file.read_text(encoding="utf-8").strip()  # git-ignored local file
         if not key:
-            raise ProviderUnavailable(f"{self.name}: environment variable {self.api_key_env} is unset")
+            raise ProviderUnavailable(f"{self.name}: no API key (environment variable "
+                                      f"{self.api_key_env or '-'} unset and no key file)")
         return key
 
     def _post(self, headers: Mapping[str, str], payload: Mapping[str, Any]) -> Any:
@@ -128,7 +165,8 @@ class OpenAIProvider(_HttpProvider):
         key = self._key(model_id)
         chat = [{"role": m.role, "content": _with_schema(m.content, json_schema)
                  if m.role == "system" else m.content} for m in messages]
-        payload: dict[str, Any] = {"model": model_id, "messages": chat, "temperature": temperature}
+        payload: dict[str, Any] = {"model": model_id, "messages": chat, "temperature": temperature,
+                                   "max_completion_tokens": 4096}  # per-call cost cap
         if seed is not None:
             payload["seed"] = seed  # best-effort per vendor; determinism not assumed
         data = self._post({"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
@@ -140,11 +178,12 @@ class OpenAIProvider(_HttpProvider):
 
 
 def make_provider(adapter: str, family: str, model_id: str, api_key_env: str = "", *,
-                  timeout_s: int = 120, fixture_dir: Path | None = None) -> Provider:
+                  timeout_s: int = 120, fixture_dir: Path | None = None,
+                  api_key_file: Path | None = None) -> Provider:
     if adapter == "mock":
         return MockProvider(fixture_dir=fixture_dir, family=family)
     if adapter == "anthropic":
-        return AnthropicProvider(family, model_id, api_key_env, timeout_s=timeout_s)
+        return AnthropicProvider(family, model_id, api_key_env, timeout_s=timeout_s, api_key_file=api_key_file)
     if adapter == "openai":
-        return OpenAIProvider(family, model_id, api_key_env, timeout_s=timeout_s)
+        return OpenAIProvider(family, model_id, api_key_env, timeout_s=timeout_s, api_key_file=api_key_file)
     raise ValueError(f"unknown provider adapter {adapter!r}")

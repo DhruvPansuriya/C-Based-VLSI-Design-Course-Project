@@ -31,7 +31,8 @@ def main() -> int:
     for fam in args.family:
         cfg = settings.families[fam]
         provider = make_provider(cfg.adapter, fam, cfg.model_id, cfg.api_key_env,
-                                 timeout_s=settings.timeout_s, fixture_dir=args.fixtures)
+                                 timeout_s=settings.timeout_s, fixture_dir=args.fixtures,
+                                 api_key_file=cfg.api_key_file)
         gens[fam] = CandidateGenerator(provider, cfg.model_id, args.cache_dir, max_calls=args.max_calls)
     for root in sorted(p for p in args.tasks.iterdir() if (p / "task.json").is_file()):
         manifest = json.loads((root / "task.json").read_text())

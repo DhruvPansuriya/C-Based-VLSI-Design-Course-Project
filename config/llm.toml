@@ -20,5 +20,8 @@ api_key_env = "ANTHROPIC_API_KEY"
 
 [families.openai]
 adapter = "openai"
-model_id = ""
+# Verified 2026-11-23 via GET /v1/models on the project account; dated snapshot for reproducibility,
+# chosen for low cost with temperature/seed support.
+model_id = "gpt-4.1-mini-2025-04-14"
 api_key_env = "OPENAI_API_KEY"
+api_key_file = "config/secrets/openai.key"  # git-ignored; env var takes priority
