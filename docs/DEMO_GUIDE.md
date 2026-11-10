@@ -2,7 +2,9 @@
 
 Run `make demo` after installing the pinned tools. It runs offline, prints a
 verdict table, and writes `runs/demo/index.html` linking to complete reports.
-Open that index during the presentation. The demo materializes private task
+Open that index during the presentation. `make demo` performs new local proofs
+and replay on every invocation; opening the index alone shows saved results.
+The expected table is checked after verification and does not supply verdicts. The demo materializes private task
 copies with size bound **K=2**, max unwind 5, initialized disjoint buffers and
 handwritten interpretations. The authoritative examples remain at their
 original profiles. Reports show the exact reduced caller domain and the

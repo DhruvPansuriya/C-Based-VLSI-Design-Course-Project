@@ -1,0 +1,64 @@
+{
+  "task_id": "ex1_saturate",
+  "members": [
+    {
+      "id": "ex1_saturate.permissive",
+      "provenance": {
+        "source": "handwritten"
+      },
+      "request_type": "T2",
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {}
+      },
+      "clauses": [
+        {
+          "zone": "a + b > 255",
+          "behaviour": "out_ret == min(a + b, 255)"
+        }
+      ],
+      "ext": "out_ret == min(a + b, 255)",
+      "reach": "a + b > 255",
+      "nl_rendering": "Any implementation returning the saturated sum is allowed."
+    },
+    {
+      "id": "ex1_saturate.strict",
+      "provenance": {
+        "source": "handwritten"
+      },
+      "request_type": "T2",
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {}
+      },
+      "clauses": [
+        {
+          "zone": "a + b > 255",
+          "behaviour": "out_ret == 255"
+        }
+      ],
+      "ext": "out_ret == min(a + b, 255)",
+      "reach": "a + b > 255",
+      "nl_rendering": "Saturate overflow and preserve ordinary addition."
+    }
+  ],
+  "sha256": "50973ac285e940f1adf3b6c48bc3930d9a26f7047b2e0f1d5b4bcb40350dcd73",
+  "discarded": [],
+  "generation": {
+    "runs": 1,
+    "families": [
+      "handwritten"
+    ],
+    "p1_seen_by_any_llm": false
+  },
+  "informational": {
+    "equivalence_classes": [
+      [
+        "ex1_saturate.permissive",
+        "ex1_saturate.strict"
+      ]
+    ]
+  }
+}

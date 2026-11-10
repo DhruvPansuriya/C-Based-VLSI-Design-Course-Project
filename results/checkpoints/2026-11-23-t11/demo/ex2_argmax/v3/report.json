@@ -1,0 +1,162 @@
+{
+  "task_id": "ex2_argmax",
+  "candidate_id": "v3",
+  "decision": "REJECT",
+  "evidence_class": "E0",
+  "claim_target": "repair_correctness",
+  "reason": "computed fact: e0: p1_argmax.pointer_dereference.41 dereference failure: pointer outside object bounds in a[(signed long int)i]",
+  "conditional": "The recorded input belongs to the exact caller profile and the certified safe and deterministic reference guard. The candidate violates a modeled check there.",
+  "witness": {
+    "inputs": {
+      "n": "1",
+      "a uses NULL when size is zero": "TRUE",
+      "a[0]": "1",
+      "idx uses NULL when size is zero": "TRUE",
+      "idx[0]": "1"
+    },
+    "p0_output": null,
+    "p1_output": null,
+    "replayed_natively": true,
+    "replay_results": [
+      {
+        "status": "confirmed",
+        "reason": "heap-buffer-overflow"
+      }
+    ]
+  },
+  "interpretation_set_sha256": "8fa3c67e260822c5951b538abadc616d0cb11f8a1d34a6648531dd27449873aa",
+  "interpretations": [
+    {
+      "id": "ex2_argmax.strict",
+      "nl_rendering": "Handle empty input; preserve the first maximum for nonempty input.",
+      "validation": "valid",
+      "outcome": "not checked"
+    },
+    {
+      "id": "ex2_argmax.permissive",
+      "nl_rendering": "On the declared n>=0 domain, empty means n<=0; implementation strategy is unconstrained.",
+      "validation": "valid",
+      "outcome": "not checked"
+    }
+  ],
+  "facts": {
+    "preserves_outside_B_max": "inconclusive",
+    "synthesis_ready": "inconclusive",
+    "interpretations_satisfied": [],
+    "interpretations_violated": []
+  },
+  "obligations": [
+    {
+      "name": "pre-pass safety hint",
+      "outcome": "VIOLATED",
+      "note": "e0: p1_argmax.pointer_dereference.41 dereference failure: pointer outside object bounds in a[(signed long int)i]",
+      "backends": {
+        "sat": "failure",
+        "z3": "failure"
+      },
+      "witness": {
+        "inputs": {
+          "n": "1",
+          "a uses NULL when size is zero": "TRUE",
+          "a[0]": "1",
+          "idx uses NULL when size is zero": "TRUE",
+          "idx[0]": "1"
+        },
+        "p0_output": null,
+        "p1_output": null,
+        "replayed_natively": false
+      }
+    },
+    {
+      "name": "counterexample with fixed inputs 0",
+      "outcome": "VIOLATED",
+      "note": "e0: p1_argmax.pointer_dereference.41 dereference failure: pointer outside object bounds in a[(signed long int)i]",
+      "backends": {
+        "sat": "failure",
+        "z3": "failure"
+      },
+      "witness": {
+        "inputs": {
+          "n": "1",
+          "a uses NULL when size is zero": "TRUE",
+          "a[0]": "1",
+          "idx uses NULL when size is zero": "TRUE",
+          "idx[0]": "1"
+        },
+        "p0_output": null,
+        "p1_output": null,
+        "replayed_natively": false
+      }
+    }
+  ],
+  "scope": {
+    "K": 2,
+    "shape_min": {
+      "buffers": {
+        "a": "n",
+        "idx": "1"
+      },
+      "alias": "disjoint",
+      "bounds": {
+        "n": [
+          0,
+          2
+        ]
+      }
+    },
+    "shape_max": {
+      "buffers": {
+        "a": "n",
+        "idx": "1"
+      },
+      "alias": "disjoint",
+      "bounds": {
+        "n": [
+          0,
+          2
+        ]
+      }
+    },
+    "bounded_only": true,
+    "profiles": [
+      {
+        "buffers": {
+          "a": "n",
+          "idx": "1"
+        },
+        "alias": "disjoint",
+        "bounds": {
+          "n": [
+            0,
+            2
+          ]
+        }
+      }
+    ],
+    "reference_safe_guard": "!((n) <= 0)",
+    "change_brackets": {},
+    "prepass": {
+      "samples": 2,
+      "seed": 0,
+      "requested_samples": 10000,
+      "seconds_budget": 1,
+      "stopped": "safety hint"
+    },
+    "native_replay": [
+      {
+        "status": "confirmed",
+        "reason": "heap-buffer-overflow"
+      }
+    ],
+    "native_acceptance": "not applicable",
+    "uninitialized_model": "CBMC experimental local checks"
+  },
+  "tools": {
+    "cbmc": "6.11.0 (cbmc-6.11.0)",
+    "z3": "Z3 version 5.4.1 - 64 bit - build hashcode 145c0c51570a357cc558ce898ce77573ba9d4fbf",
+    "esbmc": "unavailable"
+  },
+  "timing": {
+    "wall_seconds": 22.288747499995225
+  }
+}
