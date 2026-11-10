@@ -70,6 +70,10 @@ def _witness(trace: Sequence[dict], watch: Sequence[str]) -> Dict[str, str]:
     for step in trace:
         if step.get("stepType") == "assignment" and step.get("lhs") in watch:
             values[step["lhs"]] = step.get("value", {}).get("data", "?")
+        if step.get("stepType") == "output" and step.get("outputID") in watch:
+            outputs = step.get("values", [])
+            if len(outputs) == 1 and isinstance(outputs[0].get("data"), str):
+                values[step["outputID"]] = outputs[0]["data"]
     return values
 
 
