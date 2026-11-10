@@ -63,3 +63,9 @@ Details and scenarios: `docs/CLAUDE_IMPORT_REVIEW.md`.
   reserving -1 as an out-of-band error code. This makes saturation/error
   disagreement executable without conflating an error code with a wrapped
   unsigned result. The adaptation and prederived expectations are in its README.
+
+## T12 LLM client — 23 November 2026
+
+- Q7 remains open: `config/llm.toml` pins no model ids and no provider credentials were available in this session. Live families report `unavailable`.
+- Q24: the Anthropic Messages and OpenAI chat-completions request layouts in `vwe/llm/providers.py` are written from the vendors' documented formats and exercised only against stub transports. Verify against a live account (model id, headers, response shape, whether `seed` is honored) before reporting any live-model result.
+- Q25: the T12 card says `RequestContext` is built from the P0 admission result; that object carries `p1_views`, so it was replaced by P0-source-only signature extraction. See `docs/T12_LLM.md`.
