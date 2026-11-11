@@ -33,7 +33,6 @@ def main(argv: list[str] | None = None) -> int:
     stability.add_argument("--candidate", action="append", help="candidate id (default: all)")
     stability.add_argument("--runs-root", type=Path, default=Path("runs"))
     stability.add_argument("--config", type=Path)
-    stability.add_argument("--seed", type=int, help="base seed; run k uses seed+k (request parameter only)")
     stability.add_argument("--out", type=Path)
     for command in (one, all_candidates, interpret, stability):
         command.add_argument("--family", action="append", default=[],
@@ -44,6 +43,7 @@ def main(argv: list[str] | None = None) -> int:
         command.add_argument("--cache-dir", type=Path)
         command.add_argument("--runs", type=int, default=None, help="generation runs (default config client.runs)")
         command.add_argument("--request", help="request id (default: first request)")
+        command.add_argument("--seed", type=int, help="base seed; run k uses seed+k (request parameter only)")
     args = parser.parse_args(argv)
     if args.command is None:
         parser.print_help()
