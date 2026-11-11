@@ -192,6 +192,27 @@ class OpenAIProvider(_HttpProvider):
             raise ProviderError("unexpected response layout") from exc
 
 
+class GroqProvider(OpenAIProvider):
+    """Groq's OpenAI-compatible chat endpoint (same request/response layout)."""
+    name = "groq"
+    url = "https://api.groq.com/openai/v1/chat/completions"
+
+
+MODEL_LIST_URLS = {"openai": "https://api.openai.com/v1/models",
+                   "groq": "https://api.groq.com/openai/v1/models"}
+
+
+def list_models(provider: _HttpProvider, *, transport: Transport | None = None) -> list[str]:
+    """Model ids visible to the configured key (used to verify ids before pinning them)."""
+    key = provider._key("listing")
+    send = transport or (lambda url, headers, body, timeout: urllib_transport(url, headers, body, timeout, "GET"))
+    raw = send(MODEL_LIST_URLS[provider.name], {"Authorization": f"Bearer {key}"}, b"", provider.timeout_s)
+    try:
+        return sorted(m["id"] for m in json.loads(raw)["data"])
+    except (ValueError, KeyError, TypeError) as exc:
+        raise ProviderError("unexpected model-list layout") from exc
+
+
 def make_provider(adapter: str, family: str, model_id: str, api_key_env: str = "", *,
                   timeout_s: int = 120, fixture_dir: Path | None = None,
                   api_key_file: Path | None = None) -> Provider:
@@ -201,4 +222,6 @@ def make_provider(adapter: str, family: str, model_id: str, api_key_env: str = "
         return AnthropicProvider(family, model_id, api_key_env, timeout_s=timeout_s, api_key_file=api_key_file)
     if adapter == "openai":
         return OpenAIProvider(family, model_id, api_key_env, timeout_s=timeout_s, api_key_file=api_key_file)
+    if adapter == "groq":
+        return GroqProvider(family, model_id, api_key_env, timeout_s=timeout_s, api_key_file=api_key_file)
     raise ValueError(f"unknown provider adapter {adapter!r}")
