@@ -27,6 +27,7 @@ from typing import Any, Callable, Mapping
 from pycparser import c_ast as C, c_parser
 
 from ..c_frontend import analyze
+from ..harness.profile import plain
 from .differential import DiffResult, _preprocess, differential
 
 
@@ -61,7 +62,7 @@ def identity_reading(p_ref: str, fn: str, shape: Mapping[str, Any]) -> dict[str,
         return None
     equal = " && ".join(parts)
     return {"id": "label.identity", "provenance": {"source": "computed", "computed_kind": "T5_identity"},
-            "request_type": "T5", "shape": json.loads(json.dumps(shape)),
+            "request_type": "T5", "shape": plain(shape),
             "clauses": [{"zone": "true", "behaviour": equal}], "ext": equal, "reach": "true",
             "nl_rendering": "Outputs equal the reference implementation's on every input."}
 
