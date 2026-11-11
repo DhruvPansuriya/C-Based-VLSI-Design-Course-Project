@@ -1,7 +1,7 @@
 PYTHON ?= $(if $(wildcard .venv/bin/python),.venv/bin/python,python3)
 export PATH := $(CURDIR)/.venv/bin:$(PATH)
 
-.PHONY: install test golden admission contracts spikes demo eval clean
+.PHONY: install test golden admission contracts spikes demo demo-steps eval clean
 install:
 	$(PYTHON) -m pip install -e .
 test:
@@ -16,6 +16,8 @@ spikes:
 	bash spikes/tool_behaviour/run_spikes.sh
 demo:
 	$(PYTHON) scripts/demo.py --out runs/demo
+demo-steps:
+	$(PYTHON) scripts/demo_steps.py --interactive
 eval:
 	@echo "T18 evaluation is not implemented yet."
 	@exit 2
