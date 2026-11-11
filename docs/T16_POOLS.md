@@ -22,9 +22,14 @@ cost proxy; token usage is not reported by the adapters).
 
 ## Labels (`vwe/eval/labels.py`, `scripts/label_candidates.py`)
 
-* Formal: the VWE pipeline on a labelling task whose P0 is P_ref and whose only
-  reading is identity (all outputs equal P_ref's, zone true). Functions with
-  mutable globals or no observable output are not expressible and stay unknown.
+* Formal (`formal_identity`): the pipeline's own obligations with P_ref as the
+  reference: admission, P_ref-only region certification, E0 safety on the guard,
+  and E1 with an identity relation and an empty change region; violations must
+  reproduce with fixed inputs. A first version ran the full method on a task whose
+  P0 was P_ref; its V-2 check (correctly) discards a reading P0 already satisfies,
+  so nothing could ever be labelled correct. That bug was found on the first run and
+  fixed before any labels were used. Functions with mutable globals or no
+  observable output are not expressible and stay unknown.
 * Differential: 10,000 deterministic profile-bounded inputs plus boundaries,
   ASan/UBSan, per-input exclusion where P_ref aborts or hangs, deterministic replay.
 * correct = formal ACCEPT and testing agrees; incorrect = formal REJECT, or a

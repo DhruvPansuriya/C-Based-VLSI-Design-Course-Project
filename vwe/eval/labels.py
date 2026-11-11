@@ -2,10 +2,12 @@
 
 Two checks, combined conservatively:
 
-* formal: the VWE pipeline run on a *labelling task* whose P0 is P_ref and whose
-  only reading is identity ("every output equals P_ref's", zone true). ACCEPT means
-  equal to P_ref on the certified-safe part of the bounded caller profile; REJECT
-  comes with a fixed-input-confirmed, natively replayed witness.
+* formal: the pipeline's own obligations with P_ref in the reference role: admission,
+  P_ref-only region certification, E0 (candidate safe on the certified guard) and E1
+  with an identity relation and an empty change region (every output equals P_ref's
+  everywhere on the guard). ACCEPT = both PROVED; REJECT = a violation that
+  reproduces with its inputs fixed. (Running the full method instead is wrong: its
+  V-2 check correctly discards a reading that P0 = P_ref already satisfies.)
 * differential: native sanitizer testing against P_ref (vwe.eval.differential).
 
 correct   = formal ACCEPT and no differential counterexample
@@ -21,7 +23,6 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass
 import json
 from pathlib import Path
-import shutil
 from typing import Any, Callable, Mapping
 
 from pycparser import c_ast as C, c_parser
@@ -67,36 +68,45 @@ def identity_reading(p_ref: str, fn: str, shape: Mapping[str, Any]) -> dict[str,
             "nl_rendering": "Outputs equal the reference implementation's on every input."}
 
 
-def write_labelling_task(task_dir: Path, pool: Mapping[str, str], out: Path) -> Path | None:
-    """A throwaway task: P0 := P_ref, candidates := pool, one identity reading."""
-    manifest = json.loads((task_dir / "task.json").read_text())
-    p_ref = (task_dir / manifest["eval_only"]["p_ref"]).read_text()
-    reading = identity_reading(p_ref, manifest["function"], manifest["caller_domain"])
+def formal_identity(task_dir: Path, candidate: str, cfg, out: Path) -> tuple[str, str]:
+    """Bounded formal equivalence of a candidate with P_ref (see module docstring)."""
+    from dataclasses import replace
+    from ..admission import admit
+    from ..harness.generate import Generator
+    from ..proof_jobs import run_job
+    from ..regions import compute_regions
+    from ..replay import bind_inputs
+    from ..tasks import SourceFile, load_full
+    from ..verdict import Outcome
+    full = load_full(task_dir)
+    task = replace(full.pipeline, p0=SourceFile("p_ref.c", full.eval_only.p_ref.text, full.eval_only.p_ref.sha256))
+    reading = identity_reading(task.p0.text, task.function, task.caller_domain)
     if reading is None:
-        return None
-    if out.exists():
-        shutil.rmtree(out)
-    (out / "candidates").mkdir(parents=True)
-    (out / "eval").mkdir()
-    (out / "interpretations").mkdir()
-    (out / "p0.c").write_text(p_ref)
-    (out / "eval/p_ref.c").write_text(p_ref)
-    (out / "eval/phi_ref.c").write_text("/* identity with P_ref */\n")
-    (out / "request.txt").write_text("Behave exactly like the reference implementation.\n")
-    (out / "interpretations/identity.json").write_text(json.dumps(reading, indent=2))
-    for name, text in pool.items():
-        (out / f"candidates/{name}.c").write_text(text)
-    labelling = {
-        "task_id": manifest["task_id"] + "__label", "source": manifest["source"],
-        "function": manifest["function"], "p0": "p0.c",
-        "requests": [{"id": "original", "file": "request.txt", "origin": "injection_test"}],
-        "candidates": {name: f"candidates/{name}.c" for name in pool},
-        "interpretations": ["interpretations/identity.json"],
-        "caller_domain": manifest["caller_domain"],
-        "eval_only": {"p_ref": "eval/p_ref.c", "phi_ref": "eval/phi_ref.c",
-                      "true_shape": manifest["caller_domain"]}}
-    (out / "task.json").write_text(json.dumps(labelling, indent=2))
-    return out
+        return "UNDECIDED", "outputs not expressible as an identity relation"
+    reading = {**reading, "clauses": [{"zone": "false", "behaviour": "true"}], "reach": "false"}
+    adm = admit(task, candidate, cfg, out_dir=out / "admission")
+    if adm.verdict is not None:
+        return adm.verdict.decision if adm.verdict.claim_target == "admission_policy" else "UNDECIDED", \
+            f"admission: {adm.reason}"
+    if not adm.p0_views or not adm.p1_views or adm.required_library_models:
+        return "UNDECIDED", "admission did not provide qualified views"
+    guard = compute_regions(adm.p0_views, task.caller_domain, out / "regions", config=cfg).reference_safe_guard
+    if guard is None:
+        return "UNDECIDED", "no certified safe reference guard for P_ref"
+    gen = Generator(adm.p0_views, adm.p1_views, task.caller_domain, config=cfg, reference_guard=guard)
+    for part in ("e0", "e1"):
+        job = gen.gen_core(out / part, (reading,) if part == "e1" else (), part=part)
+        result = run_job(job, config=cfg).obligation
+        if result.outcome is Outcome.INCONCLUSIVE:
+            return "UNDECIDED", f"{part}: {result.note}"
+        if result.outcome is Outcome.VIOLATED:
+            if result.witness is None:
+                return "UNDECIDED", f"{part}: violation without an input trace"
+            again = run_job(bind_inputs(job, result.witness, out / f"{part}_fixed"), config=cfg).obligation
+            if again.outcome is not Outcome.VIOLATED:
+                return "UNDECIDED", f"{part}: violation did not reproduce with fixed inputs"
+            return "REJECT", f"{part}: differs from P_ref or unsafe (fixed-input confirmed)"
+    return "ACCEPT", f"equal to P_ref on certified guard {guard}"
 
 
 def combine(candidate: str, formal: tuple[str, str], diff: DiffResult) -> Label:
@@ -117,15 +127,14 @@ def combine(candidate: str, formal: tuple[str, str], diff: DiffResult) -> Label:
 FormalFn = Callable[[Path, str], tuple[str, str]]
 
 
-def label_pool(task_dir: Path, pool: Mapping[str, str], work: Path, formal_fn: FormalFn, *,
+def label_pool(task_dir: Path, pool: Mapping[str, str], formal_fn: FormalFn, *,
                samples: int = 10000) -> list[Label]:
+    """formal_fn(task_dir, candidate) is normally `formal_identity` with a config."""
     manifest = json.loads((task_dir / "task.json").read_text())
     p_ref = (task_dir / manifest["eval_only"]["p_ref"]).read_text()
-    label_task = write_labelling_task(task_dir, pool, work / "label_task")
     labels = []
     for name, text in pool.items():
-        formal = (formal_fn(label_task, name) if label_task is not None
-                  else ("UNDECIDED", "outputs not expressible as an identity reading"))
+        formal = formal_fn(task_dir, name)
         diff = differential(p_ref, text, manifest["function"], manifest["caller_domain"], samples=samples)
         labels.append(combine(name, formal, diff))
     return labels
