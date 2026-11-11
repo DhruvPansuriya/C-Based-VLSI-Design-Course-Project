@@ -7,7 +7,7 @@ Each stage is printed as the pipeline completes it (via the observational
     python scripts/demo_steps.py                          # ex2_argmax, candidate v2
     python scripts/demo_steps.py --task ex1_saturate --candidate v3 --interactive
     python scripts/demo_steps.py --task ex1_saturate --candidate v3 --auto mock
-    python scripts/demo_steps.py --task ex1_saturate --candidate v3 --auto openai   # live, if credit
+    python scripts/demo_steps.py --task ex1_saturate --candidate v3 --auto groq     # live (Groq, 2 families)
 """
 from __future__ import annotations
 
@@ -166,7 +166,7 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--task", default="ex2_argmax")
     ap.add_argument("--candidate", default="v2")
-    ap.add_argument("--auto", choices=("mock", "openai"), help="generate readings instead of handwritten")
+    ap.add_argument("--auto", choices=("mock", "groq", "openai"), help="generate readings instead of handwritten")
     ap.add_argument("--interactive", action="store_true", help="pause after every step")
     ap.add_argument("--no-color", action="store_true")
     ap.add_argument("--config", type=Path)
@@ -190,8 +190,9 @@ def main() -> int:
             clients = [LLMClient(MockProvider(fixture_dir=fixtures, family="mock"), "authored-fixture",
                                  cache_dir=cache)]
         else:
-            clients = [build_client(load_llm_settings(), "openai", cache_dir=cache,
-                                    log_path=args.runs_root / "llm_log.jsonl")]
+            families = ("groq_gptoss", "groq_qwen") if args.auto == "groq" else ("openai",)
+            clients = [build_client(load_llm_settings(), f, cache_dir=cache, seed=0,
+                                    log_path=args.runs_root / "llm_log.jsonl") for f in families]
         generated = generate_interpretations(task, clients, out_dir=args.runs_root / task.task_id / "interpret")
     show_readings(p, task, "auto" if args.auto else "handwritten", generated)
     report = verify(task_dir, args.candidate, load_config(args.config), "auto" if args.auto else "handwritten",
