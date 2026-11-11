@@ -55,3 +55,20 @@ pytest -q tests/test_benchmark_tasks.py      # skips if tasks were not generated
 interpretations: ACCEPT is impossible, but admission, P0-only reference-guard
 certification and candidate E0 safety all run. A REJECT would mean a bad task
 or a tool bug.
+
+## P_ref check result (`benchmarks/ref_check.json`, 2026-11-23)
+
+20 tasks, **0 REJECT**, 441 s total on this laptop (benchmark profile, 120 s solver
+timeouts). 9 tasks reach "no interpretation survived" (expected: no readings yet).
+**11** have no certified reference guard (commit `1ae1a06` says 10; it was written
+before the last task finished):
+
+| Cause | Tasks |
+|---|---|
+| P0 undefined on the profile (uninitialised read, shift, OOB from the injected bug) | uppol1_init, uppol2_shft, machsuite init_oob |
+| incomplete unwinding (loops exceed max_unwind) | 4 gnn-builder tasks |
+| SAT backend timeout at 120 s (determinism with 64-bit products) | filtep_init, filtep_use |
+| CBMC local-initialisation instrumentation failed (unqualified) | 2 H.264 tasks |
+
+All are conservative abstentions; every candidate on these tasks will be UNDECIDED
+under the method, and this counts against coverage.
