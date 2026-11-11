@@ -103,3 +103,10 @@ def test_p0_is_the_only_program_text_in_context(tmp_path):
     context = RequestContext.from_task(task, "original")
     assert "argmax" in context.signature
     assert "CANARY" not in json.dumps(context.canonical()), "only the signature, never P0's body"
+
+
+def test_signature_from_p0_with_macros_uses_p0_only_preprocessing():
+    from vwe.llm.context import p0_signature_text
+    src = "#define N 4\n#define T int\nvoid k(T a[N], int n) { a[0] = n; }\n"
+    sig = p0_signature_text(src, "k")
+    assert sig == "void k(int a[4], int n);"
