@@ -181,6 +181,64 @@ class Validator:
 def freeze_interpretations(task_id: str, p0: Views, interpretations: Sequence[Interpretation],
                            out: Path, *, config: Config | None = None, parallel: bool = True,
                            generation: Mapping[str, Any] | None = None) -> FrozenSet:
+    """Freeze readings; optionally reuse an exact P0-only result (VWE_REGION_CACHE, off by default).
+
+    The cache key covers P0 source and views, every reading, the generation record,
+    the configuration and the verifier's source hash; a reuse leaves cache_hit.json.
+    """
+    import os
+    cache_dir = os.environ.get("VWE_REGION_CACHE")
+    if not cache_dir:
+        return _freeze(task_id, p0, interpretations, out, config=config, parallel=parallel,
+                       generation=generation)
+    from dataclasses import asdict
+    from .regions import _code_hash
+    cfg = config or Config()
+    key = sha256(json.dumps({
+        "kind": "freeze", "task": task_id, "p0": p0.source_sha256,
+        "views": [p0.sim.sha256, p0.synth.sha256],
+        "readings": sorted(json.dumps(plain(i), sort_keys=True) for i in interpretations),
+        "generation": plain(generation or {}),
+        "config": {k: asdict(getattr(cfg, k)) for k in ("bounds", "timeouts", "backends", "native")},
+        "code": _code_hash()}, sort_keys=True, default=str).encode()).hexdigest()
+    entry = Path(cache_dir) / f"freeze-{key}.json"
+    out.mkdir(parents=True, exist_ok=True)
+    if entry.is_file():
+        doc = json.loads(entry.read_text())
+        (out / "interpretation_set.json").write_text(doc["set_text"])
+        (out / "validation.json").write_text(doc["validation_text"])
+        (out / "cache_hit.json").write_text(json.dumps({"key": key}) + "\n")
+        record = json.loads(doc["set_text"])
+        results = tuple(Validation(r["id"], State(r["state"]), r["check"], r["detail"], r.get("witness"))
+                        for r in doc["results"])
+        return FrozenSet(out / "interpretation_set.json", record["sha256"],
+                         tuple(_immutable(m) for m in record["members"]), results,
+                         tuple(tuple(c) for c in doc["classes"]))
+    frozen = _freeze(task_id, p0, interpretations, out, config=cfg, parallel=parallel, generation=generation)
+    import tempfile
+    entry.parent.mkdir(parents=True, exist_ok=True)
+    fd, tmp = tempfile.mkstemp(dir=entry.parent, suffix=".tmp")
+    with os.fdopen(fd, "w") as stream:
+        json.dump({"set_text": (out / "interpretation_set.json").read_text(),
+                   "validation_text": (out / "validation.json").read_text(),
+                   "results": [{**asdict(r), "state": r.state.value} for r in frozen.results],
+                   "classes": [list(c) for c in frozen.classes]}, stream, default=str)
+    os.replace(tmp, entry)
+    return frozen
+
+
+def _immutable(value):
+    from types import MappingProxyType
+    if isinstance(value, dict):
+        return MappingProxyType({k: _immutable(v) for k, v in value.items()})
+    if isinstance(value, list):
+        return tuple(_immutable(x) for x in value)
+    return value
+
+
+def _freeze(task_id: str, p0: Views, interpretations: Sequence[Interpretation],
+            out: Path, *, config: Config | None = None, parallel: bool = True,
+            generation: Mapping[str, Any] | None = None) -> FrozenSet:
     """Freeze all non-invalid readings. UNKNOWN blocks a universal verdict."""
     from dataclasses import asdict
     from types import MappingProxyType
