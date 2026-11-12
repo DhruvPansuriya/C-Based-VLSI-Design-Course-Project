@@ -1,13 +1,15 @@
 # Committed evidence index
 
-**Latest implementation checkpoint:** [2026-11-23 / T11](checkpoints/2026-11-23-t11/README.md),
-implementation commit `8ed772e`. [Standalone report index](checkpoints/2026-11-23-t11/index.html).
-Read [metadata](checkpoints/2026-11-23-t11/metadata.json) and original run manifests
-before attributing evidence to a commit. Executions preceded commits and retain
-their actual execution-parent SHAs.
+**Latest checkpoint:** [2026-11-23 / T22](checkpoints/2026-11-23-t22/README.md), a fresh
+validation run on commit `08399e1`: full suite 434 passed / 1 skipped (ESBMC unavailable
+locally), golden 20/20, demo 9/9 in 65.2 s. Evaluations: [Chrysalis T18](eval/summary.md),
+[Project 3](eval_project3/summary.md), [live auto vs handwritten](auto_vs_handwritten_live.md).
+The T11 checkpoint is unchanged and remains the record of that milestone.
 
 | Snapshot | Meaning |
 |---|---|
+| `checkpoints/2026-11-23-t22/` | Release validation of T12–T18 + EVAL-P3 code: test, golden and demo logs, reports, raw text evidence; evaluation run logs |
+| `eval/`, `eval_project3/` | Chrysalis T18 and Project 3 evaluation rows, summaries and audits |
 | `checkpoints/2026-11-23-t11/` | Preserved local public pipeline: 20 golden candidates, 9 demo rows, 325 passed / 1 skipped core-suite log, standalone reports and compressed raw evidence |
 | `golden/` | Imported original Linux handwritten ten-case prototype; not the latest twenty-case suite |
 | `tool_behaviour/` | Imported tool-behavior qualification log |

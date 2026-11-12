@@ -1,0 +1,40 @@
+{
+  "profile_sha256": "60a5cfa2856736c5ee299d8a4e76abc5c15d829e261bb2a59ad7cdcb5723129a",
+  "p0_sha256": "ee3afddc33f75f502b62f445128e2b30aa2df9eb914171a35596a17d7d872069",
+  "proposed_ub": "false",
+  "exact_ub": "false",
+  "exact_nd": "false",
+  "reference_safe_guard": "!(false)",
+  "ub_coverage": {
+    "outcome": "PROVED",
+    "witness": null,
+    "note": "reference_safety"
+  },
+  "ub_witness": {
+    "outcome": "INCONCLUSIVE",
+    "witness": null,
+    "note": "no reachable proposed UB region"
+  },
+  "predicate_reach": {
+    "outcome": "PROVED",
+    "witness": null,
+    "note": "feasibility"
+  },
+  "universal_inside": {
+    "outcome": "PROVED",
+    "witness": null,
+    "note": "proposed region is empty"
+  },
+  "determinism_outside": {
+    "outcome": "PROVED",
+    "witness": null,
+    "note": "determinism"
+  },
+  "safe_guard_reach": {
+    "outcome": "VIOLATED",
+    "witness": {
+      "__vwe_in_scalar_0_0": "68"
+    },
+    "note": "feasibility: main.assertion.1 VWE.feasibility.predicate"
+  }
+}
