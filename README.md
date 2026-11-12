@@ -1,21 +1,23 @@
 # Verdicts with Evidence — C-Based VLSI Design Course Project
 
-**Status: T00–T17 implemented on `implementation-start`; T18 evaluation in progress.**
-The tool checks bounded C repairs with CBMC SAT/Z3 proof jobs, fixed-input
-confirmation and isolated sanitizer replay. Interpretations come from task JSON or
-are generated automatically from P0 and the request only (`vwe interpret`,
-`verify --auto`). Benchmarks: 20 tasks adapted from the public Chrysalis-HLS bug
-dataset with labelled candidate pools and baselines. Live LLM generation is wired to
-OpenAI (`gpt-4.1-mini-2025-04-14`) but **no live completion has been received**: the
-account currently has no API credit. HLS pragma/QoR work (T19–T21) is optional and
-not started.
+**Status: T00–T18 implemented on `implementation-start`, plus a separate evaluation on the
+Project 3 team benchmarks.** VWE checks bounded C repairs with CBMC SAT/Z3 proof jobs,
+fixed-input confirmation and isolated sanitizer replay. Interpretations come from task JSON or
+are generated live from P0 and the request only, by two model families (gpt-oss-120b and Qwen
+via Groq). T19–T21 (HLS pragma gate, Vitis QoR, FIFO) are optional and not started.
 
-| Area | State | Read |
+| Evaluation | Result | Read |
 |---|---|---|
-| Core verifier, goldens, demos (T00–T11) | done; 20/20 goldens, step-by-step demo | [walkthrough](docs/METHODOLOGY_WALKTHROUGH.md), [demo guide](docs/DEMO_GUIDE.md) |
-| LLM client, generation, stability (T12–T14) | done; mock-tested, live blocked on credit | [T12](docs/T12_LLM.md), [T13](docs/T13_INTERPRET.md), [T14](docs/T14_STABILITY.md) |
-| Benchmarks, pools, labels (T15–T16) | 20 tasks, 0 P_ref rejections; labelling running | [T15](docs/T15_BENCHMARKS.md), [T16](docs/T16_POOLS.md) |
-| Baselines, metrics (T17–T18) | code done; evaluation pending labels | `vwe/eval/`, `make eval` |
+| Golden Examples 1–7 (authored) | 20/20 match | [T11 checkpoint](results/checkpoints/2026-11-23-t11/README.md) |
+| Project 3 benchmarks (181 candidates, T5 preservation) | **125 decided, 125/125 agree with their labels, 0 wrong**; coverage 0.69 | [EVAL-P3](docs/EVAL_P3.md) |
+| Chrysalis-HLS adaptation (89 labelled candidates, live readings) | method 1 decision, **0 wrong**, coverage 0.01; tests-only 41 wrong, regression-only 10 wrong | [T18](docs/T18_EVAL.md) |
+| Live auto vs handwritten (Examples 1, 2, 4) | 3 same, 7 conservative abstentions, explained | [results](results/auto_vs_handwritten_live.md) |
+
+The method has made no wrong decision in any evaluation so far; its cost is abstention. On
+Chrysalis tasks almost every abstention comes from bugs that are invisible in the scaled profile
+or from solver timeouts; on Project 3 most come from SAT timeouts on multiplication kernels.
+These are bounded, profile-local results on adapted or authored tasks, not a general accuracy
+estimate. See [the implementation report](docs/IMPLEMENTATION_REPORT.md).
 
 ## Start here — no solver rerun required
 
