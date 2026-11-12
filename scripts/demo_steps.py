@@ -45,6 +45,18 @@ EXPLAIN = [
 ]
 
 
+MEANING = {
+    ("REJECT", "E0"): "P1 has a computed defect (new undefined behaviour, nondeterminism or a build-view "
+                      "mismatch) on an input where P0 is fine. This needs no interpretation of N at all.",
+    ("REJECT", "E1"): "Outside every reading's change region, P1 changes P0's behaviour in a way every "
+                      "reading forbids: a regression, whatever N exactly meant.",
+    ("REJECT", "E2"): "P1 violates every surviving reading of N. Conditional on the reading set covering "
+                      "what N means.",
+    ("ACCEPT", "E2"): "P1 satisfies every surviving reading and preserves P0 elsewhere, within the bounded "
+                      "caller profile. Conditional on the readings and the profile being adequate.",
+}
+
+
 class Printer:
     def __init__(self, interactive: bool, color: bool) -> None:
         self.interactive, self.color, self.n = interactive, color, 0
@@ -159,6 +171,12 @@ def on_step_factory(p: Printer):
             sat = data["facts"].get("interpretations_satisfied", [])
             vio = data["facts"].get("interpretations_violated", [])
             p.line(f"readings satisfied: {sat or '-'}   violated: {vio or '-'}")
+            meaning = MEANING.get((data["decision"], data["evidence_class"]),
+                                  "UNDECIDED: some required evidence could not be established (ambiguity, "
+                                  "unresolved scope, timeouts or unconfirmed witnesses). VWE abstains "
+                                  "rather than guess.")
+            p.line()
+            print(textwrap.fill("What this means: " + meaning, 78, initial_indent="  ", subsequent_indent="  "))
     return on_step
 
 
@@ -171,7 +189,14 @@ def main() -> int:
     ap.add_argument("--no-color", action="store_true")
     ap.add_argument("--config", type=Path)
     ap.add_argument("--runs-root", type=Path, default=Path("runs/demo-steps"))
+    ap.add_argument("--list", action="store_true", help="list example tasks and candidates, then exit")
     args = ap.parse_args()
+    if args.list:
+        for folder in sorted((ROOT / "examples/tasks").iterdir()):
+            if (folder / "task.json").is_file():
+                t = load_pipeline_view(folder)
+                print(f"{t.task_id:24s} candidates: {', '.join(sorted(t.candidates))}")
+        return 0
     task_dir = ROOT / "examples/tasks" / args.task if not Path(args.task).is_dir() else Path(args.task)
     task = load_pipeline_view(task_dir)
     if args.candidate not in task.candidates:
