@@ -25,7 +25,7 @@ Working branch: `implementation-start`. Original archive preserved in the import
 | T16 pools/labels | done: 97 candidates, 23 correct / 66 incorrect / 8 unknown; labeller V-2 bug found and fixed before use | `docs/T16_POOLS.md`, `results/eval/pool_stats.md` |
 | T17 baselines | B1/B3/B4 done; B2 not implemented (would send P1 to an LLM) | `vwe/eval/baselines.py` |
 | T18 evaluation | done with live Groq readings: method 1 decision / 0 wrong (coverage 0.01); B1 41 wrong, B4 10 wrong | `docs/T18_EVAL.md`, `results/eval/summary.md` |
-| EVAL-P3 (separate) | running: VWE on 181 Project 3 candidates | `docs/EVAL_P3.md` |
+| EVAL-P3 (separate) | done: 181 Project 3 candidates, 125 decided, 125/125 agree with their labels, 0 disagree | `docs/EVAL_P3.md`, `results/eval_project3/summary.md` |
 | T19–T21 | optional, not started | |
 | T22 | in progress | | corrections in the import review apply before implementing affected cards |
 
