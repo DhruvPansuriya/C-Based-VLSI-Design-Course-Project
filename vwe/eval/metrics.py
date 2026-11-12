@@ -115,15 +115,22 @@ def paired_by_task(a: Sequence[Row], b: Sequence[Row]) -> dict:
     key = lambda r: (r.task, r.candidate)
     bmap = {key(r): r for r in _labelled(b)}
     per_task: dict[str, int] = defaultdict(int)
+    wrong_task: dict[str, int] = defaultdict(int)
     for r in _labelled(a):
         other = bmap.get(key(r))
         if other is not None:
             per_task[r.task] += int(is_right(r)) - int(is_right(other))
+            wrong_task[r.task] += int(is_wrong(r)) - int(is_wrong(other))
     wins = sum(d > 0 for d in per_task.values())
     losses = sum(d < 0 for d in per_task.values())
+    fewer = sum(d < 0 for d in wrong_task.values())
+    more = sum(d > 0 for d in wrong_task.values())
     return {"tasks_compared": len(per_task), "wins": wins, "losses": losses,
             "ties": len(per_task) - wins - losses, "sign_test_p": sign_test(wins, losses),
-            "net_right_decisions": sum(per_task.values())}
+            "net_right_decisions": sum(per_task.values()),
+            "net_wrong_decisions": sum(wrong_task.values()),
+            "tasks_fewer_wrong": fewer, "tasks_more_wrong": more,
+            "wrong_sign_test_p": sign_test(fewer, more)}
 
 
 def breakdown(rows: Sequence[Row], attribute: Mapping[str, str]) -> dict[str, dict]:
