@@ -1,0 +1,224 @@
+ESBMC version 8.7.0 64-bit x86_64 windows
+
+Target: 64-bit little-endian x86_64-unknown-windows with esbmclibc
+Parsing C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.297s
+GOTO program processing time: 0.003s
+Starting Bounded Model Checking
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 3 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 22 column 1 function main
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 3 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 22 column 1 function main
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 3 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 22 column 1 function main
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 3 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 22 column 1 function main
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 3 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 22 column 1 function main
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 3 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 22 column 1 function main
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 3 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 22 column 1 function main
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 3 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 22 column 1 function main
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 4 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 31 column 1 function main
+Unwinding loop 4 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 31 column 1 function main
+Unwinding loop 4 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 31 column 1 function main
+Unwinding loop 4 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 31 column 1 function main
+Unwinding loop 4 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 31 column 1 function main
+Unwinding loop 4 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 31 column 1 function main
+Unwinding loop 4 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 31 column 1 function main
+Unwinding loop 4 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 31 column 1 function main
+Symex completed in: 0.007s (176 assignments)
+Caching time: 0.000s (removed 8 assertions)
+Slicing time: 0.001s (removed 126 assignments)
+Generated 237 VCC(s), 15 remaining after simplification (42 assignments)
+Slicing time: 0.000s (removed 26 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 22 column 30 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 26 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 22 column 30 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 26 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 22 column 30 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 26 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 22 column 30 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 26 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 22 column 30 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 26 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 22 column 30 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 26 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 22 column 30 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 26 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 22 column 30 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 23 assignments)
+Solving claim 'dereference failure: Incorrect alignment when accessing data object at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 9 column 3 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 23 assignments)
+Solving claim 'dereference failure: array bounds violated at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 9 column 3 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.002s
+Slicing time: 0.000s (removed 23 assignments)
+Solving claim 'dereference failure: Incorrect alignment when accessing data object at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 9 column 3 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 23 assignments)
+Solving claim 'dereference failure: Incorrect alignment when accessing data object at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 15 column 3 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.003s
+Slicing time: 0.000s (removed 23 assignments)
+Solving claim 'dereference failure: array bounds violated at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 15 column 3 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.002s
+Slicing time: 0.000s (removed 23 assignments)
+Solving claim 'dereference failure: Incorrect alignment when accessing data object at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 15 column 3 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 0 assignments)
+Solving claim 'EQUIV:return at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 30 column 1 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.172s
+Slicing time: 0.000s (removed 26 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 31 column 35 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 26 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 31 column 35 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 26 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 31 column 35 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 26 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 31 column 35 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 26 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 31 column 35 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 26 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 31 column 35 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 26 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 31 column 35 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 26 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c line 31 column 35 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+BMC program time: 0.401s
+
+** Results:
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c, function __hls_candidate
+  PASSED       [__hls_candidate.assertion.1]              line 15  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hls_candidate.array-bounds-violated.1]  line 15  dereference failure: array bounds violated
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c, function __hls_original
+  PASSED       [__hls_original.assertion.1]               line  9  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hls_original.array-bounds-violated.1]   line  9  dereference failure: array bounds violated
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\fallback_demo\esbmc\harness.c, function main
+  PASSED       [main.uninitialised-variable.1]            line 22  use of uninitialized variable: seed_0
+  PASSED       [main.arithmetic-overflow.1]               line 22  arithmetic overflow on add
+  PASSED       [main.uninitialised-variable.2]            line 22  use of uninitialized variable: seed_0
+  PASSED       [main.array-bounds-violated.1]             line 24  array bounds violated: array `1' lower bound
+  PASSED       [main.array-bounds-violated.2]             line 24  array bounds violated: array `1' upper bound
+  PASSED       [main.array-bounds-violated.3]             line 24  array bounds violated: array `original_arg_0' lower bound
+  PASSED       [main.array-bounds-violated.4]             line 24  array bounds violated: array `original_arg_0' upper bound
+  PASSED       [main.uninitialised-variable.3]            line 24  use of uninitialized variable: seed_0
+  PASSED       [main.uninitialised-variable.4]            line 24  use of uninitialized variable: value
+  PASSED       [main.array-bounds-violated.5]             line 25  array bounds violated: array `2' lower bound
+  PASSED       [main.array-bounds-violated.6]             line 25  array bounds violated: array `2' upper bound
+  PASSED       [main.array-bounds-violated.7]             line 25  array bounds violated: array `candidate_arg_0' lower bound
+  PASSED       [main.array-bounds-violated.8]             line 25  array bounds violated: array `candidate_arg_0' upper bound
+  PASSED       [main.uninitialised-variable.5]            line 25  use of uninitialized variable: seed_0
+  PASSED       [main.uninitialised-variable.6]            line 25  use of uninitialized variable: value
+  PASSED       [main.uninitialised-variable.7]            line 28  use of uninitialized variable: input_1
+  PASSED       [main.uninitialised-variable.8]            line 29  use of uninitialized variable: input_1
+  PASSED       [main.assertion.1]                         line 30  EQUIV:return
+  PASSED       [main.uninitialised-variable.9]            line 30  use of uninitialized variable: candidate_return
+  PASSED       [main.uninitialised-variable.10]           line 30  use of uninitialized variable: original_return
+  PASSED       [main.uninitialised-variable.11]           line 31  use of uninitialized variable: compare_0
+  PASSED       [main.arithmetic-overflow.2]               line 31  arithmetic overflow on add
+  PASSED       [main.uninitialised-variable.12]           line 31  use of uninitialized variable: compare_0
+  PASSED       [main.assertion.2]                         line 32  EQUIV:array:0
+  PASSED       [main.array-bounds-violated.9]             line 32  array bounds violated: array `1' lower bound
+  PASSED       [main.array-bounds-violated.10]            line 32  array bounds violated: array `1' upper bound
+  PASSED       [main.array-bounds-violated.11]            line 32  array bounds violated: array `2' lower bound
+  PASSED       [main.array-bounds-violated.12]            line 32  array bounds violated: array `2' upper bound
+  PASSED       [main.array-bounds-violated.13]            line 32  array bounds violated: array `original_arg_0' lower bound
+  PASSED       [main.array-bounds-violated.14]            line 32  array bounds violated: array `original_arg_0' upper bound
+  PASSED       [main.uninitialised-variable.13]           line 32  use of uninitialized variable: candidate_arg_0
+  PASSED       [main.uninitialised-variable.14]           line 32  use of uninitialized variable: compare_0
+  PASSED       [main.uninitialised-variable.15]           line 32  use of uninitialized variable: original_arg_0
+
+** 0 of 37 properties failed, 37 passed
+Solver: Z3 v4.13.3 â€¢ Decision procedure total time: 0.189s â€¢ Avg: 0.005s/property
+
+VERIFICATION SUCCESSFUL

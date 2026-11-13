@@ -1,0 +1,52 @@
+ESBMC version 8.7.0 64-bit x86_64 windows
+
+Target: 32-bit little-endian i386-unknown-win32 with esbmclibc
+Parsing C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_popcount8\proof\residual_0\miter.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.284s
+GOTO program processing time: 0.000s
+Starting Bounded Model Checking
+Symex completed in: 0.001s (47 assignments)
+Caching time: 0.000s (removed 0 assertions)
+Slicing time: 0.000s (removed 45 assignments)
+Generated 11 VCC(s), 1 remaining after simplification (2 assignments)
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'EQUIV:observables at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_popcount8\proof\residual_0\miter.c line 32 column 1 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+
+[Counterexample]
+
+
+State 1 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_popcount8\proof\residual_0\miter.c line 32 column 1 function main thread 0
+----------------------------------------------------
+Violated property:
+  file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_popcount8\proof\residual_0\miter.c line 32 column 1 function main
+  EQUIV:observables
+  __hlscheck_left_return == __hlscheck_right_return
+
+BMC program time: 0.025s
+
+** Results:
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_popcount8\proof\residual_0\miter.c, function __hlscheck_candidate
+  PASSED       [__hlscheck_candidate.uninitialised-variable.1]  line 22  use of uninitialized variable: v
+  PASSED       [__hlscheck_candidate.uninitialised-variable.2]  line 23  use of uninitialized variable: v
+  PASSED       [__hlscheck_candidate.uninitialised-variable.3]  line 24  use of uninitialized variable: v
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_popcount8\proof\residual_0\miter.c, function __hlscheck_original
+  PASSED       [__hlscheck_original.uninitialised-variable.1]   line 13  use of uninitialized variable: v
+  PASSED       [__hlscheck_original.uninitialised-variable.2]   line 14  use of uninitialized variable: v
+  PASSED       [__hlscheck_original.uninitialised-variable.3]   line 15  use of uninitialized variable: v
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_popcount8\proof\residual_0\miter.c, function main
+  PASSED       [main.uninitialised-variable.1]                  line 30  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.2]                  line 31  use of uninitialized variable: __hlscheck_input_0
+  FAILED       [main.assertion.1]                               line 32  EQUIV:observables
+  PASSED       [main.uninitialised-variable.3]                  line 32  use of uninitialized variable: __hlscheck_left_return
+  PASSED       [main.uninitialised-variable.4]                  line 32  use of uninitialized variable: __hlscheck_right_return
+
+** 1 of 11 properties failed, 10 passed
+Solver: Z3 v4.13.3 â€¢ Decision procedure total time: 0.001s â€¢ Avg: 0.000s/property
+
+VERIFICATION FAILED

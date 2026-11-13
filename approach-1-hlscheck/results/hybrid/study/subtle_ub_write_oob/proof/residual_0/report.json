@@ -1,0 +1,151 @@
+[
+  {
+    "coverage": {
+      "files": {
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_write_oob\\proof\\residual_0\\miter.c": {
+          "coverage_stats": {
+            "covered_lines": 2,
+            "total_hits": 2
+          },
+          "covered_lines": {
+            "19": {
+              "covered": true,
+              "hits": 1,
+              "type": "violation"
+            },
+            "39": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            }
+          }
+        }
+      }
+    },
+    "initial_values": {},
+    "source_files": {
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_write_oob\\proof\\residual_0\\miter.c": [
+        "",
+        "_Static_assert(sizeof(char)==1 && sizeof(short)==2 && sizeof(int)==4 &&",
+        "               sizeof(long)==4 && sizeof(long long)==8 && sizeof(void*)==4, \"HLSCheck ILP32 ABI\");",
+        "_Static_assert((char)-1 < 0, \"HLSCheck requires signed plain char\");",
+        "_Static_assert((unsigned char)-1 == 255, \"HLSCheck requires 8-bit bytes\");",
+        "",
+        "extern void __ESBMC_assert(_Bool, const char *);",
+        "extern void __ESBMC_assume(_Bool);",
+        "extern unsigned int __hlscheck_nondet_0(void);",
+        "unsigned int __hlscheck_original(unsigned int x[4])",
+        "{",
+        "  x[3] = 1u;",
+        "  return 0u;",
+        "}",
+        "",
+        "",
+        "unsigned int __hlscheck_candidate(unsigned int x[4])",
+        "{",
+        "  x[4] = 1u;",
+        "  return 0u;",
+        "}",
+        "",
+        "",
+        "int main(void) {",
+        "unsigned int __hlscheck_input_0[4]={__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0()};",
+        "unsigned int __hlscheck_left_0[4], __hlscheck_right_0[4];",
+        "__hlscheck_left_0[0]=__hlscheck_input_0[0];",
+        "__hlscheck_right_0[0]=__hlscheck_left_0[0];",
+        "__hlscheck_left_0[1]=__hlscheck_input_0[1];",
+        "__hlscheck_right_0[1]=__hlscheck_left_0[1];",
+        "__hlscheck_left_0[2]=__hlscheck_input_0[2];",
+        "__hlscheck_right_0[2]=__hlscheck_left_0[2];",
+        "__hlscheck_left_0[3]=__hlscheck_input_0[3];",
+        "__hlscheck_right_0[3]=__hlscheck_left_0[3];",
+        "unsigned int __hlscheck_left_return=__hlscheck_original(__hlscheck_left_0);",
+        "unsigned int __hlscheck_right_return=__hlscheck_candidate(__hlscheck_right_0);",
+        "__ESBMC_assert((__hlscheck_left_0[0]==__hlscheck_right_0[0]) && (__hlscheck_left_0[1]==__hlscheck_right_0[1]) && (__hlscheck_left_0[2]==__hlscheck_right_0[2]) && (__hlscheck_left_0[3]==__hlscheck_right_0[3]) && (__hlscheck_left_return==__hlscheck_right_return),\"EQUIV:observables\");",
+        "return 0;",
+        "}"
+      ]
+    },
+    "status": "violation",
+    "steps": [
+      {
+        "assertion": {
+          "comment": "dereference failure: array bounds violated",
+          "cwe": [
+            121,
+            125,
+            129,
+            131,
+            193,
+            787
+          ],
+          "guard": "1",
+          "violated": true
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_write_oob\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "19",
+        "message": "dereference failure: array bounds violated",
+        "step_number": 0,
+        "type": "violation"
+      },
+      {
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_write_oob\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "39",
+        "message": "Assumption restriction",
+        "step_number": 1,
+        "type": "assume"
+      }
+    ]
+  },
+  {
+    "coverage": {
+      "files": {
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_write_oob\\proof\\residual_0\\miter.c": {
+          "coverage_stats": {
+            "covered_lines": 2,
+            "total_hits": 2
+          },
+          "covered_lines": {
+            "37": {
+              "covered": true,
+              "hits": 1,
+              "type": "violation"
+            },
+            "39": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            }
+          }
+        }
+      }
+    },
+    "initial_values": {},
+    "status": "violation",
+    "steps": [
+      {
+        "assertion": {
+          "comment": "EQUIV:observables",
+          "guard": "__hlscheck_left_0[0] == __hlscheck_right_0[0] && __hlscheck_left_0[1] == __hlscheck_right_0[1] && __hlscheck_left_0[2] == __hlscheck_right_0[2] && __hlscheck_left_0[3] == __hlscheck_right_0[3] && __hlscheck_left_return == __hlscheck_right_return",
+          "violated": true
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_write_oob\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "37",
+        "message": "EQUIV:observables",
+        "step_number": 0,
+        "type": "violation"
+      },
+      {
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_write_oob\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "39",
+        "message": "Assumption restriction",
+        "step_number": 1,
+        "type": "assume"
+      }
+    ]
+  }
+]

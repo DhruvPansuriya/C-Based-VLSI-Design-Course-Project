@@ -1,0 +1,507 @@
+{
+  "status": "not_equivalent",
+  "assumptions": [
+    "32-bit int and unsigned int; uint32_t is unsigned int",
+    "All array parameters are valid, separately allocated, and nonoverlapping",
+    "Functional equality at function completion; no cycle-level RTL guarantee"
+  ],
+  "execution_steps": 512,
+  "paths": {
+    "original": 1,
+    "candidate": 1
+  },
+  "z3_version": "5.1.0",
+  "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+  "component_lemmas": [
+    {
+      "index": 1,
+      "status": "sat",
+      "variables": [
+        "arg0_0",
+        "arg1_0",
+        "arg1_1"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma001.smt2"
+    },
+    {
+      "index": 2,
+      "status": "sat",
+      "variables": [
+        "arg0_1",
+        "arg1_4",
+        "arg1_5"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma002.smt2"
+    },
+    {
+      "index": 3,
+      "status": "sat",
+      "variables": [
+        "arg0_2",
+        "arg1_8",
+        "arg1_9"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma003.smt2"
+    },
+    {
+      "index": 4,
+      "status": "sat",
+      "variables": [
+        "arg0_3",
+        "arg1_12",
+        "arg1_13"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma004.smt2"
+    },
+    {
+      "index": 5,
+      "status": "sat",
+      "variables": [
+        "arg0_0",
+        "arg1_2",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma005.smt2"
+    },
+    {
+      "index": 6,
+      "status": "sat",
+      "variables": [
+        "arg0_1",
+        "arg1_6",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma006.smt2"
+    },
+    {
+      "index": 7,
+      "status": "sat",
+      "variables": [
+        "arg0_2",
+        "arg1_10",
+        "arg1_11"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma007.smt2"
+    },
+    {
+      "index": 8,
+      "status": "sat",
+      "variables": [
+        "arg0_3",
+        "arg1_14",
+        "arg1_15"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma008.smt2"
+    },
+    {
+      "index": 9,
+      "status": "sat",
+      "variables": [
+        "arg0_4",
+        "arg1_0",
+        "arg1_1"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma009.smt2"
+    },
+    {
+      "index": 10,
+      "status": "sat",
+      "variables": [
+        "arg0_5",
+        "arg1_4",
+        "arg1_5"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma010.smt2"
+    },
+    {
+      "index": 11,
+      "status": "sat",
+      "variables": [
+        "arg0_6",
+        "arg1_8",
+        "arg1_9"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma011.smt2"
+    },
+    {
+      "index": 12,
+      "status": "sat",
+      "variables": [
+        "arg0_7",
+        "arg1_12",
+        "arg1_13"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma012.smt2"
+    },
+    {
+      "index": 13,
+      "status": "sat",
+      "variables": [
+        "arg0_4",
+        "arg1_2",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma013.smt2"
+    },
+    {
+      "index": 14,
+      "status": "sat",
+      "variables": [
+        "arg0_5",
+        "arg1_6",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma014.smt2"
+    },
+    {
+      "index": 15,
+      "status": "sat",
+      "variables": [
+        "arg0_6",
+        "arg1_10",
+        "arg1_11"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma015.smt2"
+    },
+    {
+      "index": 16,
+      "status": "sat",
+      "variables": [
+        "arg0_7",
+        "arg1_14",
+        "arg1_15"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma016.smt2"
+    },
+    {
+      "index": 17,
+      "status": "sat",
+      "variables": [
+        "arg0_10",
+        "arg1_8",
+        "arg1_9"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma017.smt2"
+    },
+    {
+      "index": 18,
+      "status": "sat",
+      "variables": [
+        "arg0_11",
+        "arg1_12",
+        "arg1_13"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma018.smt2"
+    },
+    {
+      "index": 19,
+      "status": "sat",
+      "variables": [
+        "arg0_8",
+        "arg1_0",
+        "arg1_1"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma019.smt2"
+    },
+    {
+      "index": 20,
+      "status": "sat",
+      "variables": [
+        "arg0_9",
+        "arg1_4",
+        "arg1_5"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma020.smt2"
+    },
+    {
+      "index": 21,
+      "status": "sat",
+      "variables": [
+        "arg0_10",
+        "arg1_10",
+        "arg1_11"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma021.smt2"
+    },
+    {
+      "index": 22,
+      "status": "sat",
+      "variables": [
+        "arg0_11",
+        "arg1_14",
+        "arg1_15"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma022.smt2"
+    },
+    {
+      "index": 23,
+      "status": "sat",
+      "variables": [
+        "arg0_8",
+        "arg1_2",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma023.smt2"
+    },
+    {
+      "index": 24,
+      "status": "sat",
+      "variables": [
+        "arg0_9",
+        "arg1_6",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma024.smt2"
+    },
+    {
+      "index": 25,
+      "status": "sat",
+      "variables": [
+        "arg0_12",
+        "arg1_0",
+        "arg1_1"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma025.smt2"
+    },
+    {
+      "index": 26,
+      "status": "sat",
+      "variables": [
+        "arg0_13",
+        "arg1_4",
+        "arg1_5"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma026.smt2"
+    },
+    {
+      "index": 27,
+      "status": "sat",
+      "variables": [
+        "arg0_14",
+        "arg1_8",
+        "arg1_9"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma027.smt2"
+    },
+    {
+      "index": 28,
+      "status": "sat",
+      "variables": [
+        "arg0_15",
+        "arg1_12",
+        "arg1_13"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma028.smt2"
+    },
+    {
+      "index": 29,
+      "status": "sat",
+      "variables": [
+        "arg0_12",
+        "arg1_2",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma029.smt2"
+    },
+    {
+      "index": 30,
+      "status": "sat",
+      "variables": [
+        "arg0_13",
+        "arg1_6",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma030.smt2"
+    },
+    {
+      "index": 31,
+      "status": "sat",
+      "variables": [
+        "arg0_14",
+        "arg1_10",
+        "arg1_11"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma031.smt2"
+    },
+    {
+      "index": 32,
+      "status": "sat",
+      "variables": [
+        "arg0_15",
+        "arg1_14",
+        "arg1_15"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_gemm_tile2\\proof\\lemmas\\region_equality.lemma032.smt2"
+    }
+  ],
+  "main_query_requires_component_lemmas": false,
+  "counterexample": {
+    "m1": [
+      424443373,
+      56058145,
+      1198985663,
+      3959551533,
+      812408819,
+      4242803715,
+      3557772173,
+      4077394382,
+      452670373,
+      188903842,
+      3852394278,
+      3374140537,
+      1675204183,
+      1607359276,
+      3031312206,
+      1088069631
+    ],
+    "m2": [
+      85233357,
+      3813600485,
+      313521864,
+      3198977027,
+      2115645787,
+      0,
+      3299145339,
+      1765801984,
+      1450143669,
+      532676608,
+      3597963229,
+      1224565760,
+      1125646439,
+      2147483648,
+      1436810799,
+      2147483648
+    ],
+    "prod": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "original_outputs": {
+    "m1": [
+      424443373,
+      56058145,
+      1198985663,
+      3959551533,
+      812408819,
+      4242803715,
+      3557772173,
+      4077394382,
+      452670373,
+      188903842,
+      3852394278,
+      3374140537,
+      1675204183,
+      1607359276,
+      3031312206,
+      1088069631
+    ],
+    "m2": [
+      85233357,
+      3813600485,
+      313521864,
+      3198977027,
+      2115645787,
+      0,
+      3299145339,
+      1765801984,
+      1450143669,
+      532676608,
+      3597963229,
+      1224565760,
+      1125646439,
+      2147483648,
+      1436810799,
+      2147483648
+    ],
+    "prod": [
+      5475754,
+      2600018177,
+      4072692521,
+      1409370567,
+      770729787,
+      2872039519,
+      2073115604,
+      3416162265,
+      3040169028,
+      941051545,
+      736305603,
+      2728888047,
+      3868227086,
+      1212002259,
+      180618819,
+      402003717
+    ]
+  },
+  "candidate_outputs": {
+    "m1": [
+      424443373,
+      56058145,
+      1198985663,
+      3959551533,
+      812408819,
+      4242803715,
+      3557772173,
+      4077394382,
+      452670373,
+      188903842,
+      3852394278,
+      3374140537,
+      1675204183,
+      1607359276,
+      3031312206,
+      1088069631
+    ],
+    "m2": [
+      85233357,
+      3813600485,
+      313521864,
+      3198977027,
+      2115645787,
+      0,
+      3299145339,
+      1765801984,
+      1450143669,
+      532676608,
+      3597963229,
+      1224565760,
+      1125646439,
+      2147483648,
+      1436810799,
+      2147483648
+    ],
+    "prod": [
+      5475754,
+      5475754,
+      4072692521,
+      4072692521,
+      770729787,
+      770729787,
+      2073115604,
+      2073115604,
+      3040169028,
+      3040169028,
+      736305603,
+      736305603,
+      3868227086,
+      3868227086,
+      180618819,
+      180618819
+    ]
+  },
+  "elapsed_seconds": 4.951293
+}

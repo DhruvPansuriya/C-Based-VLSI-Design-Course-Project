@@ -1,0 +1,125 @@
+{
+  "fingerprints": {
+    "original": "c85703f1451f5b2be389696a55d677538cf471a2dcaca9697571dfa5c0423771",
+    "candidate": "d5540400641c88a26d0839d65e64570d08d449da857e8be2bdf8d89723c7ae48",
+    "evaluator": "c6045de93a412b74c1b8a184a264bc3a964ce015d2b4b5864f49909f7cf9cb9a",
+    "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+    "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307",
+    "pipeline.py": "a4b504daefbd3524a1d0a6fc5e872fd2a75b469c869cfb2c33a35711fa731567",
+    "native_helpers": "a83490a2ca85c768fe67d098c3b4b4899539a14db4ac582d6c8760bbf81917fe",
+    "timeout_ms": 15000
+  },
+  "manual_semantic_edits": false,
+  "syntax_compiles": true,
+  "ast_unchanged": false,
+  "verification": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 4,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [
+      {
+        "index": 1,
+        "status": "sat",
+        "variables": [
+          "arg0"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\fault_rare_magic\\proof\\symbolic.lemma001.smt2"
+      }
+    ],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "x": 3735928559,
+      "y": 0
+    },
+    "original_outputs": {
+      "return": 3735928560
+    },
+    "candidate_outputs": {
+      "return": 3735928559
+    },
+    "elapsed_seconds": 0.073586,
+    "backend": "hlscheck/Z3",
+    "fallback_used": false,
+    "initial_stage": {
+      "status": "not_equivalent",
+      "assumptions": [
+        "32-bit int and unsigned int; uint32_t is unsigned int",
+        "All array parameters are valid, separately allocated, and nonoverlapping",
+        "Functional equality at function completion; no cycle-level RTL guarantee"
+      ],
+      "execution_steps": 4,
+      "paths": {
+        "original": 1,
+        "candidate": 1
+      },
+      "z3_version": "5.1.0",
+      "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+      "component_lemmas": [
+        {
+          "index": 1,
+          "status": "sat",
+          "variables": [
+            "arg0"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\fault_rare_magic\\proof\\symbolic.lemma001.smt2"
+        }
+      ],
+      "main_query_requires_component_lemmas": false,
+      "counterexample": {
+        "x": 3735928559,
+        "y": 0
+      },
+      "original_outputs": {
+        "return": 3735928560
+      },
+      "candidate_outputs": {
+        "return": 3735928559
+      },
+      "elapsed_seconds": 0.073586
+    }
+  },
+  "status": "not_equivalent",
+  "smt_replay": {
+    "available": true,
+    "passed": true,
+    "witness_pinned": true,
+    "queries": [
+      {
+        "file": "symbolic.smt2",
+        "expected": "sat",
+        "observed": "sat"
+      }
+    ],
+    "scope": "Same Z3 solver; unrestricted UNSAT/lemma replay, SAT replay at recorded input. Not independent proof certificates."
+  },
+  "native": {
+    "passed": true,
+    "trials": 264,
+    "directed_trials": 8,
+    "random_trials": 256,
+    "mismatches": 0,
+    "first_mismatch_trial": null,
+    "witness_replayed": true,
+    "witness_outputs_agree": true,
+    "harness_sha256": "38124c1c8014989203931fb144f1d0a9b63267384a93dd67ca320546a1e4f68a",
+    "command": [
+      "C:\\MinGW\\mingw32\\bin\\clang.EXE",
+      "-std=c11",
+      "-O2",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\fault_rare_magic\\native_differential.c",
+      "-o",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\fault_rare_magic\\native_check_071.exe"
+    ],
+    "exit_code": 0
+  }
+}

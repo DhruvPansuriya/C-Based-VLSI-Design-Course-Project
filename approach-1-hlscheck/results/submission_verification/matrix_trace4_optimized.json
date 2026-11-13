@@ -1,0 +1,31 @@
+{
+  "case": "matrix_trace4",
+  "variant": "optimized",
+  "expected": "equivalent",
+  "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+  "transformation": "Traverse only diagonal indices",
+  "original": "benchmarks\\expanded\\matrix_trace4_original.c",
+  "candidate": "benchmarks\\expanded\\matrix_trace4_optimized.c",
+  "original_sha256": "66cc52bfb2df6950820be529dd8c5fcb3d206036779a2588862f3bc96942c96c",
+  "candidate_sha256": "80aae252076126370d6bc2b3c9a0080ff28b289911e3a4203c98432845f6775c",
+  "verification": {
+    "status": "equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 84,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "elapsed_seconds": 0.005368
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

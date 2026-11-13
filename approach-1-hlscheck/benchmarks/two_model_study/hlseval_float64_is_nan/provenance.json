@@ -1,0 +1,17 @@
+{
+  "id": "hlseval_float64_is_nan",
+  "source": "benchmarks/two_model_study/hlseval_float64_is_nan/original.c",
+  "function": "kernel",
+  "original_sha256": "c37136647e0670ce12cc509d5bdd9d2c69116f86b7cabbe51e2bd4ce98ddab0a",
+  "suite": "hls-eval",
+  "upstream_source": "datasets/hls-eval/hls_eval_data/chstone/df_float64_is_nan/float64_is_nan.cpp",
+  "upstream_sha256": "2153de983840115d63c11e816d07e34a3b74f7a8c34090329ce11fa831758d1c",
+  "preparation": "Reuse the type-preserving original leaf extraction (not any candidate). Retain all typedefs/macros, widths and source notices. Rename only float64_is_nan to kernel before freezing; remove unrelated compilation-unit material as documented in the earlier extraction. No dimension, type or input-domain reduction.",
+  "category": "type_preserving_leaf",
+  "integer_domain": "Original primitive widths and typedefs preserved under ILP32; signed narrowing follows the selected target. Binary64 values are unsigned64 bit patterns, not floating-point arithmetic.",
+  "prepared_original_source": "experiments/dataset_leaves/hlseval_float64_is_nan/original.c",
+  "source_function_original": "float64_is_nan",
+  "upstream_header": "datasets/hls-eval/hls_eval_data/chstone/df_float64_is_nan/float64_is_nan.h",
+  "upstream_header_sha256": "a24ce6d9470d5f40ac11943072ea2d9935e2e071c508818a960319cecfbbe49d",
+  "exact_original_function_sha256": "139ae8cfdad7b6c78789d2fafab0dd9b7c770537e3a99f3c701dc97e9954285f"
+}

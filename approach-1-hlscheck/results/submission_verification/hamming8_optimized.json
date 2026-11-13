@@ -1,0 +1,104 @@
+{
+  "case": "hamming8",
+  "variant": "optimized",
+  "expected": "equivalent",
+  "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+  "transformation": "Replace nested bit scans with byte SWAR",
+  "original": "benchmarks\\expanded\\hamming8_original.c",
+  "candidate": "benchmarks\\expanded\\hamming8_optimized.c",
+  "original_sha256": "e71a55c25cae5c4e78276d4a37a4451746381ed56d9e1635e699aa2d252851a6",
+  "candidate_sha256": "bc50655c6c6ea5a21c16dbd2a44e97899b5198e3597052598daeef7883737d3e",
+  "verification": {
+    "status": "equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 236,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [
+      {
+        "index": 1,
+        "status": "unsat",
+        "variables": [
+          "arg0_0",
+          "arg1_0"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\hamming8_optimized.lemma001.smt2"
+      },
+      {
+        "index": 2,
+        "status": "unsat",
+        "variables": [
+          "arg0_1",
+          "arg1_1"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\hamming8_optimized.lemma002.smt2"
+      },
+      {
+        "index": 3,
+        "status": "unsat",
+        "variables": [
+          "arg0_2",
+          "arg1_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\hamming8_optimized.lemma003.smt2"
+      },
+      {
+        "index": 4,
+        "status": "unsat",
+        "variables": [
+          "arg0_3",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\hamming8_optimized.lemma004.smt2"
+      },
+      {
+        "index": 5,
+        "status": "unsat",
+        "variables": [
+          "arg0_4",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\hamming8_optimized.lemma005.smt2"
+      },
+      {
+        "index": 6,
+        "status": "unsat",
+        "variables": [
+          "arg0_5",
+          "arg1_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\hamming8_optimized.lemma006.smt2"
+      },
+      {
+        "index": 7,
+        "status": "unsat",
+        "variables": [
+          "arg0_6",
+          "arg1_6"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\hamming8_optimized.lemma007.smt2"
+      },
+      {
+        "index": 8,
+        "status": "unsat",
+        "variables": [
+          "arg0_7",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\hamming8_optimized.lemma008.smt2"
+      }
+    ],
+    "main_query_requires_component_lemmas": true,
+    "elapsed_seconds": 0.399973
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

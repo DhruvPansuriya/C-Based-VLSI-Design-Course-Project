@@ -1,0 +1,203 @@
+
+_Static_assert(sizeof(char)==1 && sizeof(short)==2 && sizeof(int)==4 &&
+               sizeof(long)==4 && sizeof(long long)==8 && sizeof(void*)==4, "HLSCheck ILP32 ABI");
+_Static_assert((char)-1 < 0, "HLSCheck requires signed plain char");
+_Static_assert((unsigned char)-1 == 255, "HLSCheck requires 8-bit bytes");
+
+extern void __ESBMC_assert(_Bool, const char *);
+extern void __ESBMC_assume(_Bool);
+extern unsigned int __hlscheck_nondet_0(void);
+extern unsigned int __hlscheck_nondet_1(void);
+extern unsigned int __hlscheck_nondet_2(void);
+void __hlscheck_original(unsigned int a[8], unsigned int b[8], unsigned int out[16])
+{
+}
+
+
+void __hlscheck_candidate(unsigned int a[8], unsigned int b[8], unsigned int out[16])
+{
+  out[0] ^= 1u;
+}
+
+
+void __hlscheck_summary(unsigned int a[8], unsigned int b[8], unsigned int out[16])
+{
+  unsigned int __summary_input_0[8];
+  __summary_input_0[0] = a[0];
+  __summary_input_0[1] = a[1];
+  __summary_input_0[2] = a[2];
+  __summary_input_0[3] = a[3];
+  __summary_input_0[4] = a[4];
+  __summary_input_0[5] = a[5];
+  __summary_input_0[6] = a[6];
+  __summary_input_0[7] = a[7];
+  unsigned int __summary_input_1[8];
+  __summary_input_1[0] = b[0];
+  __summary_input_1[1] = b[1];
+  __summary_input_1[2] = b[2];
+  __summary_input_1[3] = b[3];
+  __summary_input_1[4] = b[4];
+  __summary_input_1[5] = b[5];
+  __summary_input_1[6] = b[6];
+  __summary_input_1[7] = b[7];
+  unsigned int __summary_input_2[16];
+  __summary_input_2[0] = out[0];
+  __summary_input_2[1] = out[1];
+  __summary_input_2[2] = out[2];
+  __summary_input_2[3] = out[3];
+  __summary_input_2[4] = out[4];
+  __summary_input_2[5] = out[5];
+  __summary_input_2[6] = out[6];
+  __summary_input_2[7] = out[7];
+  __summary_input_2[8] = out[8];
+  __summary_input_2[9] = out[9];
+  __summary_input_2[10] = out[10];
+  __summary_input_2[11] = out[11];
+  __summary_input_2[12] = out[12];
+  __summary_input_2[13] = out[13];
+  __summary_input_2[14] = out[14];
+  __summary_input_2[15] = out[15];
+  a[0] = __summary_input_0[0];
+  a[1] = __summary_input_0[1];
+  a[2] = __summary_input_0[2];
+  a[3] = __summary_input_0[3];
+  a[4] = __summary_input_0[4];
+  a[5] = __summary_input_0[5];
+  a[6] = __summary_input_0[6];
+  a[7] = __summary_input_0[7];
+  b[0] = __summary_input_1[0];
+  b[1] = __summary_input_1[1];
+  b[2] = __summary_input_1[2];
+  b[3] = __summary_input_1[3];
+  b[4] = __summary_input_1[4];
+  b[5] = __summary_input_1[5];
+  b[6] = __summary_input_1[6];
+  b[7] = __summary_input_1[7];
+  out[0] = __summary_input_0[0];
+  out[1] = __summary_input_1[0];
+  out[2] = __summary_input_0[1];
+  out[3] = __summary_input_1[1];
+  out[4] = __summary_input_0[2];
+  out[5] = __summary_input_1[2];
+  out[6] = __summary_input_0[3];
+  out[7] = __summary_input_1[3];
+  out[8] = __summary_input_0[4];
+  out[9] = __summary_input_1[4];
+  out[10] = __summary_input_0[5];
+  out[11] = __summary_input_1[5];
+  out[12] = __summary_input_0[6];
+  out[13] = __summary_input_1[6];
+  out[14] = __summary_input_0[7];
+  out[15] = __summary_input_1[7];
+}
+
+
+int main(void) {
+unsigned int __hlscheck_input_0[8]={__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0()};
+unsigned int __hlscheck_left_0[8], __hlscheck_right_0[8];
+__hlscheck_left_0[0]=__hlscheck_input_0[0];
+__hlscheck_right_0[0]=__hlscheck_left_0[0];
+__hlscheck_left_0[1]=__hlscheck_input_0[1];
+__hlscheck_right_0[1]=__hlscheck_left_0[1];
+__hlscheck_left_0[2]=__hlscheck_input_0[2];
+__hlscheck_right_0[2]=__hlscheck_left_0[2];
+__hlscheck_left_0[3]=__hlscheck_input_0[3];
+__hlscheck_right_0[3]=__hlscheck_left_0[3];
+__hlscheck_left_0[4]=__hlscheck_input_0[4];
+__hlscheck_right_0[4]=__hlscheck_left_0[4];
+__hlscheck_left_0[5]=__hlscheck_input_0[5];
+__hlscheck_right_0[5]=__hlscheck_left_0[5];
+__hlscheck_left_0[6]=__hlscheck_input_0[6];
+__hlscheck_right_0[6]=__hlscheck_left_0[6];
+__hlscheck_left_0[7]=__hlscheck_input_0[7];
+__hlscheck_right_0[7]=__hlscheck_left_0[7];
+unsigned int __hlscheck_input_1[8]={__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1()};
+unsigned int __hlscheck_left_1[8], __hlscheck_right_1[8];
+__hlscheck_left_1[0]=__hlscheck_input_1[0];
+__hlscheck_right_1[0]=__hlscheck_left_1[0];
+__hlscheck_left_1[1]=__hlscheck_input_1[1];
+__hlscheck_right_1[1]=__hlscheck_left_1[1];
+__hlscheck_left_1[2]=__hlscheck_input_1[2];
+__hlscheck_right_1[2]=__hlscheck_left_1[2];
+__hlscheck_left_1[3]=__hlscheck_input_1[3];
+__hlscheck_right_1[3]=__hlscheck_left_1[3];
+__hlscheck_left_1[4]=__hlscheck_input_1[4];
+__hlscheck_right_1[4]=__hlscheck_left_1[4];
+__hlscheck_left_1[5]=__hlscheck_input_1[5];
+__hlscheck_right_1[5]=__hlscheck_left_1[5];
+__hlscheck_left_1[6]=__hlscheck_input_1[6];
+__hlscheck_right_1[6]=__hlscheck_left_1[6];
+__hlscheck_left_1[7]=__hlscheck_input_1[7];
+__hlscheck_right_1[7]=__hlscheck_left_1[7];
+unsigned int __hlscheck_input_2[16]={__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2()};
+unsigned int __hlscheck_left_2[16], __hlscheck_right_2[16];
+__hlscheck_left_2[0]=__hlscheck_input_2[0];
+__hlscheck_right_2[0]=__hlscheck_left_2[0];
+__hlscheck_left_2[1]=__hlscheck_input_2[1];
+__hlscheck_right_2[1]=__hlscheck_left_2[1];
+__hlscheck_left_2[2]=__hlscheck_input_2[2];
+__hlscheck_right_2[2]=__hlscheck_left_2[2];
+__hlscheck_left_2[3]=__hlscheck_input_2[3];
+__hlscheck_right_2[3]=__hlscheck_left_2[3];
+__hlscheck_left_2[4]=__hlscheck_input_2[4];
+__hlscheck_right_2[4]=__hlscheck_left_2[4];
+__hlscheck_left_2[5]=__hlscheck_input_2[5];
+__hlscheck_right_2[5]=__hlscheck_left_2[5];
+__hlscheck_left_2[6]=__hlscheck_input_2[6];
+__hlscheck_right_2[6]=__hlscheck_left_2[6];
+__hlscheck_left_2[7]=__hlscheck_input_2[7];
+__hlscheck_right_2[7]=__hlscheck_left_2[7];
+__hlscheck_left_2[8]=__hlscheck_input_2[8];
+__hlscheck_right_2[8]=__hlscheck_left_2[8];
+__hlscheck_left_2[9]=__hlscheck_input_2[9];
+__hlscheck_right_2[9]=__hlscheck_left_2[9];
+__hlscheck_left_2[10]=__hlscheck_input_2[10];
+__hlscheck_right_2[10]=__hlscheck_left_2[10];
+__hlscheck_left_2[11]=__hlscheck_input_2[11];
+__hlscheck_right_2[11]=__hlscheck_left_2[11];
+__hlscheck_left_2[12]=__hlscheck_input_2[12];
+__hlscheck_right_2[12]=__hlscheck_left_2[12];
+__hlscheck_left_2[13]=__hlscheck_input_2[13];
+__hlscheck_right_2[13]=__hlscheck_left_2[13];
+__hlscheck_left_2[14]=__hlscheck_input_2[14];
+__hlscheck_right_2[14]=__hlscheck_left_2[14];
+__hlscheck_left_2[15]=__hlscheck_input_2[15];
+__hlscheck_right_2[15]=__hlscheck_left_2[15];
+__hlscheck_summary(__hlscheck_left_0,__hlscheck_left_1,__hlscheck_left_2);
+__hlscheck_right_0[0]=__hlscheck_left_0[0];
+__hlscheck_right_0[1]=__hlscheck_left_0[1];
+__hlscheck_right_0[2]=__hlscheck_left_0[2];
+__hlscheck_right_0[3]=__hlscheck_left_0[3];
+__hlscheck_right_0[4]=__hlscheck_left_0[4];
+__hlscheck_right_0[5]=__hlscheck_left_0[5];
+__hlscheck_right_0[6]=__hlscheck_left_0[6];
+__hlscheck_right_0[7]=__hlscheck_left_0[7];
+__hlscheck_right_1[0]=__hlscheck_left_1[0];
+__hlscheck_right_1[1]=__hlscheck_left_1[1];
+__hlscheck_right_1[2]=__hlscheck_left_1[2];
+__hlscheck_right_1[3]=__hlscheck_left_1[3];
+__hlscheck_right_1[4]=__hlscheck_left_1[4];
+__hlscheck_right_1[5]=__hlscheck_left_1[5];
+__hlscheck_right_1[6]=__hlscheck_left_1[6];
+__hlscheck_right_1[7]=__hlscheck_left_1[7];
+__hlscheck_right_2[0]=__hlscheck_left_2[0];
+__hlscheck_right_2[1]=__hlscheck_left_2[1];
+__hlscheck_right_2[2]=__hlscheck_left_2[2];
+__hlscheck_right_2[3]=__hlscheck_left_2[3];
+__hlscheck_right_2[4]=__hlscheck_left_2[4];
+__hlscheck_right_2[5]=__hlscheck_left_2[5];
+__hlscheck_right_2[6]=__hlscheck_left_2[6];
+__hlscheck_right_2[7]=__hlscheck_left_2[7];
+__hlscheck_right_2[8]=__hlscheck_left_2[8];
+__hlscheck_right_2[9]=__hlscheck_left_2[9];
+__hlscheck_right_2[10]=__hlscheck_left_2[10];
+__hlscheck_right_2[11]=__hlscheck_left_2[11];
+__hlscheck_right_2[12]=__hlscheck_left_2[12];
+__hlscheck_right_2[13]=__hlscheck_left_2[13];
+__hlscheck_right_2[14]=__hlscheck_left_2[14];
+__hlscheck_right_2[15]=__hlscheck_left_2[15];
+__hlscheck_original(__hlscheck_left_0,__hlscheck_left_1,__hlscheck_left_2);
+__hlscheck_candidate(__hlscheck_right_0,__hlscheck_right_1,__hlscheck_right_2);
+__ESBMC_assert((__hlscheck_left_0[0]==__hlscheck_right_0[0]) && (__hlscheck_left_0[1]==__hlscheck_right_0[1]) && (__hlscheck_left_0[2]==__hlscheck_right_0[2]) && (__hlscheck_left_0[3]==__hlscheck_right_0[3]) && (__hlscheck_left_0[4]==__hlscheck_right_0[4]) && (__hlscheck_left_0[5]==__hlscheck_right_0[5]) && (__hlscheck_left_0[6]==__hlscheck_right_0[6]) && (__hlscheck_left_0[7]==__hlscheck_right_0[7]) && (__hlscheck_left_1[0]==__hlscheck_right_1[0]) && (__hlscheck_left_1[1]==__hlscheck_right_1[1]) && (__hlscheck_left_1[2]==__hlscheck_right_1[2]) && (__hlscheck_left_1[3]==__hlscheck_right_1[3]) && (__hlscheck_left_1[4]==__hlscheck_right_1[4]) && (__hlscheck_left_1[5]==__hlscheck_right_1[5]) && (__hlscheck_left_1[6]==__hlscheck_right_1[6]) && (__hlscheck_left_1[7]==__hlscheck_right_1[7]) && (__hlscheck_left_2[0]==__hlscheck_right_2[0]) && (__hlscheck_left_2[1]==__hlscheck_right_2[1]) && (__hlscheck_left_2[2]==__hlscheck_right_2[2]) && (__hlscheck_left_2[3]==__hlscheck_right_2[3]) && (__hlscheck_left_2[4]==__hlscheck_right_2[4]) && (__hlscheck_left_2[5]==__hlscheck_right_2[5]) && (__hlscheck_left_2[6]==__hlscheck_right_2[6]) && (__hlscheck_left_2[7]==__hlscheck_right_2[7]) && (__hlscheck_left_2[8]==__hlscheck_right_2[8]) && (__hlscheck_left_2[9]==__hlscheck_right_2[9]) && (__hlscheck_left_2[10]==__hlscheck_right_2[10]) && (__hlscheck_left_2[11]==__hlscheck_right_2[11]) && (__hlscheck_left_2[12]==__hlscheck_right_2[12]) && (__hlscheck_left_2[13]==__hlscheck_right_2[13]) && (__hlscheck_left_2[14]==__hlscheck_right_2[14]) && (__hlscheck_left_2[15]==__hlscheck_right_2[15]),"EQUIV:observables");
+return 0;
+}

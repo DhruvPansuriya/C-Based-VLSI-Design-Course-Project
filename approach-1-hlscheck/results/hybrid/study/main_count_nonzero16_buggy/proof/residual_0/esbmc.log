@@ -1,0 +1,354 @@
+ESBMC version 8.7.0 64-bit x86_64 windows
+
+Target: 32-bit little-endian i386-unknown-win32 with esbmclibc
+Parsing C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.171s
+GOTO program processing time: 0.001s
+Starting Bounded Model Checking
+Unwinding loop 4 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 9   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 10   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 11   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 12   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 13   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 14   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 15   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 16   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 3 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 26 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 26 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 26 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 26 column 3 function __hlscheck_candidate
+Symex completed in: 0.011s (267 assignments)
+Caching time: 0.000s (removed 4 assertions)
+Slicing time: 0.000s (removed 233 assignments)
+Generated 306 VCC(s), 29 remaining after simplification (30 assignments)
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 13 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 29 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 31 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 26 column 27 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 29 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 31 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 26 column 27 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 29 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 31 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 26 column 27 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 29 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 31 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 26 column 27 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'EQUIV:observables at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 75 column 1 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+
+[Counterexample]
+
+
+State 1 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 75 column 1 function main thread 0
+----------------------------------------------------
+Violated property:
+  file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c line 75 column 1 function main
+  EQUIV:observables
+  __hlscheck_left_0[0] == __hlscheck_right_0[0] && __hlscheck_left_0[1] == __hlscheck_right_0[1] && __hlscheck_left_0[2] == __hlscheck_right_0[2] && __hlscheck_left_0[3] == __hlscheck_right_0[3] && __hlscheck_left_0[4] == __hlscheck_right_0[4] && __hlscheck_left_0[5] == __hlscheck_right_0[5] && __hlscheck_left_0[6] == __hlscheck_right_0[6] && __hlscheck_left_0[7] == __hlscheck_right_0[7] && __hlscheck_left_0[8] == __hlscheck_right_0[8] && __hlscheck_left_0[9] == __hlscheck_right_0[9] && __hlscheck_left_0[10] == __hlscheck_right_0[10] && __hlscheck_left_0[11] == __hlscheck_right_0[11] && __hlscheck_left_0[12] == __hlscheck_right_0[12] && __hlscheck_left_0[13] == __hlscheck_right_0[13] && __hlscheck_left_0[14] == __hlscheck_right_0[14] && __hlscheck_left_0[15] == __hlscheck_right_0[15] && __hlscheck_left_return == __hlscheck_right_return
+
+BMC program time: 0.243s
+
+** Results:
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c, function __hlscheck_candidate
+  PASSED       [__hlscheck_candidate.uninitialised-variable.1]   line 26  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.1]      line 26  arithmetic overflow on add
+  PASSED       [__hlscheck_candidate.uninitialised-variable.2]   line 26  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.assertion.1]                line 28  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.1]    line 28  dereference failure: array bounds violated
+  PASSED       [__hlscheck_candidate.uninitialised-variable.3]   line 28  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.uninitialised-variable.4]   line 28  use of uninitialized variable: n0
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.2]      line 29  arithmetic overflow on add
+  PASSED       [__hlscheck_candidate.assertion.2]                line 29  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.2]    line 29  dereference failure: array bounds violated
+  PASSED       [__hlscheck_candidate.uninitialised-variable.5]   line 29  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.uninitialised-variable.6]   line 29  use of uninitialized variable: n1
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.3]      line 30  arithmetic overflow on add
+  PASSED       [__hlscheck_candidate.assertion.3]                line 30  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.3]    line 30  dereference failure: array bounds violated
+  PASSED       [__hlscheck_candidate.uninitialised-variable.7]   line 30  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.uninitialised-variable.8]   line 30  use of uninitialized variable: n2
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.4]      line 31  arithmetic overflow on add
+  PASSED       [__hlscheck_candidate.assertion.4]                line 31  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.4]    line 31  dereference failure: array bounds violated
+  PASSED       [__hlscheck_candidate.uninitialised-variable.9]   line 31  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.uninitialised-variable.10]  line 31  use of uninitialized variable: n3
+  PASSED       [__hlscheck_candidate.uninitialised-variable.11]  line 34  use of uninitialized variable: n0
+  PASSED       [__hlscheck_candidate.uninitialised-variable.12]  line 34  use of uninitialized variable: n1
+  PASSED       [__hlscheck_candidate.uninitialised-variable.13]  line 34  use of uninitialized variable: n2
+  PASSED       [__hlscheck_candidate.uninitialised-variable.14]  line 34  use of uninitialized variable: n3
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c, function __hlscheck_original
+  PASSED       [__hlscheck_original.uninitialised-variable.1]    line 13  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.arithmetic-overflow.1]       line 13  arithmetic overflow on add
+  PASSED       [__hlscheck_original.uninitialised-variable.2]    line 13  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.assertion.1]                 line 14  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_original.array-bounds-violated.1]     line 14  dereference failure: array bounds violated
+  PASSED       [__hlscheck_original.uninitialised-variable.3]    line 14  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.uninitialised-variable.4]    line 14  use of uninitialized variable: n
+  PASSED       [__hlscheck_original.uninitialised-variable.5]    line 16  use of uninitialized variable: n
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_count_nonzero16_buggy\proof\residual_0\miter.c, function main
+  PASSED       [main.uninitialised-variable.1]                   line 41  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.2]                   line 42  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.3]                   line 43  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.4]                   line 44  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.5]                   line 45  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.6]                   line 46  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.7]                   line 47  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.8]                   line 48  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.9]                   line 49  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.10]                  line 50  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.11]                  line 51  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.12]                  line 52  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.13]                  line 53  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.14]                  line 54  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.15]                  line 55  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.16]                  line 56  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.17]                  line 57  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.18]                  line 58  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.19]                  line 59  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.20]                  line 60  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.21]                  line 61  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.22]                  line 62  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.23]                  line 63  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.24]                  line 64  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.25]                  line 65  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.26]                  line 66  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.27]                  line 67  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.28]                  line 68  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.29]                  line 69  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.30]                  line 70  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.31]                  line 71  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.32]                  line 72  use of uninitialized variable: __hlscheck_left_0
+  FAILED       [main.assertion.1]                                line 75  EQUIV:observables
+  PASSED       [main.uninitialised-variable.33]                  line 75  use of uninitialized variable: __hlscheck_left_0 [2[0]]
+  PASSED       [main.uninitialised-variable.34]                  line 75  use of uninitialized variable: __hlscheck_left_0 [2[1]]
+  PASSED       [main.uninitialised-variable.35]                  line 75  use of uninitialized variable: __hlscheck_left_0 [2[2]]
+  PASSED       [main.uninitialised-variable.36]                  line 75  use of uninitialized variable: __hlscheck_left_0 [2[3]]
+  PASSED       [main.uninitialised-variable.37]                  line 75  use of uninitialized variable: __hlscheck_left_0 [2[4]]
+  PASSED       [main.uninitialised-variable.38]                  line 75  use of uninitialized variable: __hlscheck_left_0 [2[5]]
+  PASSED       [main.uninitialised-variable.39]                  line 75  use of uninitialized variable: __hlscheck_left_0 [2[6]]
+  PASSED       [main.uninitialised-variable.40]                  line 75  use of uninitialized variable: __hlscheck_left_0 [2[7]]
+  PASSED       [main.uninitialised-variable.41]                  line 75  use of uninitialized variable: __hlscheck_left_0 [2[8]]
+  PASSED       [main.uninitialised-variable.42]                  line 75  use of uninitialized variable: __hlscheck_left_0 [2[9]]
+  PASSED       [main.uninitialised-variable.43]                  line 75  use of uninitialized variable: __hlscheck_left_0 [2[10]]
+  PASSED       [main.uninitialised-variable.44]                  line 75  use of uninitialized variable: __hlscheck_left_0 [2[11]]
+  PASSED       [main.uninitialised-variable.45]                  line 75  use of uninitialized variable: __hlscheck_left_0 [2[12]]
+  PASSED       [main.uninitialised-variable.46]                  line 75  use of uninitialized variable: __hlscheck_left_0 [2[13]]
+  PASSED       [main.uninitialised-variable.47]                  line 75  use of uninitialized variable: __hlscheck_left_0 [2[14]]
+  PASSED       [main.uninitialised-variable.48]                  line 75  use of uninitialized variable: __hlscheck_left_0 [2[15]]
+  PASSED       [main.uninitialised-variable.49]                  line 75  use of uninitialized variable: __hlscheck_left_return
+  PASSED       [main.uninitialised-variable.50]                  line 75  use of uninitialized variable: __hlscheck_right_0 [3[0]]
+  PASSED       [main.uninitialised-variable.51]                  line 75  use of uninitialized variable: __hlscheck_right_0 [3[1]]
+  PASSED       [main.uninitialised-variable.52]                  line 75  use of uninitialized variable: __hlscheck_right_0 [3[2]]
+  PASSED       [main.uninitialised-variable.53]                  line 75  use of uninitialized variable: __hlscheck_right_0 [3[3]]
+  PASSED       [main.uninitialised-variable.54]                  line 75  use of uninitialized variable: __hlscheck_right_0 [3[4]]
+  PASSED       [main.uninitialised-variable.55]                  line 75  use of uninitialized variable: __hlscheck_right_0 [3[5]]
+  PASSED       [main.uninitialised-variable.56]                  line 75  use of uninitialized variable: __hlscheck_right_0 [3[6]]
+  PASSED       [main.uninitialised-variable.57]                  line 75  use of uninitialized variable: __hlscheck_right_0 [3[7]]
+  PASSED       [main.uninitialised-variable.58]                  line 75  use of uninitialized variable: __hlscheck_right_0 [3[8]]
+  PASSED       [main.uninitialised-variable.59]                  line 75  use of uninitialized variable: __hlscheck_right_0 [3[9]]
+  PASSED       [main.uninitialised-variable.60]                  line 75  use of uninitialized variable: __hlscheck_right_0 [3[10]]
+  PASSED       [main.uninitialised-variable.61]                  line 75  use of uninitialized variable: __hlscheck_right_0 [3[11]]
+  PASSED       [main.uninitialised-variable.62]                  line 75  use of uninitialized variable: __hlscheck_right_0 [3[12]]
+  PASSED       [main.uninitialised-variable.63]                  line 75  use of uninitialized variable: __hlscheck_right_0 [3[13]]
+  PASSED       [main.uninitialised-variable.64]                  line 75  use of uninitialized variable: __hlscheck_right_0 [3[14]]
+  PASSED       [main.uninitialised-variable.65]                  line 75  use of uninitialized variable: __hlscheck_right_0 [3[15]]
+  PASSED       [main.uninitialised-variable.66]                  line 75  use of uninitialized variable: __hlscheck_right_return
+
+** 1 of 101 properties failed, 100 passed
+Solver: Z3 v4.13.3 â€¢ Decision procedure total time: 0.007s â€¢ Avg: 0.000s/property
+
+VERIFICATION FAILED

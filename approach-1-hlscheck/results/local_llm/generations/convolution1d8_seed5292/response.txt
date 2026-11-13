@@ -1,0 +1,16 @@
+```c
+#include <stdint.h>
+
+/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.
+   Reference implementation. */
+void kernel(uint32_t a[8], uint32_t out[6]) {
+    // Reuse the first two elements of out for a and the last two elements for the sum
+    out[0] = a[0] * 3u + a[1] * 5u + a[2] * 3u;
+    out[1] = a[3] * 3u + a[4] * 5u + a[5] * 3u;
+
+    // Use a loop to compute the remaining elements of out
+    for(int i=2; i<6; i++) {
+        out[i] = (a[i] * 3u + a[i+1] * 5u + a[i+2] * 3u) & 0xFFFFFFFF;
+    }
+}
+```

@@ -1,0 +1,89 @@
+{
+  "status": "not_equivalent",
+  "assumptions": [
+    "32-bit int and unsigned int; uint32_t is unsigned int",
+    "All array parameters are valid, separately allocated, and nonoverlapping",
+    "Functional equality at function completion; no cycle-level RTL guarantee"
+  ],
+  "execution_steps": 48,
+  "paths": {
+    "original": 1,
+    "candidate": 1
+  },
+  "z3_version": "5.1.0",
+  "counterexample": {
+    "a": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "out": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "original_outputs": {
+    "a": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "out": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      11
+    ]
+  },
+  "candidate_outputs": {
+    "a": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "out": [
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      7
+    ]
+  },
+  "elapsed_seconds": 0.009029,
+  "case": "scale_buggy",
+  "expected": "not_equivalent",
+  "original": "benchmarks\\demo\\scale_original.c",
+  "candidate": "benchmarks\\demo\\scale_buggy.c",
+  "original_sha256": "711800ee8d53ca1e6d4d1441a8f0eecf1035dd68ded4a6733bf25d1d70556bb9",
+  "candidate_sha256": "0ac842475c15b32fd100847e1e96791a4ad944517e834067b0c8321451934d5c",
+  "provenance": "Initial Codex-session demonstration; buggy variants are deliberately seeded controls",
+  "hls_qor": "not measured"
+}

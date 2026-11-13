@@ -1,0 +1,11 @@
+3. FRESH HLS + RTL SIMULATION + MAPPING + TIMING
+matmul_k_outer_demo_original complete {'cycles': 266.0, 'area_um2': 4612.972, 'delay_ns': 1.865742}
+matmul_k_outer_demo_optimized complete {'cycles': 314.0, 'area_um2': 5004.258, 'delay_ns': 1.834684}
+
+4. MEASURED COMPARISON (negative change means lower)
+  Cell area (um^2)                        4612.97 ->      5004.26 (+8.48%)
+  Latency (cycles)                            266 ->          314 (+18.05%)
+  Latency at 10 ns clock (ns)                2660 ->         3140 (+18.05%)
+  Mapped critical-path delay (ns)         1.86574 ->      1.83468 (-1.66%)
+  Area x latency (um^2 ns)            1.22705e+07 ->  1.57134e+07 (+28.06%)
+  Outcome: regresses area x latency.

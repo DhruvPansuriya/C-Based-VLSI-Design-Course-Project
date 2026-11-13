@@ -1,0 +1,2818 @@
+[
+  {
+    "coverage": {
+      "files": {
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c": {
+          "coverage_stats": {
+            "covered_lines": 2,
+            "total_hits": 2
+          },
+          "covered_lines": {
+            "153": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "38": {
+              "covered": true,
+              "hits": 1,
+              "type": "violation"
+            }
+          }
+        }
+      }
+    },
+    "initial_values": {},
+    "source_files": {
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c": [
+        "",
+        "_Static_assert(sizeof(char)==1 && sizeof(short)==2 && sizeof(int)==4 &&",
+        "               sizeof(long)==4 && sizeof(long long)==8 && sizeof(void*)==4, \"HLSCheck ILP32 ABI\");",
+        "_Static_assert((char)-1 < 0, \"HLSCheck requires signed plain char\");",
+        "_Static_assert((unsigned char)-1 == 255, \"HLSCheck requires 8-bit bytes\");",
+        "",
+        "extern void __ESBMC_assert(_Bool, const char *);",
+        "extern void __ESBMC_assume(_Bool);",
+        "extern unsigned int __hlscheck_nondet_0(void);",
+        "extern unsigned int __hlscheck_nondet_1(void);",
+        "extern unsigned int __hlscheck_nondet_2(void);",
+        "void __hlscheck_original(unsigned int m1[16], unsigned int m2[16], unsigned int prod[16])",
+        "{",
+        "  for (int i = 0; i < 4; i++)",
+        "  {",
+        "    for (int j = 0; j < 4; j++)",
+        "    {",
+        "      unsigned int sum = 0u;",
+        "      for (int k = 0; k < 4; k++)",
+        "      {",
+        "        sum += m1[(i * 4) + k] * m2[(k * 4) + j];",
+        "      }",
+        "",
+        "      prod[(i * 4) + j] = sum;",
+        "    }",
+        "",
+        "  }",
+        "",
+        "}",
+        "",
+        "",
+        "void __hlscheck_candidate(unsigned int m1[16], unsigned int m2[16], unsigned int prod[16])",
+        "{",
+        "  for (int i = 0; i < 4; i++)",
+        "  {",
+        "    for (int j = 0; j < 4; j++)",
+        "    {",
+        "      prod[(i * 4) + j] = (m1[(i * 4) + j] * m2[(j * 4) + i]) % (1u << 32);",
+        "    }",
+        "",
+        "  }",
+        "",
+        "}",
+        "",
+        "",
+        "int main(void) {",
+        "unsigned int __hlscheck_input_0[16]={__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0()};",
+        "unsigned int __hlscheck_left_0[16], __hlscheck_right_0[16];",
+        "__hlscheck_left_0[0]=__hlscheck_input_0[0];",
+        "__hlscheck_right_0[0]=__hlscheck_left_0[0];",
+        "__hlscheck_left_0[1]=__hlscheck_input_0[1];",
+        "__hlscheck_right_0[1]=__hlscheck_left_0[1];",
+        "__hlscheck_left_0[2]=__hlscheck_input_0[2];",
+        "__hlscheck_right_0[2]=__hlscheck_left_0[2];",
+        "__hlscheck_left_0[3]=__hlscheck_input_0[3];",
+        "__hlscheck_right_0[3]=__hlscheck_left_0[3];",
+        "__hlscheck_left_0[4]=__hlscheck_input_0[4];",
+        "__hlscheck_right_0[4]=__hlscheck_left_0[4];",
+        "__hlscheck_left_0[5]=__hlscheck_input_0[5];",
+        "__hlscheck_right_0[5]=__hlscheck_left_0[5];",
+        "__hlscheck_left_0[6]=__hlscheck_input_0[6];",
+        "__hlscheck_right_0[6]=__hlscheck_left_0[6];",
+        "__hlscheck_left_0[7]=__hlscheck_input_0[7];",
+        "__hlscheck_right_0[7]=__hlscheck_left_0[7];",
+        "__hlscheck_left_0[8]=__hlscheck_input_0[8];",
+        "__hlscheck_right_0[8]=__hlscheck_left_0[8];",
+        "__hlscheck_left_0[9]=__hlscheck_input_0[9];",
+        "__hlscheck_right_0[9]=__hlscheck_left_0[9];",
+        "__hlscheck_left_0[10]=__hlscheck_input_0[10];",
+        "__hlscheck_right_0[10]=__hlscheck_left_0[10];",
+        "__hlscheck_left_0[11]=__hlscheck_input_0[11];",
+        "__hlscheck_right_0[11]=__hlscheck_left_0[11];",
+        "__hlscheck_left_0[12]=__hlscheck_input_0[12];",
+        "__hlscheck_right_0[12]=__hlscheck_left_0[12];",
+        "__hlscheck_left_0[13]=__hlscheck_input_0[13];",
+        "__hlscheck_right_0[13]=__hlscheck_left_0[13];",
+        "__hlscheck_left_0[14]=__hlscheck_input_0[14];",
+        "__hlscheck_right_0[14]=__hlscheck_left_0[14];",
+        "__hlscheck_left_0[15]=__hlscheck_input_0[15];",
+        "__hlscheck_right_0[15]=__hlscheck_left_0[15];",
+        "unsigned int __hlscheck_input_1[16]={__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1()};",
+        "unsigned int __hlscheck_left_1[16], __hlscheck_right_1[16];",
+        "__hlscheck_left_1[0]=__hlscheck_input_1[0];",
+        "__hlscheck_right_1[0]=__hlscheck_left_1[0];",
+        "__hlscheck_left_1[1]=__hlscheck_input_1[1];",
+        "__hlscheck_right_1[1]=__hlscheck_left_1[1];",
+        "__hlscheck_left_1[2]=__hlscheck_input_1[2];",
+        "__hlscheck_right_1[2]=__hlscheck_left_1[2];",
+        "__hlscheck_left_1[3]=__hlscheck_input_1[3];",
+        "__hlscheck_right_1[3]=__hlscheck_left_1[3];",
+        "__hlscheck_left_1[4]=__hlscheck_input_1[4];",
+        "__hlscheck_right_1[4]=__hlscheck_left_1[4];",
+        "__hlscheck_left_1[5]=__hlscheck_input_1[5];",
+        "__hlscheck_right_1[5]=__hlscheck_left_1[5];",
+        "__hlscheck_left_1[6]=__hlscheck_input_1[6];",
+        "__hlscheck_right_1[6]=__hlscheck_left_1[6];",
+        "__hlscheck_left_1[7]=__hlscheck_input_1[7];",
+        "__hlscheck_right_1[7]=__hlscheck_left_1[7];",
+        "__hlscheck_left_1[8]=__hlscheck_input_1[8];",
+        "__hlscheck_right_1[8]=__hlscheck_left_1[8];",
+        "__hlscheck_left_1[9]=__hlscheck_input_1[9];",
+        "__hlscheck_right_1[9]=__hlscheck_left_1[9];",
+        "__hlscheck_left_1[10]=__hlscheck_input_1[10];",
+        "__hlscheck_right_1[10]=__hlscheck_left_1[10];",
+        "__hlscheck_left_1[11]=__hlscheck_input_1[11];",
+        "__hlscheck_right_1[11]=__hlscheck_left_1[11];",
+        "__hlscheck_left_1[12]=__hlscheck_input_1[12];",
+        "__hlscheck_right_1[12]=__hlscheck_left_1[12];",
+        "__hlscheck_left_1[13]=__hlscheck_input_1[13];",
+        "__hlscheck_right_1[13]=__hlscheck_left_1[13];",
+        "__hlscheck_left_1[14]=__hlscheck_input_1[14];",
+        "__hlscheck_right_1[14]=__hlscheck_left_1[14];",
+        "__hlscheck_left_1[15]=__hlscheck_input_1[15];",
+        "__hlscheck_right_1[15]=__hlscheck_left_1[15];",
+        "unsigned int __hlscheck_input_2[16]={__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2()};",
+        "unsigned int __hlscheck_left_2[16], __hlscheck_right_2[16];",
+        "__hlscheck_left_2[0]=__hlscheck_input_2[0];",
+        "__hlscheck_right_2[0]=__hlscheck_left_2[0];",
+        "__hlscheck_left_2[1]=__hlscheck_input_2[1];",
+        "__hlscheck_right_2[1]=__hlscheck_left_2[1];",
+        "__hlscheck_left_2[2]=__hlscheck_input_2[2];",
+        "__hlscheck_right_2[2]=__hlscheck_left_2[2];",
+        "__hlscheck_left_2[3]=__hlscheck_input_2[3];",
+        "__hlscheck_right_2[3]=__hlscheck_left_2[3];",
+        "__hlscheck_left_2[4]=__hlscheck_input_2[4];",
+        "__hlscheck_right_2[4]=__hlscheck_left_2[4];",
+        "__hlscheck_left_2[5]=__hlscheck_input_2[5];",
+        "__hlscheck_right_2[5]=__hlscheck_left_2[5];",
+        "__hlscheck_left_2[6]=__hlscheck_input_2[6];",
+        "__hlscheck_right_2[6]=__hlscheck_left_2[6];",
+        "__hlscheck_left_2[7]=__hlscheck_input_2[7];",
+        "__hlscheck_right_2[7]=__hlscheck_left_2[7];",
+        "__hlscheck_left_2[8]=__hlscheck_input_2[8];",
+        "__hlscheck_right_2[8]=__hlscheck_left_2[8];",
+        "__hlscheck_left_2[9]=__hlscheck_input_2[9];",
+        "__hlscheck_right_2[9]=__hlscheck_left_2[9];",
+        "__hlscheck_left_2[10]=__hlscheck_input_2[10];",
+        "__hlscheck_right_2[10]=__hlscheck_left_2[10];",
+        "__hlscheck_left_2[11]=__hlscheck_input_2[11];",
+        "__hlscheck_right_2[11]=__hlscheck_left_2[11];",
+        "__hlscheck_left_2[12]=__hlscheck_input_2[12];",
+        "__hlscheck_right_2[12]=__hlscheck_left_2[12];",
+        "__hlscheck_left_2[13]=__hlscheck_input_2[13];",
+        "__hlscheck_right_2[13]=__hlscheck_left_2[13];",
+        "__hlscheck_left_2[14]=__hlscheck_input_2[14];",
+        "__hlscheck_right_2[14]=__hlscheck_left_2[14];",
+        "__hlscheck_left_2[15]=__hlscheck_input_2[15];",
+        "__hlscheck_right_2[15]=__hlscheck_left_2[15];",
+        "__hlscheck_original(__hlscheck_left_0,__hlscheck_left_1,__hlscheck_left_2);",
+        "__hlscheck_candidate(__hlscheck_right_0,__hlscheck_right_1,__hlscheck_right_2);",
+        "__ESBMC_assert((__hlscheck_left_0[0]==__hlscheck_right_0[0]) && (__hlscheck_left_0[1]==__hlscheck_right_0[1]) && (__hlscheck_left_0[2]==__hlscheck_right_0[2]) && (__hlscheck_left_0[3]==__hlscheck_right_0[3]) && (__hlscheck_left_0[4]==__hlscheck_right_0[4]) && (__hlscheck_left_0[5]==__hlscheck_right_0[5]) && (__hlscheck_left_0[6]==__hlscheck_right_0[6]) && (__hlscheck_left_0[7]==__hlscheck_right_0[7]) && (__hlscheck_left_0[8]==__hlscheck_right_0[8]) && (__hlscheck_left_0[9]==__hlscheck_right_0[9]) && (__hlscheck_left_0[10]==__hlscheck_right_0[10]) && (__hlscheck_left_0[11]==__hlscheck_right_0[11]) && (__hlscheck_left_0[12]==__hlscheck_right_0[12]) && (__hlscheck_left_0[13]==__hlscheck_right_0[13]) && (__hlscheck_left_0[14]==__hlscheck_right_0[14]) && (__hlscheck_left_0[15]==__hlscheck_right_0[15]) && (__hlscheck_left_1[0]==__hlscheck_right_1[0]) && (__hlscheck_left_1[1]==__hlscheck_right_1[1]) && (__hlscheck_left_1[2]==__hlscheck_right_1[2]) && (__hlscheck_left_1[3]==__hlscheck_right_1[3]) && (__hlscheck_left_1[4]==__hlscheck_right_1[4]) && (__hlscheck_left_1[5]==__hlscheck_right_1[5]) && (__hlscheck_left_1[6]==__hlscheck_right_1[6]) && (__hlscheck_left_1[7]==__hlscheck_right_1[7]) && (__hlscheck_left_1[8]==__hlscheck_right_1[8]) && (__hlscheck_left_1[9]==__hlscheck_right_1[9]) && (__hlscheck_left_1[10]==__hlscheck_right_1[10]) && (__hlscheck_left_1[11]==__hlscheck_right_1[11]) && (__hlscheck_left_1[12]==__hlscheck_right_1[12]) && (__hlscheck_left_1[13]==__hlscheck_right_1[13]) && (__hlscheck_left_1[14]==__hlscheck_right_1[14]) && (__hlscheck_left_1[15]==__hlscheck_right_1[15]) && (__hlscheck_left_2[0]==__hlscheck_right_2[0]) && (__hlscheck_left_2[1]==__hlscheck_right_2[1]) && (__hlscheck_left_2[2]==__hlscheck_right_2[2]) && (__hlscheck_left_2[3]==__hlscheck_right_2[3]) && (__hlscheck_left_2[4]==__hlscheck_right_2[4]) && (__hlscheck_left_2[5]==__hlscheck_right_2[5]) && (__hlscheck_left_2[6]==__hlscheck_right_2[6]) && (__hlscheck_left_2[7]==__hlscheck_right_2[7]) && (__hlscheck_left_2[8]==__hlscheck_right_2[8]) && (__hlscheck_left_2[9]==__hlscheck_right_2[9]) && (__hlscheck_left_2[10]==__hlscheck_right_2[10]) && (__hlscheck_left_2[11]==__hlscheck_right_2[11]) && (__hlscheck_left_2[12]==__hlscheck_right_2[12]) && (__hlscheck_left_2[13]==__hlscheck_right_2[13]) && (__hlscheck_left_2[14]==__hlscheck_right_2[14]) && (__hlscheck_left_2[15]==__hlscheck_right_2[15]),\"EQUIV:observables\");",
+        "return 0;",
+        "}"
+      ]
+    },
+    "status": "violation",
+    "steps": [
+      {
+        "assertion": {
+          "comment": "undefined behavior on shift operation shl",
+          "cwe": [
+            1335
+          ],
+          "guard": "0",
+          "violated": true
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "message": "undefined behavior on shift operation shl",
+        "step_number": 0,
+        "type": "violation"
+      },
+      {
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "153",
+        "message": "Assumption restriction",
+        "step_number": 1,
+        "type": "assume"
+      }
+    ]
+  },
+  {
+    "coverage": {
+      "files": {
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c": {
+          "coverage_stats": {
+            "covered_lines": 6,
+            "total_hits": 196
+          },
+          "covered_lines": {
+            "116": {
+              "covered": true,
+              "hits": 2,
+              "type": "execution"
+            },
+            "151": {
+              "covered": true,
+              "hits": 1,
+              "type": "violation"
+            },
+            "153": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "21": {
+              "covered": true,
+              "hits": 64,
+              "type": "execution"
+            },
+            "24": {
+              "covered": true,
+              "hits": 64,
+              "type": "execution"
+            },
+            "38": {
+              "covered": true,
+              "hits": 64,
+              "type": "execution"
+            }
+          }
+        }
+      }
+    },
+    "initial_values": {
+      "__hlscheck_left_2": {
+        "name": "__hlscheck_left_2",
+        "type": "array",
+        "value": "{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }"
+      },
+      "__hlscheck_right_2": {
+        "name": "__hlscheck_right_2",
+        "type": "array",
+        "value": "{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }"
+      },
+      "sum": {
+        "name": "sum",
+        "type": "unsigned",
+        "value": "788482"
+      }
+    },
+    "status": "violation",
+    "steps": [
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_2",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "116",
+        "step_number": 0,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "116",
+        "step_number": 1,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "788482",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 2,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "2317617154",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 3,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "2317617154",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 4,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "2317617154",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 5,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2317617154",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 6,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2317617154",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 7,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2317617154",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 8,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2317617154",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 9,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "2148012036",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 10,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1094194311",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 11,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1094194311",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 12,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1094202759",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 13,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1094202759",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 14,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1094202759",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 15,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1094202759",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 16,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1094202759",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 17,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "3469777190",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 18,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "3485055285",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 19,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "3485055285",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 20,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1347012981",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 21,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1347012981",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 22,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1347012981",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 23,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1347012981",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 24,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1347012981",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 25,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "2181828868",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 26,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "2181828868",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 27,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "2181828868",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 28,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "2181828868",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 29,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2181828868",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 30,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2181828868",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 31,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2181828868",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 32,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2181828868",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 33,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "67108992",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 34,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "3288858752",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 35,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1141375104",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 36,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1141375104",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 37,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1141375104",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 38,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1141375104",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 39,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1141375104",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 40,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1141375104",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 41,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "67109120",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 42,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1809450177",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 43,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "3621391041",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 44,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "3655994049",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 45,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "3655994049",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 46,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "3655994049",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 47,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "3655994049",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 48,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "3655994049",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 49,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1174423936",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 50,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "3456226501",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 51,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "235001221",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 52,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "252040581",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 53,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "252040581",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 54,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "252040581",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 55,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "252040581",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 56,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "252040581",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 57,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "67125504",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 58,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "67125504",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 59,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "67125504",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 60,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "67125504",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 61,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "67125504",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 62,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "67125504",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 63,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "67125504",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 64,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "67125504",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 65,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1649157267",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 66,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1987847315",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 67,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1987847315",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 68,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1987847315",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 69,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1987847315",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 70,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1987847315",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 71,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1987847315",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 72,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1987847315",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 73,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1073760550",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 74,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "2524779052",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 75,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "914821676",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 76,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1183257132",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 77,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1183257132",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 78,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1183257132",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 79,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1183257132",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 80,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1183257132",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 81,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "919928937",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 82,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "3180789895",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 83,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1368932487",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 84,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1436041351",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 85,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1436041351",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 86,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1436041351",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 87,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1436041351",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 88,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1436041351",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 89,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1074959014",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 90,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1074959014",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 91,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1074959014",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 92,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1074959014",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 93,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1074959014",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 94,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1074959014",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 95,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1074959014",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 96,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1074959014",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 97,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "279445545",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 98,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1151860777",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 99,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "3299344425",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 100,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "3299344425",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 101,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "3299344425",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 102,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "3299344425",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 103,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "3299344425",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 104,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "3299344425",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 105,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "524370",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 106,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "876086994",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 107,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "943196370",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 108,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "943196370",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 109,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "943196370",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 110,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "943196370",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 111,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "943196370",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 112,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "943196370",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 113,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "3263960971",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 114,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "383481867",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 115,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1926985803",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 116,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "1926985803",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 117,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1926985803",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 118,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1926985803",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 119,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1926985803",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 120,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1926985803",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 121,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "34084050",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 122,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "34084050",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 123,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "34084050",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 124,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "sum",
+          "lhs_type": "unsigned",
+          "rhs": "34084050",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "21",
+        "step_number": 125,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "34084050",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 126,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "34084050",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 127,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "34084050",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 128,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "34084050",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "24",
+        "step_number": 129,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "788482 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 130,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "788482 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 131,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "788482 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 132,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "788482 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 133,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2316828672 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 134,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2316828672 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 135,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2316828672 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 136,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2316828672 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 137,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 138,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 139,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 140,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 141,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 142,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 143,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 144,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 145,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "67109120 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 146,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "67109120 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 147,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "67109120 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 148,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "67109120 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 149,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1742341057 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 150,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1742341057 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 151,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1742341057 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 152,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1742341057 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 153,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1811940864 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 154,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1811940864 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 155,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1811940864 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 156,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "1811940864 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 157,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "34603008 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 158,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "34603008 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 159,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "34603008 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 160,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "34603008 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 161,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "919928937 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 162,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "919928937 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 163,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "919928937 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 164,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "919928937 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 165,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2260860958 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 166,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2260860958 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 167,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2260860958 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 168,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2260860958 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 169,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2483109888 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 170,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2483109888 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 171,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2483109888 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 172,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "2483109888 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 173,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "67108864 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 174,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "67108864 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 175,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "67108864 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 176,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "67108864 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 177,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "34084050 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 178,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "34084050 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 179,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "34084050 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 180,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "34084050 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 181,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 182,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 183,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 184,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 185,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 186,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 187,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 188,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 189,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 190,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 191,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 192,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "prod[i * 4 + j]",
+          "lhs_type": "unsigned",
+          "rhs": "0 % 0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "38",
+        "step_number": 193,
+        "type": "assignment"
+      },
+      {
+        "assertion": {
+          "comment": "EQUIV:observables",
+          "guard": "__hlscheck_left_0[0] == __hlscheck_right_0[0] && __hlscheck_left_0[1] == __hlscheck_right_0[1] && __hlscheck_left_0[2] == __hlscheck_right_0[2] && __hlscheck_left_0[3] == __hlscheck_right_0[3] && __hlscheck_left_0[4] == __hlscheck_right_0[4] && __hlscheck_left_0[5] == __hlscheck_right_0[5] && __hlscheck_left_0[6] == __hlscheck_right_0[6] && __hlscheck_left_0[7] == __hlscheck_right_0[7] && __hlscheck_left_0[8] == __hlscheck_right_0[8] && __hlscheck_left_0[9] == __hlscheck_right_0[9] && __hlscheck_left_0[10] == __hlscheck_right_0[10] && __hlscheck_left_0[11] == __hlscheck_right_0[11] && __hlscheck_left_0[12] == __hlscheck_right_0[12] && __hlscheck_left_0[13] == __hlscheck_right_0[13] && __hlscheck_left_0[14] == __hlscheck_right_0[14] && __hlscheck_left_0[15] == __hlscheck_right_0[15] && __hlscheck_left_1[0] == __hlscheck_right_1[0] && __hlscheck_left_1[1] == __hlscheck_right_1[1] && __hlscheck_left_1[2] == __hlscheck_right_1[2] && __hlscheck_left_1[3] == __hlscheck_right_1[3] && __hlscheck_left_1[4] == __hlscheck_right_1[4] && __hlscheck_left_1[5] == __hlscheck_right_1[5] && __hlscheck_left_1[6] == __hlscheck_right_1[6] && __hlscheck_left_1[7] == __hlscheck_right_1[7] && __hlscheck_left_1[8] == __hlscheck_right_1[8] && __hlscheck_left_1[9] == __hlscheck_right_1[9] && __hlscheck_left_1[10] == __hlscheck_right_1[10] && __hlscheck_left_1[11] == __hlscheck_right_1[11] && __hlscheck_left_1[12] == __hlscheck_right_1[12] && __hlscheck_left_1[13] == __hlscheck_right_1[13] && __hlscheck_left_1[14] == __hlscheck_right_1[14] && __hlscheck_left_1[15] == __hlscheck_right_1[15] && __hlscheck_left_2[0] == __hlscheck_right_2[0] && __hlscheck_left_2[1] == __hlscheck_right_2[1] && __hlscheck_left_2[2] == __hlscheck_right_2[2] && __hlscheck_left_2[3] == __hlscheck_right_2[3] && __hlscheck_left_2[4] == __hlscheck_right_2[4] && __hlscheck_left_2[5] == __hlscheck_right_2[5] && __hlscheck_left_2[6] == __hlscheck_right_2[6] && __hlscheck_left_2[7] == __hlscheck_right_2[7] && __hlscheck_left_2[8] == __hlscheck_right_2[8] && __hlscheck_left_2[9] == __hlscheck_right_2[9] && __hlscheck_left_2[10] == __hlscheck_right_2[10] && __hlscheck_left_2[11] == __hlscheck_right_2[11] && __hlscheck_left_2[12] == __hlscheck_right_2[12] && __hlscheck_left_2[13] == __hlscheck_right_2[13] && __hlscheck_left_2[14] == __hlscheck_right_2[14] && __hlscheck_left_2[15] == __hlscheck_right_2[15]",
+          "violated": true
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "151",
+        "message": "EQUIV:observables",
+        "step_number": 194,
+        "type": "violation"
+      },
+      {
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_gemm_seed5292\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "153",
+        "message": "Assumption restriction",
+        "step_number": 195,
+        "type": "assume"
+      }
+    ]
+  }
+]

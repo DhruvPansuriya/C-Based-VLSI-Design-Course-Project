@@ -1,0 +1,726 @@
+{
+  "description": "50 token-scale edits + 4 semantic pitfalls + 20 equivalent edits + 6 undefined-C controls",
+  "ground_truth": "Expected labels declared before verification. Counterexamples must be independently replayed.",
+  "cases": [
+    {
+      "id": "scale",
+      "directory": "experiments/subtle_faults/scale",
+      "expected": "not_equivalent",
+      "rationale": "unrolled lane reuses the preceding input",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "24f9ed824ed6e753203040146e20fac35c18e8bb2a3b88b2a5fab6415e65155d",
+      "candidate_sha256": "cf0060adc5deb9fae308a0a1e5b2551ea9c69c0a2bbdf904a52439eb44455ec8"
+    },
+    {
+      "id": "unswitch",
+      "directory": "experiments/subtle_faults/unswitch",
+      "expected": "not_equivalent",
+      "rationale": "threshold equality changes branch",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "cbe1d8aba46d6b584f8f6d14d7cdf6585dfbca1018675a47ffd69800235d5771",
+      "candidate_sha256": "f34266645e644dc8c5b5869da3dc2943884257bea425fb95eec0b49d90173fb9"
+    },
+    {
+      "id": "gemm",
+      "directory": "experiments/subtle_faults/gemm",
+      "expected": "not_equivalent",
+      "rationale": "transposed matrix access",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "a8d7f4813273fc7f50c3d75e878f4c5819b15e908d10abd8a9885ea03fe91ca9",
+      "candidate_sha256": "25e30149954ed3162a784e57e5ca1b9cdf83bc84c905e856dbe9ee1f54456c0d"
+    },
+    {
+      "id": "stencil",
+      "directory": "experiments/subtle_faults/stencil",
+      "expected": "not_equivalent",
+      "rationale": "wrong filter coefficient",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "d847597df69955768dcf6890e541c4054f5fee9bf32d6e77945d2eeb04fda214",
+      "candidate_sha256": "58e1d34b5997209c8c0473ebc008f8f80db2729913b91fb8e1c14ff36cbdf29d"
+    },
+    {
+      "id": "prefix",
+      "directory": "experiments/subtle_faults/prefix",
+      "expected": "not_equivalent",
+      "rationale": "recurrence reuses first input",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "b747d326cd364ec84ddf34966dad6b5562ba7fe640d92062268cab7c27248b85",
+      "candidate_sha256": "48b75eac753103b0c50e09e23983695f71aff6dde11d54db52186c1a0246100e"
+    },
+    {
+      "id": "fir",
+      "directory": "experiments/subtle_faults/fir",
+      "expected": "not_equivalent",
+      "rationale": "wrong symmetric tap",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "75f7f964769b7ad51e35892922750636c2b8d821e24f6f83c687665f6c3f81dc",
+      "candidate_sha256": "7e254272f598ab3b44dd94ba7396e2134073e38caa38615cdcc3175ea0a7084c"
+    },
+    {
+      "id": "boxfilter",
+      "directory": "experiments/subtle_faults/boxfilter",
+      "expected": "not_equivalent",
+      "rationale": "sliding window incoming column off by one",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "c26a1791f028d08982cad67cf660767b3997bf42462e3ecaa8c3a792d8dc9a4f",
+      "candidate_sha256": "8d072a1f2138f21c4a1c215f326257f59419ab33e0049d10247399b8e917ddc5"
+    },
+    {
+      "id": "factor",
+      "directory": "experiments/subtle_faults/factor",
+      "expected": "not_equivalent",
+      "rationale": "incorrect distributive sign",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "fd4342080be93ed07ef5cd6f51eb386cf35b40b80bd56d5eb84093840750085a",
+      "candidate_sha256": "7aeaa2221485a522ff8a4e2e76175f87558282d170fc5e82d22f3f8d0da30e3b"
+    },
+    {
+      "id": "dot16",
+      "directory": "experiments/subtle_faults/dot16",
+      "expected": "not_equivalent",
+      "rationale": "dot-product lane index",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "ab4ffb53233868c0e3844d664294fa1bcd49bc80f4e6693ceca214fb31473436",
+      "candidate_sha256": "69ae3a6eef92270fd14fa363851b748a086821faf3e37f991687c7c04f69fd7a"
+    },
+    {
+      "id": "sum32",
+      "directory": "experiments/subtle_faults/sum32",
+      "expected": "not_equivalent",
+      "rationale": "partial reduction duplicated",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "f654bd97ebc63decbc6eaf3b33d3803292cf45bbc2e69250f273a747e58a1367",
+      "candidate_sha256": "96026b281e7a9daea4a00cdadc89720e5cc71bb6e3efd17547fb7651e53f6207"
+    },
+    {
+      "id": "xor32",
+      "directory": "experiments/subtle_faults/xor32",
+      "expected": "not_equivalent",
+      "rationale": "OR substituted for XOR",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "8b6517be52d3128d8ac4f235ba0a64f4c27b3abd4144aadb94801e7a22db3646",
+      "candidate_sha256": "2250d54ac8678a3b8ff2ab5a273a931527e27732454495719bfff9c8a80c67b1"
+    },
+    {
+      "id": "min8",
+      "directory": "experiments/subtle_faults/min8",
+      "expected": "not_equivalent",
+      "rationale": "reversed final comparison",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "77308c91e803c6e2af851cd5d2bf5c057e4a24a5da346df750561fb469d76f03",
+      "candidate_sha256": "45f6e308d6e07a2580597c59c6c806fee8e3b9795ab8618a6a6e5bf3c19f4afb"
+    },
+    {
+      "id": "max8",
+      "directory": "experiments/subtle_faults/max8",
+      "expected": "not_equivalent",
+      "rationale": "reversed final comparison",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "5973437c1ea5b6729d8c077533ac964ddac65364ba2d0f11409e68607df0954a",
+      "candidate_sha256": "a70151e20b957d650861f8922d354d49b2073853bdda481297baac402baa1437"
+    },
+    {
+      "id": "range8",
+      "directory": "experiments/subtle_faults/range8",
+      "expected": "not_equivalent",
+      "rationale": "subtraction order reversed",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "fc2302c71eb082c92d53a2730ead450d28cf46af99c6cacb7adba1c3a4e7a49f",
+      "candidate_sha256": "a775e6d617f38197b7b589b27dc31989eb06bc637c2254bac4d3dd614c4732ec"
+    },
+    {
+      "id": "count_nonzero16",
+      "directory": "experiments/subtle_faults/count_nonzero16",
+      "expected": "not_equivalent",
+      "rationale": "one lane tests zero instead of nonzero",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "bb464a59a0289cc17317b24e600040ba69438c4bd80fb6fa2fd055b3e5a1b0b5",
+      "candidate_sha256": "37753b5a456db845bab249e3d56de4aaa09465a06d88548628e9a85587a80f70"
+    },
+    {
+      "id": "all_equal16",
+      "directory": "experiments/subtle_faults/all_equal16",
+      "expected": "not_equivalent",
+      "rationale": "differences cancel under XOR",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "0c3a335f12be926f3ff592eacfd34dbf0a3b6da0f5e958eb020c0ef2883090ea",
+      "candidate_sha256": "5969377d8193ab9db84f5220991b34b0d691c51f298f22fe5ee0fe26adc6a338"
+    },
+    {
+      "id": "parity32",
+      "directory": "experiments/subtle_faults/parity32",
+      "expected": "not_equivalent",
+      "rationale": "bit-fold shift off by one",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "8cff69ae6ee0e94d89df26cb645383a7cf22a0d9f4c8312c8bfab55efa3dd7fc",
+      "candidate_sha256": "ded008cabf6f3ed18d327499afb505eccefaf9239b173c91fc7fb1b62e3802aa"
+    },
+    {
+      "id": "popcount8",
+      "directory": "experiments/subtle_faults/popcount8",
+      "expected": "not_equivalent",
+      "rationale": "result mask loses count eight",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "a48187ad913cfdf6e0c356d2a2d0d4d7f141412f84e71d877ef0a4cffab6d9fa",
+      "candidate_sha256": "b5a6987e7c6057f66411257b7db8f4d5fda78d8266191a5ca2687d0b05132a67"
+    },
+    {
+      "id": "bitreverse32",
+      "directory": "experiments/subtle_faults/bitreverse32",
+      "expected": "not_equivalent",
+      "rationale": "one mask bit omitted",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "542c1b6257ae7214cad4806c96a67b38174f1cb962e5ae9d19232097747cef53",
+      "candidate_sha256": "ecbf75995e5ded1a1ea65f3fb647fc89f6788af97a4bed68bf5816fd3ac6cc85"
+    },
+    {
+      "id": "byteswap32",
+      "directory": "experiments/subtle_faults/byteswap32",
+      "expected": "not_equivalent",
+      "rationale": "halfword shift off by one",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "f2183f4979a28c346de4bb849091595348f73b134746d21e14e8c69a8e762c01",
+      "candidate_sha256": "6d0dbb0bb5fd00a78e8a8b6cf1575397d267e005e883c8737791dbfbffb097cf"
+    },
+    {
+      "id": "crc8_byte",
+      "directory": "experiments/subtle_faults/crc8_byte",
+      "expected": "not_equivalent",
+      "rationale": "wrong CRC polynomial bit",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "101ffea38ff971d3fb6f850aa065ade20bc73dc79c582284e499c58d2f60d5b8",
+      "candidate_sha256": "dd2c1166a6bac15e7e655cab01234f28fec3f61afb07074ba3bf378ddd27cce3"
+    },
+    {
+      "id": "hamming8",
+      "directory": "experiments/subtle_faults/hamming8",
+      "expected": "not_equivalent",
+      "rationale": "OR substituted for Hamming XOR",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "bc50655c6c6ea5a21c16dbd2a44e97899b5198e3597052598daeef7883737d3e",
+      "candidate_sha256": "391fa818b8969b7c01057b221bf73ec67c07505accc1cfdb77718416124a6734"
+    },
+    {
+      "id": "clamp16",
+      "directory": "experiments/subtle_faults/clamp16",
+      "expected": "not_equivalent",
+      "rationale": "clamp activates one bit too early",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "94d6a370e325446f7f65eb4ac867dc3fb2c040e498ca16822cfdb17b79df0961",
+      "candidate_sha256": "a6c39f1364fa3ee1c7b3557d78e98889ad0d77d6e6dd458ef9105538c0ff4282"
+    },
+    {
+      "id": "threshold_pack8",
+      "directory": "experiments/subtle_faults/threshold_pack8",
+      "expected": "not_equivalent",
+      "rationale": "rare equality boundary",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "36529014c0438b2b75719410233e401b9ec426b925c34b90c8289ebc1f8c8c4b",
+      "candidate_sha256": "b204f5c9dd28fdbf19dd64f5872251ecec268f4630ded21aa37a4bdff7bc6a8a"
+    },
+    {
+      "id": "absdiff16",
+      "directory": "experiments/subtle_faults/absdiff16",
+      "expected": "not_equivalent",
+      "rationale": "minimum replaced by maximum",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "881fc122466cc057304e1f0f6f7cc2d064b7204c0e294ab15ed29b3276e46e44",
+      "candidate_sha256": "9238dea4d02afe0ff1acd05b46b995340e00933761e1ba6850f72499e2c5a5c1"
+    },
+    {
+      "id": "squared_distance8",
+      "directory": "experiments/subtle_faults/squared_distance8",
+      "expected": "not_equivalent",
+      "rationale": "cross term loses factor two",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "8f978a4bbd2e8c8f6328ba555d55d0f5839f699baf9d0d34a495a6f41d5ced32",
+      "candidate_sha256": "ce85309fe213035dab438ac3f045138f282002da7be39f95fcb0670f2b65ed57"
+    },
+    {
+      "id": "saxpy16",
+      "directory": "experiments/subtle_faults/saxpy16",
+      "expected": "not_equivalent",
+      "rationale": "second output uses preceding bias",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "b3777be06600bbd53366cb9adde3bba6c570d96fba68298b9641edc0e4800f40",
+      "candidate_sha256": "fbaccc002be196f56bb473246794fb4fe2bc62625c1415f3473f98a59bc5a9fc"
+    },
+    {
+      "id": "quadratic",
+      "directory": "experiments/subtle_faults/quadratic",
+      "expected": "not_equivalent",
+      "rationale": "quadratic term loses a factor",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "6fcea3d95f9064470b3ebb7aa11651b84a2daed53673abe9a4def6aa7df8787f",
+      "candidate_sha256": "265639ee86b9bc01cc83ed08479e032b49a06b89d29fc3e6f20deb5de0a736dc"
+    },
+    {
+      "id": "convolution1d8",
+      "directory": "experiments/subtle_faults/convolution1d8",
+      "expected": "not_equivalent",
+      "rationale": "wrong convolution neighbor",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "a8e742a655fe604069a34c157530b533d8e4db3dda0d5fc008b2c78860a6ba28",
+      "candidate_sha256": "27565271d2a9610abb729b541ae977efbc5508cdb2250b551b2636e34a3d01b5"
+    },
+    {
+      "id": "moving_sum16",
+      "directory": "experiments/subtle_faults/moving_sum16",
+      "expected": "not_equivalent",
+      "rationale": "wrong outgoing window sample",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "501760f00c7f73a8b4a30cd44474af1f4dfe7b89a4043f63035e1b3b3898a4b2",
+      "candidate_sha256": "daa6b73d60ba4d45ebf44ebbde14b0795f2ffedacfe8bf3515d2376bb7c2d458"
+    },
+    {
+      "id": "triangular_fir16",
+      "directory": "experiments/subtle_faults/triangular_fir16",
+      "expected": "not_equivalent",
+      "rationale": "recurrence retains accumulated output",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "5c267b676f106ae9bce618070e9c9c9f2dd2338d931139c41feb62bce93af92e",
+      "candidate_sha256": "52444f8625c75954a8e170d661905ebcc9194251a2592ca678d527e48c255c4a"
+    },
+    {
+      "id": "gaussian5",
+      "directory": "experiments/subtle_faults/gaussian5",
+      "expected": "not_equivalent",
+      "rationale": "vertical center coefficient",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "ea2e070a3d18b0a1aeffdc51dd79ba908a634ebcec1662349307b60004e454c0",
+      "candidate_sha256": "30017e29c28699b6889950dcd85e89356c2fa064403bedc067153360a2b90b8a"
+    },
+    {
+      "id": "integral_image4",
+      "directory": "experiments/subtle_faults/integral_image4",
+      "expected": "not_equivalent",
+      "rationale": "overlap is added instead of subtracted",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "df71ae1a84d9d1db42103736f797617a0078bf8c50c7b04403ee4d6c90163f71",
+      "candidate_sha256": "27f17c090227f8e6d27167308df5b658660a8bf3405666489dffb36b2d0de053"
+    },
+    {
+      "id": "transpose4",
+      "directory": "experiments/subtle_faults/transpose4",
+      "expected": "not_equivalent",
+      "rationale": "second transposed lane duplicated",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "ffdb20d20b2e4a4e241360996d69335239dabe560cf8a0ee6a73d964cad377d7",
+      "candidate_sha256": "9b640c10e22a629989d95a8fa0036221d02974b2bb68d279565047b54c03ef73"
+    },
+    {
+      "id": "matvec4",
+      "directory": "experiments/subtle_faults/matvec4",
+      "expected": "not_equivalent",
+      "rationale": "last vector index",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "459992c29136c2c2d7c39b9913a4c8723c24c15e3163755863648a7ca6175e02",
+      "candidate_sha256": "f333d6868515b6fb0da32e5dac0eddb963b3b1656dbd17893a642e8164122cc9"
+    },
+    {
+      "id": "gemm_local4",
+      "directory": "experiments/subtle_faults/gemm_local4",
+      "expected": "not_equivalent",
+      "rationale": "last accumulator store duplicated",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "c7d351511352262d1cd582214aec6e5f5dd2250b30dd3efb42e738a31b2a5d7e",
+      "candidate_sha256": "802410d8199ac32e8d5e113a7884223ed7bb89fd7e4ce3b584fe262e7d45d035"
+    },
+    {
+      "id": "syrk4",
+      "directory": "experiments/subtle_faults/syrk4",
+      "expected": "not_equivalent",
+      "rationale": "symmetric output store lost",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "19d9d6bebfd59065dee600d67ff658a211a42acbae8edacb93cf9562e8339021",
+      "candidate_sha256": "b677b60b321bf5066dc08c493b060c0635e731f2b757af4213bda729995aac07"
+    },
+    {
+      "id": "rank1_update4",
+      "directory": "experiments/subtle_faults/rank1_update4",
+      "expected": "not_equivalent",
+      "rationale": "last rank-one lane index",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "78a270efce5cb4a99e112d33737ec4af9f7cedcd1352450e580d322227d5ef2c",
+      "candidate_sha256": "7db077f9a639b7fc1bd7f46668be9ffb9880b806669275ce49ffeb05e493eaf1"
+    },
+    {
+      "id": "triangular_matvec4",
+      "directory": "experiments/subtle_faults/triangular_matvec4",
+      "expected": "not_equivalent",
+      "rationale": "diagonal omitted",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "b255d8ae7e000a67376c70496b3dd5f4f285f4e81754cb09eca22eea397079ec",
+      "candidate_sha256": "a77028d1d0bd48230d51b95ba5e5166d358289ed054f8e7e01c508358df713f6"
+    },
+    {
+      "id": "symv4",
+      "directory": "experiments/subtle_faults/symv4",
+      "expected": "not_equivalent",
+      "rationale": "diagonal handling reversed",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "f2db215754e21dacd4acf135323ab234c9937d29d0715e66f3309ce2bb2cca38",
+      "candidate_sha256": "f520731b7efeb64e06d8b7553d53e0be4ba8c29290025ba8cc3fe6867b336289"
+    },
+    {
+      "id": "matrix_trace4",
+      "directory": "experiments/subtle_faults/matrix_trace4",
+      "expected": "not_equivalent",
+      "rationale": "diagonal stride",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "80aae252076126370d6bc2b3c9a0080ff28b289911e3a4203c98432845f6775c",
+      "candidate_sha256": "baf519c8852693f7a9dfb034dc29b7afe0701d1ce56def2232cbcf08092793d2"
+    },
+    {
+      "id": "matrix_diagsum4",
+      "directory": "experiments/subtle_faults/matrix_diagsum4",
+      "expected": "not_equivalent",
+      "rationale": "antidiagonal replaced by diagonal",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "85d10f2901245f956b87f2d29690bbea65600ecdec2af131a8090706fd86c43a",
+      "candidate_sha256": "2cbf1245d9919c511a30fee9ee374b8bf1d8b141acebc78e2873693b337ffa2f"
+    },
+    {
+      "id": "histogram4",
+      "directory": "experiments/subtle_faults/histogram4",
+      "expected": "not_equivalent",
+      "rationale": "two histogram bins count same value",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "16c13b4e21633447f59998b4a917255f6aaa0c9d637a000b07a200fff210b2a8",
+      "candidate_sha256": "dd57073ef94c575a8a28e8259f54660cfc887b6c5339c4a96d922e4c897f7187"
+    },
+    {
+      "id": "search_count16",
+      "directory": "experiments/subtle_faults/search_count16",
+      "expected": "not_equivalent",
+      "rationale": "odd lane duplicates even comparison",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "c9e6e24452a87ad8b677ec780dd7c77c7ca658fd625fe88ea14cc7a74482ec37",
+      "candidate_sha256": "85f28f8dc2ca20b0ee27c62b9a44300dd942f00d60a8fc8d19a1186114b09e93"
+    },
+    {
+      "id": "reverse_copy16",
+      "directory": "experiments/subtle_faults/reverse_copy16",
+      "expected": "not_equivalent",
+      "rationale": "swap loses saved input",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "c1e64150cf09797c6f4e754aa8bb8cef96008e3863c8ab1495459d25ca21445f",
+      "candidate_sha256": "dc89862bc31f85f0174e12fa3b673b8966b2123a32bb8f20535494d9ab509d06"
+    },
+    {
+      "id": "deinterleave16",
+      "directory": "experiments/subtle_faults/deinterleave16",
+      "expected": "not_equivalent",
+      "rationale": "odd lane duplicates even",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "3cd419e9f10cc5796a43fb71d94a136d599d2ea624e00e4f7524b5ab55edf786",
+      "candidate_sha256": "d69bc2a64906345809d7b3a65c2606b9eaf661a4b95248db5e5e510d75be04ca"
+    },
+    {
+      "id": "interleave8",
+      "directory": "experiments/subtle_faults/interleave8",
+      "expected": "not_equivalent",
+      "rationale": "second input stream lost",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "8d1a181bb94b7d12e87d48194bbd541c793667a5a97b331eb146ebb422ee274f",
+      "candidate_sha256": "ee3f6bb1dc4ed4c49dfeb346d765c98444fb999cf226dad00edefefe677c6c74"
+    },
+    {
+      "id": "maxpool4",
+      "directory": "experiments/subtle_faults/maxpool4",
+      "expected": "not_equivalent",
+      "rationale": "minimum of pair maxima",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "7f85223f15d6f3e86830101941fd162bdf9bdbdbd68a9170cba8912f79fb0f40",
+      "candidate_sha256": "b421b6ce177645b13caa5de8c0fbeb7741bef8d213bbba81b9bea5542f76d796"
+    },
+    {
+      "id": "moving_sum_register16",
+      "directory": "experiments/subtle_faults/moving_sum_register16",
+      "expected": "not_equivalent",
+      "rationale": "shift-register stage skipped",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "0c824ac65f29f1f5010f31d08f1bb05470ea7acbd8527a0050530b6a7483fb84",
+      "candidate_sha256": "6b0b2e1ef65ced969e199d815f1269f80432b77cca42fccd64f50b7a8cdc0fdd"
+    },
+    {
+      "id": "gemm_tile2",
+      "directory": "experiments/subtle_faults/gemm_tile2",
+      "expected": "not_equivalent",
+      "rationale": "second tiled column duplicates first",
+      "origin": "Controlled fault in an already-proved candidate; deliberately injected by this script",
+      "original_sha256": "cc3d74d05400a9e1fae8f93c7e54243b79d3dd7ac02f0c01f108f35a832336b9",
+      "candidate_sha256": "c50adaf6cde8cd8c93d8b40367a35c4362be82e1dcd46ec253fef7c6aef3a746"
+    },
+    {
+      "id": "eq_min_tie",
+      "directory": "experiments/subtle_faults/eq_min_tie",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "f4eecf19dee1aaae82584389af3d56fea4353b6bb897fc3ffa28beb086c735dd",
+      "candidate_sha256": "accde9bea262682d21a5766b9e9742f83e37f8e079c3474cb00b36cc5d65aa82"
+    },
+    {
+      "id": "eq_max_tie",
+      "directory": "experiments/subtle_faults/eq_max_tie",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "78b3c1e33c77da0c074ed70169b9fa74397306727f99b653deb4f6465c14ddef",
+      "candidate_sha256": "c4204f06b54abced3c3b74f41c55c08a92e67be94d6b2ac6085fc68590c61acc"
+    },
+    {
+      "id": "eq_clamp_tie",
+      "directory": "experiments/subtle_faults/eq_clamp_tie",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "3eee968c9f65200dd1ea32146eb543177076971bf6871cb6d8c023bf22c078fe",
+      "candidate_sha256": "38c03bac461561675985e3ec97bf9df61ac058879ecba47d0aaee1ba1ea257b4"
+    },
+    {
+      "id": "eq_strength_multiply",
+      "directory": "experiments/subtle_faults/eq_strength_multiply",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "e2585ece4dabf425175c0ec09a5efb714d3e7659aeba7d7cf01a33668af31c07",
+      "candidate_sha256": "5c2566b4f531116987f5aa7206335e8216b51a1ec1249e3c36750818f1efa47b"
+    },
+    {
+      "id": "eq_unsigned_divide",
+      "directory": "experiments/subtle_faults/eq_unsigned_divide",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "c103036380028188d5e108b0b9a08a9a01145297efb51635b44a2c1073ac6df0",
+      "candidate_sha256": "f4f58e6c972f81cc93c294accd894c8d7123655519afb94d4e23bc77ead755ca"
+    },
+    {
+      "id": "eq_unsigned_remainder",
+      "directory": "experiments/subtle_faults/eq_unsigned_remainder",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "d540df9408c2e516ba7c4a92d8a816e85c9f4cafe8b8b6dfade93812642d5bcd",
+      "candidate_sha256": "1eb8fc5bf4620be77b1664b99006492fc14508314745ca34d9e27fa03733665e"
+    },
+    {
+      "id": "eq_modular_subtract",
+      "directory": "experiments/subtle_faults/eq_modular_subtract",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "428229e5fb7cebe9493513757cc82766632f2328c03eb98b1b4f63e57d9314fd",
+      "candidate_sha256": "f0b0da0faa4817bb52902f1fd65253d31351b2e80ea6f7958d4a7b879606af8e"
+    },
+    {
+      "id": "eq_xor_cancel",
+      "directory": "experiments/subtle_faults/eq_xor_cancel",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "9c8e96aff69898962cabd0839b3cadb920f5805ff59b1c6d91df160f4640e5c2",
+      "candidate_sha256": "91724395c75baad44393fbe20d25cb9871047027e396b85c3e815536054a129f"
+    },
+    {
+      "id": "eq_mask_partition",
+      "directory": "experiments/subtle_faults/eq_mask_partition",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "9c8e96aff69898962cabd0839b3cadb920f5805ff59b1c6d91df160f4640e5c2",
+      "candidate_sha256": "b94fdc2275d87311b88aebe29b48a5715e46f30d0fd661e4ed0b8dcad2d1737c"
+    },
+    {
+      "id": "eq_threshold_adjacent",
+      "directory": "experiments/subtle_faults/eq_threshold_adjacent",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "024049520d2d56efa6c5252c9acba42b50559d6889120ee235b8efc861d65dfa",
+      "candidate_sha256": "4bcb83bfedc78c0c8be3f3998642f137ae98aaf6d999ff57d9ad5297dfe1045b"
+    },
+    {
+      "id": "eq_zero_predicate",
+      "directory": "experiments/subtle_faults/eq_zero_predicate",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "315c23b396f6b2206ac7ca17aa81cb690883280ab6f7eac0bb5876d5997346e8",
+      "candidate_sha256": "25888dc3f9bbe382d6bcfa9767c55b6ce5b5346f71dca98151741ffedca01f0b"
+    },
+    {
+      "id": "eq_distributivity",
+      "directory": "experiments/subtle_faults/eq_distributivity",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "534506a4db6ef415d20248623de392ea63c218d351d539a42e74f7d03d0a2708",
+      "candidate_sha256": "21e4be5bd11300d6597ec6644f1a97cc86467de268a2cdec6989a40f0400cb25"
+    },
+    {
+      "id": "eq_reassociate",
+      "directory": "experiments/subtle_faults/eq_reassociate",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "89943be71f5015ce067cbb7792439f315a168ae4074616385f55323e2f845018",
+      "candidate_sha256": "953dec1956438ec3367d166ca6fd682074fa34bf8f9c0ba85342c9888b26777f"
+    },
+    {
+      "id": "eq_rotate",
+      "directory": "experiments/subtle_faults/eq_rotate",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "16a6376738cd20079f04762bfb0193fa80e0e812900fe78c0ed54a1b37245acd",
+      "candidate_sha256": "909dfcc525b7a8933f963054366b4b85ee2e42305d45f68060595499676d5072"
+    },
+    {
+      "id": "eq_unsigned_double_not",
+      "directory": "experiments/subtle_faults/eq_unsigned_double_not",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "9c8e96aff69898962cabd0839b3cadb920f5805ff59b1c6d91df160f4640e5c2",
+      "candidate_sha256": "9328ed82b0a93b7e02be71dae7ddccf79e6f44f6bc76400bf94adc89af233789"
+    },
+    {
+      "id": "eq_max_operand_order",
+      "directory": "experiments/subtle_faults/eq_max_operand_order",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "78b3c1e33c77da0c074ed70169b9fa74397306727f99b653deb4f6465c14ddef",
+      "candidate_sha256": "177d2fa05f803f1e22603d3ed017524898fe458cd1657c7a8549597d9f1dcca3"
+    },
+    {
+      "id": "eq_absdiff_operands",
+      "directory": "experiments/subtle_faults/eq_absdiff_operands",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "926466b0e224fdaff866096b655a745f7ece48d18d36e9d2e9c5604c3d59d4a2",
+      "candidate_sha256": "02340b4780dcbee99c0cde02481caaf26dae2c99d12f9e90ec5947123f2a8f6b"
+    },
+    {
+      "id": "eq_demorgan",
+      "directory": "experiments/subtle_faults/eq_demorgan",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "54835c239af7e7c82e07e9bce6c38d06385f357ea2eb1dd161508247e13f6b54",
+      "candidate_sha256": "2753ae1a6bf43f85f8362a40dc6a641baaefb7f673c393d8ddcc0984186daa76"
+    },
+    {
+      "id": "eq_shift_mask",
+      "directory": "experiments/subtle_faults/eq_shift_mask",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "4306695276b5d3ff50940d3bf1f0d1d693ceded0061b2183764003bcbaa8d054",
+      "candidate_sha256": "c2e4d42c390652ff767bb577059276f5b05863a7ad8b692796f50cf453e27035"
+    },
+    {
+      "id": "eq_guard_division",
+      "directory": "experiments/subtle_faults/eq_guard_division",
+      "expected": "equivalent",
+      "rationale": "Equivalent semantic control",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "a55215fc4d42b02117d77bba78e6054ccb975f0cd5999cabee2c3febe617ae7d",
+      "candidate_sha256": "49ff90966b2ac2fc51dd9e6bde3d147949b06e4e3a90156ae08e222d0fef792f"
+    },
+    {
+      "id": "fault_average_overflow",
+      "directory": "experiments/subtle_faults/fault_average_overflow",
+      "expected": "not_equivalent",
+      "rationale": "overflow before division",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "bf2528ed96ede4b9f2f7e8c3a51992987fbe693aa70236616edd08ea47b64a96",
+      "candidate_sha256": "023bec54d131a3836efc70487cb182e4153fcd8c062ce0b6ce25a650b70944b2"
+    },
+    {
+      "id": "fault_rare_magic",
+      "directory": "experiments/subtle_faults/fault_rare_magic",
+      "expected": "not_equivalent",
+      "rationale": "rare special-case exception",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "c85703f1451f5b2be389696a55d677538cf471a2dcaca9697571dfa5c0423771",
+      "candidate_sha256": "d5540400641c88a26d0839d65e64570d08d449da857e8be2bdf8d89723c7ae48"
+    },
+    {
+      "id": "fault_rounding_bias",
+      "directory": "experiments/subtle_faults/fault_rounding_bias",
+      "expected": "not_equivalent",
+      "rationale": "rounding changed to truncation",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "0a34b66f4a5be6ef02d9142067e7bda8c2c49c791790306f8a8a7088b31b2bd6",
+      "candidate_sha256": "f1260619ea879fa4829e0315d3ddcea52052a3b1576bdaa63c83bfa05cd729c2"
+    },
+    {
+      "id": "fault_unsigned_absdiff",
+      "directory": "experiments/subtle_faults/fault_unsigned_absdiff",
+      "expected": "not_equivalent",
+      "rationale": "absolute difference became modular subtraction",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "926466b0e224fdaff866096b655a745f7ece48d18d36e9d2e9c5604c3d59d4a2",
+      "candidate_sha256": "428229e5fb7cebe9493513757cc82766632f2328c03eb98b1b4f63e57d9314fd"
+    },
+    {
+      "id": "ub_shift_32",
+      "directory": "experiments/subtle_faults/ub_shift_32",
+      "expected": "candidate_undefined",
+      "rationale": "Undefined behavior must not become equivalence",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "9c8e96aff69898962cabd0839b3cadb920f5805ff59b1c6d91df160f4640e5c2",
+      "candidate_sha256": "1375236b91fe9e554398d3aa1e137de636bd98261fbcecba14e00b1a20315cbf"
+    },
+    {
+      "id": "ub_shift_input",
+      "directory": "experiments/subtle_faults/ub_shift_input",
+      "expected": "candidate_undefined",
+      "rationale": "Undefined behavior must not become equivalence",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "9c8e96aff69898962cabd0839b3cadb920f5805ff59b1c6d91df160f4640e5c2",
+      "candidate_sha256": "5db0e5264a636a34e120402d85c5d4c54e4f20cfbd3eeb3b6e8b62a3c1830868"
+    },
+    {
+      "id": "ub_division_zero",
+      "directory": "experiments/subtle_faults/ub_division_zero",
+      "expected": "candidate_undefined",
+      "rationale": "Undefined behavior must not become equivalence",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "5507f374da55ee9147930cd6ca4fa6706fbdad4751de2877f5b22995816d950f",
+      "candidate_sha256": "27dd623a8c75c7c743eeb316be17ca421c07451039ae023176d200c79add32fb"
+    },
+    {
+      "id": "ub_hoisted_division",
+      "directory": "experiments/subtle_faults/ub_hoisted_division",
+      "expected": "candidate_undefined",
+      "rationale": "Undefined behavior must not become equivalence",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "5507f374da55ee9147930cd6ca4fa6706fbdad4751de2877f5b22995816d950f",
+      "candidate_sha256": "8f83211973a9a9d46f44c812bacdd19691bd53f8a8cc4ef171579a258cd1581a"
+    },
+    {
+      "id": "ub_read_oob",
+      "directory": "experiments/subtle_faults/ub_read_oob",
+      "expected": "candidate_undefined",
+      "rationale": "Array read just beyond end",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "8166af7334a66123b04a9698dc8cf8061ded88a6141ff5071d7138a9f1032886",
+      "candidate_sha256": "644906a961eb28e3938f5b61f067e5131125c786fb3535fc88ce6ef95f49457e"
+    },
+    {
+      "id": "ub_write_oob",
+      "directory": "experiments/subtle_faults/ub_write_oob",
+      "expected": "candidate_undefined",
+      "rationale": "Array write just beyond end",
+      "origin": "Constructed semantic control, not a spontaneous LLM output",
+      "original_sha256": "c9876bd46f8914c15532505807fb83729a83523b0167a341714d0a902445e2ec",
+      "candidate_sha256": "36b7e250db8881fff47ce96262113579d0698345f715309b0444657628764670"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "case": "symv4",
+  "variant": "buggy",
+  "expected": "not_equivalent",
+  "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+  "transformation": "Reuse stored triangular matrix elements",
+  "original": "benchmarks\\expanded\\symv4_original.c",
+  "candidate": "benchmarks\\expanded\\symv4_buggy.c",
+  "original_sha256": "fa11ef578edcd736b709d937cb04b31a7340106e8a26d82db658ea4aad13d0ea",
+  "candidate_sha256": "4946ec618db8132551b19ae8548f9a28a182fe80083951d42b987da18cb38f0d",
+  "verification": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 204,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "a": [
+        3107020605,
+        0,
+        0,
+        0,
+        1879307967,
+        0,
+        0,
+        0,
+        3303014143,
+        0,
+        0,
+        0,
+        3217012700,
+        0,
+        0,
+        0
+      ],
+      "x": [
+        679043583,
+        3885891582,
+        4228583647,
+        507292001
+      ],
+      "out": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "original_outputs": {
+      "a": [
+        3107020605,
+        0,
+        0,
+        0,
+        1879307967,
+        0,
+        0,
+        0,
+        3303014143,
+        0,
+        0,
+        0,
+        3217012700,
+        0,
+        0,
+        0
+      ],
+      "x": [
+        679043583,
+        3885891582,
+        4228583647,
+        507292001
+      ],
+      "out": [
+        193725378,
+        2360878913,
+        1497669377,
+        3953033252
+      ]
+    },
+    "candidate_outputs": {
+      "a": [
+        3107020605,
+        0,
+        0,
+        0,
+        1879307967,
+        0,
+        0,
+        0,
+        3303014143,
+        0,
+        0,
+        0,
+        3217012700,
+        0,
+        0,
+        0
+      ],
+      "x": [
+        679043583,
+        3885891582,
+        4228583647,
+        507292001
+      ],
+      "out": [
+        193725379,
+        2360878913,
+        1497669377,
+        3953033252
+      ]
+    },
+    "elapsed_seconds": 0.134302
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

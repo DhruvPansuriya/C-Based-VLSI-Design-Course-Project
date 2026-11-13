@@ -1,0 +1,763 @@
+{
+  "status": "not_equivalent",
+  "assumptions": [
+    "32-bit int and unsigned int; uint32_t is unsigned int",
+    "All array parameters are valid, separately allocated, and nonoverlapping",
+    "Functional equality at function completion; no cycle-level RTL guarantee"
+  ],
+  "execution_steps": 694,
+  "paths": {
+    "original": 1,
+    "candidate": 1
+  },
+  "z3_version": "5.1.0",
+  "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+  "component_lemmas": [
+    {
+      "index": 1,
+      "status": "sat",
+      "variables": [
+        "arg0_0",
+        "arg1_0"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma001.smt2"
+    },
+    {
+      "index": 2,
+      "status": "sat",
+      "variables": [
+        "arg0_3",
+        "arg1_12"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma002.smt2"
+    },
+    {
+      "index": 3,
+      "status": "sat",
+      "variables": [
+        "arg0_1",
+        "arg1_4"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma003.smt2"
+    },
+    {
+      "index": 4,
+      "status": "sat",
+      "variables": [
+        "arg0_2",
+        "arg1_8"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma004.smt2"
+    },
+    {
+      "index": 5,
+      "status": "sat",
+      "variables": [
+        "arg0_0",
+        "arg1_1"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma005.smt2"
+    },
+    {
+      "index": 6,
+      "status": "sat",
+      "variables": [
+        "arg0_3",
+        "arg1_13"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma006.smt2"
+    },
+    {
+      "index": 7,
+      "status": "sat",
+      "variables": [
+        "arg0_1",
+        "arg1_5"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma007.smt2"
+    },
+    {
+      "index": 8,
+      "status": "sat",
+      "variables": [
+        "arg0_2",
+        "arg1_9"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma008.smt2"
+    },
+    {
+      "index": 9,
+      "status": "sat",
+      "variables": [
+        "arg0_2",
+        "arg1_10"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma009.smt2"
+    },
+    {
+      "index": 10,
+      "status": "sat",
+      "variables": [
+        "arg0_3",
+        "arg1_14"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma010.smt2"
+    },
+    {
+      "index": 11,
+      "status": "sat",
+      "variables": [
+        "arg0_0",
+        "arg1_2"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma011.smt2"
+    },
+    {
+      "index": 12,
+      "status": "sat",
+      "variables": [
+        "arg0_1",
+        "arg1_6"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma012.smt2"
+    },
+    {
+      "index": 13,
+      "status": "sat",
+      "variables": [
+        "arg0_2",
+        "arg1_11"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma013.smt2"
+    },
+    {
+      "index": 14,
+      "status": "sat",
+      "variables": [
+        "arg0_3",
+        "arg1_15"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma014.smt2"
+    },
+    {
+      "index": 15,
+      "status": "sat",
+      "variables": [
+        "arg0_0",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma015.smt2"
+    },
+    {
+      "index": 16,
+      "status": "sat",
+      "variables": [
+        "arg0_1",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma016.smt2"
+    },
+    {
+      "index": 17,
+      "status": "sat",
+      "variables": [
+        "arg0_4",
+        "arg1_0"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma017.smt2"
+    },
+    {
+      "index": 18,
+      "status": "sat",
+      "variables": [
+        "arg0_7",
+        "arg1_12"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma018.smt2"
+    },
+    {
+      "index": 19,
+      "status": "sat",
+      "variables": [
+        "arg0_5",
+        "arg1_4"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma019.smt2"
+    },
+    {
+      "index": 20,
+      "status": "sat",
+      "variables": [
+        "arg0_6",
+        "arg1_8"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma020.smt2"
+    },
+    {
+      "index": 21,
+      "status": "sat",
+      "variables": [
+        "arg0_4",
+        "arg1_1"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma021.smt2"
+    },
+    {
+      "index": 22,
+      "status": "sat",
+      "variables": [
+        "arg0_7",
+        "arg1_13"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma022.smt2"
+    },
+    {
+      "index": 23,
+      "status": "sat",
+      "variables": [
+        "arg0_5",
+        "arg1_5"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma023.smt2"
+    },
+    {
+      "index": 24,
+      "status": "sat",
+      "variables": [
+        "arg0_6",
+        "arg1_9"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma024.smt2"
+    },
+    {
+      "index": 25,
+      "status": "sat",
+      "variables": [
+        "arg0_6",
+        "arg1_10"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma025.smt2"
+    },
+    {
+      "index": 26,
+      "status": "sat",
+      "variables": [
+        "arg0_7",
+        "arg1_14"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma026.smt2"
+    },
+    {
+      "index": 27,
+      "status": "sat",
+      "variables": [
+        "arg0_4",
+        "arg1_2"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma027.smt2"
+    },
+    {
+      "index": 28,
+      "status": "sat",
+      "variables": [
+        "arg0_5",
+        "arg1_6"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma028.smt2"
+    },
+    {
+      "index": 29,
+      "status": "sat",
+      "variables": [
+        "arg0_6",
+        "arg1_11"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma029.smt2"
+    },
+    {
+      "index": 30,
+      "status": "sat",
+      "variables": [
+        "arg0_7",
+        "arg1_15"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma030.smt2"
+    },
+    {
+      "index": 31,
+      "status": "sat",
+      "variables": [
+        "arg0_4",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma031.smt2"
+    },
+    {
+      "index": 32,
+      "status": "sat",
+      "variables": [
+        "arg0_5",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma032.smt2"
+    },
+    {
+      "index": 33,
+      "status": "sat",
+      "variables": [
+        "arg0_8",
+        "arg1_0"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma033.smt2"
+    },
+    {
+      "index": 34,
+      "status": "sat",
+      "variables": [
+        "arg0_11",
+        "arg1_12"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma034.smt2"
+    },
+    {
+      "index": 35,
+      "status": "sat",
+      "variables": [
+        "arg0_9",
+        "arg1_4"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma035.smt2"
+    },
+    {
+      "index": 36,
+      "status": "sat",
+      "variables": [
+        "arg0_10",
+        "arg1_8"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma036.smt2"
+    },
+    {
+      "index": 37,
+      "status": "sat",
+      "variables": [
+        "arg0_8",
+        "arg1_1"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma037.smt2"
+    },
+    {
+      "index": 38,
+      "status": "sat",
+      "variables": [
+        "arg0_11",
+        "arg1_13"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma038.smt2"
+    },
+    {
+      "index": 39,
+      "status": "sat",
+      "variables": [
+        "arg0_9",
+        "arg1_5"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma039.smt2"
+    },
+    {
+      "index": 40,
+      "status": "sat",
+      "variables": [
+        "arg0_10",
+        "arg1_9"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma040.smt2"
+    },
+    {
+      "index": 41,
+      "status": "sat",
+      "variables": [
+        "arg0_10",
+        "arg1_10"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma041.smt2"
+    },
+    {
+      "index": 42,
+      "status": "sat",
+      "variables": [
+        "arg0_11",
+        "arg1_14"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma042.smt2"
+    },
+    {
+      "index": 43,
+      "status": "sat",
+      "variables": [
+        "arg0_8",
+        "arg1_2"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma043.smt2"
+    },
+    {
+      "index": 44,
+      "status": "sat",
+      "variables": [
+        "arg0_9",
+        "arg1_6"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma044.smt2"
+    },
+    {
+      "index": 45,
+      "status": "sat",
+      "variables": [
+        "arg0_10",
+        "arg1_11"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma045.smt2"
+    },
+    {
+      "index": 46,
+      "status": "sat",
+      "variables": [
+        "arg0_11",
+        "arg1_15"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma046.smt2"
+    },
+    {
+      "index": 47,
+      "status": "sat",
+      "variables": [
+        "arg0_8",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma047.smt2"
+    },
+    {
+      "index": 48,
+      "status": "sat",
+      "variables": [
+        "arg0_9",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma048.smt2"
+    },
+    {
+      "index": 49,
+      "status": "sat",
+      "variables": [
+        "arg0_12",
+        "arg1_0"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma049.smt2"
+    },
+    {
+      "index": 50,
+      "status": "sat",
+      "variables": [
+        "arg0_15",
+        "arg1_12"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma050.smt2"
+    },
+    {
+      "index": 51,
+      "status": "sat",
+      "variables": [
+        "arg0_13",
+        "arg1_4"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma051.smt2"
+    },
+    {
+      "index": 52,
+      "status": "sat",
+      "variables": [
+        "arg0_14",
+        "arg1_8"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma052.smt2"
+    },
+    {
+      "index": 53,
+      "status": "sat",
+      "variables": [
+        "arg0_12",
+        "arg1_1"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma053.smt2"
+    },
+    {
+      "index": 54,
+      "status": "sat",
+      "variables": [
+        "arg0_15",
+        "arg1_13"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma054.smt2"
+    },
+    {
+      "index": 55,
+      "status": "sat",
+      "variables": [
+        "arg0_13",
+        "arg1_5"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma055.smt2"
+    },
+    {
+      "index": 56,
+      "status": "sat",
+      "variables": [
+        "arg0_14",
+        "arg1_9"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma056.smt2"
+    },
+    {
+      "index": 57,
+      "status": "sat",
+      "variables": [
+        "arg0_14",
+        "arg1_10"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma057.smt2"
+    },
+    {
+      "index": 58,
+      "status": "sat",
+      "variables": [
+        "arg0_15",
+        "arg1_14"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma058.smt2"
+    },
+    {
+      "index": 59,
+      "status": "sat",
+      "variables": [
+        "arg0_12",
+        "arg1_2"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma059.smt2"
+    },
+    {
+      "index": 60,
+      "status": "sat",
+      "variables": [
+        "arg0_13",
+        "arg1_6"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma060.smt2"
+    },
+    {
+      "index": 61,
+      "status": "sat",
+      "variables": [
+        "arg0_14",
+        "arg1_11"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma061.smt2"
+    },
+    {
+      "index": 62,
+      "status": "sat",
+      "variables": [
+        "arg0_15",
+        "arg1_15"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma062.smt2"
+    },
+    {
+      "index": 63,
+      "status": "sat",
+      "variables": [
+        "arg0_12",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma063.smt2"
+    },
+    {
+      "index": 64,
+      "status": "sat",
+      "variables": [
+        "arg0_13",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline\\run_98525a146132\\proof\\lemmas\\region_equality.lemma064.smt2"
+    }
+  ],
+  "main_query_requires_component_lemmas": false,
+  "counterexample": {
+    "a": [
+      890068663,
+      3158788906,
+      545894466,
+      1848377343,
+      3630089136,
+      2021957811,
+      1049243997,
+      56971815,
+      2438535449,
+      3578942717,
+      1428184622,
+      1102895036,
+      2129074120,
+      2835675136,
+      3318781705,
+      2147527338
+    ],
+    "b": [
+      2366426328,
+      534593597,
+      4179363568,
+      2908483532,
+      631141234,
+      2214854646,
+      1121098678,
+      3532401241,
+      2859993548,
+      3053453313,
+      3465672250,
+      3225394492,
+      1342177280,
+      3791716354,
+      598254034,
+      471726040
+    ],
+    "out": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "original_outputs": {
+    "a": [
+      890068663,
+      3158788906,
+      545894466,
+      1848377343,
+      3630089136,
+      2021957811,
+      1049243997,
+      56971815,
+      2438535449,
+      3578942717,
+      1428184622,
+      1102895036,
+      2129074120,
+      2835675136,
+      3318781705,
+      2147527338
+    ],
+    "b": [
+      2366426328,
+      534593597,
+      4179363568,
+      2908483532,
+      631141234,
+      2214854646,
+      1121098678,
+      3532401241,
+      2859993548,
+      3053453313,
+      3465672250,
+      3225394492,
+      1342177280,
+      3791716354,
+      598254034,
+      471726040
+    ],
+    "out": [
+      3802127284,
+      1771573815,
+      1909304462,
+      215296526,
+      1146286162,
+      3146395549,
+      535145810,
+      1155205423,
+      82794,
+      1764292281,
+      2503702258,
+      2830178377,
+      3970796780,
+      4076136197,
+      3602125566,
+      1981010924
+    ]
+  },
+  "candidate_outputs": {
+    "a": [
+      890068663,
+      3158788906,
+      545894466,
+      1848377343,
+      3630089136,
+      2021957811,
+      1049243997,
+      56971815,
+      2438535449,
+      3578942717,
+      1428184622,
+      1102895036,
+      2129074120,
+      2835675136,
+      3318781705,
+      2147527338
+    ],
+    "b": [
+      2366426328,
+      534593597,
+      4179363568,
+      2908483532,
+      631141234,
+      2214854646,
+      1121098678,
+      3532401241,
+      2859993548,
+      3053453313,
+      3465672250,
+      3225394492,
+      1342177280,
+      3791716354,
+      598254034,
+      471726040
+    ],
+    "out": [
+      757965880,
+      3152845400,
+      2922616020,
+      3696232795,
+      1073099261,
+      3467978781,
+      3237749401,
+      4011366176,
+      2863394326,
+      963306550,
+      733077170,
+      1506693945,
+      450927505,
+      2845807025,
+      2615577645,
+      3389194420
+    ]
+  },
+  "elapsed_seconds": 3.974087
+}

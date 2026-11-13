@@ -1,0 +1,2246 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.36 (git sha1 8f07a0d84, gcc 11.4.0-1ubuntu1~22.04.2 -fPIC -Os)
+
+
+-- Executing script file `synth.ys' --
+
+1. Executing Liberty frontend: cells.lib
+Imported 135 cell types from liberty file.
+
+2. Executing Verilog-2005 frontend: kernel.v
+Parsing Verilog input from `kernel.v' to AST representation.
+Storing AST representation for module `$abstract\datapath_kernel'.
+Storing AST representation for module `$abstract\controller_kernel'.
+Storing AST representation for module `$abstract\PBI_kernel'.
+Storing AST representation for module `$abstract\kernel'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: panda_libtech.v
+Parsing Verilog input from `panda_libtech.v' to AST representation.
+Storing AST representation for module `$abstract\register_SE'.
+Storing AST representation for module `$abstract\multi_read_cond_FU'.
+Storing AST representation for module `$abstract\BMEMORY_CTRLN'.
+Storing AST representation for module `$abstract\ui_add_node_FU'.
+Storing AST representation for module `$abstract\ui_and_node_FU'.
+Storing AST representation for module `$abstract\ui_concat_bit_node_FU'.
+Storing AST representation for module `$abstract\ui_eq_node_FU'.
+Storing AST representation for module `$abstract\ui_gep_node_FU'.
+Storing AST representation for module `$abstract\ui_mul_node_FU'.
+Storing AST representation for module `$abstract\ui_not_node_FU'.
+Storing AST representation for module `$abstract\ui_select_node_FU'.
+Storing AST representation for module `$abstract\ui_shl_node_FU'.
+Storing AST representation for module `$abstract\ui_shr_node_FU'.
+Storing AST representation for module `$abstract\ui_ternary_add_node_FU'.
+Storing AST representation for module `$abstract\UUdata_converter_FU'.
+Storing AST representation for module `$abstract\MUX2_GATE'.
+Storing AST representation for module `$abstract\register_AR'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+5. Executing AST frontend in derive mode using pre-parsed AST for module `\kernel'.
+Generating RTLIL representation for module `\kernel'.
+
+5.1. Analyzing design hierarchy..
+Top module:  \kernel
+
+5.2. Executing AST frontend in derive mode using pre-parsed AST for module `\PBI_kernel'.
+Generating RTLIL representation for module `\PBI_kernel'.
+
+5.3. Analyzing design hierarchy..
+Top module:  \kernel
+Used module:     \PBI_kernel
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_out1 = 1
+
+5.4. Executing AST frontend in derive mode using pre-parsed AST for module `\register_AR'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_out1 = 1
+Generating RTLIL representation for module `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR'.
+
+5.5. Executing AST frontend in derive mode using pre-parsed AST for module `\datapath_kernel'.
+Generating RTLIL representation for module `\datapath_kernel'.
+
+5.6. Executing AST frontend in derive mode using pre-parsed AST for module `\controller_kernel'.
+Generating RTLIL representation for module `\controller_kernel'.
+
+5.7. Analyzing design hierarchy..
+Top module:  \kernel
+Used module:     \PBI_kernel
+Used module:         $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR
+Used module:         \datapath_kernel
+Used module:         \controller_kernel
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_out1 = 1
+
+5.8. Executing AST frontend in derive mode using pre-parsed AST for module `\register_SE'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_out1 = 1
+Generating RTLIL representation for module `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE'.
+Parameter \BITSIZE_in1 = 32
+Parameter \BITSIZE_out1 = 32
+
+5.9. Executing AST frontend in derive mode using pre-parsed AST for module `\register_SE'.
+Parameter \BITSIZE_in1 = 32
+Parameter \BITSIZE_out1 = 32
+Generating RTLIL representation for module `$paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\register_SE'.
+Parameter \BITSIZE_in1 = 32
+Parameter \BITSIZE_out1 = 32
+Found cached RTLIL representation for module `$paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\register_SE'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_out1 = 1
+Found cached RTLIL representation for module `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_out1 = 2
+
+5.10. Executing AST frontend in derive mode using pre-parsed AST for module `\register_SE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_out1 = 2
+Generating RTLIL representation for module `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE'.
+Parameter \BITSIZE_in1 = 3
+Parameter \BITSIZE_out1 = 3
+
+5.11. Executing AST frontend in derive mode using pre-parsed AST for module `\register_SE'.
+Parameter \BITSIZE_in1 = 3
+Parameter \BITSIZE_out1 = 3
+Generating RTLIL representation for module `$paramod$d269154361666cdf41973ac5c6766dc7fbfab2e7\register_SE'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_out1 = 1
+Found cached RTLIL representation for module `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE'.
+Parameter \BITSIZE_in1 = 4
+Parameter \BITSIZE_out1 = 4
+
+5.12. Executing AST frontend in derive mode using pre-parsed AST for module `\register_SE'.
+Parameter \BITSIZE_in1 = 4
+Parameter \BITSIZE_out1 = 4
+Generating RTLIL representation for module `$paramod$9eea8d5194ebf25010218cc4191e7217d781e0c2\register_SE'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_out1 = 1
+Found cached RTLIL representation for module `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE'.
+Parameter \BITSIZE_in1 = 5
+Parameter \BITSIZE_out1 = 5
+
+5.13. Executing AST frontend in derive mode using pre-parsed AST for module `\register_SE'.
+Parameter \BITSIZE_in1 = 5
+Parameter \BITSIZE_out1 = 5
+Generating RTLIL representation for module `$paramod$69da8bf7e1acecfc028de9d94de2bab088d91139\register_SE'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_out1 = 1
+Found cached RTLIL representation for module `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_out1 = 1
+Found cached RTLIL representation for module `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 1
+
+5.14. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_and_node_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 1
+Generating RTLIL representation for module `$paramod$1c4c4215c57e7ba15d78b2917619bbb41eef022e\ui_and_node_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_out1 = 1
+
+5.15. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_not_node_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_out1 = 1
+Generating RTLIL representation for module `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\ui_not_node_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 1
+Found cached RTLIL representation for module `$paramod$1c4c4215c57e7ba15d78b2917619bbb41eef022e\ui_and_node_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \PORTSIZE_in1 = 2
+Parameter \BITSIZE_out1 = 2
+
+5.16. Executing AST frontend in derive mode using pre-parsed AST for module `\multi_read_cond_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \PORTSIZE_in1 = 2
+Parameter \BITSIZE_out1 = 2
+Generating RTLIL representation for module `$paramod$ff668bebfc74a6157eecaa7fe3b6732549bae970\multi_read_cond_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 1
+Found cached RTLIL representation for module `$paramod$1c4c4215c57e7ba15d78b2917619bbb41eef022e\ui_and_node_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_out1 = 1
+Found cached RTLIL representation for module `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\ui_not_node_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 1
+Found cached RTLIL representation for module `$paramod$1c4c4215c57e7ba15d78b2917619bbb41eef022e\ui_and_node_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \PORTSIZE_in1 = 2
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$ff668bebfc74a6157eecaa7fe3b6732549bae970\multi_read_cond_FU'.
+Parameter \BITSIZE_in1 = 3
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 2
+
+5.17. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_and_node_FU'.
+Parameter \BITSIZE_in1 = 3
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 2
+Generating RTLIL representation for module `$paramod$85e00d07b9bad752e16bf3352fe204071d21db0e\ui_and_node_FU'.
+Parameter \BITSIZE_in1 = 3
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 5
+Parameter \PRECISION = 32
+
+5.18. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_shl_node_FU'.
+Parameter \BITSIZE_in1 = 3
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 5
+Parameter \PRECISION = 32
+Generating RTLIL representation for module `$paramod$1f2e0f50cb5d4d363c13e5bed181bd0641e40b72\ui_shl_node_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_in2 = 3
+Parameter \BITSIZE_out1 = 3
+
+5.19. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_add_node_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_in2 = 3
+Parameter \BITSIZE_out1 = 3
+Generating RTLIL representation for module `$paramod$5bb98a2b2c2e72032936914fbf967934182da2bf\ui_add_node_FU'.
+Parameter \BITSIZE_in1 = 5
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 3
+Parameter \PRECISION = 32
+
+5.20. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_shr_node_FU'.
+Parameter \BITSIZE_in1 = 5
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 3
+Parameter \PRECISION = 32
+Generating RTLIL representation for module `$paramod$f33d5e4c2a1b2f04d3c7e3f78e7354ea4d994635\ui_shr_node_FU'.
+Parameter \BITSIZE_in1 = 3
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 1
+Parameter \PRECISION = 32
+
+5.21. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_shr_node_FU'.
+Parameter \BITSIZE_in1 = 3
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 1
+Parameter \PRECISION = 32
+Generating RTLIL representation for module `$paramod$9ad37585fbd61abdb7db166fb55114dab28998d5\ui_shr_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 1
+
+5.22. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_and_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 1
+Generating RTLIL representation for module `$paramod$75b91b50d76cabba8584a87151ebfc53b036211d\ui_and_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 3
+Parameter \PRECISION = 32
+
+5.23. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_shl_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 3
+Parameter \PRECISION = 32
+Generating RTLIL representation for module `$paramod$66f56ba666fecec049f6d323c9b7a63f4ec36b91\ui_shl_node_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 2
+
+5.24. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_add_node_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 2
+Generating RTLIL representation for module `$paramod$9d2c1453fa71befdccf639569203b0c5b6b2b7b6\ui_add_node_FU'.
+Parameter \BITSIZE_in1 = 3
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 2
+Parameter \PRECISION = 32
+
+5.25. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_shr_node_FU'.
+Parameter \BITSIZE_in1 = 3
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 2
+Parameter \PRECISION = 32
+Generating RTLIL representation for module `$paramod$77aafb4863d4d5de5fdb25a8615bbc3f54e4a878\ui_shr_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 1
+Parameter \PRECISION = 32
+
+5.26. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_shr_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 1
+Parameter \PRECISION = 32
+Generating RTLIL representation for module `$paramod$eb59ce88fac8e98198b12e507b1430a45d78e5d4\ui_shr_node_FU'.
+Parameter \BITSIZE_in1 = 6
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 8
+Parameter \PRECISION = 32
+
+5.27. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_shl_node_FU'.
+Parameter \BITSIZE_in1 = 6
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 8
+Parameter \PRECISION = 32
+Generating RTLIL representation for module `$paramod$6c4c36921e3a25619ef909f59d8e9186f4aa35af\ui_shl_node_FU'.
+Parameter \BITSIZE_in1 = 5
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_in3 = 2
+Parameter \BITSIZE_out1 = 5
+Parameter \OFFSET_PARAMETER = 2
+
+5.28. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_concat_bit_node_FU'.
+Parameter \BITSIZE_in1 = 5
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_in3 = 2
+Parameter \BITSIZE_out1 = 5
+Parameter \OFFSET_PARAMETER = 2
+Generating RTLIL representation for module `$paramod$44664f688599e7884d721e9f46a43d7a64e39f83\ui_concat_bit_node_FU'.
+Parameter \BITSIZE_in1 = 3
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 5
+Parameter \PRECISION = 32
+Found cached RTLIL representation for module `$paramod$1f2e0f50cb5d4d363c13e5bed181bd0641e40b72\ui_shl_node_FU'.
+Parameter \BITSIZE_in1 = 4
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 6
+Parameter \PRECISION = 32
+
+5.29. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_shl_node_FU'.
+Parameter \BITSIZE_in1 = 4
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 6
+Parameter \PRECISION = 32
+Generating RTLIL representation for module `$paramod$f84b277dfa2af9d24fd64c13c5cf40ff17bc70f6\ui_shl_node_FU'.
+Parameter \BITSIZE_in1 = 3
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_in3 = 1
+Parameter \BITSIZE_out1 = 3
+Parameter \OFFSET_PARAMETER = 1
+
+5.30. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_concat_bit_node_FU'.
+Parameter \BITSIZE_in1 = 3
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_in3 = 1
+Parameter \BITSIZE_out1 = 3
+Parameter \OFFSET_PARAMETER = 1
+Generating RTLIL representation for module `$paramod$7333b8022e108466fcb42daa0c2611c140fed29a\ui_concat_bit_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 3
+Parameter \PRECISION = 32
+Found cached RTLIL representation for module `$paramod$66f56ba666fecec049f6d323c9b7a63f4ec36b91\ui_shl_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 1
+
+5.31. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_eq_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 1
+Generating RTLIL representation for module `$paramod$db9ba524b202d488947a0f3216946ccedc2efb79\ui_eq_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 1
+Found cached RTLIL representation for module `$paramod$db9ba524b202d488947a0f3216946ccedc2efb79\ui_eq_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 1
+Found cached RTLIL representation for module `$paramod$db9ba524b202d488947a0f3216946ccedc2efb79\ui_eq_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 1
+Found cached RTLIL representation for module `$paramod$db9ba524b202d488947a0f3216946ccedc2efb79\ui_eq_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 2
+
+5.32. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_add_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 2
+Generating RTLIL representation for module `$paramod$d0915a31d5442425b94af6f0bee9347b4f8d85a2\ui_add_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 3
+
+5.33. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_add_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 3
+Generating RTLIL representation for module `$paramod$dc477284482cdaabb01019ab8e3a2dca79196886\ui_add_node_FU'.
+Parameter \BITSIZE_in1 = 5
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_in3 = 2
+Parameter \BITSIZE_out1 = 6
+
+5.34. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_ternary_add_node_FU'.
+Parameter \BITSIZE_in1 = 5
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_in3 = 2
+Parameter \BITSIZE_out1 = 6
+Generating RTLIL representation for module `$paramod$b0d80d21ab80e4f6a16261681e45bebf04071326\ui_ternary_add_node_FU'.
+Parameter \BITSIZE_in1 = 32
+Parameter \BITSIZE_in2 = 8
+Parameter \BITSIZE_out1 = 32
+Parameter \LSB_PARAMETER = 0
+
+5.35. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_gep_node_FU'.
+Parameter \BITSIZE_in1 = 32
+Parameter \BITSIZE_in2 = 8
+Parameter \BITSIZE_out1 = 32
+Parameter \LSB_PARAMETER = 0
+Generating RTLIL representation for module `$paramod$3b9d868f15ed7b307c871951702e2f70ad2759b0\ui_gep_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$d0915a31d5442425b94af6f0bee9347b4f8d85a2\ui_add_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 1
+
+5.36. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_eq_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 1
+Generating RTLIL representation for module `$paramod$75b91b50d76cabba8584a87151ebfc53b036211d\ui_eq_node_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_in3 = 1
+Parameter \BITSIZE_out1 = 2
+
+5.37. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_select_node_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_in3 = 1
+Parameter \BITSIZE_out1 = 2
+Generating RTLIL representation for module `$paramod$ccb732df19a76ea618f59c3e0165f42c2d6691a3\ui_select_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$d0915a31d5442425b94af6f0bee9347b4f8d85a2\ui_add_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 1
+Found cached RTLIL representation for module `$paramod$75b91b50d76cabba8584a87151ebfc53b036211d\ui_eq_node_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_in3 = 1
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$ccb732df19a76ea618f59c3e0165f42c2d6691a3\ui_select_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 4
+Parameter \PIPE_PARAMETER = 0
+
+5.38. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_mul_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 4
+Parameter \PIPE_PARAMETER = 0
+Generating RTLIL representation for module `$paramod$ef3d5ac2199a34f785f34d1f2fc99615de463d79\ui_mul_node_FU'.
+Parameter \BITSIZE_in1 = 4
+Parameter \BITSIZE_in2 = 32
+Parameter \BITSIZE_out1 = 32
+Parameter \PIPE_PARAMETER = 0
+
+5.39. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_mul_node_FU'.
+Parameter \BITSIZE_in1 = 4
+Parameter \BITSIZE_in2 = 32
+Parameter \BITSIZE_out1 = 32
+Parameter \PIPE_PARAMETER = 0
+Generating RTLIL representation for module `$paramod$2c2a687e86290b719a337bbf1beaa8ab03ebf550\ui_mul_node_FU'.
+Parameter \BITSIZE_in1 = 32
+Parameter \BITSIZE_in2 = 32
+Parameter \BITSIZE_out1 = 32
+
+5.40. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_add_node_FU'.
+Parameter \BITSIZE_in1 = 32
+Parameter \BITSIZE_in2 = 32
+Parameter \BITSIZE_out1 = 32
+Generating RTLIL representation for module `$paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\ui_add_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 1
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$d0915a31d5442425b94af6f0bee9347b4f8d85a2\ui_add_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 3
+Parameter \BITSIZE_out1 = 4
+
+5.41. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_add_node_FU'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 3
+Parameter \BITSIZE_out1 = 4
+Generating RTLIL representation for module `$paramod$2d46b4ab184e0464679de3c3828c4a17cd376986\ui_add_node_FU'.
+Parameter \BITSIZE_in1 = 32
+Parameter \BITSIZE_in2 = 6
+Parameter \BITSIZE_out1 = 32
+Parameter \LSB_PARAMETER = 0
+
+5.42. Executing AST frontend in derive mode using pre-parsed AST for module `\ui_gep_node_FU'.
+Parameter \BITSIZE_in1 = 32
+Parameter \BITSIZE_in2 = 6
+Parameter \BITSIZE_out1 = 32
+Parameter \LSB_PARAMETER = 0
+Generating RTLIL representation for module `$paramod$716739d44ed48e8adf36f2cc44e6e80b12b4d5e4\ui_gep_node_FU'.
+Parameter \BITSIZE_in1 = 7
+Parameter \BITSIZE_out1 = 6
+
+5.43. Executing AST frontend in derive mode using pre-parsed AST for module `\UUdata_converter_FU'.
+Parameter \BITSIZE_in1 = 7
+Parameter \BITSIZE_out1 = 6
+Generating RTLIL representation for module `$paramod$54f00274f92b2b795a3e79807c3e61404d6d0442\UUdata_converter_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_out1 = 32
+
+5.44. Executing AST frontend in derive mode using pre-parsed AST for module `\UUdata_converter_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_out1 = 32
+Generating RTLIL representation for module `$paramod$b0b63a608f8ff13f57533132ae679045f11a487a\UUdata_converter_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_out1 = 2
+
+5.45. Executing AST frontend in derive mode using pre-parsed AST for module `\UUdata_converter_FU'.
+Parameter \BITSIZE_in1 = 1
+Parameter \BITSIZE_out1 = 2
+Generating RTLIL representation for module `$paramod$8c879b91fb9d6e70b3ab309366e6542ece08fd58\UUdata_converter_FU'.
+Parameter \BITSIZE_in1 = 32
+Parameter \BITSIZE_out1 = 32
+
+5.46. Executing AST frontend in derive mode using pre-parsed AST for module `\UUdata_converter_FU'.
+Parameter \BITSIZE_in1 = 32
+Parameter \BITSIZE_out1 = 32
+Generating RTLIL representation for module `$paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\UUdata_converter_FU'.
+Parameter \BITSIZE_in1 = 32
+Parameter \BITSIZE_in2 = 32
+Parameter \BITSIZE_out1 = 32
+
+5.47. Executing AST frontend in derive mode using pre-parsed AST for module `\MUX2_GATE'.
+Parameter \BITSIZE_in1 = 32
+Parameter \BITSIZE_in2 = 32
+Parameter \BITSIZE_out1 = 32
+Generating RTLIL representation for module `$paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\MUX2_GATE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 2
+
+5.48. Executing AST frontend in derive mode using pre-parsed AST for module `\MUX2_GATE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 2
+Generating RTLIL representation for module `$paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE'.
+Parameter \BITSIZE_in1 = 32
+Parameter \BITSIZE_in2 = 32
+Parameter \BITSIZE_out1 = 32
+Found cached RTLIL representation for module `$paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\MUX2_GATE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE'.
+Parameter \BITSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 2
+Parameter \BITSIZE_out1 = 2
+Found cached RTLIL representation for module `$paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE'.
+Parameter \BITSIZE_in1 = 32
+Parameter \PORTSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 32
+Parameter \PORTSIZE_in2 = 2
+Parameter \BITSIZE_in3 = 6
+Parameter \PORTSIZE_in3 = 2
+Parameter \BITSIZE_in4 = 1
+Parameter \PORTSIZE_in4 = 2
+Parameter \BITSIZE_sel_LOAD = 1
+Parameter \PORTSIZE_sel_LOAD = 2
+Parameter \BITSIZE_sel_STORE = 1
+Parameter \PORTSIZE_sel_STORE = 2
+Parameter \BITSIZE_out1 = 32
+Parameter \PORTSIZE_out1 = 2
+Parameter \BITSIZE_Min_oe_ram = 1
+Parameter \PORTSIZE_Min_oe_ram = 2
+Parameter \BITSIZE_Min_we_ram = 1
+Parameter \PORTSIZE_Min_we_ram = 2
+Parameter \BITSIZE_Mout_oe_ram = 1
+Parameter \PORTSIZE_Mout_oe_ram = 2
+Parameter \BITSIZE_Mout_we_ram = 1
+Parameter \PORTSIZE_Mout_we_ram = 2
+Parameter \BITSIZE_M_DataRdy = 1
+Parameter \PORTSIZE_M_DataRdy = 2
+Parameter \BITSIZE_Min_addr_ram = 32
+Parameter \PORTSIZE_Min_addr_ram = 2
+Parameter \BITSIZE_Mout_addr_ram = 32
+Parameter \PORTSIZE_Mout_addr_ram = 2
+Parameter \BITSIZE_M_Rdata_ram = 32
+Parameter \PORTSIZE_M_Rdata_ram = 2
+Parameter \BITSIZE_Min_Wdata_ram = 32
+Parameter \PORTSIZE_Min_Wdata_ram = 2
+Parameter \BITSIZE_Mout_Wdata_ram = 32
+Parameter \PORTSIZE_Mout_Wdata_ram = 2
+Parameter \BITSIZE_Min_data_ram_size = 6
+Parameter \PORTSIZE_Min_data_ram_size = 2
+Parameter \BITSIZE_Mout_data_ram_size = 6
+Parameter \PORTSIZE_Mout_data_ram_size = 2
+
+5.49. Executing AST frontend in derive mode using pre-parsed AST for module `\BMEMORY_CTRLN'.
+Parameter \BITSIZE_in1 = 32
+Parameter \PORTSIZE_in1 = 2
+Parameter \BITSIZE_in2 = 32
+Parameter \PORTSIZE_in2 = 2
+Parameter \BITSIZE_in3 = 6
+Parameter \PORTSIZE_in3 = 2
+Parameter \BITSIZE_in4 = 1
+Parameter \PORTSIZE_in4 = 2
+Parameter \BITSIZE_sel_LOAD = 1
+Parameter \PORTSIZE_sel_LOAD = 2
+Parameter \BITSIZE_sel_STORE = 1
+Parameter \PORTSIZE_sel_STORE = 2
+Parameter \BITSIZE_out1 = 32
+Parameter \PORTSIZE_out1 = 2
+Parameter \BITSIZE_Min_oe_ram = 1
+Parameter \PORTSIZE_Min_oe_ram = 2
+Parameter \BITSIZE_Min_we_ram = 1
+Parameter \PORTSIZE_Min_we_ram = 2
+Parameter \BITSIZE_Mout_oe_ram = 1
+Parameter \PORTSIZE_Mout_oe_ram = 2
+Parameter \BITSIZE_Mout_we_ram = 1
+Parameter \PORTSIZE_Mout_we_ram = 2
+Parameter \BITSIZE_M_DataRdy = 1
+Parameter \PORTSIZE_M_DataRdy = 2
+Parameter \BITSIZE_Min_addr_ram = 32
+Parameter \PORTSIZE_Min_addr_ram = 2
+Parameter \BITSIZE_Mout_addr_ram = 32
+Parameter \PORTSIZE_Mout_addr_ram = 2
+Parameter \BITSIZE_M_Rdata_ram = 32
+Parameter \PORTSIZE_M_Rdata_ram = 2
+Parameter \BITSIZE_Min_Wdata_ram = 32
+Parameter \PORTSIZE_Min_Wdata_ram = 2
+Parameter \BITSIZE_Mout_Wdata_ram = 32
+Parameter \PORTSIZE_Mout_Wdata_ram = 2
+Parameter \BITSIZE_Min_data_ram_size = 6
+Parameter \PORTSIZE_Min_data_ram_size = 2
+Parameter \BITSIZE_Mout_data_ram_size = 6
+Parameter \PORTSIZE_Mout_data_ram_size = 2
+Generating RTLIL representation for module `$paramod$f3a043ae9f615118aa394e423e2bff78ec6f3fd4\BMEMORY_CTRLN'.
+
+5.50. Analyzing design hierarchy..
+Top module:  \kernel
+Used module:     \PBI_kernel
+Used module:         $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR
+Used module:         \datapath_kernel
+Used module:             $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE
+Used module:             $paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\register_SE
+Used module:             $paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE
+Used module:             $paramod$d269154361666cdf41973ac5c6766dc7fbfab2e7\register_SE
+Used module:             $paramod$9eea8d5194ebf25010218cc4191e7217d781e0c2\register_SE
+Used module:             $paramod$69da8bf7e1acecfc028de9d94de2bab088d91139\register_SE
+Used module:             $paramod$1c4c4215c57e7ba15d78b2917619bbb41eef022e\ui_and_node_FU
+Used module:             $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\ui_not_node_FU
+Used module:             $paramod$ff668bebfc74a6157eecaa7fe3b6732549bae970\multi_read_cond_FU
+Used module:             $paramod$85e00d07b9bad752e16bf3352fe204071d21db0e\ui_and_node_FU
+Used module:             $paramod$1f2e0f50cb5d4d363c13e5bed181bd0641e40b72\ui_shl_node_FU
+Used module:             $paramod$5bb98a2b2c2e72032936914fbf967934182da2bf\ui_add_node_FU
+Used module:             $paramod$f33d5e4c2a1b2f04d3c7e3f78e7354ea4d994635\ui_shr_node_FU
+Used module:             $paramod$9ad37585fbd61abdb7db166fb55114dab28998d5\ui_shr_node_FU
+Used module:             $paramod$75b91b50d76cabba8584a87151ebfc53b036211d\ui_and_node_FU
+Used module:             $paramod$66f56ba666fecec049f6d323c9b7a63f4ec36b91\ui_shl_node_FU
+Used module:             $paramod$9d2c1453fa71befdccf639569203b0c5b6b2b7b6\ui_add_node_FU
+Used module:             $paramod$77aafb4863d4d5de5fdb25a8615bbc3f54e4a878\ui_shr_node_FU
+Used module:             $paramod$eb59ce88fac8e98198b12e507b1430a45d78e5d4\ui_shr_node_FU
+Used module:             $paramod$6c4c36921e3a25619ef909f59d8e9186f4aa35af\ui_shl_node_FU
+Used module:             $paramod$44664f688599e7884d721e9f46a43d7a64e39f83\ui_concat_bit_node_FU
+Used module:             $paramod$f84b277dfa2af9d24fd64c13c5cf40ff17bc70f6\ui_shl_node_FU
+Used module:             $paramod$7333b8022e108466fcb42daa0c2611c140fed29a\ui_concat_bit_node_FU
+Used module:             $paramod$db9ba524b202d488947a0f3216946ccedc2efb79\ui_eq_node_FU
+Used module:             $paramod$d0915a31d5442425b94af6f0bee9347b4f8d85a2\ui_add_node_FU
+Used module:             $paramod$dc477284482cdaabb01019ab8e3a2dca79196886\ui_add_node_FU
+Used module:             $paramod$b0d80d21ab80e4f6a16261681e45bebf04071326\ui_ternary_add_node_FU
+Used module:             $paramod$3b9d868f15ed7b307c871951702e2f70ad2759b0\ui_gep_node_FU
+Used module:             $paramod$75b91b50d76cabba8584a87151ebfc53b036211d\ui_eq_node_FU
+Used module:             $paramod$ccb732df19a76ea618f59c3e0165f42c2d6691a3\ui_select_node_FU
+Used module:             $paramod$ef3d5ac2199a34f785f34d1f2fc99615de463d79\ui_mul_node_FU
+Used module:             $paramod$2c2a687e86290b719a337bbf1beaa8ab03ebf550\ui_mul_node_FU
+Used module:             $paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\ui_add_node_FU
+Used module:             $paramod$2d46b4ab184e0464679de3c3828c4a17cd376986\ui_add_node_FU
+Used module:             $paramod$716739d44ed48e8adf36f2cc44e6e80b12b4d5e4\ui_gep_node_FU
+Used module:             $paramod$54f00274f92b2b795a3e79807c3e61404d6d0442\UUdata_converter_FU
+Used module:             $paramod$b0b63a608f8ff13f57533132ae679045f11a487a\UUdata_converter_FU
+Used module:             $paramod$8c879b91fb9d6e70b3ab309366e6542ece08fd58\UUdata_converter_FU
+Used module:             $paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\UUdata_converter_FU
+Used module:             $paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\MUX2_GATE
+Used module:             $paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE
+Used module:             $paramod$f3a043ae9f615118aa394e423e2bff78ec6f3fd4\BMEMORY_CTRLN
+Used module:         \controller_kernel
+
+5.51. Analyzing design hierarchy..
+Top module:  \kernel
+Used module:     \PBI_kernel
+Used module:         $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR
+Used module:         \datapath_kernel
+Used module:             $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE
+Used module:             $paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\register_SE
+Used module:             $paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE
+Used module:             $paramod$d269154361666cdf41973ac5c6766dc7fbfab2e7\register_SE
+Used module:             $paramod$9eea8d5194ebf25010218cc4191e7217d781e0c2\register_SE
+Used module:             $paramod$69da8bf7e1acecfc028de9d94de2bab088d91139\register_SE
+Used module:             $paramod$1c4c4215c57e7ba15d78b2917619bbb41eef022e\ui_and_node_FU
+Used module:             $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\ui_not_node_FU
+Used module:             $paramod$ff668bebfc74a6157eecaa7fe3b6732549bae970\multi_read_cond_FU
+Used module:             $paramod$85e00d07b9bad752e16bf3352fe204071d21db0e\ui_and_node_FU
+Used module:             $paramod$1f2e0f50cb5d4d363c13e5bed181bd0641e40b72\ui_shl_node_FU
+Used module:             $paramod$5bb98a2b2c2e72032936914fbf967934182da2bf\ui_add_node_FU
+Used module:             $paramod$f33d5e4c2a1b2f04d3c7e3f78e7354ea4d994635\ui_shr_node_FU
+Used module:             $paramod$9ad37585fbd61abdb7db166fb55114dab28998d5\ui_shr_node_FU
+Used module:             $paramod$75b91b50d76cabba8584a87151ebfc53b036211d\ui_and_node_FU
+Used module:             $paramod$66f56ba666fecec049f6d323c9b7a63f4ec36b91\ui_shl_node_FU
+Used module:             $paramod$9d2c1453fa71befdccf639569203b0c5b6b2b7b6\ui_add_node_FU
+Used module:             $paramod$77aafb4863d4d5de5fdb25a8615bbc3f54e4a878\ui_shr_node_FU
+Used module:             $paramod$eb59ce88fac8e98198b12e507b1430a45d78e5d4\ui_shr_node_FU
+Used module:             $paramod$6c4c36921e3a25619ef909f59d8e9186f4aa35af\ui_shl_node_FU
+Used module:             $paramod$44664f688599e7884d721e9f46a43d7a64e39f83\ui_concat_bit_node_FU
+Used module:             $paramod$f84b277dfa2af9d24fd64c13c5cf40ff17bc70f6\ui_shl_node_FU
+Used module:             $paramod$7333b8022e108466fcb42daa0c2611c140fed29a\ui_concat_bit_node_FU
+Used module:             $paramod$db9ba524b202d488947a0f3216946ccedc2efb79\ui_eq_node_FU
+Used module:             $paramod$d0915a31d5442425b94af6f0bee9347b4f8d85a2\ui_add_node_FU
+Used module:             $paramod$dc477284482cdaabb01019ab8e3a2dca79196886\ui_add_node_FU
+Used module:             $paramod$b0d80d21ab80e4f6a16261681e45bebf04071326\ui_ternary_add_node_FU
+Used module:             $paramod$3b9d868f15ed7b307c871951702e2f70ad2759b0\ui_gep_node_FU
+Used module:             $paramod$75b91b50d76cabba8584a87151ebfc53b036211d\ui_eq_node_FU
+Used module:             $paramod$ccb732df19a76ea618f59c3e0165f42c2d6691a3\ui_select_node_FU
+Used module:             $paramod$ef3d5ac2199a34f785f34d1f2fc99615de463d79\ui_mul_node_FU
+Used module:             $paramod$2c2a687e86290b719a337bbf1beaa8ab03ebf550\ui_mul_node_FU
+Used module:             $paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\ui_add_node_FU
+Used module:             $paramod$2d46b4ab184e0464679de3c3828c4a17cd376986\ui_add_node_FU
+Used module:             $paramod$716739d44ed48e8adf36f2cc44e6e80b12b4d5e4\ui_gep_node_FU
+Used module:             $paramod$54f00274f92b2b795a3e79807c3e61404d6d0442\UUdata_converter_FU
+Used module:             $paramod$b0b63a608f8ff13f57533132ae679045f11a487a\UUdata_converter_FU
+Used module:             $paramod$8c879b91fb9d6e70b3ab309366e6542ece08fd58\UUdata_converter_FU
+Used module:             $paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\UUdata_converter_FU
+Used module:             $paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\MUX2_GATE
+Used module:             $paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE
+Used module:             $paramod$f3a043ae9f615118aa394e423e2bff78ec6f3fd4\BMEMORY_CTRLN
+Used module:         \controller_kernel
+Removing unused module `$abstract\register_AR'.
+Removing unused module `$abstract\MUX2_GATE'.
+Removing unused module `$abstract\UUdata_converter_FU'.
+Removing unused module `$abstract\ui_ternary_add_node_FU'.
+Removing unused module `$abstract\ui_shr_node_FU'.
+Removing unused module `$abstract\ui_shl_node_FU'.
+Removing unused module `$abstract\ui_select_node_FU'.
+Removing unused module `$abstract\ui_not_node_FU'.
+Removing unused module `$abstract\ui_mul_node_FU'.
+Removing unused module `$abstract\ui_gep_node_FU'.
+Removing unused module `$abstract\ui_eq_node_FU'.
+Removing unused module `$abstract\ui_concat_bit_node_FU'.
+Removing unused module `$abstract\ui_and_node_FU'.
+Removing unused module `$abstract\ui_add_node_FU'.
+Removing unused module `$abstract\BMEMORY_CTRLN'.
+Removing unused module `$abstract\multi_read_cond_FU'.
+Removing unused module `$abstract\register_SE'.
+Removing unused module `$abstract\kernel'.
+Removing unused module `$abstract\PBI_kernel'.
+Removing unused module `$abstract\controller_kernel'.
+Removing unused module `$abstract\datapath_kernel'.
+Removed 21 unused modules.
+
+6. Executing SYNTH pass.
+
+6.1. Executing HIERARCHY pass (managing design hierarchy).
+
+6.1.1. Analyzing design hierarchy..
+Top module:  \kernel
+Used module:     \PBI_kernel
+Used module:         $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR
+Used module:         \datapath_kernel
+Used module:             $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE
+Used module:             $paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\register_SE
+Used module:             $paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE
+Used module:             $paramod$d269154361666cdf41973ac5c6766dc7fbfab2e7\register_SE
+Used module:             $paramod$9eea8d5194ebf25010218cc4191e7217d781e0c2\register_SE
+Used module:             $paramod$69da8bf7e1acecfc028de9d94de2bab088d91139\register_SE
+Used module:             $paramod$1c4c4215c57e7ba15d78b2917619bbb41eef022e\ui_and_node_FU
+Used module:             $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\ui_not_node_FU
+Used module:             $paramod$ff668bebfc74a6157eecaa7fe3b6732549bae970\multi_read_cond_FU
+Used module:             $paramod$85e00d07b9bad752e16bf3352fe204071d21db0e\ui_and_node_FU
+Used module:             $paramod$1f2e0f50cb5d4d363c13e5bed181bd0641e40b72\ui_shl_node_FU
+Used module:             $paramod$5bb98a2b2c2e72032936914fbf967934182da2bf\ui_add_node_FU
+Used module:             $paramod$f33d5e4c2a1b2f04d3c7e3f78e7354ea4d994635\ui_shr_node_FU
+Used module:             $paramod$9ad37585fbd61abdb7db166fb55114dab28998d5\ui_shr_node_FU
+Used module:             $paramod$75b91b50d76cabba8584a87151ebfc53b036211d\ui_and_node_FU
+Used module:             $paramod$66f56ba666fecec049f6d323c9b7a63f4ec36b91\ui_shl_node_FU
+Used module:             $paramod$9d2c1453fa71befdccf639569203b0c5b6b2b7b6\ui_add_node_FU
+Used module:             $paramod$77aafb4863d4d5de5fdb25a8615bbc3f54e4a878\ui_shr_node_FU
+Used module:             $paramod$eb59ce88fac8e98198b12e507b1430a45d78e5d4\ui_shr_node_FU
+Used module:             $paramod$6c4c36921e3a25619ef909f59d8e9186f4aa35af\ui_shl_node_FU
+Used module:             $paramod$44664f688599e7884d721e9f46a43d7a64e39f83\ui_concat_bit_node_FU
+Used module:             $paramod$f84b277dfa2af9d24fd64c13c5cf40ff17bc70f6\ui_shl_node_FU
+Used module:             $paramod$7333b8022e108466fcb42daa0c2611c140fed29a\ui_concat_bit_node_FU
+Used module:             $paramod$db9ba524b202d488947a0f3216946ccedc2efb79\ui_eq_node_FU
+Used module:             $paramod$d0915a31d5442425b94af6f0bee9347b4f8d85a2\ui_add_node_FU
+Used module:             $paramod$dc477284482cdaabb01019ab8e3a2dca79196886\ui_add_node_FU
+Used module:             $paramod$b0d80d21ab80e4f6a16261681e45bebf04071326\ui_ternary_add_node_FU
+Used module:             $paramod$3b9d868f15ed7b307c871951702e2f70ad2759b0\ui_gep_node_FU
+Used module:             $paramod$75b91b50d76cabba8584a87151ebfc53b036211d\ui_eq_node_FU
+Used module:             $paramod$ccb732df19a76ea618f59c3e0165f42c2d6691a3\ui_select_node_FU
+Used module:             $paramod$ef3d5ac2199a34f785f34d1f2fc99615de463d79\ui_mul_node_FU
+Used module:             $paramod$2c2a687e86290b719a337bbf1beaa8ab03ebf550\ui_mul_node_FU
+Used module:             $paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\ui_add_node_FU
+Used module:             $paramod$2d46b4ab184e0464679de3c3828c4a17cd376986\ui_add_node_FU
+Used module:             $paramod$716739d44ed48e8adf36f2cc44e6e80b12b4d5e4\ui_gep_node_FU
+Used module:             $paramod$54f00274f92b2b795a3e79807c3e61404d6d0442\UUdata_converter_FU
+Used module:             $paramod$b0b63a608f8ff13f57533132ae679045f11a487a\UUdata_converter_FU
+Used module:             $paramod$8c879b91fb9d6e70b3ab309366e6542ece08fd58\UUdata_converter_FU
+Used module:             $paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\UUdata_converter_FU
+Used module:             $paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\MUX2_GATE
+Used module:             $paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE
+Used module:             $paramod$f3a043ae9f615118aa394e423e2bff78ec6f3fd4\BMEMORY_CTRLN
+Used module:         \controller_kernel
+
+6.1.2. Analyzing design hierarchy..
+Top module:  \kernel
+Used module:     \PBI_kernel
+Used module:         $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR
+Used module:         \datapath_kernel
+Used module:             $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE
+Used module:             $paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\register_SE
+Used module:             $paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE
+Used module:             $paramod$d269154361666cdf41973ac5c6766dc7fbfab2e7\register_SE
+Used module:             $paramod$9eea8d5194ebf25010218cc4191e7217d781e0c2\register_SE
+Used module:             $paramod$69da8bf7e1acecfc028de9d94de2bab088d91139\register_SE
+Used module:             $paramod$1c4c4215c57e7ba15d78b2917619bbb41eef022e\ui_and_node_FU
+Used module:             $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\ui_not_node_FU
+Used module:             $paramod$ff668bebfc74a6157eecaa7fe3b6732549bae970\multi_read_cond_FU
+Used module:             $paramod$85e00d07b9bad752e16bf3352fe204071d21db0e\ui_and_node_FU
+Used module:             $paramod$1f2e0f50cb5d4d363c13e5bed181bd0641e40b72\ui_shl_node_FU
+Used module:             $paramod$5bb98a2b2c2e72032936914fbf967934182da2bf\ui_add_node_FU
+Used module:             $paramod$f33d5e4c2a1b2f04d3c7e3f78e7354ea4d994635\ui_shr_node_FU
+Used module:             $paramod$9ad37585fbd61abdb7db166fb55114dab28998d5\ui_shr_node_FU
+Used module:             $paramod$75b91b50d76cabba8584a87151ebfc53b036211d\ui_and_node_FU
+Used module:             $paramod$66f56ba666fecec049f6d323c9b7a63f4ec36b91\ui_shl_node_FU
+Used module:             $paramod$9d2c1453fa71befdccf639569203b0c5b6b2b7b6\ui_add_node_FU
+Used module:             $paramod$77aafb4863d4d5de5fdb25a8615bbc3f54e4a878\ui_shr_node_FU
+Used module:             $paramod$eb59ce88fac8e98198b12e507b1430a45d78e5d4\ui_shr_node_FU
+Used module:             $paramod$6c4c36921e3a25619ef909f59d8e9186f4aa35af\ui_shl_node_FU
+Used module:             $paramod$44664f688599e7884d721e9f46a43d7a64e39f83\ui_concat_bit_node_FU
+Used module:             $paramod$f84b277dfa2af9d24fd64c13c5cf40ff17bc70f6\ui_shl_node_FU
+Used module:             $paramod$7333b8022e108466fcb42daa0c2611c140fed29a\ui_concat_bit_node_FU
+Used module:             $paramod$db9ba524b202d488947a0f3216946ccedc2efb79\ui_eq_node_FU
+Used module:             $paramod$d0915a31d5442425b94af6f0bee9347b4f8d85a2\ui_add_node_FU
+Used module:             $paramod$dc477284482cdaabb01019ab8e3a2dca79196886\ui_add_node_FU
+Used module:             $paramod$b0d80d21ab80e4f6a16261681e45bebf04071326\ui_ternary_add_node_FU
+Used module:             $paramod$3b9d868f15ed7b307c871951702e2f70ad2759b0\ui_gep_node_FU
+Used module:             $paramod$75b91b50d76cabba8584a87151ebfc53b036211d\ui_eq_node_FU
+Used module:             $paramod$ccb732df19a76ea618f59c3e0165f42c2d6691a3\ui_select_node_FU
+Used module:             $paramod$ef3d5ac2199a34f785f34d1f2fc99615de463d79\ui_mul_node_FU
+Used module:             $paramod$2c2a687e86290b719a337bbf1beaa8ab03ebf550\ui_mul_node_FU
+Used module:             $paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\ui_add_node_FU
+Used module:             $paramod$2d46b4ab184e0464679de3c3828c4a17cd376986\ui_add_node_FU
+Used module:             $paramod$716739d44ed48e8adf36f2cc44e6e80b12b4d5e4\ui_gep_node_FU
+Used module:             $paramod$54f00274f92b2b795a3e79807c3e61404d6d0442\UUdata_converter_FU
+Used module:             $paramod$b0b63a608f8ff13f57533132ae679045f11a487a\UUdata_converter_FU
+Used module:             $paramod$8c879b91fb9d6e70b3ab309366e6542ece08fd58\UUdata_converter_FU
+Used module:             $paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\UUdata_converter_FU
+Used module:             $paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\MUX2_GATE
+Used module:             $paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE
+Used module:             $paramod$f3a043ae9f615118aa394e423e2bff78ec6f3fd4\BMEMORY_CTRLN
+Used module:         \controller_kernel
+Removed 0 unused modules.
+
+6.2. Executing PROC pass (convert processes to netlists).
+
+6.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+6.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 5 switch rules as full_case in process $proc$kernel.v:856$9 in module controller_kernel.
+Marked 1 switch rules as full_case in process $proc$kernel.v:852$7 in module controller_kernel.
+Marked 1 switch rules as full_case in process $proc$panda_libtech.v:650$4 in module $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR.
+Marked 1 switch rules as full_case in process $proc$panda_libtech.v:613$63 in module $paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE.
+Marked 1 switch rules as full_case in process $proc$panda_libtech.v:613$61 in module $paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\MUX2_GATE.
+Removed a total of 0 dead cases.
+
+6.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 2 redundant assignments.
+Promoted 44 assignments to connections.
+
+6.2.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `$paramod$69da8bf7e1acecfc028de9d94de2bab088d91139\register_SE.$proc$panda_libtech.v:78$23'.
+  Set init value: \reg_out1 = 5'00000
+Found init rule in `$paramod$9eea8d5194ebf25010218cc4191e7217d781e0c2\register_SE.$proc$panda_libtech.v:78$21'.
+  Set init value: \reg_out1 = 4'0000
+Found init rule in `$paramod$d269154361666cdf41973ac5c6766dc7fbfab2e7\register_SE.$proc$panda_libtech.v:78$19'.
+  Set init value: \reg_out1 = 3'000
+Found init rule in `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE.$proc$panda_libtech.v:78$17'.
+  Set init value: \reg_out1 = 2'00
+Found init rule in `$paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\register_SE.$proc$panda_libtech.v:78$15'.
+  Set init value: \reg_out1 = 0
+Found init rule in `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE.$proc$panda_libtech.v:78$13'.
+  Set init value: \reg_out1 = 1'0
+Found init rule in `\controller_kernel.$proc$kernel.v:817$11'.
+  Set init value: \present_state = 4'0010
+Found init rule in `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR.$proc$panda_libtech.v:648$6'.
+  Set init value: \reg_out1 = 1'0
+
+6.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \reset in `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR.$proc$panda_libtech.v:650$4'.
+
+6.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~14 debug messages>
+
+6.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod$69da8bf7e1acecfc028de9d94de2bab088d91139\register_SE.$proc$panda_libtech.v:78$23'.
+Creating decoders for process `$paramod$69da8bf7e1acecfc028de9d94de2bab088d91139\register_SE.$proc$panda_libtech.v:80$22'.
+     1/1: $0\reg_out1[4:0]
+Creating decoders for process `$paramod$9eea8d5194ebf25010218cc4191e7217d781e0c2\register_SE.$proc$panda_libtech.v:78$21'.
+Creating decoders for process `$paramod$9eea8d5194ebf25010218cc4191e7217d781e0c2\register_SE.$proc$panda_libtech.v:80$20'.
+     1/1: $0\reg_out1[3:0]
+Creating decoders for process `$paramod$d269154361666cdf41973ac5c6766dc7fbfab2e7\register_SE.$proc$panda_libtech.v:78$19'.
+Creating decoders for process `$paramod$d269154361666cdf41973ac5c6766dc7fbfab2e7\register_SE.$proc$panda_libtech.v:80$18'.
+     1/1: $0\reg_out1[2:0]
+Creating decoders for process `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE.$proc$panda_libtech.v:78$17'.
+Creating decoders for process `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE.$proc$panda_libtech.v:80$16'.
+     1/1: $0\reg_out1[1:0]
+Creating decoders for process `$paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\register_SE.$proc$panda_libtech.v:78$15'.
+Creating decoders for process `$paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\register_SE.$proc$panda_libtech.v:80$14'.
+     1/1: $0\reg_out1[31:0]
+Creating decoders for process `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE.$proc$panda_libtech.v:78$13'.
+Creating decoders for process `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE.$proc$panda_libtech.v:80$12'.
+     1/1: $0\reg_out1[0:0]
+Creating decoders for process `\controller_kernel.$proc$kernel.v:817$11'.
+Creating decoders for process `\controller_kernel.$proc$kernel.v:856$9'.
+     1/48: $2\wrenable_reg_5[0:0]
+     2/48: $2\selector_MUX_25_reg_5_0_0_0[0:0]
+     3/48: $5\next_state[3:0]
+     4/48: $3\wrenable_reg_1[0:0]
+     5/48: $2\selector_MUX_11_reg_1_0_0_0[0:0]
+     6/48: $2\done_port[0:0]
+     7/48: $3\wrenable_reg_16[0:0]
+     8/48: $3\wrenable_reg_13[0:0]
+     9/48: $4\next_state[3:0]
+    10/48: $2\wrenable_reg_16[0:0]
+    11/48: $2\wrenable_reg_13[0:0]
+    12/48: $3\next_state[3:0]
+    13/48: $2\next_state[3:0]
+    14/48: $2\idle_port[0:0]
+    15/48: $2\wrenable_reg_1[0:0]
+    16/48: $1\next_state[3:0]
+    17/48: $1\wrenable_reg_1[0:0]
+    18/48: $1\idle_port[0:0]
+    19/48: $1\wrenable_reg_9[0:0]
+    20/48: $1\wrenable_reg_8[0:0]
+    21/48: $1\wrenable_reg_7[0:0]
+    22/48: $1\wrenable_reg_6[0:0]
+    23/48: $1\wrenable_reg_5[0:0]
+    24/48: $1\wrenable_reg_4[0:0]
+    25/48: $1\wrenable_reg_3[0:0]
+    26/48: $1\wrenable_reg_2[0:0]
+    27/48: $1\wrenable_reg_19[0:0]
+    28/48: $1\wrenable_reg_18[0:0]
+    29/48: $1\wrenable_reg_17[0:0]
+    30/48: $1\wrenable_reg_16[0:0]
+    31/48: $1\wrenable_reg_15[0:0]
+    32/48: $1\wrenable_reg_14[0:0]
+    33/48: $1\wrenable_reg_13[0:0]
+    34/48: $1\wrenable_reg_12[0:0]
+    35/48: $1\wrenable_reg_11[0:0]
+    36/48: $1\wrenable_reg_10[0:0]
+    37/48: $1\wrenable_reg_0[0:0]
+    38/48: $1\selector_MUX_28_reg_8_0_0_0[0:0]
+    39/48: $1\selector_MUX_25_reg_5_0_0_0[0:0]
+    40/48: $1\selector_MUX_1_BMEMORY_CTRLN_15_i0_1_0_0[0:0]
+    41/48: $1\selector_MUX_18_reg_16_0_0_0[0:0]
+    42/48: $1\selector_MUX_15_reg_13_0_0_0[0:0]
+    43/48: $1\selector_MUX_13_reg_11_0_0_0[0:0]
+    44/48: $1\selector_MUX_11_reg_1_0_0_0[0:0]
+    45/48: $1\selector_MUX_10_reg_0_0_0_0[0:0]
+    46/48: $1\fuselector_BMEMORY_CTRLN_15_i0_STORE[0:0]
+    47/48: $1\fuselector_BMEMORY_CTRLN_15_i0_LOAD[0:0]
+    48/48: $1\done_port[0:0]
+Creating decoders for process `\controller_kernel.$proc$kernel.v:852$7'.
+     1/1: $0\present_state[3:0]
+Creating decoders for process `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR.$proc$panda_libtech.v:648$6'.
+Creating decoders for process `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR.$proc$panda_libtech.v:650$4'.
+     1/1: $0\reg_out1[0:0]
+Creating decoders for process `$paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE.$proc$panda_libtech.v:613$63'.
+     1/1: $1\out1[1:0]
+Creating decoders for process `$paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\MUX2_GATE.$proc$panda_libtech.v:613$61'.
+     1/1: $1\out1[31:0]
+
+6.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\controller_kernel.\done_port' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\idle_port' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\fuselector_BMEMORY_CTRLN_15_i0_LOAD' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\fuselector_BMEMORY_CTRLN_15_i0_STORE' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\selector_MUX_10_reg_0_0_0_0' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\selector_MUX_11_reg_1_0_0_0' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\selector_MUX_13_reg_11_0_0_0' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\selector_MUX_15_reg_13_0_0_0' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\selector_MUX_18_reg_16_0_0_0' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\selector_MUX_1_BMEMORY_CTRLN_15_i0_1_0_0' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\selector_MUX_25_reg_5_0_0_0' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\selector_MUX_28_reg_8_0_0_0' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\selector_stallable_fus' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_0' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_1' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_10' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_11' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_12' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_13' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_14' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_15' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_16' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_17' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_18' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_19' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_2' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_3' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_4' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_5' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_6' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_7' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_8' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\wrenable_reg_9' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `\controller_kernel.\next_state' from process `\controller_kernel.$proc$kernel.v:856$9'.
+No latch inferred for signal `$paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE.\out1' from process `$paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE.$proc$panda_libtech.v:613$63'.
+No latch inferred for signal `$paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\MUX2_GATE.\out1' from process `$paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\MUX2_GATE.$proc$panda_libtech.v:613$61'.
+
+6.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `$paramod$69da8bf7e1acecfc028de9d94de2bab088d91139\register_SE.\reg_out1' using process `$paramod$69da8bf7e1acecfc028de9d94de2bab088d91139\register_SE.$proc$panda_libtech.v:80$22'.
+  created $dff cell `$procdff$524' with positive edge clock.
+Creating register for signal `$paramod$9eea8d5194ebf25010218cc4191e7217d781e0c2\register_SE.\reg_out1' using process `$paramod$9eea8d5194ebf25010218cc4191e7217d781e0c2\register_SE.$proc$panda_libtech.v:80$20'.
+  created $dff cell `$procdff$525' with positive edge clock.
+Creating register for signal `$paramod$d269154361666cdf41973ac5c6766dc7fbfab2e7\register_SE.\reg_out1' using process `$paramod$d269154361666cdf41973ac5c6766dc7fbfab2e7\register_SE.$proc$panda_libtech.v:80$18'.
+  created $dff cell `$procdff$526' with positive edge clock.
+Creating register for signal `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE.\reg_out1' using process `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE.$proc$panda_libtech.v:80$16'.
+  created $dff cell `$procdff$527' with positive edge clock.
+Creating register for signal `$paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\register_SE.\reg_out1' using process `$paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\register_SE.$proc$panda_libtech.v:80$14'.
+  created $dff cell `$procdff$528' with positive edge clock.
+Creating register for signal `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE.\reg_out1' using process `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE.$proc$panda_libtech.v:80$12'.
+  created $dff cell `$procdff$529' with positive edge clock.
+Creating register for signal `\controller_kernel.\present_state' using process `\controller_kernel.$proc$kernel.v:852$7'.
+  created $dff cell `$procdff$530' with positive edge clock.
+Creating register for signal `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR.\reg_out1' using process `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR.$proc$panda_libtech.v:650$4'.
+  created $adff cell `$procdff$531' with positive edge clock and negative level reset.
+
+6.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+6.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `$paramod$69da8bf7e1acecfc028de9d94de2bab088d91139\register_SE.$proc$panda_libtech.v:78$23'.
+Found and cleaned up 1 empty switch in `$paramod$69da8bf7e1acecfc028de9d94de2bab088d91139\register_SE.$proc$panda_libtech.v:80$22'.
+Removing empty process `$paramod$69da8bf7e1acecfc028de9d94de2bab088d91139\register_SE.$proc$panda_libtech.v:80$22'.
+Removing empty process `$paramod$9eea8d5194ebf25010218cc4191e7217d781e0c2\register_SE.$proc$panda_libtech.v:78$21'.
+Found and cleaned up 1 empty switch in `$paramod$9eea8d5194ebf25010218cc4191e7217d781e0c2\register_SE.$proc$panda_libtech.v:80$20'.
+Removing empty process `$paramod$9eea8d5194ebf25010218cc4191e7217d781e0c2\register_SE.$proc$panda_libtech.v:80$20'.
+Removing empty process `$paramod$d269154361666cdf41973ac5c6766dc7fbfab2e7\register_SE.$proc$panda_libtech.v:78$19'.
+Found and cleaned up 1 empty switch in `$paramod$d269154361666cdf41973ac5c6766dc7fbfab2e7\register_SE.$proc$panda_libtech.v:80$18'.
+Removing empty process `$paramod$d269154361666cdf41973ac5c6766dc7fbfab2e7\register_SE.$proc$panda_libtech.v:80$18'.
+Removing empty process `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE.$proc$panda_libtech.v:78$17'.
+Found and cleaned up 1 empty switch in `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE.$proc$panda_libtech.v:80$16'.
+Removing empty process `$paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE.$proc$panda_libtech.v:80$16'.
+Removing empty process `$paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\register_SE.$proc$panda_libtech.v:78$15'.
+Found and cleaned up 1 empty switch in `$paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\register_SE.$proc$panda_libtech.v:80$14'.
+Removing empty process `$paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\register_SE.$proc$panda_libtech.v:80$14'.
+Removing empty process `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE.$proc$panda_libtech.v:78$13'.
+Found and cleaned up 1 empty switch in `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE.$proc$panda_libtech.v:80$12'.
+Removing empty process `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE.$proc$panda_libtech.v:80$12'.
+Removing empty process `controller_kernel.$proc$kernel.v:817$11'.
+Found and cleaned up 5 empty switches in `\controller_kernel.$proc$kernel.v:856$9'.
+Removing empty process `controller_kernel.$proc$kernel.v:856$9'.
+Found and cleaned up 1 empty switch in `\controller_kernel.$proc$kernel.v:852$7'.
+Removing empty process `controller_kernel.$proc$kernel.v:852$7'.
+Removing empty process `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR.$proc$panda_libtech.v:648$6'.
+Removing empty process `$paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR.$proc$panda_libtech.v:650$4'.
+Found and cleaned up 1 empty switch in `$paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE.$proc$panda_libtech.v:613$63'.
+Removing empty process `$paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE.$proc$panda_libtech.v:613$63'.
+Found and cleaned up 1 empty switch in `$paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\MUX2_GATE.$proc$panda_libtech.v:613$61'.
+Removing empty process `$paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\MUX2_GATE.$proc$panda_libtech.v:613$61'.
+Cleaned up 14 empty switches.
+
+6.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$44664f688599e7884d721e9f46a43d7a64e39f83\ui_concat_bit_node_FU.
+Optimizing module $paramod$6c4c36921e3a25619ef909f59d8e9186f4aa35af\ui_shl_node_FU.
+Optimizing module $paramod$eb59ce88fac8e98198b12e507b1430a45d78e5d4\ui_shr_node_FU.
+Optimizing module $paramod$77aafb4863d4d5de5fdb25a8615bbc3f54e4a878\ui_shr_node_FU.
+Optimizing module $paramod$9d2c1453fa71befdccf639569203b0c5b6b2b7b6\ui_add_node_FU.
+Optimizing module $paramod$66f56ba666fecec049f6d323c9b7a63f4ec36b91\ui_shl_node_FU.
+Optimizing module $paramod$75b91b50d76cabba8584a87151ebfc53b036211d\ui_and_node_FU.
+Optimizing module $paramod$9ad37585fbd61abdb7db166fb55114dab28998d5\ui_shr_node_FU.
+Optimizing module $paramod$f33d5e4c2a1b2f04d3c7e3f78e7354ea4d994635\ui_shr_node_FU.
+Optimizing module $paramod$5bb98a2b2c2e72032936914fbf967934182da2bf\ui_add_node_FU.
+Optimizing module $paramod$1f2e0f50cb5d4d363c13e5bed181bd0641e40b72\ui_shl_node_FU.
+Optimizing module $paramod$85e00d07b9bad752e16bf3352fe204071d21db0e\ui_and_node_FU.
+Optimizing module $paramod$ff668bebfc74a6157eecaa7fe3b6732549bae970\multi_read_cond_FU.
+Optimizing module $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\ui_not_node_FU.
+Optimizing module $paramod$1c4c4215c57e7ba15d78b2917619bbb41eef022e\ui_and_node_FU.
+Optimizing module $paramod$69da8bf7e1acecfc028de9d94de2bab088d91139\register_SE.
+Optimizing module $paramod$9eea8d5194ebf25010218cc4191e7217d781e0c2\register_SE.
+Optimizing module $paramod$d269154361666cdf41973ac5c6766dc7fbfab2e7\register_SE.
+Optimizing module $paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE.
+Optimizing module $paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\register_SE.
+Optimizing module $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE.
+Optimizing module controller_kernel.
+<suppressed ~13 debug messages>
+Optimizing module datapath_kernel.
+Optimizing module $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR.
+<suppressed ~1 debug messages>
+Optimizing module PBI_kernel.
+Optimizing module kernel.
+Optimizing module $paramod$f3a043ae9f615118aa394e423e2bff78ec6f3fd4\BMEMORY_CTRLN.
+<suppressed ~8 debug messages>
+Optimizing module $paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\MUX2_GATE.
+<suppressed ~2 debug messages>
+Optimizing module $paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\UUdata_converter_FU.
+Optimizing module $paramod$8c879b91fb9d6e70b3ab309366e6542ece08fd58\UUdata_converter_FU.
+Optimizing module $paramod$b0b63a608f8ff13f57533132ae679045f11a487a\UUdata_converter_FU.
+Optimizing module $paramod$54f00274f92b2b795a3e79807c3e61404d6d0442\UUdata_converter_FU.
+Optimizing module $paramod$716739d44ed48e8adf36f2cc44e6e80b12b4d5e4\ui_gep_node_FU.
+Optimizing module $paramod$2d46b4ab184e0464679de3c3828c4a17cd376986\ui_add_node_FU.
+Optimizing module $paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\ui_add_node_FU.
+Optimizing module $paramod$2c2a687e86290b719a337bbf1beaa8ab03ebf550\ui_mul_node_FU.
+Optimizing module $paramod$ef3d5ac2199a34f785f34d1f2fc99615de463d79\ui_mul_node_FU.
+Optimizing module $paramod$ccb732df19a76ea618f59c3e0165f42c2d6691a3\ui_select_node_FU.
+<suppressed ~1 debug messages>
+Optimizing module $paramod$75b91b50d76cabba8584a87151ebfc53b036211d\ui_eq_node_FU.
+Optimizing module $paramod$3b9d868f15ed7b307c871951702e2f70ad2759b0\ui_gep_node_FU.
+Optimizing module $paramod$b0d80d21ab80e4f6a16261681e45bebf04071326\ui_ternary_add_node_FU.
+Optimizing module $paramod$dc477284482cdaabb01019ab8e3a2dca79196886\ui_add_node_FU.
+Optimizing module $paramod$d0915a31d5442425b94af6f0bee9347b4f8d85a2\ui_add_node_FU.
+Optimizing module $paramod$db9ba524b202d488947a0f3216946ccedc2efb79\ui_eq_node_FU.
+Optimizing module $paramod$7333b8022e108466fcb42daa0c2611c140fed29a\ui_concat_bit_node_FU.
+Optimizing module $paramod$f84b277dfa2af9d24fd64c13c5cf40ff17bc70f6\ui_shl_node_FU.
+
+6.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module $paramod$44664f688599e7884d721e9f46a43d7a64e39f83\ui_concat_bit_node_FU.
+Deleting now unused module $paramod$6c4c36921e3a25619ef909f59d8e9186f4aa35af\ui_shl_node_FU.
+Deleting now unused module $paramod$eb59ce88fac8e98198b12e507b1430a45d78e5d4\ui_shr_node_FU.
+Deleting now unused module $paramod$77aafb4863d4d5de5fdb25a8615bbc3f54e4a878\ui_shr_node_FU.
+Deleting now unused module $paramod$9d2c1453fa71befdccf639569203b0c5b6b2b7b6\ui_add_node_FU.
+Deleting now unused module $paramod$66f56ba666fecec049f6d323c9b7a63f4ec36b91\ui_shl_node_FU.
+Deleting now unused module $paramod$75b91b50d76cabba8584a87151ebfc53b036211d\ui_and_node_FU.
+Deleting now unused module $paramod$9ad37585fbd61abdb7db166fb55114dab28998d5\ui_shr_node_FU.
+Deleting now unused module $paramod$f33d5e4c2a1b2f04d3c7e3f78e7354ea4d994635\ui_shr_node_FU.
+Deleting now unused module $paramod$5bb98a2b2c2e72032936914fbf967934182da2bf\ui_add_node_FU.
+Deleting now unused module $paramod$1f2e0f50cb5d4d363c13e5bed181bd0641e40b72\ui_shl_node_FU.
+Deleting now unused module $paramod$85e00d07b9bad752e16bf3352fe204071d21db0e\ui_and_node_FU.
+Deleting now unused module $paramod$ff668bebfc74a6157eecaa7fe3b6732549bae970\multi_read_cond_FU.
+Deleting now unused module $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\ui_not_node_FU.
+Deleting now unused module $paramod$1c4c4215c57e7ba15d78b2917619bbb41eef022e\ui_and_node_FU.
+Deleting now unused module $paramod$69da8bf7e1acecfc028de9d94de2bab088d91139\register_SE.
+Deleting now unused module $paramod$9eea8d5194ebf25010218cc4191e7217d781e0c2\register_SE.
+Deleting now unused module $paramod$d269154361666cdf41973ac5c6766dc7fbfab2e7\register_SE.
+Deleting now unused module $paramod$9b623c32e657e98e8c0ad109025014cb68c06d62\register_SE.
+Deleting now unused module $paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\register_SE.
+Deleting now unused module $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_SE.
+Deleting now unused module controller_kernel.
+Deleting now unused module datapath_kernel.
+Deleting now unused module $paramod$fc3fa4d18590dca89fecb28708dcece7161e0e58\register_AR.
+Deleting now unused module PBI_kernel.
+Deleting now unused module $paramod$f3a043ae9f615118aa394e423e2bff78ec6f3fd4\BMEMORY_CTRLN.
+Deleting now unused module $paramod$9715c49f0170e05c9aa4b3ce4ab164a008f44569\MUX2_GATE.
+Deleting now unused module $paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\MUX2_GATE.
+Deleting now unused module $paramod$2ffd7c677e7710ef2c2b2ae10f27557639ad878e\UUdata_converter_FU.
+Deleting now unused module $paramod$8c879b91fb9d6e70b3ab309366e6542ece08fd58\UUdata_converter_FU.
+Deleting now unused module $paramod$b0b63a608f8ff13f57533132ae679045f11a487a\UUdata_converter_FU.
+Deleting now unused module $paramod$54f00274f92b2b795a3e79807c3e61404d6d0442\UUdata_converter_FU.
+Deleting now unused module $paramod$716739d44ed48e8adf36f2cc44e6e80b12b4d5e4\ui_gep_node_FU.
+Deleting now unused module $paramod$2d46b4ab184e0464679de3c3828c4a17cd376986\ui_add_node_FU.
+Deleting now unused module $paramod$5e567bc1f24086dd8eefb1ece4d88a0c5bb6306e\ui_add_node_FU.
+Deleting now unused module $paramod$2c2a687e86290b719a337bbf1beaa8ab03ebf550\ui_mul_node_FU.
+Deleting now unused module $paramod$ef3d5ac2199a34f785f34d1f2fc99615de463d79\ui_mul_node_FU.
+Deleting now unused module $paramod$ccb732df19a76ea618f59c3e0165f42c2d6691a3\ui_select_node_FU.
+Deleting now unused module $paramod$75b91b50d76cabba8584a87151ebfc53b036211d\ui_eq_node_FU.
+Deleting now unused module $paramod$3b9d868f15ed7b307c871951702e2f70ad2759b0\ui_gep_node_FU.
+Deleting now unused module $paramod$b0d80d21ab80e4f6a16261681e45bebf04071326\ui_ternary_add_node_FU.
+Deleting now unused module $paramod$dc477284482cdaabb01019ab8e3a2dca79196886\ui_add_node_FU.
+Deleting now unused module $paramod$d0915a31d5442425b94af6f0bee9347b4f8d85a2\ui_add_node_FU.
+Deleting now unused module $paramod$db9ba524b202d488947a0f3216946ccedc2efb79\ui_eq_node_FU.
+Deleting now unused module $paramod$7333b8022e108466fcb42daa0c2611c140fed29a\ui_concat_bit_node_FU.
+Deleting now unused module $paramod$f84b277dfa2af9d24fd64c13c5cf40ff17bc70f6\ui_shl_node_FU.
+<suppressed ~81 debug messages>
+
+6.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+<suppressed ~23 debug messages>
+
+6.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+Removed 15 unused cells and 297 unused wires.
+<suppressed ~20 debug messages>
+
+6.6. Executing CHECK pass (checking for obvious problems).
+Checking module kernel...
+Found and reported 0 problems.
+
+6.7. Executing OPT pass (performing simple optimizations).
+
+6.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+
+6.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+<suppressed ~255 debug messages>
+Removed a total of 85 cells.
+
+6.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \kernel..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $flatten\PBI_kernel_i0.\Controller_i.$procmux$121.
+    dead port 2/2 on $mux $flatten\PBI_kernel_i0.\Controller_i.$procmux$174.
+    dead port 2/2 on $mux $flatten\PBI_kernel_i0.\Controller_i.$procmux$129.
+    dead port 2/2 on $mux $flatten\PBI_kernel_i0.\Controller_i.$procmux$185.
+    dead port 2/2 on $mux $flatten\PBI_kernel_i0.\Controller_i.$procmux$196.
+    dead port 2/2 on $mux $flatten\PBI_kernel_i0.\Controller_i.$procmux$137.
+    dead port 2/2 on $mux $flatten\PBI_kernel_i0.\Controller_i.$procmux$113.
+    dead port 2/2 on $mux $flatten\PBI_kernel_i0.\Controller_i.$procmux$207.
+    dead port 2/2 on $mux $flatten\PBI_kernel_i0.\Controller_i.$procmux$222.
+    dead port 2/2 on $mux $flatten\PBI_kernel_i0.\Controller_i.$procmux$237.
+    dead port 2/2 on $mux $flatten\PBI_kernel_i0.\Controller_i.$procmux$144.
+    dead port 2/2 on $mux $flatten\PBI_kernel_i0.\Controller_i.$procmux$252.
+    dead port 2/2 on $mux $flatten\PBI_kernel_i0.\Controller_i.$procmux$154.
+    dead port 2/2 on $mux $flatten\PBI_kernel_i0.\Controller_i.$procmux$105.
+    dead port 2/2 on $mux $flatten\PBI_kernel_i0.\Controller_i.$procmux$164.
+Removed 15 multiplexer ports.
+<suppressed ~55 debug messages>
+
+6.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \kernel.
+    New ctrl vector for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$102: $auto$opt_reduce.cc:134:opt_pmux$533
+    New ctrl vector for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$110: $auto$opt_reduce.cc:134:opt_pmux$535
+    New ctrl vector for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$365: $auto$opt_reduce.cc:134:opt_pmux$537
+    New ctrl vector for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$182: $auto$opt_reduce.cc:134:opt_pmux$539
+    New ctrl vector for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$295: $auto$opt_reduce.cc:134:opt_pmux$541
+    New ctrl vector for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$422: $auto$opt_reduce.cc:134:opt_pmux$543
+    New ctrl vector for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$256: { $flatten\PBI_kernel_i0.\Controller_i.$procmux$223_CMP $flatten\PBI_kernel_i0.\Controller_i.$procmux$263_CMP $auto$opt_reduce.cc:134:opt_pmux$545 $flatten\PBI_kernel_i0.\Controller_i.$procmux$261_CMP $flatten\PBI_kernel_i0.\Controller_i.$procmux$186_CMP $flatten\PBI_kernel_i0.\Controller_i.$procmux$155_CMP $flatten\PBI_kernel_i0.\Controller_i.$procmux$258_CMP $flatten\PBI_kernel_i0.\Controller_i.$procmux$106_CMP }
+    New ctrl vector for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$151: $auto$opt_reduce.cc:134:opt_pmux$547
+    New ctrl vector for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$441: $auto$opt_reduce.cc:134:opt_pmux$549
+    New ctrl vector for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$161: $auto$opt_reduce.cc:134:opt_pmux$551
+    New ctrl vector for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$272: { $flatten\PBI_kernel_i0.\Controller_i.$procmux$223_CMP $auto$opt_reduce.cc:134:opt_pmux$553 }
+    New ctrl vector for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$508: $auto$opt_reduce.cc:134:opt_pmux$555
+    New ctrl vector for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$193: $auto$opt_reduce.cc:134:opt_pmux$557
+  Optimizing cells in module \kernel.
+Performed a total of 13 changes.
+
+6.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+<suppressed ~84 debug messages>
+Removed a total of 28 cells.
+
+6.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+Removed 0 unused cells and 114 unused wires.
+<suppressed ~4 debug messages>
+
+6.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+
+6.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \kernel..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~42 debug messages>
+
+6.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \kernel.
+    New ctrl vector for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$256: { $flatten\PBI_kernel_i0.\Controller_i.$procmux$223_CMP $flatten\PBI_kernel_i0.\Controller_i.$procmux$263_CMP $auto$opt_reduce.cc:134:opt_pmux$545 $flatten\PBI_kernel_i0.\Controller_i.$procmux$261_CMP $auto$opt_reduce.cc:134:opt_pmux$559 $flatten\PBI_kernel_i0.\Controller_i.$procmux$258_CMP $flatten\PBI_kernel_i0.\Controller_i.$procmux$106_CMP }
+    New ctrl vector for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$380: { $flatten\PBI_kernel_i0.\Controller_i.$procmux$261_CMP $auto$opt_reduce.cc:134:opt_pmux$561 }
+  Optimizing cells in module \kernel.
+Performed a total of 2 changes.
+
+6.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+6.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+6.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+
+6.7.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.7.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \kernel..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~42 debug messages>
+
+6.7.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \kernel.
+Performed a total of 0 changes.
+
+6.7.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+Removed a total of 0 cells.
+
+6.7.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.7.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+
+6.7.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+
+6.7.23. Finished OPT passes. (There is nothing left to do.)
+
+6.8. Executing FSM pass (extract and optimize FSM).
+
+6.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking kernel.PBI_kernel_i0.Controller_i.present_state as FSM state register:
+    Register has an initialization value.
+Not marking kernel.PBI_kernel_i0.Datapath_i.reg_12.reg_out1 as FSM state register:
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+
+6.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+6.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+6.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+
+6.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+6.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+6.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+6.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+6.9. Executing OPT pass (performing simple optimizations).
+
+6.9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+
+6.9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+Removed a total of 0 cells.
+
+6.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \kernel..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~42 debug messages>
+
+6.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \kernel.
+Performed a total of 0 changes.
+
+6.9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+Removed a total of 0 cells.
+
+6.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_9.$procdff$529 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.reg_9.in1, Q = \PBI_kernel_i0.Datapath_i.reg_9.reg_out1).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_8.$procdff$528 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.reg_8.in1, Q = \PBI_kernel_i0.Datapath_i.reg_8.reg_out1).
+Adding SRST signal on $auto$ff.cc:266:slice$563 ($dffe) from module kernel (D = \PBI_kernel_i0.Datapath_i.MUX_28_reg_8_0_0_0.in2, Q = \PBI_kernel_i0.Datapath_i.reg_8.reg_out1, rval = 0).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_7.$procdff$528 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.reg_7.in1, Q = \PBI_kernel_i0.Datapath_i.reg_7.reg_out1).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_6.$procdff$529 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.reg_6.in1, Q = \PBI_kernel_i0.Datapath_i.reg_6.reg_out1).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_5.$procdff$527 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.reg_5.in1, Q = \PBI_kernel_i0.Datapath_i.reg_5.reg_out1).
+Adding SRST signal on $auto$ff.cc:266:slice$567 ($dffe) from module kernel (D = \PBI_kernel_i0.Datapath_i.reg_0.reg_out1, Q = \PBI_kernel_i0.Datapath_i.reg_5.reg_out1, rval = 2'00).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_4.$procdff$526 ($dff) from module kernel (D = { \PBI_kernel_i0.Datapath_i.fu_kernel_428841_429001.out1 \PBI_kernel_i0.Datapath_i.reg_1.reg_out1 [0] }, Q = \PBI_kernel_i0.Datapath_i.reg_4.reg_out1).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_3.$procdff$529 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.fu_kernel_428841_429051.in1, Q = \PBI_kernel_i0.Datapath_i.reg_3.reg_out1).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_2.$procdff$527 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.fu_kernel_428841_428952.in1, Q = \PBI_kernel_i0.Datapath_i.reg_2.reg_out1).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_18.$procdff$525 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.reg_18.in1, Q = \PBI_kernel_i0.Datapath_i.reg_18.reg_out1).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_17.$procdff$529 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.reg_17.in1, Q = \PBI_kernel_i0.Datapath_i.reg_17.reg_out1).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_16.$procdff$527 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.reg_13.in1, Q = \PBI_kernel_i0.Datapath_i.reg_16.reg_out1).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_15.$procdff$524 ($dff) from module kernel (D = { \PBI_kernel_i0.Datapath_i.fu_kernel_428841_429018.out1 \PBI_kernel_i0.Datapath_i.fu_kernel_428841_429018.in2 [1:0] }, Q = \PBI_kernel_i0.Datapath_i.reg_15.reg_out1).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_14.$procdff$529 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.fu_kernel_428841_429041.in1, Q = \PBI_kernel_i0.Datapath_i.reg_14.reg_out1).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_13.$procdff$527 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.reg_13.in1, Q = \PBI_kernel_i0.Datapath_i.reg_13.reg_out1).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_12.$procdff$527 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.reg_12.in1, Q = \PBI_kernel_i0.Datapath_i.reg_12.reg_out1).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_11.$procdff$527 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.reg_11.in1, Q = \PBI_kernel_i0.Datapath_i.reg_11.reg_out1).
+Adding SRST signal on $auto$ff.cc:266:slice$579 ($dffe) from module kernel (D = \PBI_kernel_i0.Datapath_i.MUX_13_reg_11_0_0_0.in2, Q = \PBI_kernel_i0.Datapath_i.reg_11.reg_out1, rval = 2'00).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_10.$procdff$529 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.reg_10.in1, Q = \PBI_kernel_i0.Datapath_i.reg_10.reg_out1).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_1.$procdff$527 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.reg_1.in1, Q = \PBI_kernel_i0.Datapath_i.reg_1.reg_out1).
+Adding SRST signal on $auto$ff.cc:266:slice$582 ($dffe) from module kernel (D = \PBI_kernel_i0.Datapath_i.reg_2.reg_out1, Q = \PBI_kernel_i0.Datapath_i.reg_1.reg_out1, rval = 2'00).
+Adding EN signal on $flatten\PBI_kernel_i0.\Datapath_i.\reg_0.$procdff$527 ($dff) from module kernel (D = \PBI_kernel_i0.Datapath_i.reg_0.in1, Q = \PBI_kernel_i0.Datapath_i.reg_0.reg_out1).
+Adding SRST signal on $auto$ff.cc:266:slice$584 ($dffe) from module kernel (D = \PBI_kernel_i0.Datapath_i.MUX_10_reg_0_0_0_0.in2, Q = \PBI_kernel_i0.Datapath_i.reg_0.reg_out1, rval = 2'00).
+Adding SRST signal on $flatten\PBI_kernel_i0.\Controller_i.$procdff$530 ($dff) from module kernel (D = \PBI_kernel_i0.Controller_i.next_state, Q = \PBI_kernel_i0.Controller_i.present_state, rval = 4'0010).
+
+6.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+Removed 25 unused cells and 35 unused wires.
+<suppressed ~41 debug messages>
+
+6.9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+
+6.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \kernel..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~24 debug messages>
+
+6.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \kernel.
+Performed a total of 0 changes.
+
+6.9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+6.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:266:slice$574 ($dffe) from module kernel (D = \PBI_kernel_i0.Datapath_i.MUX_15_reg_13_0_0_0.in2, Q = \PBI_kernel_i0.Datapath_i.reg_16.reg_out1, rval = 2'00).
+
+6.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+Removed 1 unused cells and 6 unused wires.
+<suppressed ~7 debug messages>
+
+6.9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+
+6.9.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.9.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \kernel..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~23 debug messages>
+
+6.9.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \kernel.
+Performed a total of 0 changes.
+
+6.9.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+Removed a total of 0 cells.
+
+6.9.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.9.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+
+6.9.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+
+6.9.23. Finished OPT passes. (There is nothing left to do.)
+
+6.10. Executing WREDUCE pass (reducing word size of cells).
+Removed top 26 bits (of 32) from port B of cell kernel.$flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428865.$add$panda_libtech.v:343$60 ($add).
+Removed top 24 bits (of 32) from port B of cell kernel.$flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428931.$add$panda_libtech.v:343$51 ($add).
+Removed top 1 bits (of 2) from port B of cell kernel.$flatten\PBI_kernel_i0.\Controller_i.$procmux$103_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell kernel.$flatten\PBI_kernel_i0.\Controller_i.$procmux$106_CMP0 ($eq).
+Removed top 1 bits (of 4) from mux cell kernel.$flatten\PBI_kernel_i0.\Controller_i.$procmux$118 ($pmux).
+Removed top 1 bits (of 2) from port B of cell kernel.$flatten\PBI_kernel_i0.\Controller_i.$procmux$153_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell kernel.$flatten\PBI_kernel_i0.\Controller_i.$procmux$186_CMP0 ($eq).
+Removed top 2 bits (of 4) from mux cell kernel.$flatten\PBI_kernel_i0.\Controller_i.$procmux$220 ($mux).
+Removed top 2 bits (of 4) from port B of cell kernel.$flatten\PBI_kernel_i0.\Controller_i.$procmux$223_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell kernel.$flatten\PBI_kernel_i0.\Controller_i.$procmux$258_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell kernel.$flatten\PBI_kernel_i0.\Controller_i.$procmux$261_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell kernel.$flatten\PBI_kernel_i0.\Controller_i.$procmux$263_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell kernel.$flatten\PBI_kernel_i0.\Controller_i.$procmux$273_CMP0 ($eq).
+Removed top 2 bits (of 4) from wire kernel.$flatten\PBI_kernel_i0.\Controller_i.$2\next_state[3:0].
+Removed top 1 bits (of 4) from wire kernel.$flatten\PBI_kernel_i0.\Controller_i.$5\next_state[3:0].
+
+6.11. Executing PEEPOPT pass (run peephole optimizers).
+
+6.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+6.13. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module kernel:
+  creating $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428865.$add$panda_libtech.v:343$60 ($add).
+  creating $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428872.$add$panda_libtech.v:232$59 ($add).
+  creating $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428883.$add$panda_libtech.v:232$47 ($add).
+  creating $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428891.$add$panda_libtech.v:232$58 ($add).
+  creating $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428898.$mul$panda_libtech.v:374$57 ($mul).
+  creating $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428902.$mul$panda_libtech.v:374$56 ($mul).
+  creating $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428916.$add$panda_libtech.v:232$47 ($add).
+  creating $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428926.$add$panda_libtech.v:232$47 ($add).
+  creating $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428931.$add$panda_libtech.v:343$51 ($add).
+  creating $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428937.$add$panda_libtech.v:559$49 ($add).
+  creating $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428937.$add$panda_libtech.v:559$50 ($add).
+  creating $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428945.$add$panda_libtech.v:232$48 ($add).
+  creating $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428950.$add$panda_libtech.v:232$47 ($add).
+  creating $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_429001.$add$panda_libtech.v:232$37 ($add).
+  creating $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_429018.$add$panda_libtech.v:232$29 ($add).
+  merging $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428937.$add$panda_libtech.v:559$49 into $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428937.$add$panda_libtech.v:559$50.
+  merging $macc model for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428898.$mul$panda_libtech.v:374$57 into $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428891.$add$panda_libtech.v:232$58.
+  creating $alu model for $macc $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428950.$add$panda_libtech.v:232$47.
+  creating $alu model for $macc $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428945.$add$panda_libtech.v:232$48.
+  creating $alu model for $macc $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_429001.$add$panda_libtech.v:232$37.
+  creating $alu model for $macc $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428931.$add$panda_libtech.v:343$51.
+  creating $alu model for $macc $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428926.$add$panda_libtech.v:232$47.
+  creating $alu model for $macc $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428916.$add$panda_libtech.v:232$47.
+  creating $alu model for $macc $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_429018.$add$panda_libtech.v:232$29.
+  creating $alu model for $macc $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428883.$add$panda_libtech.v:232$47.
+  creating $alu model for $macc $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428872.$add$panda_libtech.v:232$59.
+  creating $alu model for $macc $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428865.$add$panda_libtech.v:343$60.
+  creating $macc cell for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428937.$add$panda_libtech.v:559$50: $auto$alumacc.cc:365:replace_macc$590
+  creating $macc cell for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428902.$mul$panda_libtech.v:374$56: $auto$alumacc.cc:365:replace_macc$591
+  creating $macc cell for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428891.$add$panda_libtech.v:232$58: $auto$alumacc.cc:365:replace_macc$592
+  creating $alu cell for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428865.$add$panda_libtech.v:343$60: $auto$alumacc.cc:485:replace_alu$593
+  creating $alu cell for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428872.$add$panda_libtech.v:232$59: $auto$alumacc.cc:485:replace_alu$596
+  creating $alu cell for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428883.$add$panda_libtech.v:232$47: $auto$alumacc.cc:485:replace_alu$599
+  creating $alu cell for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_429018.$add$panda_libtech.v:232$29: $auto$alumacc.cc:485:replace_alu$602
+  creating $alu cell for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428916.$add$panda_libtech.v:232$47: $auto$alumacc.cc:485:replace_alu$605
+  creating $alu cell for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428926.$add$panda_libtech.v:232$47: $auto$alumacc.cc:485:replace_alu$608
+  creating $alu cell for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428931.$add$panda_libtech.v:343$51: $auto$alumacc.cc:485:replace_alu$611
+  creating $alu cell for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_429001.$add$panda_libtech.v:232$37: $auto$alumacc.cc:485:replace_alu$614
+  creating $alu cell for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428945.$add$panda_libtech.v:232$48: $auto$alumacc.cc:485:replace_alu$617
+  creating $alu cell for $flatten\PBI_kernel_i0.\Datapath_i.\fu_kernel_428841_428950.$add$panda_libtech.v:232$47: $auto$alumacc.cc:485:replace_alu$620
+  created 10 $alu and 3 $macc cells.
+
+6.14. Executing SHARE pass (SAT-based resource sharing).
+
+6.15. Executing OPT pass (performing simple optimizations).
+
+6.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+
+6.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+Removed a total of 0 cells.
+
+6.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \kernel..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~23 debug messages>
+
+6.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \kernel.
+Performed a total of 0 changes.
+
+6.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+Removed a total of 0 cells.
+
+6.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+Removed 2 unused cells and 4 unused wires.
+<suppressed ~6 debug messages>
+
+6.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+
+6.15.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.15.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \kernel..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~23 debug messages>
+
+6.15.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \kernel.
+Performed a total of 0 changes.
+
+6.15.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+Removed a total of 0 cells.
+
+6.15.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.15.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+
+6.15.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+
+6.15.16. Finished OPT passes. (There is nothing left to do.)
+
+6.16. Executing MEMORY pass.
+
+6.16.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+6.16.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+6.16.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+6.16.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+6.16.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+6.16.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+
+6.16.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+6.16.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+6.16.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+
+6.16.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+6.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+
+6.18. Executing OPT pass (performing simple optimizations).
+
+6.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+<suppressed ~19 debug messages>
+
+6.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+Removed a total of 0 cells.
+
+6.18.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+Removed 0 unused cells and 11 unused wires.
+<suppressed ~1 debug messages>
+
+6.18.5. Finished fast OPT passes.
+
+6.19. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+6.20. Executing OPT pass (performing simple optimizations).
+
+6.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+
+6.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+Removed a total of 0 cells.
+
+6.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \kernel..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~10 debug messages>
+
+6.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \kernel.
+    Consolidated identical input bits for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$118:
+      Old ports: A=3'000, B=6'001100, Y=$auto$wreduce.cc:461:run$589 [2:0]
+      New ports: A=2'00, B=4'0110, Y={ $auto$wreduce.cc:461:run$589 [2] $auto$wreduce.cc:461:run$589 [0] }
+      New connections: $auto$wreduce.cc:461:run$589 [1] = 1'0
+    Consolidated identical input bits for $pmux cell $flatten\PBI_kernel_i0.\Controller_i.$procmux$171:
+      Old ports: A=4'1001, B=8'01111000, Y=$flatten\PBI_kernel_i0.\Controller_i.$3\next_state[3:0]
+      New ports: A=3'101, B=6'011100, Y={ $flatten\PBI_kernel_i0.\Controller_i.$3\next_state[3:0] [3] $flatten\PBI_kernel_i0.\Controller_i.$3\next_state[3:0] [1:0] }
+      New connections: $flatten\PBI_kernel_i0.\Controller_i.$3\next_state[3:0] [2] = $flatten\PBI_kernel_i0.\Controller_i.$3\next_state[3:0] [1]
+    Consolidated identical input bits for $mux cell $flatten\PBI_kernel_i0.\Datapath_i.\BMEMORY_CTRLN_15_i0.$ternary$panda_libtech.v:207$82:
+      Old ports: A=6'000000, B=6'100000, Y=\Mout_data_ram_size [5:0]
+      New ports: A=1'0, B=1'1, Y=\Mout_data_ram_size [5]
+      New connections: \Mout_data_ram_size [4:0] = 5'00000
+  Optimizing cells in module \kernel.
+Performed a total of 3 changes.
+
+6.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+Removed a total of 0 cells.
+
+6.20.6. Executing OPT_SHARE pass.
+
+6.20.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.20.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+
+6.20.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+<suppressed ~1 debug messages>
+
+6.20.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.20.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \kernel..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+6.20.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \kernel.
+Performed a total of 0 changes.
+
+6.20.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+Removed a total of 0 cells.
+
+6.20.14. Executing OPT_SHARE pass.
+
+6.20.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.20.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+6.20.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+
+6.20.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.20.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \kernel..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~9 debug messages>
+
+6.20.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \kernel.
+Performed a total of 0 changes.
+
+6.20.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+Removed a total of 0 cells.
+
+6.20.22. Executing OPT_SHARE pass.
+
+6.20.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.20.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+
+6.20.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+
+6.20.26. Finished OPT passes. (There is nothing left to do.)
+
+6.21. Executing TECHMAP pass (map to technology primitives).
+
+6.21.1. Executing Verilog-2005 frontend: /home/ak05/cs5291_hls_tools/opt/yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/home/ak05/cs5291_hls_tools/opt/yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+6.21.2. Continuing TECHMAP pass.
+Using extmapper maccmap for cells of type $macc.
+  add \PBI_kernel_i0.Datapath_i.reg_15.reg_out1 (5 bits, unsigned)
+  add \PBI_kernel_i0.Datapath_i.reg_5.reg_out1 (2 bits, unsigned)
+  add \PBI_kernel_i0.Datapath_i.reg_16.reg_out1 (2 bits, unsigned)
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod$aebc44f5eedf4f1603d7564e4920ac508059c773\_90_alu for cells of type $alu.
+Using template $paramod$175e67c02b86e96b1288b9dc100122520d7240d8\_90_alu for cells of type $alu.
+Using template $paramod$649fc39eef2451024566705288528c8671211199\_90_alu for cells of type $alu.
+Using template $paramod$3ef7d3dd227da7627a99c5e5a6a4deb817573e39\_90_alu for cells of type $alu.
+Using template $paramod$7dce730435e7851fd9880afeb03137a3a368409e\_90_alu for cells of type $alu.
+  add \PBI_kernel_i0.Datapath_i.reg_8.reg_out1 (32 bits, unsigned)
+  add \M_Rdata_ram [31:0] * \PBI_kernel_i0.Datapath_i.reg_18.reg_out1 (32x4 bits, unsigned)
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod$12c97ca52be11ba8445ab52ca93bb7dd02daf758\_90_alu for cells of type $alu.
+  add \PBI_kernel_i0.Datapath_i.fu_kernel_428841_428902.in1 * \PBI_kernel_i0.Datapath_i.reg_12.reg_out1 (2x2 bits, unsigned)
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $sdffce.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $reduce_or.
+Using template $paramod$521ce43182eecb9f60c72393a788160d2c356bf5\_90_pmux for cells of type $pmux.
+Using template $paramod$32e7c4d6f92ff4337599ece53082d2e88a82a9f2\_90_pmux for cells of type $pmux.
+Using template $paramod$33afdd83bf3811dac2de7a968d39eea5718691bc\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $logic_not.
+Using template $paramod$c5c783b17ab1d780abfad8cfe6563a0a7b47a3b0\_90_pmux for cells of type $pmux.
+Using template $paramod$740b056ede97228d3eae64ea2fdc81f0a33e0fe7\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000011110 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000100000 for cells of type $fa.
+Using template $paramod$fbc7873bff55778c0b3173955b7e4bce1d9d6834\_90_alu for cells of type $alu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000011 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000101 for cells of type $fa.
+Using template $paramod$00298f3f8094950cb9a5ff2fda48d0d8bde8806c\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000110 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~1761 debug messages>
+
+6.22. Executing OPT pass (performing simple optimizations).
+
+6.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+<suppressed ~835 debug messages>
+
+6.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+<suppressed ~153 debug messages>
+Removed a total of 51 cells.
+
+6.22.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+Removed 137 unused cells and 759 unused wires.
+<suppressed ~138 debug messages>
+
+6.22.5. Finished fast OPT passes.
+
+6.23. Executing ABC pass (technology mapping using ABC).
+
+6.23.1. Extracting gate netlist of module `\kernel' to `<abc-temp-dir>/input.blif'..
+Extracted 1249 gates and 1444 wires to a netlist network with 193 inputs and 172 outputs.
+
+6.23.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+6.23.1.2. Re-integrating ABC results.
+ABC RESULTS:               NOT cells:       60
+ABC RESULTS:                OR cells:      158
+ABC RESULTS:               NOR cells:       58
+ABC RESULTS:              XNOR cells:       65
+ABC RESULTS:               MUX cells:       34
+ABC RESULTS:              NAND cells:       90
+ABC RESULTS:               XOR cells:      268
+ABC RESULTS:               AND cells:      185
+ABC RESULTS:             ORNOT cells:       21
+ABC RESULTS:            ANDNOT cells:      326
+ABC RESULTS:        internal signals:     1079
+ABC RESULTS:           input signals:      193
+ABC RESULTS:          output signals:      172
+Removing temp directory.
+
+6.24. Executing OPT pass (performing simple optimizations).
+
+6.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module kernel.
+<suppressed ~87 debug messages>
+
+6.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\kernel'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+6.24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \kernel..
+Removed 2 unused cells and 722 unused wires.
+<suppressed ~91 debug messages>
+
+6.24.5. Finished fast OPT passes.
+
+6.25. Executing HIERARCHY pass (managing design hierarchy).
+
+6.25.1. Analyzing design hierarchy..
+Top module:  \kernel
+
+6.25.2. Analyzing design hierarchy..
+Top module:  \kernel
+Removed 0 unused modules.
+
+6.26. Printing statistics.
+
+=== kernel ===
+
+   Number of wires:               1547
+   Number of wire bits:           4601
+   Number of public wires:         454
+   Number of public wire bits:    3508
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1360
+     $_ANDNOT_                     324
+     $_AND_                        185
+     $_DFFE_PP_                     52
+     $_DFF_PN0_                      1
+     $_MUX_                         34
+     $_NAND_                        90
+     $_NOR_                         58
+     $_NOT_                         58
+     $_ORNOT_                       21
+     $_OR_                         158
+     $_SDFFCE_PN0P_                  4
+     $_SDFFCE_PP0P_                 38
+     $_SDFF_PN0_                     3
+     $_SDFF_PN1_                     1
+     $_XNOR_                        65
+     $_XOR_                        268
+
+6.27. Executing CHECK pass (checking for obvious problems).
+Checking module kernel...
+Found and reported 0 problems.
+
+7. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+  cell DFF_X1 (noninv, pins=4, area=4.52) is a direct match for cell type $_DFF_P_.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+  cell DFFR_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN0_.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+  cell DFFS_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN1_.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+  cell DFFRS_X1 (noninv, pins=6, area=6.38) is a direct match for cell type $_DFFSR_PNN_.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \DFF_X1 _DFF_P_ (.CK( C), .D( D), .Q( Q), .QN(~Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \DFFR_X1 _DFF_PN0_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R));
+    \DFFS_X1 _DFF_PN1_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .SN( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFSR_NNN_
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \DFFRS_X1 _DFFSR_PNN_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R), .SN( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+7.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\kernel':
+  mapped 1 $_DFF_PN0_ cells to \DFFR_X1 cells.
+  mapped 98 $_DFF_P_ cells to \DFF_X1 cells.
+
+8. Executing ABC pass (technology mapping using ABC).
+
+8.1. Extracting gate netlist of module `\kernel' to `<abc-temp-dir>/input.blif'..
+Extracted 1401 gates and 1617 wires to a netlist network with 214 inputs and 167 outputs.
+
+8.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /home/ak05/cs5291_hls_runs/gaussian5_original/cells.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.03 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "ANTENNA_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFRS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFRS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFR_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFR_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLH_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLH_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLL_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLL_X2".
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "TAPCELL_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X8" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X16" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X32" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "LOGIC0_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "LOGIC1_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFRS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFRS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFR_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFR_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFF_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFF_X2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X16".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TINV_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "TLAT_X1".
+ABC: Library "NangateOpenCellLibrary" from "/home/ak05/cs5291_hls_runs/gaussian5_original/cells.lib" has 90 cells (35 skipped: 21 seq; 6 tri-state; 8 no func; 10 dont_use).  Time =     0.05 sec
+ABC: Memory =   11.38 MB. Time =     0.05 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "FA_X1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+8.1.2. Re-integrating ABC results.
+ABC RESULTS:           AND4_X1 cells:        1
+ABC RESULTS:            OR3_X1 cells:       30
+ABC RESULTS:          NAND4_X1 cells:        2
+ABC RESULTS:           AND3_X1 cells:       64
+ABC RESULTS:         AOI211_X1 cells:        5
+ABC RESULTS:         OAI211_X1 cells:        6
+ABC RESULTS:           MUX2_X1 cells:       32
+ABC RESULTS:            OR2_X1 cells:       18
+ABC RESULTS:          AOI22_X1 cells:        7
+ABC RESULTS:           NOR3_X1 cells:       23
+ABC RESULTS:          NAND3_X1 cells:       67
+ABC RESULTS:          OAI33_X1 cells:       12
+ABC RESULTS:            INV_X1 cells:      127
+ABC RESULTS:           XOR2_X1 cells:       81
+ABC RESULTS:          NAND2_X1 cells:      172
+ABC RESULTS:           AND2_X1 cells:       76
+ABC RESULTS:           NOR2_X1 cells:      144
+ABC RESULTS:          XNOR2_X1 cells:      121
+ABC RESULTS:          OAI22_X1 cells:       18
+ABC RESULTS:          AOI21_X1 cells:      113
+ABC RESULTS:          OAI21_X1 cells:      127
+ABC RESULTS:        internal signals:     1236
+ABC RESULTS:           input signals:      214
+ABC RESULTS:          output signals:      167
+Removing temp directory.
+Removed 0 unused cells and 1622 unused wires.
+
+9. Executing CHECK pass (checking for obvious problems).
+Checking module kernel...
+Found and reported 0 problems.
+
+10. Printing statistics.
+
+=== kernel ===
+
+   Number of wires:               1642
+   Number of wire bits:           4568
+   Number of public wires:         370
+   Number of public wire bits:    3296
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1345
+     AND2_X1                        76
+     AND3_X1                        64
+     AND4_X1                         1
+     AOI211_X1                       5
+     AOI21_X1                      113
+     AOI22_X1                        7
+     DFFR_X1                         1
+     DFF_X1                         98
+     INV_X1                        127
+     MUX2_X1                        32
+     NAND2_X1                      172
+     NAND3_X1                       67
+     NAND4_X1                        2
+     NOR2_X1                       144
+     NOR3_X1                        23
+     OAI211_X1                       6
+     OAI21_X1                      127
+     OAI22_X1                       18
+     OAI33_X1                       12
+     OR2_X1                         18
+     OR3_X1                         30
+     XNOR2_X1                      121
+     XOR2_X1                        81
+
+   Chip area for module '\kernel': 1800.820000
+
+11. Executing Verilog backend.
+
+11.1. Executing BMUXMAP pass.
+
+11.2. Executing DEMUXMAP pass.
+Dumping module `\kernel'.
+
+12. Executing JSON backend.
+
+Warnings: 8 unique messages, 72 total
+End of script. Logfile hash: 61e6956725, CPU: user 0.73s system 0.03s, MEM: 79.20 MB peak
+Yosys 0.36 (git sha1 8f07a0d84, gcc 11.4.0-1ubuntu1~22.04.2 -fPIC -Os)
+Time spent: 26% 2x abc (0 sec), 13% 26x opt_clean (0 sec), ...

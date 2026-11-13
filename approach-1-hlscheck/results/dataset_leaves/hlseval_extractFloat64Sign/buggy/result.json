@@ -1,0 +1,27 @@
+{
+  "id": "hlseval_extractFloat64Sign",
+  "variant": "buggy",
+  "status": "not_equivalent",
+  "expected": "not_equivalent",
+  "matched_expected": true,
+  "backend": "Reused ESBMC 8.7 with Z3; separate scalar-leaf miter",
+  "full_domain": true,
+  "input_kinds": [
+    "unsigned long long"
+  ],
+  "command": [
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\dataset_leaves\\hlseval_extractFloat64Sign\\buggy\\miter.c",
+    "--32",
+    "--z3",
+    "--bv",
+    "--unwind",
+    "32",
+    "--overflow-check",
+    "--ub-shift-check",
+    "--uninitialised-vars-check",
+    "--multi-property"
+  ],
+  "miter_sha256": "b68aa05afb54f53ae4b9cd2f576f6bb911bd4e58380d01ba1fc2e63c2a481bf7",
+  "assumptions": "32-bit ESBMC data model; native Windows LLP64. Static assertions enforce short16/int32/long32/longlong64. No range restrictions."
+}

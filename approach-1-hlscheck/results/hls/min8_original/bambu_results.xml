@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<application
+	benchmark="kernel"
+	version="Version: PandA 2026.11 - Revision 6407a63da948c1b2223d63a9e91891a5628fe174-dev/panda"
+	verbosity="1"
+	timestamp="2026-11-21T19:13:25"
+	args="'/home/ak05/cs5291_hls_tools/squashfs-root/usr/bin/bambu' '--top-fname=kernel' '--device-name=nangate45' '--clock-period=10' '--compiler=I386_CLANG16' '--experimental-setup=BAMBU-BALANCED-MP' '--seed=0' '--generate-tb=/home/ak05/cs5291_hls_runs/min8_original/tb.c' '--simulate' '--simulator=VERILATOR' '/home/ak05/cs5291_hls_runs/min8_original/kernel.c'">
+	<outputs>
+		<testbench>HLS_output/simulation/bambu_testbench.v</testbench>
+		<file>kernel.v</file>
+		<file>panda_libtech.v</file>
+	</outputs>
+	<sources
+		compiler="clang-16"
+		cflags="-O2 -mllvm -enable-loop-flatten -fno-builtin-bcmp -fno-builtin-memcpy -fno-builtin-memmove -fno-builtin-memset -ffp-contract=off -finline-functions -fno-slp-vectorize -fno-stack-protector -fno-unroll-loops -fno-vectorize -fwrapv --std=c11 -D__BAMBU__ -D__SYNTHESIS__ -Wuninitialized -isystem $BAMBU_HLS/include/panda -D__NO_INLINE__ -m32 -Xclang -no-opaque-pointers">
+		<file>kernel.c</file>
+	</sources>
+	<testbench
+		top_module="kernel"
+		cflags=""
+		m_pp_symbol="__m_pp_kernel"
+		symbol="kernel"
+		m_symbol="__m_kernel"
+		elf="HLS_output/simulation/testbench">
+		<file>tb.c</file>
+	</testbench>
+	<top_module
+		combinational="false"
+		clock_name="clock"
+		name="kernel" />
+	<target
+		family="Generic-yosysOpenROAD"
+		period="10"
+		vendor="Generic"
+		model="nangate45"
+		package="none"
+		speed_grade="std"
+		connect_iob="false"
+		frequency="100"
+		period_ps="10000" />
+	<backend
+		parallel="1"
+		bambu_results="bambu_results.xml"
+		discrepancy="false"
+		assert="false"
+		fast="false"
+		sdc_ext_file=""
+		vcd="" />
+	<hls_results
+		planner_context_xml="false">
+		<function_428841
+			name="kernel"
+			function_ii="0"
+			id="428841"
+			function_pipelined="false">
+			<loop_3
+				ii="1"
+				bb="3" />
+		</function_428841>
+	</hls_results>
+	<timing>
+		<simulation
+			return_value="0">
+			<run>11</run>
+			<run>11</run>
+			<run>11</run>
+			<run>11</run>
+			<run>11</run>
+			<run>11</run>
+			<run>11</run>
+			<run>11</run>
+			<run>11</run>
+			<run>11</run>
+			<run>11</run>
+			<run>11</run>
+			<run>11</run>
+			<run>11</run>
+			<run>11</run>
+			<run>11</run>
+		</simulation>
+	</timing>
+	<resources />
+	<evaluation
+		CYCLES="11" />
+</application>

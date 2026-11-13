@@ -1,0 +1,739 @@
+{
+  "passed": false,
+  "scope": "SMT replay with the same Z3 implementation, not independent proof-certificate checking",
+  "cases": [
+    {
+      "case": "scale_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "scale_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "unswitch_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "unswitch_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "gemm_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "gemm_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "unknown",
+      "dependencies": [],
+      "passed": false
+    },
+    {
+      "case": "stencil_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "stencil_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "unknown",
+      "dependencies": [],
+      "passed": false
+    },
+    {
+      "case": "prefix_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "prefix_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "fir_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "fir_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "boxfilter_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "boxfilter_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "factor_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "factor_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "dot16_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "dot16_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "unknown",
+      "dependencies": [],
+      "passed": false
+    },
+    {
+      "case": "sum32_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "sum32_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "xor32_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "xor32_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "min8_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "min8_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "max8_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "max8_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "range8_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "range8_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "count_nonzero16_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "count_nonzero16_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "all_equal16_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "all_equal16_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "parity32_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "parity32_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "popcount8_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "popcount8_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "bitreverse32_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "bitreverse32_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "byteswap32_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "byteswap32_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "crc8_byte_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "crc8_byte_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "hamming8_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [
+        {
+          "file": "results\\submission_verification\\hamming8_optimized.lemma001.smt2",
+          "status": "unsat"
+        },
+        {
+          "file": "results\\submission_verification\\hamming8_optimized.lemma002.smt2",
+          "status": "unsat"
+        },
+        {
+          "file": "results\\submission_verification\\hamming8_optimized.lemma003.smt2",
+          "status": "unsat"
+        },
+        {
+          "file": "results\\submission_verification\\hamming8_optimized.lemma004.smt2",
+          "status": "unsat"
+        },
+        {
+          "file": "results\\submission_verification\\hamming8_optimized.lemma005.smt2",
+          "status": "unsat"
+        },
+        {
+          "file": "results\\submission_verification\\hamming8_optimized.lemma006.smt2",
+          "status": "unsat"
+        },
+        {
+          "file": "results\\submission_verification\\hamming8_optimized.lemma007.smt2",
+          "status": "unsat"
+        },
+        {
+          "file": "results\\submission_verification\\hamming8_optimized.lemma008.smt2",
+          "status": "unsat"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "case": "hamming8_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "clamp16_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "clamp16_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "threshold_pack8_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "threshold_pack8_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "absdiff16_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "absdiff16_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "squared_distance8_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "squared_distance8_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "saxpy16_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "saxpy16_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "quadratic_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "quadratic_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "convolution1d8_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "convolution1d8_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "moving_sum16_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "moving_sum16_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "triangular_fir16_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "triangular_fir16_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "gaussian5_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "gaussian5_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "integral_image4_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "integral_image4_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "transpose4_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "transpose4_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "matvec4_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "matvec4_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "gemm_local4_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "gemm_local4_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "syrk4_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "syrk4_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "rank1_update4_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "rank1_update4_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "triangular_matvec4_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "triangular_matvec4_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "symv4_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "symv4_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "matrix_trace4_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "matrix_trace4_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "matrix_diagsum4_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "matrix_diagsum4_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "histogram4_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "histogram4_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "search_count16_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "search_count16_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "reverse_copy16_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "reverse_copy16_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "deinterleave16_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "deinterleave16_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "interleave8_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "interleave8_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "maxpool4_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "maxpool4_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "moving_sum_register16_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "moving_sum_register16_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "gemm_tile2_optimized",
+      "expected_smt_status": "unsat",
+      "replayed_status": "unsat",
+      "dependencies": [],
+      "passed": true
+    },
+    {
+      "case": "gemm_tile2_buggy",
+      "expected_smt_status": "sat",
+      "replayed_status": "sat",
+      "dependencies": [],
+      "passed": true
+    }
+  ]
+}

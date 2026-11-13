@@ -1,0 +1,492 @@
+{
+  "manifest_sha256": "389a90d6a7f15587d0fa425c71caa8e5ce830d0b0cb2d75da32fa82b5a2d8dbd",
+  "cases": [
+    {
+      "id": "machsuite_gemm4",
+      "source": "benchmarks/two_model_study/machsuite_gemm4/original.c",
+      "function": "kernel",
+      "original_sha256": "d34b316a62c77526f14598b5987f8b8a1dfe86a57d3bbda47702b89bfb50cb8f",
+      "suite": "MachSuite",
+      "upstream_source": "datasets/MachSuite/gemm/ncubed/gemm.c",
+      "upstream_sha256": "e5ff9d7a95c0bde1439c645c49c745b3a9f1aa385f875843f3c2e5a51adaaef9",
+      "preparation": "Reuse the earlier original-only educational adaptation: 64x64 double matrices become4x4 uint32 flat row-major matrices; top function named kernel; no host harness. This is a new integer problem, not equivalent to upstream floating point.",
+      "category": "adapted_kernel",
+      "integer_domain": "All data are unsigned32 with modulo-2^32 arithmetic; valid pairwise-nonoverlapping parameter arrays; unchanged array elements remain observable.",
+      "prepared_original_source": "benchmarks/machsuite_u32/gemm_original.c",
+      "preflight": {
+        "id": "machsuite_gemm4",
+        "original_sha256": "d34b316a62c77526f14598b5987f8b8a1dfe86a57d3bbda47702b89bfb50cb8f",
+        "syntax_compiles": true,
+        "process_isolation": true,
+        "status": "equivalent",
+        "elapsed_seconds": 0.555365,
+        "reason": null,
+        "proof_dependencies": 1,
+        "exit_code": 0,
+        "saved_evidence_replay_passed": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+        },
+        {
+          "role": "user",
+          "content": "Quickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\n/* MachSuite-derived; copyright/license and adaptations documented in README.md. */\n#include <stdint.h>\n\nvoid kernel(uint32_t m1[16], uint32_t m2[16], uint32_t prod[16]) {\n    for (int i = 0; i < 4; i++) {\n        for (int j = 0; j < 4; j++) {\n            uint32_t sum = 0u;\n            for (int k = 0; k < 4; k++) {\n                sum += m1[i * 4 + k] * m2[k * 4 + j];\n            }\n            prod[i * 4 + j] = sum;\n        }\n    }\n}\n```\n"
+        }
+      ],
+      "messages_sha256": "aa8002f0eddfc786aa22ac5828dc66078fdde5b4b7fdc0c072c5c31d19b82fe8"
+    },
+    {
+      "id": "machsuite_stencil5",
+      "source": "benchmarks/two_model_study/machsuite_stencil5/original.c",
+      "function": "kernel",
+      "original_sha256": "8c46a73e96b8c5cf7b0b2ee7a25f26ac6f2bd090f01a4c9d6dc0479275937149",
+      "suite": "MachSuite",
+      "upstream_source": "datasets/MachSuite/stencil/stencil2d/stencil.c",
+      "upstream_sha256": "744680af76d8a528f555887d66027ff0fb1bfde458b0bb6332814dd406710f70",
+      "preparation": "Reuse the earlier original-only adaptation: 128x64 signed32 grid becomes5x5 uint32 flat grid with unchanged3x3 filter. Writes only the top-left3x3 of a5x5 output; remaining outputs retain incoming values. This is a new unsigned domain, not equivalence to upstream signed arithmetic.",
+      "category": "adapted_kernel",
+      "integer_domain": "All data are unsigned32 with modulo-2^32 arithmetic; valid pairwise-nonoverlapping parameter arrays; unchanged array elements remain observable.",
+      "prepared_original_source": "benchmarks/machsuite_u32/stencil_original.c",
+      "preflight": {
+        "id": "machsuite_stencil5",
+        "original_sha256": "8c46a73e96b8c5cf7b0b2ee7a25f26ac6f2bd090f01a4c9d6dc0479275937149",
+        "syntax_compiles": true,
+        "process_isolation": true,
+        "status": "equivalent",
+        "elapsed_seconds": 0.538461,
+        "reason": null,
+        "proof_dependencies": 1,
+        "exit_code": 0,
+        "saved_evidence_replay_passed": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+        },
+        {
+          "role": "user",
+          "content": "Quickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\n/* MachSuite-derived; copyright/license and adaptations documented in README.md. */\n#include <stdint.h>\n\nvoid kernel(uint32_t orig[25], uint32_t sol[25], uint32_t filter[9]) {\n    for (int r = 0; r < 3; r++) {\n        for (int c = 0; c < 3; c++) {\n            uint32_t temp = 0u;\n            for (int k1 = 0; k1 < 3; k1++) {\n                for (int k2 = 0; k2 < 3; k2++) {\n                    temp += filter[k1 * 3 + k2] * orig[(r + k1) * 5 + c + k2];\n                }\n            }\n            sol[r * 5 + c] = temp;\n        }\n    }\n}\n```\n"
+        }
+      ],
+      "messages_sha256": "ab4dcfaae29572f63398d7ece880612aef8e1ea21b4d1f444f764161c950052f"
+    },
+    {
+      "id": "polybench_mvt4",
+      "source": "benchmarks/two_model_study/polybench_mvt4/original.c",
+      "function": "kernel",
+      "original_sha256": "fcc767d4f17abc039a77517a8cddd0266cc67e98d03410848b90ce727475a9f4",
+      "suite": "HLS-Eval / PolyBench",
+      "upstream_source": "datasets/hls-eval/hls_eval_data/polybench/mvt/mvt.cpp",
+      "upstream_sha256": "6dc052dde05f908936429a70afced4bf502d519b0bf43a475c5a3a90cccad235",
+      "preparation": "Adapt PolyBench source through HLS-Eval: replace double with uint32_t, flatten row-major arrays, reduce dimensions to4, rename kernel_mvt to kernel, remove external includes and HLS pragma, and use literal loop limits. Dimension40 becomes4. The two accumulations retain their initial x1/x2 values; y_1,y_2 and matrix remain observable and unchanged. This unsigned integer benchmark is a new domain; no equivalence to upstream floating point is claimed.",
+      "category": "adapted_kernel",
+      "integer_domain": "All data are unsigned32 with modulo-2^32 arithmetic; valid pairwise-nonoverlapping parameter arrays; unchanged array elements remain observable.",
+      "preflight": {
+        "id": "polybench_mvt4",
+        "original_sha256": "fcc767d4f17abc039a77517a8cddd0266cc67e98d03410848b90ce727475a9f4",
+        "syntax_compiles": true,
+        "process_isolation": true,
+        "status": "equivalent",
+        "elapsed_seconds": 0.543054,
+        "reason": null,
+        "proof_dependencies": 1,
+        "exit_code": 0,
+        "saved_evidence_replay_passed": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+        },
+        {
+          "role": "user",
+          "content": "Quickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\n/* Dataset-derived integer adaptation; see provenance.json and ../README.md. */\n#include <stdint.h>\n\nvoid kernel(uint32_t x1[4], uint32_t x2[4], uint32_t y_1[4], uint32_t y_2[4], uint32_t a[16]) {\n    for (int i = 0; i < 4; i++) {\n        for (int j = 0; j < 4; j++) {\n            x1[i] = x1[i] + a[i * 4 + j] * y_1[j];\n        }\n    }\n    for (int i = 0; i < 4; i++) {\n        for (int j = 0; j < 4; j++) {\n            x2[i] = x2[i] + a[j * 4 + i] * y_2[j];\n        }\n    }\n}\n```\n"
+        }
+      ],
+      "messages_sha256": "80dc750f620304b6b008f886c5f39aa9fe2f6a9f5d7b6bc0393f63c20f8af650"
+    },
+    {
+      "id": "polybench_atax4",
+      "source": "benchmarks/two_model_study/polybench_atax4/original.c",
+      "function": "kernel",
+      "original_sha256": "9c80ac32ecce7877190da99f0a9cf906fe476396afdfba0e0cd3af57cbeef407",
+      "suite": "HLS-Eval / PolyBench",
+      "upstream_source": "datasets/hls-eval/hls_eval_data/polybench/atax/atax.cpp",
+      "upstream_sha256": "a91cae8312899fc28865b9cdffc14ec83a6597887bef3851d4c87782222a6ef2",
+      "preparation": "Adapt PolyBench source through HLS-Eval: replace double with uint32_t, flatten row-major arrays, reduce dimensions to4, rename kernel_atax to kernel, remove external includes and HLS pragma, and use literal loop limits. Rectangular38x42 dimensions become4x4. Preserve y/tmp initialization and both multiply-accumulation nests; tmp remains an observable output. This unsigned integer benchmark is a new domain; no equivalence to upstream floating point is claimed.",
+      "category": "adapted_kernel",
+      "integer_domain": "All data are unsigned32 with modulo-2^32 arithmetic; valid pairwise-nonoverlapping parameter arrays; unchanged array elements remain observable.",
+      "preflight": {
+        "id": "polybench_atax4",
+        "original_sha256": "9c80ac32ecce7877190da99f0a9cf906fe476396afdfba0e0cd3af57cbeef407",
+        "syntax_compiles": true,
+        "process_isolation": true,
+        "status": "equivalent",
+        "elapsed_seconds": 0.530039,
+        "reason": null,
+        "proof_dependencies": 1,
+        "exit_code": 0,
+        "saved_evidence_replay_passed": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+        },
+        {
+          "role": "user",
+          "content": "Quickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\n/* Dataset-derived integer adaptation; see provenance.json and ../README.md. */\n#include <stdint.h>\n\nvoid kernel(uint32_t a[16], uint32_t x[4], uint32_t y[4], uint32_t tmp[4]) {\n    for (int i = 0; i < 4; i++) {\n        y[i] = 0u;\n    }\n    for (int i = 0; i < 4; i++) {\n        tmp[i] = 0u;\n        for (int j = 0; j < 4; j++) {\n            tmp[i] = tmp[i] + a[i * 4 + j] * x[j];\n        }\n        for (int j = 0; j < 4; j++) {\n            y[j] = y[j] + a[i * 4 + j] * tmp[i];\n        }\n    }\n}\n```\n"
+        }
+      ],
+      "messages_sha256": "75d4a1efb58d3c1e0fa4eaad9c3241f2ee3c299bfad207285b9d6076ec5a944e"
+    },
+    {
+      "id": "polybench_bicg4",
+      "source": "benchmarks/two_model_study/polybench_bicg4/original.c",
+      "function": "kernel",
+      "original_sha256": "9c85f887d8cb43fc45e057cc325e2a2591cc1ff089e4d16ce386b44fda6eb8e1",
+      "suite": "HLS-Eval / PolyBench",
+      "upstream_source": "datasets/hls-eval/hls_eval_data/polybench/bicg/bicg.cpp",
+      "upstream_sha256": "04ae4942a7b0005d1dba0abfb645338ff073c07dc1339b1e07801dd47fc533b5",
+      "preparation": "Adapt PolyBench source through HLS-Eval: replace double with uint32_t, flatten row-major arrays, reduce dimensions to4, rename kernel_bicg to kernel, remove external includes and HLS pragma, and use literal loop limits. Dimensions42x38 become4x4. Preserve resetting s/q and the joint row/column accumulations. This unsigned integer benchmark is a new domain; no equivalence to upstream floating point is claimed.",
+      "category": "adapted_kernel",
+      "integer_domain": "All data are unsigned32 with modulo-2^32 arithmetic; valid pairwise-nonoverlapping parameter arrays; unchanged array elements remain observable.",
+      "preflight": {
+        "id": "polybench_bicg4",
+        "original_sha256": "9c85f887d8cb43fc45e057cc325e2a2591cc1ff089e4d16ce386b44fda6eb8e1",
+        "syntax_compiles": true,
+        "process_isolation": true,
+        "status": "equivalent",
+        "elapsed_seconds": 0.537467,
+        "reason": null,
+        "proof_dependencies": 1,
+        "exit_code": 0,
+        "saved_evidence_replay_passed": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+        },
+        {
+          "role": "user",
+          "content": "Quickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\n/* Dataset-derived integer adaptation; see provenance.json and ../README.md. */\n#include <stdint.h>\n\nvoid kernel(uint32_t a[16], uint32_t s[4], uint32_t q[4], uint32_t p[4], uint32_t r[4]) {\n    for (int i = 0; i < 4; i++) {\n        s[i] = 0u;\n    }\n    for (int i = 0; i < 4; i++) {\n        q[i] = 0u;\n        for (int j = 0; j < 4; j++) {\n            s[j] = s[j] + r[i] * a[i * 4 + j];\n            q[i] = q[i] + a[i * 4 + j] * p[j];\n        }\n    }\n}\n```\n"
+        }
+      ],
+      "messages_sha256": "ed48ed1963c8a41ca23b5535e4ef19d5f25e21b390f8b0b658b75c7e1210ed9d"
+    },
+    {
+      "id": "polybench_syrk4",
+      "source": "benchmarks/two_model_study/polybench_syrk4/original.c",
+      "function": "kernel",
+      "original_sha256": "5c671917d1b347ce62d58e5174f93b7a19802140bb230c9be55bf66b4023ff48",
+      "suite": "HLS-Eval / PolyBench",
+      "upstream_source": "datasets/hls-eval/hls_eval_data/polybench/syrk/syrk.cpp",
+      "upstream_sha256": "d80b42b45c817482445b5d20f2a3c70d888b9f523bc133919097a798bb311d7e",
+      "preparation": "Adapt PolyBench source through HLS-Eval: replace double with uint32_t, flatten row-major arrays, reduce dimensions to4, rename kernel_syrk to kernel, remove external includes and HLS pragma, and use literal loop limits. Dimensions30x30 and30x20 become4x4. Preserve the beta scaling, alpha accumulation and lower-triangle-only writes; upper-triangle c retains initial values. This unsigned integer benchmark is a new domain; no equivalence to upstream floating point is claimed.",
+      "category": "adapted_kernel",
+      "integer_domain": "All data are unsigned32 with modulo-2^32 arithmetic; valid pairwise-nonoverlapping parameter arrays; unchanged array elements remain observable.",
+      "preflight": {
+        "id": "polybench_syrk4",
+        "original_sha256": "5c671917d1b347ce62d58e5174f93b7a19802140bb230c9be55bf66b4023ff48",
+        "syntax_compiles": true,
+        "process_isolation": true,
+        "status": "equivalent",
+        "elapsed_seconds": 0.543684,
+        "reason": null,
+        "proof_dependencies": 1,
+        "exit_code": 0,
+        "saved_evidence_replay_passed": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+        },
+        {
+          "role": "user",
+          "content": "Quickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\n/* Dataset-derived integer adaptation; see provenance.json and ../README.md. */\n#include <stdint.h>\n\nvoid kernel(uint32_t alpha, uint32_t beta, uint32_t c[16], uint32_t a[16]) {\n    for (int i = 0; i < 4; i++) {\n        for (int j = 0; j <= i; j++) {\n            c[i * 4 + j] *= beta;\n        }\n        for (int k = 0; k < 4; k++) {\n            for (int j = 0; j <= i; j++) {\n                c[i * 4 + j] += alpha * a[i * 4 + k] * a[j * 4 + k];\n            }\n        }\n    }\n}\n```\n"
+        }
+      ],
+      "messages_sha256": "d7c15cc5aa6361a25d05ce44177bea5554aaf3fbe6f74d4566d353037f98a20e"
+    },
+    {
+      "id": "machsuite_rj_xtime",
+      "source": "benchmarks/two_model_study/machsuite_rj_xtime/original.c",
+      "function": "kernel",
+      "original_sha256": "34fd938e7af02c899c0d1d1f7c4e390cfc3cd40fe28d8940010a81d52ee9dcb3",
+      "suite": "MachSuite",
+      "upstream_source": "datasets/MachSuite/aes/aes/aes.c",
+      "upstream_sha256": "e865f122b2d58654d86ddf7c12dfaf59a4a711d13263052371665203a0f865d6",
+      "preparation": "Reuse the type-preserving original leaf extraction (not any candidate). Retain all typedefs/macros, widths and source notices. Rename only rj_xtime to kernel before freezing; remove unrelated compilation-unit material as documented in the earlier extraction. No dimension, type or input-domain reduction.",
+      "category": "type_preserving_leaf",
+      "integer_domain": "Original primitive widths and typedefs preserved under ILP32; signed narrowing follows the selected target. Unsigned8 input and return; full0..255 input domain.",
+      "prepared_original_source": "experiments/dataset_leaves/machsuite_rj_xtime/original.c",
+      "source_function_original": "rj_xtime",
+      "upstream_header": "datasets/MachSuite/aes/aes/aes.h",
+      "upstream_header_sha256": "a37e392b484bd0f7e60d6a9a4477ff5eb17c3665ab8f8909be230362d5b0ddd3",
+      "exact_original_function_sha256": "741644114746ed913a55c76df7db475ebbdf9890e8b56799046acebb5dc763e5",
+      "preflight": {
+        "id": "machsuite_rj_xtime",
+        "original_sha256": "34fd938e7af02c899c0d1d1f7c4e390cfc3cd40fe28d8940010a81d52ee9dcb3",
+        "syntax_compiles": true,
+        "process_isolation": true,
+        "status": "equivalent",
+        "elapsed_seconds": 0.552203,
+        "reason": null,
+        "proof_dependencies": 0,
+        "exit_code": 0,
+        "saved_evidence_replay_passed": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+        },
+        {
+          "role": "user",
+          "content": "Quickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\n#include <stdint.h>\nuint8_t kernel(uint8_t x)\n{\n    return (x & 0x80) ? ((x << 1) ^ 0x1b) : (x << 1);\n}\n```\n"
+        }
+      ],
+      "messages_sha256": "ef87b73a573e06ee72010ff897013981027111977e5ae19a856eab3a8b379fb0"
+    },
+    {
+      "id": "chstone_gsm_abs",
+      "source": "benchmarks/two_model_study/chstone_gsm_abs/original.c",
+      "function": "kernel",
+      "original_sha256": "0ad38ffc272924b447237bb1559c92b171d3c843a2b58725e44c8c84099323ef",
+      "suite": "CHStone",
+      "upstream_source": "datasets/CHStone/gsm/add.c",
+      "upstream_sha256": "999c30c9a87e0c12b1d4be9a8dc5c396dfe18652320563191e6fd608a295cca9",
+      "preparation": "Reuse the type-preserving original leaf extraction (not any candidate). Retain all typedefs/macros, widths and source notices. Rename only gsm_abs to kernel before freezing; remove unrelated compilation-unit material as documented in the earlier extraction. No dimension, type or input-domain reduction.",
+      "category": "type_preserving_leaf",
+      "integer_domain": "Original primitive widths and typedefs preserved under ILP32; signed narrowing follows the selected target. Signed16 inputs and return; original saturation bounds and behavior retained.",
+      "prepared_original_source": "experiments/dataset_leaves/chstone_gsm_abs/original.c",
+      "source_function_original": "gsm_abs",
+      "upstream_header": "datasets/CHStone/gsm/private.h",
+      "upstream_header_sha256": "c86c12352157ecf1b1a6fc7764c3cab4443e2b470a737dfc0a8226ba4c7191c0",
+      "exact_original_function_sha256": "311fd58f1194349da71cce70d1d43d681c557c4ed46c659d2ec02280cab6eefb",
+      "preflight": {
+        "id": "chstone_gsm_abs",
+        "original_sha256": "0ad38ffc272924b447237bb1559c92b171d3c843a2b58725e44c8c84099323ef",
+        "syntax_compiles": true,
+        "process_isolation": true,
+        "status": "equivalent",
+        "elapsed_seconds": 0.581812,
+        "reason": null,
+        "proof_dependencies": 0,
+        "exit_code": 0,
+        "saved_evidence_replay_passed": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+        },
+        {
+          "role": "user",
+          "content": "Quickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\n/*\n+--------------------------------------------------------------------------+\n| CHStone : a suite of benchmark programs for C-based High-Level Synthesis |\n| ======================================================================== |\n|                                                                          |\n| * Collected and Modified : Y. Hara, H. Tomiyama, S. Honda,               |\n|                            H. Takada and K. Ishii                        |\n|                            Nagoya University, Japan                      |\n|                                                                          |\n| * Remark :                                                               |\n|    1. This source code is modified to unify the formats of the benchmark |\n|       programs in CHStone.                                               |\n|    2. Test vectors are added for CHStone.                                |\n|    3. If \"main_result\" is 0 at the end of the program, the program is    |\n|       correctly executed.                                                |\n|    4. Please follow the copyright of each benchmark program.             |\n+--------------------------------------------------------------------------+\n*/\n/*\n * Copyright 1992 by Jutta Degener and Carsten Bormann, Technische\n * Universitaet Berlin.  See the accompanying file \"COPYRIGHT\" for\n * details.  THERE IS ABSOLUTELY NO WARRANTY FOR THIS SOFTWARE.\n */\n\n\ntypedef short word;\ntypedef long longword;\n#define MIN_WORD ((-32767)-1)\n#define MAX_WORD (32767)\n#define saturate(x) ((x)<MIN_WORD?MIN_WORD:(x)>MAX_WORD?MAX_WORD:(x))\nword\nkernel (word a)\n{\n  return a < 0 ? (a == MIN_WORD ? MAX_WORD : -a) : a;\n}\n```\n"
+        }
+      ],
+      "messages_sha256": "93cd59b74e0e0959a18d3aa31c3f1c61f83bcea7e61cd04f885c1c21655f5b15"
+    },
+    {
+      "id": "chstone_gsm_add",
+      "source": "benchmarks/two_model_study/chstone_gsm_add/original.c",
+      "function": "kernel",
+      "original_sha256": "576ad7505e040b46dff1896f3961b88e7c8a55b1bbd2613fc7b8da6b8f60410a",
+      "suite": "CHStone",
+      "upstream_source": "datasets/CHStone/gsm/add.c",
+      "upstream_sha256": "999c30c9a87e0c12b1d4be9a8dc5c396dfe18652320563191e6fd608a295cca9",
+      "preparation": "Reuse the type-preserving original leaf extraction (not any candidate). Retain all typedefs/macros, widths and source notices. Rename only gsm_add to kernel before freezing; remove unrelated compilation-unit material as documented in the earlier extraction. No dimension, type or input-domain reduction.",
+      "category": "type_preserving_leaf",
+      "integer_domain": "Original primitive widths and typedefs preserved under ILP32; signed narrowing follows the selected target. Signed16 inputs and return; original saturation bounds and behavior retained.",
+      "prepared_original_source": "experiments/dataset_leaves/chstone_gsm_add/original.c",
+      "source_function_original": "gsm_add",
+      "upstream_header": "datasets/CHStone/gsm/private.h",
+      "upstream_header_sha256": "c86c12352157ecf1b1a6fc7764c3cab4443e2b470a737dfc0a8226ba4c7191c0",
+      "exact_original_function_sha256": "487a540c277a9279be9aacb5848e0d1932d085a7179a861400809b6059d4b6f5",
+      "preflight": {
+        "id": "chstone_gsm_add",
+        "original_sha256": "576ad7505e040b46dff1896f3961b88e7c8a55b1bbd2613fc7b8da6b8f60410a",
+        "syntax_compiles": true,
+        "process_isolation": true,
+        "status": "equivalent",
+        "elapsed_seconds": 0.601199,
+        "reason": null,
+        "proof_dependencies": 0,
+        "exit_code": 0,
+        "saved_evidence_replay_passed": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+        },
+        {
+          "role": "user",
+          "content": "Quickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\n/*\n+--------------------------------------------------------------------------+\n| CHStone : a suite of benchmark programs for C-based High-Level Synthesis |\n| ======================================================================== |\n|                                                                          |\n| * Collected and Modified : Y. Hara, H. Tomiyama, S. Honda,               |\n|                            H. Takada and K. Ishii                        |\n|                            Nagoya University, Japan                      |\n|                                                                          |\n| * Remark :                                                               |\n|    1. This source code is modified to unify the formats of the benchmark |\n|       programs in CHStone.                                               |\n|    2. Test vectors are added for CHStone.                                |\n|    3. If \"main_result\" is 0 at the end of the program, the program is    |\n|       correctly executed.                                                |\n|    4. Please follow the copyright of each benchmark program.             |\n+--------------------------------------------------------------------------+\n*/\n/*\n * Copyright 1992 by Jutta Degener and Carsten Bormann, Technische\n * Universitaet Berlin.  See the accompanying file \"COPYRIGHT\" for\n * details.  THERE IS ABSOLUTELY NO WARRANTY FOR THIS SOFTWARE.\n */\n\n\ntypedef short word;\ntypedef long longword;\n#define MIN_WORD ((-32767)-1)\n#define MAX_WORD (32767)\n#define saturate(x) ((x)<MIN_WORD?MIN_WORD:(x)>MAX_WORD?MAX_WORD:(x))\nword\nkernel (word a, word b)\n{\n  longword sum;\n  sum = (longword) a + (longword) b;\n  return saturate (sum);\n}\n```\n"
+        }
+      ],
+      "messages_sha256": "f031c62701d81adbcc921afc19cf0fc59d0333bf1c0b7ccc05b226b060aaa1ba"
+    },
+    {
+      "id": "hlseval_extractFloat64Sign",
+      "source": "benchmarks/two_model_study/hlseval_extractFloat64Sign/original.c",
+      "function": "kernel",
+      "original_sha256": "80674aae1cf198b0280da369ce91d63be3f30b72f67e32299ddc1f252a7fb1bd",
+      "suite": "hls-eval",
+      "upstream_source": "datasets/hls-eval/hls_eval_data/chstone/df_extractFloat64Sign/extractFloat64Sign.cpp",
+      "upstream_sha256": "9275b86f86456652026a7b5f3ff42b8b003babb223face2dc9b05326ec4d1ab6",
+      "preparation": "Reuse the type-preserving original leaf extraction (not any candidate). Retain all typedefs/macros, widths and source notices. Rename only extractFloat64Sign to kernel before freezing; remove unrelated compilation-unit material as documented in the earlier extraction. No dimension, type or input-domain reduction.",
+      "category": "type_preserving_leaf",
+      "integer_domain": "Original primitive widths and typedefs preserved under ILP32; signed narrowing follows the selected target. Binary64 values are unsigned64 bit patterns, not floating-point arithmetic.",
+      "prepared_original_source": "experiments/dataset_leaves/hlseval_extractFloat64Sign/original.c",
+      "source_function_original": "extractFloat64Sign",
+      "upstream_header": "datasets/hls-eval/hls_eval_data/chstone/df_extractFloat64Sign/extractFloat64Sign.h",
+      "upstream_header_sha256": "eee96fb650730edd3fb87493c530adbf85d59cf776a15fcbb2860eb37c86cd64",
+      "exact_original_function_sha256": "3a3843dd23957dc6d62098067d088ae2307c92227acbd3103d6c6f8d8885fce6",
+      "preflight": {
+        "id": "hlseval_extractFloat64Sign",
+        "original_sha256": "80674aae1cf198b0280da369ce91d63be3f30b72f67e32299ddc1f252a7fb1bd",
+        "syntax_compiles": true,
+        "process_isolation": true,
+        "status": "equivalent",
+        "elapsed_seconds": 0.508284,
+        "reason": null,
+        "proof_dependencies": 0,
+        "exit_code": 0,
+        "saved_evidence_replay_passed": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+        },
+        {
+          "role": "user",
+          "content": "Quickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\ntypedef int flag;\ntypedef unsigned long long float64;\nflag kernel(float64 a) { return a >> 63; }\n```\n"
+        }
+      ],
+      "messages_sha256": "c45ec776745e8e17c41522f104c36eadf9f8b84f5e5fc4b3fcc566821bd6aed8"
+    },
+    {
+      "id": "hlseval_extractFloat64Frac",
+      "source": "benchmarks/two_model_study/hlseval_extractFloat64Frac/original.c",
+      "function": "kernel",
+      "original_sha256": "0f235a01e98718b0f588e0610379d76fed126c7a0ab8589913333a6feb94738c",
+      "suite": "hls-eval",
+      "upstream_source": "datasets/hls-eval/hls_eval_data/chstone/df_extractFloat64Frac/extractFloat64Frac.cpp",
+      "upstream_sha256": "018b7723650402575b116820543899213e462edcc6944262cac9ca5bb7eccccd",
+      "preparation": "Reuse the type-preserving original leaf extraction (not any candidate). Retain all typedefs/macros, widths and source notices. Rename only extractFloat64Frac to kernel before freezing; remove unrelated compilation-unit material as documented in the earlier extraction. No dimension, type or input-domain reduction.",
+      "category": "type_preserving_leaf",
+      "integer_domain": "Original primitive widths and typedefs preserved under ILP32; signed narrowing follows the selected target. Binary64 values are unsigned64 bit patterns, not floating-point arithmetic.",
+      "prepared_original_source": "experiments/dataset_leaves/hlseval_extractFloat64Frac/original.c",
+      "source_function_original": "extractFloat64Frac",
+      "upstream_header": "datasets/hls-eval/hls_eval_data/chstone/df_extractFloat64Frac/extractFloat64Frac.h",
+      "upstream_header_sha256": "bbc33bf3be13a1248768ca3c2cd650cf9ce71b34e2a891515e72d8bafc32abb2",
+      "exact_original_function_sha256": "9be8e7a8850287826d19daa2d6d9b28d54c25da582b7360fad5fb937252bea41",
+      "preflight": {
+        "id": "hlseval_extractFloat64Frac",
+        "original_sha256": "0f235a01e98718b0f588e0610379d76fed126c7a0ab8589913333a6feb94738c",
+        "syntax_compiles": true,
+        "process_isolation": true,
+        "status": "equivalent",
+        "elapsed_seconds": 0.504873,
+        "reason": null,
+        "proof_dependencies": 0,
+        "exit_code": 0,
+        "saved_evidence_replay_passed": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+        },
+        {
+          "role": "user",
+          "content": "Quickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\ntypedef unsigned long long int bits64;\ntypedef unsigned long long float64;\nbits64 kernel(float64 a) { return a & 0x000FFFFFFFFFFFFFLL; }\n```\n"
+        }
+      ],
+      "messages_sha256": "efbce8d17ff570da8a025cf23ec62113be3d23ed96aba33ae1fd3c475139a27f"
+    },
+    {
+      "id": "hlseval_float64_is_nan",
+      "source": "benchmarks/two_model_study/hlseval_float64_is_nan/original.c",
+      "function": "kernel",
+      "original_sha256": "c37136647e0670ce12cc509d5bdd9d2c69116f86b7cabbe51e2bd4ce98ddab0a",
+      "suite": "hls-eval",
+      "upstream_source": "datasets/hls-eval/hls_eval_data/chstone/df_float64_is_nan/float64_is_nan.cpp",
+      "upstream_sha256": "2153de983840115d63c11e816d07e34a3b74f7a8c34090329ce11fa831758d1c",
+      "preparation": "Reuse the type-preserving original leaf extraction (not any candidate). Retain all typedefs/macros, widths and source notices. Rename only float64_is_nan to kernel before freezing; remove unrelated compilation-unit material as documented in the earlier extraction. No dimension, type or input-domain reduction.",
+      "category": "type_preserving_leaf",
+      "integer_domain": "Original primitive widths and typedefs preserved under ILP32; signed narrowing follows the selected target. Binary64 values are unsigned64 bit patterns, not floating-point arithmetic.",
+      "prepared_original_source": "experiments/dataset_leaves/hlseval_float64_is_nan/original.c",
+      "source_function_original": "float64_is_nan",
+      "upstream_header": "datasets/hls-eval/hls_eval_data/chstone/df_float64_is_nan/float64_is_nan.h",
+      "upstream_header_sha256": "a24ce6d9470d5f40ac11943072ea2d9935e2e071c508818a960319cecfbbe49d",
+      "exact_original_function_sha256": "139ae8cfdad7b6c78789d2fafab0dd9b7c770537e3a99f3c701dc97e9954285f",
+      "preflight": {
+        "id": "hlseval_float64_is_nan",
+        "original_sha256": "c37136647e0670ce12cc509d5bdd9d2c69116f86b7cabbe51e2bd4ce98ddab0a",
+        "syntax_compiles": true,
+        "process_isolation": true,
+        "status": "equivalent",
+        "elapsed_seconds": 0.511921,
+        "reason": null,
+        "proof_dependencies": 0,
+        "exit_code": 0,
+        "saved_evidence_replay_passed": true
+      },
+      "messages": [
+        {
+          "role": "system",
+          "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+        },
+        {
+          "role": "user",
+          "content": "Quickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\ntypedef int flag;\ntypedef unsigned long long int bits64;\ntypedef unsigned long long float64;\nflag kernel(float64 a) {\n    return (0xFFE0000000000000LL < (bits64)(a << 1));\n}\n```\n"
+        }
+      ],
+      "messages_sha256": "7dff8ccecc630e184beb1a9ccb359603815e7ccc7d4e27f1a0dfd66715136171"
+    }
+  ],
+  "models": [
+    "qwen15",
+    "gpt61sol"
+  ],
+  "local_settings": {
+    "seed": 5291,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "max_tokens": 1536,
+    "context_size": 4096
+  },
+  "qwen": {
+    "model_repository": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+    "model_revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+    "model_file": "qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+    "model_bytes": 1117320768,
+    "model_sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+    "model_quantization": "Q4_K_M",
+    "runtime_release": "b12619",
+    "runtime_url": "https://github.com/ggml-org/llama.cpp/releases/download/b12619/llama-b12619-bin-win-vulkan-x64.zip",
+    "runtime_sha256": "175d9013769997ab9145cc932f0dd2d89ab3cb6123aecbd83a9645e1cf5e5b9d",
+    "billing": "Local inference only. No external paid inference API calls."
+  },
+  "codex": {
+    "requested_model": "gpt-6.1-sol",
+    "fork_turns": "none",
+    "sampling_controls": "Not exposed; distinct Codex reference, not identical local sampling",
+    "prompt_transport": "Identical system/user instruction text concatenated with a blank line"
+  },
+  "attempts_per_case_per_model": 1,
+  "no_feedback_or_repairs": true,
+  "resource_policy": "60000 ms per SMT/ESBMC obligation; complete unwinding required",
+  "hls_policy": "Only equivalent source pairs with verified proof dependencies and passing compiled-C checks",
+  "scope": "12 original inputs, 6 documented new-domain integer compute adaptations and6 type-preserving renamed scalar leaves; not12 whole unmodified applications. No candidates generated by this preparation.",
+  "api_charge_usd": 0
+}

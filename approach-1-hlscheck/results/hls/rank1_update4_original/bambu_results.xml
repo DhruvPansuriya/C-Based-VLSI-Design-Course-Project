@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<application
+	timestamp="2026-11-21T19:17:41"
+	verbosity="1"
+	args="'/home/ak05/cs5291_hls_tools/squashfs-root/usr/bin/bambu' '--top-fname=kernel' '--device-name=nangate45' '--clock-period=10' '--compiler=I386_CLANG16' '--experimental-setup=BAMBU-BALANCED-MP' '--seed=0' '--generate-tb=/home/ak05/cs5291_hls_runs/rank1_update4_original/tb.c' '--simulate' '--simulator=VERILATOR' '/home/ak05/cs5291_hls_runs/rank1_update4_original/kernel.c'"
+	version="Version: PandA 2026.11 - Revision 6407a63da948c1b2223d63a9e91891a5628fe174-dev/panda"
+	benchmark="kernel">
+	<outputs>
+		<testbench>HLS_output/simulation/bambu_testbench.v</testbench>
+		<file>kernel.v</file>
+		<file>panda_libtech.v</file>
+	</outputs>
+	<sources
+		compiler="clang-16"
+		cflags="-O2 -mllvm -enable-loop-flatten -fno-builtin-bcmp -fno-builtin-memcpy -fno-builtin-memmove -fno-builtin-memset -ffp-contract=off -finline-functions -fno-slp-vectorize -fno-stack-protector -fno-unroll-loops -fno-vectorize -fwrapv --std=c11 -D__BAMBU__ -D__SYNTHESIS__ -Wuninitialized -isystem $BAMBU_HLS/include/panda -D__NO_INLINE__ -m32 -Xclang -no-opaque-pointers">
+		<file>kernel.c</file>
+	</sources>
+	<testbench
+		symbol="kernel"
+		elf="HLS_output/simulation/testbench"
+		m_symbol="__m_kernel"
+		top_module="kernel"
+		m_pp_symbol="__m_pp_kernel"
+		cflags="">
+		<file>tb.c</file>
+	</testbench>
+	<top_module
+		name="kernel"
+		combinational="false"
+		clock_name="clock" />
+	<target
+		period_ps="10000"
+		model="nangate45"
+		period="10"
+		frequency="100"
+		speed_grade="std"
+		package="none"
+		family="Generic-yosysOpenROAD"
+		vendor="Generic"
+		connect_iob="false" />
+	<backend
+		sdc_ext_file=""
+		vcd=""
+		discrepancy="false"
+		bambu_results="bambu_results.xml"
+		assert="false"
+		fast="false"
+		parallel="1" />
+	<hls_results
+		planner_context_xml="false">
+		<function_428841
+			id="428841"
+			name="kernel"
+			function_pipelined="false"
+			function_ii="0" />
+	</hls_results>
+	<timing>
+		<simulation
+			return_value="0">
+			<run>74</run>
+			<run>74</run>
+			<run>74</run>
+			<run>74</run>
+			<run>74</run>
+			<run>74</run>
+			<run>74</run>
+			<run>74</run>
+			<run>74</run>
+			<run>74</run>
+			<run>74</run>
+			<run>74</run>
+			<run>74</run>
+			<run>74</run>
+			<run>74</run>
+			<run>74</run>
+		</simulation>
+	</timing>
+	<resources />
+	<evaluation
+		CYCLES="74" />
+</application>

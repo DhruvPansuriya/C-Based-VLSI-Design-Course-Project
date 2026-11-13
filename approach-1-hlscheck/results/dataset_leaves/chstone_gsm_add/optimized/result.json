@@ -1,0 +1,28 @@
+{
+  "id": "chstone_gsm_add",
+  "variant": "optimized",
+  "status": "equivalent",
+  "expected": "equivalent",
+  "matched_expected": true,
+  "backend": "Reused ESBMC 8.7 with Z3; separate scalar-leaf miter",
+  "full_domain": true,
+  "input_kinds": [
+    "short",
+    "short"
+  ],
+  "command": [
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\dataset_leaves\\chstone_gsm_add\\optimized\\miter.c",
+    "--32",
+    "--z3",
+    "--bv",
+    "--unwind",
+    "32",
+    "--overflow-check",
+    "--ub-shift-check",
+    "--uninitialised-vars-check",
+    "--multi-property"
+  ],
+  "miter_sha256": "8a27ee7d4482481ea4e4458d8e0a443d57623f567a8d7da86e2a1b5ce7f14efb",
+  "assumptions": "32-bit ESBMC data model; native Windows LLP64. Static assertions enforce short16/int32/long32/longlong64. No range restrictions."
+}

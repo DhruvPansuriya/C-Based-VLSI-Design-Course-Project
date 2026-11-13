@@ -1,0 +1,46 @@
+{
+  "fingerprints": {
+    "original": "5507f374da55ee9147930cd6ca4fa6706fbdad4751de2877f5b22995816d950f",
+    "candidate": "8f83211973a9a9d46f44c812bacdd19691bd53f8a8cc4ef171579a258cd1581a",
+    "evaluator": "c6045de93a412b74c1b8a184a264bc3a964ce015d2b4b5864f49909f7cf9cb9a",
+    "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+    "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307",
+    "pipeline.py": "a4b504daefbd3524a1d0a6fc5e872fd2a75b469c869cfb2c33a35711fa731567",
+    "native_helpers": "a83490a2ca85c768fe67d098c3b4b4899539a14db4ac582d6c8760bbf81917fe",
+    "timeout_ms": 15000
+  },
+  "manual_semantic_edits": false,
+  "syntax_compiles": true,
+  "ast_unchanged": false,
+  "verification": {
+    "status": "candidate_undefined",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "reason": "Division/remainder by zero",
+    "counterexample": {
+      "x": 0,
+      "y": 0
+    },
+    "elapsed_seconds": 0.039123,
+    "backend": "hlscheck/Z3",
+    "fallback_used": false,
+    "initial_stage": {
+      "status": "candidate_undefined",
+      "assumptions": [
+        "32-bit int and unsigned int; uint32_t is unsigned int",
+        "All array parameters are valid, separately allocated, and nonoverlapping",
+        "Functional equality at function completion; no cycle-level RTL guarantee"
+      ],
+      "reason": "Division/remainder by zero",
+      "counterexample": {
+        "x": 0,
+        "y": 0
+      },
+      "elapsed_seconds": 0.039123
+    }
+  },
+  "status": "candidate_undefined"
+}

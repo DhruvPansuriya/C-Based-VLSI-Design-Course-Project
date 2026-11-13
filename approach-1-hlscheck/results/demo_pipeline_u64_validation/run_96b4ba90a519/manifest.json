@@ -1,0 +1,51 @@
+{
+  "run_id": "96b4ba90a519",
+  "run_directory": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline_u64_validation\\run_96b4ba90a519",
+  "inputs": {
+    "original": {
+      "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\benchmarks\\pipeline_smoke\\u64_original.c",
+      "raw_sha256": "238de9badb04b49e4ee2d7101422b9352164ee707b19478ab911bacf56988167",
+      "snapshot": "inputs/original_source.c",
+      "snapshot_sha256": "238de9badb04b49e4ee2d7101422b9352164ee707b19478ab911bacf56988167",
+      "hls_source": "hls_inputs/original.c",
+      "hls_sha256": "9960304cba3d4a28c5548b72ad3004213ed158794595ffa6f83e49f3d834b3c4"
+    },
+    "optimized": {
+      "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\benchmarks\\pipeline_smoke\\u64_optimized.c",
+      "raw_sha256": "c3d07b6ef60fe4bf6cdbed095928dc4c8ed1c90b0b526950e3687d474e6d3dfb",
+      "snapshot": "inputs/optimized_source.c",
+      "snapshot_sha256": "c3d07b6ef60fe4bf6cdbed095928dc4c8ed1c90b0b526950e3687d474e6d3dfb",
+      "hls_source": "hls_inputs/optimized.c",
+      "hls_sha256": "ed7384fff16afafdb631eb6e92886f2e5b894d96ed0b65224c96eb686f72f36f"
+    }
+  },
+  "proof_requirements": [
+    {
+      "folder": "proof",
+      "result_sha256": "26e807f39be3d2b3514772818d4d05f46158ee6915dc36bd9b3c549427cd4a7d",
+      "source_sha256": {
+        "original": "238de9badb04b49e4ee2d7101422b9352164ee707b19478ab911bacf56988167",
+        "candidate": "c3d07b6ef60fe4bf6cdbed095928dc4c8ed1c90b0b526950e3687d474e6d3dfb"
+      }
+    },
+    {
+      "folder": "normalization/original",
+      "result_sha256": "1d237fc3471b9a579ffaa028c8904a1eda64c5d8c003918a4c6d2cea98861e17",
+      "source_sha256": {
+        "original": "238de9badb04b49e4ee2d7101422b9352164ee707b19478ab911bacf56988167",
+        "candidate": "9960304cba3d4a28c5548b72ad3004213ed158794595ffa6f83e49f3d834b3c4"
+      }
+    },
+    {
+      "folder": "normalization/optimized",
+      "result_sha256": "81322c8f2cbe430a9639e2fe6f2e6b494af596e0e32c65c5c70f1fb098f5033c",
+      "source_sha256": {
+        "original": "c3d07b6ef60fe4bf6cdbed095928dc4c8ed1c90b0b526950e3687d474e6d3dfb",
+        "candidate": "ed7384fff16afafdb631eb6e92886f2e5b894d96ed0b65224c96eb686f72f36f"
+      }
+    }
+  ],
+  "jobs": 2,
+  "testbench_sha256": "68a1a6b8a7250e9c05c1ff96a11554a1d888493c9b37def9909c7954544a4cdb",
+  "native_result_sha256": "9e56de1f235ef1d649485929ee6f68334df62be1571378fd9bb547f11a2e8118"
+}

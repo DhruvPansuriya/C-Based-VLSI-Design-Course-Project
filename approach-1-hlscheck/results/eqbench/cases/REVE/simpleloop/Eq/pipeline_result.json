@@ -1,0 +1,48 @@
+{
+  "backend": "ESBMC",
+  "solver": "Z3",
+  "status": "equivalent",
+  "parameters": [
+    {
+      "name": "z",
+      "kind": "int",
+      "length": null
+    }
+  ],
+  "scalar_ranges": {},
+  "assumptions": [
+    "32-bit int/unsigned int",
+    "Array parameters valid and pairwise nonoverlapping",
+    "All scalar/array inputs symbolic over their full type domain except stated ranges",
+    "Default ESBMC bounds, pointer and unwinding checks retained; signed overflow and shift UB checks enabled"
+  ],
+  "command": [
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\eqbench\\cases\\REVE\\simpleloop\\Eq\\esbmc\\harness.c",
+    "--z3",
+    "--bv",
+    "--unwind",
+    "32",
+    "--overflow-check",
+    "--ub-shift-check",
+    "--uninitialised-vars-check",
+    "--multi-property"
+  ],
+  "unwind": 32,
+  "timeout_seconds": 3,
+  "returncode": 0,
+  "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+  "solver_report": "Solving claim 'arithmetic overflow on add at file C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\eqbench\\cases\\REVE\\simpleloop\\Eq\\esbmc\\harness.c line 12 column 5 function __hls_original' with solver Z3 v4.13.3",
+  "elapsed_seconds": 0.319651,
+  "fallback_used": true,
+  "initial_stage": {
+    "status": "unsupported",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "reason": "Return type must be uint32_t/unsigned int or void",
+    "elapsed_seconds": 0.001235
+  }
+}

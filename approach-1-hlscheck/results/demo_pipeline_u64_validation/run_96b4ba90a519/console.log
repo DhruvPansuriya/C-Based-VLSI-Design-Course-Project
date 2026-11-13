@@ -1,0 +1,60 @@
+HLSCheck: source equivalence -> native checks -> measured HLS comparison
+Fresh run: C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\demo_pipeline_u64_validation\run_96b4ba90a519
+
+[1/7] READ AND VALIDATE THE SUPPLIED FILES
+  original: C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\benchmarks\pipeline_smoke\u64_original.c
+    source SHA256: 238de9badb04b49e4ee2d7101422b9352164ee707b19478ab911bacf56988167
+  optimized: C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\benchmarks\pipeline_smoke\u64_optimized.c
+    source SHA256: c3d07b6ef60fe4bf6cdbed095928dc4c8ed1c90b0b526950e3687d474e6d3dfb
+  Target: C11 / ILP32; .cpp files must use the supported C-compatible subset.
+  Functions: sign vs sign
+  Arrays: valid and nonoverlapping. Compare every final array element and the return value.
+  Scalar preconditions: {}
+
+[2/7] FORMAL C-TO-C EQUIVALENCE
+  Running HLSCheck; limit 60 s per solver/verifier obligation...
+  residual_0: equivalent [ESBMC / Z3]
+  VERDICT: equivalent (0.470 s)
+
+[3/7] REPLAY PROOF EVIDENCE AND BIND HLS INPUTS
+  Proof artifact hashes: PASS; accepted SMT queries replayed: 0.
+  original: top renamed to kernel; equivalence certified.
+  optimized: top renamed to kernel; equivalence certified.
+
+[4/7] COMPILED-C EDGE/RANDOM CHECKS
+  PASS: 264 typed edge/random comparisons
+  These checks supplement the formal proof; they do not replace it.
+
+[5/7] HLS GENERATION AND RTL SIMULATION
+  Fresh hardware runs; up to 2 designs in parallel. Target: Nangate45, 10 ns.
+  Each design continues from Bambu/Verilator into Yosys and OpenSTA independently.
+  [original] Bambu + Verilator: running...
+  [optimized] Bambu + Verilator: running...
+  [original] RTL simulation: PASS, 16 transactions, 1 average cycles (range 1..1)
+  [optimized] RTL simulation: PASS, 16 transactions, 1 average cycles (range 1..1)
+
+[6/7] CELL MAPPING AND STATIC TIMING (per design)
+  [optimized] Yosys mapping: running...
+  [original] Yosys mapping: running...
+  [original] Mapped area: 0.532 um^2
+  [optimized] Mapped area: 0.532 um^2
+  [original] OpenSTA: running...
+  [optimized] OpenSTA: running...
+  [original] Critical-path delay: 0.054166 ns; meets 10 ns: True
+  [optimized] Critical-path delay: 0.054166 ns; meets 10 ns: True
+  Hardware input/testbench/configuration checks: PASS. RTL transactions: 16 + 16 PASS.
+
+[7/7] MEASURED QUALITY COMPARISON
+  Metric                                 Original    Optimized     Change
+  Cell area (um^2)                          0.532        0.532     +0.00%
+  Execution latency (cycles)                    1            1     +0.00%
+  Execution latency at 10 ns (ns)              10           10     +0.00%
+  Critical-path delay (ns)               0.054166     0.054166     +0.00%
+  Area x execution latency                   5.32         5.32     +0.00%
+  Latency speedup: 1.000x
+  Area x latency outcome: UNCHANGED
+  Critical-path delay is distinct from execution latency. Estimates are pre-layout ASIC values.
+
+Run status: complete
+Summary: C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\demo_pipeline_u64_validation\run_96b4ba90a519\summary.json
+Latest-run pointer: C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\demo_pipeline_u64_validation\latest.json

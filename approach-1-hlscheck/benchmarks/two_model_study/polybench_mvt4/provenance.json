@@ -1,0 +1,12 @@
+{
+  "id": "polybench_mvt4",
+  "source": "benchmarks/two_model_study/polybench_mvt4/original.c",
+  "function": "kernel",
+  "original_sha256": "fcc767d4f17abc039a77517a8cddd0266cc67e98d03410848b90ce727475a9f4",
+  "suite": "HLS-Eval / PolyBench",
+  "upstream_source": "datasets/hls-eval/hls_eval_data/polybench/mvt/mvt.cpp",
+  "upstream_sha256": "6dc052dde05f908936429a70afced4bf502d519b0bf43a475c5a3a90cccad235",
+  "preparation": "Adapt PolyBench source through HLS-Eval: replace double with uint32_t, flatten row-major arrays, reduce dimensions to4, rename kernel_mvt to kernel, remove external includes and HLS pragma, and use literal loop limits. Dimension40 becomes4. The two accumulations retain their initial x1/x2 values; y_1,y_2 and matrix remain observable and unchanged. This unsigned integer benchmark is a new domain; no equivalence to upstream floating point is claimed.",
+  "category": "adapted_kernel",
+  "integer_domain": "All data are unsigned32 with modulo-2^32 arithmetic; valid pairwise-nonoverlapping parameter arrays; unchanged array elements remain observable."
+}

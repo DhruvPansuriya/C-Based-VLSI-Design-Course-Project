@@ -1,0 +1,1205 @@
+[
+  {
+    "coverage": {
+      "files": {
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c": {
+          "coverage_stats": {
+            "covered_lines": 10,
+            "total_hits": 80
+          },
+          "covered_lines": {
+            "15": {
+              "covered": true,
+              "hits": 32,
+              "type": "execution"
+            },
+            "25": {
+              "covered": true,
+              "hits": 8,
+              "type": "execution"
+            },
+            "26": {
+              "covered": true,
+              "hits": 32,
+              "type": "execution"
+            },
+            "35": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "52": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "54": {
+              "covered": true,
+              "hits": 2,
+              "type": "execution"
+            },
+            "71": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "72": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "73": {
+              "covered": true,
+              "hits": 1,
+              "type": "violation"
+            },
+            "75": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            }
+          }
+        }
+      }
+    },
+    "initial_values": {
+      "__hlscheck_input_1": {
+        "name": "__hlscheck_input_1",
+        "type": "unsigned",
+        "value": "5"
+      },
+      "__hlscheck_left_2": {
+        "name": "__hlscheck_left_2",
+        "type": "array",
+        "value": "{ 22, 22, 22, 22, 22, 26, 22, 22 }"
+      },
+      "__hlscheck_right_0": {
+        "name": "__hlscheck_right_0",
+        "type": "array",
+        "value": "{ 3264278694, 3264278694, 3264278694, 3264278694, 3264278694, 0, 3264278694, 3264278694 }"
+      },
+      "__hlscheck_right_2": {
+        "name": "__hlscheck_right_2",
+        "type": "array",
+        "value": "{ 0, 0, 0, 0, 0, 0, 0, 0 }"
+      }
+    },
+    "source_files": {
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c": [
+        "",
+        "_Static_assert(sizeof(char)==1 && sizeof(short)==2 && sizeof(int)==4 &&",
+        "               sizeof(long)==4 && sizeof(long long)==8 && sizeof(void*)==4, \"HLSCheck ILP32 ABI\");",
+        "_Static_assert((char)-1 < 0, \"HLSCheck requires signed plain char\");",
+        "_Static_assert((unsigned char)-1 == 255, \"HLSCheck requires 8-bit bytes\");",
+        "",
+        "extern void __ESBMC_assert(_Bool, const char *);",
+        "extern void __ESBMC_assume(_Bool);",
+        "extern unsigned int __hlscheck_nondet_0(void);",
+        "extern unsigned int __hlscheck_nondet_1(void);",
+        "extern unsigned int __hlscheck_nondet_2(void);",
+        "unsigned int __hlscheck_original(unsigned int a[8], unsigned int index, unsigned int out[8])",
+        "{",
+        "  for (int i = 0; i < 8; ++i)",
+        "    out[i] = a[i] * 13u;",
+        "",
+        "  return out[index & 7u];",
+        "}",
+        "",
+        "",
+        "unsigned int __hlscheck_candidate(unsigned int a[8], unsigned int index, unsigned int out[8])",
+        "{",
+        "  for (int j = 7; j >= 0; --j)",
+        "  {",
+        "    unsigned int v = a[j];",
+        "    out[j] = ((v << 3) + (v << 2)) + v;",
+        "  }",
+        "",
+        "  return (a[index % 8u] * 13u) + 1u;",
+        "}",
+        "",
+        "",
+        "int main(void) {",
+        "unsigned int __hlscheck_input_0[8]={__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0()};",
+        "unsigned int __hlscheck_left_0[8], __hlscheck_right_0[8];",
+        "__hlscheck_left_0[0]=__hlscheck_input_0[0];",
+        "__hlscheck_right_0[0]=__hlscheck_left_0[0];",
+        "__hlscheck_left_0[1]=__hlscheck_input_0[1];",
+        "__hlscheck_right_0[1]=__hlscheck_left_0[1];",
+        "__hlscheck_left_0[2]=__hlscheck_input_0[2];",
+        "__hlscheck_right_0[2]=__hlscheck_left_0[2];",
+        "__hlscheck_left_0[3]=__hlscheck_input_0[3];",
+        "__hlscheck_right_0[3]=__hlscheck_left_0[3];",
+        "__hlscheck_left_0[4]=__hlscheck_input_0[4];",
+        "__hlscheck_right_0[4]=__hlscheck_left_0[4];",
+        "__hlscheck_left_0[5]=__hlscheck_input_0[5];",
+        "__hlscheck_right_0[5]=__hlscheck_left_0[5];",
+        "__hlscheck_left_0[6]=__hlscheck_input_0[6];",
+        "__hlscheck_right_0[6]=__hlscheck_left_0[6];",
+        "__hlscheck_left_0[7]=__hlscheck_input_0[7];",
+        "__hlscheck_right_0[7]=__hlscheck_left_0[7];",
+        "unsigned int __hlscheck_input_1=__hlscheck_nondet_1();",
+        "unsigned int __hlscheck_input_2[8]={__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2()};",
+        "unsigned int __hlscheck_left_2[8], __hlscheck_right_2[8];",
+        "__hlscheck_left_2[0]=__hlscheck_input_2[0];",
+        "__hlscheck_right_2[0]=__hlscheck_left_2[0];",
+        "__hlscheck_left_2[1]=__hlscheck_input_2[1];",
+        "__hlscheck_right_2[1]=__hlscheck_left_2[1];",
+        "__hlscheck_left_2[2]=__hlscheck_input_2[2];",
+        "__hlscheck_right_2[2]=__hlscheck_left_2[2];",
+        "__hlscheck_left_2[3]=__hlscheck_input_2[3];",
+        "__hlscheck_right_2[3]=__hlscheck_left_2[3];",
+        "__hlscheck_left_2[4]=__hlscheck_input_2[4];",
+        "__hlscheck_right_2[4]=__hlscheck_left_2[4];",
+        "__hlscheck_left_2[5]=__hlscheck_input_2[5];",
+        "__hlscheck_right_2[5]=__hlscheck_left_2[5];",
+        "__hlscheck_left_2[6]=__hlscheck_input_2[6];",
+        "__hlscheck_right_2[6]=__hlscheck_left_2[6];",
+        "__hlscheck_left_2[7]=__hlscheck_input_2[7];",
+        "__hlscheck_right_2[7]=__hlscheck_left_2[7];",
+        "unsigned int __hlscheck_left_return=__hlscheck_original(__hlscheck_left_0,__hlscheck_input_1,__hlscheck_left_2);",
+        "unsigned int __hlscheck_right_return=__hlscheck_candidate(__hlscheck_right_0,__hlscheck_input_1,__hlscheck_right_2);",
+        "__ESBMC_assert((__hlscheck_left_0[0]==__hlscheck_right_0[0]) && (__hlscheck_left_0[1]==__hlscheck_right_0[1]) && (__hlscheck_left_0[2]==__hlscheck_right_0[2]) && (__hlscheck_left_0[3]==__hlscheck_right_0[3]) && (__hlscheck_left_0[4]==__hlscheck_right_0[4]) && (__hlscheck_left_0[5]==__hlscheck_right_0[5]) && (__hlscheck_left_0[6]==__hlscheck_right_0[6]) && (__hlscheck_left_0[7]==__hlscheck_right_0[7]) && (__hlscheck_left_2[0]==__hlscheck_right_2[0]) && (__hlscheck_left_2[1]==__hlscheck_right_2[1]) && (__hlscheck_left_2[2]==__hlscheck_right_2[2]) && (__hlscheck_left_2[3]==__hlscheck_right_2[3]) && (__hlscheck_left_2[4]==__hlscheck_right_2[4]) && (__hlscheck_left_2[5]==__hlscheck_right_2[5]) && (__hlscheck_left_2[6]==__hlscheck_right_2[6]) && (__hlscheck_left_2[7]==__hlscheck_right_2[7]) && (__hlscheck_left_return==__hlscheck_right_return),\"EQUIV:observables\");",
+        "return 0;",
+        "}"
+      ]
+    },
+    "status": "violation",
+    "steps": [
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0",
+          "lhs_type": "array",
+          "rhs": "{ 3264278694, 3264278694, 3264278694, 3264278694, 3264278694, 0, 3264278694, 3264278694 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "main",
+        "line": "35",
+        "step_number": 0,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_input_1",
+          "lhs_type": "unsigned",
+          "rhs": "5",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "main",
+        "line": "52",
+        "step_number": 1,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_2",
+          "lhs_type": "array",
+          "rhs": "{ 22, 22, 22, 22, 22, 26, 22, 22 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "main",
+        "line": "54",
+        "step_number": 2,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0, 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "main",
+        "line": "54",
+        "step_number": 3,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "325",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 4,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "325",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 5,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "325",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 6,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "325",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 7,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "7241728",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 8,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "7241728",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 9,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "7241728",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 10,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "7241728",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 11,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "553647997",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 12,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "553647997",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 13,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "553647997",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 14,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "553647997",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 15,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "3087008784",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 16,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "3087008784",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 17,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "3087008784",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 18,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "3087008784",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 19,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "3346080350",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 20,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "3346080350",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 21,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "3346080350",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 22,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "3346080350",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 23,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "26",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 24,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "26",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 25,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "26",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 26,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "26",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 27,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "3780917358",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 28,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "3780917358",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 29,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "3780917358",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 30,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "3780917358",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 31,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "3489660967",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 32,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "3489660967",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 33,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "3489660967",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 34,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[i]",
+          "lhs_type": "unsigned",
+          "rhs": "3489660967",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_original",
+        "line": "15",
+        "step_number": 35,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_return",
+          "lhs_type": "unsigned",
+          "rhs": "26",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "main",
+        "line": "71",
+        "step_number": 36,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "v",
+          "lhs_type": "unsigned",
+          "rhs": "268435459",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "25",
+        "step_number": 37,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "3489660967",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 38,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "3489660967",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 39,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "3489660967",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 40,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "3489660967",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 41,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "v",
+          "lhs_type": "unsigned",
+          "rhs": "3264278694",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "25",
+        "step_number": 42,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "3780917358",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 43,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "3780917358",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 44,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "3780917358",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 45,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "3780917358",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 46,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "v",
+          "lhs_type": "unsigned",
+          "rhs": "2",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "25",
+        "step_number": 47,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "26",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 48,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "26",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 49,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "26",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 50,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "26",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 51,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "v",
+          "lhs_type": "unsigned",
+          "rhs": "2570065494",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "25",
+        "step_number": 52,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "3346080350",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 53,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "3346080350",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 54,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "3346080350",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 55,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "3346080350",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 56,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "v",
+          "lhs_type": "unsigned",
+          "rhs": "2550136912",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "25",
+        "step_number": 57,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "3087008784",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 58,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "3087008784",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 59,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "3087008784",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 60,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "3087008784",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 61,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "v",
+          "lhs_type": "unsigned",
+          "rhs": "2685645105",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "25",
+        "step_number": 62,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "553647997",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 63,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "553647997",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 64,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "553647997",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 65,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "553647997",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 66,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "v",
+          "lhs_type": "unsigned",
+          "rhs": "557056",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "25",
+        "step_number": 67,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "7241728",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 68,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "7241728",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 69,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "7241728",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 70,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "7241728",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 71,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "v",
+          "lhs_type": "unsigned",
+          "rhs": "25",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "25",
+        "step_number": 72,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "325",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 73,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "325",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 74,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "325",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 75,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[j]",
+          "lhs_type": "unsigned",
+          "rhs": "325",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "26",
+        "step_number": 76,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_return",
+          "lhs_type": "unsigned",
+          "rhs": "27",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "main",
+        "line": "72",
+        "step_number": 77,
+        "type": "assignment"
+      },
+      {
+        "assertion": {
+          "comment": "EQUIV:observables",
+          "guard": "__hlscheck_left_0[0] == __hlscheck_right_0[0] && __hlscheck_left_0[1] == __hlscheck_right_0[1] && __hlscheck_left_0[2] == __hlscheck_right_0[2] && __hlscheck_left_0[3] == __hlscheck_right_0[3] && __hlscheck_left_0[4] == __hlscheck_right_0[4] && __hlscheck_left_0[5] == __hlscheck_right_0[5] && __hlscheck_left_0[6] == __hlscheck_right_0[6] && __hlscheck_left_0[7] == __hlscheck_right_0[7] && __hlscheck_left_2[0] == __hlscheck_right_2[0] && __hlscheck_left_2[1] == __hlscheck_right_2[1] && __hlscheck_left_2[2] == __hlscheck_right_2[2] && __hlscheck_left_2[3] == __hlscheck_right_2[3] && __hlscheck_left_2[4] == __hlscheck_right_2[4] && __hlscheck_left_2[5] == __hlscheck_right_2[5] && __hlscheck_left_2[6] == __hlscheck_right_2[6] && __hlscheck_left_2[7] == __hlscheck_right_2[7] && __hlscheck_left_return == __hlscheck_right_return",
+          "violated": true
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "main",
+        "line": "73",
+        "message": "EQUIV:observables",
+        "step_number": 78,
+        "type": "violation"
+      },
+      {
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+        "function": "main",
+        "line": "75",
+        "message": "Assumption restriction",
+        "step_number": 79,
+        "type": "assume"
+      }
+    ]
+  }
+]

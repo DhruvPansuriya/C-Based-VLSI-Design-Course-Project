@@ -240,9 +240,10 @@ def build(out: Path, limit: int) -> None:
     data_rows = "".join(f"<tr><td>{link_of(p)}</td><td>{t}</td><td>{esc(k)}</td></tr>" for p, t, k in DATA_MAP)
     run_folder_rows = "".join(f"<tr><td><code>{esc(p)}</code></td><td>{esc(t)}</td></tr>" for p, t in RUN_FOLDERS)
     docs = ROOT / "docs/report"
-    doc_links = " &middot; ".join(f'<a href="{rel(docs / f, out_dir)}">{esc(n)}</a>' for f, n in [
-        ("VWE_report.pdf", "VWE report"), ("VWE_slides.pptx", "VWE slides"),
-        ("Approach1_report.pdf", "HLSCheck report"), ("HLSCheck_slides.pptx", "HLSCheck slides")])
+    hdocs = ROOT.parent / "approach-1-hlscheck/report"
+    doc_links = " &middot; ".join(f'<a href="{rel(d / f, out_dir)}">{esc(n)}</a>' for d, f, n in [
+        (docs, "VWE_report.pdf", "VWE report"), (docs, "VWE_slides.pptx", "VWE slides"),
+        (hdocs, "HLSCheck_report.pdf", "HLSCheck report"), (hdocs, "HLSCheck_slides.pptx", "HLSCheck slides")])
     dgdir = ROOT / "docs/demo_diagrams"
     figs = [("1_where_is_the_run.png", "1. Terminal STEP heading, phase, code file and run folder"),
             ("2_inside_one_proof.png", "2. Inside one proof: harness, SAT + Z3, witness, confirmations"),

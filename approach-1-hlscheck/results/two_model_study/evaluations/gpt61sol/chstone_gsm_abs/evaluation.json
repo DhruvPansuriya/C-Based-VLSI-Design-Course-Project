@@ -1,0 +1,36 @@
+{
+  "case": "chstone_gsm_abs",
+  "model": "gpt61sol",
+  "fingerprints": {
+    "original": "0ad38ffc272924b447237bb1559c92b171d3c843a2b58725e44c8c84099323ef",
+    "candidate": "892a70d20bc62568d91391573b113ab8304acb1dc30febf455582fe79ef1d291",
+    "runner": "baa1dfcb671df40a626778c0c623d231006ebb5f4ae4020523a3dce4604c1f80",
+    "checker": {
+      "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+      "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307",
+      "evidence.py": "eaf1b8fd1c130609bfdd43e8821f4458c494341a40d39b3c60cd0c28edb72ac5",
+      "frontend.py": "c09f8778dbb1751a3c55c40b5871b65740e028f20d6601c5a108124d10c240a9",
+      "hybrid.py": "d1ccb49365d9731a7ab638c150c420c7efa04108c697df4c66cd3895f738b059",
+      "miter.py": "77d41c642d8fc5af346e865fd033a92791830cb61bc252792180ef077688831d",
+      "pipeline.py": "a4b504daefbd3524a1d0a6fc5e872fd2a75b469c869cfb2c33a35711fa731567",
+      "relational.py": "82a63ee02a1ac6d655d4c6011f45acfed7864d18cc02cdb2c329bf9ef0109618",
+      "__init__.py": "13da1587e29ffc5bd31bdc71a826330fefa412b8d37017a7dd4a8941e0a663bc",
+      "__main__.py": "e2f9b802af8cfddc46a121da3878a74ae5abd5ad64443b4b2dfc01d5b781c1e1"
+    }
+  },
+  "messages_sha256": "93cd59b74e0e0959a18d3aa31c3f1c61f83bcea7e61cd04f885c1c21655f5b15",
+  "syntax_compiles": true,
+  "finish_reason": "complete",
+  "api_charge_usd": 0,
+  "status": "equivalent",
+  "reason": null,
+  "verification_seconds": 0.701699,
+  "ast_unchanged": false,
+  "smt_dependencies_replayed": true,
+  "native": {
+    "passed": true,
+    "trials": 264,
+    "harness_sha256": "1192760c116fa6798e3963baa41668b51557587bcbaf54cfdc414b47718fcfe5",
+    "scope": "Compiled exact-width full-range typed edge/random inputs, supplementary to the formal proof"
+  }
+}

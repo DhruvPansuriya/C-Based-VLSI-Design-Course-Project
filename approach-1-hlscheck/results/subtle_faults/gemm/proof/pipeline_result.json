@@ -1,0 +1,1336 @@
+{
+  "status": "not_equivalent",
+  "assumptions": [
+    "32-bit int and unsigned int; uint32_t is unsigned int",
+    "All array parameters are valid, separately allocated, and nonoverlapping",
+    "Functional equality at function completion; no cycle-level RTL guarantee"
+  ],
+  "execution_steps": 726,
+  "paths": {
+    "original": 1,
+    "candidate": 1
+  },
+  "z3_version": "5.1.0",
+  "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+  "component_lemmas": [
+    {
+      "index": 1,
+      "status": "sat",
+      "variables": [
+        "arg0_1",
+        "arg1_1",
+        "arg1_4"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma001.smt2"
+    },
+    {
+      "index": 2,
+      "status": "sat",
+      "variables": [
+        "arg0_2",
+        "arg1_2",
+        "arg1_8"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma002.smt2"
+    },
+    {
+      "index": 3,
+      "status": "sat",
+      "variables": [
+        "arg0_3",
+        "arg1_12",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma003.smt2"
+    },
+    {
+      "index": 4,
+      "status": "sat",
+      "variables": [
+        "arg0_0",
+        "arg1_1",
+        "arg1_4"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma004.smt2"
+    },
+    {
+      "index": 5,
+      "status": "sat",
+      "variables": [
+        "arg0_2",
+        "arg1_6",
+        "arg1_9"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma005.smt2"
+    },
+    {
+      "index": 6,
+      "status": "sat",
+      "variables": [
+        "arg0_3",
+        "arg1_13",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma006.smt2"
+    },
+    {
+      "index": 7,
+      "status": "sat",
+      "variables": [
+        "arg0_0",
+        "arg1_2",
+        "arg1_8"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma007.smt2"
+    },
+    {
+      "index": 8,
+      "status": "sat",
+      "variables": [
+        "arg0_1",
+        "arg1_6",
+        "arg1_9"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma008.smt2"
+    },
+    {
+      "index": 9,
+      "status": "sat",
+      "variables": [
+        "arg0_3",
+        "arg1_11",
+        "arg1_14"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma009.smt2"
+    },
+    {
+      "index": 10,
+      "status": "sat",
+      "variables": [
+        "arg0_0",
+        "arg1_12",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma010.smt2"
+    },
+    {
+      "index": 11,
+      "status": "sat",
+      "variables": [
+        "arg0_1",
+        "arg1_13",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma011.smt2"
+    },
+    {
+      "index": 12,
+      "status": "sat",
+      "variables": [
+        "arg0_2",
+        "arg1_11",
+        "arg1_14"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma012.smt2"
+    },
+    {
+      "index": 13,
+      "status": "sat",
+      "variables": [
+        "arg0_5",
+        "arg1_1",
+        "arg1_4"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma013.smt2"
+    },
+    {
+      "index": 14,
+      "status": "sat",
+      "variables": [
+        "arg0_6",
+        "arg1_2",
+        "arg1_8"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma014.smt2"
+    },
+    {
+      "index": 15,
+      "status": "sat",
+      "variables": [
+        "arg0_7",
+        "arg1_12",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma015.smt2"
+    },
+    {
+      "index": 16,
+      "status": "sat",
+      "variables": [
+        "arg0_4",
+        "arg1_1",
+        "arg1_4"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma016.smt2"
+    },
+    {
+      "index": 17,
+      "status": "sat",
+      "variables": [
+        "arg0_6",
+        "arg1_6",
+        "arg1_9"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma017.smt2"
+    },
+    {
+      "index": 18,
+      "status": "sat",
+      "variables": [
+        "arg0_7",
+        "arg1_13",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma018.smt2"
+    },
+    {
+      "index": 19,
+      "status": "sat",
+      "variables": [
+        "arg0_4",
+        "arg1_2",
+        "arg1_8"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma019.smt2"
+    },
+    {
+      "index": 20,
+      "status": "sat",
+      "variables": [
+        "arg0_5",
+        "arg1_6",
+        "arg1_9"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma020.smt2"
+    },
+    {
+      "index": 21,
+      "status": "sat",
+      "variables": [
+        "arg0_7",
+        "arg1_11",
+        "arg1_14"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma021.smt2"
+    },
+    {
+      "index": 22,
+      "status": "sat",
+      "variables": [
+        "arg0_4",
+        "arg1_12",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma022.smt2"
+    },
+    {
+      "index": 23,
+      "status": "sat",
+      "variables": [
+        "arg0_5",
+        "arg1_13",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma023.smt2"
+    },
+    {
+      "index": 24,
+      "status": "sat",
+      "variables": [
+        "arg0_6",
+        "arg1_11",
+        "arg1_14"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma024.smt2"
+    },
+    {
+      "index": 25,
+      "status": "sat",
+      "variables": [
+        "arg0_10",
+        "arg1_2",
+        "arg1_8"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma025.smt2"
+    },
+    {
+      "index": 26,
+      "status": "sat",
+      "variables": [
+        "arg0_11",
+        "arg1_12",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma026.smt2"
+    },
+    {
+      "index": 27,
+      "status": "sat",
+      "variables": [
+        "arg0_9",
+        "arg1_1",
+        "arg1_4"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma027.smt2"
+    },
+    {
+      "index": 28,
+      "status": "sat",
+      "variables": [
+        "arg0_10",
+        "arg1_6",
+        "arg1_9"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma028.smt2"
+    },
+    {
+      "index": 29,
+      "status": "sat",
+      "variables": [
+        "arg0_11",
+        "arg1_13",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma029.smt2"
+    },
+    {
+      "index": 30,
+      "status": "sat",
+      "variables": [
+        "arg0_8",
+        "arg1_1",
+        "arg1_4"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma030.smt2"
+    },
+    {
+      "index": 31,
+      "status": "sat",
+      "variables": [
+        "arg0_11",
+        "arg1_11",
+        "arg1_14"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma031.smt2"
+    },
+    {
+      "index": 32,
+      "status": "sat",
+      "variables": [
+        "arg0_8",
+        "arg1_2",
+        "arg1_8"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma032.smt2"
+    },
+    {
+      "index": 33,
+      "status": "sat",
+      "variables": [
+        "arg0_9",
+        "arg1_6",
+        "arg1_9"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma033.smt2"
+    },
+    {
+      "index": 34,
+      "status": "sat",
+      "variables": [
+        "arg0_10",
+        "arg1_11",
+        "arg1_14"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma034.smt2"
+    },
+    {
+      "index": 35,
+      "status": "sat",
+      "variables": [
+        "arg0_8",
+        "arg1_12",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma035.smt2"
+    },
+    {
+      "index": 36,
+      "status": "sat",
+      "variables": [
+        "arg0_9",
+        "arg1_13",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma036.smt2"
+    },
+    {
+      "index": 37,
+      "status": "sat",
+      "variables": [
+        "arg0_13",
+        "arg1_1",
+        "arg1_4"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma037.smt2"
+    },
+    {
+      "index": 38,
+      "status": "sat",
+      "variables": [
+        "arg0_14",
+        "arg1_2",
+        "arg1_8"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma038.smt2"
+    },
+    {
+      "index": 39,
+      "status": "sat",
+      "variables": [
+        "arg0_15",
+        "arg1_12",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma039.smt2"
+    },
+    {
+      "index": 40,
+      "status": "sat",
+      "variables": [
+        "arg0_12",
+        "arg1_1",
+        "arg1_4"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma040.smt2"
+    },
+    {
+      "index": 41,
+      "status": "sat",
+      "variables": [
+        "arg0_14",
+        "arg1_6",
+        "arg1_9"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma041.smt2"
+    },
+    {
+      "index": 42,
+      "status": "sat",
+      "variables": [
+        "arg0_15",
+        "arg1_13",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma042.smt2"
+    },
+    {
+      "index": 43,
+      "status": "sat",
+      "variables": [
+        "arg0_12",
+        "arg1_2",
+        "arg1_8"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma043.smt2"
+    },
+    {
+      "index": 44,
+      "status": "sat",
+      "variables": [
+        "arg0_13",
+        "arg1_6",
+        "arg1_9"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma044.smt2"
+    },
+    {
+      "index": 45,
+      "status": "sat",
+      "variables": [
+        "arg0_15",
+        "arg1_11",
+        "arg1_14"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma045.smt2"
+    },
+    {
+      "index": 46,
+      "status": "sat",
+      "variables": [
+        "arg0_12",
+        "arg1_12",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma046.smt2"
+    },
+    {
+      "index": 47,
+      "status": "sat",
+      "variables": [
+        "arg0_13",
+        "arg1_13",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma047.smt2"
+    },
+    {
+      "index": 48,
+      "status": "sat",
+      "variables": [
+        "arg0_14",
+        "arg1_11",
+        "arg1_14"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma048.smt2"
+    }
+  ],
+  "main_query_requires_component_lemmas": false,
+  "counterexample": {
+    "m1": [
+      1286288037,
+      3813651313,
+      1193192559,
+      27045738,
+      1861245184,
+      67000169,
+      3271928058,
+      1318084504,
+      3296749597,
+      2300621481,
+      2963727016,
+      1185950683,
+      2720534758,
+      2789269877,
+      3332304034,
+      1302276553
+    ],
+    "m2": [
+      0,
+      3355547151,
+      2820779004,
+      2822684721,
+      3086967468,
+      0,
+      399867904,
+      38633764,
+      1000494079,
+      1553865695,
+      0,
+      2401382144,
+      213303351,
+      1286758400,
+      670931700,
+      0
+    ],
+    "prod": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "original_outputs": {
+    "m1": [
+      1286288037,
+      3813651313,
+      1193192559,
+      27045738,
+      1861245184,
+      67000169,
+      3271928058,
+      1318084504,
+      3296749597,
+      2300621481,
+      2963727016,
+      1185950683,
+      2720534758,
+      2789269877,
+      3332304034,
+      1302276553
+    ],
+    "m2": [
+      0,
+      3355547151,
+      2820779004,
+      2822684721,
+      3086967468,
+      0,
+      399867904,
+      38633764,
+      1000494079,
+      1553865695,
+      0,
+      2401382144,
+      213303351,
+      1286758400,
+      670931700,
+      0
+    ],
+    "prod": [
+      3340091715,
+      2587840348,
+      1023116916,
+      599457657,
+      274126138,
+      97568454,
+      3933251808,
+      73409220,
+      1714136305,
+      575889419,
+      3847939656,
+      2433863249,
+      1634351657,
+      804542616,
+      2951709180,
+      65938298
+    ]
+  },
+  "candidate_outputs": {
+    "m1": [
+      1286288037,
+      3813651313,
+      1193192559,
+      27045738,
+      1861245184,
+      67000169,
+      3271928058,
+      1318084504,
+      3296749597,
+      2300621481,
+      2963727016,
+      1185950683,
+      2720534758,
+      2789269877,
+      3332304034,
+      1302276553
+    ],
+    "m2": [
+      0,
+      3355547151,
+      2820779004,
+      2822684721,
+      3086967468,
+      0,
+      399867904,
+      38633764,
+      1000494079,
+      1553865695,
+      0,
+      2401382144,
+      213303351,
+      1286758400,
+      670931700,
+      0
+    ],
+    "prod": [
+      1881714477,
+      4272276932,
+      4290617802,
+      1603805503,
+      1951876439,
+      3527267680,
+      3633628791,
+      273281352,
+      3242096690,
+      1524536136,
+      1439155482,
+      3929839195,
+      3392907468,
+      2977796044,
+      533662213,
+      4137615314
+    ]
+  },
+  "elapsed_seconds": 7.416687,
+  "backend": "hlscheck/Z3",
+  "fallback_used": false,
+  "initial_stage": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 726,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [
+      {
+        "index": 1,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg1_1",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma001.smt2"
+      },
+      {
+        "index": 2,
+        "status": "sat",
+        "variables": [
+          "arg0_2",
+          "arg1_2",
+          "arg1_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma002.smt2"
+      },
+      {
+        "index": 3,
+        "status": "sat",
+        "variables": [
+          "arg0_3",
+          "arg1_12",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma003.smt2"
+      },
+      {
+        "index": 4,
+        "status": "sat",
+        "variables": [
+          "arg0_0",
+          "arg1_1",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma004.smt2"
+      },
+      {
+        "index": 5,
+        "status": "sat",
+        "variables": [
+          "arg0_2",
+          "arg1_6",
+          "arg1_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma005.smt2"
+      },
+      {
+        "index": 6,
+        "status": "sat",
+        "variables": [
+          "arg0_3",
+          "arg1_13",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma006.smt2"
+      },
+      {
+        "index": 7,
+        "status": "sat",
+        "variables": [
+          "arg0_0",
+          "arg1_2",
+          "arg1_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma007.smt2"
+      },
+      {
+        "index": 8,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg1_6",
+          "arg1_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma008.smt2"
+      },
+      {
+        "index": 9,
+        "status": "sat",
+        "variables": [
+          "arg0_3",
+          "arg1_11",
+          "arg1_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma009.smt2"
+      },
+      {
+        "index": 10,
+        "status": "sat",
+        "variables": [
+          "arg0_0",
+          "arg1_12",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma010.smt2"
+      },
+      {
+        "index": 11,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg1_13",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma011.smt2"
+      },
+      {
+        "index": 12,
+        "status": "sat",
+        "variables": [
+          "arg0_2",
+          "arg1_11",
+          "arg1_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma012.smt2"
+      },
+      {
+        "index": 13,
+        "status": "sat",
+        "variables": [
+          "arg0_5",
+          "arg1_1",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma013.smt2"
+      },
+      {
+        "index": 14,
+        "status": "sat",
+        "variables": [
+          "arg0_6",
+          "arg1_2",
+          "arg1_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma014.smt2"
+      },
+      {
+        "index": 15,
+        "status": "sat",
+        "variables": [
+          "arg0_7",
+          "arg1_12",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma015.smt2"
+      },
+      {
+        "index": 16,
+        "status": "sat",
+        "variables": [
+          "arg0_4",
+          "arg1_1",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma016.smt2"
+      },
+      {
+        "index": 17,
+        "status": "sat",
+        "variables": [
+          "arg0_6",
+          "arg1_6",
+          "arg1_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma017.smt2"
+      },
+      {
+        "index": 18,
+        "status": "sat",
+        "variables": [
+          "arg0_7",
+          "arg1_13",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma018.smt2"
+      },
+      {
+        "index": 19,
+        "status": "sat",
+        "variables": [
+          "arg0_4",
+          "arg1_2",
+          "arg1_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma019.smt2"
+      },
+      {
+        "index": 20,
+        "status": "sat",
+        "variables": [
+          "arg0_5",
+          "arg1_6",
+          "arg1_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma020.smt2"
+      },
+      {
+        "index": 21,
+        "status": "sat",
+        "variables": [
+          "arg0_7",
+          "arg1_11",
+          "arg1_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma021.smt2"
+      },
+      {
+        "index": 22,
+        "status": "sat",
+        "variables": [
+          "arg0_4",
+          "arg1_12",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma022.smt2"
+      },
+      {
+        "index": 23,
+        "status": "sat",
+        "variables": [
+          "arg0_5",
+          "arg1_13",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma023.smt2"
+      },
+      {
+        "index": 24,
+        "status": "sat",
+        "variables": [
+          "arg0_6",
+          "arg1_11",
+          "arg1_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma024.smt2"
+      },
+      {
+        "index": 25,
+        "status": "sat",
+        "variables": [
+          "arg0_10",
+          "arg1_2",
+          "arg1_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma025.smt2"
+      },
+      {
+        "index": 26,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg1_12",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma026.smt2"
+      },
+      {
+        "index": 27,
+        "status": "sat",
+        "variables": [
+          "arg0_9",
+          "arg1_1",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma027.smt2"
+      },
+      {
+        "index": 28,
+        "status": "sat",
+        "variables": [
+          "arg0_10",
+          "arg1_6",
+          "arg1_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma028.smt2"
+      },
+      {
+        "index": 29,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg1_13",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma029.smt2"
+      },
+      {
+        "index": 30,
+        "status": "sat",
+        "variables": [
+          "arg0_8",
+          "arg1_1",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma030.smt2"
+      },
+      {
+        "index": 31,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg1_11",
+          "arg1_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma031.smt2"
+      },
+      {
+        "index": 32,
+        "status": "sat",
+        "variables": [
+          "arg0_8",
+          "arg1_2",
+          "arg1_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma032.smt2"
+      },
+      {
+        "index": 33,
+        "status": "sat",
+        "variables": [
+          "arg0_9",
+          "arg1_6",
+          "arg1_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma033.smt2"
+      },
+      {
+        "index": 34,
+        "status": "sat",
+        "variables": [
+          "arg0_10",
+          "arg1_11",
+          "arg1_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma034.smt2"
+      },
+      {
+        "index": 35,
+        "status": "sat",
+        "variables": [
+          "arg0_8",
+          "arg1_12",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma035.smt2"
+      },
+      {
+        "index": 36,
+        "status": "sat",
+        "variables": [
+          "arg0_9",
+          "arg1_13",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma036.smt2"
+      },
+      {
+        "index": 37,
+        "status": "sat",
+        "variables": [
+          "arg0_13",
+          "arg1_1",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma037.smt2"
+      },
+      {
+        "index": 38,
+        "status": "sat",
+        "variables": [
+          "arg0_14",
+          "arg1_2",
+          "arg1_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma038.smt2"
+      },
+      {
+        "index": 39,
+        "status": "sat",
+        "variables": [
+          "arg0_15",
+          "arg1_12",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma039.smt2"
+      },
+      {
+        "index": 40,
+        "status": "sat",
+        "variables": [
+          "arg0_12",
+          "arg1_1",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma040.smt2"
+      },
+      {
+        "index": 41,
+        "status": "sat",
+        "variables": [
+          "arg0_14",
+          "arg1_6",
+          "arg1_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma041.smt2"
+      },
+      {
+        "index": 42,
+        "status": "sat",
+        "variables": [
+          "arg0_15",
+          "arg1_13",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma042.smt2"
+      },
+      {
+        "index": 43,
+        "status": "sat",
+        "variables": [
+          "arg0_12",
+          "arg1_2",
+          "arg1_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma043.smt2"
+      },
+      {
+        "index": 44,
+        "status": "sat",
+        "variables": [
+          "arg0_13",
+          "arg1_6",
+          "arg1_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma044.smt2"
+      },
+      {
+        "index": 45,
+        "status": "sat",
+        "variables": [
+          "arg0_15",
+          "arg1_11",
+          "arg1_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma045.smt2"
+      },
+      {
+        "index": 46,
+        "status": "sat",
+        "variables": [
+          "arg0_12",
+          "arg1_12",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma046.smt2"
+      },
+      {
+        "index": 47,
+        "status": "sat",
+        "variables": [
+          "arg0_13",
+          "arg1_13",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma047.smt2"
+      },
+      {
+        "index": 48,
+        "status": "sat",
+        "variables": [
+          "arg0_14",
+          "arg1_11",
+          "arg1_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\gemm\\proof\\symbolic.lemma048.smt2"
+      }
+    ],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "m1": [
+        1286288037,
+        3813651313,
+        1193192559,
+        27045738,
+        1861245184,
+        67000169,
+        3271928058,
+        1318084504,
+        3296749597,
+        2300621481,
+        2963727016,
+        1185950683,
+        2720534758,
+        2789269877,
+        3332304034,
+        1302276553
+      ],
+      "m2": [
+        0,
+        3355547151,
+        2820779004,
+        2822684721,
+        3086967468,
+        0,
+        399867904,
+        38633764,
+        1000494079,
+        1553865695,
+        0,
+        2401382144,
+        213303351,
+        1286758400,
+        670931700,
+        0
+      ],
+      "prod": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "original_outputs": {
+      "m1": [
+        1286288037,
+        3813651313,
+        1193192559,
+        27045738,
+        1861245184,
+        67000169,
+        3271928058,
+        1318084504,
+        3296749597,
+        2300621481,
+        2963727016,
+        1185950683,
+        2720534758,
+        2789269877,
+        3332304034,
+        1302276553
+      ],
+      "m2": [
+        0,
+        3355547151,
+        2820779004,
+        2822684721,
+        3086967468,
+        0,
+        399867904,
+        38633764,
+        1000494079,
+        1553865695,
+        0,
+        2401382144,
+        213303351,
+        1286758400,
+        670931700,
+        0
+      ],
+      "prod": [
+        3340091715,
+        2587840348,
+        1023116916,
+        599457657,
+        274126138,
+        97568454,
+        3933251808,
+        73409220,
+        1714136305,
+        575889419,
+        3847939656,
+        2433863249,
+        1634351657,
+        804542616,
+        2951709180,
+        65938298
+      ]
+    },
+    "candidate_outputs": {
+      "m1": [
+        1286288037,
+        3813651313,
+        1193192559,
+        27045738,
+        1861245184,
+        67000169,
+        3271928058,
+        1318084504,
+        3296749597,
+        2300621481,
+        2963727016,
+        1185950683,
+        2720534758,
+        2789269877,
+        3332304034,
+        1302276553
+      ],
+      "m2": [
+        0,
+        3355547151,
+        2820779004,
+        2822684721,
+        3086967468,
+        0,
+        399867904,
+        38633764,
+        1000494079,
+        1553865695,
+        0,
+        2401382144,
+        213303351,
+        1286758400,
+        670931700,
+        0
+      ],
+      "prod": [
+        1881714477,
+        4272276932,
+        4290617802,
+        1603805503,
+        1951876439,
+        3527267680,
+        3633628791,
+        273281352,
+        3242096690,
+        1524536136,
+        1439155482,
+        3929839195,
+        3392907468,
+        2977796044,
+        533662213,
+        4137615314
+      ]
+    },
+    "elapsed_seconds": 7.416687
+  }
+}

@@ -1,0 +1,807 @@
+ESBMC version 8.7.0 64-bit x86_64 windows
+
+Target: 32-bit little-endian i386-unknown-win32 with esbmclibc
+Parsing C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.180s
+GOTO program processing time: 0.004s
+Starting Bounded Model Checking
+Unwinding loop 4 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 9   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 10   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 11   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 12   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 13   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 14   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 15   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 16   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 17   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 18   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 19   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 20   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 21   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 22   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 23   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 24   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 25   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 26   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 27   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 28   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 29   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 30   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 31   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 32   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 3 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 27 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 27 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 27 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 27 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 27 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 27 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 27 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 27 column 3 function __hlscheck_candidate
+Symex completed in: 0.042s (617 assignments)
+Caching time: 0.000s (removed 16 assertions)
+Slicing time: 0.001s (removed 543 assignments)
+Generated 930 VCC(s), 57 remaining after simplification (58 assignments)
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 14 column 27 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 31 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 27 column 27 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 31 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 27 column 27 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 31 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 27 column 27 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 31 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 27 column 27 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 31 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 27 column 27 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 31 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 27 column 27 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 31 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 27 column 27 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 31 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 27 column 27 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'EQUIV:observables at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 174 column 1 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+
+[Counterexample]
+
+
+State 1 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 174 column 1 function main thread 0
+----------------------------------------------------
+Violated property:
+  file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c line 174 column 1 function main
+  EQUIV:observables
+  __hlscheck_left_0[0] == __hlscheck_right_0[0] && __hlscheck_left_0[1] == __hlscheck_right_0[1] && __hlscheck_left_0[2] == __hlscheck_right_0[2] && __hlscheck_left_0[3] == __hlscheck_right_0[3] && __hlscheck_left_0[4] == __hlscheck_right_0[4] && __hlscheck_left_0[5] == __hlscheck_right_0[5] && __hlscheck_left_0[6] == __hlscheck_right_0[6] && __hlscheck_left_0[7] == __hlscheck_right_0[7] && __hlscheck_left_0[8] == __hlscheck_right_0[8] && __hlscheck_left_0[9] == __hlscheck_right_0[9] && __hlscheck_left_0[10] == __hlscheck_right_0[10] && __hlscheck_left_0[11] == __hlscheck_right_0[11] && __hlscheck_left_0[12] == __hlscheck_right_0[12] && __hlscheck_left_0[13] == __hlscheck_right_0[13] && __hlscheck_left_0[14] == __hlscheck_right_0[14] && __hlscheck_left_0[15] == __hlscheck_right_0[15] && __hlscheck_left_0[16] == __hlscheck_right_0[16] && __hlscheck_left_0[17] == __hlscheck_right_0[17] && __hlscheck_left_0[18] == __hlscheck_right_0[18] && __hlscheck_left_0[19] == __hlscheck_right_0[19] && __hlscheck_left_0[20] == __hlscheck_right_0[20] && __hlscheck_left_0[21] == __hlscheck_right_0[21] && __hlscheck_left_0[22] == __hlscheck_right_0[22] && __hlscheck_left_0[23] == __hlscheck_right_0[23] && __hlscheck_left_0[24] == __hlscheck_right_0[24] && __hlscheck_left_0[25] == __hlscheck_right_0[25] && __hlscheck_left_0[26] == __hlscheck_right_0[26] && __hlscheck_left_0[27] == __hlscheck_right_0[27] && __hlscheck_left_0[28] == __hlscheck_right_0[28] && __hlscheck_left_0[29] == __hlscheck_right_0[29] && __hlscheck_left_0[30] == __hlscheck_right_0[30] && __hlscheck_left_0[31] == __hlscheck_right_0[31] && __hlscheck_left_1[0] == __hlscheck_right_1[0] && __hlscheck_left_1[1] == __hlscheck_right_1[1] && __hlscheck_left_1[2] == __hlscheck_right_1[2] && __hlscheck_left_1[3] == __hlscheck_right_1[3] && __hlscheck_left_1[4] == __hlscheck_right_1[4] && __hlscheck_left_1[5] == __hlscheck_right_1[5] && __hlscheck_left_1[6] == __hlscheck_right_1[6] && __hlscheck_left_1[7] == __hlscheck_right_1[7] && __hlscheck_left_1[8] == __hlscheck_right_1[8] && __hlscheck_left_1[9] == __hlscheck_right_1[9] && __hlscheck_left_1[10] == __hlscheck_right_1[10] && __hlscheck_left_1[11] == __hlscheck_right_1[11] && __hlscheck_left_1[12] == __hlscheck_right_1[12] && __hlscheck_left_1[13] == __hlscheck_right_1[13] && __hlscheck_left_1[14] == __hlscheck_right_1[14] && __hlscheck_left_1[15] == __hlscheck_right_1[15] && __hlscheck_left_1[16] == __hlscheck_right_1[16] && __hlscheck_left_1[17] == __hlscheck_right_1[17] && __hlscheck_left_1[18] == __hlscheck_right_1[18] && __hlscheck_left_1[19] == __hlscheck_right_1[19] && __hlscheck_left_1[20] == __hlscheck_right_1[20] && __hlscheck_left_1[21] == __hlscheck_right_1[21] && __hlscheck_left_1[22] == __hlscheck_right_1[22] && __hlscheck_left_1[23] == __hlscheck_right_1[23] && __hlscheck_left_1[24] == __hlscheck_right_1[24] && __hlscheck_left_1[25] == __hlscheck_right_1[25] && __hlscheck_left_1[26] == __hlscheck_right_1[26] && __hlscheck_left_1[27] == __hlscheck_right_1[27] && __hlscheck_left_1[28] == __hlscheck_right_1[28] && __hlscheck_left_1[29] == __hlscheck_right_1[29] && __hlscheck_left_1[30] == __hlscheck_right_1[30] && __hlscheck_left_1[31] == __hlscheck_right_1[31] && __hlscheck_left_return == __hlscheck_right_return
+
+BMC program time: 0.549s
+
+** Results:
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c, function __hlscheck_candidate
+  PASSED       [__hlscheck_candidate.uninitialised-variable.1]   line  27  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.1]      line  27  arithmetic overflow on add
+  PASSED       [__hlscheck_candidate.uninitialised-variable.2]   line  27  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.assertion.1]                line  29  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.1]    line  29  dereference failure: array bounds violated
+  PASSED       [__hlscheck_candidate.uninitialised-variable.3]   line  29  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.uninitialised-variable.4]   line  29  use of uninitialized variable: s0
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.2]      line  30  arithmetic overflow on add
+  PASSED       [__hlscheck_candidate.assertion.2]                line  30  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.2]    line  30  dereference failure: array bounds violated
+  PASSED       [__hlscheck_candidate.uninitialised-variable.5]   line  30  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.uninitialised-variable.6]   line  30  use of uninitialized variable: s1
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.3]      line  31  arithmetic overflow on add
+  PASSED       [__hlscheck_candidate.assertion.3]                line  31  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.3]    line  31  dereference failure: array bounds violated
+  PASSED       [__hlscheck_candidate.uninitialised-variable.7]   line  31  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.uninitialised-variable.8]   line  31  use of uninitialized variable: s2
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.4]      line  32  arithmetic overflow on add [!overflow("+", i, 2)]
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.5]      line  32  arithmetic overflow on add [!overflow("+", i, 3)]
+  PASSED       [__hlscheck_candidate.assertion.4]                line  32  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.4]    line  32  dereference failure: array bounds violated
+  PASSED       [__hlscheck_candidate.uninitialised-variable.9]   line  32  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.uninitialised-variable.10]  line  32  use of uninitialized variable: s3
+  PASSED       [__hlscheck_candidate.uninitialised-variable.11]  line  35  use of uninitialized variable: s0
+  PASSED       [__hlscheck_candidate.uninitialised-variable.12]  line  35  use of uninitialized variable: s1
+  PASSED       [__hlscheck_candidate.uninitialised-variable.13]  line  35  use of uninitialized variable: s2
+  PASSED       [__hlscheck_candidate.uninitialised-variable.14]  line  35  use of uninitialized variable: s3
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c, function __hlscheck_original
+  PASSED       [__hlscheck_original.uninitialised-variable.1]    line  14  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.arithmetic-overflow.1]       line  14  arithmetic overflow on add
+  PASSED       [__hlscheck_original.uninitialised-variable.2]    line  14  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.assertion.1]                 line  15  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_original.array-bounds-violated.1]     line  15  dereference failure: array bounds violated
+  PASSED       [__hlscheck_original.uninitialised-variable.3]    line  15  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.uninitialised-variable.4]    line  15  use of uninitialized variable: s
+  PASSED       [__hlscheck_original.uninitialised-variable.5]    line  17  use of uninitialized variable: s
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\large\dot_32_lane_fault\proof\residual_0\miter.c, function main
+  PASSED       [main.uninitialised-variable.1]                   line  42  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.2]                   line  43  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.3]                   line  44  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.4]                   line  45  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.5]                   line  46  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.6]                   line  47  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.7]                   line  48  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.8]                   line  49  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.9]                   line  50  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.10]                  line  51  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.11]                  line  52  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.12]                  line  53  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.13]                  line  54  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.14]                  line  55  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.15]                  line  56  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.16]                  line  57  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.17]                  line  58  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.18]                  line  59  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.19]                  line  60  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.20]                  line  61  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.21]                  line  62  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.22]                  line  63  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.23]                  line  64  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.24]                  line  65  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.25]                  line  66  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.26]                  line  67  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.27]                  line  68  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.28]                  line  69  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.29]                  line  70  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.30]                  line  71  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.31]                  line  72  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.32]                  line  73  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.33]                  line  74  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.34]                  line  75  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.35]                  line  76  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.36]                  line  77  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.37]                  line  78  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.38]                  line  79  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.39]                  line  80  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.40]                  line  81  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.41]                  line  82  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.42]                  line  83  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.43]                  line  84  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.44]                  line  85  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.45]                  line  86  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.46]                  line  87  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.47]                  line  88  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.48]                  line  89  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.49]                  line  90  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.50]                  line  91  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.51]                  line  92  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.52]                  line  93  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.53]                  line  94  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.54]                  line  95  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.55]                  line  96  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.56]                  line  97  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.57]                  line  98  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.58]                  line  99  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.59]                  line 100  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.60]                  line 101  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.61]                  line 102  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.62]                  line 103  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.63]                  line 104  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.64]                  line 105  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.65]                  line 108  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.66]                  line 109  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.67]                  line 110  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.68]                  line 111  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.69]                  line 112  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.70]                  line 113  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.71]                  line 114  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.72]                  line 115  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.73]                  line 116  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.74]                  line 117  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.75]                  line 118  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.76]                  line 119  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.77]                  line 120  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.78]                  line 121  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.79]                  line 122  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.80]                  line 123  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.81]                  line 124  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.82]                  line 125  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.83]                  line 126  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.84]                  line 127  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.85]                  line 128  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.86]                  line 129  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.87]                  line 130  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.88]                  line 131  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.89]                  line 132  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.90]                  line 133  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.91]                  line 134  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.92]                  line 135  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.93]                  line 136  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.94]                  line 137  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.95]                  line 138  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.96]                  line 139  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.97]                  line 140  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.98]                  line 141  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.99]                  line 142  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.100]                 line 143  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.101]                 line 144  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.102]                 line 145  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.103]                 line 146  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.104]                 line 147  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.105]                 line 148  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.106]                 line 149  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.107]                 line 150  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.108]                 line 151  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.109]                 line 152  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.110]                 line 153  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.111]                 line 154  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.112]                 line 155  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.113]                 line 156  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.114]                 line 157  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.115]                 line 158  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.116]                 line 159  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.117]                 line 160  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.118]                 line 161  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.119]                 line 162  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.120]                 line 163  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.121]                 line 164  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.122]                 line 165  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.123]                 line 166  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.124]                 line 167  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.125]                 line 168  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.126]                 line 169  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.127]                 line 170  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.128]                 line 171  use of uninitialized variable: __hlscheck_left_1
+  FAILED       [main.assertion.1]                                line 174  EQUIV:observables
+  PASSED       [main.uninitialised-variable.129]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[0]]
+  PASSED       [main.uninitialised-variable.130]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[1]]
+  PASSED       [main.uninitialised-variable.131]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[2]]
+  PASSED       [main.uninitialised-variable.132]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[3]]
+  PASSED       [main.uninitialised-variable.133]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[4]]
+  PASSED       [main.uninitialised-variable.134]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[5]]
+  PASSED       [main.uninitialised-variable.135]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[6]]
+  PASSED       [main.uninitialised-variable.136]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[7]]
+  PASSED       [main.uninitialised-variable.137]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[8]]
+  PASSED       [main.uninitialised-variable.138]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[9]]
+  PASSED       [main.uninitialised-variable.139]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[10]]
+  PASSED       [main.uninitialised-variable.140]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[11]]
+  PASSED       [main.uninitialised-variable.141]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[12]]
+  PASSED       [main.uninitialised-variable.142]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[13]]
+  PASSED       [main.uninitialised-variable.143]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[14]]
+  PASSED       [main.uninitialised-variable.144]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[15]]
+  PASSED       [main.uninitialised-variable.145]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[16]]
+  PASSED       [main.uninitialised-variable.146]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[17]]
+  PASSED       [main.uninitialised-variable.147]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[18]]
+  PASSED       [main.uninitialised-variable.148]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[19]]
+  PASSED       [main.uninitialised-variable.149]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[20]]
+  PASSED       [main.uninitialised-variable.150]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[21]]
+  PASSED       [main.uninitialised-variable.151]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[22]]
+  PASSED       [main.uninitialised-variable.152]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[23]]
+  PASSED       [main.uninitialised-variable.153]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[24]]
+  PASSED       [main.uninitialised-variable.154]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[25]]
+  PASSED       [main.uninitialised-variable.155]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[26]]
+  PASSED       [main.uninitialised-variable.156]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[27]]
+  PASSED       [main.uninitialised-variable.157]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[28]]
+  PASSED       [main.uninitialised-variable.158]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[29]]
+  PASSED       [main.uninitialised-variable.159]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[30]]
+  PASSED       [main.uninitialised-variable.160]                 line 174  use of uninitialized variable: __hlscheck_left_0 [2[31]]
+  PASSED       [main.uninitialised-variable.161]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[0]]
+  PASSED       [main.uninitialised-variable.162]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[1]]
+  PASSED       [main.uninitialised-variable.163]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[2]]
+  PASSED       [main.uninitialised-variable.164]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[3]]
+  PASSED       [main.uninitialised-variable.165]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[4]]
+  PASSED       [main.uninitialised-variable.166]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[5]]
+  PASSED       [main.uninitialised-variable.167]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[6]]
+  PASSED       [main.uninitialised-variable.168]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[7]]
+  PASSED       [main.uninitialised-variable.169]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[8]]
+  PASSED       [main.uninitialised-variable.170]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[9]]
+  PASSED       [main.uninitialised-variable.171]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[10]]
+  PASSED       [main.uninitialised-variable.172]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[11]]
+  PASSED       [main.uninitialised-variable.173]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[12]]
+  PASSED       [main.uninitialised-variable.174]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[13]]
+  PASSED       [main.uninitialised-variable.175]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[14]]
+  PASSED       [main.uninitialised-variable.176]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[15]]
+  PASSED       [main.uninitialised-variable.177]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[16]]
+  PASSED       [main.uninitialised-variable.178]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[17]]
+  PASSED       [main.uninitialised-variable.179]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[18]]
+  PASSED       [main.uninitialised-variable.180]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[19]]
+  PASSED       [main.uninitialised-variable.181]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[20]]
+  PASSED       [main.uninitialised-variable.182]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[21]]
+  PASSED       [main.uninitialised-variable.183]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[22]]
+  PASSED       [main.uninitialised-variable.184]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[23]]
+  PASSED       [main.uninitialised-variable.185]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[24]]
+  PASSED       [main.uninitialised-variable.186]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[25]]
+  PASSED       [main.uninitialised-variable.187]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[26]]
+  PASSED       [main.uninitialised-variable.188]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[27]]
+  PASSED       [main.uninitialised-variable.189]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[28]]
+  PASSED       [main.uninitialised-variable.190]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[29]]
+  PASSED       [main.uninitialised-variable.191]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[30]]
+  PASSED       [main.uninitialised-variable.192]                 line 174  use of uninitialized variable: __hlscheck_left_1 [5[31]]
+  PASSED       [main.uninitialised-variable.193]                 line 174  use of uninitialized variable: __hlscheck_left_return
+  PASSED       [main.uninitialised-variable.194]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[0]]
+  PASSED       [main.uninitialised-variable.195]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[1]]
+  PASSED       [main.uninitialised-variable.196]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[2]]
+  PASSED       [main.uninitialised-variable.197]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[3]]
+  PASSED       [main.uninitialised-variable.198]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[4]]
+  PASSED       [main.uninitialised-variable.199]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[5]]
+  PASSED       [main.uninitialised-variable.200]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[6]]
+  PASSED       [main.uninitialised-variable.201]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[7]]
+  PASSED       [main.uninitialised-variable.202]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[8]]
+  PASSED       [main.uninitialised-variable.203]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[9]]
+  PASSED       [main.uninitialised-variable.204]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[10]]
+  PASSED       [main.uninitialised-variable.205]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[11]]
+  PASSED       [main.uninitialised-variable.206]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[12]]
+  PASSED       [main.uninitialised-variable.207]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[13]]
+  PASSED       [main.uninitialised-variable.208]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[14]]
+  PASSED       [main.uninitialised-variable.209]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[15]]
+  PASSED       [main.uninitialised-variable.210]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[16]]
+  PASSED       [main.uninitialised-variable.211]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[17]]
+  PASSED       [main.uninitialised-variable.212]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[18]]
+  PASSED       [main.uninitialised-variable.213]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[19]]
+  PASSED       [main.uninitialised-variable.214]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[20]]
+  PASSED       [main.uninitialised-variable.215]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[21]]
+  PASSED       [main.uninitialised-variable.216]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[22]]
+  PASSED       [main.uninitialised-variable.217]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[23]]
+  PASSED       [main.uninitialised-variable.218]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[24]]
+  PASSED       [main.uninitialised-variable.219]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[25]]
+  PASSED       [main.uninitialised-variable.220]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[26]]
+  PASSED       [main.uninitialised-variable.221]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[27]]
+  PASSED       [main.uninitialised-variable.222]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[28]]
+  PASSED       [main.uninitialised-variable.223]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[29]]
+  PASSED       [main.uninitialised-variable.224]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[30]]
+  PASSED       [main.uninitialised-variable.225]                 line 174  use of uninitialized variable: __hlscheck_right_0 [3[31]]
+  PASSED       [main.uninitialised-variable.226]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[0]]
+  PASSED       [main.uninitialised-variable.227]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[1]]
+  PASSED       [main.uninitialised-variable.228]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[2]]
+  PASSED       [main.uninitialised-variable.229]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[3]]
+  PASSED       [main.uninitialised-variable.230]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[4]]
+  PASSED       [main.uninitialised-variable.231]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[5]]
+  PASSED       [main.uninitialised-variable.232]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[6]]
+  PASSED       [main.uninitialised-variable.233]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[7]]
+  PASSED       [main.uninitialised-variable.234]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[8]]
+  PASSED       [main.uninitialised-variable.235]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[9]]
+  PASSED       [main.uninitialised-variable.236]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[10]]
+  PASSED       [main.uninitialised-variable.237]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[11]]
+  PASSED       [main.uninitialised-variable.238]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[12]]
+  PASSED       [main.uninitialised-variable.239]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[13]]
+  PASSED       [main.uninitialised-variable.240]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[14]]
+  PASSED       [main.uninitialised-variable.241]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[15]]
+  PASSED       [main.uninitialised-variable.242]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[16]]
+  PASSED       [main.uninitialised-variable.243]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[17]]
+  PASSED       [main.uninitialised-variable.244]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[18]]
+  PASSED       [main.uninitialised-variable.245]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[19]]
+  PASSED       [main.uninitialised-variable.246]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[20]]
+  PASSED       [main.uninitialised-variable.247]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[21]]
+  PASSED       [main.uninitialised-variable.248]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[22]]
+  PASSED       [main.uninitialised-variable.249]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[23]]
+  PASSED       [main.uninitialised-variable.250]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[24]]
+  PASSED       [main.uninitialised-variable.251]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[25]]
+  PASSED       [main.uninitialised-variable.252]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[26]]
+  PASSED       [main.uninitialised-variable.253]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[27]]
+  PASSED       [main.uninitialised-variable.254]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[28]]
+  PASSED       [main.uninitialised-variable.255]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[29]]
+  PASSED       [main.uninitialised-variable.256]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[30]]
+  PASSED       [main.uninitialised-variable.257]                 line 174  use of uninitialized variable: __hlscheck_right_1 [6[31]]
+  PASSED       [main.uninitialised-variable.258]                 line 174  use of uninitialized variable: __hlscheck_right_return
+
+** 1 of 294 properties failed, 293 passed
+Solver: Z3 v4.13.3 â€¢ Decision procedure total time: 0.011s â€¢ Avg: 0.000s/property
+
+VERIFICATION FAILED

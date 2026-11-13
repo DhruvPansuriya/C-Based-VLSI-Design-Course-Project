@@ -1,0 +1,7 @@
+#include <stdint.h>
+
+/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.
+   Byte-wide SWAR population count. */
+uint32_t kernel(uint32_t x) {
+    uint32_t v=x&255u;v=v-((v>>1)&0x55u);v=(v&0x33u)+((v>>2)&0x33u);return (v+(v>>4))&7u;
+}

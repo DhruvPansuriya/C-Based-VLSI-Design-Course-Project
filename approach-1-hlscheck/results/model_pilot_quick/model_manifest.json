@@ -1,0 +1,34 @@
+[
+  {
+    "id": "qwen15",
+    "label": "Qwen2.5-Coder-1.5B",
+    "organization": "Qwen / Alibaba",
+    "repo": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+    "revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+    "file": "qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+    "bytes": 1117320768,
+    "sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046"
+  },
+  {
+    "id": "smol360",
+    "label": "SmolLM2-360M-Instruct",
+    "organization": "Hugging Face",
+    "repo": "bartowski/SmolLM2-360M-Instruct-GGUF",
+    "revision": "7be6f65f1db715fe5dc5a4634c0d459b4eed42ec",
+    "file": "SmolLM2-360M-Instruct-Q4_K_M.gguf",
+    "bytes": 270590880,
+    "sha256": "2fa3f013dcdd7b99f9b237717fa0b12d75bbb89984cc1274be1471a465bac9c2",
+    "upstream": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "conversion": "Community GGUF conversion by bartowski"
+  },
+  {
+    "id": "granite2",
+    "label": "Granite-3.3-2B-Instruct",
+    "organization": "IBM",
+    "repo": "ibm-granite/granite-3.3-2b-instruct-GGUF",
+    "revision": "7cdf86ccd1f1bb3491c9b7017b033f2e51367397",
+    "file": "granite-3.3-2b-instruct-Q4_K_M.gguf",
+    "bytes": 1545303328,
+    "sha256": "ac71e9e32c0bea919b409c5918f69ca74339854b0319c5065e4e9fb6d95c4852"
+  }
+]

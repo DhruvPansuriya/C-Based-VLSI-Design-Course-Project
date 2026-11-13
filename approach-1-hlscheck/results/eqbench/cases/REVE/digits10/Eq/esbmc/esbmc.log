@@ -1,0 +1,944 @@
+
+Target: 64-bit little-endian x86_64-unknown-windows with esbmclibc
+Parsing C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.163s
+GOTO program processing time: 0.001s
+Starting Bounded Model Checking
+WARNING: no body for function __hls_nondet_int
+Unwinding loop 4 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 9   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 10   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 11   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 12   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 13   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 14   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 15   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 16   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 17   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 18   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 19   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 20   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 21   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 22   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 23   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 24   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 25   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 26   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 27   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 28   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 29   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 30   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 4 iteration 31   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Not unwinding loop 4 iteration 32   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 3 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 9   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 10   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 11   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 12   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 13   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 14   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 15   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 16   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 17   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 18   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 19   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 20   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 21   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 22   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 23   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 24   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 25   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 26   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 27   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 28   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 29   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 30   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Unwinding loop 3 iteration 31   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Not unwinding loop 3 iteration 32   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 41 column 3 function __hls_candidate
+Symex completed in: 0.022s (3757 assignments)
+Caching time: 0.000s (removed 0 assertions)
+Slicing time: 0.006s (removed 1623 assignments)
+Generated 747 VCC(s), 421 remaining after simplification (2134 assignments)
+Slicing time: 0.000s (removed 1709 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 10 column 3 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1707 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 1707 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1705 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1705 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1703 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 1703 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1701 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 1701 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 1693 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.010s
+Slicing time: 0.000s (removed 1696 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1690 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.012s
+Slicing time: 0.000s (removed 1694 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1687 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.012s
+Slicing time: 0.000s (removed 1692 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1684 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.014s
+Slicing time: 0.001s (removed 1690 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1675 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.016s
+Slicing time: 0.000s (removed 1685 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1672 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.020s
+Slicing time: 0.001s (removed 1683 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1669 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.021s
+Slicing time: 0.001s (removed 1681 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 1666 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.022s
+Slicing time: 0.002s (removed 1679 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 1657 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.030s
+Slicing time: 0.001s (removed 1674 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1654 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.037s
+Slicing time: 0.001s (removed 1672 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1651 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.043s
+Slicing time: 0.001s (removed 1670 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1648 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.039s
+Slicing time: 0.000s (removed 1668 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1639 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.036s
+Slicing time: 0.000s (removed 1663 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 1636 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.131s
+Slicing time: 0.002s (removed 1661 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1633 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.124s
+Slicing time: 0.001s (removed 1659 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.001s (removed 1630 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.075s
+Slicing time: 0.000s (removed 1657 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.001s (removed 1621 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.039s
+Slicing time: 0.000s (removed 1652 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1618 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.068s
+Slicing time: 0.001s (removed 1650 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 1615 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.052s
+Slicing time: 0.001s (removed 1648 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 1612 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.057s
+Slicing time: 0.001s (removed 1646 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.001s (removed 1603 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.081s
+Slicing time: 0.001s (removed 1641 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 1600 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.136s
+Slicing time: 0.001s (removed 1639 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.001s (removed 1597 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.103s
+Slicing time: 0.000s (removed 1637 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.002s (removed 1594 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.083s
+Slicing time: 0.001s (removed 1635 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1585 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.119s
+Slicing time: 0.001s (removed 1630 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1582 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.103s
+Slicing time: 0.001s (removed 1628 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.001s (removed 1579 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.113s
+Slicing time: 0.001s (removed 1626 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.001s (removed 1576 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.091s
+Slicing time: 0.001s (removed 1624 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1567 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.082s
+Slicing time: 0.001s (removed 1619 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1564 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.143s
+Slicing time: 0.001s (removed 1617 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.003s (removed 1561 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.074s
+Slicing time: 0.001s (removed 1615 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1558 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.076s
+Slicing time: 0.000s (removed 1613 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1549 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.115s
+Slicing time: 0.002s (removed 1608 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.002s (removed 1546 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.161s
+Slicing time: 0.001s (removed 1606 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.003s (removed 1543 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.156s
+Slicing time: 0.001s (removed 1604 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.002s (removed 1540 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.150s
+Slicing time: 0.002s (removed 1602 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.002s (removed 1531 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.276s
+Slicing time: 0.003s (removed 1597 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.004s (removed 1528 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.404s
+Slicing time: 0.002s (removed 1595 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.002s
+Slicing time: 0.002s (removed 1525 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.232s
+Slicing time: 0.003s (removed 1593 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.002s
+Slicing time: 0.003s (removed 1522 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.173s
+Slicing time: 0.002s (removed 1591 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.002s (removed 1513 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.378s
+Slicing time: 0.001s (removed 1586 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.002s (removed 1510 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.196s
+Slicing time: 0.001s (removed 1584 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.002s (removed 1507 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.157s
+Slicing time: 0.001s (removed 1582 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1504 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.180s
+Slicing time: 0.001s (removed 1580 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.002s (removed 1495 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.286s
+Slicing time: 0.001s (removed 1575 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1492 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.213s
+Slicing time: 0.002s (removed 1573 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.002s (removed 1489 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.182s
+Slicing time: 0.002s (removed 1571 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.002s (removed 1486 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.179s
+Slicing time: 0.001s (removed 1569 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1477 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.248s
+Slicing time: 0.001s (removed 1564 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.002s (removed 1474 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.264s
+Slicing time: 0.002s (removed 1562 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.002s (removed 1471 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.177s
+Slicing time: 0.001s (removed 1560 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.001s (removed 1468 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.186s
+Slicing time: 0.002s (removed 1558 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.002s (removed 1459 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.300s
+Slicing time: 0.001s (removed 1553 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.002s (removed 1456 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.236s
+Slicing time: 0.002s (removed 1551 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1453 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.199s
+Slicing time: 0.002s (removed 1549 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.002s (removed 1450 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.204s
+Slicing time: 0.001s (removed 1547 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.002s (removed 1441 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.392s
+Slicing time: 0.002s (removed 1542 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.003s (removed 1438 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.259s
+Slicing time: 0.002s (removed 1540 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.002s
+Slicing time: 0.002s (removed 1435 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.204s
+Slicing time: 0.002s (removed 1538 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.002s (removed 1432 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.193s
+Slicing time: 0.002s (removed 1536 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.001s (removed 1423 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.290s
+Slicing time: 0.002s (removed 1531 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1420 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.514s
+Slicing time: 0.002s (removed 1529 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.001s (removed 1417 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.006s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.235s
+Slicing time: 0.002s (removed 1527 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 1414 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.330s
+Slicing time: 0.003s (removed 1525 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 26 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.002s (removed 1405 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.426s
+Slicing time: 0.001s (removed 1520 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 14 column 5 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.002s (removed 1402 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 17 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.412s
+Slicing time: 0.002s (removed 1518 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 18 column 7 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.001s (removed 1399 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 21 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.221s
+Slicing time: 0.001s (removed 1516 assignments)
+Solving claim 'arithmetic overflow on div at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 22 column 9 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.002s (removed 1396 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\eqbench\cases\REVE\digits10\Eq\esbmc\harness.c line 25 column 11 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.211s
+Slicing time: 0.003s (removed 1514 assignments)
+
+External wall-clock timeout.

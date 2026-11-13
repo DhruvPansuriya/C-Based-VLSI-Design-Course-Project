@@ -1,0 +1,1 @@
+An initial preflight harness incorrectly shared the default Python Z3 context among threads and aborted with a native assertion. That run produced no accepted study verdicts. The final checks below use separate Python processes per source; saved SMT evidence is replayed sequentially. This is a harness concurrency correction, not evidence of a solver soundness bug.

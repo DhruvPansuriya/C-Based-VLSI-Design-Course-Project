@@ -1,0 +1,2 @@
+read_json mapped.json
+write_verilog -noattr -simple-lhs mapped.v

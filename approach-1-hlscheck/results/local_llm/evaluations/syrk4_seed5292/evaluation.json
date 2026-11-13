@@ -1,0 +1,1253 @@
+{
+  "fingerprints": {
+    "original": "96b3d566620c663fedad5dc0a4ddddd2d17a0eaa168e504d8032e85c1d22aba9",
+    "candidate": "c26cb0ebb47a68a225b553542e6466b4c4cc598c0e84c6912a195f39b3d1d3fb",
+    "evaluator": "c6045de93a412b74c1b8a184a264bc3a964ce015d2b4b5864f49909f7cf9cb9a",
+    "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+    "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307",
+    "pipeline.py": "a4b504daefbd3524a1d0a6fc5e872fd2a75b469c869cfb2c33a35711fa731567",
+    "native_helpers": "a83490a2ca85c768fe67d098c3b4b4899539a14db4ac582d6c8760bbf81917fe",
+    "timeout_ms": 10000
+  },
+  "manual_semantic_edits": false,
+  "syntax_compiles": true,
+  "ast_unchanged": false,
+  "verification": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 412,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [
+      {
+        "index": 1,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg0_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma001.smt2"
+      },
+      {
+        "index": 2,
+        "status": "sat",
+        "variables": [
+          "arg0_12",
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma002.smt2"
+      },
+      {
+        "index": 3,
+        "status": "sat",
+        "variables": [
+          "arg0_2",
+          "arg0_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma003.smt2"
+      },
+      {
+        "index": 4,
+        "status": "sat",
+        "variables": [
+          "arg0_0",
+          "arg0_1",
+          "arg0_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma004.smt2"
+      },
+      {
+        "index": 5,
+        "status": "sat",
+        "variables": [
+          "arg0_13",
+          "arg0_3",
+          "arg0_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma005.smt2"
+      },
+      {
+        "index": 6,
+        "status": "sat",
+        "variables": [
+          "arg0_2",
+          "arg0_6",
+          "arg0_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma006.smt2"
+      },
+      {
+        "index": 7,
+        "status": "sat",
+        "variables": [
+          "arg0_0",
+          "arg0_2",
+          "arg0_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma007.smt2"
+      },
+      {
+        "index": 8,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg0_6",
+          "arg0_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma008.smt2"
+      },
+      {
+        "index": 9,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg0_14",
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma009.smt2"
+      },
+      {
+        "index": 10,
+        "status": "sat",
+        "variables": [
+          "arg0_0",
+          "arg0_12",
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma010.smt2"
+      },
+      {
+        "index": 11,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg0_13",
+          "arg0_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma011.smt2"
+      },
+      {
+        "index": 12,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg0_14",
+          "arg0_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma012.smt2"
+      },
+      {
+        "index": 13,
+        "status": "sat",
+        "variables": [
+          "arg0_12",
+          "arg0_3",
+          "arg0_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma013.smt2"
+      },
+      {
+        "index": 14,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg0_4",
+          "arg0_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma014.smt2"
+      },
+      {
+        "index": 15,
+        "status": "sat",
+        "variables": [
+          "arg0_2",
+          "arg0_6",
+          "arg0_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma015.smt2"
+      },
+      {
+        "index": 16,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg0_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma016.smt2"
+      },
+      {
+        "index": 17,
+        "status": "sat",
+        "variables": [
+          "arg0_13",
+          "arg0_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma017.smt2"
+      },
+      {
+        "index": 18,
+        "status": "sat",
+        "variables": [
+          "arg0_6",
+          "arg0_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma018.smt2"
+      },
+      {
+        "index": 19,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg0_14",
+          "arg0_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma019.smt2"
+      },
+      {
+        "index": 20,
+        "status": "sat",
+        "variables": [
+          "arg0_2",
+          "arg0_4",
+          "arg0_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma020.smt2"
+      },
+      {
+        "index": 21,
+        "status": "sat",
+        "variables": [
+          "arg0_5",
+          "arg0_6",
+          "arg0_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma021.smt2"
+      },
+      {
+        "index": 22,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg0_14",
+          "arg0_6"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma022.smt2"
+      },
+      {
+        "index": 23,
+        "status": "sat",
+        "variables": [
+          "arg0_12",
+          "arg0_3",
+          "arg0_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma023.smt2"
+      },
+      {
+        "index": 24,
+        "status": "sat",
+        "variables": [
+          "arg0_13",
+          "arg0_5",
+          "arg0_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma024.smt2"
+      },
+      {
+        "index": 25,
+        "status": "sat",
+        "variables": [
+          "arg0_10",
+          "arg0_2",
+          "arg0_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma025.smt2"
+      },
+      {
+        "index": 26,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg0_12",
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma026.smt2"
+      },
+      {
+        "index": 27,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg0_4",
+          "arg0_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma027.smt2"
+      },
+      {
+        "index": 28,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg0_4",
+          "arg0_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma028.smt2"
+      },
+      {
+        "index": 29,
+        "status": "sat",
+        "variables": [
+          "arg0_10",
+          "arg0_6",
+          "arg0_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma029.smt2"
+      },
+      {
+        "index": 30,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg0_13",
+          "arg0_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma030.smt2"
+      },
+      {
+        "index": 31,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg0_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma031.smt2"
+      },
+      {
+        "index": 32,
+        "status": "sat",
+        "variables": [
+          "arg0_2",
+          "arg0_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma032.smt2"
+      },
+      {
+        "index": 33,
+        "status": "sat",
+        "variables": [
+          "arg0_6",
+          "arg0_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma033.smt2"
+      },
+      {
+        "index": 34,
+        "status": "sat",
+        "variables": [
+          "arg0_10",
+          "arg0_11",
+          "arg0_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma034.smt2"
+      },
+      {
+        "index": 35,
+        "status": "sat",
+        "variables": [
+          "arg0_12",
+          "arg0_3",
+          "arg0_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma035.smt2"
+      },
+      {
+        "index": 36,
+        "status": "sat",
+        "variables": [
+          "arg0_13",
+          "arg0_7",
+          "arg0_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma036.smt2"
+      },
+      {
+        "index": 37,
+        "status": "sat",
+        "variables": [
+          "arg0_12",
+          "arg0_15",
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma037.smt2"
+      },
+      {
+        "index": 38,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg0_13",
+          "arg0_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma038.smt2"
+      },
+      {
+        "index": 39,
+        "status": "sat",
+        "variables": [
+          "arg0_14",
+          "arg0_2",
+          "arg0_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma039.smt2"
+      },
+      {
+        "index": 40,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg0_12",
+          "arg0_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma040.smt2"
+      },
+      {
+        "index": 41,
+        "status": "sat",
+        "variables": [
+          "arg0_13",
+          "arg0_15",
+          "arg0_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma041.smt2"
+      },
+      {
+        "index": 42,
+        "status": "sat",
+        "variables": [
+          "arg0_14",
+          "arg0_6",
+          "arg0_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma042.smt2"
+      },
+      {
+        "index": 43,
+        "status": "sat",
+        "variables": [
+          "arg0_12",
+          "arg0_2",
+          "arg0_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma043.smt2"
+      },
+      {
+        "index": 44,
+        "status": "sat",
+        "variables": [
+          "arg0_13",
+          "arg0_6",
+          "arg0_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma044.smt2"
+      },
+      {
+        "index": 45,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg0_14",
+          "arg0_15"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma045.smt2"
+      },
+      {
+        "index": 46,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg0_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma046.smt2"
+      },
+      {
+        "index": 47,
+        "status": "sat",
+        "variables": [
+          "arg0_12",
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma047.smt2"
+      },
+      {
+        "index": 48,
+        "status": "sat",
+        "variables": [
+          "arg0_13",
+          "arg0_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma048.smt2"
+      }
+    ],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "a": [
+        1864073472,
+        236075935,
+        3846369280,
+        1958893584,
+        1117738495,
+        302937718,
+        1766859339,
+        2573805887,
+        71770206,
+        3492899072,
+        763492372,
+        1248381623,
+        4163545250,
+        597553,
+        3187670271,
+        968366415
+      ],
+      "out": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "original_outputs": {
+      "a": [
+        1864073472,
+        236075935,
+        3846369280,
+        1958893584,
+        1117738495,
+        302937718,
+        1766859339,
+        2573805887,
+        71770206,
+        3492899072,
+        763492372,
+        1248381623,
+        4163545250,
+        597553,
+        3187670271,
+        968366415
+      ],
+      "out": [
+        46837185,
+        3670659130,
+        4290832496,
+        2736814687,
+        3670659130,
+        1395233247,
+        2696765831,
+        3337757210,
+        4290832496,
+        2696765831,
+        1662038757,
+        3752820193,
+        2736814687,
+        3337757210,
+        3752820193,
+        3713538119
+      ]
+    },
+    "candidate_outputs": {
+      "a": [
+        1864073472,
+        236075935,
+        3846369280,
+        1958893584,
+        1117738495,
+        302937718,
+        1766859339,
+        2573805887,
+        71770206,
+        3492899072,
+        763492372,
+        1248381623,
+        4163545250,
+        597553,
+        3187670271,
+        968366415
+      ],
+      "out": [
+        179406977,
+        1542037338,
+        1154665861,
+        396132369,
+        4172813810,
+        1560819412,
+        2274811951,
+        3997411336,
+        2062806054,
+        2738789737,
+        3301291225,
+        1480243365,
+        3909327727,
+        505103443,
+        2272002040,
+        1641748441
+      ]
+    },
+    "elapsed_seconds": 8.08396,
+    "backend": "hlscheck/Z3",
+    "fallback_used": false,
+    "initial_stage": {
+      "status": "not_equivalent",
+      "assumptions": [
+        "32-bit int and unsigned int; uint32_t is unsigned int",
+        "All array parameters are valid, separately allocated, and nonoverlapping",
+        "Functional equality at function completion; no cycle-level RTL guarantee"
+      ],
+      "execution_steps": 412,
+      "paths": {
+        "original": 1,
+        "candidate": 1
+      },
+      "z3_version": "5.1.0",
+      "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+      "component_lemmas": [
+        {
+          "index": 1,
+          "status": "sat",
+          "variables": [
+            "arg0_1",
+            "arg0_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma001.smt2"
+        },
+        {
+          "index": 2,
+          "status": "sat",
+          "variables": [
+            "arg0_12",
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma002.smt2"
+        },
+        {
+          "index": 3,
+          "status": "sat",
+          "variables": [
+            "arg0_2",
+            "arg0_8"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma003.smt2"
+        },
+        {
+          "index": 4,
+          "status": "sat",
+          "variables": [
+            "arg0_0",
+            "arg0_1",
+            "arg0_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma004.smt2"
+        },
+        {
+          "index": 5,
+          "status": "sat",
+          "variables": [
+            "arg0_13",
+            "arg0_3",
+            "arg0_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma005.smt2"
+        },
+        {
+          "index": 6,
+          "status": "sat",
+          "variables": [
+            "arg0_2",
+            "arg0_6",
+            "arg0_9"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma006.smt2"
+        },
+        {
+          "index": 7,
+          "status": "sat",
+          "variables": [
+            "arg0_0",
+            "arg0_2",
+            "arg0_8"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma007.smt2"
+        },
+        {
+          "index": 8,
+          "status": "sat",
+          "variables": [
+            "arg0_1",
+            "arg0_6",
+            "arg0_9"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma008.smt2"
+        },
+        {
+          "index": 9,
+          "status": "sat",
+          "variables": [
+            "arg0_11",
+            "arg0_14",
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma009.smt2"
+        },
+        {
+          "index": 10,
+          "status": "sat",
+          "variables": [
+            "arg0_0",
+            "arg0_12",
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma010.smt2"
+        },
+        {
+          "index": 11,
+          "status": "sat",
+          "variables": [
+            "arg0_1",
+            "arg0_13",
+            "arg0_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma011.smt2"
+        },
+        {
+          "index": 12,
+          "status": "sat",
+          "variables": [
+            "arg0_11",
+            "arg0_14",
+            "arg0_2"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma012.smt2"
+        },
+        {
+          "index": 13,
+          "status": "sat",
+          "variables": [
+            "arg0_12",
+            "arg0_3",
+            "arg0_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma013.smt2"
+        },
+        {
+          "index": 14,
+          "status": "sat",
+          "variables": [
+            "arg0_1",
+            "arg0_4",
+            "arg0_5"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma014.smt2"
+        },
+        {
+          "index": 15,
+          "status": "sat",
+          "variables": [
+            "arg0_2",
+            "arg0_6",
+            "arg0_8"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma015.smt2"
+        },
+        {
+          "index": 16,
+          "status": "sat",
+          "variables": [
+            "arg0_1",
+            "arg0_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma016.smt2"
+        },
+        {
+          "index": 17,
+          "status": "sat",
+          "variables": [
+            "arg0_13",
+            "arg0_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma017.smt2"
+        },
+        {
+          "index": 18,
+          "status": "sat",
+          "variables": [
+            "arg0_6",
+            "arg0_9"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma018.smt2"
+        },
+        {
+          "index": 19,
+          "status": "sat",
+          "variables": [
+            "arg0_11",
+            "arg0_14",
+            "arg0_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma019.smt2"
+        },
+        {
+          "index": 20,
+          "status": "sat",
+          "variables": [
+            "arg0_2",
+            "arg0_4",
+            "arg0_8"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma020.smt2"
+        },
+        {
+          "index": 21,
+          "status": "sat",
+          "variables": [
+            "arg0_5",
+            "arg0_6",
+            "arg0_9"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma021.smt2"
+        },
+        {
+          "index": 22,
+          "status": "sat",
+          "variables": [
+            "arg0_11",
+            "arg0_14",
+            "arg0_6"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma022.smt2"
+        },
+        {
+          "index": 23,
+          "status": "sat",
+          "variables": [
+            "arg0_12",
+            "arg0_3",
+            "arg0_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma023.smt2"
+        },
+        {
+          "index": 24,
+          "status": "sat",
+          "variables": [
+            "arg0_13",
+            "arg0_5",
+            "arg0_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma024.smt2"
+        },
+        {
+          "index": 25,
+          "status": "sat",
+          "variables": [
+            "arg0_10",
+            "arg0_2",
+            "arg0_8"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma025.smt2"
+        },
+        {
+          "index": 26,
+          "status": "sat",
+          "variables": [
+            "arg0_11",
+            "arg0_12",
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma026.smt2"
+        },
+        {
+          "index": 27,
+          "status": "sat",
+          "variables": [
+            "arg0_1",
+            "arg0_4",
+            "arg0_9"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma027.smt2"
+        },
+        {
+          "index": 28,
+          "status": "sat",
+          "variables": [
+            "arg0_1",
+            "arg0_4",
+            "arg0_8"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma028.smt2"
+        },
+        {
+          "index": 29,
+          "status": "sat",
+          "variables": [
+            "arg0_10",
+            "arg0_6",
+            "arg0_9"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma029.smt2"
+        },
+        {
+          "index": 30,
+          "status": "sat",
+          "variables": [
+            "arg0_11",
+            "arg0_13",
+            "arg0_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma030.smt2"
+        },
+        {
+          "index": 31,
+          "status": "sat",
+          "variables": [
+            "arg0_11",
+            "arg0_14"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma031.smt2"
+        },
+        {
+          "index": 32,
+          "status": "sat",
+          "variables": [
+            "arg0_2",
+            "arg0_8"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma032.smt2"
+        },
+        {
+          "index": 33,
+          "status": "sat",
+          "variables": [
+            "arg0_6",
+            "arg0_9"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma033.smt2"
+        },
+        {
+          "index": 34,
+          "status": "sat",
+          "variables": [
+            "arg0_10",
+            "arg0_11",
+            "arg0_14"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma034.smt2"
+        },
+        {
+          "index": 35,
+          "status": "sat",
+          "variables": [
+            "arg0_12",
+            "arg0_3",
+            "arg0_8"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma035.smt2"
+        },
+        {
+          "index": 36,
+          "status": "sat",
+          "variables": [
+            "arg0_13",
+            "arg0_7",
+            "arg0_9"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma036.smt2"
+        },
+        {
+          "index": 37,
+          "status": "sat",
+          "variables": [
+            "arg0_12",
+            "arg0_15",
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma037.smt2"
+        },
+        {
+          "index": 38,
+          "status": "sat",
+          "variables": [
+            "arg0_1",
+            "arg0_13",
+            "arg0_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma038.smt2"
+        },
+        {
+          "index": 39,
+          "status": "sat",
+          "variables": [
+            "arg0_14",
+            "arg0_2",
+            "arg0_8"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma039.smt2"
+        },
+        {
+          "index": 40,
+          "status": "sat",
+          "variables": [
+            "arg0_1",
+            "arg0_12",
+            "arg0_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma040.smt2"
+        },
+        {
+          "index": 41,
+          "status": "sat",
+          "variables": [
+            "arg0_13",
+            "arg0_15",
+            "arg0_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma041.smt2"
+        },
+        {
+          "index": 42,
+          "status": "sat",
+          "variables": [
+            "arg0_14",
+            "arg0_6",
+            "arg0_9"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma042.smt2"
+        },
+        {
+          "index": 43,
+          "status": "sat",
+          "variables": [
+            "arg0_12",
+            "arg0_2",
+            "arg0_8"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma043.smt2"
+        },
+        {
+          "index": 44,
+          "status": "sat",
+          "variables": [
+            "arg0_13",
+            "arg0_6",
+            "arg0_9"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma044.smt2"
+        },
+        {
+          "index": 45,
+          "status": "sat",
+          "variables": [
+            "arg0_11",
+            "arg0_14",
+            "arg0_15"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma045.smt2"
+        },
+        {
+          "index": 46,
+          "status": "sat",
+          "variables": [
+            "arg0_11",
+            "arg0_14"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma046.smt2"
+        },
+        {
+          "index": 47,
+          "status": "sat",
+          "variables": [
+            "arg0_12",
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma047.smt2"
+        },
+        {
+          "index": 48,
+          "status": "sat",
+          "variables": [
+            "arg0_13",
+            "arg0_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\proof\\symbolic.lemma048.smt2"
+        }
+      ],
+      "main_query_requires_component_lemmas": false,
+      "counterexample": {
+        "a": [
+          1864073472,
+          236075935,
+          3846369280,
+          1958893584,
+          1117738495,
+          302937718,
+          1766859339,
+          2573805887,
+          71770206,
+          3492899072,
+          763492372,
+          1248381623,
+          4163545250,
+          597553,
+          3187670271,
+          968366415
+        ],
+        "out": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "original_outputs": {
+        "a": [
+          1864073472,
+          236075935,
+          3846369280,
+          1958893584,
+          1117738495,
+          302937718,
+          1766859339,
+          2573805887,
+          71770206,
+          3492899072,
+          763492372,
+          1248381623,
+          4163545250,
+          597553,
+          3187670271,
+          968366415
+        ],
+        "out": [
+          46837185,
+          3670659130,
+          4290832496,
+          2736814687,
+          3670659130,
+          1395233247,
+          2696765831,
+          3337757210,
+          4290832496,
+          2696765831,
+          1662038757,
+          3752820193,
+          2736814687,
+          3337757210,
+          3752820193,
+          3713538119
+        ]
+      },
+      "candidate_outputs": {
+        "a": [
+          1864073472,
+          236075935,
+          3846369280,
+          1958893584,
+          1117738495,
+          302937718,
+          1766859339,
+          2573805887,
+          71770206,
+          3492899072,
+          763492372,
+          1248381623,
+          4163545250,
+          597553,
+          3187670271,
+          968366415
+        ],
+        "out": [
+          179406977,
+          1542037338,
+          1154665861,
+          396132369,
+          4172813810,
+          1560819412,
+          2274811951,
+          3997411336,
+          2062806054,
+          2738789737,
+          3301291225,
+          1480243365,
+          3909327727,
+          505103443,
+          2272002040,
+          1641748441
+        ]
+      },
+      "elapsed_seconds": 8.08396
+    }
+  },
+  "status": "not_equivalent",
+  "smt_replay": {
+    "available": true,
+    "passed": true,
+    "witness_pinned": true,
+    "queries": [
+      {
+        "file": "symbolic.smt2",
+        "expected": "sat",
+        "observed": "sat"
+      }
+    ],
+    "scope": "Same Z3 solver; unrestricted UNSAT/lemma replay, SAT replay at recorded input. Not independent proof certificates."
+  },
+  "native": {
+    "passed": true,
+    "trials": 264,
+    "directed_trials": 8,
+    "random_trials": 256,
+    "mismatches": 256,
+    "first_mismatch_trial": 8,
+    "witness_replayed": true,
+    "witness_outputs_agree": true,
+    "harness_sha256": "cf7cbb19716496e3d1405e0b67625e88e9f202fecce75f74a27bb260aee9b5ff",
+    "command": [
+      "C:\\MinGW\\mingw32\\bin\\clang.EXE",
+      "-std=c11",
+      "-O2",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\native_differential.c",
+      "-o",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\syrk4_seed5292\\native_check_028.exe"
+    ],
+    "exit_code": 0
+  }
+}

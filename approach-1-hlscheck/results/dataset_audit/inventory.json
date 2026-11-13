@@ -1,0 +1,3538 @@
+{
+  "commits": {
+    "CHStone": "2b7e20ffd3365016faf1e4e2b86496a5c95445fb",
+    "MachSuite": "6236e593012cb86b0d2f08d9fb9ba0411ff989b4",
+    "hls-eval": "e373bc0a005f0a6030f77f27b3f0d71b16a35a0b"
+  },
+  "scope": "Exact-source frontend audit with max_unroll=8 and max_paths=8. No equivalence or whole-suite validation claims.",
+  "design_counts": {
+    "CHStone": 12,
+    "MachSuite": 19,
+    "hls-eval": 132
+  },
+  "hls_eval_tracked_design_count": 132,
+  "hls_eval_materialized_design_count": 132,
+  "hls_eval_inventory_scope": "Available hls_eval_data design directories in the existing sparse checkout. Excludes tests/test_design_for_tools and unmaterialized tracked designs.",
+  "accepted_source_counts": {
+    "CHStone": 0,
+    "MachSuite": 0,
+    "hls-eval": 0
+  },
+  "cases": [
+    {
+      "suite": "CHStone",
+      "design": "adpcm",
+      "top": "main",
+      "sources": [
+        {
+          "source": "datasets/CHStone/adpcm/adpcm.c",
+          "sha256": "2373e31cd6f8a8e9160669bc4edd1b0cfb3ac3f9a3413bbceefbae9309c5063d",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "<stdio.h>"
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "CHStone",
+      "design": "aes",
+      "top": "main",
+      "sources": [
+        {
+          "source": "datasets/CHStone/aes/aes.c",
+          "sha256": "ece60edf14e878c9de2a4515677949a7827c17668e534ddf9dfed5b417ee46a0",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "<stdio.h>",
+              "\"aes.h\"",
+              "\"aes_enc.c\"",
+              "\"aes_dec.c\"",
+              "\"aes_key.c\"",
+              "\"aes_func.c\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "CHStone",
+      "design": "blowfish",
+      "top": "main",
+      "sources": [
+        {
+          "source": "datasets/CHStone/blowfish/bf.c",
+          "sha256": "4e85269a28d69c9d9023011d044e16e86a514a59ee6453a5991e55b2ba36740a",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "<stdio.h>",
+              "\"blowfish.h\"",
+              "\"bf_locl.h\"",
+              "\"bf_pi.h\"",
+              "\"bf_skey.c\"",
+              "\"bf_cfb64.c\"",
+              "\"bf_enc.c\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "CHStone",
+      "design": "dfadd",
+      "top": "main",
+      "sources": [
+        {
+          "source": "datasets/CHStone/dfadd/dfadd.c",
+          "sha256": "657e0c877d63288878ad31e7dfb25e386c32694763745c5866d9dcdced2d51d1",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "<stdio.h>",
+              "\"softfloat.c\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "CHStone",
+      "design": "dfdiv",
+      "top": "main",
+      "sources": [
+        {
+          "source": "datasets/CHStone/dfdiv/dfdiv.c",
+          "sha256": "2ecb2d4360b4fdf16b893c42999293d04de2a5ac46fd277d99552862d12789be",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "<stdio.h>",
+              "\"softfloat.c\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "CHStone",
+      "design": "dfmul",
+      "top": "main",
+      "sources": [
+        {
+          "source": "datasets/CHStone/dfmul/dfmul.c",
+          "sha256": "b02d0e968fec89a4431d590872266ee29d77b6b7f36576d1b366b4835f411c40",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "<stdio.h>",
+              "\"softfloat.c\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "CHStone",
+      "design": "dfsin",
+      "top": "main",
+      "sources": [
+        {
+          "source": "datasets/CHStone/dfsin/dfsin.c",
+          "sha256": "4402f7872cd1695fceac99c69e30e3df2dd125401447124391581900bda7e8b6",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "<stdio.h>",
+              "\"softfloat.c\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "CHStone",
+      "design": "gsm",
+      "top": "main",
+      "sources": [
+        {
+          "source": "datasets/CHStone/gsm/gsm.c",
+          "sha256": "0e140f4896de137402d6a84e654170a36a69e25a56140ceaae9e3d96a0635d4b",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "<stdio.h>",
+              "\"lpc.c\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "CHStone",
+      "design": "jpeg",
+      "top": "main",
+      "sources": [
+        {
+          "source": "datasets/CHStone/jpeg/main.c",
+          "sha256": "a5ffc6a25d35e2581881f8d68cb287cc9d29c0aa1523dd6f54388d3c08aa9a6f",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "<stdio.h>",
+              "<stdlib.h>",
+              "\"global.h\"",
+              "\"decode.h\"",
+              "\"init.h\"",
+              "\"marker.c\"",
+              "\"chenidct.c\"",
+              "\"huffman.h\"",
+              "\"decode.c\"",
+              "\"huffman.c\"",
+              "\"jfif_read.c\"",
+              "\"jpeg2bmp.c\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "CHStone",
+      "design": "mips",
+      "top": "main",
+      "sources": [
+        {
+          "source": "datasets/CHStone/mips/mips.c",
+          "sha256": "f6bfdb396c6b0052d11dd9afdc0082abab7eaabe4574989cfb670c0314a3590b",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "<stdio.h>",
+              "\"imem.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "CHStone",
+      "design": "motion",
+      "top": "main",
+      "sources": [
+        {
+          "source": "datasets/CHStone/motion/mpeg2.c",
+          "sha256": "496172a4946e21a7359334d2504f7fe44a5126777da705e7a907e43f3a5c6b10",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "<stdio.h>",
+              "\"config.h\"",
+              "\"global.h\"",
+              "\"getbits.c\"",
+              "\"getvlc.h\"",
+              "\"getvlc.c\"",
+              "\"motion.c\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "CHStone",
+      "design": "sha",
+      "top": "main",
+      "sources": [
+        {
+          "source": "datasets/CHStone/sha/sha_driver.c",
+          "sha256": "7bfc6b7c11dae6b0294553fb5171dc7d6040a209dc4954671969f2467eb74557",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "<stdio.h>",
+              "\"sha.h\"",
+              "\"sha.c\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "aes/aes",
+      "top": "aes256_encrypt_ecb",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/aes/aes/aes.c",
+          "sha256": "e865f122b2d58654d86ddf7c12dfaf59a4a711d13263052371665203a0f865d6",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"aes.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "backprop/backprop",
+      "top": "backprop",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/backprop/backprop/backprop.c",
+          "sha256": "cc5b78b3db0052e617d92d46efafe075b7f2adbdf177745e802b6580a36b13e7",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"backprop.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        },
+        {
+          "source": "datasets/MachSuite/backprop/backprop/local_support.c",
+          "sha256": "f460182054d743f0fa6e3daed9901cbb7c476c37813815a30b6bf1c846894cfc",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"backprop.h\"",
+              "<string.h>"
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "bfs/bulk",
+      "top": "bfs",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/bfs/bulk/bfs.c",
+          "sha256": "d072013f21ee782a43002865837a88c564ce0700182937c0aeeae050ee5a6950",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"bfs.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "bfs/queue",
+      "top": "bfs",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/bfs/queue/bfs.c",
+          "sha256": "c38a68d9f49c670900b0b881da1bd75478b528dda253c6281daa1eacf194ffbb",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"bfs.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "fft/strided",
+      "top": "fft",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/fft/strided/fft.c",
+          "sha256": "cc8b717d37185c6eb9362846ec7530d5d610b768832beca746d37275773fff3e",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"fft.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "fft/transpose",
+      "top": "fft1D_512",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/fft/transpose/fft.c",
+          "sha256": "93566c57aa7c23c36c6ae0e02be82511884be14373951c84c0a74284805cc710",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"fft.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "gemm/blocked",
+      "top": "bbgemm",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/gemm/blocked/gemm.c",
+          "sha256": "54f39c8e98ecb8e0eb6dfc97f1d9269de4b7ec658604ca2d2da55c645ca1089f",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"gemm.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "gemm/ncubed",
+      "top": "gemm",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/gemm/ncubed/gemm.c",
+          "sha256": "e5ff9d7a95c0bde1439c645c49c745b3a9f1aa385f875843f3c2e5a51adaaef9",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"gemm.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "kmp/kmp",
+      "top": "kmp",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/kmp/kmp/kmp.c",
+          "sha256": "1f344d6d2e3c5618e36ffaa8906550629afe44152757da2276fb0c401738ea55",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"kmp.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "md/grid",
+      "top": "md",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/md/grid/md.c",
+          "sha256": "2da6eb0577bf7c56777bb99ef35e087a0ad5b2a804739eca6241e44db14efb3a",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"md.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "md/knn",
+      "top": "md_kernel",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/md/knn/md.c",
+          "sha256": "0ffb68d72d21352feac0d710b311a0756423e7650a7e6523208c23b96238e482",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"md.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "nw/nw",
+      "top": "needwun",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/nw/nw/nw.c",
+          "sha256": "f6ca74b59d9c8948ea58cf93451dd8389ed77d6944135c86347f0f89aef197da",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"nw.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "sort/merge",
+      "top": "ms_mergesort",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/sort/merge/sort.c",
+          "sha256": "843902cd24ea865acdeec078ac5861c836fa202a17e34a0f88a8dbd3ef16858f",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"sort.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "sort/radix",
+      "top": "ss_sort",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/sort/radix/sort.c",
+          "sha256": "b906c837ccc3d20b3f3a92df3e5b8bc446764a155c047856326c6b3ef0059591",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"sort.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "spmv/crs",
+      "top": "spmv",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/spmv/crs/spmv.c",
+          "sha256": "7fdcffac59c75ff121a960ba022e0fe6e7bee5505bd7c13f6f78fec43a69b03c",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"spmv.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "spmv/ellpack",
+      "top": "ellpack",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/spmv/ellpack/spmv.c",
+          "sha256": "09a4be220bca2a4fad2d68f84c13cb653c8bd32247124980750a5f16e8979a41",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"spmv.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "stencil/stencil2d",
+      "top": "stencil",
+      "sources": [],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "stencil/stencil3d",
+      "top": "stencil3d",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/stencil/stencil3d/stencil.c",
+          "sha256": "8185cc1895ac19836ef66e43a5e19a67ed2992c7eb009ec062e1fc15b070421e",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"stencil.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "MachSuite",
+      "design": "viterbi/viterbi",
+      "top": "viterbi",
+      "sources": [
+        {
+          "source": "datasets/MachSuite/viterbi/viterbi/viterbi.c",
+          "sha256": "80006a5afeb36fce548757209c1269b11101805c76cc853efd5af4ee654f002c",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"viterbi.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/c2hlsc/add_round_key",
+      "top": "AddRoundKey",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/c2hlsc/add_round_key/add_round_key.cpp",
+          "sha256": "3478521a81acb01e39e84803a378f0117040666950ab0027a30558821c8a3cb8",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"add_round_key.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/c2hlsc/aes",
+      "top": "Cipher",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/c2hlsc/aes/aes.cpp",
+          "sha256": "67ca6e691c4b2d01d3b6afab1b0b4377f2893b7c45421485b904ab526b01e8b0",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"aes.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/c2hlsc/block",
+      "top": "BlockFrequency",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/c2hlsc/block/block.cpp",
+          "sha256": "52e8be94c9fbb76084a46bcecb21162ac8fb526537fb8eb9f1127b5375c615a6",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"block.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/c2hlsc/cusums",
+      "top": "CumulativeSums",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/c2hlsc/cusums/cusums.cpp",
+          "sha256": "37e1e127ea9068ce1ff30a26d570af7342cffd0d6979769baec4c181b652a12b",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"cusums.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/c2hlsc/des",
+      "top": "des_crypt",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/c2hlsc/des/des.cpp",
+          "sha256": "bf17f1de05daea57b34b7060af8582a59621a026111e4df3dcf4ecdbb77d5f35",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"des.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/c2hlsc/mix_columns",
+      "top": "MixColumns",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/c2hlsc/mix_columns/mix_cols.cpp",
+          "sha256": "50c57573b2ef3db18afdfc50b5eb9cdcd7a486307c70bed88feea97bf646ff14",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"mix_cols.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/c2hlsc/monobit",
+      "top": "Frequency",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/c2hlsc/monobit/monobit.cpp",
+          "sha256": "7935c9e6931e44ccd45be78bca27743ce5e05e8499593198fbe647062d8c5ae0",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"monobit.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/c2hlsc/overlapping",
+      "top": "Overlapping",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/c2hlsc/overlapping/overlapping.cpp",
+          "sha256": "a434b45c4500e88221ea3e5be09f0c7a705766372a73977e4651aac417bbf486",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"overlapping.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/c2hlsc/present",
+      "top": "present80_encryptBlock",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/c2hlsc/present/present.cpp",
+          "sha256": "c1b2b1068fdb81a40478a5fa51d6a609720da0bcfd9f532893f82a8f41f2bed0",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"present.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/c2hlsc/quicksort__WIP",
+      "top": "quickSort",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/c2hlsc/quicksort__WIP/qs.cpp",
+          "sha256": "46f6b9b8af6854aa4d56d45211b47f384aeb0e1c525d3b7ac5ea4d369757c58d",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"qs.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/c2hlsc/runs",
+      "top": "Runs",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/c2hlsc/runs/runs.cpp",
+          "sha256": "54b49a1ff3cf9d59ae2a496c334025ea99042214774f583c503d59d33b623b99",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"runs.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/c2hlsc/sha256__WIP",
+      "top": "sha256_update",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/c2hlsc/sha256__WIP/sha256.cpp",
+          "sha256": "e2d4b389af3d4112e11bb831f645e99beb276c22d52db30982efaed0939580a6",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"sha256.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/c2hlsc/shift_rows",
+      "top": "ShiftRows",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/c2hlsc/shift_rows/shift_rows.cpp",
+          "sha256": "32075c85a404ee2f51790eac575f496dc1294fc2bd463f6bc54d6ebc22a873e9",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"shift_rows.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/c2hlsc/sub_bytes",
+      "top": "SubBytes",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/c2hlsc/sub_bytes/sub.cpp",
+          "sha256": "2a755541ed417279e5b0a828fee65055f98f9e66123817e403fc0d26c7c8da14",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"sub.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/adpcm__filtep",
+      "top": "filtep",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/adpcm__filtep/filtep.cpp",
+          "sha256": "3078f1bc7d7bc73e55aef178de3bf6be41a9bf0e47b41130ce840b492d031ff1",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"filtep.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/adpcm__filtez",
+      "top": "filtez",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/adpcm__filtez/filtez.cpp",
+          "sha256": "4856c9197e807e3eb21fb297ca668ace0f1d951e65ecc25c2d1375efd410bd86",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"filtez.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/adpcm__logsch",
+      "top": "logsch",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/adpcm__logsch/logsch.cpp",
+          "sha256": "a7a4472227918105ab13f4a3f2d60a83352c84ec6f1413667293619bb7c8039a",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"logsch.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_add128",
+      "top": "add128",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_add128/add128.cpp",
+          "sha256": "ffaf7b6ec72322e2c0e1cfe2a6ea916edeade4d6f82d89e581fd435783412443",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"add128.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_countLeadingZeros32",
+      "top": "countLeadingZeros32",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_countLeadingZeros32/countLeadingZeros32.cpp",
+          "sha256": "f70f331ebf848af717c93cdd0b1284cca4ba9e839aa0334bc7e20d0763dfa6aa",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"countLeadingZeros32.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_countLeadingZeros64",
+      "top": "countLeadingZeros64",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_countLeadingZeros64/countLeadingZeros64.cpp",
+          "sha256": "617f189858b4dcc61b00dcc8470eb1061a7fd22ba518416b3e6c10845e2a883e",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"countLeadingZeros64.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_extractFloat64Exp",
+      "top": "extractFloat64Exp",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_extractFloat64Exp/extractFloat64Exp.cpp",
+          "sha256": "ae745fa70492670933ab0d79d573d0e7ad2343656aba75c43f463fa8e1284632",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"extractFloat64Exp.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_extractFloat64Frac",
+      "top": "extractFloat64Frac",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_extractFloat64Frac/extractFloat64Frac.cpp",
+          "sha256": "018b7723650402575b116820543899213e462edcc6944262cac9ca5bb7eccccd",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"extractFloat64Frac.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_extractFloat64Sign",
+      "top": "extractFloat64Sign",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_extractFloat64Sign/extractFloat64Sign.cpp",
+          "sha256": "9275b86f86456652026a7b5f3ff42b8b003babb223face2dc9b05326ec4d1ab6",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"extractFloat64Sign.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_float64_abs",
+      "top": "float64_abs",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_float64_abs/float64_abs.cpp",
+          "sha256": "ef0b2ba21095a6ff1665ea2bd6aec21bacb1b253b0e8226141d627872e07fd99",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"float64_abs.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_float64_ge",
+      "top": "float64_ge",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_float64_ge/float64_ge.cpp",
+          "sha256": "694b0f1b664edb49e7696c7aabf388c386fe9aa615fcbd7e3887cc63ef25b219",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"float64_ge.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_float64_is_nan",
+      "top": "float64_is_nan",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_float64_is_nan/float64_is_nan.cpp",
+          "sha256": "2153de983840115d63c11e816d07e34a3b74f7a8c34090329ce11fa831758d1c",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"float64_is_nan.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_float64_is_signaling_nan",
+      "top": "float64_is_signaling_nan",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_float64_is_signaling_nan/float64_is_signaling_nan.cpp",
+          "sha256": "2758b5fbe06c598b297be383c9fc31d9415268c4f2fbffaf40655ea9d8951cbf",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"float64_is_signaling_nan.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_float64_le",
+      "top": "float64_le",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_float64_le/float64_le.cpp",
+          "sha256": "63c2f589425fed4886c43b3614cbf01e6da0d05944530c7df7ba79e825ecb0fd",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"float64_le.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_float64_neg",
+      "top": "float64_neg",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_float64_neg/float64_neg.cpp",
+          "sha256": "c21a847af76cd847f9d7c5e1ebd22a4a5825769cc0876e9c2903969ec7b79f9b",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"float64_neg.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_mul64To128",
+      "top": "mul64To128",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_mul64To128/mul64To128.cpp",
+          "sha256": "39803654c4db7d73829242351a5c34c605586657c4ced1039b2fd2cd91cc57f8",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"mul64To128.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_packFloat64",
+      "top": "packFloat64",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_packFloat64/packFloat64.cpp",
+          "sha256": "5ebef8496bfd3927d1482e3947f1cde293335e4ac3f6b9f55b6b16a5e9a8901e",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"packFloat64.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_propagateFloat64NaN",
+      "top": "propagateFloat64NaN",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_propagateFloat64NaN/propagateFloat64NaN.cpp",
+          "sha256": "b78f39177c6b93460fe65f9ef91947577afe5d6c2cf2f9682802e49f99bc1cdc",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"propagateFloat64NaN.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_shift64RightJamming",
+      "top": "shift64RightJamming",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_shift64RightJamming/shift64RightJamming.cpp",
+          "sha256": "e88d92a7efc90c57dc78cee3556edee77ed0e27e18716c6284df15ad28c4e6bf",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"shift64RightJamming.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/df_sub128",
+      "top": "sub128",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/df_sub128/sub128.cpp",
+          "sha256": "961fb12b86e2716889ee12437791729d2c8e2f335972eaa048eb2deec288f147",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"sub128.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/dfadd",
+      "top": "float64_add",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/dfadd/dfadd.cpp",
+          "sha256": "ebc169dce9e1ac311f08e4793894fd0f2d1a2dc480e16ff5054c8fe12ade69c5",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"dfadd.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/dfdiv",
+      "top": "float64_div",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/dfdiv/dfdiv.cpp",
+          "sha256": "da6d2aeee15f912d00dceedb54b39024dd0b3114a5307925e10286794155fd22",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"dfdiv.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/dfmul",
+      "top": "float64_mul",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/dfmul/dfmul.cpp",
+          "sha256": "41ac27bf273123bee038197c58943af5307e94a3b81ec8a7c8e87c2be73f9c91",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"dfmul.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/dfsin",
+      "top": "local_sin",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/dfsin/dfsin.cpp",
+          "sha256": "02716113b9f00b0778fa42d53157b7a4f38b53644d722ba53f0c1f305fa8deb9",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"dfsin.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/jpeg__YuvToRgb",
+      "top": "YuvToRgb",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/jpeg__YuvToRgb/YuvToRgb.cpp",
+          "sha256": "d57984f0ec8c9eb5f44fe7b056cbc0a0b1f30e85cfa27e274f177fb7cb209be5",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"YuvToRgb.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/chstone/motion__decode_motion_vector",
+      "top": "decode_motion_vector",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/chstone/motion__decode_motion_vector/decode_motion_vector.cpp",
+          "sha256": "1723fbac0577e8394bed824a80b1989ff62333e38e9420904848f8bfc17d4f07",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"decode_motion_vector.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/flowgnn/fgnn_linear",
+      "top": "linear",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/flowgnn/fgnn_linear/linear.cpp",
+          "sha256": "7cf88aeef230a70ee4805667b64a3f2e186800cc36e4b2a15ac053e4cc16b9a2",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"linear.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/flowgnn/fgnn_linear_input_stationary",
+      "top": "linear_input_stationary",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/flowgnn/fgnn_linear_input_stationary/linear.cpp",
+          "sha256": "1b30f17c778191cec305ee2bd99297aa6f15592640f60173bd97890e242e1cc7",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"linear.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/flowgnn/fgnn_linear_output_stationary",
+      "top": "linear_output_stationary",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/flowgnn/fgnn_linear_output_stationary/linear.cpp",
+          "sha256": "efe92f2ae7441d983da6369535708de12fd4c7c739060440ea03e67b5f430c10",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"linear.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/gnnbuilder/compute_neighbor_tables",
+      "top": "compute_neighbor_tables",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/gnnbuilder/compute_neighbor_tables/compute_neighbor_tables.cpp",
+          "sha256": "cbdafdb6a57e1d59fc859eb4f81d3f09138eba1a7c47980676adae655a2a3e41",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"compute_neighbor_tables.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/gnnbuilder/gather_node_neighbors",
+      "top": "gather_node_neighbors",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/gnnbuilder/gather_node_neighbors/gather_node_neighbors.cpp",
+          "sha256": "3b4df28b1947550b0dd07b9a075164fbd989f78506d55f083c49d2d37e11afee",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"gather_node_neighbors.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/gnnbuilder/global_add_pool",
+      "top": "global_add_pool",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/gnnbuilder/global_add_pool/global_add_pool.cpp",
+          "sha256": "96f201f75435342207d994035713ae42ceb22ac3c525ef94fcec4bf8fbf66753",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"global_add_pool.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/2mm",
+      "top": "kernel_2mm",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/2mm/2mm.cpp",
+          "sha256": "2cc0155ca2afa78c6228e163826d2f9d2220093a0cce55753bb96273cac48f8f",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"2mm.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/3mm",
+      "top": "kernel_3mm",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/3mm/3mm.cpp",
+          "sha256": "9240f1a68d2abf3a5b429e946324a25ae21ad892a2986f37dc263f108fc538f7",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"3mm.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/atax",
+      "top": "kernel_atax",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/atax/atax.cpp",
+          "sha256": "cb0e145bea16b9f02dffef8e1186f89d1329a5d7e8905218dc4100bbd1fd5fa6",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"atax.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/bicg",
+      "top": "kernel_bicg",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/bicg/bicg.cpp",
+          "sha256": "21ea4ca33f226938fcda98d55db68115839da4c6115d18205d1e7afea0e5bd34",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"bicg.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/cholesky",
+      "top": "kernel_cholesky",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/cholesky/cholesky.cpp",
+          "sha256": "9f5680c1dc3d324cc0a87a9dff4f90f1c27db75dc378620f7753300f16f7a677",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"cholesky.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/correlation",
+      "top": "kernel_correlation",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/correlation/correlation.cpp",
+          "sha256": "67fa47682d356ecc1fa83119b34ace457f5ddb797bc65e3d558e6418b0c0c2e8",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"correlation.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/covariance",
+      "top": "kernel_covariance",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/covariance/covariance.cpp",
+          "sha256": "786afd4f091436fcb978acd332dacbf842c926009addc0d8d36a8e9cf2a8412d",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"covariance.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/doitgen",
+      "top": "kernel_doitgen",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/doitgen/doitgen.cpp",
+          "sha256": "7f5edac2615bbd9e2f67a5a8cf718afa0e11cc83415bcc93e12ed761e9efa7b8",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"doitgen.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/durbin",
+      "top": "kernel_durbin",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/durbin/durbin.cpp",
+          "sha256": "74723b700883291a7d9e5985b7876a7d7b03258641152063556a54bb67768e14",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"durbin.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/fdtd-2d",
+      "top": "kernel_fdtd_2d",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/fdtd-2d/fdtd-2d.cpp",
+          "sha256": "a7688769401b04b3879fc8d92550e5dbddcd5d3590913706ffd5edbe3c7581c7",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"fdtd-2d.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/floyd-warshall",
+      "top": "kernel_floyd_warshall",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/floyd-warshall/floyd-warshall.cpp",
+          "sha256": "d46054c91edf7070baec74adcdf595a3dec385bcd613c1913b7e4e2cbc6c9707",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"floyd-warshall.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/gemm",
+      "top": "kernel_gemm",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/gemm/gemm.cpp",
+          "sha256": "d5ac0dbda620b285f5d5d916d57958a79853e46844aac0babb2a873a1a24691d",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"gemm.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/gemver",
+      "top": "kernel_gemver",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/gemver/gemver.cpp",
+          "sha256": "71a00686c38a8219ca98f8e040f611e6d6b6b6200b43650a080fb2f872e744f5",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"gemver.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/gesummv",
+      "top": "kernel_gesummv",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/gesummv/gesummv.cpp",
+          "sha256": "47c305ce9a8387c6442262d915d7f0d943c51fd4697d0095de4b9efbc3f5cf35",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"gesummv.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/gramschmidt",
+      "top": "kernel_gramschmidt",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/gramschmidt/gramschmidt.cpp",
+          "sha256": "2f646e6148bf6923518bc049a9741147075d08c6ca5324a240e574cd6fc14fff",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"gramschmidt.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/heat-3d",
+      "top": "kernel_heat_3d",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/heat-3d/heat-3d.cpp",
+          "sha256": "00ab526f52e3b45a8cde749893442bf5877270aab0d09eb27188578aa4fcf46f",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"heat-3d.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/jacobi-1d",
+      "top": "kernel_jacobi_1d",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/jacobi-1d/jacobi-1d.cpp",
+          "sha256": "309a49ed4643158912b4cda66edc54354fde5f77c3935929c22df7c97b70769f",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"jacobi-1d.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/jacobi-2d",
+      "top": "kernel_jacobi_2d",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/jacobi-2d/jacobi-2d.cpp",
+          "sha256": "f882334824cb318f478179d22c6a92869a7db19cb8217d8b95201aa422f8724c",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"jacobi-2d.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/lu",
+      "top": "kernel_lu",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/lu/lu.cpp",
+          "sha256": "6bfa26d9b581e7e50b15fdf432971b51deaf209617bb9619c120e095094a1573",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"lu.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/ludcmp",
+      "top": "kernel_ludcmp",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/ludcmp/ludcmp.cpp",
+          "sha256": "07260634990d41a1d5e7e24da0ba8a92813b3643d8d109bf42f33a940fa4f5d4",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"ludcmp.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/mvt",
+      "top": "kernel_mvt",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/mvt/mvt.cpp",
+          "sha256": "6b3291a2f4963e5c18e2bbe3eb6fb8e0c0747e69015c2966600a5f94fb0532fd",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"mvt.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/nussinov",
+      "top": "kernel_nussinov",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/nussinov/nussinov.cpp",
+          "sha256": "30afdb778a022442ead1d6f27c6a890c341af613cc226f91380ea3b024e209c2",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"nussinov.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/seidel-2d",
+      "top": "kernel_seidel_2d",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/seidel-2d/seidel-2d.cpp",
+          "sha256": "9be8fdcbbe00712174cb2240fbda75bc4b77f5d830091472c1706c3423cc2b18",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"seidel-2d.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/symm",
+      "top": "kernel_symm",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/symm/symm.cpp",
+          "sha256": "7b7804bfedb5a243954b8c5d314b94079c67b98ecf864e323a4feb0c92f4c5a7",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"symm.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/syr2k",
+      "top": "kernel_syr2k",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/syr2k/syr2k.cpp",
+          "sha256": "627f3ee4751c4c76d5629802522f12b8fd284727de275cdf901d481acc99113b",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"syr2k.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/syrk",
+      "top": "kernel_syrk",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/syrk/syrk.cpp",
+          "sha256": "33b6f23c1bc97c1303f1c76a41c672b81070ed2ef7284bd253d5c3039bf65566",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"syrk.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/trisolv",
+      "top": "kernel_trisolv",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/trisolv/trisolv.cpp",
+          "sha256": "466e477b6635056e771ed2e296f86e3edd7d612b26a470155635738a55174a14",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"trisolv.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/hls_polybench__fixed__small/trmm",
+      "top": "kernel_trmm",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/hls_polybench__fixed__small/trmm/trmm.cpp",
+          "sha256": "6f003e2986a9f0083d7b440519ffaa794ed10f9d706e992289bfb78227fc8fbe",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"trmm.h\"",
+              "\"ap_fixed.h\"",
+              "\"hls_math.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/aes_aes",
+      "top": "aes256_encrypt_ecb",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/aes_aes/aes_aes.cpp",
+          "sha256": "5688278a2ec9e64927d8265fd69755a7a854887f30a240669dd5dd7bdc5c0181",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"aes_aes.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/bfs_bulk",
+      "top": "bfs",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/bfs_bulk/bfs_bulk.cpp",
+          "sha256": "a7b80214d8df02dc6fe6808ffc9b48131dc957dc1efb8c872fe6b619bb160ef1",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"bfs_bulk.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/bfs_queue",
+      "top": "bfs",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/bfs_queue/bfs_queue.cpp",
+          "sha256": "a0fe112a694347c3f20dc7b67b2680fd16dacfcad5dfc58be980ea5fbb8fe511",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"bfs_queue.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/fft_strided",
+      "top": "fft",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/fft_strided/fft_strided.cpp",
+          "sha256": "875308c6ba3a06d1a0d74e774a7c85de22b883df9a001e6cc8cddf9f379111b8",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"fft_strided.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/fft_transpose__WIP",
+      "top": "fft1D_512",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/fft_transpose__WIP/fft_transpose.cpp",
+          "sha256": "c393d9c1764fa76e84a7bd8d5560994886d554adc4024638a0b4727f3ec6875b",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"fft_transpose.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/gemm_blocked",
+      "top": "bbgemm",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/gemm_blocked/gemm_blocked.cpp",
+          "sha256": "1c481c7bb3ef080944ff81bbd30ba55e083999b4ca976a36ed8fbe978fe71687",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"gemm_blocked.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/gemm_ncubed",
+      "top": "gemm",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/gemm_ncubed/gemm_ncubed.cpp",
+          "sha256": "8a4a7ef24224e523b6ddcc1caca3497cb749715edc76dbe133003d9c8514c715",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"gemm_ncubed.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/kmp_kmp",
+      "top": "kmp",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/kmp_kmp/kmp_kmp.cpp",
+          "sha256": "52b93e83514cae6f04783ef045bcedffea2f12052a2c27c90169855a79fd5df0",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"kmp_kmp.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/md_grid",
+      "top": "md",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/md_grid/md_grid.cpp",
+          "sha256": "b549a142cd6fbc2ef7906235cfcc39f3933d9855a83c66b054c51eb17660e93d",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"md_grid.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/md_knn",
+      "top": "md_kernel",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/md_knn/md_knn.cpp",
+          "sha256": "855c1e65d2ec49e7c6e48e68ffec57ddbcf9a3c2f30c5d1d499619733d607dbc",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"md_knn.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/nw_nw",
+      "top": "needwun",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/nw_nw/nw_nw.cpp",
+          "sha256": "2fb193f096637c40d35fe8572da2954b1570281dc22873c166809f7d1ba4bbbc",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"nw_nw.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/sort_merge",
+      "top": "ms_mergesort",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/sort_merge/sort_merge.cpp",
+          "sha256": "f615f714381b90e907181569d8386e264fd14cb640f43741eeeb524a56d15f89",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"sort_merge.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/sort_radix",
+      "top": "ss_sort",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/sort_radix/sort_radix.cpp",
+          "sha256": "02d08642da806c0e5094d7f27d1c42b1fe05df09128fa627b829034d59f6ce6a",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"sort_radix.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/spmv_crs",
+      "top": "spmv",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/spmv_crs/spmv_crs.cpp",
+          "sha256": "033a6191a3ef424c04bab87eb272a0fec1dea00d873f717b44f0bcc924cf84bb",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"spmv_crs.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/spmv_ellpack",
+      "top": "ellpack",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/spmv_ellpack/spmv_ellpack.cpp",
+          "sha256": "1733f2a19c38d6ac6b70518d4ef063cee1346d506737840c7453517cb9793e4d",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"spmv_ellpack.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/stencil_stencil2d",
+      "top": "stencil",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/stencil_stencil2d/stencil_stencil2d.cpp",
+          "sha256": "e831452413fdd7bea1e4969fb605d10f0bbc93adf11385e29d7ecc28cd5709e0",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"stencil_stencil2d.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/stencil_stencil3d",
+      "top": "stencil3d",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/stencil_stencil3d/stencil_stencil3d.cpp",
+          "sha256": "edec7e2a508e79c4b6bb7053c14b2e4f196168c00b2294c58f0edbbca0680d02",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"stencil_stencil3d.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/machsuite/viterbi_viterbi",
+      "top": "viterbi",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/machsuite/viterbi_viterbi/viterbi_viterbi.cpp",
+          "sha256": "3a68fdde26250e5efd5f70baff042c88e73a3a1ed3f5533207b6907286c8a540",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"viterbi_viterbi.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/2mm",
+      "top": "kernel_2mm",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/2mm/2mm.cpp",
+          "sha256": "560832e831b4bf9a273b840ae88d72399dfb647c2f02edd28b5ab7ff733d9ce9",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"2mm.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/3mm",
+      "top": "kernel_3mm",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/3mm/3mm.cpp",
+          "sha256": "94a959b8267fce741e95d1d2065f06046dce399a45727d305a160a9e87d8d78e",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"3mm.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/atax",
+      "top": "kernel_atax",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/atax/atax.cpp",
+          "sha256": "a91cae8312899fc28865b9cdffc14ec83a6597887bef3851d4c87782222a6ef2",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"atax.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/bicg",
+      "top": "kernel_bicg",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/bicg/bicg.cpp",
+          "sha256": "04ae4942a7b0005d1dba0abfb645338ff073c07dc1339b1e07801dd47fc533b5",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"bicg.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/cholesky",
+      "top": "kernel_cholesky",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/cholesky/cholesky.cpp",
+          "sha256": "a4b2fad00dcd38b5d06817237306ff5ab8dd0581c40f18a3e3c8cfc89c927d1e",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"cholesky.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/correlation",
+      "top": "kernel_correlation",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/correlation/correlation.cpp",
+          "sha256": "cf9fa63517cd9a953f79dfb0dfd98e92852a385d29785d8613473c58bf194fb4",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"correlation.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/covariance",
+      "top": "kernel_covariance",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/covariance/covariance.cpp",
+          "sha256": "90a3d306d85e9644ddb4594473aafb97b379e4d7fda3bdc0e1dcb69013ea8c1e",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"covariance.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/doitgen",
+      "top": "kernel_doitgen",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/doitgen/doitgen.cpp",
+          "sha256": "2ac664ab886bd1ad80238df46504d0547d63c5c223d9c6229e79a028ef950ced",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"doitgen.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/durbin",
+      "top": "kernel_durbin",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/durbin/durbin.cpp",
+          "sha256": "d7059971b5d827c44cf5c330900e6e863aef35d9d7f11e739c4d3d3d9d8e0ea4",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"durbin.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/fdtd-2d",
+      "top": "kernel_fdtd_2d",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/fdtd-2d/fdtd-2d.cpp",
+          "sha256": "54e25a20779259081cb69194f0d9122fc76ac33a76a1fe600db6d1f1acf5af35",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"fdtd-2d.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/floyd-warshall",
+      "top": "kernel_floyd_warshall",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/floyd-warshall/floyd-warshall.cpp",
+          "sha256": "bb0cbaaa976be083f36677fa6283c67d86d07a64455d32ceb6a7fc2d06b07aa9",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"floyd-warshall.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/gemm",
+      "top": "kernel_gemm",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/gemm/gemm.cpp",
+          "sha256": "e5400c6773b3b97246fdfdea3fa7106292cafa158950ec26a7efcec7c832a7eb",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"gemm.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/gemver",
+      "top": "kernel_gemver",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/gemver/gemver.cpp",
+          "sha256": "8d7bf7f262cfb672b8efa05b6a8753c864b72aed2f0a63bcc109334d5135a404",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"gemver.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/gesummv",
+      "top": "kernel_gesummv",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/gesummv/gesummv.cpp",
+          "sha256": "1498aaae9af97e23da39cd3ea04924ac5f56020439510bfe91d90d4453dc7df1",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"gesummv.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/gramschmidt",
+      "top": "kernel_gramschmidt",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/gramschmidt/gramschmidt.cpp",
+          "sha256": "83a8fc4e632537855bbc2329a61ee15b05aa7401b5f69dca63a654daf3d5d01e",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"gramschmidt.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/heat-3d",
+      "top": "kernel_heat_3d",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/heat-3d/heat-3d.cpp",
+          "sha256": "cfbab7041539c542f49d9e0d3f299080179b8262d7e0c8b727308b96d7e3a6fc",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"heat-3d.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/jacobi-1d",
+      "top": "kernel_jacobi_1d",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/jacobi-1d/jacobi-1d.cpp",
+          "sha256": "3982b754a9111d927059911104c74e390ff6031b4fe807791043a41108e42a55",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"jacobi-1d.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/jacobi-2d",
+      "top": "kernel_jacobi_2d",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/jacobi-2d/jacobi-2d.cpp",
+          "sha256": "cde2c512460d83bad5dc8e5f5d02f8677a0d1d5b602e09b13bba8427d71c643a",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"jacobi-2d.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/lu",
+      "top": "kernel_lu",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/lu/lu.cpp",
+          "sha256": "29fd240a31341eeffd8a5b73c2c1d0828ca5f41b5b4006b7b5f66bca2c9941bf",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"lu.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/ludcmp",
+      "top": "kernel_ludcmp",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/ludcmp/ludcmp.cpp",
+          "sha256": "8781e6d6816f2dfa396a966d890ad7fa8f7dd89859440dac3936489ac8794153",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"ludcmp.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/mvt",
+      "top": "kernel_mvt",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/mvt/mvt.cpp",
+          "sha256": "6dc052dde05f908936429a70afced4bf502d519b0bf43a475c5a3a90cccad235",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"mvt.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/nussinov",
+      "top": "kernel_nussinov",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/nussinov/nussinov.cpp",
+          "sha256": "0d5c837b0dcc425c0043f3ec69ec75075236f5ef6def92e9dca31dfa8efd1356",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"nussinov.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/seidel-2d",
+      "top": "kernel_seidel_2d",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/seidel-2d/seidel-2d.cpp",
+          "sha256": "221d9cb33631f1ea5fb01439985522ff9a65346984395c73877d747a97a90dfb",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"seidel-2d.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/symm",
+      "top": "kernel_symm",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/symm/symm.cpp",
+          "sha256": "a4e79b35c132d34d7261c5cda81dc33f74391fa876d8416d51a50a5cf0298dce",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"symm.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/syr2k",
+      "top": "kernel_syr2k",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/syr2k/syr2k.cpp",
+          "sha256": "bf41939e6720b7407102254a2db938d2f9eead51cf27936233d0e25dea43d438",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"syr2k.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/syrk",
+      "top": "kernel_syrk",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/syrk/syrk.cpp",
+          "sha256": "d80b42b45c817482445b5d20f2a3c70d888b9f523bc133919097a798bb311d7e",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"syrk.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/trisolv",
+      "top": "kernel_trisolv",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/trisolv/trisolv.cpp",
+          "sha256": "edaa8980558a6ad9e7578cacd37348589ca684e6f87c731be0fa44a66ef140a4",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"trisolv.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/polybench/trmm",
+      "top": "kernel_trmm",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/polybench/trmm/trmm.cpp",
+          "sha256": "ddb556eac7509ac741b06c1d6b56279ac9512de975f7982958b17a9b21ea5aa2",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"trmm.h\""
+            ],
+            "float_or_double_token": true,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/pp4fpga/block_mm",
+      "top": "blockmatmul",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/pp4fpga/block_mm/block_mm.cpp",
+          "sha256": "3ce07981e243dda9b9138f3bcc99f62beecf2f872fdfcfb5d88793a5127fa285",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"block_mm.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": true
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/pp4fpga/parallel_merge_sort",
+      "top": "merge_sort_parallel",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/pp4fpga/parallel_merge_sort/merge_sort_parallel.cpp",
+          "sha256": "1170dc1dac5fe74255b24372d06aed666ba6d8e3f07c6ed2b4613efa888ae20d",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"merge_sort_parallel.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/pp4fpga/pp4fpga_cordic",
+      "top": "cordic",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/pp4fpga/pp4fpga_cordic/cordic.cpp",
+          "sha256": "3dfb86f660c2288f8a235c86e6fe2d7bb37f1274813f5e9f0c01f49068a30adf",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"cordic.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/rosetta/digit_recognition__popcount",
+      "top": "popcount",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/rosetta/digit_recognition__popcount/popcount.cpp",
+          "sha256": "7af977bb22f1d3d2e1ca6a502db63a22b5ba26d3ad313a2c85bf5369f75e9480",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"popcount.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/rosetta/digit_recognition__update_knn__WIP",
+      "top": "update_knn",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/rosetta/digit_recognition__update_knn__WIP/update_knn.cpp",
+          "sha256": "14b308ce2a70fd4e234aa6b2185f1bd1c35a045fa58269e63f161cb0953e3e15",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"update_knn.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/rosetta/optical_flow__outer_product",
+      "top": "outer_product",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/rosetta/optical_flow__outer_product/outer_product.cpp",
+          "sha256": "610be7401541258ad577a2bf91d05052517834eb1d06f7ef8155a1b58f43052f",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"outer_product.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/rosetta/rendering_3d__check_clockwise",
+      "top": "check_clockwise",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/rosetta/rendering_3d__check_clockwise/check_clockwise.cpp",
+          "sha256": "ed1067cdfef05c521532b10c2aa534ae91173d8d8262111c51f0143728e0bf49",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"check_clockwise.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/rosetta/rendering_3d__clockwise_vertices",
+      "top": "clockwise_vertices",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/rosetta/rendering_3d__clockwise_vertices/clockwise_vertices.cpp",
+          "sha256": "2a522e91532e1d85271c814883a681703618ed8bac70e35b48ef0cda6b403037",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"clockwise_vertices.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/rosetta/rendering_3d__pixel_in_triangle",
+      "top": "pixel_in_triangle",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/rosetta/rendering_3d__pixel_in_triangle/pixel_in_triangle.cpp",
+          "sha256": "73238fd68ec43f0d03866e8bcacd929796c1a6111f3ff6e31ad2d706e628e3a1",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"pixel_in_triangle.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/rosetta/rendering_3d__projection",
+      "top": "projection",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/rosetta/rendering_3d__projection/projection.cpp",
+          "sha256": "6c48688267fc3ebab56440c8bbe425d87a220cdc479cd93867aa82a005151de1",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"projection.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/rosetta/spam_filter__computeGradient",
+      "top": "computeGradient",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/rosetta/spam_filter__computeGradient/computeGradient.cpp",
+          "sha256": "59f4dce541961fdcccd75953dcc496ade992c8f8003cba0f1bd33f777984e534",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"computeGradient.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    },
+    {
+      "suite": "hls-eval",
+      "design": "hls_eval_data/rosetta/spam_filter__dotProduct",
+      "top": "dotProduct",
+      "sources": [
+        {
+          "source": "datasets/hls-eval/hls_eval_data/rosetta/spam_filter__dotProduct/dotProduct.cpp",
+          "sha256": "149141b710ee023dde12292bcede319070a82d42d812caff02b152f342fa34d7",
+          "status": "frontend_exclusion",
+          "reason": "Preprocess macros/includes before checking (except stdint.h)",
+          "text_indicators_not_semantic_analysis": {
+            "includes": [
+              "\"dotProduct.h\""
+            ],
+            "float_or_double_token": false,
+            "vendor_ap_type_token": false
+          }
+        }
+      ],
+      "eligible_source_count": 0
+    }
+  ]
+}

@@ -1,0 +1,1969 @@
+{
+  "fingerprints": {
+    "original": "5c267b676f106ae9bce618070e9c9c9f2dd2338d931139c41feb62bce93af92e",
+    "candidate": "52444f8625c75954a8e170d661905ebcc9194251a2592ca678d527e48c255c4a",
+    "evaluator": "c6045de93a412b74c1b8a184a264bc3a964ce015d2b4b5864f49909f7cf9cb9a",
+    "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+    "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307",
+    "pipeline.py": "a4b504daefbd3524a1d0a6fc5e872fd2a75b469c869cfb2c33a35711fa731567",
+    "native_helpers": "a83490a2ca85c768fe67d098c3b4b4899539a14db4ac582d6c8760bbf81917fe",
+    "timeout_ms": 15000
+  },
+  "manual_semantic_edits": false,
+  "syntax_compiles": true,
+  "ast_unchanged": false,
+  "verification": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 150,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [
+      {
+        "index": 1,
+        "status": "sat",
+        "variables": [
+          "arg0_0"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma001.smt2"
+      },
+      {
+        "index": 2,
+        "status": "sat",
+        "variables": [
+          "arg0_1"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma002.smt2"
+      },
+      {
+        "index": 3,
+        "status": "sat",
+        "variables": [
+          "arg0_1"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma003.smt2"
+      },
+      {
+        "index": 4,
+        "status": "sat",
+        "variables": [
+          "arg0_0"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma004.smt2"
+      },
+      {
+        "index": 5,
+        "status": "sat",
+        "variables": [
+          "arg0_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma005.smt2"
+      },
+      {
+        "index": 6,
+        "status": "sat",
+        "variables": [
+          "arg0_1"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma006.smt2"
+      },
+      {
+        "index": 7,
+        "status": "sat",
+        "variables": [
+          "arg0_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma007.smt2"
+      },
+      {
+        "index": 8,
+        "status": "sat",
+        "variables": [
+          "arg0_0"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma008.smt2"
+      },
+      {
+        "index": 9,
+        "status": "sat",
+        "variables": [
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma009.smt2"
+      },
+      {
+        "index": 10,
+        "status": "sat",
+        "variables": [
+          "arg0_1"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma010.smt2"
+      },
+      {
+        "index": 11,
+        "status": "sat",
+        "variables": [
+          "arg0_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma011.smt2"
+      },
+      {
+        "index": 12,
+        "status": "sat",
+        "variables": [
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma012.smt2"
+      },
+      {
+        "index": 13,
+        "status": "sat",
+        "variables": [
+          "arg0_0"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma013.smt2"
+      },
+      {
+        "index": 14,
+        "status": "sat",
+        "variables": [
+          "arg0_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma014.smt2"
+      },
+      {
+        "index": 15,
+        "status": "sat",
+        "variables": [
+          "arg0_1"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma015.smt2"
+      },
+      {
+        "index": 16,
+        "status": "sat",
+        "variables": [
+          "arg0_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma016.smt2"
+      },
+      {
+        "index": 17,
+        "status": "sat",
+        "variables": [
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma017.smt2"
+      },
+      {
+        "index": 18,
+        "status": "sat",
+        "variables": [
+          "arg0_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma018.smt2"
+      },
+      {
+        "index": 19,
+        "status": "sat",
+        "variables": [
+          "arg0_0"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma019.smt2"
+      },
+      {
+        "index": 20,
+        "status": "sat",
+        "variables": [
+          "arg0_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma020.smt2"
+      },
+      {
+        "index": 21,
+        "status": "sat",
+        "variables": [
+          "arg0_1"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma021.smt2"
+      },
+      {
+        "index": 22,
+        "status": "sat",
+        "variables": [
+          "arg0_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma022.smt2"
+      },
+      {
+        "index": 23,
+        "status": "sat",
+        "variables": [
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma023.smt2"
+      },
+      {
+        "index": 24,
+        "status": "sat",
+        "variables": [
+          "arg0_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma024.smt2"
+      },
+      {
+        "index": 25,
+        "status": "sat",
+        "variables": [
+          "arg0_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma025.smt2"
+      },
+      {
+        "index": 26,
+        "status": "sat",
+        "variables": [
+          "arg0_0"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma026.smt2"
+      },
+      {
+        "index": 27,
+        "status": "sat",
+        "variables": [
+          "arg0_6"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma027.smt2"
+      },
+      {
+        "index": 28,
+        "status": "sat",
+        "variables": [
+          "arg0_1"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma028.smt2"
+      },
+      {
+        "index": 29,
+        "status": "sat",
+        "variables": [
+          "arg0_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma029.smt2"
+      },
+      {
+        "index": 30,
+        "status": "sat",
+        "variables": [
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma030.smt2"
+      },
+      {
+        "index": 31,
+        "status": "sat",
+        "variables": [
+          "arg0_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma031.smt2"
+      },
+      {
+        "index": 32,
+        "status": "sat",
+        "variables": [
+          "arg0_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma032.smt2"
+      },
+      {
+        "index": 33,
+        "status": "sat",
+        "variables": [
+          "arg0_6"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma033.smt2"
+      },
+      {
+        "index": 34,
+        "status": "sat",
+        "variables": [
+          "arg0_0"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma034.smt2"
+      },
+      {
+        "index": 35,
+        "status": "sat",
+        "variables": [
+          "arg0_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma035.smt2"
+      },
+      {
+        "index": 36,
+        "status": "sat",
+        "variables": [
+          "arg0_1"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma036.smt2"
+      },
+      {
+        "index": 37,
+        "status": "sat",
+        "variables": [
+          "arg0_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma037.smt2"
+      },
+      {
+        "index": 38,
+        "status": "sat",
+        "variables": [
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma038.smt2"
+      },
+      {
+        "index": 39,
+        "status": "sat",
+        "variables": [
+          "arg0_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma039.smt2"
+      },
+      {
+        "index": 40,
+        "status": "sat",
+        "variables": [
+          "arg0_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma040.smt2"
+      },
+      {
+        "index": 41,
+        "status": "sat",
+        "variables": [
+          "arg0_6"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma041.smt2"
+      },
+      {
+        "index": 42,
+        "status": "sat",
+        "variables": [
+          "arg0_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma042.smt2"
+      },
+      {
+        "index": 43,
+        "status": "sat",
+        "variables": [
+          "arg0_0"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma043.smt2"
+      },
+      {
+        "index": 44,
+        "status": "sat",
+        "variables": [
+          "arg0_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma044.smt2"
+      },
+      {
+        "index": 45,
+        "status": "sat",
+        "variables": [
+          "arg0_1"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma045.smt2"
+      },
+      {
+        "index": 46,
+        "status": "sat",
+        "variables": [
+          "arg0_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma046.smt2"
+      },
+      {
+        "index": 47,
+        "status": "sat",
+        "variables": [
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma047.smt2"
+      },
+      {
+        "index": 48,
+        "status": "sat",
+        "variables": [
+          "arg0_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma048.smt2"
+      },
+      {
+        "index": 49,
+        "status": "sat",
+        "variables": [
+          "arg0_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma049.smt2"
+      },
+      {
+        "index": 50,
+        "status": "sat",
+        "variables": [
+          "arg0_6"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma050.smt2"
+      },
+      {
+        "index": 51,
+        "status": "sat",
+        "variables": [
+          "arg0_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma051.smt2"
+      },
+      {
+        "index": 52,
+        "status": "sat",
+        "variables": [
+          "arg0_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma052.smt2"
+      },
+      {
+        "index": 53,
+        "status": "sat",
+        "variables": [
+          "arg0_0"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma053.smt2"
+      },
+      {
+        "index": 54,
+        "status": "sat",
+        "variables": [
+          "arg0_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma054.smt2"
+      },
+      {
+        "index": 55,
+        "status": "sat",
+        "variables": [
+          "arg0_1"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma055.smt2"
+      },
+      {
+        "index": 56,
+        "status": "sat",
+        "variables": [
+          "arg0_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma056.smt2"
+      },
+      {
+        "index": 57,
+        "status": "sat",
+        "variables": [
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma057.smt2"
+      },
+      {
+        "index": 58,
+        "status": "sat",
+        "variables": [
+          "arg0_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma058.smt2"
+      },
+      {
+        "index": 59,
+        "status": "sat",
+        "variables": [
+          "arg0_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma059.smt2"
+      },
+      {
+        "index": 60,
+        "status": "sat",
+        "variables": [
+          "arg0_6"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma060.smt2"
+      },
+      {
+        "index": 61,
+        "status": "sat",
+        "variables": [
+          "arg0_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma061.smt2"
+      },
+      {
+        "index": 62,
+        "status": "sat",
+        "variables": [
+          "arg0_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma062.smt2"
+      },
+      {
+        "index": 63,
+        "status": "sat",
+        "variables": [
+          "arg0_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma063.smt2"
+      },
+      {
+        "index": 64,
+        "status": "sat",
+        "variables": [
+          "arg0_0"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma064.smt2"
+      },
+      {
+        "index": 65,
+        "status": "sat",
+        "variables": [
+          "arg0_10"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma065.smt2"
+      },
+      {
+        "index": 66,
+        "status": "sat",
+        "variables": [
+          "arg0_1"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma066.smt2"
+      },
+      {
+        "index": 67,
+        "status": "sat",
+        "variables": [
+          "arg0_10"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma067.smt2"
+      },
+      {
+        "index": 68,
+        "status": "sat",
+        "variables": [
+          "arg0_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma068.smt2"
+      },
+      {
+        "index": 69,
+        "status": "sat",
+        "variables": [
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma069.smt2"
+      },
+      {
+        "index": 70,
+        "status": "sat",
+        "variables": [
+          "arg0_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma070.smt2"
+      },
+      {
+        "index": 71,
+        "status": "sat",
+        "variables": [
+          "arg0_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma071.smt2"
+      },
+      {
+        "index": 72,
+        "status": "sat",
+        "variables": [
+          "arg0_6"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma072.smt2"
+      },
+      {
+        "index": 73,
+        "status": "sat",
+        "variables": [
+          "arg0_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma073.smt2"
+      },
+      {
+        "index": 74,
+        "status": "sat",
+        "variables": [
+          "arg0_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma074.smt2"
+      },
+      {
+        "index": 75,
+        "status": "sat",
+        "variables": [
+          "arg0_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma075.smt2"
+      },
+      {
+        "index": 76,
+        "status": "sat",
+        "variables": [
+          "arg0_0"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma076.smt2"
+      },
+      {
+        "index": 77,
+        "status": "sat",
+        "variables": [
+          "arg0_11"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma077.smt2"
+      },
+      {
+        "index": 78,
+        "status": "sat",
+        "variables": [
+          "arg0_1"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma078.smt2"
+      },
+      {
+        "index": 79,
+        "status": "sat",
+        "variables": [
+          "arg0_10"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma079.smt2"
+      },
+      {
+        "index": 80,
+        "status": "sat",
+        "variables": [
+          "arg0_11"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma080.smt2"
+      },
+      {
+        "index": 81,
+        "status": "sat",
+        "variables": [
+          "arg0_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma081.smt2"
+      },
+      {
+        "index": 82,
+        "status": "sat",
+        "variables": [
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma082.smt2"
+      },
+      {
+        "index": 83,
+        "status": "sat",
+        "variables": [
+          "arg0_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma083.smt2"
+      },
+      {
+        "index": 84,
+        "status": "sat",
+        "variables": [
+          "arg0_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma084.smt2"
+      },
+      {
+        "index": 85,
+        "status": "sat",
+        "variables": [
+          "arg0_6"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma085.smt2"
+      },
+      {
+        "index": 86,
+        "status": "sat",
+        "variables": [
+          "arg0_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma086.smt2"
+      },
+      {
+        "index": 87,
+        "status": "sat",
+        "variables": [
+          "arg0_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma087.smt2"
+      },
+      {
+        "index": 88,
+        "status": "sat",
+        "variables": [
+          "arg0_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma088.smt2"
+      },
+      {
+        "index": 89,
+        "status": "sat",
+        "variables": [
+          "arg0_0"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma089.smt2"
+      },
+      {
+        "index": 90,
+        "status": "sat",
+        "variables": [
+          "arg0_12"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma090.smt2"
+      },
+      {
+        "index": 91,
+        "status": "sat",
+        "variables": [
+          "arg0_1"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma091.smt2"
+      },
+      {
+        "index": 92,
+        "status": "sat",
+        "variables": [
+          "arg0_10"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma092.smt2"
+      },
+      {
+        "index": 93,
+        "status": "sat",
+        "variables": [
+          "arg0_11"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma093.smt2"
+      },
+      {
+        "index": 94,
+        "status": "sat",
+        "variables": [
+          "arg0_12"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma094.smt2"
+      },
+      {
+        "index": 95,
+        "status": "sat",
+        "variables": [
+          "arg0_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma095.smt2"
+      },
+      {
+        "index": 96,
+        "status": "sat",
+        "variables": [
+          "arg0_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma096.smt2"
+      },
+      {
+        "index": 97,
+        "status": "sat",
+        "variables": [
+          "arg0_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma097.smt2"
+      },
+      {
+        "index": 98,
+        "status": "sat",
+        "variables": [
+          "arg0_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma098.smt2"
+      },
+      {
+        "index": 99,
+        "status": "sat",
+        "variables": [
+          "arg0_6"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma099.smt2"
+      },
+      {
+        "index": 100,
+        "status": "sat",
+        "variables": [
+          "arg0_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma100.smt2"
+      },
+      {
+        "index": 101,
+        "status": "sat",
+        "variables": [
+          "arg0_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma101.smt2"
+      },
+      {
+        "index": 102,
+        "status": "sat",
+        "variables": [
+          "arg0_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma102.smt2"
+      },
+      {
+        "index": 103,
+        "status": "sat",
+        "variables": [
+          "arg0_0"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma103.smt2"
+      },
+      {
+        "index": 104,
+        "status": "sat",
+        "variables": [
+          "arg0_13"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma104.smt2"
+      }
+    ],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "a": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        4294967294,
+        0,
+        0
+      ],
+      "out": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "original_outputs": {
+      "a": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        4294967294,
+        0,
+        0
+      ],
+      "out": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        4294967293,
+        4294967294
+      ]
+    },
+    "candidate_outputs": {
+      "a": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        4294967294,
+        0,
+        0
+      ],
+      "out": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        4294967294,
+        4294967294
+      ]
+    },
+    "elapsed_seconds": 1.584359,
+    "backend": "hlscheck/Z3",
+    "fallback_used": false,
+    "initial_stage": {
+      "status": "not_equivalent",
+      "assumptions": [
+        "32-bit int and unsigned int; uint32_t is unsigned int",
+        "All array parameters are valid, separately allocated, and nonoverlapping",
+        "Functional equality at function completion; no cycle-level RTL guarantee"
+      ],
+      "execution_steps": 150,
+      "paths": {
+        "original": 1,
+        "candidate": 1
+      },
+      "z3_version": "5.1.0",
+      "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+      "component_lemmas": [
+        {
+          "index": 1,
+          "status": "sat",
+          "variables": [
+            "arg0_0"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma001.smt2"
+        },
+        {
+          "index": 2,
+          "status": "sat",
+          "variables": [
+            "arg0_1"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma002.smt2"
+        },
+        {
+          "index": 3,
+          "status": "sat",
+          "variables": [
+            "arg0_1"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma003.smt2"
+        },
+        {
+          "index": 4,
+          "status": "sat",
+          "variables": [
+            "arg0_0"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma004.smt2"
+        },
+        {
+          "index": 5,
+          "status": "sat",
+          "variables": [
+            "arg0_2"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma005.smt2"
+        },
+        {
+          "index": 6,
+          "status": "sat",
+          "variables": [
+            "arg0_1"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma006.smt2"
+        },
+        {
+          "index": 7,
+          "status": "sat",
+          "variables": [
+            "arg0_2"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma007.smt2"
+        },
+        {
+          "index": 8,
+          "status": "sat",
+          "variables": [
+            "arg0_0"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma008.smt2"
+        },
+        {
+          "index": 9,
+          "status": "sat",
+          "variables": [
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma009.smt2"
+        },
+        {
+          "index": 10,
+          "status": "sat",
+          "variables": [
+            "arg0_1"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma010.smt2"
+        },
+        {
+          "index": 11,
+          "status": "sat",
+          "variables": [
+            "arg0_2"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma011.smt2"
+        },
+        {
+          "index": 12,
+          "status": "sat",
+          "variables": [
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma012.smt2"
+        },
+        {
+          "index": 13,
+          "status": "sat",
+          "variables": [
+            "arg0_0"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma013.smt2"
+        },
+        {
+          "index": 14,
+          "status": "sat",
+          "variables": [
+            "arg0_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma014.smt2"
+        },
+        {
+          "index": 15,
+          "status": "sat",
+          "variables": [
+            "arg0_1"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma015.smt2"
+        },
+        {
+          "index": 16,
+          "status": "sat",
+          "variables": [
+            "arg0_2"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma016.smt2"
+        },
+        {
+          "index": 17,
+          "status": "sat",
+          "variables": [
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma017.smt2"
+        },
+        {
+          "index": 18,
+          "status": "sat",
+          "variables": [
+            "arg0_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma018.smt2"
+        },
+        {
+          "index": 19,
+          "status": "sat",
+          "variables": [
+            "arg0_0"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma019.smt2"
+        },
+        {
+          "index": 20,
+          "status": "sat",
+          "variables": [
+            "arg0_5"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma020.smt2"
+        },
+        {
+          "index": 21,
+          "status": "sat",
+          "variables": [
+            "arg0_1"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma021.smt2"
+        },
+        {
+          "index": 22,
+          "status": "sat",
+          "variables": [
+            "arg0_2"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma022.smt2"
+        },
+        {
+          "index": 23,
+          "status": "sat",
+          "variables": [
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma023.smt2"
+        },
+        {
+          "index": 24,
+          "status": "sat",
+          "variables": [
+            "arg0_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma024.smt2"
+        },
+        {
+          "index": 25,
+          "status": "sat",
+          "variables": [
+            "arg0_5"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma025.smt2"
+        },
+        {
+          "index": 26,
+          "status": "sat",
+          "variables": [
+            "arg0_0"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma026.smt2"
+        },
+        {
+          "index": 27,
+          "status": "sat",
+          "variables": [
+            "arg0_6"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma027.smt2"
+        },
+        {
+          "index": 28,
+          "status": "sat",
+          "variables": [
+            "arg0_1"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma028.smt2"
+        },
+        {
+          "index": 29,
+          "status": "sat",
+          "variables": [
+            "arg0_2"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma029.smt2"
+        },
+        {
+          "index": 30,
+          "status": "sat",
+          "variables": [
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma030.smt2"
+        },
+        {
+          "index": 31,
+          "status": "sat",
+          "variables": [
+            "arg0_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma031.smt2"
+        },
+        {
+          "index": 32,
+          "status": "sat",
+          "variables": [
+            "arg0_5"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma032.smt2"
+        },
+        {
+          "index": 33,
+          "status": "sat",
+          "variables": [
+            "arg0_6"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma033.smt2"
+        },
+        {
+          "index": 34,
+          "status": "sat",
+          "variables": [
+            "arg0_0"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma034.smt2"
+        },
+        {
+          "index": 35,
+          "status": "sat",
+          "variables": [
+            "arg0_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma035.smt2"
+        },
+        {
+          "index": 36,
+          "status": "sat",
+          "variables": [
+            "arg0_1"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma036.smt2"
+        },
+        {
+          "index": 37,
+          "status": "sat",
+          "variables": [
+            "arg0_2"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma037.smt2"
+        },
+        {
+          "index": 38,
+          "status": "sat",
+          "variables": [
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma038.smt2"
+        },
+        {
+          "index": 39,
+          "status": "sat",
+          "variables": [
+            "arg0_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma039.smt2"
+        },
+        {
+          "index": 40,
+          "status": "sat",
+          "variables": [
+            "arg0_5"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma040.smt2"
+        },
+        {
+          "index": 41,
+          "status": "sat",
+          "variables": [
+            "arg0_6"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma041.smt2"
+        },
+        {
+          "index": 42,
+          "status": "sat",
+          "variables": [
+            "arg0_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma042.smt2"
+        },
+        {
+          "index": 43,
+          "status": "sat",
+          "variables": [
+            "arg0_0"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma043.smt2"
+        },
+        {
+          "index": 44,
+          "status": "sat",
+          "variables": [
+            "arg0_8"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma044.smt2"
+        },
+        {
+          "index": 45,
+          "status": "sat",
+          "variables": [
+            "arg0_1"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma045.smt2"
+        },
+        {
+          "index": 46,
+          "status": "sat",
+          "variables": [
+            "arg0_2"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma046.smt2"
+        },
+        {
+          "index": 47,
+          "status": "sat",
+          "variables": [
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma047.smt2"
+        },
+        {
+          "index": 48,
+          "status": "sat",
+          "variables": [
+            "arg0_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma048.smt2"
+        },
+        {
+          "index": 49,
+          "status": "sat",
+          "variables": [
+            "arg0_5"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma049.smt2"
+        },
+        {
+          "index": 50,
+          "status": "sat",
+          "variables": [
+            "arg0_6"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma050.smt2"
+        },
+        {
+          "index": 51,
+          "status": "sat",
+          "variables": [
+            "arg0_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma051.smt2"
+        },
+        {
+          "index": 52,
+          "status": "sat",
+          "variables": [
+            "arg0_8"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma052.smt2"
+        },
+        {
+          "index": 53,
+          "status": "sat",
+          "variables": [
+            "arg0_0"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma053.smt2"
+        },
+        {
+          "index": 54,
+          "status": "sat",
+          "variables": [
+            "arg0_9"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma054.smt2"
+        },
+        {
+          "index": 55,
+          "status": "sat",
+          "variables": [
+            "arg0_1"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma055.smt2"
+        },
+        {
+          "index": 56,
+          "status": "sat",
+          "variables": [
+            "arg0_2"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma056.smt2"
+        },
+        {
+          "index": 57,
+          "status": "sat",
+          "variables": [
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma057.smt2"
+        },
+        {
+          "index": 58,
+          "status": "sat",
+          "variables": [
+            "arg0_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma058.smt2"
+        },
+        {
+          "index": 59,
+          "status": "sat",
+          "variables": [
+            "arg0_5"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma059.smt2"
+        },
+        {
+          "index": 60,
+          "status": "sat",
+          "variables": [
+            "arg0_6"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma060.smt2"
+        },
+        {
+          "index": 61,
+          "status": "sat",
+          "variables": [
+            "arg0_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma061.smt2"
+        },
+        {
+          "index": 62,
+          "status": "sat",
+          "variables": [
+            "arg0_8"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma062.smt2"
+        },
+        {
+          "index": 63,
+          "status": "sat",
+          "variables": [
+            "arg0_9"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma063.smt2"
+        },
+        {
+          "index": 64,
+          "status": "sat",
+          "variables": [
+            "arg0_0"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma064.smt2"
+        },
+        {
+          "index": 65,
+          "status": "sat",
+          "variables": [
+            "arg0_10"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma065.smt2"
+        },
+        {
+          "index": 66,
+          "status": "sat",
+          "variables": [
+            "arg0_1"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma066.smt2"
+        },
+        {
+          "index": 67,
+          "status": "sat",
+          "variables": [
+            "arg0_10"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma067.smt2"
+        },
+        {
+          "index": 68,
+          "status": "sat",
+          "variables": [
+            "arg0_2"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma068.smt2"
+        },
+        {
+          "index": 69,
+          "status": "sat",
+          "variables": [
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma069.smt2"
+        },
+        {
+          "index": 70,
+          "status": "sat",
+          "variables": [
+            "arg0_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma070.smt2"
+        },
+        {
+          "index": 71,
+          "status": "sat",
+          "variables": [
+            "arg0_5"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma071.smt2"
+        },
+        {
+          "index": 72,
+          "status": "sat",
+          "variables": [
+            "arg0_6"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma072.smt2"
+        },
+        {
+          "index": 73,
+          "status": "sat",
+          "variables": [
+            "arg0_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma073.smt2"
+        },
+        {
+          "index": 74,
+          "status": "sat",
+          "variables": [
+            "arg0_8"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma074.smt2"
+        },
+        {
+          "index": 75,
+          "status": "sat",
+          "variables": [
+            "arg0_9"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma075.smt2"
+        },
+        {
+          "index": 76,
+          "status": "sat",
+          "variables": [
+            "arg0_0"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma076.smt2"
+        },
+        {
+          "index": 77,
+          "status": "sat",
+          "variables": [
+            "arg0_11"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma077.smt2"
+        },
+        {
+          "index": 78,
+          "status": "sat",
+          "variables": [
+            "arg0_1"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma078.smt2"
+        },
+        {
+          "index": 79,
+          "status": "sat",
+          "variables": [
+            "arg0_10"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma079.smt2"
+        },
+        {
+          "index": 80,
+          "status": "sat",
+          "variables": [
+            "arg0_11"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma080.smt2"
+        },
+        {
+          "index": 81,
+          "status": "sat",
+          "variables": [
+            "arg0_2"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma081.smt2"
+        },
+        {
+          "index": 82,
+          "status": "sat",
+          "variables": [
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma082.smt2"
+        },
+        {
+          "index": 83,
+          "status": "sat",
+          "variables": [
+            "arg0_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma083.smt2"
+        },
+        {
+          "index": 84,
+          "status": "sat",
+          "variables": [
+            "arg0_5"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma084.smt2"
+        },
+        {
+          "index": 85,
+          "status": "sat",
+          "variables": [
+            "arg0_6"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma085.smt2"
+        },
+        {
+          "index": 86,
+          "status": "sat",
+          "variables": [
+            "arg0_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma086.smt2"
+        },
+        {
+          "index": 87,
+          "status": "sat",
+          "variables": [
+            "arg0_8"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma087.smt2"
+        },
+        {
+          "index": 88,
+          "status": "sat",
+          "variables": [
+            "arg0_9"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma088.smt2"
+        },
+        {
+          "index": 89,
+          "status": "sat",
+          "variables": [
+            "arg0_0"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma089.smt2"
+        },
+        {
+          "index": 90,
+          "status": "sat",
+          "variables": [
+            "arg0_12"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma090.smt2"
+        },
+        {
+          "index": 91,
+          "status": "sat",
+          "variables": [
+            "arg0_1"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma091.smt2"
+        },
+        {
+          "index": 92,
+          "status": "sat",
+          "variables": [
+            "arg0_10"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma092.smt2"
+        },
+        {
+          "index": 93,
+          "status": "sat",
+          "variables": [
+            "arg0_11"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma093.smt2"
+        },
+        {
+          "index": 94,
+          "status": "sat",
+          "variables": [
+            "arg0_12"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma094.smt2"
+        },
+        {
+          "index": 95,
+          "status": "sat",
+          "variables": [
+            "arg0_2"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma095.smt2"
+        },
+        {
+          "index": 96,
+          "status": "sat",
+          "variables": [
+            "arg0_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma096.smt2"
+        },
+        {
+          "index": 97,
+          "status": "sat",
+          "variables": [
+            "arg0_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma097.smt2"
+        },
+        {
+          "index": 98,
+          "status": "sat",
+          "variables": [
+            "arg0_5"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma098.smt2"
+        },
+        {
+          "index": 99,
+          "status": "sat",
+          "variables": [
+            "arg0_6"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma099.smt2"
+        },
+        {
+          "index": 100,
+          "status": "sat",
+          "variables": [
+            "arg0_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma100.smt2"
+        },
+        {
+          "index": 101,
+          "status": "sat",
+          "variables": [
+            "arg0_8"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma101.smt2"
+        },
+        {
+          "index": 102,
+          "status": "sat",
+          "variables": [
+            "arg0_9"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma102.smt2"
+        },
+        {
+          "index": 103,
+          "status": "sat",
+          "variables": [
+            "arg0_0"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma103.smt2"
+        },
+        {
+          "index": 104,
+          "status": "sat",
+          "variables": [
+            "arg0_13"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\proof\\symbolic.lemma104.smt2"
+        }
+      ],
+      "main_query_requires_component_lemmas": false,
+      "counterexample": {
+        "a": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          4294967294,
+          0,
+          0
+        ],
+        "out": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "original_outputs": {
+        "a": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          4294967294,
+          0,
+          0
+        ],
+        "out": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          4294967293,
+          4294967294
+        ]
+      },
+      "candidate_outputs": {
+        "a": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          4294967294,
+          0,
+          0
+        ],
+        "out": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          4294967294,
+          4294967294
+        ]
+      },
+      "elapsed_seconds": 1.584359
+    }
+  },
+  "status": "not_equivalent",
+  "smt_replay": {
+    "available": true,
+    "passed": true,
+    "witness_pinned": true,
+    "queries": [
+      {
+        "file": "symbolic.smt2",
+        "expected": "sat",
+        "observed": "sat"
+      }
+    ],
+    "scope": "Same Z3 solver; unrestricted UNSAT/lemma replay, SAT replay at recorded input. Not independent proof certificates."
+  },
+  "native": {
+    "passed": true,
+    "trials": 264,
+    "directed_trials": 8,
+    "random_trials": 256,
+    "mismatches": 262,
+    "first_mismatch_trial": 1,
+    "witness_replayed": true,
+    "witness_outputs_agree": true,
+    "harness_sha256": "a10028bea381561cc4fb95516fb6ba8d52c797e7b9bde5694e44c4fa6a97e5ae",
+    "command": [
+      "C:\\MinGW\\mingw32\\bin\\clang.EXE",
+      "-std=c11",
+      "-O2",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\native_differential.c",
+      "-o",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\triangular_fir16\\native_check_030.exe"
+    ],
+    "exit_code": 0
+  }
+}

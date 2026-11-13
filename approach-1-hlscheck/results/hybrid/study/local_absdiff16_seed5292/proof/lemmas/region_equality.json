@@ -1,0 +1,10 @@
+{
+  "status": "unsupported",
+  "assumptions": [
+    "32-bit int and unsigned int; uint32_t is unsigned int",
+    "All array parameters are valid, separately allocated, and nonoverlapping",
+    "Functional equality at function completion; no cycle-level RTL guarantee"
+  ],
+  "reason": "Path limit exceeded inside a loop",
+  "elapsed_seconds": 1.794358
+}

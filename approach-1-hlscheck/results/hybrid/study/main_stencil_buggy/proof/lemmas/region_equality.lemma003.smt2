@@ -1,0 +1,12 @@
+; benchmark generated from python API
+(set-info :status unknown)
+(declare-fun arg2_5 () (_ BitVec 32))
+(declare-fun arg0_6 () (_ BitVec 32))
+(declare-fun arg2_4 () (_ BitVec 32))
+(assert
+ (let ((?x198 (bvmul arg0_6 arg2_5)))
+(let ((?x3477 (bvmul (_ bv4294967295 32) ?x198)))
+(let ((?x220 (bvmul arg0_6 arg2_4)))
+(let ((?x22224 (bvadd ?x220 ?x3477)))
+(and (distinct ?x22224 (_ bv0 32)) true))))))
+(check-sat)

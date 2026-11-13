@@ -1,0 +1,133 @@
+{
+  "case": "scale_buggy",
+  "expected": "not_equivalent",
+  "hlscheck": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 48,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "counterexample": {
+      "a": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "out": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "original_outputs": {
+      "a": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "out": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        11
+      ]
+    },
+    "candidate_outputs": {
+      "a": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "out": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        7
+      ]
+    },
+    "elapsed_seconds": 0.007976
+  },
+  "esbmc": {
+    "backend": "ESBMC",
+    "solver": "Z3",
+    "status": "not_equivalent",
+    "parameters": [
+      {
+        "name": "a",
+        "kind": "unsigned int",
+        "length": 8
+      },
+      {
+        "name": "out",
+        "kind": "unsigned int",
+        "length": 8
+      }
+    ],
+    "scalar_ranges": {},
+    "assumptions": [
+      "32-bit int/unsigned int",
+      "Array parameters valid and pairwise nonoverlapping",
+      "All scalar/array inputs symbolic over their full type domain except stated ranges",
+      "Default ESBMC bounds, pointer and unwinding checks retained; signed overflow and shift UB checks enabled"
+    ],
+    "command": [
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\scale_buggy\\harness.c",
+      "--z3",
+      "--bv",
+      "--unwind",
+      "256",
+      "--overflow-check",
+      "--ub-shift-check",
+      "--uninitialised-vars-check",
+      "--multi-property"
+    ],
+    "unwind": 256,
+    "timeout_seconds": 30,
+    "returncode": 1,
+    "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+    "solver_report": "Solving claim 'arithmetic overflow on add at file C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\scale_buggy\\harness.c line 31 column 30 function main' with solver Z3 v4.13.3",
+    "elapsed_seconds": 0.62166
+  },
+  "original": "benchmarks\\demo\\scale_original.c",
+  "candidate": "benchmarks\\demo\\scale_buggy.c",
+  "original_sha256": "711800ee8d53ca1e6d4d1441a8f0eecf1035dd68ded4a6733bf25d1d70556bb9",
+  "candidate_sha256": "0ac842475c15b32fd100847e1e96791a4ad944517e834067b0c8321451934d5c",
+  "provenance": "Deliberately seeded negative control",
+  "hls_qor": "not measured"
+}

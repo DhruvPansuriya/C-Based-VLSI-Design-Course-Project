@@ -1,0 +1,9 @@
+--- original.c
++++ candidate.c
+@@ -4,5 +4,5 @@
+    Reuse stored triangular matrix elements. */
+ void kernel(uint32_t a[16], uint32_t x[4], uint32_t out[4]) {
+     for(int r=0;r<4;r++) out[r]=0u;
+-    for(int r=0;r<4;r++) for(int c=0;c<=r;c++){uint32_t value=a[r*4+c];out[r]+=value*x[c];if(c!=r) out[c]+=value*x[r];}
++    for(int r=0;r<4;r++) for(int c=0;c<=r;c++){uint32_t value=a[r*4+c];out[r]+=value*x[c];if(c==r) out[c]+=value*x[r];}
+ }

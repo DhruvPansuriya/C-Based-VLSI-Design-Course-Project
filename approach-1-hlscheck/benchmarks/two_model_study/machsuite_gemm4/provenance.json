@@ -1,0 +1,13 @@
+{
+  "id": "machsuite_gemm4",
+  "source": "benchmarks/two_model_study/machsuite_gemm4/original.c",
+  "function": "kernel",
+  "original_sha256": "d34b316a62c77526f14598b5987f8b8a1dfe86a57d3bbda47702b89bfb50cb8f",
+  "suite": "MachSuite",
+  "upstream_source": "datasets/MachSuite/gemm/ncubed/gemm.c",
+  "upstream_sha256": "e5ff9d7a95c0bde1439c645c49c745b3a9f1aa385f875843f3c2e5a51adaaef9",
+  "preparation": "Reuse the earlier original-only educational adaptation: 64x64 double matrices become4x4 uint32 flat row-major matrices; top function named kernel; no host harness. This is a new integer problem, not equivalent to upstream floating point.",
+  "category": "adapted_kernel",
+  "integer_domain": "All data are unsigned32 with modulo-2^32 arithmetic; valid pairwise-nonoverlapping parameter arrays; unchanged array elements remain observable.",
+  "prepared_original_source": "benchmarks/machsuite_u32/gemm_original.c"
+}

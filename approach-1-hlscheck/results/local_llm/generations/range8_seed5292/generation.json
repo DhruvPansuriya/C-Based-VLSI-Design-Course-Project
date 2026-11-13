@@ -1,0 +1,38 @@
+{
+  "id": "range8_seed5292",
+  "case": "range8",
+  "source": "benchmarks\\expanded\\range8_original.c",
+  "source_sha256": "bde9f77244f0d0f8e73da6cfb25445e7cf837f13f609fc36950de7b48b4b5af8",
+  "request_sha256": "e5b220de02f314cc85500114750b2c9d7f165dcc74b659bb0140e73a79077e26",
+  "raw_response_sha256": "1d443e49a47f051ec5213d56d0a366dcfdc95b28d111e1ace0d0cd286007757e",
+  "candidate_sha256": "9024a8eb046b1e401b4b19a1e74beae3491d9297dc34b0da675d3fcbf238dac8",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 113,
+    "prompt_tokens": 296,
+    "total_tokens": 409,
+    "prompt_tokens_details": {
+      "cached_tokens": 212
+    }
+  },
+  "timings": {
+    "cache_n": 212,
+    "prompt_n": 84,
+    "prompt_ms": 41.633,
+    "prompt_per_token_ms": 0.4956309523809524,
+    "prompt_per_second": 2017.6302452381524,
+    "predicted_n": 113,
+    "predicted_ms": 941.075,
+    "predicted_per_token_ms": 8.402455357142857,
+    "predicted_per_second": 119.01283107084981
+  },
+  "elapsed_seconds": 1.011,
+  "extraction": "largest fenced code block; no semantic edits",
+  "model_repository": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+  "model_revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+  "model_sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+  "runtime_release": "b12619",
+  "origin": "Actual independently generated local-model optimization attempt; not an injected mutation",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0
+}

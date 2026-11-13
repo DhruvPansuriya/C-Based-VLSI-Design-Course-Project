@@ -1,0 +1,31 @@
+{
+  "integer_model": "ILP32: char8/short16/int32/long32/long-long64; plain char signed",
+  "parameters": [
+    {
+      "position": 0,
+      "name": "image",
+      "length": 16,
+      "c_type": "unsigned int",
+      "bits": 32,
+      "signed": false
+    },
+    {
+      "position": 1,
+      "name": "out",
+      "length": 16,
+      "c_type": "unsigned int",
+      "bits": 32,
+      "signed": false
+    }
+  ],
+  "return_type": {
+    "c_type": "void",
+    "bits": 0,
+    "signed": false
+  },
+  "scalar_ranges": {},
+  "observations": "Return value and every final parameter-array element",
+  "memory": "All parameter arrays valid and pairwise nonoverlapping; initial contents shared by value",
+  "safety": "Both programs must be free of modelled undefined behavior on the entire stated input domain",
+  "proof_scope": "Functional C equivalence at completion, not cycle-level or C-to-RTL equivalence"
+}
