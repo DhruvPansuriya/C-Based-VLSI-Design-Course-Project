@@ -26,6 +26,12 @@ ESBMC is not installed locally; it only runs in CI and can only cancel an ACCEPT
    cbmc --version        # must print 6.11.0
    ```
    The prompt now starts with `(.venv)`.
+   Then clear old demo outputs, so everything the professor sees is created live:
+   ```sh
+   make demo-reset       # empties runs/demo-steps, runs/demo and runs/index.html
+   ```
+   After this, `runs/demo-steps/` does not exist. Each command below creates a new folder
+   `runs/demo-steps/<task>/<candidate>/<run id>/` while it runs (watch it appear in the Explorer).
 4. In the Explorer on the left, open `docs/demo_diagrams/1_where_is_the_run.png`. Drag its tab to the
    right half of the editor (or right-click the tab > **Split Right**). Open the other three PNGs in
    the same right-hand group, so you can click between them.
@@ -46,6 +52,12 @@ python scripts/demo_steps.py --task ex1_saturate --candidate v3 --interactive
   using diagram 1 (find the `STEP n:` row), then press Enter.
 * At STEP 6 to 9 (`Proof: ...`) switch to diagram 2. At STEP 11 (`Verdict`) switch to diagram 3.
 * Section 1b below lists exactly what each step prints and what to say.
+
+**Everything is computed live.** Every run calls CBMC, Z3 and the sanitizers again and writes a new
+folder; nothing is copied from earlier runs (the optional `VWE_REGION_CACHE` speed-up is off unless you
+set that variable). The `t=...s` on each `STEP` heading is the real elapsed time. The only cache is for
+LLM answers with `--auto groq`; `make demo-reset` clears it too, so the next `--auto groq` run asks the
+models again (it prints which models "answered live").
 
 ### C. Show the evidence that was saved
 
