@@ -1,0 +1,359 @@
+Reading GOTO program from 'checked.goto'
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+__CPROVER__start /* __CPROVER__start */
+        // 0 no location
+        // Labels: __CPROVER_HIDE
+        SKIP
+        // 1 file <built-in-additions> line 26
+        CALL __CPROVER_initialize()
+        // 2 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 37
+        CALL return' := main()
+        // 3 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 37
+        OUTPUT address_of("return'"[0])
+        // 4 no location
+        END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+__CPROVER_initialize /* __CPROVER_initialize */
+        // 5 no location
+        // Labels: __CPROVER_HIDE
+        SKIP
+        // 6 file <built-in-additions> line 10
+        ASSIGN __CPROVER_dead_object := NULL
+        // 7 file <built-in-additions> line 9
+        ASSIGN __CPROVER_deallocated := NULL
+        // 8 file <built-in-additions> line 14
+        ASSIGN __CPROVER_max_malloc_size := 36028797018963968
+        // 9 file <built-in-additions> line 11
+        ASSIGN __CPROVER_memory_leak := NULL
+        // 10 file <built-in-additions> line 18
+        ASSIGN __CPROVER_rounding_mode := 0
+        // 11 no location
+        END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+__vwe_a0_call /* __vwe_a0_call */
+        // 12 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 10 function __vwe_a0_call
+        DECL __vwe_a0_call::1::__vwe_arg_0 : unsignedbv[8]
+        // 13 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 11 function __vwe_a0_call
+        ASSIGN __vwe_a0_call::1::__vwe_arg_0 := *__vwe_a0_call::in.s0_0
+        // 14 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 12 function __vwe_a0_call
+        DECL __vwe_a0_call::1::__vwe_arg_1 : unsignedbv[8]
+        // 15 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 13 function __vwe_a0_call
+        ASSIGN __vwe_a0_call::1::__vwe_arg_1 := *__vwe_a0_call::in.s1_0
+        // 16 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 14 function __vwe_a0_call
+        DECL __vwe_a0_call::1::__vwe_ret : unsignedbv[8]
+        // 17 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 14 function __vwe_a0_call
+        DECL __vwe_a0_call::$tmp::return_value_p0_add8 : unsignedbv[8]
+        // 18 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 14 function __vwe_a0_call
+        CALL __vwe_a0_call::$tmp::return_value_p0_add8 := p0_add8(__vwe_a0_call::1::__vwe_arg_0, __vwe_a0_call::1::__vwe_arg_1)
+        // 19 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 14 function __vwe_a0_call
+        ASSIGN __vwe_a0_call::1::__vwe_ret := __vwe_a0_call::$tmp::return_value_p0_add8
+        // 20 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 14 function __vwe_a0_call
+        DEAD __vwe_a0_call::$tmp::return_value_p0_add8
+        // 21 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 15 function __vwe_a0_call
+        ASSIGN *__vwe_a0_call::out.r0 := __vwe_a0_call::1::__vwe_ret
+        // 22 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 16 function __vwe_a0_call
+        DEAD __vwe_a0_call::1::__vwe_ret
+        // 23 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 16 function __vwe_a0_call
+        DEAD __vwe_a0_call::1::__vwe_arg_1
+        // 24 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 16 function __vwe_a0_call
+        DEAD __vwe_a0_call::1::__vwe_arg_0
+        // 25 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 16 function __vwe_a0_call
+        END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+__vwe_a1_call /* __vwe_a1_call */
+        // 26 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 10 function __vwe_a1_call
+        DECL __vwe_a1_call::1::__vwe_arg_0 : unsignedbv[8]
+        // 27 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 11 function __vwe_a1_call
+        ASSIGN __vwe_a1_call::1::__vwe_arg_0 := *__vwe_a1_call::in.s0_0
+        // 28 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 12 function __vwe_a1_call
+        DECL __vwe_a1_call::1::__vwe_arg_1 : unsignedbv[8]
+        // 29 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 13 function __vwe_a1_call
+        ASSIGN __vwe_a1_call::1::__vwe_arg_1 := *__vwe_a1_call::in.s1_0
+        // 30 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 14 function __vwe_a1_call
+        DECL __vwe_a1_call::1::__vwe_ret : unsignedbv[8]
+        // 31 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 14 function __vwe_a1_call
+        DECL __vwe_a1_call::$tmp::return_value_vwe_second_add8 : unsignedbv[8]
+        // 32 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 14 function __vwe_a1_call
+        CALL __vwe_a1_call::$tmp::return_value_vwe_second_add8 := vwe_second_add8(__vwe_a1_call::1::__vwe_arg_0, __vwe_a1_call::1::__vwe_arg_1)
+        // 33 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 14 function __vwe_a1_call
+        ASSIGN __vwe_a1_call::1::__vwe_ret := __vwe_a1_call::$tmp::return_value_vwe_second_add8
+        // 34 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 14 function __vwe_a1_call
+        DEAD __vwe_a1_call::$tmp::return_value_vwe_second_add8
+        // 35 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 15 function __vwe_a1_call
+        ASSIGN *__vwe_a1_call::out.r0 := __vwe_a1_call::1::__vwe_ret
+        // 36 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 16 function __vwe_a1_call
+        DEAD __vwe_a1_call::1::__vwe_ret
+        // 37 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 16 function __vwe_a1_call
+        DEAD __vwe_a1_call::1::__vwe_arg_1
+        // 38 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 16 function __vwe_a1_call
+        DEAD __vwe_a1_call::1::__vwe_arg_0
+        // 39 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 16 function __vwe_a1_call
+        END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+main /* main */
+        // 40 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 38 function main
+        DECL main::1::__vwe_in : struct tag-__vwe_input
+        // 41 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 38 function main
+        ASSIGN main::1::__vwe_in := { cast(0, unsignedbv[8]), 0 }
+        // 42 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 39 function main
+        DECL main::1::__vwe_in_scalar_0_0 : unsignedbv[8]
+        // 43 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 39 function main
+        DECL main::$tmp::return_value_nondet___vwe_0 : unsignedbv[8]
+        // 44 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 39 function main
+        ASSIGN main::$tmp::return_value_nondet___vwe_0 := side_effect statement="nondet" #identifier="nondet___vwe_0" is_nondet_nullable="1"
+        // 45 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 39 function main
+        ASSIGN main::1::__vwe_in_scalar_0_0 := main::$tmp::return_value_nondet___vwe_0
+        // 46 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 39 function main
+        DEAD main::$tmp::return_value_nondet___vwe_0
+        // 47 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 40 function main
+        ASSUME 0 ≤ cast(main::1::__vwe_in_scalar_0_0, signedbv[64]) ∧ cast(main::1::__vwe_in_scalar_0_0, signedbv[64]) ≤ 255
+        // 48 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 41 function main
+        ASSIGN main::1::__vwe_in.s0_0 := main::1::__vwe_in_scalar_0_0
+        // 49 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 42 function main
+        DECL main::1::__vwe_in_scalar_1_0 : unsignedbv[8]
+        // 50 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 42 function main
+        DECL main::$tmp::return_value_nondet___vwe_1 : unsignedbv[8]
+        // 51 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 42 function main
+        ASSIGN main::$tmp::return_value_nondet___vwe_1 := side_effect statement="nondet" #identifier="nondet___vwe_1" is_nondet_nullable="1"
+        // 52 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 42 function main
+        ASSIGN main::1::__vwe_in_scalar_1_0 := main::$tmp::return_value_nondet___vwe_1
+        // 53 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 42 function main
+        DEAD main::$tmp::return_value_nondet___vwe_1
+        // 54 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 43 function main
+        ASSUME 0 ≤ cast(main::1::__vwe_in_scalar_1_0, signedbv[64]) ∧ cast(main::1::__vwe_in_scalar_1_0, signedbv[64]) ≤ 255
+        // 55 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 44 function main
+        ASSIGN main::1::__vwe_in.s1_0 := main::1::__vwe_in_scalar_1_0
+        // 56 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 45 function main
+        DECL main::1::__vwe_one : struct tag-__vwe_output
+        // 57 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 45 function main
+        ASSIGN main::1::__vwe_one := { cast(0, unsignedbv[8]) }
+        // 58 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 46 function main
+        DECL main::1::__vwe_zero : struct tag-__vwe_output
+        // 59 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 46 function main
+        ASSIGN main::1::__vwe_zero := { cast(0, unsignedbv[8]) }
+        // 60 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 47 function main
+        DECL main::1::__vwe_one_result_0 : unsignedbv[8]
+        // 61 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 47 function main
+        DECL main::$tmp::return_value_nondet___vwe_2 : unsignedbv[8]
+        // 62 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 47 function main
+        ASSIGN main::$tmp::return_value_nondet___vwe_2 := side_effect statement="nondet" #identifier="nondet___vwe_2" is_nondet_nullable="1"
+        // 63 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 47 function main
+        ASSIGN main::1::__vwe_one_result_0 := main::$tmp::return_value_nondet___vwe_2
+        // 64 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 47 function main
+        DEAD main::$tmp::return_value_nondet___vwe_2
+        // 65 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 48 function main
+        ASSIGN main::1::__vwe_one.r0 := main::1::__vwe_one_result_0
+        // 66 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 49 function main
+        DECL main::1::__vwe_zero_result_0 : unsignedbv[8]
+        // 67 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 49 function main
+        DECL main::$tmp::return_value_nondet___vwe_3 : unsignedbv[8]
+        // 68 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 49 function main
+        ASSIGN main::$tmp::return_value_nondet___vwe_3 := side_effect statement="nondet" #identifier="nondet___vwe_3" is_nondet_nullable="1"
+        // 69 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 49 function main
+        ASSIGN main::1::__vwe_zero_result_0 := main::$tmp::return_value_nondet___vwe_3
+        // 70 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 49 function main
+        DEAD main::$tmp::return_value_nondet___vwe_3
+        // 71 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 50 function main
+        ASSIGN main::1::__vwe_zero.r0 := main::1::__vwe_zero_result_0
+        // 72 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        DECL main::$tmp::return_value_vwe_observer_0 : signedbv[32]
+        // 73 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        CALL main::$tmp::return_value_vwe_observer_0 := vwe_observer_0(main::1::__vwe_in_scalar_0_0, main::1::__vwe_in_scalar_1_0)
+        // 74 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        DECL main::$tmp::return_value_vwe_observer_1 : signedbv[32]
+        // 75 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        CALL main::$tmp::return_value_vwe_observer_1 := vwe_observer_1(main::1::__vwe_in_scalar_0_0, main::1::__vwe_in_scalar_1_0)
+        // 76 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        DECL main::$tmp::tmp_if_expr$1 : 𝔹
+        // 77 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        IF ¬(main::$tmp::return_value_vwe_observer_0 = main::$tmp::return_value_vwe_observer_1) THEN GOTO 5
+        // 78 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        DECL main::$tmp::return_value_vwe_observer_2 : signedbv[32]
+        // 79 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        CALL main::$tmp::return_value_vwe_observer_2 := vwe_observer_2(main::1::__vwe_in_scalar_0_0, main::1::__vwe_in_scalar_1_0)
+        // 80 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        DECL main::$tmp::tmp_if_expr : 𝔹
+        // 81 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        IF main::$tmp::return_value_vwe_observer_2 ≠ 0 THEN GOTO 1
+        // 82 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        ASSIGN main::$tmp::tmp_if_expr := true
+        // 83 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        GOTO 2
+        // 84 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+     1: DECL main::$tmp::return_value_vwe_observer_3 : signedbv[32]
+        // 85 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        CALL main::$tmp::return_value_vwe_observer_3 := vwe_observer_3(main::1::__vwe_in_scalar_0_0, main::1::__vwe_in_scalar_1_0, main::1::__vwe_one.r0)
+        // 86 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        ASSIGN main::$tmp::tmp_if_expr := (main::$tmp::return_value_vwe_observer_3 ≠ 0 ? true : false)
+        // 87 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+     2: SKIP
+        // 88 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        DEAD main::$tmp::return_value_vwe_observer_3
+        // 89 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        DEAD main::$tmp::return_value_vwe_observer_2
+        // 90 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        DECL main::$tmp::return_value_vwe_observer_4 : signedbv[32]
+        // 91 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        CALL main::$tmp::return_value_vwe_observer_4 := vwe_observer_4(main::1::__vwe_in_scalar_0_0, main::1::__vwe_in_scalar_1_0)
+        // 92 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        DECL main::$tmp::tmp_if_expr$0 : 𝔹
+        // 93 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        IF main::$tmp::return_value_vwe_observer_4 ≠ 0 THEN GOTO 3
+        // 94 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        ASSIGN main::$tmp::tmp_if_expr$0 := true
+        // 95 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        GOTO 4
+        // 96 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+     3: DECL main::$tmp::return_value_vwe_observer_5 : signedbv[32]
+        // 97 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        CALL main::$tmp::return_value_vwe_observer_5 := vwe_observer_5(main::1::__vwe_one.r0)
+        // 98 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        ASSIGN main::$tmp::tmp_if_expr$0 := (main::$tmp::return_value_vwe_observer_5 ≠ 0 ? true : false)
+        // 99 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+     4: SKIP
+        // 100 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        DEAD main::$tmp::return_value_vwe_observer_5
+        // 101 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        DEAD main::$tmp::return_value_vwe_observer_4
+        // 102 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        ASSIGN main::$tmp::tmp_if_expr$1 := (main::$tmp::tmp_if_expr ⇔ main::$tmp::tmp_if_expr$0 ? true : false)
+        // 103 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        GOTO 6
+        // 104 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+     5: ASSIGN main::$tmp::tmp_if_expr$1 := false
+        // 105 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+     6: SKIP
+        // 106 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        DEAD main::$tmp::tmp_if_expr$0
+        // 107 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        DEAD main::$tmp::tmp_if_expr
+        // 108 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        DEAD main::$tmp::return_value_vwe_observer_1
+        // 109 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        DEAD main::$tmp::return_value_vwe_observer_0
+        // 110 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        ASSERT main::$tmp::tmp_if_expr$1 // VWE.validation_equivalence.predicate
+        // 111 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 51 function main
+        DEAD main::$tmp::tmp_if_expr$1
+        // 112 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 52 function main
+        SET RETURN VALUE 0
+        // 113 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 52 function main
+        DEAD main::1::__vwe_zero_result_0
+        // 114 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 52 function main
+        DEAD main::1::__vwe_one_result_0
+        // 115 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 52 function main
+        DEAD main::1::__vwe_zero
+        // 116 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 52 function main
+        DEAD main::1::__vwe_one
+        // 117 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 52 function main
+        DEAD main::1::__vwe_in_scalar_1_0
+        // 118 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 52 function main
+        DEAD main::1::__vwe_in_scalar_0_0
+        // 119 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 52 function main
+        DEAD main::1::__vwe_in
+        // 120 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 52 function main
+        GOTO 7
+        // 121 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 53 function main
+     7: END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+p0_add8 /* p0_add8 */
+        // 122 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 4 function p0_add8
+        SET RETURN VALUE cast(cast(p0_add8::a, unsignedbv[32]) + cast(p0_add8::b, unsignedbv[32]), unsignedbv[8])
+        // 123 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 4 function p0_add8
+        GOTO 1
+        // 124 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a0.c line 5 function p0_add8
+     1: END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+vwe_observer_0 /* vwe_observer_0 */
+        // 125 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 12 function vwe_observer_0
+        SET RETURN VALUE cast(cast(vwe_observer_0::ve_arg_0, signedbv[64]) + cast(vwe_observer_0::ve_arg_1, signedbv[64]) > 255, signedbv[32])
+        // 126 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 12 function vwe_observer_0
+        GOTO 1
+        // 127 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 13 function vwe_observer_0
+     1: END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+vwe_observer_1 /* vwe_observer_1 */
+        // 128 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 16 function vwe_observer_1
+        SET RETURN VALUE cast(cast(vwe_observer_1::ve_arg_0, signedbv[64]) + cast(vwe_observer_1::ve_arg_1, signedbv[64]) > 255, signedbv[32])
+        // 129 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 16 function vwe_observer_1
+        GOTO 1
+        // 130 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 17 function vwe_observer_1
+     1: END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+vwe_observer_2 /* vwe_observer_2 */
+        // 131 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 20 function vwe_observer_2
+        SET RETURN VALUE cast(cast(vwe_observer_2::ve_arg_0, signedbv[64]) + cast(vwe_observer_2::ve_arg_1, signedbv[64]) > 255, signedbv[32])
+        // 132 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 20 function vwe_observer_2
+        GOTO 1
+        // 133 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 21 function vwe_observer_2
+     1: END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+vwe_observer_3 /* vwe_observer_3 */
+        // 134 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 24 function vwe_observer_3
+        DECL vwe_observer_3::1::ve_t_0 : signedbv[64]
+        // 135 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 24 function vwe_observer_3
+        ASSIGN vwe_observer_3::1::ve_t_0 := cast(vwe_observer_3::ve_arg_0, signedbv[64]) + cast(vwe_observer_3::ve_arg_1, signedbv[64])
+        // 136 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 25 function vwe_observer_3
+        DECL vwe_observer_3::1::ve_t_1 : signedbv[64]
+        // 137 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 25 function vwe_observer_3
+        ASSIGN vwe_observer_3::1::ve_t_1 := 255
+        // 138 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 26 function vwe_observer_3
+        SET RETURN VALUE cast(cast(vwe_observer_3::ve_arg_2, signedbv[64]) = (vwe_observer_3::1::ve_t_0 < vwe_observer_3::1::ve_t_1 ? vwe_observer_3::1::ve_t_0 : vwe_observer_3::1::ve_t_1), signedbv[32])
+        // 139 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 26 function vwe_observer_3
+        DEAD vwe_observer_3::1::ve_t_1
+        // 140 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 26 function vwe_observer_3
+        DEAD vwe_observer_3::1::ve_t_0
+        // 141 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 26 function vwe_observer_3
+        GOTO 1
+        // 142 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 27 function vwe_observer_3
+     1: END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+vwe_observer_4 /* vwe_observer_4 */
+        // 143 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 30 function vwe_observer_4
+        SET RETURN VALUE cast(cast(vwe_observer_4::ve_arg_0, signedbv[64]) + cast(vwe_observer_4::ve_arg_1, signedbv[64]) > 255, signedbv[32])
+        // 144 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 30 function vwe_observer_4
+        GOTO 1
+        // 145 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 31 function vwe_observer_4
+     1: END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+vwe_observer_5 /* vwe_observer_5 */
+        // 146 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 34 function vwe_observer_5
+        SET RETURN VALUE cast(cast(vwe_observer_5::ve_arg_0, signedbv[64]) = 255, signedbv[32])
+        // 147 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 34 function vwe_observer_5
+        GOTO 1
+        // 148 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/main.c line 35 function vwe_observer_5
+     1: END_FUNCTION
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+vwe_second_add8 /* vwe_second_add8 */
+        // 149 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 4 function vwe_second_add8
+        SET RETURN VALUE cast(cast(vwe_second_add8::a, unsignedbv[32]) + cast(vwe_second_add8::b, unsignedbv[32]), unsignedbv[8])
+        // 150 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 4 function vwe_second_add8
+        GOTO 1
+        // 151 file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/pairs/0/a1.c line 5 function vwe_second_add8
+     1: END_FUNCTION
+

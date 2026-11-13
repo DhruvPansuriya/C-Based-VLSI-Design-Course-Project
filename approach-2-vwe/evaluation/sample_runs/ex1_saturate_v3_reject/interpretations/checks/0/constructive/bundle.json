@@ -1,0 +1,56 @@
+{
+  "kind": "validation_constructive",
+  "folder": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/0/constructive",
+  "files": [
+    "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/0/constructive/a0.c",
+    "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/0/constructive/a1.c",
+    "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/0/constructive/main.c"
+  ],
+  "entry_point": "main",
+  "unwind": 9,
+  "watch": [
+    "__vwe_in_scalar_0_0",
+    "__vwe_in_scalar_1_0"
+  ],
+  "property_labels": [
+    "VWE.validation_constructive.predicate"
+  ],
+  "prerequisites": [
+    "qualified-admission",
+    "qualified-path-cut-and-uninitialized-model",
+    "nonvacuous-profile",
+    "observer-UB-freedom",
+    "old-observer-definedness"
+  ],
+  "profile_sha256": "7fcb50738529c9fcb8692335fe91930d4787cf78f6a411f03a928b23b0042f0c",
+  "reference_guard": "true",
+  "e1_decisive": false,
+  "program_symbols": [
+    [
+      "p0_add8"
+    ],
+    [
+      "vwe_second_add8"
+    ]
+  ],
+  "witness_names": [
+    [
+      "__vwe_in_scalar_0_0",
+      "a"
+    ],
+    [
+      "__vwe_in_scalar_1_0",
+      "b"
+    ]
+  ],
+  "job_sha256": "6bb89c44b131f05406e4116b4a777859e9efb368e1b7b7cae3c406e388607d86",
+  "generated_file_sha256": {
+    "frame.h": "52d41756bb701b0143cbf8820fc322810c6e4f648ac2823e8e21f3f6ecc88f82",
+    "a0.c": "00948ecfd600152c25208eda8cdbac961cd50c36192357494f17b90257ceddd8",
+    "a1.c": "4c76fb645c0783c507dc3938aa5d393b1fc239fc918c88f29ab648d6165096b1",
+    "main.c": "5dffc05739475f93b5898b78ad13f56c653d3cdc3a8031a0a8bd58bc2d6488d3"
+  },
+  "emitted_not_proved": true,
+  "input_storage": "initialized",
+  "old_placeholders": "initialized; guard certificates required"
+}

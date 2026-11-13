@@ -1,0 +1,4 @@
+# Preserve generated evidence while keeping implementation reviews readable.
+evaluation/results/checkpoints/** linguist-generated=true
+evaluation/results/checkpoints/**/README.md linguist-generated=false
+evaluation/results/ci/*.json linguist-generated=true

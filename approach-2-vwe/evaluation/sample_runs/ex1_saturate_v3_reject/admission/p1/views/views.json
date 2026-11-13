@@ -1,0 +1,29 @@
+{
+  "source_sha256": "ad8c5ccde7493beda3a59be5d44af0cab189af52494da531008852a00e4c0a3d",
+  "function": "add8",
+  "analysis_views_only": true,
+  "views_differ": false,
+  "qualified_preprocessing": true,
+  "views": [
+    {
+      "mode": "sim",
+      "preprocessed_sha256": "0ffb0822e17f542557b3d9ef2faf9f17201b5d077b0dbaebbf542d47b918a8d1",
+      "renamed_sha256": "2dd221e832fdbfda5dd36d02594ca91c636fff4e84b718302a429b4a128db752",
+      "entry_point": "p1_add8",
+      "symbols": {
+        "add8": "p1_add8"
+      },
+      "preprocessor": "cbmc"
+    },
+    {
+      "mode": "synth",
+      "preprocessed_sha256": "0ffb0822e17f542557b3d9ef2faf9f17201b5d077b0dbaebbf542d47b918a8d1",
+      "renamed_sha256": "2dd221e832fdbfda5dd36d02594ca91c636fff4e84b718302a429b4a128db752",
+      "entry_point": "p1_add8",
+      "symbols": {
+        "add8": "p1_add8"
+      },
+      "preprocessor": "cbmc"
+    }
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "status": "ok",
+  "reason": "structural admission passed; functional, build-view and pragma obligations remain",
+  "decision": "ok",
+  "evidence_class": null,
+  "claim_target": "none",
+  "views_differ": false,
+  "globals": {},
+  "undefined_functions": [],
+  "required_library_models": [],
+  "findings": [],
+  "pragmas": [],
+  "globals_by_view": [
+    {
+      "program": "p0",
+      "mode": "sim",
+      "objects": {}
+    },
+    {
+      "program": "p0",
+      "mode": "synth",
+      "objects": {}
+    },
+    {
+      "program": "p1",
+      "mode": "sim",
+      "objects": {}
+    },
+    {
+      "program": "p1",
+      "mode": "synth",
+      "objects": {}
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "cbmc",
+        "--bounds-check",
+        "--pointer-check",
+        "--div-by-zero-check",
+        "--signed-overflow-check",
+        "--undefined-shift-check",
+        "--pointer-primitive-check",
+        "--unwinding-assertions",
+        "--no-self-loops-to-assumptions",
+        "--no-malloc-may-fail",
+        "--c11",
+        "--preprocess",
+        "--verbosity",
+        "0",
+        "unit.c"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/admission/p0/views/sim",
+      "returncode": 0,
+      "stdout": "# 1 \"unit.c\"\n# 1 \"<built-in>\" 1\n# 1 \"<built-in>\" 3\n# 469 \"<built-in>\" 3\n# 1 \"<command line>\" 1\n# 1 \"<built-in>\" 2\n# 1 \"unit.c\" 2\n# 1 \"input.c\"\nunsigned char add8(unsigned char a, unsigned char b) { return (unsigned char)((unsigned)a + (unsigned)b); }\n",
+      "stderr": "",
+      "seconds": 0.34553883399348706,
+      "error": ""
+    },
+    {
+      "argv": [
+        "cbmc",
+        "--bounds-check",
+        "--pointer-check",
+        "--div-by-zero-check",
+        "--signed-overflow-check",
+        "--undefined-shift-check",
+        "--pointer-primitive-check",
+        "--unwinding-assertions",
+        "--no-self-loops-to-assumptions",
+        "--no-malloc-may-fail",
+        "--c11",
+        "--preprocess",
+        "--verbosity",
+        "0",
+        "-D__SYNTHESIS__=1",
+        "unit.c"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/admission/p0/views/synth",
+      "returncode": 0,
+      "stdout": "# 1 \"unit.c\"\n# 1 \"<built-in>\" 1\n# 1 \"<built-in>\" 3\n# 469 \"<built-in>\" 3\n# 1 \"<command line>\" 1\n# 1 \"<built-in>\" 2\n# 1 \"unit.c\" 2\n# 1 \"input.c\"\nunsigned char add8(unsigned char a, unsigned char b) { return (unsigned char)((unsigned)a + (unsigned)b); }\n",
+      "stderr": "",
+      "seconds": 0.05518016600399278,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-cc",
+        "-c",
+        "preprocessed.c",
+        "-o",
+        "unit.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/admission/p0/views/sim",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.3249178340047365,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "unit.goto",
+        "--list-undefined-functions",
+        "--verbosity",
+        "0"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/admission/p0/views/sim",
+      "returncode": 0,
+      "stdout": "__CPROVER_was_freed\n__CPROVER_freeable\n__CPROVER_object_from\n__CPROVER_object_upto\n__CPROVER_assignable\n__CPROVER_initialize\n__CPROVER_object_whole\n__CPROVER_is_freeable\n",
+      "stderr": "",
+      "seconds": 0.03938320899032988,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-cc",
+        "-c",
+        "preprocessed.c",
+        "-o",
+        "unit.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/admission/p0/views/synth",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.10084595800435636,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "unit.goto",
+        "--list-undefined-functions",
+        "--verbosity",
+        "0"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/admission/p0/views/synth",
+      "returncode": 0,
+      "stdout": "__CPROVER_was_freed\n__CPROVER_freeable\n__CPROVER_object_from\n__CPROVER_object_upto\n__CPROVER_assignable\n__CPROVER_initialize\n__CPROVER_object_whole\n__CPROVER_is_freeable\n",
+      "stderr": "",
+      "seconds": 0.00577412499114871,
+      "error": ""
+    },
+    {
+      "argv": [
+        "cbmc",
+        "--bounds-check",
+        "--pointer-check",
+        "--div-by-zero-check",
+        "--signed-overflow-check",
+        "--undefined-shift-check",
+        "--pointer-primitive-check",
+        "--unwinding-assertions",
+        "--no-self-loops-to-assumptions",
+        "--no-malloc-may-fail",
+        "--c11",
+        "--preprocess",
+        "--verbosity",
+        "0",
+        "unit.c"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/admission/p1/views/sim",
+      "returncode": 0,
+      "stdout": "# 1 \"unit.c\"\n# 1 \"<built-in>\" 1\n# 1 \"<built-in>\" 3\n# 469 \"<built-in>\" 3\n# 1 \"<command line>\" 1\n# 1 \"<built-in>\" 2\n# 1 \"unit.c\" 2\n# 1 \"input.c\"\nunsigned char add8(unsigned char a, unsigned char b) { (void)a; (void)b; return 255u; }\n",
+      "stderr": "",
+      "seconds": 0.049071292000007816,
+      "error": ""
+    },
+    {
+      "argv": [
+        "cbmc",
+        "--bounds-check",
+        "--pointer-check",
+        "--div-by-zero-check",
+        "--signed-overflow-check",
+        "--undefined-shift-check",
+        "--pointer-primitive-check",
+        "--unwinding-assertions",
+        "--no-self-loops-to-assumptions",
+        "--no-malloc-may-fail",
+        "--c11",
+        "--preprocess",
+        "--verbosity",
+        "0",
+        "-D__SYNTHESIS__=1",
+        "unit.c"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/admission/p1/views/synth",
+      "returncode": 0,
+      "stdout": "# 1 \"unit.c\"\n# 1 \"<built-in>\" 1\n# 1 \"<built-in>\" 3\n# 469 \"<built-in>\" 3\n# 1 \"<command line>\" 1\n# 1 \"<built-in>\" 2\n# 1 \"unit.c\" 2\n# 1 \"input.c\"\nunsigned char add8(unsigned char a, unsigned char b) { (void)a; (void)b; return 255u; }\n",
+      "stderr": "",
+      "seconds": 0.048822875003679655,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-cc",
+        "-c",
+        "preprocessed.c",
+        "-o",
+        "unit.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/admission/p1/views/sim",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.10323333299311344,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "unit.goto",
+        "--list-undefined-functions",
+        "--verbosity",
+        "0"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/admission/p1/views/sim",
+      "returncode": 0,
+      "stdout": "__CPROVER_was_freed\n__CPROVER_freeable\n__CPROVER_object_from\n__CPROVER_object_upto\n__CPROVER_assignable\n__CPROVER_initialize\n__CPROVER_object_whole\n__CPROVER_is_freeable\n",
+      "stderr": "",
+      "seconds": 0.005508166999788955,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-cc",
+        "-c",
+        "preprocessed.c",
+        "-o",
+        "unit.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/admission/p1/views/synth",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "seconds": 0.11589579100837,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "unit.goto",
+        "--list-undefined-functions",
+        "--verbosity",
+        "0"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/admission/p1/views/synth",
+      "returncode": 0,
+      "stdout": "__CPROVER_was_freed\n__CPROVER_freeable\n__CPROVER_object_from\n__CPROVER_object_upto\n__CPROVER_assignable\n__CPROVER_initialize\n__CPROVER_object_whole\n__CPROVER_is_freeable\n",
+      "stderr": "",
+      "seconds": 0.005615959002170712,
+      "error": ""
+    }
+  ],
+  "functional_proof": "NOT_RUN",
+  "build_view_equivalence": "NOT_RUN",
+  "pragma_policy": "NOT_RUN"
+}
