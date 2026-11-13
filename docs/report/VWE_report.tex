@@ -179,7 +179,7 @@ real error. The harness checks:
 \]
 CBMC checks each harness twice, once with its SAT solver and once with Z3, and the two must agree.
 We always keep the standard safety checks on (array bounds, pointers, overflow, shifts, division)
-along with \texttt{--unwinding-assertions} and \texttt{--no-malloc-may-fail}. Calls to
+along with \texttt{-{}-unwinding-assertions} and \texttt{-{}-no-malloc-may-fail}. Calls to
 \texttt{abort}, \texttt{exit} and \texttt{longjmp} are replaced with traps so that a candidate
 cannot skip a check by exiting early.
 
@@ -334,7 +334,7 @@ UNDECIDED and shows both readings.
 \label{sec:walk}
 This section follows one task through the whole pipeline and shows the real output of each stage.
 Everything in the grey boxes was copied from an actual run of
-\texttt{python scripts/demo\_steps.py --task ex1\_saturate --candidate v3} on 23 November 2026
+\texttt{python scripts/demo\_steps.py -{}-task ex1\_saturate -{}-candidate v3} on 23 November 2026
 (16.4 seconds on our laptop). We only shortened long file paths, marked with ``\ldots''.
 
 \paragraph{The inputs.} The original function adds two 8-bit numbers and wraps around on overflow
@@ -502,7 +502,7 @@ Core checker (T00 to T11) & admission, the reading language, the harness generat
 jobs, the $\Pz$-only checks, the verdict rules, real runs of witnesses, reports, 20 test cases from
 the seven examples in our design document, and two demos.\\
 Model layer (T12 to T14) & one client for all model providers (JSON checks, retries, cache, records,
-rate-limit handling), versioned prompts, the \texttt{vwe interpret} and \texttt{verify --auto}
+rate-limit handling), versioned prompts, the \texttt{vwe interpret} and \texttt{verify -{}-auto}
 commands, and repeated runs to measure stability. Working live with two model families.\\
 Evaluation (T15 to T18) & 20 tasks built from the public Chrysalis-HLS bug dataset, candidate
 fixes, correct/incorrect labels, three simpler checkers to compare against, and the statistics.\\
@@ -696,7 +696,7 @@ case & their description & VWE\\\midrule
 \begin{itemize}
 \item \textbf{48 cases: no reference guard.} In 32 of the 34 tasks involved, the SAT solver hit the
 120-second limit while checking that $\Pz$ is deterministic. These are kernels with a lot of
-multiplication (dot products, matrix multiply, matrix--vector, convolution). Since VWE needs both
+multiplication (dot products, matrix multiply, matrix-vector, convolution). Since VWE needs both
 solvers to agree, one timeout is enough to stop it. A decided case took 17.7 seconds (median); an
 undecided one took about 248 seconds.
 \item \textbf{5 cases:} the SAT solver timed out on a later check.
