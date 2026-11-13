@@ -1,0 +1,14 @@
+HLSCHECK_EVENT {"variant": "original", "stage": "hls_rtl", "state": "running", "details": {"tool": "Bambu + Verilator"}}
+HLSCHECK_EVENT {"variant": "optimized", "stage": "hls_rtl", "state": "running", "details": {"tool": "Bambu + Verilator"}}
+HLSCHECK_EVENT {"variant": "original", "stage": "hls_rtl", "state": "passed", "details": {"transactions": 16, "cycles": 1.0, "cycles_min": 1, "cycles_max": 1}}
+HLSCHECK_EVENT {"variant": "optimized", "stage": "hls_rtl", "state": "passed", "details": {"transactions": 16, "cycles": 1.0, "cycles_min": 1, "cycles_max": 1}}
+HLSCHECK_EVENT {"variant": "optimized", "stage": "mapping", "state": "running", "details": {"tool": "Yosys / Nangate45"}}
+HLSCHECK_EVENT {"variant": "original", "stage": "mapping", "state": "running", "details": {"tool": "Yosys / Nangate45"}}
+HLSCHECK_EVENT {"variant": "original", "stage": "mapping", "state": "passed", "details": {"area_um2": 0.532}}
+HLSCHECK_EVENT {"variant": "optimized", "stage": "mapping", "state": "passed", "details": {"area_um2": 0.532}}
+HLSCHECK_EVENT {"variant": "original", "stage": "timing", "state": "running", "details": {"tool": "OpenSTA"}}
+HLSCHECK_EVENT {"variant": "optimized", "stage": "timing", "state": "running", "details": {"tool": "OpenSTA"}}
+HLSCHECK_EVENT {"variant": "original", "stage": "timing", "state": "passed", "details": {"delay_ns": 0.054166, "meets_10ns": true}}
+HLSCHECK_EVENT {"variant": "optimized", "stage": "timing", "state": "passed", "details": {"delay_ns": 0.054166, "meets_10ns": true}}
+demo_96b4ba90a519_original complete {'cycles': 1.0, 'area_um2': 0.532, 'delay_ns': 0.054166}
+demo_96b4ba90a519_optimized complete {'cycles': 1.0, 'area_um2': 0.532, 'delay_ns': 0.054166}

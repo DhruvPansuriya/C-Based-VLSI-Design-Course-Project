@@ -1,0 +1,1360 @@
+ESBMC version 8.7.0 64-bit x86_64 windows
+
+Target: 32-bit little-endian i386-unknown-win32 with esbmclibc
+Parsing C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.172s
+GOTO program processing time: 0.001s
+Starting Bounded Model Checking
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 6 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 6 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 6 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 6 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 6 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 6 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 6 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 6 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 3 function __hlscheck_candidate
+Unwinding loop 4 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 3 function __hlscheck_candidate
+Unwinding loop 4 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 3 function __hlscheck_candidate
+Unwinding loop 4 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 3 function __hlscheck_candidate
+Unwinding loop 4 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 3 function __hlscheck_candidate
+Unwinding loop 4 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 3 function __hlscheck_candidate
+Unwinding loop 4 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 3 function __hlscheck_candidate
+Unwinding loop 4 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 3 function __hlscheck_candidate
+Symex completed in: 0.027s (526 assignments)
+Caching time: 0.000s (removed 50 assertions)
+Slicing time: 0.000s (removed 1 assignments)
+Generated 615 VCC(s), 10 remaining after simplification (475 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.002s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.007s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.002s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.002s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.002s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.007s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.002s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.006s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.002s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.002s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.005s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.007s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on sub at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 34 column 7 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on sub at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 34 column 7 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on sub at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 34 column 7 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on sub at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 34 column 7 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.007s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on sub at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 34 column 7 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on sub at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 34 column 7 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Solving claim 'arithmetic overflow on sub at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 34 column 7 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.004s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.003s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Solving claim 'EQUIV:observables at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 88 column 1 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.010s
+Generating JSON report for trace: base-k256-0
+
+[Counterexample]
+
+
+State 1 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 50 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_input_0 = { 1, 2147483648, 0, 0, 0, 0, 0, 0 }
+
+State 2 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 51 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_0 = { 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 3 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 51 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_0 = { 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 4 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 52 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_0[0] = 1 (00000000 00000000 00000000 00000001)
+
+State 5 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 53 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_0[0] = 1 (00000000 00000000 00000000 00000001)
+
+State 6 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 54 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_0[1] = 2147483648 (10000000 00000000 00000000 00000000)
+
+State 7 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 55 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_0[1] = 2147483648 (10000000 00000000 00000000 00000000)
+
+State 8 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 56 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_0[2] = 0 (00000000 00000000 00000000 00000000)
+
+State 9 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 57 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_0[2] = 0 (00000000 00000000 00000000 00000000)
+
+State 10 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 58 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_0[3] = 0 (00000000 00000000 00000000 00000000)
+
+State 11 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 59 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_0[3] = 0 (00000000 00000000 00000000 00000000)
+
+State 12 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 60 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_0[4] = 0 (00000000 00000000 00000000 00000000)
+
+State 13 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 61 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_0[4] = 0 (00000000 00000000 00000000 00000000)
+
+State 14 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 62 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_0[5] = 0 (00000000 00000000 00000000 00000000)
+
+State 15 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 63 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_0[5] = 0 (00000000 00000000 00000000 00000000)
+
+State 16 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 64 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_0[6] = 0 (00000000 00000000 00000000 00000000)
+
+State 17 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 65 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_0[6] = 0 (00000000 00000000 00000000 00000000)
+
+State 18 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 66 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_0[7] = 0 (00000000 00000000 00000000 00000000)
+
+State 19 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 67 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_0[7] = 0 (00000000 00000000 00000000 00000000)
+
+State 20 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 68 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_input_1 = { 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 21 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 69 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_1 = { 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 22 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 69 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_1 = { 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 23 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 70 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_1[0] = 0 (00000000 00000000 00000000 00000000)
+
+State 24 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 71 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_1[0] = 0 (00000000 00000000 00000000 00000000)
+
+State 25 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 72 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_1[1] = 0 (00000000 00000000 00000000 00000000)
+
+State 26 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 73 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_1[1] = 0 (00000000 00000000 00000000 00000000)
+
+State 27 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 74 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_1[2] = 0 (00000000 00000000 00000000 00000000)
+
+State 28 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 75 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_1[2] = 0 (00000000 00000000 00000000 00000000)
+
+State 29 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 76 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_1[3] = 0 (00000000 00000000 00000000 00000000)
+
+State 30 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 77 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_1[3] = 0 (00000000 00000000 00000000 00000000)
+
+State 31 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 78 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_1[4] = 0 (00000000 00000000 00000000 00000000)
+
+State 32 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 79 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_1[4] = 0 (00000000 00000000 00000000 00000000)
+
+State 33 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 80 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_1[5] = 0 (00000000 00000000 00000000 00000000)
+
+State 34 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 81 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_1[5] = 0 (00000000 00000000 00000000 00000000)
+
+State 35 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 82 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_1[6] = 0 (00000000 00000000 00000000 00000000)
+
+State 36 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 83 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_1[6] = 0 (00000000 00000000 00000000 00000000)
+
+State 37 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 84 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_1[7] = 0 (00000000 00000000 00000000 00000000)
+
+State 38 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 85 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_1[7] = 0 (00000000 00000000 00000000 00000000)
+
+State 39 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 8 function __hlscheck_original thread 0
+----------------------------------------------------
+  i = 0 (00000000 00000000 00000000 00000000)
+
+State 40 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 15 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 0 (00000000 00000000 00000000 00000000)
+
+State 41 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 10 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 0 (00000000 00000000 00000000 00000000)
+
+State 42 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 1 (00000000 00000000 00000000 00000001)
+
+State 43 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 1 (00000000 00000000 00000000 00000001)
+
+State 44 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 45 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 46 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 47 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 48 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 26 function __hlscheck_original thread 0
+----------------------------------------------------
+  i = 1 (00000000 00000000 00000000 00000001)
+
+State 49 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 15 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 0 (00000000 00000000 00000000 00000000)
+
+State 50 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 10 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 0 (00000000 00000000 00000000 00000000)
+
+State 51 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 1 (00000000 00000000 00000000 00000001)
+
+State 52 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 1 (00000000 00000000 00000000 00000001)
+
+State 53 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 54 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 2 (00000000 00000000 00000000 00000010)
+
+State 55 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 56 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 57 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 58 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 59 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 26 function __hlscheck_original thread 0
+----------------------------------------------------
+  i = 2 (00000000 00000000 00000000 00000010)
+
+State 60 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 15 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 0 (00000000 00000000 00000000 00000000)
+
+State 61 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 10 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 0 (00000000 00000000 00000000 00000000)
+
+State 62 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 1 (00000000 00000000 00000000 00000001)
+
+State 63 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 1 (00000000 00000000 00000000 00000001)
+
+State 64 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 65 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 2 (00000000 00000000 00000000 00000010)
+
+State 66 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 67 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 3 (00000000 00000000 00000000 00000011)
+
+State 68 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 69 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 70 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 71 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 72 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 26 function __hlscheck_original thread 0
+----------------------------------------------------
+  i = 3 (00000000 00000000 00000000 00000011)
+
+State 73 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 15 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 0 (00000000 00000000 00000000 00000000)
+
+State 74 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 10 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 0 (00000000 00000000 00000000 00000000)
+
+State 75 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 1 (00000000 00000000 00000000 00000001)
+
+State 76 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 1 (00000000 00000000 00000000 00000001)
+
+State 77 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 78 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 2 (00000000 00000000 00000000 00000010)
+
+State 79 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 80 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 3 (00000000 00000000 00000000 00000011)
+
+State 81 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 82 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 4 (00000000 00000000 00000000 00000100)
+
+State 83 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 84 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 85 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 86 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 87 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 26 function __hlscheck_original thread 0
+----------------------------------------------------
+  i = 4 (00000000 00000000 00000000 00000100)
+
+State 88 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 15 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 0 (00000000 00000000 00000000 00000000)
+
+State 89 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 10 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 0 (00000000 00000000 00000000 00000000)
+
+State 90 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 1 (00000000 00000000 00000000 00000001)
+
+State 91 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 1 (00000000 00000000 00000000 00000001)
+
+State 92 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 93 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 2 (00000000 00000000 00000000 00000010)
+
+State 94 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 95 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 3 (00000000 00000000 00000000 00000011)
+
+State 96 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 97 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 4 (00000000 00000000 00000000 00000100)
+
+State 98 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 99 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 5 (00000000 00000000 00000000 00000101)
+
+State 100 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 101 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 102 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 103 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 104 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 26 function __hlscheck_original thread 0
+----------------------------------------------------
+  i = 5 (00000000 00000000 00000000 00000101)
+
+State 105 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 15 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 0 (00000000 00000000 00000000 00000000)
+
+State 106 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 10 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 0 (00000000 00000000 00000000 00000000)
+
+State 107 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 1 (00000000 00000000 00000000 00000001)
+
+State 108 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 1 (00000000 00000000 00000000 00000001)
+
+State 109 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 110 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 2 (00000000 00000000 00000000 00000010)
+
+State 111 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 112 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 3 (00000000 00000000 00000000 00000011)
+
+State 113 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 114 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 4 (00000000 00000000 00000000 00000100)
+
+State 115 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 116 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 5 (00000000 00000000 00000000 00000101)
+
+State 117 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 118 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 6 (00000000 00000000 00000000 00000110)
+
+State 119 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 120 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 121 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 122 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 123 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 26 function __hlscheck_original thread 0
+----------------------------------------------------
+  i = 6 (00000000 00000000 00000000 00000110)
+
+State 124 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 15 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 0 (00000000 00000000 00000000 00000000)
+
+State 125 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 10 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 0 (00000000 00000000 00000000 00000000)
+
+State 126 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 1 (00000000 00000000 00000000 00000001)
+
+State 127 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 1 (00000000 00000000 00000000 00000001)
+
+State 128 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 129 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 2 (00000000 00000000 00000000 00000010)
+
+State 130 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 131 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 3 (00000000 00000000 00000000 00000011)
+
+State 132 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 133 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 4 (00000000 00000000 00000000 00000100)
+
+State 134 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 135 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 5 (00000000 00000000 00000000 00000101)
+
+State 136 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 137 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 6 (00000000 00000000 00000000 00000110)
+
+State 138 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 139 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 7 (00000000 00000000 00000000 00000111)
+
+State 140 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 141 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 142 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 143 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 144 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 26 function __hlscheck_original thread 0
+----------------------------------------------------
+  i = 7 (00000000 00000000 00000000 00000111)
+
+State 145 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 15 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 0 (00000000 00000000 00000000 00000000)
+
+State 146 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 10 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 0 (00000000 00000000 00000000 00000000)
+
+State 147 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 1 (00000000 00000000 00000000 00000001)
+
+State 148 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 1 (00000000 00000000 00000000 00000001)
+
+State 149 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 150 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 2 (00000000 00000000 00000000 00000010)
+
+State 151 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 152 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 3 (00000000 00000000 00000000 00000011)
+
+State 153 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 154 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 4 (00000000 00000000 00000000 00000100)
+
+State 155 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 156 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 5 (00000000 00000000 00000000 00000101)
+
+State 157 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 158 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 6 (00000000 00000000 00000000 00000110)
+
+State 159 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 160 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 7 (00000000 00000000 00000000 00000111)
+
+State 161 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 18 column 7 function __hlscheck_original thread 0
+----------------------------------------------------
+  sum = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 162 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 16 column 29 function __hlscheck_original thread 0
+----------------------------------------------------
+  j = 8 (00000000 00000000 00000000 00001000)
+
+State 163 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 164 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 165 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 166 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 21 column 5 function __hlscheck_original thread 0
+----------------------------------------------------
+  out[i] = 2147483649 (10000000 00000000 00000000 00000001)
+
+State 167 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 13 column 26 function __hlscheck_original thread 0
+----------------------------------------------------
+  i = 8 (00000000 00000000 00000000 00001000)
+
+State 168 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 8 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  i = 0 (00000000 00000000 00000000 00000000)
+
+State 169 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 170 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 171 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 172 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 173 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 32 column 10 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  j = 1 (00000000 00000000 00000000 00000001)
+
+State 174 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 26 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  i = 1 (00000000 00000000 00000000 00000001)
+
+State 175 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 176 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 177 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 178 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 179 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 32 column 10 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  j = 1 (00000000 00000000 00000000 00000001)
+
+State 180 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 26 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  i = 2 (00000000 00000000 00000000 00000010)
+
+State 181 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 182 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 183 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 184 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 185 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 32 column 10 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  j = 1 (00000000 00000000 00000000 00000001)
+
+State 186 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 26 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  i = 3 (00000000 00000000 00000000 00000011)
+
+State 187 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 188 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 189 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 190 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 191 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 32 column 10 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  j = 1 (00000000 00000000 00000000 00000001)
+
+State 192 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 26 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  i = 4 (00000000 00000000 00000000 00000100)
+
+State 193 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 194 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 195 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 196 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 197 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 32 column 10 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  j = 1 (00000000 00000000 00000000 00000001)
+
+State 198 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 26 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  i = 5 (00000000 00000000 00000000 00000101)
+
+State 199 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 200 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 201 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 202 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 203 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 32 column 10 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  j = 1 (00000000 00000000 00000000 00000001)
+
+State 204 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 26 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  i = 6 (00000000 00000000 00000000 00000110)
+
+State 205 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 206 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 207 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 208 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 209 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 32 column 10 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  j = 1 (00000000 00000000 00000000 00000001)
+
+State 210 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 26 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  i = 7 (00000000 00000000 00000000 00000111)
+
+State 211 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 212 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 213 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 214 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 31 column 5 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[i] = 1 (00000000 00000000 00000000 00000001)
+
+State 215 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 32 column 10 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  j = 1 (00000000 00000000 00000000 00000001)
+
+State 216 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 29 column 26 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  i = 8 (00000000 00000000 00000000 00001000)
+
+State 217 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 88 column 1 function main thread 0
+----------------------------------------------------
+Violated property:
+  file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c line 88 column 1 function main
+  EQUIV:observables
+  __hlscheck_left_0[0] == __hlscheck_right_0[0] && __hlscheck_left_0[1] == __hlscheck_right_0[1] && __hlscheck_left_0[2] == __hlscheck_right_0[2] && __hlscheck_left_0[3] == __hlscheck_right_0[3] && __hlscheck_left_0[4] == __hlscheck_right_0[4] && __hlscheck_left_0[5] == __hlscheck_right_0[5] && __hlscheck_left_0[6] == __hlscheck_right_0[6] && __hlscheck_left_0[7] == __hlscheck_right_0[7] && __hlscheck_left_1[0] == __hlscheck_right_1[0] && __hlscheck_left_1[1] == __hlscheck_right_1[1] && __hlscheck_left_1[2] == __hlscheck_right_1[2] && __hlscheck_left_1[3] == __hlscheck_right_1[3] && __hlscheck_left_1[4] == __hlscheck_right_1[4] && __hlscheck_left_1[5] == __hlscheck_right_1[5] && __hlscheck_left_1[6] == __hlscheck_right_1[6] && __hlscheck_left_1[7] == __hlscheck_right_1[7]
+
+BMC program time: 0.876s
+
+** Results:
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c, function __hlscheck_candidate
+  PASSED       [__hlscheck_candidate.uninitialised-variable.1]  line 29  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.1]     line 29  arithmetic overflow on add
+  PASSED       [__hlscheck_candidate.uninitialised-variable.2]  line 29  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.assertion.1]               line 31  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.1]   line 31  dereference failure: array bounds violated
+  PASSED       [__hlscheck_candidate.uninitialised-variable.3]  line 31  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.uninitialised-variable.4]  line 32  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.uninitialised-variable.5]  line 32  use of uninitialized variable: j
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.2]     line 34  arithmetic overflow on sub
+  PASSED       [__hlscheck_candidate.assertion.2]               line 34  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.2]   line 34  dereference failure: array bounds violated
+  PASSED       [__hlscheck_candidate.uninitialised-variable.6]  line 34  use of uninitialized variable: j
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c, function __hlscheck_original
+  PASSED       [__hlscheck_original.uninitialised-variable.1]   line 13  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.arithmetic-overflow.1]      line 13  arithmetic overflow on add
+  PASSED       [__hlscheck_original.uninitialised-variable.2]   line 13  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.uninitialised-variable.3]   line 16  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.uninitialised-variable.4]   line 16  use of uninitialized variable: j
+  PASSED       [__hlscheck_original.arithmetic-overflow.2]      line 16  arithmetic overflow on add
+  PASSED       [__hlscheck_original.uninitialised-variable.5]   line 16  use of uninitialized variable: j
+  PASSED       [__hlscheck_original.assertion.1]                line 18  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_original.array-bounds-violated.1]    line 18  dereference failure: array bounds violated
+  PASSED       [__hlscheck_original.uninitialised-variable.6]   line 18  use of uninitialized variable: j
+  PASSED       [__hlscheck_original.uninitialised-variable.7]   line 18  use of uninitialized variable: sum
+  PASSED       [__hlscheck_original.assertion.2]                line 21  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_original.array-bounds-violated.2]    line 21  dereference failure: array bounds violated
+  PASSED       [__hlscheck_original.uninitialised-variable.8]   line 21  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.uninitialised-variable.9]   line 21  use of uninitialized variable: sum
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\local_prefix_seed5292\proof\counterexample_trace\miter.c, function main
+  PASSED       [main.uninitialised-variable.1]                  line 52  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.2]                  line 53  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.3]                  line 54  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.4]                  line 55  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.5]                  line 56  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.6]                  line 57  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.7]                  line 58  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.8]                  line 59  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.9]                  line 60  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.10]                 line 61  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.11]                 line 62  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.12]                 line 63  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.13]                 line 64  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.14]                 line 65  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.15]                 line 66  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.16]                 line 67  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.17]                 line 70  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.18]                 line 71  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.19]                 line 72  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.20]                 line 73  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.21]                 line 74  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.22]                 line 75  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.23]                 line 76  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.24]                 line 77  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.25]                 line 78  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.26]                 line 79  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.27]                 line 80  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.28]                 line 81  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.29]                 line 82  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.30]                 line 83  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.31]                 line 84  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.32]                 line 85  use of uninitialized variable: __hlscheck_left_1
+  FAILED       [main.assertion.1]                               line 88  EQUIV:observables
+  PASSED       [main.uninitialised-variable.33]                 line 88  use of uninitialized variable: __hlscheck_left_0 [2[0]]
+  PASSED       [main.uninitialised-variable.34]                 line 88  use of uninitialized variable: __hlscheck_left_0 [2[1]]
+  PASSED       [main.uninitialised-variable.35]                 line 88  use of uninitialized variable: __hlscheck_left_0 [2[2]]
+  PASSED       [main.uninitialised-variable.36]                 line 88  use of uninitialized variable: __hlscheck_left_0 [2[3]]
+  PASSED       [main.uninitialised-variable.37]                 line 88  use of uninitialized variable: __hlscheck_left_0 [2[4]]
+  PASSED       [main.uninitialised-variable.38]                 line 88  use of uninitialized variable: __hlscheck_left_0 [2[5]]
+  PASSED       [main.uninitialised-variable.39]                 line 88  use of uninitialized variable: __hlscheck_left_0 [2[6]]
+  PASSED       [main.uninitialised-variable.40]                 line 88  use of uninitialized variable: __hlscheck_left_0 [2[7]]
+  PASSED       [main.uninitialised-variable.41]                 line 88  use of uninitialized variable: __hlscheck_left_1 [5[0]]
+  PASSED       [main.uninitialised-variable.42]                 line 88  use of uninitialized variable: __hlscheck_left_1 [5[1]]
+  PASSED       [main.uninitialised-variable.43]                 line 88  use of uninitialized variable: __hlscheck_left_1 [5[2]]
+  PASSED       [main.uninitialised-variable.44]                 line 88  use of uninitialized variable: __hlscheck_left_1 [5[3]]
+  PASSED       [main.uninitialised-variable.45]                 line 88  use of uninitialized variable: __hlscheck_left_1 [5[4]]
+  PASSED       [main.uninitialised-variable.46]                 line 88  use of uninitialized variable: __hlscheck_left_1 [5[5]]
+  PASSED       [main.uninitialised-variable.47]                 line 88  use of uninitialized variable: __hlscheck_left_1 [5[6]]
+  PASSED       [main.uninitialised-variable.48]                 line 88  use of uninitialized variable: __hlscheck_left_1 [5[7]]
+  PASSED       [main.uninitialised-variable.49]                 line 88  use of uninitialized variable: __hlscheck_right_0 [3[0]]
+  PASSED       [main.uninitialised-variable.50]                 line 88  use of uninitialized variable: __hlscheck_right_0 [3[1]]
+  PASSED       [main.uninitialised-variable.51]                 line 88  use of uninitialized variable: __hlscheck_right_0 [3[2]]
+  PASSED       [main.uninitialised-variable.52]                 line 88  use of uninitialized variable: __hlscheck_right_0 [3[3]]
+  PASSED       [main.uninitialised-variable.53]                 line 88  use of uninitialized variable: __hlscheck_right_0 [3[4]]
+  PASSED       [main.uninitialised-variable.54]                 line 88  use of uninitialized variable: __hlscheck_right_0 [3[5]]
+  PASSED       [main.uninitialised-variable.55]                 line 88  use of uninitialized variable: __hlscheck_right_0 [3[6]]
+  PASSED       [main.uninitialised-variable.56]                 line 88  use of uninitialized variable: __hlscheck_right_0 [3[7]]
+  PASSED       [main.uninitialised-variable.57]                 line 88  use of uninitialized variable: __hlscheck_right_1 [6[0]]
+  PASSED       [main.uninitialised-variable.58]                 line 88  use of uninitialized variable: __hlscheck_right_1 [6[1]]
+  PASSED       [main.uninitialised-variable.59]                 line 88  use of uninitialized variable: __hlscheck_right_1 [6[2]]
+  PASSED       [main.uninitialised-variable.60]                 line 88  use of uninitialized variable: __hlscheck_right_1 [6[3]]
+  PASSED       [main.uninitialised-variable.61]                 line 88  use of uninitialized variable: __hlscheck_right_1 [6[4]]
+  PASSED       [main.uninitialised-variable.62]                 line 88  use of uninitialized variable: __hlscheck_right_1 [6[5]]
+  PASSED       [main.uninitialised-variable.63]                 line 88  use of uninitialized variable: __hlscheck_right_1 [6[6]]
+  PASSED       [main.uninitialised-variable.64]                 line 88  use of uninitialized variable: __hlscheck_right_1 [6[7]]
+
+** 1 of 92 properties failed, 91 passed
+Solver: Z3 v4.13.3 â€¢ Decision procedure total time: 0.270s â€¢ Avg: 0.002s/property
+
+VERIFICATION FAILED

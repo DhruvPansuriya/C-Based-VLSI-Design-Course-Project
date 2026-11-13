@@ -1,0 +1,38 @@
+{
+  "id": "histogram4_seed5291",
+  "case": "histogram4",
+  "source": "benchmarks\\expanded\\histogram4_original.c",
+  "source_sha256": "334e1ce176da979e7557d706260e5fc3bc06c7bde09a84a67de87a7bf0397958",
+  "request_sha256": "8097bc7acc71910646860e42f7533924fb4027d379bde9950568613486d80e24",
+  "raw_response_sha256": "736ab8329ffbbb91b8f2ac3c4e7789b71c204c70001b44fb40db6d633f071362",
+  "candidate_sha256": "564bd55a7bebb5790994bc8064b62b7c5dbaa574d43dd40707eff8c0bea416ff",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 116,
+    "prompt_tokens": 302,
+    "total_tokens": 418,
+    "prompt_tokens_details": {
+      "cached_tokens": 218
+    }
+  },
+  "timings": {
+    "cache_n": 218,
+    "prompt_n": 84,
+    "prompt_ms": 40.673,
+    "prompt_per_token_ms": 0.484202380952381,
+    "prompt_per_second": 2065.252132864554,
+    "predicted_n": 116,
+    "predicted_ms": 930.847,
+    "predicted_per_token_ms": 8.094321739130434,
+    "predicted_per_second": 123.54339649802814
+  },
+  "elapsed_seconds": 1.006,
+  "extraction": "largest fenced code block; no semantic edits",
+  "model_repository": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+  "model_revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+  "model_sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+  "runtime_release": "b12619",
+  "origin": "Actual independently generated local-model optimization attempt; not an injected mutation",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0
+}

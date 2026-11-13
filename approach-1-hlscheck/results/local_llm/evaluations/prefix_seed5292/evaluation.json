@@ -1,0 +1,93 @@
+{
+  "fingerprints": {
+    "original": "966bfcab111db30808da089a868f990161e9e1ece3060b3cb491ae034ec80763",
+    "candidate": "fde3f1e2b4ec6ae83a92f90d66d9a79c6f290d29302386ece5b1fff7db5aeb1f",
+    "evaluator": "c6045de93a412b74c1b8a184a264bc3a964ce015d2b4b5864f49909f7cf9cb9a",
+    "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+    "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307",
+    "pipeline.py": "a4b504daefbd3524a1d0a6fc5e872fd2a75b469c869cfb2c33a35711fa731567",
+    "native_helpers": "a83490a2ca85c768fe67d098c3b4b4899539a14db4ac582d6c8760bbf81917fe",
+    "timeout_ms": 10000
+  },
+  "manual_semantic_edits": false,
+  "syntax_compiles": true,
+  "ast_unchanged": false,
+  "verification": {
+    "backend": "ESBMC",
+    "solver": "Z3",
+    "status": "not_equivalent",
+    "parameters": [
+      {
+        "name": "a",
+        "kind": "unsigned int",
+        "length": 8
+      },
+      {
+        "name": "out",
+        "kind": "unsigned int",
+        "length": 8
+      }
+    ],
+    "scalar_ranges": {},
+    "assumptions": [
+      "32-bit int/unsigned int",
+      "Array parameters valid and pairwise nonoverlapping",
+      "All scalar/array inputs symbolic over their full type domain except stated ranges",
+      "Default ESBMC bounds, pointer and unwinding checks retained; signed overflow and shift UB checks enabled"
+    ],
+    "command": [
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\prefix_seed5292\\proof\\esbmc\\harness.c",
+      "--z3",
+      "--bv",
+      "--unwind",
+      "256",
+      "--overflow-check",
+      "--ub-shift-check",
+      "--uninitialised-vars-check",
+      "--multi-property"
+    ],
+    "unwind": 256,
+    "timeout_seconds": 10,
+    "returncode": 1,
+    "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+    "solver_report": "Solving claim 'arithmetic overflow on add at file C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\prefix_seed5292\\proof\\esbmc\\harness.c line 48 column 30 function main' with solver Z3 v4.13.3",
+    "elapsed_seconds": 0.924513,
+    "fallback_used": true,
+    "initial_stage": {
+      "status": "unsupported",
+      "assumptions": [
+        "32-bit int and unsigned int; uint32_t is unsigned int",
+        "All array parameters are valid, separately allocated, and nonoverlapping",
+        "Functional equality at function completion; no cycle-level RTL guarantee"
+      ],
+      "reason": "Unsupported statement: Break",
+      "elapsed_seconds": 0.02636
+    }
+  },
+  "status": "not_equivalent",
+  "smt_replay": {
+    "available": false,
+    "reason": "No conclusive custom-backend SMT query"
+  },
+  "native": {
+    "passed": true,
+    "trials": 264,
+    "directed_trials": 8,
+    "random_trials": 256,
+    "mismatches": 263,
+    "first_mismatch_trial": 1,
+    "witness_replayed": null,
+    "witness_outputs_agree": null,
+    "harness_sha256": "9c94d0dea22b6b6e4c389309cc8e45c86424c3bae26ebaf900212ce4c0c34e01",
+    "command": [
+      "C:\\MinGW\\mingw32\\bin\\clang.EXE",
+      "-std=c11",
+      "-O2",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\prefix_seed5292\\native_differential.c",
+      "-o",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\local_llm\\evaluations\\prefix_seed5292\\native_check_020.exe"
+    ],
+    "exit_code": 0
+  }
+}

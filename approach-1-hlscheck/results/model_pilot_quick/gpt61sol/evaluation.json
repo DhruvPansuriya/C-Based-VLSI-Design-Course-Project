@@ -1,0 +1,35 @@
+{
+  "id": "gpt61sol",
+  "label": "GPT-6.1-Sol (Codex reference)",
+  "organization": "OpenAI",
+  "candidate_sha256": "55669881f5c8a3f76c22c2843d2656f68f4ada20418e3563ca895cd758b5e4c3",
+  "messages_sha256": "36f7b1c39b23bb166d4ea2355226c217f8d83e06edaca3f5daa7b15b28dba6f7",
+  "generation_seconds": null,
+  "finish_reason": "complete",
+  "syntax_compiles": true,
+  "status": "equivalent",
+  "verification_seconds": 0.878501,
+  "reason": null,
+  "ast_unchanged": false,
+  "evidence_replay_passed": true,
+  "native": {
+    "passed": true,
+    "trials": 264,
+    "directed_trials": 8,
+    "random_trials": 256,
+    "mismatches": 0,
+    "first_mismatch_trial": null,
+    "witness_replayed": null,
+    "witness_outputs_agree": null,
+    "harness_sha256": "515e09bc04ddfde09a675395b2f9d57512a1e0c2b35694e9bf092db39909627e",
+    "command": [
+      "C:\\MinGW\\mingw32\\bin\\clang.EXE",
+      "-std=c11",
+      "-O2",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\model_pilot_quick\\gpt61sol\\native_differential.c",
+      "-o",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\model_pilot_quick\\gpt61sol\\native_check_003.exe"
+    ],
+    "exit_code": 0
+  }
+}

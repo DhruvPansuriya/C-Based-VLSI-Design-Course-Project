@@ -1,0 +1,31 @@
+{
+  "case": "gemm_local4",
+  "variant": "optimized",
+  "expected": "equivalent",
+  "origin": "MachSuite gemm/ncubed reduced unsigned 4x4 adaptation; same original algorithm as the earlier gemm pair; BSD license retained",
+  "transformation": "Keep four row accumulators local during GEMM interchange",
+  "original": "benchmarks\\expanded\\gemm_local4_original.c",
+  "candidate": "benchmarks\\expanded\\gemm_local4_optimized.c",
+  "original_sha256": "beb59f64218ee627d3ff327be4af7045a47cbe08ef01e9505049064c50c7a108",
+  "candidate_sha256": "c7d351511352262d1cd582214aec6e5f5dd2250b30dd3efb42e738a31b2a5d7e",
+  "verification": {
+    "status": "equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 496,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "elapsed_seconds": 0.024656
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

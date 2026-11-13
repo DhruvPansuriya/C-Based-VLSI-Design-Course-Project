@@ -1,0 +1,660 @@
+[
+  {
+    "coverage": {
+      "files": {
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c": {
+          "coverage_stats": {
+            "covered_lines": 20,
+            "total_hits": 21
+          },
+          "covered_lines": {
+            "100": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "101": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "102": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "103": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "104": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "105": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "106": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "107": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "108": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "109": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "169": {
+              "covered": true,
+              "hits": 2,
+              "type": "execution"
+            },
+            "20": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "245": {
+              "covered": true,
+              "hits": 1,
+              "type": "violation"
+            },
+            "247": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "94": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "95": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "96": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "97": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "98": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "99": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            }
+          }
+        }
+      }
+    },
+    "initial_values": {
+      "__hlscheck_left_3": {
+        "name": "__hlscheck_left_3",
+        "type": "array",
+        "value": "{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }"
+      },
+      "__hlscheck_right_3": {
+        "name": "__hlscheck_right_3",
+        "type": "array",
+        "value": "{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }"
+      },
+      "out[0]": {
+        "name": "out[0]",
+        "type": "unsigned",
+        "value": "335545381"
+      },
+      "out[1]": {
+        "name": "out[1]",
+        "type": "unsigned",
+        "value": "0"
+      }
+    },
+    "source_files": {
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c": [
+        "",
+        "_Static_assert(sizeof(char)==1 && sizeof(short)==2 && sizeof(int)==4 &&",
+        "               sizeof(long)==4 && sizeof(long long)==8 && sizeof(void*)==4, \"HLSCheck ILP32 ABI\");",
+        "_Static_assert((char)-1 < 0, \"HLSCheck requires signed plain char\");",
+        "_Static_assert((unsigned char)-1 == 255, \"HLSCheck requires 8-bit bytes\");",
+        "",
+        "extern void __ESBMC_assert(_Bool, const char *);",
+        "extern void __ESBMC_assume(_Bool);",
+        "extern unsigned int __hlscheck_nondet_0(void);",
+        "extern unsigned int __hlscheck_nondet_1(void);",
+        "extern unsigned int __hlscheck_nondet_2(void);",
+        "extern unsigned int __hlscheck_nondet_3(void);",
+        "void __hlscheck_original(unsigned int a[16], unsigned int x[4], unsigned int y[4], unsigned int out[16])",
+        "{",
+        "}",
+        "",
+        "",
+        "void __hlscheck_candidate(unsigned int a[16], unsigned int x[4], unsigned int y[4], unsigned int out[16])",
+        "{",
+        "  out[0] ^= 1u;",
+        "}",
+        "",
+        "",
+        "void __hlscheck_summary(unsigned int a[16], unsigned int x[4], unsigned int y[4], unsigned int out[16])",
+        "{",
+        "  unsigned int __summary_input_0[16];",
+        "  __summary_input_0[0] = a[0];",
+        "  __summary_input_0[1] = a[1];",
+        "  __summary_input_0[2] = a[2];",
+        "  __summary_input_0[3] = a[3];",
+        "  __summary_input_0[4] = a[4];",
+        "  __summary_input_0[5] = a[5];",
+        "  __summary_input_0[6] = a[6];",
+        "  __summary_input_0[7] = a[7];",
+        "  __summary_input_0[8] = a[8];",
+        "  __summary_input_0[9] = a[9];",
+        "  __summary_input_0[10] = a[10];",
+        "  __summary_input_0[11] = a[11];",
+        "  __summary_input_0[12] = a[12];",
+        "  __summary_input_0[13] = a[13];",
+        "  __summary_input_0[14] = a[14];",
+        "  __summary_input_0[15] = a[15];",
+        "  unsigned int __summary_input_1[4];",
+        "  __summary_input_1[0] = x[0];",
+        "  __summary_input_1[1] = x[1];",
+        "  __summary_input_1[2] = x[2];",
+        "  __summary_input_1[3] = x[3];",
+        "  unsigned int __summary_input_2[4];",
+        "  __summary_input_2[0] = y[0];",
+        "  __summary_input_2[1] = y[1];",
+        "  __summary_input_2[2] = y[2];",
+        "  __summary_input_2[3] = y[3];",
+        "  unsigned int __summary_input_3[16];",
+        "  __summary_input_3[0] = out[0];",
+        "  __summary_input_3[1] = out[1];",
+        "  __summary_input_3[2] = out[2];",
+        "  __summary_input_3[3] = out[3];",
+        "  __summary_input_3[4] = out[4];",
+        "  __summary_input_3[5] = out[5];",
+        "  __summary_input_3[6] = out[6];",
+        "  __summary_input_3[7] = out[7];",
+        "  __summary_input_3[8] = out[8];",
+        "  __summary_input_3[9] = out[9];",
+        "  __summary_input_3[10] = out[10];",
+        "  __summary_input_3[11] = out[11];",
+        "  __summary_input_3[12] = out[12];",
+        "  __summary_input_3[13] = out[13];",
+        "  __summary_input_3[14] = out[14];",
+        "  __summary_input_3[15] = out[15];",
+        "  a[0] = __summary_input_0[0];",
+        "  a[1] = __summary_input_0[1];",
+        "  a[2] = __summary_input_0[2];",
+        "  a[3] = __summary_input_0[3];",
+        "  a[4] = __summary_input_0[4];",
+        "  a[5] = __summary_input_0[5];",
+        "  a[6] = __summary_input_0[6];",
+        "  a[7] = __summary_input_0[7];",
+        "  a[8] = __summary_input_0[8];",
+        "  a[9] = __summary_input_0[9];",
+        "  a[10] = __summary_input_0[10];",
+        "  a[11] = __summary_input_0[11];",
+        "  a[12] = __summary_input_0[12];",
+        "  a[13] = __summary_input_0[13];",
+        "  a[14] = __summary_input_0[14];",
+        "  a[15] = __summary_input_0[15];",
+        "  x[0] = __summary_input_1[0];",
+        "  x[1] = __summary_input_1[1];",
+        "  x[2] = __summary_input_1[2];",
+        "  x[3] = __summary_input_1[3];",
+        "  y[0] = __summary_input_2[0];",
+        "  y[1] = __summary_input_2[1];",
+        "  y[2] = __summary_input_2[2];",
+        "  y[3] = __summary_input_2[3];",
+        "  out[0] = __summary_input_0[0] + (__summary_input_1[0] * __summary_input_2[0]);",
+        "  out[1] = __summary_input_0[1] + (__summary_input_1[0] * __summary_input_2[1]);",
+        "  out[2] = __summary_input_0[2] + (__summary_input_1[0] * __summary_input_2[2]);",
+        "  out[3] = __summary_input_0[3] + (__summary_input_1[0] * __summary_input_2[3]);",
+        "  out[4] = __summary_input_0[4] + (__summary_input_1[1] * __summary_input_2[0]);",
+        "  out[5] = __summary_input_0[5] + (__summary_input_1[1] * __summary_input_2[1]);",
+        "  out[6] = __summary_input_0[6] + (__summary_input_1[1] * __summary_input_2[2]);",
+        "  out[7] = __summary_input_0[7] + (__summary_input_1[1] * __summary_input_2[3]);",
+        "  out[8] = __summary_input_0[8] + (__summary_input_1[2] * __summary_input_2[0]);",
+        "  out[9] = __summary_input_0[9] + (__summary_input_1[2] * __summary_input_2[1]);",
+        "  out[10] = __summary_input_0[10] + (__summary_input_1[2] * __summary_input_2[2]);",
+        "  out[11] = __summary_input_0[11] + (__summary_input_1[2] * __summary_input_2[3]);",
+        "  out[12] = __summary_input_0[12] + (__summary_input_1[3] * __summary_input_2[0]);",
+        "  out[13] = __summary_input_0[13] + (__summary_input_1[3] * __summary_input_2[1]);",
+        "  out[14] = __summary_input_0[14] + (__summary_input_1[3] * __summary_input_2[2]);",
+        "  out[15] = __summary_input_0[15] + (__summary_input_1[3] * __summary_input_2[3]);",
+        "}",
+        "",
+        "",
+        "int main(void) {",
+        "unsigned int __hlscheck_input_0[16]={__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0()};",
+        "unsigned int __hlscheck_left_0[16], __hlscheck_right_0[16];",
+        "__hlscheck_left_0[0]=__hlscheck_input_0[0];",
+        "__hlscheck_right_0[0]=__hlscheck_left_0[0];",
+        "__hlscheck_left_0[1]=__hlscheck_input_0[1];",
+        "__hlscheck_right_0[1]=__hlscheck_left_0[1];",
+        "__hlscheck_left_0[2]=__hlscheck_input_0[2];",
+        "__hlscheck_right_0[2]=__hlscheck_left_0[2];",
+        "__hlscheck_left_0[3]=__hlscheck_input_0[3];",
+        "__hlscheck_right_0[3]=__hlscheck_left_0[3];",
+        "__hlscheck_left_0[4]=__hlscheck_input_0[4];",
+        "__hlscheck_right_0[4]=__hlscheck_left_0[4];",
+        "__hlscheck_left_0[5]=__hlscheck_input_0[5];",
+        "__hlscheck_right_0[5]=__hlscheck_left_0[5];",
+        "__hlscheck_left_0[6]=__hlscheck_input_0[6];",
+        "__hlscheck_right_0[6]=__hlscheck_left_0[6];",
+        "__hlscheck_left_0[7]=__hlscheck_input_0[7];",
+        "__hlscheck_right_0[7]=__hlscheck_left_0[7];",
+        "__hlscheck_left_0[8]=__hlscheck_input_0[8];",
+        "__hlscheck_right_0[8]=__hlscheck_left_0[8];",
+        "__hlscheck_left_0[9]=__hlscheck_input_0[9];",
+        "__hlscheck_right_0[9]=__hlscheck_left_0[9];",
+        "__hlscheck_left_0[10]=__hlscheck_input_0[10];",
+        "__hlscheck_right_0[10]=__hlscheck_left_0[10];",
+        "__hlscheck_left_0[11]=__hlscheck_input_0[11];",
+        "__hlscheck_right_0[11]=__hlscheck_left_0[11];",
+        "__hlscheck_left_0[12]=__hlscheck_input_0[12];",
+        "__hlscheck_right_0[12]=__hlscheck_left_0[12];",
+        "__hlscheck_left_0[13]=__hlscheck_input_0[13];",
+        "__hlscheck_right_0[13]=__hlscheck_left_0[13];",
+        "__hlscheck_left_0[14]=__hlscheck_input_0[14];",
+        "__hlscheck_right_0[14]=__hlscheck_left_0[14];",
+        "__hlscheck_left_0[15]=__hlscheck_input_0[15];",
+        "__hlscheck_right_0[15]=__hlscheck_left_0[15];",
+        "unsigned int __hlscheck_input_1[4]={__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1()};",
+        "unsigned int __hlscheck_left_1[4], __hlscheck_right_1[4];",
+        "__hlscheck_left_1[0]=__hlscheck_input_1[0];",
+        "__hlscheck_right_1[0]=__hlscheck_left_1[0];",
+        "__hlscheck_left_1[1]=__hlscheck_input_1[1];",
+        "__hlscheck_right_1[1]=__hlscheck_left_1[1];",
+        "__hlscheck_left_1[2]=__hlscheck_input_1[2];",
+        "__hlscheck_right_1[2]=__hlscheck_left_1[2];",
+        "__hlscheck_left_1[3]=__hlscheck_input_1[3];",
+        "__hlscheck_right_1[3]=__hlscheck_left_1[3];",
+        "unsigned int __hlscheck_input_2[4]={__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2()};",
+        "unsigned int __hlscheck_left_2[4], __hlscheck_right_2[4];",
+        "__hlscheck_left_2[0]=__hlscheck_input_2[0];",
+        "__hlscheck_right_2[0]=__hlscheck_left_2[0];",
+        "__hlscheck_left_2[1]=__hlscheck_input_2[1];",
+        "__hlscheck_right_2[1]=__hlscheck_left_2[1];",
+        "__hlscheck_left_2[2]=__hlscheck_input_2[2];",
+        "__hlscheck_right_2[2]=__hlscheck_left_2[2];",
+        "__hlscheck_left_2[3]=__hlscheck_input_2[3];",
+        "__hlscheck_right_2[3]=__hlscheck_left_2[3];",
+        "unsigned int __hlscheck_input_3[16]={__hlscheck_nondet_3(),__hlscheck_nondet_3(),__hlscheck_nondet_3(),__hlscheck_nondet_3(),__hlscheck_nondet_3(),__hlscheck_nondet_3(),__hlscheck_nondet_3(),__hlscheck_nondet_3(),__hlscheck_nondet_3(),__hlscheck_nondet_3(),__hlscheck_nondet_3(),__hlscheck_nondet_3(),__hlscheck_nondet_3(),__hlscheck_nondet_3(),__hlscheck_nondet_3(),__hlscheck_nondet_3()};",
+        "unsigned int __hlscheck_left_3[16], __hlscheck_right_3[16];",
+        "__hlscheck_left_3[0]=__hlscheck_input_3[0];",
+        "__hlscheck_right_3[0]=__hlscheck_left_3[0];",
+        "__hlscheck_left_3[1]=__hlscheck_input_3[1];",
+        "__hlscheck_right_3[1]=__hlscheck_left_3[1];",
+        "__hlscheck_left_3[2]=__hlscheck_input_3[2];",
+        "__hlscheck_right_3[2]=__hlscheck_left_3[2];",
+        "__hlscheck_left_3[3]=__hlscheck_input_3[3];",
+        "__hlscheck_right_3[3]=__hlscheck_left_3[3];",
+        "__hlscheck_left_3[4]=__hlscheck_input_3[4];",
+        "__hlscheck_right_3[4]=__hlscheck_left_3[4];",
+        "__hlscheck_left_3[5]=__hlscheck_input_3[5];",
+        "__hlscheck_right_3[5]=__hlscheck_left_3[5];",
+        "__hlscheck_left_3[6]=__hlscheck_input_3[6];",
+        "__hlscheck_right_3[6]=__hlscheck_left_3[6];",
+        "__hlscheck_left_3[7]=__hlscheck_input_3[7];",
+        "__hlscheck_right_3[7]=__hlscheck_left_3[7];",
+        "__hlscheck_left_3[8]=__hlscheck_input_3[8];",
+        "__hlscheck_right_3[8]=__hlscheck_left_3[8];",
+        "__hlscheck_left_3[9]=__hlscheck_input_3[9];",
+        "__hlscheck_right_3[9]=__hlscheck_left_3[9];",
+        "__hlscheck_left_3[10]=__hlscheck_input_3[10];",
+        "__hlscheck_right_3[10]=__hlscheck_left_3[10];",
+        "__hlscheck_left_3[11]=__hlscheck_input_3[11];",
+        "__hlscheck_right_3[11]=__hlscheck_left_3[11];",
+        "__hlscheck_left_3[12]=__hlscheck_input_3[12];",
+        "__hlscheck_right_3[12]=__hlscheck_left_3[12];",
+        "__hlscheck_left_3[13]=__hlscheck_input_3[13];",
+        "__hlscheck_right_3[13]=__hlscheck_left_3[13];",
+        "__hlscheck_left_3[14]=__hlscheck_input_3[14];",
+        "__hlscheck_right_3[14]=__hlscheck_left_3[14];",
+        "__hlscheck_left_3[15]=__hlscheck_input_3[15];",
+        "__hlscheck_right_3[15]=__hlscheck_left_3[15];",
+        "__hlscheck_summary(__hlscheck_left_0,__hlscheck_left_1,__hlscheck_left_2,__hlscheck_left_3);",
+        "__hlscheck_right_0[0]=__hlscheck_left_0[0];",
+        "__hlscheck_right_0[1]=__hlscheck_left_0[1];",
+        "__hlscheck_right_0[2]=__hlscheck_left_0[2];",
+        "__hlscheck_right_0[3]=__hlscheck_left_0[3];",
+        "__hlscheck_right_0[4]=__hlscheck_left_0[4];",
+        "__hlscheck_right_0[5]=__hlscheck_left_0[5];",
+        "__hlscheck_right_0[6]=__hlscheck_left_0[6];",
+        "__hlscheck_right_0[7]=__hlscheck_left_0[7];",
+        "__hlscheck_right_0[8]=__hlscheck_left_0[8];",
+        "__hlscheck_right_0[9]=__hlscheck_left_0[9];",
+        "__hlscheck_right_0[10]=__hlscheck_left_0[10];",
+        "__hlscheck_right_0[11]=__hlscheck_left_0[11];",
+        "__hlscheck_right_0[12]=__hlscheck_left_0[12];",
+        "__hlscheck_right_0[13]=__hlscheck_left_0[13];",
+        "__hlscheck_right_0[14]=__hlscheck_left_0[14];",
+        "__hlscheck_right_0[15]=__hlscheck_left_0[15];",
+        "__hlscheck_right_1[0]=__hlscheck_left_1[0];",
+        "__hlscheck_right_1[1]=__hlscheck_left_1[1];",
+        "__hlscheck_right_1[2]=__hlscheck_left_1[2];",
+        "__hlscheck_right_1[3]=__hlscheck_left_1[3];",
+        "__hlscheck_right_2[0]=__hlscheck_left_2[0];",
+        "__hlscheck_right_2[1]=__hlscheck_left_2[1];",
+        "__hlscheck_right_2[2]=__hlscheck_left_2[2];",
+        "__hlscheck_right_2[3]=__hlscheck_left_2[3];",
+        "__hlscheck_right_3[0]=__hlscheck_left_3[0];",
+        "__hlscheck_right_3[1]=__hlscheck_left_3[1];",
+        "__hlscheck_right_3[2]=__hlscheck_left_3[2];",
+        "__hlscheck_right_3[3]=__hlscheck_left_3[3];",
+        "__hlscheck_right_3[4]=__hlscheck_left_3[4];",
+        "__hlscheck_right_3[5]=__hlscheck_left_3[5];",
+        "__hlscheck_right_3[6]=__hlscheck_left_3[6];",
+        "__hlscheck_right_3[7]=__hlscheck_left_3[7];",
+        "__hlscheck_right_3[8]=__hlscheck_left_3[8];",
+        "__hlscheck_right_3[9]=__hlscheck_left_3[9];",
+        "__hlscheck_right_3[10]=__hlscheck_left_3[10];",
+        "__hlscheck_right_3[11]=__hlscheck_left_3[11];",
+        "__hlscheck_right_3[12]=__hlscheck_left_3[12];",
+        "__hlscheck_right_3[13]=__hlscheck_left_3[13];",
+        "__hlscheck_right_3[14]=__hlscheck_left_3[14];",
+        "__hlscheck_right_3[15]=__hlscheck_left_3[15];",
+        "__hlscheck_original(__hlscheck_left_0,__hlscheck_left_1,__hlscheck_left_2,__hlscheck_left_3);",
+        "__hlscheck_candidate(__hlscheck_right_0,__hlscheck_right_1,__hlscheck_right_2,__hlscheck_right_3);",
+        "__ESBMC_assert((__hlscheck_left_0[0]==__hlscheck_right_0[0]) && (__hlscheck_left_0[1]==__hlscheck_right_0[1]) && (__hlscheck_left_0[2]==__hlscheck_right_0[2]) && (__hlscheck_left_0[3]==__hlscheck_right_0[3]) && (__hlscheck_left_0[4]==__hlscheck_right_0[4]) && (__hlscheck_left_0[5]==__hlscheck_right_0[5]) && (__hlscheck_left_0[6]==__hlscheck_right_0[6]) && (__hlscheck_left_0[7]==__hlscheck_right_0[7]) && (__hlscheck_left_0[8]==__hlscheck_right_0[8]) && (__hlscheck_left_0[9]==__hlscheck_right_0[9]) && (__hlscheck_left_0[10]==__hlscheck_right_0[10]) && (__hlscheck_left_0[11]==__hlscheck_right_0[11]) && (__hlscheck_left_0[12]==__hlscheck_right_0[12]) && (__hlscheck_left_0[13]==__hlscheck_right_0[13]) && (__hlscheck_left_0[14]==__hlscheck_right_0[14]) && (__hlscheck_left_0[15]==__hlscheck_right_0[15]) && (__hlscheck_left_1[0]==__hlscheck_right_1[0]) && (__hlscheck_left_1[1]==__hlscheck_right_1[1]) && (__hlscheck_left_1[2]==__hlscheck_right_1[2]) && (__hlscheck_left_1[3]==__hlscheck_right_1[3]) && (__hlscheck_left_2[0]==__hlscheck_right_2[0]) && (__hlscheck_left_2[1]==__hlscheck_right_2[1]) && (__hlscheck_left_2[2]==__hlscheck_right_2[2]) && (__hlscheck_left_2[3]==__hlscheck_right_2[3]) && (__hlscheck_left_3[0]==__hlscheck_right_3[0]) && (__hlscheck_left_3[1]==__hlscheck_right_3[1]) && (__hlscheck_left_3[2]==__hlscheck_right_3[2]) && (__hlscheck_left_3[3]==__hlscheck_right_3[3]) && (__hlscheck_left_3[4]==__hlscheck_right_3[4]) && (__hlscheck_left_3[5]==__hlscheck_right_3[5]) && (__hlscheck_left_3[6]==__hlscheck_right_3[6]) && (__hlscheck_left_3[7]==__hlscheck_right_3[7]) && (__hlscheck_left_3[8]==__hlscheck_right_3[8]) && (__hlscheck_left_3[9]==__hlscheck_right_3[9]) && (__hlscheck_left_3[10]==__hlscheck_right_3[10]) && (__hlscheck_left_3[11]==__hlscheck_right_3[11]) && (__hlscheck_left_3[12]==__hlscheck_right_3[12]) && (__hlscheck_left_3[13]==__hlscheck_right_3[13]) && (__hlscheck_left_3[14]==__hlscheck_right_3[14]) && (__hlscheck_left_3[15]==__hlscheck_right_3[15]),\"EQUIV:observables\");",
+        "return 0;",
+        "}"
+      ]
+    },
+    "status": "violation",
+    "steps": [
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_3",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "main",
+        "line": "169",
+        "step_number": 0,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_3",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "main",
+        "line": "169",
+        "step_number": 1,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[0]",
+          "lhs_type": "unsigned",
+          "rhs": "335545381",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "94",
+        "step_number": 2,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[1]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "95",
+        "step_number": 3,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[2]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "96",
+        "step_number": 4,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[3]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "97",
+        "step_number": 5,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[4]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "98",
+        "step_number": 6,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[5]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "99",
+        "step_number": 7,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[6]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "100",
+        "step_number": 8,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[7]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "101",
+        "step_number": 9,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[8]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "102",
+        "step_number": 10,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[9]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "103",
+        "step_number": 11,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[10]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "104",
+        "step_number": 12,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[11]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "105",
+        "step_number": 13,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[12]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "106",
+        "step_number": 14,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[13]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "107",
+        "step_number": 15,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[14]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "108",
+        "step_number": 16,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[15]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "109",
+        "step_number": 17,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[0]",
+          "lhs_type": "unsigned",
+          "rhs": "335545380",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "20",
+        "step_number": 18,
+        "type": "assignment"
+      },
+      {
+        "assertion": {
+          "comment": "EQUIV:observables",
+          "guard": "__hlscheck_left_0[0] == __hlscheck_right_0[0] && __hlscheck_left_0[1] == __hlscheck_right_0[1] && __hlscheck_left_0[2] == __hlscheck_right_0[2] && __hlscheck_left_0[3] == __hlscheck_right_0[3] && __hlscheck_left_0[4] == __hlscheck_right_0[4] && __hlscheck_left_0[5] == __hlscheck_right_0[5] && __hlscheck_left_0[6] == __hlscheck_right_0[6] && __hlscheck_left_0[7] == __hlscheck_right_0[7] && __hlscheck_left_0[8] == __hlscheck_right_0[8] && __hlscheck_left_0[9] == __hlscheck_right_0[9] && __hlscheck_left_0[10] == __hlscheck_right_0[10] && __hlscheck_left_0[11] == __hlscheck_right_0[11] && __hlscheck_left_0[12] == __hlscheck_right_0[12] && __hlscheck_left_0[13] == __hlscheck_right_0[13] && __hlscheck_left_0[14] == __hlscheck_right_0[14] && __hlscheck_left_0[15] == __hlscheck_right_0[15] && __hlscheck_left_1[0] == __hlscheck_right_1[0] && __hlscheck_left_1[1] == __hlscheck_right_1[1] && __hlscheck_left_1[2] == __hlscheck_right_1[2] && __hlscheck_left_1[3] == __hlscheck_right_1[3] && __hlscheck_left_2[0] == __hlscheck_right_2[0] && __hlscheck_left_2[1] == __hlscheck_right_2[1] && __hlscheck_left_2[2] == __hlscheck_right_2[2] && __hlscheck_left_2[3] == __hlscheck_right_2[3] && __hlscheck_left_3[0] == __hlscheck_right_3[0] && __hlscheck_left_3[1] == __hlscheck_right_3[1] && __hlscheck_left_3[2] == __hlscheck_right_3[2] && __hlscheck_left_3[3] == __hlscheck_right_3[3] && __hlscheck_left_3[4] == __hlscheck_right_3[4] && __hlscheck_left_3[5] == __hlscheck_right_3[5] && __hlscheck_left_3[6] == __hlscheck_right_3[6] && __hlscheck_left_3[7] == __hlscheck_right_3[7] && __hlscheck_left_3[8] == __hlscheck_right_3[8] && __hlscheck_left_3[9] == __hlscheck_right_3[9] && __hlscheck_left_3[10] == __hlscheck_right_3[10] && __hlscheck_left_3[11] == __hlscheck_right_3[11] && __hlscheck_left_3[12] == __hlscheck_right_3[12] && __hlscheck_left_3[13] == __hlscheck_right_3[13] && __hlscheck_left_3[14] == __hlscheck_right_3[14] && __hlscheck_left_3[15] == __hlscheck_right_3[15]",
+          "violated": true
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "main",
+        "line": "245",
+        "message": "EQUIV:observables",
+        "step_number": 19,
+        "type": "violation"
+      },
+      {
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_rank1_update4_buggy\\proof\\residual_1\\miter.c",
+        "function": "main",
+        "line": "247",
+        "message": "Assumption restriction",
+        "step_number": 20,
+        "type": "assume"
+      }
+    ]
+  }
+]

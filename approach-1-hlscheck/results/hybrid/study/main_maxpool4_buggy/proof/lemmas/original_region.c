@@ -1,0 +1,21 @@
+void kernel(unsigned int image[16], unsigned int out[4])
+{
+  for (int r = 0; r < 2; r++)
+    for (int c = 0; c < 2; c++)
+  {
+    unsigned int best = image[(r * 8) + (c * 2)];
+    for (int i = 0; i < 2; i++)
+      for (int j = 0; j < 2; j++)
+    {
+      unsigned int v = image[((((r * 2) + i) * 4) + (c * 2)) + j];
+      best = (v > best) ? (v) : (best);
+    }
+
+
+    out[(r * 2) + c] = best;
+  }
+
+
+}
+
+

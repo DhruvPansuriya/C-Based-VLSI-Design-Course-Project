@@ -1,0 +1,86 @@
+{
+  "cases": [
+    {
+      "name": "self",
+      "original": "results/past/original.c",
+      "candidate": "results/past/self.c",
+      "liveouts": "a,out",
+      "past_status": "equivalent_reported",
+      "past_code": 1,
+      "elapsed_seconds": 0.240076
+    },
+    {
+      "name": "unroll_only",
+      "original": "results/past/original.c",
+      "candidate": "results/past/unroll_only.c",
+      "liveouts": "a,out",
+      "past_status": "equivalent_reported",
+      "past_code": 1,
+      "elapsed_seconds": 0.22156
+    },
+    {
+      "name": "strength_reduction",
+      "original": "results/past/original.c",
+      "candidate": "results/past/strength_reduction.c",
+      "liveouts": "a,out",
+      "past_status": "not_proved",
+      "past_code": 0,
+      "elapsed_seconds": 0.286191
+    },
+    {
+      "name": "seeded_bug",
+      "original": "results/past/original.c",
+      "candidate": "results/past/seeded_bug.c",
+      "liveouts": "a,out",
+      "past_status": "not_proved",
+      "past_code": 0,
+      "elapsed_seconds": 0.243343
+    },
+    {
+      "name": "strength_reduction_all_normalizations",
+      "original": "results/past/original.c",
+      "candidate": "results/past/strength_reduction.c",
+      "liveouts": "a,out",
+      "all_normalizations": 1,
+      "past_status": "not_proved",
+      "past_code": 0,
+      "elapsed_seconds": 0.212438
+    },
+    {
+      "name": "gemm_optimized",
+      "original": "results/past/gemm_original.c",
+      "candidate": "results/past/gemm_optimized.c",
+      "liveouts": "m1,m2,prod",
+      "past_status": "equivalent_reported",
+      "past_code": 1,
+      "elapsed_seconds": 0.257314
+    },
+    {
+      "name": "gemm_buggy",
+      "original": "results/past/gemm_original.c",
+      "candidate": "results/past/gemm_buggy.c",
+      "liveouts": "m1,m2,prod",
+      "past_status": "not_proved",
+      "past_code": 0,
+      "elapsed_seconds": 0.341322
+    },
+    {
+      "name": "stencil_optimized",
+      "original": "results/past/stencil_original.c",
+      "candidate": "results/past/stencil_optimized.c",
+      "liveouts": "orig,sol,filter",
+      "past_status": "equivalent_reported",
+      "past_code": 1,
+      "elapsed_seconds": 0.308065
+    },
+    {
+      "name": "stencil_buggy",
+      "original": "results/past/stencil_original.c",
+      "candidate": "results/past/stencil_buggy.c",
+      "liveouts": "orig,sol,filter",
+      "past_status": "not_proved",
+      "past_code": 0,
+      "elapsed_seconds": 0.343834
+    }
+  ]
+}

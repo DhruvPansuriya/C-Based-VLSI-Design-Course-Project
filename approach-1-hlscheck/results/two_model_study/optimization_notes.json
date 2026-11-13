@@ -1,0 +1,50 @@
+{
+  "machsuite_gemm4": {
+    "qwen15": "Move accumulation into output array instead of a local scalar.",
+    "gpt61sol": "Unroll the four-product dot product, cache each input row and use grouped additions."
+  },
+  "machsuite_stencil5": {
+    "qwen15": "Canonical source unchanged.",
+    "gpt61sol": "Three partial accumulators with unrolled filter columns."
+  },
+  "polybench_mvt4": {
+    "qwen15": "Compound assignment spelling only.",
+    "gpt61sol": "Fuse the two output loops and unroll four-product sums."
+  },
+  "polybench_atax4": {
+    "qwen15": "Canonical source unchanged.",
+    "gpt61sol": "Cache x/row elements, unroll the dot product and use four output accumulators; proof inconclusive."
+  },
+  "polybench_bicg4": {
+    "qwen15": "Canonical source unchanged.",
+    "gpt61sol": "Cache p/row elements and use four scalar s accumulators; proof inconclusive."
+  },
+  "polybench_syrk4": {
+    "qwen15": "Canonical source unchanged.",
+    "gpt61sol": "Factor alpha outside the dot product and update each lower-triangle c element once."
+  },
+  "machsuite_rj_xtime": {
+    "qwen15": "Canonical source unchanged.",
+    "gpt61sol": "Replace conditional reduction with branchless top-bit-controlled XOR."
+  },
+  "chstone_gsm_abs": {
+    "qwen15": "Canonical source unchanged.",
+    "gpt61sol": "Unsigned bitwise magnitude and explicit saturation adjustment."
+  },
+  "chstone_gsm_add": {
+    "qwen15": "Canonical source unchanged.",
+    "gpt61sol": "Biased unsigned range test and one saturation branch."
+  },
+  "hlseval_extractFloat64Sign": {
+    "qwen15": "Canonical source unchanged.",
+    "gpt61sol": "Explicit return cast; the sign extraction remains the same."
+  },
+  "hlseval_extractFloat64Frac": {
+    "qwen15": "Equivalent typedef/mask spelling.",
+    "gpt61sol": "Explicit unsigned mask suffix; no algorithmic change."
+  },
+  "hlseval_float64_is_nan": {
+    "qwen15": "Canonical source unchanged.",
+    "gpt61sol": "Exponent/fraction predicates replace the shifted-pattern comparison."
+  }
+}

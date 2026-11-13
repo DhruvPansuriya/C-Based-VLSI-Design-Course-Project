@@ -1,0 +1,37 @@
+{
+  "backend": "ESBMC",
+  "solver": "Z3",
+  "status": "incomplete_unwind",
+  "parameters": [
+    {
+      "name": "n",
+      "kind": "int",
+      "length": null
+    }
+  ],
+  "scalar_ranges": {},
+  "assumptions": [
+    "32-bit int/unsigned int",
+    "Array parameters valid and pairwise nonoverlapping",
+    "All scalar/array inputs symbolic over their full type domain except stated ranges",
+    "Default ESBMC bounds, pointer and unwinding checks retained; signed overflow and shift UB checks enabled"
+  ],
+  "command": [
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\eqbench\\cases\\REVE\\barthe2big2\\Eq\\esbmc\\harness.c",
+    "--z3",
+    "--bv",
+    "--unwind",
+    "32",
+    "--overflow-check",
+    "--ub-shift-check",
+    "--uninitialised-vars-check",
+    "--multi-property"
+  ],
+  "unwind": 32,
+  "timeout_seconds": 3,
+  "returncode": 1,
+  "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+  "solver_report": "Solving claim 'arithmetic overflow on mul at file C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\eqbench\\cases\\REVE\\barthe2big2\\Eq\\esbmc\\harness.c line 13 column 5 function __hls_original' with solver Z3 v4.13.3",
+  "elapsed_seconds": 4.419241
+}

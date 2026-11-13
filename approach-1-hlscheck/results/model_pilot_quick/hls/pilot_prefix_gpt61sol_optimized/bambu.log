@@ -1,0 +1,166 @@
+ ==  Bambu executed with: '/home/ak05/cs5291_hls_tools/squashfs-root/usr/bin/bambu' '--top-fname=kernel' '--device-name=nangate45' '--clock-period=10' '--compiler=I386_CLANG16' '--experimental-setup=BAMBU-BALANCED-MP' '--seed=0' '--generate-tb=/home/ak05/cs5291_hls_runs/pilot_prefix_gpt61sol_optimized/tb.c' '--simulate' '--simulator=VERILATOR' '/home/ak05/cs5291_hls_runs/pilot_prefix_gpt61sol_optimized/kernel.c'
+
+
+********************************************************************************
+                    ____                  _
+                   | __ )  __ _ _ __ ___ | |_   _   _
+                   |  _ \ / _` | '_ ` _ \| '_ \| | | |
+                   | |_) | (_| | | | | | | |_) | |_| |
+                   |____/ \__,_|_| |_| |_|_.__/ \__,_|
+
+********************************************************************************
+                         High-Level Synthesis Tool
+
+                         Politecnico di Milano - DEIB
+                          System Architectures Group
+********************************************************************************
+                Copyright (C) 2004-2026 Politecnico di Milano
+Version: PandA 2026.11 - Revision 6407a63da948c1b2223d63a9e91891a5628fe174-dev/panda
+
+Available devices:
+ - nx1h35S
+ - nangate45
+ - xc7vx485t-2ffg1761
+ - xc7a100t-1csg324
+ - 5SGXEA7N2F45C1
+ - 5CSEMA5F31C6
+ - xc7z020-1clg484-YOSYS
+ - xcu250-2Lfigd2104
+ - xcku060-3ffva1156
+ - nx2h540tsc
+ - LFE5UM85F8BG756C
+ - asap7-BC
+ - EP4SGX530KH40C2
+ - xcu55c-2Lfsvh2892
+ - xc7z045-2ffg900
+ - LFE5U85F8BG756C
+ - asap7-TC
+ - xcu280-2Lfsvh2892
+ - LFE335EA8FN484C
+ - xcu50-2fsvh2104
+ - asap7-WC
+ - nx1h140tsp
+ - xc7z020-1clg484
+ - xc7vx690t-3ffg1930
+ - EP2C70F896C6
+ - xc7vx330t-1ffg1157
+  constmul: coeff=4 [32 bits, unsigned] -> shift by 2
+  constmul: coeff=4 [32 bits, unsigned] -> shift by 2
+  Analyzing function kernel
+    Parameter @429191 a
+    Interface specification:
+      Parameter : a
+      Protocol  : default
+      Direction : IN
+      Bundle    : a
+      Bitwidth  : 0
+      Size      : 8
+      Alignment : 4
+      bytes     : 32
+    Parameter @429192 out
+    Interface specification:
+      Parameter : out
+      Protocol  : default
+      Direction : IN
+      Bundle    : out
+      Bitwidth  : 0
+      Size      : 8
+      Alignment : 4
+      bytes     : 32
+  Analyzed function kernel
+
+  Functions to be synthesized:
+    kernel
+
+
+  Memory allocation information:
+Warning: This function uses unknown addresses: kernel
+    BRAM bitsize: 16
+    Spec may not exploit DATA bus width
+    Spec accesses data having an address unknown at compile time
+    Internal data is not externally accessible
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 32
+    SIZE bus bitsize: 6
+    Internally allocated memory (no private memories): 0
+    Internally allocated memory: 0
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function kernel:
+    Number of complex operations: 2
+    Number of complex operations: 2
+  Time to perform module allocation: 0.00 seconds
+
+
+  Scheduling Information of function kernel:
+      minII=2
+      maxII=3
+      Loop pipelining not possible for loop (BB2)
+    Number of control steps: 7
+    Minimum slack: 6.5320570047641908
+    Estimated max frequency (MHz): 288.35537417246479
+  Time to perform scheduling: 0.00 seconds
+
+
+  State Transition Graph Information of function kernel:
+    Number of states: 5
+    Done port is registered
+  Time to perform creation of the FSM: 0.00 seconds
+
+
+  Easy binding information for function kernel:
+    Bound operations:12/16
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function kernel:
+    Number of storage values inserted: 6
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+
+  Register binding information for function kernel:
+    Register allocation algorithm obtains an optimal result: 4 registers
+  Time to perform register binding: 0.00 seconds
+
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function kernel:
+    Number of modules instantiated: 15
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 8689
+    Estimated area of MUX21: 1843
+    Total estimated area: 10532
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function kernel:
+    Register allocation algorithm obtains an optimal result: 4 registers
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function kernel:
+    Number of allocated multiplexers (2-to-1 equivalent): 3
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function kernel: 69
+
+  Summary of resources:
+     - ASSIGN_GATE: 5
+     - BMEMORY_CTRLN: 1
+     - MUX2_GATE: 3
+     - UUdata_converter_FU: 5
+     - multi_read_cond_FU: 1
+     - register_SE: 4
+     - ui_add_node_FU: 2
+     - ui_eq_node_FU: 1
+     - ui_gep_node_FU: 2
+     - ui_shl_node_FU: 1
+  CYCLES                   : 26
+  Total cycles             : 416 cycles
+  Number of executions     : 16
+  Average execution        : 26 cycles

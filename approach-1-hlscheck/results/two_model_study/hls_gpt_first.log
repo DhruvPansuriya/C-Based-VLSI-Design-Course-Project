@@ -1,0 +1,7 @@
+tm_machsuite_gemm4_baseline_original cached
+tm_machsuite_stencil5_baseline_original cached
+tm_machsuite_stencil5_gpt61sol_optimized complete {'cycles': 116.0, 'area_um2': 7012.558, 'delay_ns': 2.138454}
+tm_polybench_mvt4_baseline_original cached
+tm_machsuite_gemm4_gpt61sol_optimized complete {'cycles': 82.0, 'area_um2': 10727.514, 'delay_ns': 5.867722}
+tm_polybench_mvt4_gpt61sol_optimized complete {'cycles': 58.0, 'area_um2': 15797.74, 'delay_ns': 6.364731}
+HLS finished 6 implementations; failures remain explicit

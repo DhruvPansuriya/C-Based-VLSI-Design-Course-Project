@@ -1,0 +1,7 @@
+#include <stdint.h>
+
+/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.
+   Reuse adjacent pair sums. */
+void kernel(uint32_t a[16], uint32_t out[14]) {
+    uint32_t previous=a[0]+a[1];for(int i=0;i<14;i++){uint32_t next=a[i+1]+a[i+2];out[i]=previous+next;previous=out[i];}
+}

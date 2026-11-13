@@ -1,0 +1,14 @@
+```c
+#include <stdint.h>
+
+/* Optimized fixed-size uint32_t kernel, authored independently in this Codex session.
+   Reference implementation. */
+void kernel(uint32_t a[16], uint32_t out[4]) {
+    for(int bin=0;bin<4;bin++){uint32_t count=0u;
+        for(int i=bin; i<16; i+=4) count += (a[i] & 3u) == bin ? 1u : 0u;
+        for(int i=bin; i<16; i+=4) count += (a[i+1] & 3u) == bin ? 1u : 0u;
+        for(int i=bin; i<16; i+=4) count += (a[i+2] & 3u) == bin ? 1u : 0u;
+        for(int i=bin; i<16; i+=4) count += (a[i+3] & 3u) == bin ? 1u : 0u;
+        out[bin] = count;}
+}
+```

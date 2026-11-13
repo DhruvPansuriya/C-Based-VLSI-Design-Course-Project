@@ -1,0 +1,88 @@
+{
+  "case": "bitreverse32",
+  "variant": "optimized",
+  "source": "benchmarks/expanded/bitreverse32_optimized.c",
+  "source_sha256": "542c1b6257ae7214cad4806c96a67b38174f1cb962e5ae9d19232097747cef53",
+  "target": "Nangate45 typical",
+  "clock_target_ns": 10.0,
+  "configuration_sha256": "84a9fce47e6051abbc6567b0fa25519f3559a70d6221375f6e8ac365d1ff8802",
+  "configuration": {
+    "protocol_version": 1,
+    "target": "nangate45",
+    "clock_ns": 10,
+    "compiler": "I386_CLANG16",
+    "setup": "BAMBU-BALANCED-MP",
+    "seed": 0,
+    "simulator": "VERILATOR",
+    "tb_calls": 16,
+    "yosys_deferred_elaboration": true,
+    "abc": "default liberty mapping",
+    "sta_io_delay_ns": 0,
+    "sta_input_transition_ns": 0.05,
+    "sta_output_load_ff": 10,
+    "library_sha256": "8d540a4d4cf6d09d27c87ad067857a9c0c2eeb023ab7a56e058cd3113db4e9b1"
+  },
+  "optimization": "BAMBU-BALANCED-MP / -O2",
+  "seed": 0,
+  "status": "complete",
+  "area_definition": "mapped standard-cell area in um^2; includes logic/register memory, no physical placement",
+  "delay_definition": "10 ns minus worst max-path slack; ideal clocks, zero IO delay, 0.01 pF output load, no extracted wires",
+  "hls": {
+    "command": [
+      "/home/ak05/cs5291_hls_tools/squashfs-root/usr/bin/bambu",
+      "/home/ak05/cs5291_hls_runs/bitreverse32_optimized/kernel.c",
+      "--top-fname=kernel",
+      "--device-name=nangate45",
+      "--clock-period=10",
+      "--compiler=I386_CLANG16",
+      "--experimental-setup=BAMBU-BALANCED-MP",
+      "--seed=0",
+      "--generate-tb=/home/ak05/cs5291_hls_runs/bitreverse32_optimized/tb.c",
+      "--simulate",
+      "--simulator=VERILATOR"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 12.83
+  },
+  "rtl_simulation_passed": true,
+  "rtl_simulation_calls": 16,
+  "cycles": 1.0,
+  "cycles_min": 1,
+  "cycles_max": 1,
+  "latency_at_target_ns": 10.0,
+  "bambu_version": "Version: PandA 2026.11 - Revision 6407a63da948c1b2223d63a9e91891a5628fe174-dev/panda",
+  "frontend_flags": "-O2 -mllvm -enable-loop-flatten -fno-builtin-bcmp -fno-builtin-memcpy -fno-builtin-memmove -fno-builtin-memset -ffp-contract=off -finline-functions -fno-slp-vectorize -fno-stack-protector -fno-unroll-loops -fno-vectorize -fwrapv --std=c11 -D__BAMBU__ -D__SYNTHESIS__ -Wuninitialized -isystem $BAMBU_HLS/include/panda -D__NO_INLINE__ -m32 -Xclang -no-opaque-pointers",
+  "synthesis": {
+    "command": [
+      "/home/ak05/cs5291_hls_tools/opt/yosys/bin/yosys",
+      "-s",
+      "synth.ys"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.421
+  },
+  "area_um2": 0.532,
+  "mapped_cells": 1,
+  "mapped_cell_types": {
+    "INV_X1": 1
+  },
+  "timing": {
+    "command": [
+      "/home/ak05/cs5291_hls_tools/opt/openroad/bin/sta",
+      "-exit",
+      "timing.tcl"
+    ],
+    "exit_code": 0,
+    "elapsed_seconds": 0.172
+  },
+  "worst_slack_ns": 9.945834,
+  "delay_ns": 0.054166,
+  "timing_coverage": {
+    "reported_unconstrained_endpoints": 0,
+    "all_are_constant_outputs": true,
+    "unexplained_unconstrained_endpoints": []
+  },
+  "meets_10ns": true,
+  "area_latency_product_um2_ns": 5.32,
+  "testbench_sha256": "93dfa24234f6209a314fb7444757268751c4f3bc0cdce53efb9160c04e33e249"
+}

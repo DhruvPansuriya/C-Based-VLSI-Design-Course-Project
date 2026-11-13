@@ -1,0 +1,18 @@
+{
+  "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\granite-3.3-2b-instruct-Q4_K_M.gguf",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+    },
+    {
+      "role": "user",
+      "content": "Quickly optimize this small kernel for HLS, prioritizing lower area times execution latency.\nPreserve the function name, exact interface, every final parameter-array value, and behavior for all inputs.\nuint32_t arithmetic wraps modulo 2^32. Arrays are valid and nonoverlapping. Do not add input restrictions.\nReturn exactly one complete C11 function with #include <stdint.h>. Do not use helper functions, library calls,\ndynamic memory, extra macros or vendor pragmas. Return code only, without explanation.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational reference: recompute each prefix independently. */\nvoid kernel(uint32_t a[8], uint32_t out[8]) {\n    for (int i = 0; i < 8; i++) {\n        uint32_t sum = 0u;\n        for (int j = 0; j <= i; j++) {\n            sum += a[j];\n        }\n        out[i] = sum;\n    }\n}\n```\n"
+    }
+  ],
+  "stream": false,
+  "seed": 5291,
+  "temperature": 0.2,
+  "top_p": 0.95,
+  "max_tokens": 768
+}

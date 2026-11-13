@@ -1,0 +1,166 @@
+OpenSTA 2.0.18 41f678fb6a Copyright (c) 2019, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Warning: There are 76 unconstrained endpoints.
+  Mout_Wdata_ram[0]
+  Mout_Wdata_ram[10]
+  Mout_Wdata_ram[11]
+  Mout_Wdata_ram[12]
+  Mout_Wdata_ram[13]
+  Mout_Wdata_ram[14]
+  Mout_Wdata_ram[15]
+  Mout_Wdata_ram[16]
+  Mout_Wdata_ram[17]
+  Mout_Wdata_ram[18]
+  Mout_Wdata_ram[19]
+  Mout_Wdata_ram[1]
+  Mout_Wdata_ram[20]
+  Mout_Wdata_ram[21]
+  Mout_Wdata_ram[22]
+  Mout_Wdata_ram[23]
+  Mout_Wdata_ram[24]
+  Mout_Wdata_ram[25]
+  Mout_Wdata_ram[26]
+  Mout_Wdata_ram[27]
+  Mout_Wdata_ram[28]
+  Mout_Wdata_ram[29]
+  Mout_Wdata_ram[2]
+  Mout_Wdata_ram[30]
+  Mout_Wdata_ram[31]
+  Mout_Wdata_ram[32]
+  Mout_Wdata_ram[33]
+  Mout_Wdata_ram[34]
+  Mout_Wdata_ram[35]
+  Mout_Wdata_ram[36]
+  Mout_Wdata_ram[37]
+  Mout_Wdata_ram[38]
+  Mout_Wdata_ram[39]
+  Mout_Wdata_ram[3]
+  Mout_Wdata_ram[40]
+  Mout_Wdata_ram[41]
+  Mout_Wdata_ram[42]
+  Mout_Wdata_ram[43]
+  Mout_Wdata_ram[44]
+  Mout_Wdata_ram[45]
+  Mout_Wdata_ram[46]
+  Mout_Wdata_ram[47]
+  Mout_Wdata_ram[48]
+  Mout_Wdata_ram[49]
+  Mout_Wdata_ram[4]
+  Mout_Wdata_ram[50]
+  Mout_Wdata_ram[51]
+  Mout_Wdata_ram[52]
+  Mout_Wdata_ram[53]
+  Mout_Wdata_ram[54]
+  Mout_Wdata_ram[55]
+  Mout_Wdata_ram[56]
+  Mout_Wdata_ram[57]
+  Mout_Wdata_ram[58]
+  Mout_Wdata_ram[59]
+  Mout_Wdata_ram[5]
+  Mout_Wdata_ram[60]
+  Mout_Wdata_ram[61]
+  Mout_Wdata_ram[62]
+  Mout_Wdata_ram[63]
+  Mout_Wdata_ram[6]
+  Mout_Wdata_ram[7]
+  Mout_Wdata_ram[8]
+  Mout_Wdata_ram[9]
+  Mout_data_ram_size[0]
+  Mout_data_ram_size[10]
+  Mout_data_ram_size[1]
+  Mout_data_ram_size[2]
+  Mout_data_ram_size[3]
+  Mout_data_ram_size[4]
+  Mout_data_ram_size[6]
+  Mout_data_ram_size[7]
+  Mout_data_ram_size[8]
+  Mout_data_ram_size[9]
+  Mout_we_ram[0]
+  Mout_we_ram[1]
+Startpoint: reset (input port clocked by core_clock)
+Endpoint: _1159_ (recovery check against rising-edge clock core_clock)
+Path Group: **async_default**
+Path Type: max
+
+      Delay        Time   Description
+-----------------------------------------------------------------
+   0.000000    0.000000   clock core_clock (rise edge)
+   0.000000    0.000000   clock network delay (ideal)
+   0.000000    0.000000 ^ input external delay
+   0.000000    0.000000 ^ reset (in)
+   0.000015    0.000015 ^ _1159_/RN (DFFR_X1)
+               0.000015   data arrival time
+
+  10.000000   10.000000   clock core_clock (rise edge)
+   0.000000   10.000000   clock network delay (ideal)
+   0.000000   10.000000   clock reconvergence pessimism
+              10.000000 ^ _1159_/CK (DFFR_X1)
+   0.049035   10.049035   library recovery time
+              10.049035   data required time
+-----------------------------------------------------------------
+              10.049035   data required time
+              -0.000015   data arrival time
+-----------------------------------------------------------------
+              10.049020   slack (MET)
+
+
+Startpoint: _1164_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _1193_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+      Delay        Time   Description
+-----------------------------------------------------------------
+   0.000000    0.000000   clock core_clock (rise edge)
+   0.000000    0.000000   clock network delay (ideal)
+   0.000000    0.000000 ^ _1164_/CK (DFF_X1)
+   0.119841    0.119841 ^ _1164_/Q (DFF_X1)
+   0.055133    0.174974 ^ _0809_/ZN (XNOR2_X1)
+   0.030579    0.205553 v _0811_/ZN (XNOR2_X1)
+   0.050979    0.256532 ^ _0814_/ZN (AOI21_X1)
+   0.032030    0.288562 v _0825_/ZN (OAI21_X1)
+   0.049164    0.337726 ^ _0835_/ZN (AOI21_X1)
+   0.037685    0.375411 v _0845_/ZN (OAI21_X1)
+   0.068132    0.443543 ^ _0876_/ZN (AOI211_X1)
+   0.043071    0.486614 v _0881_/ZN (OAI33_X1)
+   0.060743    0.547357 ^ _0899_/ZN (AOI21_X1)
+   0.040265    0.587621 v _0924_/ZN (OAI211_X1)
+   0.047725    0.635346 v _0925_/ZN (AND3_X1)
+   0.110218    0.745564 ^ _0950_/ZN (OAI33_X1)
+   0.035348    0.780912 v _0976_/ZN (OAI211_X1)
+   0.052171    0.833083 v _0978_/ZN (AND3_X1)
+   0.110983    0.944065 ^ _1002_/ZN (OAI33_X1)
+   0.047631    0.991697 v _1026_/ZN (OAI211_X1)
+   0.052007    1.043703 v _1027_/ZN (AND3_X1)
+   0.110320    1.154023 ^ _1052_/ZN (OAI33_X1)
+   0.035350    1.189374 v _1075_/ZN (OAI211_X1)
+   0.051965    1.241338 v _1077_/ZN (AND3_X1)
+   0.049789    1.291127 ^ _1088_/ZN (OAI21_X1)
+   0.031751    1.322878 v _1099_/ZN (AOI21_X1)
+   0.049684    1.372562 ^ _1112_/ZN (OAI21_X1)
+   0.031099    1.403661 v _1123_/ZN (AOI21_X1)
+   0.065990    1.469651 ^ _1144_/ZN (NOR3_X1)
+   0.036270    1.505921 v _1149_/ZN (OAI33_X1)
+   0.041072    1.546993 v _1154_/ZN (XNOR2_X1)
+   0.029165    1.576158 ^ _1155_/ZN (OAI21_X1)
+   0.000009    1.576167 ^ _1193_/D (DFF_X1)
+               1.576167   data arrival time
+
+  10.000000   10.000000   clock core_clock (rise edge)
+   0.000000   10.000000   clock network delay (ideal)
+   0.000000   10.000000   clock reconvergence pessimism
+              10.000000 ^ _1193_/CK (DFF_X1)
+  -0.035156    9.964845   library setup time
+               9.964845   data required time
+-----------------------------------------------------------------
+               9.964845   data required time
+              -1.576167   data arrival time
+-----------------------------------------------------------------
+               8.388678   slack (MET)
+
+
+worst slack 8.388678

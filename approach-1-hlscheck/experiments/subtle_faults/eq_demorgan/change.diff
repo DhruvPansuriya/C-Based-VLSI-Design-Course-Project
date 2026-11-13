@@ -1,0 +1,6 @@
+--- original.c
++++ candidate.c
+@@ -1,2 +1,2 @@
+ #include <stdint.h>
+-uint32_t kernel(uint32_t x, uint32_t y){return ~(x|y);}
++uint32_t kernel(uint32_t x, uint32_t y){return (~x)&(~y);}

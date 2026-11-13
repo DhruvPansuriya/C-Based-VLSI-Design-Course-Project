@@ -1,0 +1,25 @@
+HLSCheck: source equivalence -> native checks -> measured HLS comparison
+Fresh run: C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\demo_pipeline\run_98525a146132
+
+[1/7] READ AND VALIDATE THE SUPPLIED FILES
+  original: C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\matmul.cpp
+    source SHA256: b1f90a91336658f9d6ef3631b6de0a24956c9f6f11f0e184f34ea32523c3c7f8
+  optimized: C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\matmul_opti.cpp
+    source SHA256: 27d85ad0bd9d4dd0dbe651d9b94f4e481ec3c949c59c47b5b7115c6c679f089e
+  Target: C11 / ILP32; .cpp files must use the supported C-compatible subset.
+  Functions: kernel vs kernel
+  Arrays: valid and nonoverlapping. Compare every final array element and the return value.
+  Scalar preconditions: {}
+
+[2/7] FORMAL C-TO-C EQUIVALENCE
+  Running HLSCheck; limit 60 s per solver/verifier obligation...
+  region_equality: not_equivalent [custom symbolic execution / Z3]
+  residual_0: not_equivalent [ESBMC / Z3]
+  VERDICT: not_equivalent (9.834 s)
+  Counterexample: {"a": [890068663, 3158788906, 545894466, 1848377343, 3630089136, 2021957811, 1049243997, 56971815, 2438535449, 3578942717, 1428184622, 1102895036, 2129074120, 2835675136, 3318781705, 2147527338], "b": [2366426328, 534593597, 4179363568, 2908483532, 631141234, 2214854646, 1121098678, 3532401241, 2859993548, 3053453313, 3465672250, 3225394492, 1342177280, 3791716354, 598254034, 471726040], "out": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]}
+  Compiled-C witness reproduced: True
+  STOP: stages 3-7 and HLS are skipped because equivalence was not proved.
+
+Run status: not_equivalent
+Summary: C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\demo_pipeline\run_98525a146132\summary.json
+Latest-run pointer: C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\demo_pipeline\latest.json

@@ -1,0 +1,98 @@
+{
+  "run_id": "58f1aa725b48",
+  "status": "pipeline_error",
+  "hls_requested": true,
+  "run_directory": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline_validation\\run_58f1aa725b48",
+  "stages": [
+    {
+      "number": 1,
+      "name": "READ AND VALIDATE THE SUPPLIED FILES"
+    },
+    {
+      "number": 2,
+      "name": "FORMAL C-TO-C EQUIVALENCE"
+    },
+    {
+      "number": 3,
+      "name": "REPLAY PROOF EVIDENCE AND BIND HLS INPUTS"
+    },
+    {
+      "number": 4,
+      "name": "COMPILED-C EDGE/RANDOM CHECKS"
+    },
+    {
+      "number": 5,
+      "name": "HLS GENERATION AND RTL SIMULATION"
+    }
+  ],
+  "inputs": {
+    "original": {
+      "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\matmul.cpp",
+      "raw_sha256": "b1f90a91336658f9d6ef3631b6de0a24956c9f6f11f0e184f34ea32523c3c7f8",
+      "snapshot": "inputs/original_source.c",
+      "snapshot_sha256": "b1f90a91336658f9d6ef3631b6de0a24956c9f6f11f0e184f34ea32523c3c7f8",
+      "hls_source": "hls_inputs/original.c",
+      "hls_sha256": "b1f90a91336658f9d6ef3631b6de0a24956c9f6f11f0e184f34ea32523c3c7f8"
+    },
+    "optimized": {
+      "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\matmul_opti.cpp",
+      "raw_sha256": "5fa4889aed68732b46bde3ac9fb104d287b974c725fbe2bbf90e1b4722ea4e71",
+      "snapshot": "inputs/optimized_source.c",
+      "snapshot_sha256": "5fa4889aed68732b46bde3ac9fb104d287b974c725fbe2bbf90e1b4722ea4e71",
+      "hls_source": "hls_inputs/optimized.c",
+      "hls_sha256": "5fa4889aed68732b46bde3ac9fb104d287b974c725fbe2bbf90e1b4722ea4e71"
+    }
+  },
+  "contract": {
+    "integer_model": "ILP32: char8/short16/int32/long32/long-long64; plain char signed",
+    "parameters": [
+      {
+        "position": 0,
+        "name": "a",
+        "length": 16,
+        "c_type": "unsigned int",
+        "bits": 32,
+        "signed": false
+      },
+      {
+        "position": 1,
+        "name": "b",
+        "length": 16,
+        "c_type": "unsigned int",
+        "bits": 32,
+        "signed": false
+      },
+      {
+        "position": 2,
+        "name": "out",
+        "length": 16,
+        "c_type": "unsigned int",
+        "bits": 32,
+        "signed": false
+      }
+    ],
+    "return_type": {
+      "c_type": "void",
+      "bits": 0,
+      "signed": false
+    },
+    "scalar_ranges": {},
+    "observations": "Return value and every final parameter-array element",
+    "memory": "All parameter arrays valid and pairwise nonoverlapping; initial contents shared by value",
+    "safety": "Both programs must be free of modelled undefined behavior on the entire stated input domain",
+    "proof_scope": "Functional C equivalence at completion, not cycle-level or C-to-RTL equivalence"
+  },
+  "verification": {
+    "status": "equivalent",
+    "elapsed_seconds": 0.867277,
+    "proof": "proof/result.json"
+  },
+  "native": {
+    "passed": true,
+    "trials": 264,
+    "stdout": "PASS: 264 typed edge/random comparisons\n",
+    "harness_sha256": "79ca4aa7645e2c8eb00b6e12f98ce4534ce0507b0ec1f110ae854b798331475b",
+    "source_model": "C11/ILP32"
+  },
+  "error": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\ARYAN\\\\Desktop\\\\7th Semester\\\\C-Based VLSI Design\\\\Course_Project\\\\results\\\\demo_pipeline_validation\\\\run_58f1aa725b48\\\\hardware.json'"
+}

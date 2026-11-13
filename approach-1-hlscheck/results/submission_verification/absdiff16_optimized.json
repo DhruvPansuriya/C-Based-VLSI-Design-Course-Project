@@ -1,0 +1,31 @@
+{
+  "case": "absdiff16",
+  "variant": "optimized",
+  "expected": "equivalent",
+  "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+  "transformation": "Share comparison before subtraction",
+  "original": "benchmarks\\expanded\\absdiff16_original.c",
+  "candidate": "benchmarks\\expanded\\absdiff16_optimized.c",
+  "original_sha256": "4fb2285ef52ac7db6a24b12d781463f465ed133b75417305c6e0cf67b272ba28",
+  "candidate_sha256": "881fc122466cc057304e1f0f6f7cc2d064b7204c0e294ab15ed29b3276e46e44",
+  "verification": {
+    "status": "equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 152,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "elapsed_seconds": 3.295092
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

@@ -1,0 +1,65 @@
+OpenSTA 2.0.18 41f678fb6a Copyright (c) 2019, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Startpoint: reset (input port clocked by core_clock)
+Endpoint: _488_ (recovery check against rising-edge clock core_clock)
+Path Group: **async_default**
+Path Type: max
+
+      Delay        Time   Description
+-----------------------------------------------------------------
+   0.000000    0.000000   clock core_clock (rise edge)
+   0.000000    0.000000   clock network delay (ideal)
+   0.000000    0.000000 ^ input external delay
+   0.000000    0.000000 ^ reset (in)
+   0.000017    0.000017 ^ _488_/RN (DFFR_X1)
+               0.000017   data arrival time
+
+  10.000000   10.000000   clock core_clock (rise edge)
+   0.000000   10.000000   clock network delay (ideal)
+   0.000000   10.000000   clock reconvergence pessimism
+              10.000000 ^ _488_/CK (DFFR_X1)
+   0.049035   10.049035   library recovery time
+              10.049035   data required time
+-----------------------------------------------------------------
+              10.049035   data required time
+              -0.000017   data arrival time
+-----------------------------------------------------------------
+              10.049018   slack (MET)
+
+
+Startpoint: _491_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _477_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+      Delay        Time   Description
+-----------------------------------------------------------------
+   0.000000    0.000000   clock core_clock (rise edge)
+   0.000000    0.000000   clock network delay (ideal)
+   0.000000    0.000000 ^ _491_/CK (DFF_X1)
+   0.100295    0.100295 ^ _491_/Q (DFF_X1)
+   0.048248    0.148543 v _437_/ZN (NAND4_X1)
+   0.275258    0.423801 ^ _442_/ZN (OAI211_X1)
+   0.144707    0.568509 v _444_/ZN (NAND2_X1)
+   0.079192    0.647701 v _295_/Z (MUX2_X1)
+   0.000009    0.647709 v _477_/D (DFF_X1)
+               0.647709   data arrival time
+
+  10.000000   10.000000   clock core_clock (rise edge)
+   0.000000   10.000000   clock network delay (ideal)
+   0.000000   10.000000   clock reconvergence pessimism
+              10.000000 ^ _477_/CK (DFF_X1)
+  -0.041624    9.958377   library setup time
+               9.958377   data required time
+-----------------------------------------------------------------
+               9.958377   data required time
+              -0.647709   data arrival time
+-----------------------------------------------------------------
+               9.310667   slack (MET)
+
+
+worst slack 9.310667

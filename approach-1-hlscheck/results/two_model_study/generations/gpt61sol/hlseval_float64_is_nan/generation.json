@@ -1,0 +1,20 @@
+{
+  "model": "gpt61sol",
+  "case": "hlseval_float64_is_nan",
+  "messages_sha256": "7dff8ccecc630e184beb1a9ccb359603815e7ccc7d4e27f1a0dfd66715136171",
+  "original_sha256": "c37136647e0670ce12cc509d5bdd9d2c69116f86b7cabbe51e2bd4ce98ddab0a",
+  "raw_response_sha256": "8aae01e1032cf9511f24a94b628a49059ec949a2b0c8afa597e4482d2d1b7b3b",
+  "candidate_sha256": "8aae01e1032cf9511f24a94b628a49059ec949a2b0c8afa597e4482d2d1b7b3b",
+  "extraction": "entire response; no semantic edits",
+  "finish_reason": "complete",
+  "invocation": {
+    "model": "gpt-6.1-sol",
+    "fork_turns": "none",
+    "task_name": "two_model_nan",
+    "task_text": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation.\n\nQuickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\ntypedef int flag;\ntypedef unsigned long long int bits64;\ntypedef unsigned long long float64;\nflag kernel(float64 a) {\n    return (0xFFE0000000000000LL < (bits64)(a << 1));\n}\n```\n",
+    "source": "Actual first code response returned by fresh collaboration.spawn_agent task; no repair or verification feedback"
+  },
+  "sampling_controls": "Not exposed by Codex",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0
+}

@@ -1,0 +1,50 @@
+
+HLSCHECK_PAST_CODE=0
+[PAST] Verify equivalence of programs by abstract interpretation.
+[PAST] Program P1:
+{
+  for (int i = 0; i < 8; i++)
+    {
+      out[i] = ((a[i] * 8) + 3); 
+    }
+  
+}
+[PAST] Program P2:
+{
+  for (int i = 0; i < 8; i += 2)
+    {
+      out[i] = ((a[i] << 3) + 3); 
+      out[(i + 1)] = ((a[(i + 1)] << 3) + 3); 
+    }
+  
+}
+[PAST][AI][Equivalence] Interpret program P1...
+{
+  for (int i = 0; i < 8; i = (i + 1))
+    {
+      out[i] = ((a[i] * 8) + 3); 
+    }
+  
+}
+[PAST][AI][Equivalence] Interpret program P2...
+{
+  for (int i = 0; i < 8; i = (i + 2))
+    {
+      out[i] = ((a[i] << 3) + 3); 
+      out[(i + 1)] = ((a[(i + 1)] << 3) + 3); 
+    }
+  
+}
+[PAST][AI][Equivalence] Start checking states for equivalence...
+[PAST][AI] ERROR: could not locate rewrite.rules file in current directory, default to simple A/C normalization instead.
+[PAST] NO => Programs �]� and �ς are NOT equivalent.
+First difference between nodes:
+==> Mismatched subtree1 (root created by source line 0):
+3 + ([0] * 8)
+==> Mismatched subtree2 (root created by source line 0):
+3 + ([0] << 3)
+[PAST][AI][Equivalence] Error: for coordinate (0)
+<ptr=0x1182caa0>: 3 + ([0] * 8)
+<ptr=0x1182a1c0>: 3 + ([0] << 3)
+[PAST][AI][Equivalence] Mismatch: computation trees differ: variable P1:out (ptr=0x1182caa0) vs variable P2:out (ptr=0x1182a1c0)
+[PAST][AI][Equivalence] ERROR: P1 and P2 are NOT equivalent!

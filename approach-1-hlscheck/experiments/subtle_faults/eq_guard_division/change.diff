@@ -1,0 +1,6 @@
+--- original.c
++++ candidate.c
+@@ -1,2 +1,2 @@
+ #include <stdint.h>
+-uint32_t kernel(uint32_t x, uint32_t y){return y!=0u?x/y:0u;}
++uint32_t kernel(uint32_t x, uint32_t y){if(y==0u)return 0u;return x/y;}

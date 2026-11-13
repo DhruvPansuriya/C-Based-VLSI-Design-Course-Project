@@ -1,0 +1,45 @@
+{
+  "model": "qwen15",
+  "case": "hlseval_float64_is_nan",
+  "messages_sha256": "7dff8ccecc630e184beb1a9ccb359603815e7ccc7d4e27f1a0dfd66715136171",
+  "original_sha256": "c37136647e0670ce12cc509d5bdd9d2c69116f86b7cabbe51e2bd4ce98ddab0a",
+  "request_sha256": "6604d2e9bfc65144dc815d897229012d5ff2176272e0e7c65569959e1e0a9aaa",
+  "raw_response_sha256": "fff98831c9bef738521c11834cea3205b43487f297a3df19d13c96c10056fa6b",
+  "candidate_sha256": "e3b6c9e41cd75378de678655074dc5f8965efa011d14726bb759777c4994bcd8",
+  "extraction": "largest fenced code block; no semantic edits",
+  "elapsed_seconds": 0.623,
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 71,
+    "prompt_tokens": 291,
+    "total_tokens": 362,
+    "prompt_tokens_details": {
+      "cached_tokens": 224
+    }
+  },
+  "timings": {
+    "cache_n": 224,
+    "prompt_n": 67,
+    "prompt_ms": 36.893,
+    "prompt_per_token_ms": 0.5506417910447762,
+    "prompt_per_second": 1816.0626677147427,
+    "predicted_n": 71,
+    "predicted_ms": 555.7,
+    "predicted_per_token_ms": 7.9385714285714295,
+    "predicted_per_second": 125.96724851538599
+  },
+  "model_provenance": {
+    "model_repository": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+    "model_revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+    "model_file": "qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+    "model_bytes": 1117320768,
+    "model_sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+    "model_quantization": "Q4_K_M",
+    "runtime_release": "b12619",
+    "runtime_url": "https://github.com/ggml-org/llama.cpp/releases/download/b12619/llama-b12619-bin-win-vulkan-x64.zip",
+    "runtime_sha256": "175d9013769997ab9145cc932f0dd2d89ab3cb6123aecbd83a9645e1cf5e5b9d",
+    "billing": "Local inference only. No external paid inference API calls."
+  },
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0
+}

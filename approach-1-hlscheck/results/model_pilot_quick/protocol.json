@@ -1,0 +1,34 @@
+{
+  "benchmark": "Educational 8-element prefix sum",
+  "source": "benchmarks/submission/prefix_original.c",
+  "source_sha256": "966bfcab111db30808da089a868f990161e9e1ece3060b3cb491ae034ec80763",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+    },
+    {
+      "role": "user",
+      "content": "Quickly optimize this small kernel for HLS, prioritizing lower area times execution latency.\nPreserve the function name, exact interface, every final parameter-array value, and behavior for all inputs.\nuint32_t arithmetic wraps modulo 2^32. Arrays are valid and nonoverlapping. Do not add input restrictions.\nReturn exactly one complete C11 function with #include <stdint.h>. Do not use helper functions, library calls,\ndynamic memory, extra macros or vendor pragmas. Return code only, without explanation.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational reference: recompute each prefix independently. */\nvoid kernel(uint32_t a[8], uint32_t out[8]) {\n    for (int i = 0; i < 8; i++) {\n        uint32_t sum = 0u;\n        for (int j = 0; j <= i; j++) {\n            sum += a[j];\n        }\n        out[i] = sum;\n    }\n}\n```\n"
+    }
+  ],
+  "messages_sha256": "36f7b1c39b23bb166d4ea2355226c217f8d83e06edaca3f5daa7b15b28dba6f7",
+  "local_generation": {
+    "seed": 5291,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "max_tokens": 768,
+    "context_size": 2048
+  },
+  "local_quantization": "Q4_K_M",
+  "local_runtime_release": "b12619",
+  "api_charge_usd": 0,
+  "policy": "One attempt per model; identical instruction/source messages; all raw responses retained; no repair, resampling or verifier feedback. Only proved-equivalent candidates enter HLS.",
+  "codex_reference": {
+    "requested_model": "gpt-6.1-sol",
+    "same_instruction_text": true,
+    "sampling_controls": "Not exposed by Codex delegation; distinct from the controlled local-model settings",
+    "context": "Fresh task without inherited conversation; code-only candidate requested"
+  },
+  "scope": "One educational microkernel and one sample per model. A pipeline pilot, not model accuracy or a general model ranking."
+}

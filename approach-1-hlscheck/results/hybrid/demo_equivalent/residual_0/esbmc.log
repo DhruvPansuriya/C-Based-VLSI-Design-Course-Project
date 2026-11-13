@@ -1,0 +1,204 @@
+ESBMC version 8.7.0 64-bit x86_64 windows
+
+Target: 32-bit little-endian i386-unknown-win32 with esbmclibc
+Parsing C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.181s
+GOTO program processing time: 0.002s
+Starting Bounded Model Checking
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+Symex completed in: 0.009s (146 assignments)
+Caching time: 0.000s (removed 0 assertions)
+Slicing time: 0.000s (removed 128 assignments)
+Generated 75 VCC(s), 7 remaining after simplification (18 assignments)
+Slicing time: 0.000s (removed 7 assignments)
+Solving claim 'dereference failure: Incorrect alignment when accessing data object at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c line 13 column 3 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.002s
+Slicing time: 0.000s (removed 7 assignments)
+Solving claim 'dereference failure: array bounds violated at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c line 13 column 3 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.003s
+Slicing time: 0.000s (removed 7 assignments)
+Solving claim 'dereference failure: Incorrect alignment when accessing data object at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c line 13 column 3 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 7 assignments)
+Solving claim 'dereference failure: Incorrect alignment when accessing data object at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c line 19 column 3 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 7 assignments)
+Solving claim 'dereference failure: array bounds violated at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c line 19 column 3 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 7 assignments)
+Solving claim 'dereference failure: Incorrect alignment when accessing data object at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c line 19 column 3 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'EQUIV:return at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c line 63 column 1 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.016s
+Generating JSON report for trace: base-k256-0
+
+[Counterexample]
+
+
+State 1 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c line 25 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_0 = { 29, 29, 29, 29, 29, 29, 29, 0 }
+
+State 2 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c line 42 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_input_1 = 7 (00000000 00000000 00000000 00000111)
+
+State 3 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c line 44 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_2 = { 28, 28, 28, 28, 28, 28, 28, 0 }
+
+State 4 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c line 61 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_return = 4194304 (00000000 01000000 00000000 00000000)
+
+State 5 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c line 62 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_return = 13 (00000000 00000000 00000000 00001101)
+
+State 6 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c line 63 column 1 function main thread 0
+----------------------------------------------------
+Violated property:
+  file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c line 63 column 1 function main
+  EQUIV:return
+  __hlscheck_left_return == __hlscheck_right_return
+
+BMC program time: 0.093s
+
+** Results:
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c, function __hlscheck_candidate
+  PASSED       [__hlscheck_candidate.assertion.1]              line 19  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.1]  line 19  dereference failure: array bounds violated
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c, function __hlscheck_original
+  PASSED       [__hlscheck_original.assertion.1]               line 13  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_original.array-bounds-violated.1]   line 13  dereference failure: array bounds violated
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\demo_equivalent\residual_0\miter.c, function main
+  PASSED       [main.uninitialised-variable.1]                 line 27  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.2]                 line 29  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.3]                 line 31  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.4]                 line 33  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.5]                 line 35  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.6]                 line 37  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.7]                 line 39  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.8]                 line 41  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.9]                 line 46  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.10]                line 48  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.11]                line 50  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.12]                line 52  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.13]                line 54  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.14]                line 56  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.15]                line 58  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.16]                line 60  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.17]                line 61  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.18]                line 62  use of uninitialized variable: __hlscheck_input_1
+  FAILED       [main.assertion.1]                              line 63  EQUIV:return
+  PASSED       [main.uninitialised-variable.19]                line 63  use of uninitialized variable: __hlscheck_left_return
+  PASSED       [main.uninitialised-variable.20]                line 63  use of uninitialized variable: __hlscheck_right_return
+  PASSED       [main.assertion.2]                              line 64  EQUIV:array:0:0
+  PASSED       [main.uninitialised-variable.21]                line 64  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.22]                line 64  use of uninitialized variable: __hlscheck_right_0
+  PASSED       [main.assertion.3]                              line 65  EQUIV:array:0:1
+  PASSED       [main.uninitialised-variable.23]                line 65  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.24]                line 65  use of uninitialized variable: __hlscheck_right_0
+  PASSED       [main.assertion.4]                              line 66  EQUIV:array:0:2
+  PASSED       [main.uninitialised-variable.25]                line 66  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.26]                line 66  use of uninitialized variable: __hlscheck_right_0
+  PASSED       [main.assertion.5]                              line 67  EQUIV:array:0:3
+  PASSED       [main.uninitialised-variable.27]                line 67  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.28]                line 67  use of uninitialized variable: __hlscheck_right_0
+  PASSED       [main.assertion.6]                              line 68  EQUIV:array:0:4
+  PASSED       [main.uninitialised-variable.29]                line 68  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.30]                line 68  use of uninitialized variable: __hlscheck_right_0
+  PASSED       [main.assertion.7]                              line 69  EQUIV:array:0:5
+  PASSED       [main.uninitialised-variable.31]                line 69  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.32]                line 69  use of uninitialized variable: __hlscheck_right_0
+  PASSED       [main.assertion.8]                              line 70  EQUIV:array:0:6
+  PASSED       [main.uninitialised-variable.33]                line 70  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.34]                line 70  use of uninitialized variable: __hlscheck_right_0
+  PASSED       [main.assertion.9]                              line 71  EQUIV:array:0:7
+  PASSED       [main.uninitialised-variable.35]                line 71  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.36]                line 71  use of uninitialized variable: __hlscheck_right_0
+  PASSED       [main.assertion.10]                             line 72  EQUIV:array:2:0
+  PASSED       [main.uninitialised-variable.37]                line 72  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.38]                line 72  use of uninitialized variable: __hlscheck_right_2
+  PASSED       [main.assertion.11]                             line 73  EQUIV:array:2:1
+  PASSED       [main.uninitialised-variable.39]                line 73  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.40]                line 73  use of uninitialized variable: __hlscheck_right_2
+  PASSED       [main.assertion.12]                             line 74  EQUIV:array:2:2
+  PASSED       [main.uninitialised-variable.41]                line 74  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.42]                line 74  use of uninitialized variable: __hlscheck_right_2
+  PASSED       [main.assertion.13]                             line 75  EQUIV:array:2:3
+  PASSED       [main.uninitialised-variable.43]                line 75  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.44]                line 75  use of uninitialized variable: __hlscheck_right_2
+  PASSED       [main.assertion.14]                             line 76  EQUIV:array:2:4
+  PASSED       [main.uninitialised-variable.45]                line 76  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.46]                line 76  use of uninitialized variable: __hlscheck_right_2
+  PASSED       [main.assertion.15]                             line 77  EQUIV:array:2:5
+  PASSED       [main.uninitialised-variable.47]                line 77  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.48]                line 77  use of uninitialized variable: __hlscheck_right_2
+  PASSED       [main.assertion.16]                             line 78  EQUIV:array:2:6
+  PASSED       [main.uninitialised-variable.49]                line 78  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.50]                line 78  use of uninitialized variable: __hlscheck_right_2
+  PASSED       [main.assertion.17]                             line 79  EQUIV:array:2:7
+  PASSED       [main.uninitialised-variable.51]                line 79  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.52]                line 79  use of uninitialized variable: __hlscheck_right_2
+
+** 1 of 73 properties failed, 72 passed
+Solver: Z3 v4.13.3 â€¢ Decision procedure total time: 0.029s â€¢ Avg: 0.000s/property
+
+VERIFICATION FAILED

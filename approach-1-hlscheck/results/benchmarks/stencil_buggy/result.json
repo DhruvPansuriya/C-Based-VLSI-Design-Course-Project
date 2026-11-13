@@ -1,0 +1,47 @@
+{
+  "backend": "ESBMC",
+  "solver": "Z3",
+  "status": "not_equivalent",
+  "parameters": [
+    {
+      "name": "orig",
+      "kind": "unsigned int",
+      "length": 25
+    },
+    {
+      "name": "sol",
+      "kind": "unsigned int",
+      "length": 25
+    },
+    {
+      "name": "filter",
+      "kind": "unsigned int",
+      "length": 9
+    }
+  ],
+  "scalar_ranges": {},
+  "assumptions": [
+    "32-bit int/unsigned int",
+    "Array parameters valid and pairwise nonoverlapping",
+    "All scalar/array inputs symbolic over their full type domain except stated ranges",
+    "Default ESBMC bounds, pointer and unwinding checks retained; signed overflow and shift UB checks enabled"
+  ],
+  "command": [
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\stencil_buggy\\harness.c",
+    "--z3",
+    "--bv",
+    "--unwind",
+    "256",
+    "--overflow-check",
+    "--ub-shift-check",
+    "--uninitialised-vars-check",
+    "--multi-property"
+  ],
+  "unwind": 256,
+  "timeout_seconds": 30,
+  "returncode": 1,
+  "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+  "solver_report": "Solving claim 'arithmetic overflow on add at file C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\stencil_buggy\\harness.c line 57 column 31 function main' with solver Z3 v4.13.3",
+  "elapsed_seconds": 8.147127
+}

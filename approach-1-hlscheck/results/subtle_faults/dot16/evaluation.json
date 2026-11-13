@@ -1,0 +1,401 @@
+{
+  "fingerprints": {
+    "original": "ab4ffb53233868c0e3844d664294fa1bcd49bc80f4e6693ceca214fb31473436",
+    "candidate": "69ae3a6eef92270fd14fa363851b748a086821faf3e37f991687c7c04f69fd7a",
+    "evaluator": "c6045de93a412b74c1b8a184a264bc3a964ce015d2b4b5864f49909f7cf9cb9a",
+    "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+    "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307",
+    "pipeline.py": "a4b504daefbd3524a1d0a6fc5e872fd2a75b469c869cfb2c33a35711fa731567",
+    "native_helpers": "a83490a2ca85c768fe67d098c3b4b4899539a14db4ac582d6c8760bbf81917fe",
+    "timeout_ms": 15000
+  },
+  "manual_semantic_edits": false,
+  "syntax_compiles": true,
+  "ast_unchanged": false,
+  "verification": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 66,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [
+      {
+        "index": 1,
+        "status": "sat",
+        "variables": [
+          "arg0_10",
+          "arg0_11",
+          "arg1_11"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\dot16\\proof\\symbolic.lemma001.smt2"
+      },
+      {
+        "index": 2,
+        "status": "sat",
+        "variables": [
+          "arg0_14",
+          "arg0_15",
+          "arg1_15"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\dot16\\proof\\symbolic.lemma002.smt2"
+      },
+      {
+        "index": 3,
+        "status": "sat",
+        "variables": [
+          "arg0_2",
+          "arg0_3",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\dot16\\proof\\symbolic.lemma003.smt2"
+      },
+      {
+        "index": 4,
+        "status": "sat",
+        "variables": [
+          "arg0_6",
+          "arg0_7",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\dot16\\proof\\symbolic.lemma004.smt2"
+      }
+    ],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "a": [
+        0,
+        0,
+        537133084,
+        1698250832,
+        0,
+        0,
+        4057975007,
+        1677721600,
+        0,
+        0,
+        179189113,
+        1322427615,
+        0,
+        0,
+        1962933009,
+        1879048192
+      ],
+      "b": [
+        0,
+        0,
+        0,
+        125552782,
+        0,
+        0,
+        0,
+        3346494793,
+        0,
+        0,
+        0,
+        1537867734,
+        0,
+        0,
+        0,
+        2747923677
+      ]
+    },
+    "original_outputs": {
+      "a": [
+        0,
+        0,
+        537133084,
+        1698250832,
+        0,
+        0,
+        4057975007,
+        1677721600,
+        0,
+        0,
+        179189113,
+        1322427615,
+        0,
+        0,
+        1962933009,
+        1879048192
+      ],
+      "b": [
+        0,
+        0,
+        0,
+        125552782,
+        0,
+        0,
+        0,
+        3346494793,
+        0,
+        0,
+        0,
+        1537867734,
+        0,
+        0,
+        0,
+        2747923677
+      ],
+      "return": 4244053962
+    },
+    "candidate_outputs": {
+      "a": [
+        0,
+        0,
+        537133084,
+        1698250832,
+        0,
+        0,
+        4057975007,
+        1677721600,
+        0,
+        0,
+        179189113,
+        1322427615,
+        0,
+        0,
+        1962933009,
+        1879048192
+      ],
+      "b": [
+        0,
+        0,
+        0,
+        125552782,
+        0,
+        0,
+        0,
+        3346494793,
+        0,
+        0,
+        0,
+        1537867734,
+        0,
+        0,
+        0,
+        2747923677
+      ],
+      "return": 1615320562
+    },
+    "elapsed_seconds": 0.669125,
+    "backend": "hlscheck/Z3",
+    "fallback_used": false,
+    "initial_stage": {
+      "status": "not_equivalent",
+      "assumptions": [
+        "32-bit int and unsigned int; uint32_t is unsigned int",
+        "All array parameters are valid, separately allocated, and nonoverlapping",
+        "Functional equality at function completion; no cycle-level RTL guarantee"
+      ],
+      "execution_steps": 66,
+      "paths": {
+        "original": 1,
+        "candidate": 1
+      },
+      "z3_version": "5.1.0",
+      "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+      "component_lemmas": [
+        {
+          "index": 1,
+          "status": "sat",
+          "variables": [
+            "arg0_10",
+            "arg0_11",
+            "arg1_11"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\dot16\\proof\\symbolic.lemma001.smt2"
+        },
+        {
+          "index": 2,
+          "status": "sat",
+          "variables": [
+            "arg0_14",
+            "arg0_15",
+            "arg1_15"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\dot16\\proof\\symbolic.lemma002.smt2"
+        },
+        {
+          "index": 3,
+          "status": "sat",
+          "variables": [
+            "arg0_2",
+            "arg0_3",
+            "arg1_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\dot16\\proof\\symbolic.lemma003.smt2"
+        },
+        {
+          "index": 4,
+          "status": "sat",
+          "variables": [
+            "arg0_6",
+            "arg0_7",
+            "arg1_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\dot16\\proof\\symbolic.lemma004.smt2"
+        }
+      ],
+      "main_query_requires_component_lemmas": false,
+      "counterexample": {
+        "a": [
+          0,
+          0,
+          537133084,
+          1698250832,
+          0,
+          0,
+          4057975007,
+          1677721600,
+          0,
+          0,
+          179189113,
+          1322427615,
+          0,
+          0,
+          1962933009,
+          1879048192
+        ],
+        "b": [
+          0,
+          0,
+          0,
+          125552782,
+          0,
+          0,
+          0,
+          3346494793,
+          0,
+          0,
+          0,
+          1537867734,
+          0,
+          0,
+          0,
+          2747923677
+        ]
+      },
+      "original_outputs": {
+        "a": [
+          0,
+          0,
+          537133084,
+          1698250832,
+          0,
+          0,
+          4057975007,
+          1677721600,
+          0,
+          0,
+          179189113,
+          1322427615,
+          0,
+          0,
+          1962933009,
+          1879048192
+        ],
+        "b": [
+          0,
+          0,
+          0,
+          125552782,
+          0,
+          0,
+          0,
+          3346494793,
+          0,
+          0,
+          0,
+          1537867734,
+          0,
+          0,
+          0,
+          2747923677
+        ],
+        "return": 4244053962
+      },
+      "candidate_outputs": {
+        "a": [
+          0,
+          0,
+          537133084,
+          1698250832,
+          0,
+          0,
+          4057975007,
+          1677721600,
+          0,
+          0,
+          179189113,
+          1322427615,
+          0,
+          0,
+          1962933009,
+          1879048192
+        ],
+        "b": [
+          0,
+          0,
+          0,
+          125552782,
+          0,
+          0,
+          0,
+          3346494793,
+          0,
+          0,
+          0,
+          1537867734,
+          0,
+          0,
+          0,
+          2747923677
+        ],
+        "return": 1615320562
+      },
+      "elapsed_seconds": 0.669125
+    }
+  },
+  "status": "not_equivalent",
+  "smt_replay": {
+    "available": true,
+    "passed": true,
+    "witness_pinned": true,
+    "queries": [
+      {
+        "file": "symbolic.smt2",
+        "expected": "sat",
+        "observed": "sat"
+      }
+    ],
+    "scope": "Same Z3 solver; unrestricted UNSAT/lemma replay, SAT replay at recorded input. Not independent proof certificates."
+  },
+  "native": {
+    "passed": true,
+    "trials": 264,
+    "directed_trials": 8,
+    "random_trials": 256,
+    "mismatches": 256,
+    "first_mismatch_trial": 8,
+    "witness_replayed": true,
+    "witness_outputs_agree": true,
+    "harness_sha256": "e1add275eb7a93af0e38fb674c6eb7325faa9c849e00b00110a0be56b0e521df",
+    "command": [
+      "C:\\MinGW\\mingw32\\bin\\clang.EXE",
+      "-std=c11",
+      "-O2",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\dot16\\native_differential.c",
+      "-o",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\dot16\\native_check_008.exe"
+    ],
+    "exit_code": 0
+  }
+}

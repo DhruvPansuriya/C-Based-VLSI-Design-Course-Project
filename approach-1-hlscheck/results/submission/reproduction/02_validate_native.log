@@ -1,0 +1,8 @@
+scale native trials 264 witness replay True
+unswitch native trials 264 witness replay True
+gemm native trials 264 witness replay True
+stencil native trials 264 witness replay True
+prefix native trials 264 witness replay True
+fir native trials 264 witness replay True
+boxfilter native trials 264 witness replay True
+factor native trials 264 witness replay True

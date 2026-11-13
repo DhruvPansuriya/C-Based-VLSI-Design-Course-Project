@@ -1,0 +1,31 @@
+{
+  "case": "boxfilter",
+  "variant": "optimized",
+  "expected": "equivalent",
+  "origin": "educational 3x3 box-filter reference",
+  "transformation": "separable sliding-window reuse",
+  "original": "benchmarks\\submission\\boxfilter_original.c",
+  "candidate": "benchmarks\\submission\\boxfilter_optimized.c",
+  "original_sha256": "503d18c2a8751ab64fd28dc52079e24907d1c305d661e2ddb3354f5e3485fa59",
+  "candidate_sha256": "38f69bf2f33ce50dea73695e2f6f93ee31f6413cb892a043fe1633d64dc6819a",
+  "verification": {
+    "status": "equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 585,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "elapsed_seconds": 0.023178
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

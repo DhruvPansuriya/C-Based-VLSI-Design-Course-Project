@@ -1,0 +1,9 @@
+#include <stdint.h>
+
+void kernel(uint32_t m1[16], uint32_t m2[16], uint32_t prod[16]) {
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            prod[i * 4 + j] = (m1[i * 4 + j] * m2[j * 4 + i]) % (1u << 32);
+        }
+    }
+}

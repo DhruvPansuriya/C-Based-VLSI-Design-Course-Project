@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "steps": [
+    {
+      "command": [
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\.venv\\Scripts\\python.exe",
+        "verify_submission.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.298,
+      "log": "results\\submission\\reproduction\\01_verify_submission.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\.venv\\Scripts\\python.exe",
+        "replay_smt_evidence.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 4.504,
+      "log": "results\\submission\\reproduction\\02_replay_smt_evidence.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\.venv\\Scripts\\python.exe",
+        "validate_native.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 26.314,
+      "log": "results\\submission\\reproduction\\03_validate_native.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\.venv\\Scripts\\python.exe",
+        "run_rare_bug_demo.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.887,
+      "log": "results\\submission\\reproduction\\04_run_rare_bug_demo.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\.venv\\Scripts\\python.exe",
+        "analyze_results.py"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.337,
+      "log": "results\\submission\\reproduction\\05_analyze_results.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "--junitxml=results/submission/pytest.xml"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 20.321,
+      "log": "results\\submission\\reproduction\\06_-m.log"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+
+HLSCHECK_PAST_CODE=1
+[PAST] Verify equivalence of programs by abstract interpretation.
+[PAST] Program P1:
+{
+  for (int i = 0; i < 4; i++)
+    {
+      for (int j = 0; j < 4; j++)
+        {
+          [null] sum = 0; 
+          for (int k = 0; k < 4; k++)
+            {
+              sum += (m1[((i * 4) + k)] * m2[((k * 4) + j)]); 
+            }
+          
+          prod[((i * 4) + j)] = sum; 
+        }
+      
+    }
+  
+}
+[PAST] Program P2:
+{
+  for (int p = 0; p < 16; p++)
+    {
+      prod[p] = 0; 
+    }
+  
+  for (int i = 0; i < 4; i++)
+    {
+      for (int k = 0; k < 4; k++)
+        {
+          [null] a = m1[((i * 4) + k)]; 
+          for (int j = 0; j < 4; j++)
+            {
+              prod[((i * 4) + j)] += (a * m2[((k * 4) + j)]); 
+            }
+          
+        }
+      
+    }
+  
+}
+[PAST][AI][Equivalence] Interpret program P1...
+{
+  for (int i = 0; i < 4; i = (i + 1))
+    {
+      for (int j = 0; j < 4; j = (j + 1))
+        {
+          [null] sum = 0; 
+          for (int k = 0; k < 4; k = (k + 1))
+            {
+              sum = (sum + (m1[((i * 4) + k)] * m2[((k * 4) + j)])); 
+            }
+          
+          prod[((i * 4) + j)] = sum; 
+        }
+      
+    }
+  
+}
+[PAST][AI][Equivalence] Interpret program P2...
+{
+  for (int p = 0; p < 16; p = (p + 1))
+    {
+      prod[p] = 0; 
+    }
+  
+  for (int i = 0; i < 4; i = (i + 1))
+    {
+      for (int k = 0; k < 4; k = (k + 1))
+        {
+          [null] a = m1[((i * 4) + k)]; 
+          for (int j = 0; j < 4; j = (j + 1))
+            {
+              prod[((i * 4) + j)] = (prod[((i * 4) + j)] + (a * m2[((k * 4) + j)])); 
+            }
+          
+        }
+      
+    }
+  
+}
+[PAST][AI][Equivalence] Start checking states for equivalence...
+[PAST][AI][Equivalence] Success: P1 and P2 are equivalent
+[PAST] YES => Programs ��� and �O� are equivalent.
+[PAST][Parser] Rule 20 not implemented! Tree will be incomplete/inconsistent.
+[PAST][Parser] Rule 20 not implemented! Tree will be incomplete/inconsistent.

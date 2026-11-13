@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "raw_model_attempts_integrity_checked": 40,
+  "controlled_cases_integrity_checked": 80,
+  "smt_queries_replayed": 108,
+  "hls_candidate_source_config_checks": 9,
+  "dataset_leaf_functions_integrity_checked": 8,
+  "scope": "Raw generation extraction/source hashes, current engine hashes, exact current or retained evaluator/helper hashes, native harness hashes, available SMT replay and HLS source/configuration checks. Does not rerun external ESBMC, model generation or synthesis."
+}

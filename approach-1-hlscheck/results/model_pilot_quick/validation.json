@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "identical_local_prompt_messages_checked": 3,
+  "all_four_prompt_hashes_match": true,
+  "raw_responses_and_unmodified_candidates_checked": 4,
+  "verified_and_native_tested_candidates": 2,
+  "native_pair_trials": 528,
+  "fresh_hls_implementations": 3,
+  "successful_rtl_transactions": 48,
+  "no_model_repairs_or_resampling": true,
+  "checks": [
+    {
+      "id": "qwen15",
+      "passed": true,
+      "formal_status": "unsupported"
+    },
+    {
+      "id": "smol360",
+      "passed": true,
+      "formal_status": "compile_failure"
+    },
+    {
+      "id": "granite2",
+      "passed": true,
+      "formal_status": "equivalent"
+    },
+    {
+      "id": "gpt61sol",
+      "passed": true,
+      "formal_status": "equivalent"
+    }
+  ],
+  "scope": "One educational microkernel and one attempt per model. Codex sampling controls differ; unsupported Qwen source has separate native mismatch evidence.",
+  "all_local_candidate_bytes_match_raw_response_extraction": true
+}

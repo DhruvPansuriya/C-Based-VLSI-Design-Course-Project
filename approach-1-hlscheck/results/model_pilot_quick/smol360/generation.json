@@ -1,0 +1,53 @@
+{
+  "id": "smol360",
+  "label": "SmolLM2-360M-Instruct",
+  "organization": "Hugging Face",
+  "model": {
+    "id": "smol360",
+    "label": "SmolLM2-360M-Instruct",
+    "organization": "Hugging Face",
+    "repo": "bartowski/SmolLM2-360M-Instruct-GGUF",
+    "revision": "7be6f65f1db715fe5dc5a4634c0d459b4eed42ec",
+    "file": "SmolLM2-360M-Instruct-Q4_K_M.gguf",
+    "bytes": 270590880,
+    "sha256": "2fa3f013dcdd7b99f9b237717fa0b12d75bbb89984cc1274be1471a465bac9c2",
+    "upstream": "HuggingFaceTB/SmolLM2-360M-Instruct",
+    "conversion": "Community GGUF conversion by bartowski"
+  },
+  "messages_sha256": "36f7b1c39b23bb166d4ea2355226c217f8d83e06edaca3f5daa7b15b28dba6f7",
+  "candidate_sha256": "4f634a5e86613b6c9fd95679632de11e3b59877bd6bac17c4824cfe877932d44",
+  "raw_response_sha256": "da43b038d6b5e2e50add11334a3df0aa826ab629289ef9d5612489e65f14b8de",
+  "elapsed_seconds": 13.812,
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 103,
+    "prompt_tokens": 286,
+    "total_tokens": 389,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 286,
+    "prompt_ms": 13338.211,
+    "prompt_per_token_ms": 46.637101398601395,
+    "prompt_per_second": 21.442155923309357,
+    "predicted_n": 103,
+    "predicted_ms": 423.697,
+    "predicted_per_token_ms": 4.153892156862745,
+    "predicted_per_second": 240.73807461464204
+  },
+  "extraction": "largest fenced code block; no semantic edits",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0,
+  "sampling": {
+    "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\SmolLM2-360M-Instruct-Q4_K_M.gguf",
+    "messages": "See request.json",
+    "stream": false,
+    "seed": 5291,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "max_tokens": 768
+  }
+}

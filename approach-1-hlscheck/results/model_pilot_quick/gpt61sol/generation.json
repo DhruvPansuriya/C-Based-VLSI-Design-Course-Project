@@ -1,0 +1,15 @@
+{
+  "id": "gpt61sol",
+  "label": "GPT-6.1-Sol (Codex reference)",
+  "organization": "OpenAI",
+  "requested_model": "gpt-6.1-sol",
+  "invocation": "collaboration.spawn_agent; fork_turns=none; task_name=gpt61_pilot_candidate",
+  "messages_sha256": "36f7b1c39b23bb166d4ea2355226c217f8d83e06edaca3f5daa7b15b28dba6f7",
+  "candidate_sha256": "55669881f5c8a3f76c22c2843d2656f68f4ada20418e3563ca895cd758b5e4c3",
+  "raw_response_sha256": "55669881f5c8a3f76c22c2843d2656f68f4ada20418e3563ca895cd758b5e4c3",
+  "finish_reason": "complete",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0,
+  "sampling_controls": "Not exposed by Codex delegation; separate from controlled local inference",
+  "source": "Actual response from explicitly requested GPT-6.1-Sol task, returned before candidate verification or local-model results"
+}

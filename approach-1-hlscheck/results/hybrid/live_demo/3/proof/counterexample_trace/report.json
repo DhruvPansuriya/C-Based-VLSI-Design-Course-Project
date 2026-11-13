@@ -1,0 +1,1053 @@
+[
+  {
+    "coverage": {
+      "files": {
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c": {
+          "coverage_stats": {
+            "covered_lines": 50,
+            "total_hits": 52
+          },
+          "covered_lines": {
+            "26": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "27": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "28": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "29": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "30": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "31": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "32": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "33": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "34": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "35": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "36": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "37": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "38": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "39": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "40": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "41": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "42": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "43": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "48": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "49": {
+              "covered": true,
+              "hits": 2,
+              "type": "execution"
+            },
+            "50": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "51": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "52": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "53": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "54": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "55": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "56": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "57": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "58": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "59": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "60": {
+              "covered": true,
+              "hits": 2,
+              "type": "execution"
+            },
+            "61": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "62": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "63": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "64": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "65": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "66": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "67": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "68": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "70": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "71": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "72": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "73": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "74": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "75": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "76": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "77": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "78": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "79": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "80": {
+              "covered": true,
+              "hits": 1,
+              "type": "violation"
+            }
+          }
+        }
+      }
+    },
+    "initial_values": {
+      "__hlscheck_input_0": {
+        "name": "__hlscheck_input_0",
+        "type": "array",
+        "value": "{ 1, 1845249, 1, 0 }"
+      },
+      "__hlscheck_left_0": {
+        "name": "__hlscheck_left_0",
+        "type": "array",
+        "value": "{ 0, 0, 0, 0 }"
+      },
+      "__hlscheck_left_0[0]": {
+        "name": "__hlscheck_left_0[0]",
+        "type": "unsigned",
+        "value": "1"
+      },
+      "__hlscheck_right_0": {
+        "name": "__hlscheck_right_0",
+        "type": "array",
+        "value": "{ 2097152, 2097152, 2097152, 4194304 }"
+      }
+    },
+    "source_files": {
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c": [
+        "",
+        "_Static_assert(sizeof(char)==1 && sizeof(short)==2 && sizeof(int)==4 &&",
+        "               sizeof(long)==4 && sizeof(long long)==8 && sizeof(void*)==4, \"HLSCheck ILP32 ABI\");",
+        "_Static_assert((char)-1 < 0, \"HLSCheck requires signed plain char\");",
+        "_Static_assert((unsigned char)-1 == 255, \"HLSCheck requires 8-bit bytes\");",
+        "",
+        "extern void __ESBMC_assert(_Bool, const char *);",
+        "extern void __ESBMC_assume(_Bool);",
+        "extern unsigned int __hlscheck_nondet_0(void);",
+        "extern unsigned int __hlscheck_nondet_1(void);",
+        "extern unsigned int __hlscheck_nondet_2(void);",
+        "unsigned int __hlscheck_original(unsigned int a[4], unsigned int index, unsigned int out[4])",
+        "{",
+        "  return out[index & 3u];",
+        "}",
+        "",
+        "",
+        "unsigned int __hlscheck_candidate(unsigned int a[4], unsigned int index, unsigned int out[4])",
+        "{",
+        "  return (a[index % 4u] * 13u) + 1u;",
+        "}",
+        "",
+        "",
+        "void __hlscheck_summary(unsigned int a[4], unsigned int index, unsigned int out[4])",
+        "{",
+        "  unsigned int __summary_input_0[4];",
+        "  __summary_input_0[0] = a[0];",
+        "  __summary_input_0[1] = a[1];",
+        "  __summary_input_0[2] = a[2];",
+        "  __summary_input_0[3] = a[3];",
+        "  unsigned int __summary_input_2[4];",
+        "  __summary_input_2[0] = out[0];",
+        "  __summary_input_2[1] = out[1];",
+        "  __summary_input_2[2] = out[2];",
+        "  __summary_input_2[3] = out[3];",
+        "  a[0] = __summary_input_0[0];",
+        "  a[1] = __summary_input_0[1];",
+        "  a[2] = __summary_input_0[2];",
+        "  a[3] = __summary_input_0[3];",
+        "  out[0] = 13u * __summary_input_0[0];",
+        "  out[1] = 13u * __summary_input_0[1];",
+        "  out[2] = 13u * __summary_input_0[2];",
+        "  out[3] = 13u * __summary_input_0[3];",
+        "}",
+        "",
+        "",
+        "int main(void) {",
+        "unsigned int __hlscheck_input_0[4]={__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0()};",
+        "unsigned int __hlscheck_left_0[4], __hlscheck_right_0[4];",
+        "__hlscheck_left_0[0]=__hlscheck_input_0[0];",
+        "__hlscheck_right_0[0]=__hlscheck_left_0[0];",
+        "__hlscheck_left_0[1]=__hlscheck_input_0[1];",
+        "__hlscheck_right_0[1]=__hlscheck_left_0[1];",
+        "__hlscheck_left_0[2]=__hlscheck_input_0[2];",
+        "__hlscheck_right_0[2]=__hlscheck_left_0[2];",
+        "__hlscheck_left_0[3]=__hlscheck_input_0[3];",
+        "__hlscheck_right_0[3]=__hlscheck_left_0[3];",
+        "unsigned int __hlscheck_input_1=__hlscheck_nondet_1();",
+        "unsigned int __hlscheck_input_2[4]={__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2()};",
+        "unsigned int __hlscheck_left_2[4], __hlscheck_right_2[4];",
+        "__hlscheck_left_2[0]=__hlscheck_input_2[0];",
+        "__hlscheck_right_2[0]=__hlscheck_left_2[0];",
+        "__hlscheck_left_2[1]=__hlscheck_input_2[1];",
+        "__hlscheck_right_2[1]=__hlscheck_left_2[1];",
+        "__hlscheck_left_2[2]=__hlscheck_input_2[2];",
+        "__hlscheck_right_2[2]=__hlscheck_left_2[2];",
+        "__hlscheck_left_2[3]=__hlscheck_input_2[3];",
+        "__hlscheck_right_2[3]=__hlscheck_left_2[3];",
+        "__hlscheck_summary(__hlscheck_left_0,__hlscheck_input_1,__hlscheck_left_2);",
+        "__hlscheck_right_0[0]=__hlscheck_left_0[0];",
+        "__hlscheck_right_0[1]=__hlscheck_left_0[1];",
+        "__hlscheck_right_0[2]=__hlscheck_left_0[2];",
+        "__hlscheck_right_0[3]=__hlscheck_left_0[3];",
+        "__hlscheck_right_2[0]=__hlscheck_left_2[0];",
+        "__hlscheck_right_2[1]=__hlscheck_left_2[1];",
+        "__hlscheck_right_2[2]=__hlscheck_left_2[2];",
+        "__hlscheck_right_2[3]=__hlscheck_left_2[3];",
+        "unsigned int __hlscheck_left_return=__hlscheck_original(__hlscheck_left_0,__hlscheck_input_1,__hlscheck_left_2);",
+        "unsigned int __hlscheck_right_return=__hlscheck_candidate(__hlscheck_right_0,__hlscheck_input_1,__hlscheck_right_2);",
+        "__ESBMC_assert((__hlscheck_left_0[0]==__hlscheck_right_0[0]) && (__hlscheck_left_0[1]==__hlscheck_right_0[1]) && (__hlscheck_left_0[2]==__hlscheck_right_0[2]) && (__hlscheck_left_0[3]==__hlscheck_right_0[3]) && (__hlscheck_left_2[0]==__hlscheck_right_2[0]) && (__hlscheck_left_2[1]==__hlscheck_right_2[1]) && (__hlscheck_left_2[2]==__hlscheck_right_2[2]) && (__hlscheck_left_2[3]==__hlscheck_right_2[3]) && (__hlscheck_left_return==__hlscheck_right_return),\"EQUIV:observables\");",
+        "return 0;",
+        "}"
+      ]
+    },
+    "status": "violation",
+    "steps": [
+      {
+        "assignment": {
+          "lhs": "__hlscheck_input_0",
+          "lhs_type": "array",
+          "rhs": "{ 1, 1845249, 1, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "48",
+        "step_number": 0,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_0",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "49",
+        "step_number": 1,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0",
+          "lhs_type": "array",
+          "rhs": "{ 2097152, 2097152, 2097152, 4194304 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "49",
+        "step_number": 2,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_0[0]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "50",
+        "step_number": 3,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[0]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "51",
+        "step_number": 4,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_0[1]",
+          "lhs_type": "unsigned",
+          "rhs": "1845249",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "52",
+        "step_number": 5,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[1]",
+          "lhs_type": "unsigned",
+          "rhs": "1845249",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "53",
+        "step_number": 6,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_0[2]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "54",
+        "step_number": 7,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[2]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "55",
+        "step_number": 8,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_0[3]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "56",
+        "step_number": 9,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[3]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "57",
+        "step_number": 10,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_input_1",
+          "lhs_type": "unsigned",
+          "rhs": "3",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "58",
+        "step_number": 11,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_input_2",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "59",
+        "step_number": 12,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_2",
+          "lhs_type": "array",
+          "rhs": "{ 96, 96, 96, 1 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "60",
+        "step_number": 13,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "60",
+        "step_number": 14,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_2[0]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "61",
+        "step_number": 15,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[0]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "62",
+        "step_number": 16,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_2[1]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "63",
+        "step_number": 17,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[1]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "64",
+        "step_number": 18,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_2[2]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "65",
+        "step_number": 19,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[2]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "66",
+        "step_number": 20,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_2[3]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "67",
+        "step_number": 21,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[3]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "68",
+        "step_number": 22,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_0",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "26",
+        "step_number": 23,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_0[0]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "27",
+        "step_number": 24,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_0[1]",
+          "lhs_type": "unsigned",
+          "rhs": "1845249",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "28",
+        "step_number": 25,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_0[2]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "29",
+        "step_number": 26,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_0[3]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "30",
+        "step_number": 27,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_2",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "31",
+        "step_number": 28,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_2[0]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "32",
+        "step_number": 29,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_2[1]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "33",
+        "step_number": 30,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_2[2]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "34",
+        "step_number": 31,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_2[3]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "35",
+        "step_number": 32,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "a[0]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "36",
+        "step_number": 33,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "a[1]",
+          "lhs_type": "unsigned",
+          "rhs": "1845249",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "37",
+        "step_number": 34,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "a[2]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "38",
+        "step_number": 35,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "a[3]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "39",
+        "step_number": 36,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[0]",
+          "lhs_type": "unsigned",
+          "rhs": "13",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "40",
+        "step_number": 37,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[1]",
+          "lhs_type": "unsigned",
+          "rhs": "23988237",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "41",
+        "step_number": 38,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[2]",
+          "lhs_type": "unsigned",
+          "rhs": "13",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "42",
+        "step_number": 39,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[3]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "43",
+        "step_number": 40,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[0]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "70",
+        "step_number": 41,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[1]",
+          "lhs_type": "unsigned",
+          "rhs": "1845249",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "71",
+        "step_number": 42,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[2]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "72",
+        "step_number": 43,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[3]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "73",
+        "step_number": 44,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[0]",
+          "lhs_type": "unsigned",
+          "rhs": "13",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "74",
+        "step_number": 45,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[1]",
+          "lhs_type": "unsigned",
+          "rhs": "23988237",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "75",
+        "step_number": 46,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[2]",
+          "lhs_type": "unsigned",
+          "rhs": "13",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "76",
+        "step_number": 47,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[3]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "77",
+        "step_number": 48,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_return",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "78",
+        "step_number": 49,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_return",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "79",
+        "step_number": 50,
+        "type": "assignment"
+      },
+      {
+        "assertion": {
+          "comment": "EQUIV:observables",
+          "guard": "__hlscheck_left_0[0] == __hlscheck_right_0[0] && __hlscheck_left_0[1] == __hlscheck_right_0[1] && __hlscheck_left_0[2] == __hlscheck_right_0[2] && __hlscheck_left_0[3] == __hlscheck_right_0[3] && __hlscheck_left_2[0] == __hlscheck_right_2[0] && __hlscheck_left_2[1] == __hlscheck_right_2[1] && __hlscheck_left_2[2] == __hlscheck_right_2[2] && __hlscheck_left_2[3] == __hlscheck_right_2[3] && __hlscheck_left_return == __hlscheck_right_return",
+          "violated": true
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\live_demo\\3\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "80",
+        "message": "EQUIV:observables",
+        "step_number": 51,
+        "type": "violation"
+      }
+    ]
+  }
+]

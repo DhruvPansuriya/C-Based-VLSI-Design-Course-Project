@@ -1,0 +1,10 @@
+--- original.c
++++ candidate.c
+@@ -7,6 +7,6 @@
+     uint32_t value=image[r*4+c];
+     if(r>0) value+=out[(r-1)*4+c];
+     if(c>0) value+=out[r*4+c-1];
+-    if(r>0 && c>0) value-=out[(r-1)*4+c-1];
++    if(r>0 && c>0) value+=out[(r-1)*4+c-1];
+     out[r*4+c]=value;}
+ }

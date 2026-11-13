@@ -1,0 +1,152 @@
+ESBMC version 8.7.0 64-bit x86_64 windows
+Target: 32-bit little-endian x86_64-unknown-windows with esbmclibc
+Parsing C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.169s
+GOTO program processing time: 0.000s
+Starting Bounded Model Checking
+Symex completed in: 0.000s (66 assignments)
+Caching time: 0.000s (removed 0 assertions)
+Slicing time: 0.000s (removed 35 assignments)
+Generated 22 VCC(s), 12 remaining after simplification (31 assignments)
+Slicing time: 0.000s (removed 12 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 35 column 3 function __original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 18 assignments)
+Solving claim 'arithmetic overflow on neg at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 36 column 3 function __original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 18 assignments)
+Solving claim 'arithmetic overflow on sub at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 36 column 3 function __original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 11 assignments)
+Solving claim 'arithmetic overflow on neg at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 36 column 3 function __original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 11 assignments)
+Solving claim 'arithmetic overflow on sub at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 36 column 3 function __original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 12 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 39 column 34 function __candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 10 assignments)
+Solving claim 'arithmetic overflow on sub at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 39 column 84 function __candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 10 assignments)
+Solving claim 'arithmetic overflow on neg at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 39 column 102 function __candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 10 assignments)
+Solving claim 'arithmetic overflow on sub at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 39 column 102 function __candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 9 assignments)
+Solving claim 'arithmetic overflow on neg at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 39 column 116 function __candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 9 assignments)
+Solving claim 'arithmetic overflow on sub at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 39 column 116 function __candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'EQUIV:return at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 50 column 1 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.002s
+
+[Counterexample]
+
+
+State 1 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 47 column 1 function main thread 0
+----------------------------------------------------
+  input_0 = 16385 (01000000 00000001)
+
+State 2 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 48 column 1 function main thread 0
+----------------------------------------------------
+  input_1 = 16384 (01000000 00000000)
+
+State 3 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 35 column 3 function __original thread 0
+----------------------------------------------------
+  sum = 32769 (00000000 00000000 10000000 00000001)
+
+State 4 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 49 column 1 function main thread 0
+----------------------------------------------------
+  left = 32767 (01111111 11111111)
+
+State 5 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 39 column 34 function __candidate thread 0
+----------------------------------------------------
+  s = 32769 (00000000 00000000 10000000 00000001)
+
+State 6 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 49 column 1 function main thread 0
+----------------------------------------------------
+  right = 32766 (01111111 11111110)
+
+State 7 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 50 column 1 function main thread 0
+----------------------------------------------------
+Violated property:
+  file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c line 50 column 1 function main
+  EQUIV:return
+  (signed int)left == (signed int)right
+
+BMC program time: 0.075s
+
+** Results:
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c, function __candidate
+  PASSED       [__candidate.arithmetic-overflow.1]     line 39  arithmetic overflow on add
+  PASSED       [__candidate.uninitialised-variable.1]  line 39  use of uninitialized variable: s
+  PASSED       [__candidate.arithmetic-overflow.2]     line 39  arithmetic overflow on sub
+  PASSED       [__candidate.arithmetic-overflow.3]     line 39  arithmetic overflow on neg
+  PASSED       [__candidate.arithmetic-overflow.4]     line 39  arithmetic overflow on sub
+  PASSED       [__candidate.uninitialised-variable.2]  line 39  use of uninitialized variable: s
+  PASSED       [__candidate.arithmetic-overflow.5]     line 39  arithmetic overflow on neg
+  PASSED       [__candidate.arithmetic-overflow.6]     line 39  arithmetic overflow on sub
+  PASSED       [__candidate.uninitialised-variable.3]  line 39  use of uninitialized variable: s
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c, function __original
+  PASSED       [__original.arithmetic-overflow.1]      line 35  arithmetic overflow on add
+  PASSED       [__original.arithmetic-overflow.2]      line 36  arithmetic overflow on neg [!overflow("unary-", 32767)]
+  PASSED       [__original.arithmetic-overflow.3]      line 36  arithmetic overflow on neg [sum < -32767 - 1 => !overflow("unary-", 32767)]
+  PASSED       [__original.arithmetic-overflow.4]      line 36  arithmetic overflow on sub [!overflow("-", -32767, 1)]
+  PASSED       [__original.arithmetic-overflow.5]      line 36  arithmetic overflow on sub [sum < -32767 - 1 => !overflow("-", -32767, 1)]
+  PASSED       [__original.uninitialised-variable.1]   line 36  use of uninitialized variable: sum
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\dataset_leaves\chstone_gsm_add\buggy\miter.c, function main
+  PASSED       [main.uninitialised-variable.1]         line 49  use of uninitialized variable: input_0
+  PASSED       [main.uninitialised-variable.2]         line 49  use of uninitialized variable: input_1
+  PASSED       [main.uninitialised-variable.3]         line 49  use of uninitialized variable: input_0
+  PASSED       [main.uninitialised-variable.4]         line 49  use of uninitialized variable: input_1
+  FAILED       [main.assertion.1]                      line 50  EQUIV:return
+  PASSED       [main.uninitialised-variable.5]         line 50  use of uninitialized variable: left
+  PASSED       [main.uninitialised-variable.6]         line 50  use of uninitialized variable: right
+
+** 1 of 22 properties failed, 21 passed
+Solver: Z3 v4.13.3 • Decision procedure total time: 0.007s • Avg: 0.000s/property
+
+VERIFICATION FAILED
