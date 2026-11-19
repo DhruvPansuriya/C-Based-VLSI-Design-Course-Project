@@ -68,9 +68,16 @@ class Generator:
     def gen_class(self,out: str|Path,interp: Mapping[str,Any]) -> HarnessBundle:
         self._interpretations((interp,));return self._generate(out,'class',(interp,))
 
-    def gen_vacuity(self,out: str|Path,interps: Sequence[Mapping[str,Any]],*,after_call: bool=True) -> HarnessBundle:
+    def gen_vacuity(self,out: str|Path,interps: Sequence[Mapping[str,Any]],*,
+                    after_call: bool=True,include_reach: bool=True) -> HarnessBundle:
         self._interpretations(interps)
-        return self._generate(out,'vacuity',interps,after_call=after_call)
+        return self._generate(out,'vacuity',interps,after_call=after_call,include_reach=include_reach)
+
+    def gen_scope_check(self, out: str | Path, interp: Mapping[str, Any]) -> HarnessBundle:
+        self._interpretations((interp,))
+        if interp.get("ext") in (None, "unknown"):
+            raise HarnessUnsupported("scope comparison requires a known extended relation")
+        return self._generate(out, "scope", (interp,))
 
     def gen_views_equiv(self,out: str|Path) -> HarnessBundle:
         return self._generate(out,'views',())
@@ -111,8 +118,8 @@ class Generator:
 
     def _generate(self,out: str|Path,kind: str,interps: Sequence[Mapping[str,Any]],*,
                   after_call: bool=True,prog: str='p0',guard: str='true',
-                  predicate: str='true') -> HarnessBundle:
-        return _Builder(self,out,kind,interps).build(after_call,prog,guard,predicate)
+                  predicate: str='true',include_reach: bool=True) -> HarnessBundle:
+        return _Builder(self,out,kind,interps).build(after_call,prog,guard,predicate,include_reach)
 
 
 class _Builder:
@@ -121,7 +128,7 @@ class _Builder:
         self.layout,self.profile=g.layout,g.profile
         self.out=Path(out).resolve();self.out.mkdir(parents=True,exist_ok=True)
         self.lines=[];self.functions=[];self.watch=[];self.labels=[];self.requirements=[]
-        self.bindings={};self.observers=[];self.selected=[]
+        self.bindings={};self.observers=[];self.witness_names={}
         self.unwind=max(g.config.bounds.max_unwind,self.profile.K+1)
         self.buffers=[p for p in self.layout.parameters if p.buffer]
         self.sizes={name:(expr,hi) for name,expr,hi in self.profile.lengths}
@@ -162,12 +169,14 @@ class _Builder:
                 n=f'__vwe_in_scalar_{p.index}_{j}'
                 bounds=self.profile.env.symbols[p.name].values if not f.path and p.name in self.profile.env.symbols else f.scalar.limits
                 self.nondet(f.c_type,n,(bounds.low,bounds.high),watch=True)
+                self.witness_names[n]=f.access(p.name)
                 self.line(f'__vwe_in.s{p.index}_{j}={n};')
                 if not f.path:self.bindings[p.name]=n
         for glob in self.layout.globals:
             for j,f in enumerate(glob.fields):
                 n=f'__vwe_in_global_{glob.name}_{j}'
-                self.nondet(f.c_type,n,watch=True);self.line(f'__vwe_in.g{glob.index}_{j}={n};')
+                self.nondet(f.c_type,n,watch=True);self.witness_names[n]=f.access(glob.name)
+                self.line(f'__vwe_in.g{glob.index}_{j}={n};')
                 if not f.path:self.bindings['in_global_'+glob.name]=n
             self.bind_flat_global(glob,'in_global_',f'__vwe_in.g{glob.index}_')
         for p in self.buffers:
@@ -175,6 +184,7 @@ class _Builder:
             self.line(f'long long __vwe_len_{p.index}={self.expression(expr,boolean=False)};')
             self.assertion(f'0 <= __vwe_len_{p.index} && __vwe_len_{p.index} <= {hi}',f'VWE.profile.length.{p.name}')
             self.nondet('_Bool',f'__vwe_in_null_{p.index}',watch=True)
+            self.witness_names[f'__vwe_in_null_{p.index}']=p.name+' uses NULL when size is zero'
             for role in ('input',*roles):
                 tag='a1' if role=='one' else 'a0'
                 # A symbolic object has exactly the declared logical size. The
@@ -190,6 +200,7 @@ class _Builder:
                         bounded_limits=f.scalar.limits
                         if limits[0]<bounded_limits.low or limits[1]>bounded_limits.high: raise HarnessUnsupported('buffer value bounds exceed field type')
                     self.nondet(f.c_type,n,limits,watch=True)
+                    self.witness_names[n]=f.access(f'{p.name}[{i}]')
                     self.line(f'__vwe_e_{p.index}_{i}.f{j}={n};')
                 for role in ('input',*roles):
                     tag='a1' if role=='one' else 'a0'
@@ -240,6 +251,26 @@ class _Builder:
         args=['&__vwe_in',f'&__vwe_{role}']+[f'__vwe_{role}_b{p.index}' for p in self.buffers]
         self.line('__vwe_'+tag+'_call('+', '.join(args)+');')
         self.snapshot_globals(role)
+        if self.kind in {"class", "e1", "scope"}:
+            for j, field in enumerate(self.layout.returns):
+                if not field.pointer:
+                    label = f"__vwe_out_{role}_" + field.access("ret")
+                    self.watch.append(label)
+                    self.line(f'__CPROVER_output({json.dumps(label)}, __vwe_{role}.r{j});')
+            for p in self.buffers:
+                for i in range(self.sizes[p.name][1]):
+                    self.line(f"if (__vwe_len_{p.index}>{i}) {{")
+                    for j, field in enumerate(p.fields):
+                        label = f"__vwe_out_{role}_" + field.access(f"{p.name}[{i}]")
+                        self.watch.append(label)
+                        value = f"__vwe_{tag}_get_{p.index}(__vwe_{role}_b{p.index},{i}).f{j}"
+                        self.line(f'__CPROVER_output({json.dumps(label)}, {value});')
+                    self.line("}")
+            for glob in self.layout.globals:
+                for j, field in enumerate(glob.fields):
+                    label = f"__vwe_out_{role}_" + field.access("global " + glob.name)
+                    self.watch.append(label)
+                    self.line(f'__CPROVER_output({json.dumps(label)}, __vwe_{role}.g{glob.index}_{j});')
 
     def equivalent(self) -> str:
         terms=[]
@@ -339,7 +370,7 @@ class _Builder:
             self.line("}")
         self.assertion(self.clause_relation(interp), "VWE.validation_constructive.predicate")
 
-    def build(self,after_call: bool,prog: str,guard: str,predicate: str) -> HarnessBundle:
+    def build(self,after_call: bool,prog: str,guard: str,predicate: str,include_reach: bool) -> HarnessBundle:
         g=self.g;kind=self.kind
         self.seed(('zero','one'))
         base=['qualified-admission','qualified-path-cut-and-uninitialized-model','nonvacuous-profile']
@@ -355,6 +386,14 @@ class _Builder:
                 if it.get('ext') not in (None,'unknown'): ext.append(self.expression(it['ext']))
             self.assertion(self.equivalent()+''.join(' || '+e for e in ext),'VWE.E1.preservation')
             self.requirements+=['reference-safe-and-deterministic-on-E1-keep','all-interpretations-validated','scope-conflict-veto']
+        elif kind=='scope':
+            keep='!('+g._zone(self.interps)+')'
+            self.line('__CPROVER_assume('+self.expression(keep)+');')
+            self.program_call('a0','zero')
+            self.program_call('a1','one')
+            ext=self.expression(self.interps[0]['ext'])
+            self.assertion(self.equivalent()+' || !('+ext+')','VWE.scope.agreement')
+            self.requirements+=['reference-safe-and-deterministic-on-class-keep','interpretation-validated']
         elif kind=='class':
             it=self.interps[0];zone=g._zone(self.interps)
             self.program_call('a1','one')
@@ -370,7 +409,7 @@ class _Builder:
             self.requirements+=['reference-safe-and-deterministic-on-class-keep','interpretation-validated']
         elif kind=='vacuity':
             if after_call:self.program_call('a1','one')
-            self.line('if (!('+self.expression(g._zone(self.interps,True))+')) {')
+            self.line('if (!('+self.expression(g._zone(self.interps,include_reach))+')) {')
             self.assertion('0','VWE.vacuity.keep');self.line('}')
             for i,it in enumerate(self.interps):
                 for j,c in enumerate(it['clauses']):
@@ -427,9 +466,9 @@ class _Builder:
         decisive=kind=='e1' and bool(self.interps) and all(it.get('ext') not in (None,'unknown') and it.get('reach') not in (None,'unknown') for it in self.interps)
         identity={'profile':self.profile.sha256,'p0':g.p0.source_sha256,'p1':g.p1.source_sha256,
                   'views':[v.renamed_sha256 for v in views],'kind':kind,'guard':guard,'predicate':predicate,'unwind':self.unwind,
-                  'reference_guard':g.reference_guard,'after_call':after_call,'interpretations':plain(self.interps)}
+                  'reference_guard':g.reference_guard,'after_call':after_call,'include_reach':include_reach,'interpretations':plain(self.interps)}
         bundle=HarnessBundle(kind,self.out,tuple(files),'main',self.unwind,tuple(self.watch),tuple(self.labels),
-                             tuple(dict.fromkeys(base+self.requirements)),self.profile.sha256,g.reference_guard,decisive,tuple(program_symbols))
+                             tuple(dict.fromkeys(base+self.requirements)),self.profile.sha256,g.reference_guard,decisive,tuple(program_symbols),tuple(self.witness_names.items()))
         manifest=asdict(bundle);manifest.update(folder=str(self.out),files=[str(p) for p in files],
             job_sha256=sha256(json.dumps(identity,sort_keys=True,separators=(',',':')).encode()).hexdigest(),
             generated_file_sha256={p.name:sha256(p.read_bytes()).hexdigest() for p in [self.out/'frame.h',*files]},

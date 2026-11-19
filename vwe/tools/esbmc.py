@@ -42,7 +42,7 @@ def confirm(files: Sequence[Path], *, unwind: int, cwd: Path, timeout_s: int = 6
         return ConfirmationResult(Confirmation.UNSUPPORTED, "ESBMC unavailable")
     # ESBMC cannot replay CBMC's pointer-identity intrinsics or its instrumented
     # GOTO image. Only the source-level confirmation subset is accepted here.
-    unsupported = re.compile(r"\b(?:__CPROVER_(?!(?:assume|assert)\b)\w+|"
+    unsupported = re.compile(r"\b(?:__CPROVER_(?!(?:assume|assert|output)\b)\w+|"
                              r"malloc|calloc|realloc|free|abort|exit|_Exit|_exit|"
                              r"quick_exit|longjmp|_longjmp|siglongjmp)\b")
     if any(p.suffix != ".c" or unsupported.search(p.read_text()) for p in files):
@@ -50,7 +50,8 @@ def confirm(files: Sequence[Path], *, unwind: int, cwd: Path, timeout_s: int = 6
     if any(d.split("=", 1)[0].startswith(("__CPROVER", "__ESBMC")) for d in defines):
         return ConfirmationResult(Confirmation.UNSUPPORTED, "defines cannot override verifier intrinsics")
     intrinsics = ["-D__CPROVER_assume=__ESBMC_assume",
-                  "-D__CPROVER_assert=__ESBMC_assert"]
+                  "-D__CPROVER_assert=__ESBMC_assert",
+                  "-D__CPROVER_output(id,value)=((void)(value))"]
     command = ["esbmc", *[str(f.resolve()) for f in files],
                *intrinsics, *[f"-D{d}" for d in defines], "--unwind", str(unwind), "--z3", "--overflow-check"]
     run = execute(command, cwd=cwd, timeout_s=timeout_s)
