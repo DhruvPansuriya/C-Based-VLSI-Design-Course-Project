@@ -127,6 +127,11 @@ def run_job(bundle: HarnessBundle, *, config: Config | None = None,
                 return True
             return (prop.property_id.split(".", 1)[0] in p.trapped
                     and prop.description == "undefined function should be unreachable")
+        if bundle.kind == "validation_bug":
+            return prop.description == "VWE.validation_bug.predicate" or _candidate_check(
+                prop, frozenset(bundle.program_symbols[0]))
+        if bundle.kind.startswith("validation_"):
+            return prop.description == f"VWE.{bundle.kind}.predicate"
         if bundle.kind == "reference_safety":
             return prop.description == "VWE.reference_safety.completed" or _candidate_check(
                 prop, frozenset(bundle.program_symbols[0]))
@@ -144,5 +149,6 @@ def run_job(bundle: HarnessBundle, *, config: Config | None = None,
     # A user-program trap, observation support issue, or instrumentation
     # disagreement in a different role makes this result inconclusive.
     obligation, _ = classify(runs, selected, bundle.kind, allow_empty=bundle.kind == "e0",
-                             independent_safety_refutation=bundle.kind in {"e0", "reference_safety"})
+                             independent_safety_refutation=bundle.kind in {"e0", "reference_safety",
+                                                                          "contract_ub"})
     return JobResult(obligation, p, runs)
