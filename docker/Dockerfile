@@ -1,13 +1,15 @@
-# Reproducible environment for Verdicts with Evidence (verification side; Vitis HLS not included).
+# Version-pinned tools; base digest and apt snapshot still require release sealing.
 FROM ubuntu:24.04
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends \
-      ca-certificates curl unzip gcc g++ make python3 python3-pip git bash-completion \
+      ca-certificates curl unzip gcc g++ make python3 python3-venv git bash-completion \
     && rm -rf /var/lib/apt/lists/*
 WORKDIR /vwe
-COPY requirements.txt tools/install_tools.sh ./tools/
-RUN cp tools/requirements.txt ./requirements.txt && \
-    PIP_BREAK_SYSTEM_PACKAGES=1 bash tools/install_tools.sh
-ENV PATH=/opt/cbmc/usr/bin:/opt/esbmc/release/bin:$PATH
+COPY requirements.txt /vwe/requirements.txt
+COPY tools/install_tools.sh /vwe/tools/install_tools.sh
+RUN VWE_SKIP_PYTHON_INSTALL=1 bash tools/install_tools.sh \
+    && python3 -m venv /opt/vwe-venv
+ENV PATH=/opt/vwe-venv/bin:/opt/cbmc/usr/bin:/opt/esbmc/release/bin:$PATH
 COPY . .
-CMD ["python3", "-m", "pytest", "-q", "tests"]
+RUN python -m pip install -e .
+CMD ["make", "test"]

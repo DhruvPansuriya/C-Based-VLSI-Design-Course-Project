@@ -6,7 +6,7 @@ VWE decides whether an AI-revised C function `P1` correctly implements a natural
 
 ## Non-negotiable soundness rules (each comes from a verified finding)
 
-1. **No LLM ever receives `P1` or anything derived from it.** LLM prompts may only be built from `vwe.llm.RequestContext` (request text, `P0` signature, shape candidates). The only exception is the FIFO invariant proposal (review R26), which must go through `vwe.fifo.invariants.structural_summary`. A test enforces this rule; never delete that test.
+1. **No LLM ever receives `P1` or anything derived from it.** LLM prompts may only be built from `vwe.llm.RequestContext` (request text, `P0` signature, shape candidates). There is no production FIFO exception: P1-derived state names/types also reveal P1 information. Use deterministic/template invariants. This follows the user's original information-boundary requirement; see `docs/CLAUDE_IMPORT_REVIEW.md`. A test enforces this rule; never delete that test.
 2. **Every CBMC run uses `vwe.tools.cbmc.BASE_FLAGS`:**
    - `--unwinding-assertions` and `--no-self-loops-to-assumptions` (spike T01);
    - `--no-malloc-may-fail` (spike T04, review R5);
@@ -17,7 +17,7 @@ VWE decides whether an AI-revised C function `P1` correctly implements a natural
 4. **Harness buffers are allocated with exact symbolic size** (`malloc(n*sizeof(T))`), never fixed-size arrays (spike T04).
 5. **Inconclusive never becomes a decision.** Timeouts, failed unwinding assertions, backend disagreement and vacuity probes that do not fire all yield `Outcome.INCONCLUSIVE`.
 6. **ESBMC is confirmation-only.** ESBMC can veto an ACCEPT. It can never produce one (review R3).
-7. **Interpretations are discarded only by objective checks** (V-G, V-1..V-5). LLM-generated examples are informational (draft Lemma 5).
+7. **Interpretations are discarded only on conclusive invalidity checks.** V-5 size/plausibility sampling is informational. UNKNOWN validation remains unresolved and blocks E2; it is never silently deleted. LLM-generated examples are informational. See the import review before implementing T06/T07.
 8. **`eval_only` data** (`P_ref`, `Phi_ref`, true shape and zone) is never visible to the pipeline. Load tasks through `vwe.tasks.load_pipeline_view`.
 9. **Do not invent tool flags, versions, URLs or results.** Verify them, or record them in `plan/OPEN_QUESTIONS.md`.
 
