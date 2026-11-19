@@ -1,7 +1,7 @@
 PYTHON ?= $(if $(wildcard .venv/bin/python),.venv/bin/python,python3)
 export PATH := $(CURDIR)/.venv/bin:$(PATH)
 
-.PHONY: install test golden admission spikes demo eval clean
+.PHONY: install test golden admission contracts spikes demo eval clean
 install:
 	$(PYTHON) -m pip install -e .
 test:
@@ -10,6 +10,8 @@ golden:
 	$(PYTHON) scripts/run_golden_examples.py --out runs/golden
 admission:
 	$(PYTHON) scripts/run_admission_examples.py
+contracts:
+	$(PYTHON) scripts/check_contracts.py
 spikes:
 	bash spikes/tool_behaviour/run_spikes.sh
 demo:

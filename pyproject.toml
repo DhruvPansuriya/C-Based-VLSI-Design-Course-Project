@@ -26,3 +26,6 @@ include = ["vwe", "vwe.*"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 markers = ["integration: requires installed verification tools"]
+
+[tool.setuptools.package-data]
+"vwe.contract" = ["grammar.lark"]
