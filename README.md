@@ -23,7 +23,7 @@ Start at [`plan/00_START_HERE.md`](plan/00_START_HERE.md). The rules every chang
 
 Formal verification of LLM-repaired and optimised HLS code.
 
-**Verdicts with Evidence (VWE)** is a fully automatic tool. Given
+**Verdicts with Evidence (VWE)** is being developed as a fully automatic tool. The existing prototype and completed milestones are listed above. The intended interface takes
 
 - a buggy C function `P0`,
 - a natural-language fix request `N`, and
@@ -51,7 +51,7 @@ it returns **ACCEPT / REJECT / UNDECIDED** with an evidence class (E0 computed, 
 | Tool-behaviour spikes T01–T06 (path cuts, missing bodies, abort, buffer sizing, nondeterminism, build views) | `spikes/tool_behaviour/` | logs in `results/tool_behaviour/` |
 | Native witness replay with ASan/UBSan | `spikes/replay/` | demonstrated |
 
-## Quick start
+## Original Linux prototype commands
 
 ```bash
 tools/install_tools.sh                  # CBMC 6.11.0, ESBMC 8.7.0, Z3 5.4.1 (pinned)

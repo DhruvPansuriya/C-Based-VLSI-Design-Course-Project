@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
 from vwe.tools import cbmc  # noqa: E402
+from vwe.obligations import classify  # noqa: E402
 from vwe.verdict import Evidence, Obligation, Outcome, decide  # noqa: E402
 
 EX = ROOT / "spikes" / "examples"
@@ -27,24 +28,6 @@ def both(files, **kw):
     runs = {b: cbmc.run([str(f) for f in files], backend=b, **kw) for b in BACKENDS}
     return runs
 
-
-def classify(runs, pred, name):
-    """Combine SAT and Z3 runs for the properties selected by pred."""
-    per = {}
-    for b, r in runs.items():
-        if not r.ok:
-            return Obligation(Outcome.INCONCLUSIVE, note=f"{name}: {b} error"), runs
-        unwind_fail = [p for p in r.failed() if ".unwind." in p.property_id]
-        if unwind_fail:
-            return Obligation(Outcome.INCONCLUSIVE, note=f"{name}: incomplete unwinding"), runs
-        per[b] = r.failed(pred)
-    sat_fail, z3_fail = bool(per["sat"]), bool(per["z3"])
-    if sat_fail != z3_fail:
-        return Obligation(Outcome.INCONCLUSIVE, note=f"{name}: SAT/Z3 disagree"), runs
-    if sat_fail:
-        p = per["sat"][0]
-        return Obligation(Outcome.VIOLATED, p.witness, f"{name}: {p.property_id} {p.description}"), runs
-    return Obligation(Outcome.PROVED, note=name), runs
 
 
 def is_p1_safety(p):       # E0: a standard check failing inside the candidate
@@ -59,7 +42,7 @@ def ex1(v):
     d = EX / "ex1_saturate"
     common = dict(defines=[f"VARIANT={v}"], watch=("a", "b"))
     core = both([d / "p0.c", d / "p1_variants.c", d / "harness_core.c"], **common)
-    e0, _ = classify(core, is_p1_safety, "E0")
+    e0, _ = classify(core, is_p1_safety, "E0", allow_empty=True, ignore_unselected_assertions=True, independent_safety_refutation=True)
     e1, _ = classify(core, is_assert, "E1")
     it = both([d / "p0.c", d / "p1_variants.c", d / "harness_interp.c"], **common)
     i1, _ = classify(it, is_assert, "I1")
@@ -74,7 +57,7 @@ def ex2(v):
     d = EX / "ex2_argmax"
     common = dict(defines=[f"VARIANT={v}"], unwind=6, watch=("n",))
     core = both([d / "p0.c", d / "p1_variants.c", d / "harness_core.c"], **common)
-    e0, _ = classify(core, is_p1_safety, "E0")
+    e0, _ = classify(core, is_p1_safety, "E0", allow_empty=True, ignore_unselected_assertions=True, independent_safety_refutation=True)
     e1, _ = classify(core, is_assert, "E1")
     it = both([d / "p0.c", d / "p1_variants.c", d / "harness_interp.c"], **common)
     i1, _ = classify(it, lambda p: is_assert(p), "I1")
@@ -85,7 +68,7 @@ def ex4(v):
     d = EX / "ex4_sum"
     common = dict(defines=[f"VARIANT={v}"], unwind=6, watch=("n",))
     it = both([d / "p1_variants.c", d / "harness_interp.c"], **common)
-    e0, _ = classify(it, is_p1_safety, "E0")
+    e0, _ = classify(it, is_p1_safety, "E0", allow_empty=True, ignore_unselected_assertions=True, independent_safety_refutation=True)
     i1, _ = classify(it, is_assert, "I")
     keep = Obligation(Outcome.PROVED, note="no keep region: total interpretation (type T4)")
     return Evidence(e0, keep, True, {"I": i1})
