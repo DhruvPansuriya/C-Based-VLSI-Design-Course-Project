@@ -39,6 +39,18 @@ class Verdict:
     evidence_class: str  # E0 | E1 | E2 | -
     reason: str
     witness: Optional[Dict[str, str]] = None
+    claim_target: str = "repair_correctness"
+
+
+def admission_verdict(status: str, reason: str) -> Optional[Verdict]:
+    """Structural refusal is policy evidence, not semantic RC refutation."""
+    if status == "ok":
+        return None
+    if status == "refused":
+        return Verdict("REJECT", "E0", reason, claim_target="admission_policy")
+    if status in {"unsupported", "interface_change", "inconclusive"}:
+        return Verdict("UNDECIDED", "-", reason, claim_target="none")
+    raise ValueError(f"Unknown admission status: {status}")
 
 
 def decide(ev: Evidence) -> Verdict:

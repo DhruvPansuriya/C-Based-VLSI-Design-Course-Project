@@ -20,7 +20,7 @@ dependencies = {file = ["requirements.txt"]}
 include = ["vwe", "vwe.*"]
 
 [tool.setuptools.data-files]
-"share/vwe/config" = ["config/default.toml"]
+"share/vwe/config" = ["config/default.toml", "config/whitelist.toml"]
 "share/vwe/schemas" = ["schemas/task.schema.json", "schemas/interpretation.schema.json", "schemas/interpretation_set.schema.json", "schemas/verdict_report.schema.json"]
 
 [tool.pytest.ini_options]

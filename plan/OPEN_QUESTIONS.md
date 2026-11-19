@@ -27,3 +27,12 @@ Record each answer here with the date, the command that was run and its output, 
 Details and scenarios: `docs/CLAUDE_IMPORT_REVIEW.md`.
 
 - Q15: first hosted CI exposed rpds-py 2026.9.1 requiring Python>=3.11. Preserve advertised Python3.10 support with verified rpds-py0.30.0 under a Python<3.11 marker; pin typing_extensions4.15.0 for Python<3.13. Matrix jobs now run independently. The first run installed both Linux verification tools successfully, but did not complete tests.
+
+
+## T02 frontend qualification — 22 November 2026
+
+- Q16 resolved locally: `cbmc --preprocess --verbosity 0` suppresses its banner. The tested concatenated `-U__SYNTHESIS__` option exits64; isolated #undef/#define wrappers implement the two analysis modes. Raw commands: `results/t02/frontend-capabilities.json`.
+- Q17 resolved locally: undefined-function listings include internal CPROVER prototypes. Filter them only after candidate verifier identifiers have been refused, and check reachable user calls separately. Library prototypes are audited in config/whitelist.toml; body/model qualification remains T05.
+- Q18: standard headers containing GCC/Clang extensions may be unrepresentable to pycparser. Current answer is UNDECIDED, not attribute erasure. A richer parser or expanded qualified frontend profile is future work.
+- Q19: general local dependency snapshots, global pointer aliasing, and source-level macro idioms outside the closed dependency profile need qualification. Current frontend abstains on unsupported forms.
+- Q20: AST alpha renaming is a trusted implementation component. Scope/collision/native regression tests exist; a universal compiler-correctness proof is not claimed. Function-name introspection is excluded so renaming cannot silently change it.
