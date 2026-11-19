@@ -89,7 +89,10 @@ def test_esbmc_corroborates_correct_example(tmp_path):
     filenames = ("p0.c", "p1_variants.c", "harness_interp.c")
     result = esbmc.confirm([folder / f for f in filenames], cwd=tmp_path,
                            unwind=9, defines=("VARIANT=1",))
-    assert result.status is esbmc.Confirmation.AGREE, result
+    assert result.status is esbmc.Confirmation.AGREE, result.reason
+    broken = esbmc.confirm([folder / f for f in filenames], cwd=tmp_path,
+                           unwind=9, defines=("VARIANT=5",))
+    assert broken.status is esbmc.Confirmation.DISAGREE, broken.reason
 
 
 def test_esbmc_pointer_model_is_explicitly_unsupported(tmp_path, monkeypatch):
