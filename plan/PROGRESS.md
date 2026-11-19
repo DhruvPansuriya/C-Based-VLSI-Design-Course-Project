@@ -14,11 +14,12 @@ Working branch: `implementation-start`. Original archive preserved in the import
 | T05 tool pipeline | complete and pushed | Audited path cuts, exact malloc, initialization checks, dual backends, planned assertions, vacuity, and ESBMC adapter with Linux confirmation in CI |
 | T06 reference regions | complete and pushed | Exact argmax region, safe overapproximation, empty/wrong region probes, and uninitialized-read diagnostics |
 | T07 interpretation validation | complete and pushed | Proven joint output tuples, explicit UNKNOWN retention, semantic class grouping, and stable freeze hashes |
-| T08 verifier CLI and reports | local golden suite passed | All ten public-pipeline verdicts and JSON schemas validated, including both outputs on the argmax regression |
-| T09–T22 | planned | corrections in the import review apply before implementing affected cards |
+| T08 verifier CLI and reports | complete and pushed; hosted CI green | Commit `0e060e9`; all ten public-pipeline verdicts and JSON schemas validated; hosted Python 3.10/3.12 checks passed |
+| T09 native pre-pass and witness replay | complete locally; push checkpoint | Fixed-input SAT/Z3 rechecks, ASan/UBSan replay, executable acceptance observers and explicit discrepancy handling; `docs/T09_NATIVE.md` |
+| T10–T22 | planned | corrections in the import review apply before implementing affected cards |
 
 Hosted CI is green on Python3.10 and Python3.12 for T00/T01. First hosted run exposed a Python3.10 dependency mismatch, fixed in d43a092. Safety commit c0884a5 also passed hosted CI on both Python versions: https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45022723368 . Docker, ESBMC, Vitis and live provider execution have not been repeated on this macOS host. Imported Linux logs remain labeled as imported.
 
-Next implementation card: T09 native witness replay and pre-pass. The general verification CLI is still T08; no end-to-end automation is claimed yet.
+Current implementation card: T10 additional draft examples. T09 focused checks: 18 passed; full suite checkpoint: 283 passed, 1 skipped; all ten handwritten golden cases match. Automatic native input rejection now vetoes replay confirmation. Automatic interpretation generation remains planned.
 
 T02 commit87b3909 passed hosted CI on Python3.10/3.12 while T03 work continued: https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45027090279 .

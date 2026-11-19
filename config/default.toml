@@ -14,5 +14,8 @@ confirm = "esbmc"
 [native]
 cc = "gcc"
 sanitize = "address,undefined"
+prepass_samples = 10000
+seed = 0
+prepass_seconds = 2
 
 [llm]

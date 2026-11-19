@@ -24,6 +24,10 @@ def test_reports_for_all_golden_candidates(tmp_path):
             assert witness["p0_output"]["idx[0]"] != witness["p1_output"]["idx[0]"]
         if want[0] == "ACCEPT":
             assert report.data["facts"]["synthesis_ready"] == "inconclusive"
+            assert report.data["scope"]["native_acceptance"].startswith("confirmed:"), report.data
+        if want[0] == "REJECT":
+            assert report.data["witness"]["replayed_natively"], report.data
+            assert all(r["status"] == "confirmed" for r in report.data["scope"]["native_replay"])
 
     with ThreadPoolExecutor(max_workers=3) as workers:
         list(workers.map(check, CASES))

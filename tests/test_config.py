@@ -17,6 +17,9 @@ def test_defaults():
     "[bounds]\nunknown=1", "[other]\nx=1", "[timeouts]\ncbmc_s=-1",
     '[backends]\nprimary=["sat","sat"]', '[backends]\nprimary=["z3-incremental"]',
     '[native]\nsanitize=""', 'llm="not a table"',
+    '[native]\nprepass_samples=-1', '[native]\nprepass_samples=true',
+    '[native]\nprepass_samples=10001', '[native]\nseed="random"',
+    '[native]\nprepass_seconds=0',
 ])
 def test_invalid_config_is_rejected(tmp_path,text):
     p=tmp_path/"bad.toml";p.write_text(text)
