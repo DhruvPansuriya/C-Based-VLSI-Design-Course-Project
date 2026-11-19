@@ -17,8 +17,9 @@ jobs:
       - name: Install native replay isolation
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y bubblewrap apparmor-profiles
-          sudo apparmor_parser -r /etc/apparmor.d/bwrap-userns-restrict
+          sudo apt-get install -y bubblewrap
+          sudo install -m 0644 .github/bwrap.apparmor /etc/apparmor.d/vwe-bwrap
+          sudo apparmor_parser -r /etc/apparmor.d/vwe-bwrap
           bwrap --unshare-all --die-with-parent --ro-bind / / --dev /dev --proc /proc -- /usr/bin/true
       - uses: actions/cache@v4
         with:
