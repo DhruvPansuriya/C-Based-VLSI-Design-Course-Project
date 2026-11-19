@@ -89,9 +89,21 @@ class Generator:
         guard=self.reference_guard if domain=='guard' else '!('+self._zone(interps,domain=='e1_keep')+')' if domain in {'keep','e1_keep'} else 'true'
         return self.gen_determinism(out,'p0',guard=guard)
 
+    def gen_reference_safety(self, out: str | Path, guard: str = "true") -> HarnessBundle:
+        self._input_only(guard)
+        return self._generate(out, "reference_safety", (), guard=guard)
+
+    def gen_input_rule(self, out: str | Path, guard: str, predicate: str,
+                       *, reachability: bool = False) -> HarnessBundle:
+        self._input_only(guard)
+        self._input_only(predicate)
+        return self._generate(out, "feasibility" if reachability else "input_rule",
+                              (), guard=guard, predicate=predicate)
+
     def _generate(self,out: str|Path,kind: str,interps: Sequence[Mapping[str,Any]],*,
-                  after_call: bool=True,prog: str='p0',guard: str='true') -> HarnessBundle:
-        return _Builder(self,out,kind,interps).build(after_call,prog,guard)
+                  after_call: bool=True,prog: str='p0',guard: str='true',
+                  predicate: str='true') -> HarnessBundle:
+        return _Builder(self,out,kind,interps).build(after_call,prog,guard,predicate)
 
 
 class _Builder:
@@ -268,7 +280,7 @@ class _Builder:
         # Conservatively all type-correct old values: UB-free here is sufficient
         # but not necessary on the reachable old-output relation.
 
-    def build(self,after_call: bool,prog: str,guard: str) -> HarnessBundle:
+    def build(self,after_call: bool,prog: str,guard: str,predicate: str) -> HarnessBundle:
         g=self.g;kind=self.kind
         self.seed(('zero','one'))
         base=['qualified-admission','qualified-path-cut-and-uninitialized-model','nonvacuous-profile']
@@ -309,6 +321,15 @@ class _Builder:
             if kind=='determinism':self.line('__CPROVER_assume('+self.expression(guard)+');')
             self.program_call('a0','zero');self.program_call('a1','one')
             self.assertion(self.equivalent(),'VWE.'+kind+'.equivalence')
+        elif kind=='reference_safety':
+            self.line('__CPROVER_assume('+self.expression(guard)+');')
+            self.program_call('a0','zero')
+            self.assertion('1','VWE.reference_safety.completed')
+        elif kind in {'input_rule','feasibility'}:
+            self.line('__CPROVER_assume('+self.expression(guard)+');')
+            value=self.expression(predicate)
+            self.assertion('!('+value+')' if kind=='feasibility' else value,
+                           'VWE.'+kind+'.predicate')
         elif kind=='contract_ub':
             self.fresh_outputs()
             for it in self.interps:
@@ -324,6 +345,7 @@ class _Builder:
         views=(g.p1.sim,g.p1.synth) if kind=='views' else ((g.p0.sim,g.p0.sim) if prog=='p0' else (g.p1.sim,g.p1.sim)) if kind=='determinism' else (g.p0.sim,g.p1.sim)
         (self.out/'frame.h').write_text(self.layout.header())
         files=[]
+        program_symbols=[]
         for tag,view in zip(('a0','a1'),views):
             # Deterministic self-composition uses the same unit twice. Existing
             # program symbols must be isolated a second time at the AST level.
@@ -333,6 +355,8 @@ class _Builder:
                 code,symbols=renamed(view.analysis,'vwe_second')
                 path=self.out/'second_renamed.txt';path.write_text(code)
                 view=replace(view,renamed=path,renamed_sha256=sha256(code.encode()).hexdigest(),entry_point='vwe_second_'+view.analysis.function,symbols=symbols)
+            names = dict(view.symbols)
+            program_symbols.append(tuple(names[n] for n in view.analysis.definitions))
             path=self.out/(tag+'.c');path.write_text(self.layout.adapter(view,tag));files.append(path)
         header='#include <stdlib.h>\n#include "frame.h"\n'+self.layout.prototypes('a0')+self.layout.prototypes('a1')+'\n'
         # CPROVER built-ins are supplied by goto-cc/CBMC. ESBMC and native replay
@@ -341,10 +365,10 @@ class _Builder:
         main=self.out/'main.c';main.write_text(header+'\nint main(void) {\n'+'\n'.join(self.lines)+'\n}\n');files.append(main)
         decisive=kind=='e1' and bool(self.interps) and all(it.get('ext') not in (None,'unknown') and it.get('reach') not in (None,'unknown') for it in self.interps)
         identity={'profile':self.profile.sha256,'p0':g.p0.source_sha256,'p1':g.p1.source_sha256,
-                  'views':[v.renamed_sha256 for v in views],'kind':kind,'guard':guard,'unwind':self.unwind,
+                  'views':[v.renamed_sha256 for v in views],'kind':kind,'guard':guard,'predicate':predicate,'unwind':self.unwind,
                   'reference_guard':g.reference_guard,'after_call':after_call,'interpretations':plain(self.interps)}
         bundle=HarnessBundle(kind,self.out,tuple(files),'main',self.unwind,tuple(self.watch),tuple(self.labels),
-                             tuple(dict.fromkeys(base+self.requirements)),self.profile.sha256,g.reference_guard,decisive)
+                             tuple(dict.fromkeys(base+self.requirements)),self.profile.sha256,g.reference_guard,decisive,tuple(program_symbols))
         manifest=asdict(bundle);manifest.update(folder=str(self.out),files=[str(p) for p in files],
             job_sha256=sha256(json.dumps(identity,sort_keys=True,separators=(',',':')).encode()).hexdigest(),
             generated_file_sha256={p.name:sha256(p.read_bytes()).hexdigest() for p in [self.out/'frame.h',*files]},
