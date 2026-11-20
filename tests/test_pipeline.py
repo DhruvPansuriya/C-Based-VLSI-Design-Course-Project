@@ -1,6 +1,11 @@
 """The public pipeline produces valid reports and matches the draft fixtures."""
 from concurrent.futures import ThreadPoolExecutor
 import json
+from pathlib import Path
+
+import pytest
+
+from vwe.tools import cbmc
 
 from vwe.pipeline import verify
 from vwe.schemas import validate
@@ -48,3 +53,20 @@ def test_reports_for_all_golden_candidates(tmp_path):
 
     with ThreadPoolExecutor(max_workers=3) as workers:
         list(workers.map(check, CASES))
+
+
+@pytest.mark.skipif(not cbmc.cbmc_available(), reason="CBMC unavailable")
+def test_on_step_observes_stages_in_order_without_changing_verdict(tmp_path):
+    from vwe.config import load_config
+    from vwe.pipeline import verify as run
+    seen = []
+    task = Path(__file__).resolve().parent.parent / "examples/tasks/ex1_saturate"
+    report = run(task, "v3", load_config(), runs_root=tmp_path / "a",
+                 on_step=lambda stage, data: seen.append((stage, data)))
+    plain = run(task, "v3", load_config(), runs_root=tmp_path / "b")
+    stages = [s for s, _ in seen]
+    assert stages[:3] == ["admission", "regions", "interpretations"] and stages[-1] == "verdict"
+    assert "obligation" in stages
+    assert seen[-1][1]["decision"] == report.data["decision"] == plain.data["decision"] == "REJECT"
+    seen[-1][1]["decision"] = "ACCEPT"  # callbacks receive copies
+    assert report.data["decision"] == "REJECT"

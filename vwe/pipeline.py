@@ -3,6 +3,8 @@ from __future__ import annotations
 
 from dataclasses import asdict
 from datetime import datetime, timezone
+import json
+from typing import Any, Callable, Mapping
 from hashlib import sha256
 from pathlib import Path
 from time import monotonic
@@ -72,8 +74,16 @@ def _witness(trace: dict[str, str] | None, names: dict[str, str]) -> dict | None
 
 def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
            interpretations: str = "handwritten", *, runs_root: Path = Path("runs"),
-           parallel: bool = True, generated: GeneratedSet | None = None) -> VerdictReport:
+           parallel: bool = True, generated: GeneratedSet | None = None,
+           on_step: Callable[[str, Mapping[str, Any]], None] | None = None) -> VerdictReport:
+    """Run the pipeline. ``on_step`` (demo/progress only) receives a JSON-like copy of each
+    stage's result as it completes; it observes and cannot influence any decision."""
     cfg = cfg or load_config()
+
+    def step(stage: str, data: Mapping[str, Any]) -> None:
+        if on_step is not None:
+            on_step(stage, json.loads(json.dumps(data, default=str)))
+
     started = monotonic()
     task = load_pipeline_view(task_dir)
     if interpretations not in {"handwritten", "auto"}:
@@ -108,6 +118,7 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
         queries.append({"name": label, "outcome": ob.outcome.value, "note": ob.note,
                         "backends": {b: r.status for b, r in result.runs.items()},
                         "witness": _witness(ob.witness, witness_names)})
+        step("obligation", queries[-1])
         return ob
 
     def run(bundle: HarnessBundle, label: str | None = None, **kwargs) -> Obligation:
@@ -162,6 +173,7 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
         })
         report.write()
         write_json(root / "latest.json", report.data)
+        step("verdict", report.data)
         return report
 
     def session(generator: Generator) -> NativeSession:
@@ -182,6 +194,7 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
             result = session(generator).confirm(verdict.evidence_class, obligation.witness,
                                                 f"witness-{index}")
             replay_results.append({"status": result.status, "reason": result.reason})
+            step("replay", {"witness": index, **replay_results[-1]})
             if result.status not in {"confirmed", "p0_undefined"}:
                 return _unknown("native replay " + result.status + ": " + result.reason, verdict.witness)
         return verdict
@@ -193,6 +206,9 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
     if interpretations == "auto" and generated.task_id != task.task_id:
         return finish(_unknown("generated interpretation set belongs to a different task"))
     admission = admit(task, candidate_id, cfg, out_dir=out / "admission")
+    step("admission", {"status": admission.status, "reason": admission.reason,
+                       "views_differ": admission.views_differ,
+                       "pragmas": len(admission.pragmas)})
     if admission.verdict is not None:
         return finish(admission.verdict)
     if not admission.p0_views or not admission.p1_views:
@@ -203,9 +219,15 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
     try:
         regions = compute_regions(p0, task.caller_domain, out / "regions",
                                   config=cfg, parallel=parallel)
+        step("regions", {"proposed_ub": regions.proposed_ub, "exact_ub": regions.exact_ub,
+                         "reference_safe_guard": regions.reference_safe_guard})
         frozen = freeze_interpretations(
             task.task_id, p0, readings, out / "interpretations", config=cfg, parallel=parallel,
             generation=generated.generation if interpretations == "auto" else None)
+        step("interpretations", {"sha256": frozen.sha256, "mode": interpretations,
+                                 "checks": [{"id": r.id, "state": r.state.value, "check": r.check,
+                                             "detail": r.detail} for r in frozen.results],
+                                 "equivalence_classes": [list(c) for c in frozen.classes]})
         reference_guard = regions.reference_safe_guard
         if reference_guard is None:
             return finish(_unknown("no certified safe and deterministic reference guard"))
@@ -256,6 +278,7 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
                 view_session = NativeSession(gen, out / "native_views", cfg.native, build_views=True)
                 replay = view_session.confirm("views", views.witness, "witness")
                 replay_results.append({"status": replay.status, "reason": replay.reason})
+                step("replay", {"witness": "build views", **replay_results[-1]})
                 if replay.status != "confirmed":
                     return finish(_unknown("native replay " + replay.status + ": " + replay.reason,
                                            views.witness))
