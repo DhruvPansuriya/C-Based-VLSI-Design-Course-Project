@@ -1,12 +1,21 @@
 # Verdicts with Evidence — C-Based VLSI Design Course Project
 
-**Current checkpoint: T00–T11 complete on `implementation-start`.** The working
-tool checks bounded C repairs using handwritten interpretations, generated
-CBMC SAT/Z3 proof jobs, fixed-input confirmation and isolated sanitizer replay.
-The offline professor demo is implemented. T12/T13 add an LLM client and automatic
-interpretation generation (`vwe interpret`, `verify --auto`), exercised only with
-authored mock fixtures: no live model has been run. Benchmark evaluation and HLS
-QoR measurements remain future work.
+**Status: T00–T17 implemented on `implementation-start`; T18 evaluation in progress.**
+The tool checks bounded C repairs with CBMC SAT/Z3 proof jobs, fixed-input
+confirmation and isolated sanitizer replay. Interpretations come from task JSON or
+are generated automatically from P0 and the request only (`vwe interpret`,
+`verify --auto`). Benchmarks: 20 tasks adapted from the public Chrysalis-HLS bug
+dataset with labelled candidate pools and baselines. Live LLM generation is wired to
+OpenAI (`gpt-4.1-mini-2025-04-14`) but **no live completion has been received**: the
+account currently has no API credit. HLS pragma/QoR work (T19–T21) is optional and
+not started.
+
+| Area | State | Read |
+|---|---|---|
+| Core verifier, goldens, demos (T00–T11) | done; 20/20 goldens, step-by-step demo | [walkthrough](docs/METHODOLOGY_WALKTHROUGH.md), [demo guide](docs/DEMO_GUIDE.md) |
+| LLM client, generation, stability (T12–T14) | done; mock-tested, live blocked on credit | [T12](docs/T12_LLM.md), [T13](docs/T13_INTERPRET.md), [T14](docs/T14_STABILITY.md) |
+| Benchmarks, pools, labels (T15–T16) | 20 tasks, 0 P_ref rejections; labelling running | [T15](docs/T15_BENCHMARKS.md), [T16](docs/T16_POOLS.md) |
+| Baselines, metrics (T17–T18) | code done; evaluation pending labels | `vwe/eval/`, `make eval` |
 
 ## Start here — no solver rerun required
 
@@ -79,6 +88,7 @@ python3 -m venv .venv
 make test
 make golden
 make demo
+make demo-steps            # one candidate, every pipeline stage shown as it runs
 .venv/bin/vwe verify examples/tasks/ex2_argmax --candidate v2
 ```
 
@@ -111,27 +121,14 @@ without claiming V-G validation. Linux installation is `bash tools/install_tools
 macOS requires qualified native tools; the Docker recipe has not been qualified
 on this workstation. `vwe interpret` / `--auto` work with mock fixtures (`docs/T13_INTERPRET.md`); live families need a pinned model id and API key in `config/llm.toml`.
 
-## Which remaining tasks are necessary?
+## What remains
 
-There are **23 cards, T00–T22**, not a separate T23. T00–T11 are the minimum
-working-demo path and are complete.
-
-| Remaining tasks | Required for this demo? | Additional result |
-|---|---|---|
-| T12–T13 | No | Automatic request-to-interpretation-to-verdict operation (implemented; live-model validation pending) |
-| T14 | No | Repetition/union and stability measurements |
-| T15–T18 | No | Benchmark candidates, independent labels, baselines and measured risk/coverage |
-| T19–T20 | No | Full HLS pragma gate and actual hardware QoR measurements |
-| T21 | No | Optional FIFO temporal extension |
-| T22 | A concise write-up is recommended | Consolidated report, figures, limitations and reproducibility |
-
-For a demo-only submission, use the present tool and a clear write-up. To claim
-full automation, add T12–T13. To support research-quality empirical conclusions,
-add an independently labeled evaluation. To claim area/delay/latency improvement,
-perform actual HLS measurements; current C verification results cannot substitute
-for them. FIFO and repeated-generation studies can be deferred independently.
-
-See [the full plan](plan/01_PLAN.md), [task cards](plan/tasks/) and
+There are **23 cards, T00–T22**. Remaining required work: finish the T18 evaluation
+run and the T22 consolidation. Results for the method on benchmarks need live
+generated readings (OpenAI API credit); until then the method abstains there and
+the evaluation says so. T19 (HLS pragma gate), T20 (Vitis QoR, needs a Vitis
+machine) and T21 (FIFO temporal track) are optional and not started; C verification
+results are not hardware QoR measurements. See [progress](plan/PROGRESS.md) and
 [open questions](plan/OPEN_QUESTIONS.md).
 
 ## Code and documentation map
