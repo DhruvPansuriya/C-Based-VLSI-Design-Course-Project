@@ -28,14 +28,21 @@ def main(argv: list[str] | None = None) -> int:
     interpret = commands.add_parser("interpret", help="generate interpretations from P0 and the request only")
     interpret.add_argument("task_dir", type=Path)
     interpret.add_argument("--out", type=Path, help="output folder (default runs/<task>/interpret)")
-    for command in (one, all_candidates, interpret):
+    stability = commands.add_parser("stability", help="repeat generation and measure verdict stability")
+    stability.add_argument("task_dir", type=Path)
+    stability.add_argument("--candidate", action="append", help="candidate id (default: all)")
+    stability.add_argument("--runs-root", type=Path, default=Path("runs"))
+    stability.add_argument("--config", type=Path)
+    stability.add_argument("--seed", type=int, help="base seed; run k uses seed+k (request parameter only)")
+    stability.add_argument("--out", type=Path)
+    for command in (one, all_candidates, interpret, stability):
         command.add_argument("--family", action="append", default=[],
                              help="configured LLM family from config/llm.toml (repeatable)")
         command.add_argument("--llm-config", type=Path)
         command.add_argument("--fixtures", type=Path, help="fixture directory for mock families")
         command.add_argument("--offline", action="store_true", help="read only the response cache")
         command.add_argument("--cache-dir", type=Path)
-        command.add_argument("--runs", type=int, default=1)
+        command.add_argument("--runs", type=int, default=None, help="generation runs (default config client.runs)")
         command.add_argument("--request", help="request id (default: first request)")
     args = parser.parse_args(argv)
     if args.command is None:
@@ -53,11 +60,33 @@ def main(argv: list[str] | None = None) -> int:
             parser.error("choose at least one --family (see config/llm.toml)")
         settings = load_llm_settings(args.llm_config)
         clients = [build_client(settings, f, offline=args.offline, cache_dir=args.cache_dir,
+                                seed=getattr(args, "seed", None),
                                 log_path=out / "llm_log.jsonl", fixture_dir=args.fixtures)
                    for f in args.family]
         task = load_pipeline_view(args.task_dir)
-        return generate_interpretations(task, clients, request_id=args.request, runs=args.runs,
+        return generate_interpretations(task, clients, request_id=args.request, runs=args.runs or settings.runs,
                                         out_dir=out)
+
+    def stability_command(args, generate, config) -> int:
+        import json
+        from .pipeline import verify as run_verify
+        from .stability import stability_report
+        args.runs = args.runs or 3
+        task = load_pipeline_view(args.task_dir)
+        out = args.out or args.runs_root / task.task_id / "stability"
+        generated = generate(out)
+        ids = tuple(args.candidate or sorted(task.candidates))
+
+        def verify_fn(cid, subset):
+            data = run_verify(args.task_dir, cid, config, "auto", runs_root=args.runs_root / "stability_runs",
+                              generated=subset).data
+            return data["decision"], data["evidence_class"]
+
+        report = stability_report(task.task_id, generated, ids, verify_fn)
+        (out / "stability.json").write_text(json.dumps(report, indent=2) + "\n")
+        print(f"coverage by union size: {report['coverage_by_union_size']}; "
+              f"mean agreement: {report['mean_agreement']}; report: {out / 'stability.json'}")
+        return 0
 
     try:
         if args.command == "interpret":
@@ -69,6 +98,8 @@ def main(argv: list[str] | None = None) -> int:
             print(f"Explanation: {out / 'interpretations.md'}")
             return 0 if result.members else 1
         config = load_config(args.config)
+        if args.command == "stability":
+            return stability_command(args, generate, config)
         mode = "auto" if args.auto else "handwritten"
         generated = None
         if args.auto:

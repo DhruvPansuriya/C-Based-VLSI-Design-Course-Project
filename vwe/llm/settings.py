@@ -25,6 +25,7 @@ class LLMSettings:
     max_retries: int
     temperature: float
     timeout_s: int
+    runs: int
     families: Mapping[str, FamilySettings]
 
 
@@ -38,11 +39,14 @@ def load_llm_settings(path: str | Path | None = None) -> LLMSettings:
     if raw.keys() - {"client", "families"}:
         raise ConfigError(f"Unknown llm config sections: {sorted(raw.keys() - {'client', 'families'})}")
     client = raw.get("client", {})
-    extra = client.keys() - {"cache_dir", "max_retries", "temperature", "timeout_s"}
+    extra = client.keys() - {"cache_dir", "max_retries", "temperature", "timeout_s", "runs"}
     if extra:
         raise ConfigError(f"Unknown llm client keys: {sorted(extra)}")
     retries, timeout = client.get("max_retries", 2), client.get("timeout_s", 120)
     temperature = client.get("temperature", 0.0)
+    runs = client.get("runs", 1)
+    if type(runs) is not int or not 1 <= runs <= 20:
+        raise ConfigError("client.runs must be 1..20")
     if type(retries) is not int or not 0 <= retries <= 2:
         raise ConfigError("client.max_retries must be 0..2")
     if type(timeout) is not int or timeout <= 0:
@@ -58,7 +62,7 @@ def load_llm_settings(path: str | Path | None = None) -> LLMSettings:
         families[name] = FamilySettings(name, table["adapter"], str(table.get("model_id", "")),
                                         str(table.get("api_key_env", "")))
     return LLMSettings(str(client.get("cache_dir", "~/.cache/vwe/llm")), retries,
-                       float(temperature), timeout, MappingProxyType(families))
+                       float(temperature), timeout, runs, MappingProxyType(families))
 
 
 def build_client(settings: LLMSettings, family: str, *, offline: bool = False,
