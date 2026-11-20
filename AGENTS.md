@@ -45,3 +45,18 @@ make demo        # professor demo (added in T11)
 ## Definition of done for any task
 
 Its acceptance commands pass, `make test` is green, the docs or README are updated if behaviour changed, and there is one commit with the prefix `Txx:`.
+
+## Durable evidence and handovers
+
+- Read `README.md`, `results/README.md`, the latest committed checkpoint and
+  `plan/PROGRESS.md` before reproducing prior work. Saved observations are enough
+  to explain a historical result; do not rerun merely to restate it.
+- After milestone acceptance checks, preserve the existing reports/logs with
+  `scripts/archive_results.py` under a new immutable `results/checkpoints/` label.
+  Update the result index/latest pointer, README and progress with links. Keep
+  original execution manifests, including parent SHAs when tests preceded commits.
+- Distinguish imported prototype evidence, current local observations, hosted CI,
+  authored regression fixtures and research evaluation. A test count is not a
+  benchmark sample count; matching golden verdicts is not an accuracy estimate.
+- Record bounds, tool availability, skip reasons, actual timings and limits.
+  Do not silently relabel old results as new or overwrite prior checkpoint files.
