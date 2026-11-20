@@ -69,6 +69,15 @@ def test_native_process_classification(tmp_path, monkeypatch, stderr, code, outc
     assert native.run_driver(tmp_path / "driver", ()).outcome == outcome
 
 
+def test_timeout_with_partial_sanitizer_output_stays_an_error(tmp_path, monkeypatch):
+    monkeypatch.setattr(native, "_sandbox", lambda executable: (str(executable),))
+    command = CommandResult(("driver",), str(tmp_path), None, "",
+                            "ERROR: AddressSanitizer: heap-buffer-overflow", 10, "timeout")
+    monkeypatch.setattr(native, "_execute_driver", lambda *args: command)
+    result = native.run_driver(tmp_path / "driver", ())
+    assert result.outcome == "error" and result.detail == "timeout"
+
+
 def test_rejected_reference_input_cannot_confirm_a_class_witness(monkeypatch):
     # A class witness may omit P0 outputs, but P0 must still execute or expose UB.
     observation = Observation(native.NativeResult("invalid_input", {}, None),
