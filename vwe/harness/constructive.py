@@ -16,10 +16,10 @@ class Assignment:
 
 
 def assignments(expression: Expr, env: TypeEnv) -> tuple[Assignment, ...] | None:
-    """Recognize conjunctions of output = input-expression.
+    """Propose output-equality witnesses, including one branch of a disjunction.
 
     Conflicting assignments are retained. The generated job checks the whole
-    conjunction after writing the tuple, including simultaneous active clauses.
+    original relation after writing the tuple, including simultaneous active clauses.
     """
     if isinstance(expression, Literal) and expression.value is True:
         return ()
@@ -27,6 +27,11 @@ def assignments(expression: Expr, env: TypeEnv) -> tuple[Assignment, ...] | None
         left = assignments(expression.left, env)
         right = assignments(expression.right, env)
         return None if left is None or right is None else (*left, *right)
+    if isinstance(expression, Binary) and expression.op == "||":
+        # Choose one constructive branch. The generated job still proves the
+        # complete original relation universally after applying this witness.
+        left = assignments(expression.left, env)
+        return left if left is not None else assignments(expression.right, env)
     if not isinstance(expression, Binary) or expression.op != "==":
         return None
     for target, value in ((expression.left, expression.right),

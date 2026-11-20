@@ -16,13 +16,15 @@ Working branch: `implementation-start`. Original archive preserved in the import
 | T07 interpretation validation | complete and pushed | Proven joint output tuples, explicit UNKNOWN retention, semantic class grouping, and stable freeze hashes |
 | T08 verifier CLI and reports | complete and pushed; hosted CI green | Commit `0e060e9`; all ten public-pipeline verdicts and JSON schemas validated; hosted Python 3.10/3.12 checks passed |
 | T09 native pre-pass and witness replay | complete and pushed; hosted CI green at `1551a46` | Fixed-input SAT/Z3 rechecks, ASan/UBSan replay, executable acceptance observers and explicit discrepancy handling; `docs/T09_NATIVE.md` |
-| T10 draft golden suite | in progress | 13/13 public-pipeline golden cases match; 291 passed, 1 skipped in the full suite; independent ten-case harness check passes; Examples 5–7 being prepared separately |
+| T10 draft golden suite (M1) | complete locally; push checkpoint | 20/20 public-pipeline golden candidates; 323 passed, 1 skipped; 77 focused fixture and soundness checks; `docs/T10_GOLDEN.md` |
 | T11–T22 | planned | corrections in the import review apply before implementing affected cards |
 
 Hosted CI is green on Python3.10 and Python3.12 for T00/T01. First hosted run exposed a Python3.10 dependency mismatch, fixed in d43a092. Safety commit c0884a5 also passed hosted CI on both Python versions: https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45022723368 . Docker, ESBMC, Vitis and live provider execution have not been repeated on this macOS host. Imported Linux logs remain labeled as imported.
 
-Current implementation card: T10 additional draft examples. T09 focused checks: 18 passed; full suite checkpoint: 283 passed, 1 skipped; all ten handwritten golden cases match. Automatic native input rejection now vetoes replay confirmation. Automatic interpretation generation remains planned.
+Current implementation card: T11 professor demo. T10 completes the bounded handwritten-interpretation milestone (M1). Automatic interpretation generation, benchmark evaluation and HLS QoR measurement remain planned.
 
 T02 commit87b3909 passed hosted CI on Python3.10/3.12 while T03 work continued: https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45027090279 .
 
 T10 checkpoint validation: `runs/t10-final-validation.log` (291 passed, 1 skipped), `runs/t10-resume-golden.log` (13/13), and `runs/t10-handwritten.log` (10/10). T09 replay-symbolizer fix `12fc14c` is pushed; its additional timeout regression passes.
+
+T10 completion evidence: `runs/t10-complete-validation.log` (323 passed, 1 skipped), `runs/t10-expanded-golden.log` (20/20), `runs/t10-expanded-regressions.log` (77 passed). T11 isolated demo probe: nine rows match in 97.7 seconds, slowest case 49.1 seconds; integration follows the T10 commit.

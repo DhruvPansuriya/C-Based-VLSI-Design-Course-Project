@@ -18,6 +18,7 @@ def test_reports_for_all_golden_candidates(tmp_path):
         report = verify(EXAMPLES / task, f"v{variant}", runs_root=tmp_path, parallel=False)
         assert [report.decision, report.evidence_class] == want, report.data
         validate("verdict_report", report.data)
+        assert all(i["validation"] in {"valid", "invalid"} for i in report.data["interpretations"])
         assert report.folder.joinpath("report.html").is_file()
         manifest = json.loads(report.folder.joinpath("run_manifest.json").read_text())
         assert manifest["interpretation_set_sha256"] == report.data["interpretation_set_sha256"]
@@ -28,6 +29,16 @@ def test_reports_for_all_golden_candidates(tmp_path):
         if task == "ex3_avg_half_away" and variant == 1:
             assert "scope disagreement" in report.data["reason"]
             assert report.data["witness"]
+        if task == "ex5_add32_ambiguous" and variant in (1, 2):
+            assert "ambiguous" in report.data["reason"]
+            assert len(report.data["facts"]["interpretations_satisfied"]) == 2
+            assert len(report.data["facts"]["interpretations_violated"]) == 1
+        if task == "ex6_copy_overflow":
+            region = json.loads((report.folder / "regions/regions.json").read_text())
+            assert region["exact_ub"] is not None
+            assert region["universal_inside"]["outcome"] == "PROVED"
+        if task == "ex7_build_views" and variant == 1:
+            assert report.data["claim_target"] == "build_view_consistency"
         if want[0] == "ACCEPT":
             assert report.data["facts"]["synthesis_ready"] == "inconclusive"
             assert report.data["scope"]["native_acceptance"].startswith("confirmed:"), report.data

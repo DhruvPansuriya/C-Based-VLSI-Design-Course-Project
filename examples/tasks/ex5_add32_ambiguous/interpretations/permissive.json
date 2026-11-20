@@ -1,0 +1,21 @@
+{
+  "id": "ex5_add32_ambiguous.permissive",
+  "provenance": {
+    "source": "handwritten"
+  },
+  "request_type": "T2",
+  "shape": {
+    "buffers": {},
+    "alias": "disjoint",
+    "bounds": {}
+  },
+  "clauses": [
+    {
+      "zone": "a + b > UINT_MAX",
+      "behaviour": "out_ret == UINT_MAX || out_ret == -1"
+    }
+  ],
+  "ext": "a + b > UINT_MAX ? (out_ret == UINT_MAX || out_ret == -1) : out_ret == a + b",
+  "reach": "a + b > UINT_MAX",
+  "nl_rendering": "Use saturation or an explicit out-of-band error; do not silently wrap."
+}
