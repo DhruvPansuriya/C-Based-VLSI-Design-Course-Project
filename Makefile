@@ -19,7 +19,6 @@ demo:
 demo-steps:
 	$(PYTHON) scripts/demo_steps.py --interactive
 eval:
-	@echo "T18 evaluation is not implemented yet."
-	@exit 2
+	$(PYTHON) scripts/run_eval.py
 clean:
 	$(PYTHON) -c 'import shutil; shutil.rmtree("runs", ignore_errors=True)'
