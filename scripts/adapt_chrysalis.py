@@ -74,7 +74,8 @@ def adapt_text(source: str) -> tuple[str, list[str]]:
         lines.append(line)
     text = "\n".join(lines) + "\n"
     defined = set(re.findall(r"#\s*define\s+([A-Za-z_]\w*)", text))
-    code = without_comments(text)
+    # Identifier scan ignores preprocessor lines (#pragma HLS ..., #define) by design.
+    code = "\n".join(l for l in without_comments(text).splitlines() if not l.lstrip().startswith("#"))
     missing = sorted(set(re.findall(r"\b[A-Z][A-Z0-9_]{1,}\b", code)) - defined - KNOWN_CAPS)
     for name in missing:
         value_use = re.search(rf"[\[<>=+\-*/%(,]\s*{name}\b|\b{name}\s*[\]<>+\-*/%;),]", code)
@@ -189,6 +190,7 @@ def build(bug: Path, spec: dict, src: Path, commit: str) -> dict:
     ref_text, notes = adapt_text(upstream)
     fn = edited_function(ref_text, original)
     p0_text, _ = adapt_text(upstream.replace(original, faulty, 1))
+    signatures = []
     for text in (ref_text, p0_text):
         syntax = subprocess.run(["cc", "-fsyntax-only", "-std=c11", "-Werror=implicit-function-declaration",
                                  "-x", "c", "-"], input=text, capture_output=True, text=True, timeout=30)
@@ -201,7 +203,12 @@ def build(bug: Path, spec: dict, src: Path, commit: str) -> dict:
             raise Skip(f"frontend: {str(exc)[:80]}")
         if analysis.unsupported or analysis.forbidden:
             raise Skip("frontend reports unsupported/forbidden constructs")
+        signatures.append(analysis.signature)
+    if signatures[0] != signatures[1]:
+        raise Skip("faulty edit changes the function interface")
     shape = shape_of(parse_for_analysis(ref_text), fn)
+    if any(int(n) > SCALE for n in shape["buffers"].values()):
+        raise Skip(f"array parameter larger than K={SCALE} with a literal size (not scaled)")
     probe = differential(ref_text, ref_text, fn, shape, samples=200, chunk=200)
     if probe.status == "reference_undefined":
         raise Skip("P_ref undefined on every sampled input after size scaling (sanitizer probe)")

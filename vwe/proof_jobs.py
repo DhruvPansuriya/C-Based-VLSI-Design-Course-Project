@@ -112,7 +112,8 @@ def run_job(bundle: HarnessBundle, *, config: Config | None = None,
     for b, result in runs.items():
         _record_run(out, b, result)
     if any(not run.ok for run in runs.values()):
-        failed = ", ".join(b for b, run in runs.items() if not run.ok)
+        failed = ", ".join(f"{b} timeout" if run.stderr_tail == "timeout" else b
+                           for b, run in runs.items() if not run.ok)
         return JobResult(Obligation(Outcome.INCONCLUSIVE, note=f"tool error: {failed}"), p, runs)
     if not _labels_ok(runs, bundle.property_labels):
         return JobResult(Obligation(Outcome.INCONCLUSIVE, note="planned assertion inventory mismatch"), p, runs)
