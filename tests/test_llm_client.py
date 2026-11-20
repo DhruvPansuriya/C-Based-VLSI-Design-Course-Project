@@ -256,3 +256,25 @@ def test_http_error_reports_vendor_code_but_not_message():
     assert "insufficient_quota" in code and "credit_balance_exhausted" in code
     assert "SECRET" not in code
     assert _error_code(urllib.error.HTTPError("u", 500, "x", {}, io.BytesIO(b"not json"))) == ""
+
+
+def test_backoff_only_for_transient_errors(context, tmp_path, monkeypatch):
+    monkeypatch.setenv("TEST_KEY", "k")
+    calls, sleeps = [], []
+    replies = [ProviderError("HTTP 429 (requests, rate_limit_exceeded)"), ProviderError("HTTP 503"),
+               json.dumps({"choices": [{"message": {"content": GOOD}}]}).encode()]
+    def transport(*a):
+        calls.append(1)
+        r = replies[len(calls) - 1]
+        if isinstance(r, Exception):
+            raise r
+        return r
+    provider = OpenAIProvider("openai", "m", "TEST_KEY", transport=transport)
+    provider.sleep = sleeps.append
+    assert LLMClient(provider, "m", cache_dir=tmp_path / "a").generate(context, TEMPLATE).status == "ok"
+    assert len(calls) == 3 and sleeps == [2.0, 8.0]
+    quota = OpenAIProvider("openai", "m", "TEST_KEY",
+                           transport=lambda *a: (_ for _ in ()).throw(ProviderError("HTTP 429 (insufficient_quota)")))
+    quota.sleep = sleeps.append
+    result = LLMClient(quota, "m", cache_dir=tmp_path / "b").generate(context, TEMPLATE)
+    assert result.status == "failed" and "insufficient_quota" in result.detail and sleeps == [2.0, 8.0]

@@ -12,6 +12,7 @@ from __future__ import annotations
 import json
 import os
 import ssl
+import time
 from pathlib import Path
 from typing import Any, Callable, Mapping, Sequence
 import urllib.error
@@ -110,6 +111,7 @@ class _HttpProvider:
         self.family, self.model_id = family, model_id
         self.api_key_file = api_key_file
         self.api_key_env, self.transport, self.timeout_s = api_key_env, transport, timeout_s
+        self.sleep = time.sleep  # injectable for tests
 
     def _key(self, model_id: str) -> str:
         if not model_id.strip():
@@ -122,8 +124,21 @@ class _HttpProvider:
                                       f"{self.api_key_env or '-'} unset and no key file)")
         return key
 
+    RETRY_DELAYS = (2.0, 8.0, 30.0)
+
     def _post(self, headers: Mapping[str, str], payload: Mapping[str, Any]) -> Any:
-        raw = self.transport(self.url, headers, json.dumps(payload).encode(), self.timeout_s)
+        body = json.dumps(payload).encode()
+        for attempt, delay in enumerate((*self.RETRY_DELAYS, None)):
+            try:
+                raw = self.transport(self.url, headers, body, self.timeout_s)
+                break
+            except ProviderError as exc:
+                text = str(exc)
+                transient = ("HTTP 429" in text and "insufficient_quota" not in text) or \
+                    any(f"HTTP {c}" in text for c in (500, 502, 503, 504))
+                if not transient or delay is None:
+                    raise
+                self.sleep(delay)  # bounded backoff for rate limits / transient server errors
         try:
             return json.loads(raw)
         except ValueError as exc:
