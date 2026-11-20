@@ -11,6 +11,7 @@ python3 -m venv .venv
 make test
 .venv/bin/vwe --version
 make golden
+make demo
 ```
 
 T01 adds three schema-validated task folders in `examples/tasks/` and `vwe.tasks.load_pipeline_view`. The immutable pipeline view excludes `eval_only`, acceptable-reading labels and all evaluation file contents; path traversal and symlinks into `eval/` are rejected. `load_full` is reserved for evaluation. The deliberately invalid n-1 reading is retained by the loader and discarded only after semantic validation establishes its invalidity.
@@ -20,6 +21,8 @@ T02 adds structural admission and isolated simulation/synthesis analysis views. 
 T03 adds the restricted contract grammar, type checker and C observer emitter. Run `make contracts` to emit the stored examples without claiming validation; see [contract details](docs/T03_CONTRACTS.md).
 
 T10 now includes 20 candidates across draft Examples 1–7: rounding scope disagreement, ambiguous overflow handling, copy safety/preservation and simulation/synthesis divergence. `make golden` exercises the public pipeline; `--task ex5_add32_ambiguous` selects one task. Expectations are documented before execution in each new task README. `make golden` matches all 20 expectations; the full suite passes 323 tests with one skip. The independent handwritten harness runner is retained as `scripts/run_handwritten_examples.py`.
+
+T11 adds `make demo`: nine offline showcase rows, a standalone index at `runs/demo/index.html`, and a [presentation guide](docs/DEMO_GUIDE.md). Demo-only task copies use K=2 and report the reduced bounds explicitly. The integrated command passes all nine rows in 61.2 seconds (slowest case 32.1 seconds); the full suite passes 325 tests with one local ESBMC skip.
 
 Native CBMC 6.11.0 and Z3 are needed for the golden integration test; it is skipped when CBMC is absent. Linux tool installation is `bash tools/install_tools.sh`; macOS must use qualified native tools. The Docker recipe has not been run here and is not a sealed image.
 
