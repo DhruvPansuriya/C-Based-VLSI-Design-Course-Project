@@ -23,6 +23,7 @@
         "replayed_natively": {"type": "boolean"}
       }
     },
+    "interpretation_mode": {"enum": ["handwritten", "auto"]},
     "interpretation_set_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "facts": {
       "type": "object",

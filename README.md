@@ -3,8 +3,10 @@
 **Current checkpoint: T00–T11 complete on `implementation-start`.** The working
 tool checks bounded C repairs using handwritten interpretations, generated
 CBMC SAT/Z3 proof jobs, fixed-input confirmation and isolated sanitizer replay.
-The offline professor demo is implemented. Automatic LLM interpretation
-generation, benchmark evaluation and HLS QoR measurements remain future work.
+The offline professor demo is implemented. T12/T13 add an LLM client and automatic
+interpretation generation (`vwe interpret`, `verify --auto`), exercised only with
+authored mock fixtures: no live model has been run. Benchmark evaluation and HLS
+QoR measurements remain future work.
 
 ## Start here — no solver rerun required
 
@@ -86,8 +88,8 @@ verification and native replay on each invocation, then writes
 results and performs no computation. The expected-verdict table checks the
 results; it is not used by `vwe.pipeline.verify` to choose a verdict.
 
-Current runs need no interactive decisions, but new task interpretations are
-still supplied as JSON. Automatically deriving them from English is T12–T13.
+Current runs need no interactive decisions. Interpretations come either from task JSON
+(handwritten) or from `--auto` generation (T13; mock-fixture-tested only).
 The future automatic pipeline should also run without runtime human decisions,
 returning UNDECIDED when required evidence cannot be established.
 
@@ -107,7 +109,7 @@ The original independent ten-case harness check is retained:
 `make admission` demonstrates structural checks; `make contracts` emits observers
 without claiming V-G validation. Linux installation is `bash tools/install_tools.sh`.
 macOS requires qualified native tools; the Docker recipe has not been qualified
-on this workstation. `vwe interpret` and `--auto` are not configured yet.
+on this workstation. `vwe interpret` / `--auto` work with mock fixtures (`docs/T13_INTERPRET.md`); live families need a pinned model id and API key in `config/llm.toml`.
 
 ## Which remaining tasks are necessary?
 
@@ -116,7 +118,7 @@ working-demo path and are complete.
 
 | Remaining tasks | Required for this demo? | Additional result |
 |---|---|---|
-| T12–T13 | No | Automatic request-to-interpretation-to-verdict operation |
+| T12–T13 | No | Automatic request-to-interpretation-to-verdict operation (implemented; live-model validation pending) |
 | T14 | No | Repetition/union and stability measurements |
 | T15–T18 | No | Benchmark candidates, independent labels, baselines and measured risk/coverage |
 | T19–T20 | No | Full HLS pragma gate and actual hardware QoR measurements |
