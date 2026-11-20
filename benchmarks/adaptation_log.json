@@ -23,11 +23,11 @@
       "function": "uppol2"
     },
     {
-      "task_id": "chrysalis_vitis_hls_introductory_examples_bypass_inf",
-      "suite": "Vitis-HLS-Introductory-Examples",
-      "design": "bypass",
+      "task_id": "chrysalis_gnn_builder_gather_node_neighbors_inf",
+      "suite": "gnn-builder",
+      "design": "gather_node_neighbors",
       "type": "INF",
-      "function": "bypass"
+      "function": "gather_node_neighbors"
     },
     {
       "task_id": "chrysalis_chstone_abs_use",
@@ -51,11 +51,11 @@
       "function": "six_tab"
     },
     {
-      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_oob",
-      "suite": "Vitis-HLS-Introductory-Examples",
-      "design": "pass",
+      "task_id": "chrysalis_h_264_inverserasterscan_oob",
+      "suite": "H.264",
+      "design": "InverseRasterScan",
       "type": "OOB",
-      "function": "pass"
+      "function": "InverseRasterScan"
     },
     {
       "task_id": "chrysalis_chstone_filtep_init",
@@ -65,11 +65,11 @@
       "function": "filtep"
     },
     {
-      "task_id": "chrysalis_vitis_hls_introductory_examples_bypass_1_shft",
-      "suite": "Vitis-HLS-Introductory-Examples",
-      "design": "bypass_1",
-      "type": "SHFT",
-      "function": "bypass"
+      "task_id": "chrysalis_gnn_builder_gather_node_neighbors_and_edge_indices_inf",
+      "suite": "gnn-builder",
+      "design": "gather_node_neighbors_and_edge_indices",
+      "type": "INF",
+      "function": "gather_node_neighbors_and_edge_indices"
     },
     {
       "task_id": "chrysalis_chstone_filtep_use",
@@ -86,18 +86,18 @@
       "function": "uppol1"
     },
     {
-      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_mlu",
-      "suite": "Vitis-HLS-Introductory-Examples",
-      "design": "pass",
+      "task_id": "chrysalis_gnn_builder_gather_node_neighbors_mlu",
+      "suite": "gnn-builder",
+      "design": "gather_node_neighbors",
       "type": "MLU",
-      "function": "pass"
+      "function": "gather_node_neighbors"
     },
     {
-      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_4_oob",
-      "suite": "Vitis-HLS-Introductory-Examples",
-      "design": "pass_4",
+      "task_id": "chrysalis_gnn_builder_gather_node_neighbors_and_edge_indices_oob",
+      "suite": "gnn-builder",
+      "design": "gather_node_neighbors_and_edge_indices",
       "type": "OOB",
-      "function": "pass"
+      "function": "gather_node_neighbors_and_edge_indices"
     },
     {
       "task_id": "chrysalis_chstone_uppol1_init",
@@ -107,13 +107,6 @@
       "function": "uppol1"
     },
     {
-      "task_id": "chrysalis_vitis_hls_introductory_examples_bypass_shft",
-      "suite": "Vitis-HLS-Introductory-Examples",
-      "design": "bypass",
-      "type": "SHFT",
-      "function": "bypass"
-    },
-    {
       "task_id": "chrysalis_chstone_uppol2_use",
       "suite": "CHStone",
       "design": "uppol2",
@@ -121,25 +114,11 @@
       "function": "uppol2"
     },
     {
-      "task_id": "chrysalis_h_264_inverserasterscan_zero",
-      "suite": "H.264",
-      "design": "InverseRasterScan",
+      "task_id": "chrysalis_vitis_hls_introductory_examples_foo_zero",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "foo",
       "type": "ZERO",
-      "function": "InverseRasterScan"
-    },
-    {
-      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_4_mlu",
-      "suite": "Vitis-HLS-Introductory-Examples",
-      "design": "pass_4",
-      "type": "MLU",
-      "function": "pass"
-    },
-    {
-      "task_id": "chrysalis_vitis_hls_introductory_examples_bypass_1_oob",
-      "suite": "Vitis-HLS-Introductory-Examples",
-      "design": "bypass_1",
-      "type": "OOB",
-      "function": "bypass"
+      "function": "foo"
     },
     {
       "task_id": "chrysalis_h_264_six_tab_init",
@@ -149,141 +128,127 @@
       "function": "six_tab"
     },
     {
-      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_1_use",
+      "task_id": "chrysalis_vitis_hls_introductory_examples_foo_use",
       "suite": "Vitis-HLS-Introductory-Examples",
-      "design": "pass_1",
+      "design": "foo",
       "type": "USE",
-      "function": "pass"
+      "function": "foo"
     },
     {
-      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_5_zero",
-      "suite": "Vitis-HLS-Introductory-Examples",
-      "design": "pass_5",
-      "type": "ZERO",
-      "function": "pass"
-    },
-    {
-      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_2_mlu",
-      "suite": "Vitis-HLS-Introductory-Examples",
-      "design": "pass_2",
-      "type": "MLU",
-      "function": "pass"
-    },
-    {
-      "task_id": "chrysalis_h_264_inverserasterscan_oob",
+      "task_id": "chrysalis_h_264_inverserasterscan_zero",
       "suite": "H.264",
       "design": "InverseRasterScan",
-      "type": "OOB",
+      "type": "ZERO",
       "function": "InverseRasterScan"
-    },
-    {
-      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_1_init",
-      "suite": "Vitis-HLS-Introductory-Examples",
-      "design": "pass_1",
-      "type": "INIT",
-      "function": "pass"
-    },
-    {
-      "task_id": "chrysalis_vitis_hls_introductory_examples_add_kernel_mlu",
-      "suite": "Vitis-HLS-Introductory-Examples",
-      "design": "add_kernel",
-      "type": "MLU",
-      "function": "add_kernel"
-    },
-    {
-      "task_id": "chrysalis_vitis_hls_introductory_examples_add_kernel_oob",
-      "suite": "Vitis-HLS-Introductory-Examples",
-      "design": "add_kernel",
-      "type": "OOB",
-      "function": "add_kernel"
-    },
-    {
-      "task_id": "chrysalis_vitis_hls_introductory_examples_double_pass_1_init",
-      "suite": "Vitis-HLS-Introductory-Examples",
-      "design": "Double_pass_1",
-      "type": "INIT",
-      "function": "Double_pass"
-    },
-    {
-      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_5_mlu",
-      "suite": "Vitis-HLS-Introductory-Examples",
-      "design": "pass_5",
-      "type": "MLU",
-      "function": "pass"
     }
   ],
   "skipped": {
     "P_ref undefined on every sampled input after size scaling (sanitizer probe)": 15,
-    "does not compile as standalone C11 (missing declarations from other files)": 129,
+    "array parameter larger than K=4 with a literal size (not scaled)": 33,
+    "does not compile as standalone C11 (missing declarations from other files)": 208,
     "edit is not inside a function": 1,
+    "faulty edit changes the function interface": 3,
     "faulty edit does not apply exactly once": 209,
-    "frontend reports unsupported/forbidden constructs": 20,
-    "frontend: <stdin>:13:24: before: *": 4,
+    "frontend reports unsupported/forbidden constructs": 22,
+    "frontend: <stdin>: Invalid declaration": 4,
+    "frontend: <stdin>:10:24: before: *": 4,
     "frontend: <stdin>:27:1: before: while": 1,
     "frontend: <stdin>:2:15: before: *": 1,
-    "frontend: <stdin>:2:1: Invalid function definition": 25,
+    "frontend: <stdin>:2:1: Invalid function definition": 44,
     "frontend: <stdin>:2:23: before: *": 5,
     "frontend: <stdin>:2:24: before: *": 3,
+    "frontend: <stdin>:2:25: before: <": 14,
+    "frontend: <stdin>:2:25: before: a": 19,
     "frontend: <stdin>:2:26: before: *": 7,
+    "frontend: <stdin>:2:29: before: <": 18,
     "frontend: <stdin>:2:29: before: x": 4,
+    "frontend: <stdin>:2:30: before: <": 5,
     "frontend: <stdin>:2:30: before: inA": 2,
+    "frontend: <stdin>:2:31: before: triangle_3d": 5,
     "frontend: <stdin>:2:34: before: triangle_2d": 1,
+    "frontend: <stdin>:2:36: before: <": 10,
+    "frontend: <stdin>:2:36: before: r": 5,
+    "frontend: <stdin>:2:37: before: *": 4,
     "frontend: <stdin>:2:38: before: *": 3,
     "frontend: <stdin>:2:42: before: *": 6,
     "frontend: <stdin>:2:44: before: *": 3,
+    "frontend: <stdin>:2:46: before: *": 4,
+    "frontend: <stdin>:3:12: Missing type in declaration": 6,
     "frontend: <stdin>:3:1: Invalid function definition": 4,
+    "frontend: <stdin>:3:25: before: a": 5,
     "frontend: <stdin>:3:26: before: minver_hw": 1,
+    "frontend: <stdin>:3:28: before: *": 5,
     "frontend: <stdin>:3:28: before: sin_table": 4,
-    "frontend: <stdin>:4:1: Invalid function definition": 3,
+    "frontend: <stdin>:40:3: Invalid declaration": 5,
+    "frontend: <stdin>:4:10: before: *": 4,
+    "frontend: <stdin>:4:11: before: arr": 4,
+    "frontend: <stdin>:4:12: before: a": 5,
+    "frontend: <stdin>:4:12: before: in": 5,
+    "frontend: <stdin>:4:1: Invalid function definition": 89,
     "frontend: <stdin>:4:21: before: x_aux": 6,
+    "frontend: <stdin>:4:22: before: <": 4,
+    "frontend: <stdin>:4:25: before: 4": 49,
+    "frontend: <stdin>:4:25: before: a": 9,
+    "frontend: <stdin>:4:26: before: 4": 206,
+    "frontend: <stdin>:4:40: before: *": 5,
+    "frontend: <stdin>:5:18: before: *": 31,
     "frontend: <stdin>:5:19: before: inrun": 5,
     "frontend: <stdin>:5:19: before: vec1": 4,
+    "frontend: <stdin>:5:1: Invalid function definition": 7,
+    "frontend: <stdin>:5:21: before: vecIn": 7,
+    "frontend: <stdin>:5:22: before: in1": 4,
+    "frontend: <stdin>:5:25: before: cIter": 4,
+    "frontend: <stdin>:5:7: before: current_node_embedding_in": 4,
     "frontend: <stdin>:6:17: before: nodes": 6,
     "frontend: <stdin>:6:20: before: obs": 6,
+    "frontend: <stdin>:9:17: before: i": 4,
     "frontend: <stdin>:9:35: before: *": 3,
-    "frontend: <stdin>:9:40: before: *": 5,
+    "multi-dimensional array parameter": 21,
     "outside the supported C subset (float, C++, struct, I/O or references)": 3472,
+    "pointer parameter a has no declared size": 6,
     "pointer parameter buf has no declared size": 14,
     "pointer parameter dlti has no declared size": 3,
+    "pointer parameter in has no declared size": 6,
+    "pointer parameter in1 has no declared size": 10,
     "pointer parameter matrix has no declared size": 8,
     "pointer parameter p_xhtbl_bits has no declared size": 7,
-    "undefined identifier ALLOCATION needs a missing header": 17,
-    "undefined identifier ARRAY_PARTITION needs a missing header": 84,
-    "undefined identifier ARRAY_RESHAPE needs a missing header": 8,
     "undefined identifier ASSIGN_OFFSET_FOR_BANKS needs a missing header": 5,
     "undefined identifier BF_LONG needs a missing header": 5,
-    "undefined identifier BIND_STORAGE needs a missing header": 10,
-    "undefined identifier BUS_A needs a missing header": 8,
     "undefined identifier BYTE needs a missing header": 14,
     "undefined identifier COLORING_FB needs a missing header": 4,
     "undefined identifier COMPUTE needs a missing header": 10,
     "undefined identifier CPF needs a missing header": 11,
-    "undefined identifier DATAFLOW needs a missing header": 8,
     "undefined identifier DATA_T needs a missing header": 3,
     "undefined identifier DATA_TYPE needs a missing header": 153,
-    "undefined identifier DEGREE_GUESS needs a missing header": 12,
     "undefined identifier DOT needs a missing header": 7,
-    "undefined identifier FACTOR needs a missing header": 6,
     "undefined identifier FFT8 needs a missing header": 2,
     "undefined identifier FIND_MAX_DIST needs a missing header": 9,
-    "undefined identifier FIX_32_12 needs a missing header": 2,
+    "undefined identifier FIX_32_12 needs a missing header": 6,
+    "undefined identifier FIX_FM needs a missing header": 7,
+    "undefined identifier FIX_WT needs a missing header": 4,
     "undefined identifier FLOW_INNER needs a missing header": 4,
     "undefined identifier FUNC needs a missing header": 10,
-    "undefined identifier FUNCTION_INSTANTIATE needs a missing header": 7,
     "undefined identifier GELU_TANH_COEFF_CUBIC needs a missing header": 4,
     "undefined identifier GRAD needs a missing header": 4,
     "undefined identifier GRAD_Z_INNER needs a missing header": 3,
-    "undefined identifier HLS needs a missing header": 612,
+    "undefined identifier IMAGEDIM needs a missing header": 3,
+    "undefined identifier INCREMENT needs a missing header": 3,
     "undefined identifier INLINE needs a missing header": 3,
     "undefined identifier INT32 needs a missing header": 4,
     "undefined identifier LOOP_I needs a missing header": 12,
     "undefined identifier LOOP_X needs a missing header": 3,
+    "undefined identifier OUTER_INNER needs a missing header": 8,
+    "undefined identifier OUTPUT_FB_COL needs a missing header": 7,
     "undefined identifier Q_POP needs a missing header": 3,
-    "undefined identifier READ needs a missing header": 4,
+    "undefined identifier RAST2 needs a missing header": 4,
+    "undefined identifier READ needs a missing header": 16,
+    "undefined identifier READ_TRAINING_DATA needs a missing header": 5,
     "undefined identifier RELU needs a missing header": 3,
     "undefined identifier SASR needs a missing header": 1,
+    "undefined identifier STREAM_OUT needs a missing header": 5,
     "undefined identifier SUM_LOOP needs a missing header": 12,
     "undefined identifier TYPE needs a missing header": 104,
+    "undefined identifier UPDATE needs a missing header": 7,
     "undefined identifier WRITE needs a missing header": 4
   }
 }
