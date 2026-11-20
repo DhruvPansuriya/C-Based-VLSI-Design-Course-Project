@@ -30,7 +30,7 @@ def edit_manifest(folder,change):
     p=folder/'task.json';d=json.loads(p.read_text());change(d);p.write_text(json.dumps(d))
 
 
-@pytest.mark.parametrize('tid,count',[('ex1_saturate',5),('ex2_argmax',3),('ex4_sum',2)])
+@pytest.mark.parametrize('tid,count',[('ex1_saturate',5),('ex2_argmax',3),('ex4_sum',2),('ex3_avg_half_away',3)])
 def test_tasks_validate_and_snapshots_are_complete(tid,count):
     t=load_pipeline_view(TASKS/tid)
     assert t.task_id==tid and len(t.candidates)==count and len(t.interpretations)>=2
