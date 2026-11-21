@@ -15,6 +15,7 @@ from dataclasses import asdict
 import json
 from pathlib import Path
 import sys
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from time import monotonic
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -53,6 +54,14 @@ def run_one(system: str, task_dir: Path, cid: str, generated, cfg, runs: Path) -
                "claim_target": "repair_correctness" if v.decision != "UNDECIDED" else "none", "reason": v.reason}
     out["seconds"] = round(monotonic() - start, 2)
     return out
+
+
+def _unit(unit, config: str, runs_root: str) -> dict:
+    """One (system, task, candidate) verdict; runs in a worker process."""
+    system, task_dir, cid, gpath = unit
+    generated = load_generated(gpath) if gpath is not None else None
+    out = run_one(system, task_dir, cid, generated, load_config(config), Path(runs_root))
+    return {"system": system, "task": task_dir.name, "candidate": cid, **out}
 
 
 def fmt(x, digits=2):
@@ -132,24 +141,39 @@ def main() -> int:
     ap.add_argument("--config", type=Path, default=ROOT / "config/benchmark.toml")
     ap.add_argument("--out", type=Path, default=ROOT / "results/eval")
     ap.add_argument("--runs-root", type=Path, default=ROOT / "runs/eval")
+    ap.add_argument("--jobs", type=int, default=1, help="parallel (system, candidate) units")
+    ap.add_argument("--resume", action="store_true", help="reuse verdict rows already in verdicts.jsonl")
     args = ap.parse_args()
-    cfg = load_config(args.config)
     args.out.mkdir(parents=True, exist_ok=True)
     log = json.loads((ROOT / "benchmarks/adaptation_log.json").read_text())
     bug_type = {r["task_id"]: r["type"] for r in log["selected"]}
     raw_rows, reasons, rows = [], {}, []
     task_dirs = sorted(p for p in args.tasks.iterdir() if (p / "eval/labels.json").is_file())
-    with_readings = 0
+    units, with_readings = [], 0
     for task_dir in task_dirs:
         gpath = args.generated / task_dir.name / "generated_set.json"
-        generated = load_generated(gpath) if gpath.is_file() else None
-        with_readings += generated is not None
+        with_readings += gpath.is_file()
         manifest = json.loads((task_dir / "task.json").read_text())
-        for cid in sorted(manifest["candidates"]):
-            for system in args.systems:
-                out = run_one(system, task_dir, cid, generated, cfg, args.runs_root)
-                raw_rows.append({"system": system, "task": task_dir.name, "candidate": cid, **out})
-                print(system, task_dir.name, cid, out["decision"], out["reason"][:60], flush=True)
+        units += [(system, task_dir, cid, gpath if gpath.is_file() else None)
+                  for cid in sorted(manifest["candidates"]) for system in args.systems]
+    verdict_log = args.out / "verdicts.jsonl"  # verdicts only, written before any label is read
+    done = {}
+    if args.resume and verdict_log.is_file():
+        for line in verdict_log.read_text().splitlines():
+            r = json.loads(line)
+            done[(r["system"], r["task"], r["candidate"])] = r
+    elif verdict_log.exists():
+        verdict_log.unlink()
+    todo = [u for u in units if (u[0], u[1].name, u[2]) not in done]
+    with ProcessPoolExecutor(max_workers=max(1, args.jobs)) as pool:
+        futures = {pool.submit(_unit, u, str(args.config), str(args.runs_root)): u for u in todo}
+        for future in as_completed(futures):
+            row = future.result()
+            done[(row["system"], row["task"], row["candidate"])] = row
+            with verdict_log.open("a") as stream:
+                stream.write(json.dumps(row) + "\n")
+            print(row["system"], row["task"], row["candidate"], row["decision"], row["reason"][:60], flush=True)
+    raw_rows = [done[(u[0], u[1].name, u[2])] for u in units]
     # Labels are joined only after every verdict above has been computed.
     labels = {t.name: {l["candidate"]: l["label"] for l in json.loads((t / "eval/labels.json").read_text())}
               for t in task_dirs}

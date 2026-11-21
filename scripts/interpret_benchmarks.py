@@ -9,6 +9,7 @@ Writes benchmarks/generated/<task>/{generated_set.json, interpretations.md, llm_
 from __future__ import annotations
 
 import argparse
+import time
 from pathlib import Path
 import sys
 
@@ -27,9 +28,13 @@ def main() -> int:
     ap.add_argument("--max-tasks", type=int, default=100)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--cache-dir", type=Path, default=Path("~/.cache/vwe/llm").expanduser())
+    ap.add_argument("--pause", type=float, default=0.0, help="seconds between tasks (free-tier token limits)")
+    ap.add_argument("--only", nargs="*", help="task ids to (re)generate")
     args = ap.parse_args()
     settings = load_llm_settings()
     roots = sorted(p for p in args.tasks.iterdir() if (p / "task.json").is_file())[: args.max_tasks]
+    if args.only:
+        roots = [r for r in roots if r.name in set(args.only)]
     for root in roots:
         out = args.out / root.name
         if (out / "generated_set.json").is_file():
@@ -45,6 +50,7 @@ def main() -> int:
             print(f"{root.name}: skipped ({exc})", flush=True)
             continue
         statuses = [r["status"] for r in result.records]
+        time.sleep(args.pause)
         print(f"{root.name}: {len(result.members)} readings; live={result.generation['live_families']}; "
               f"{statuses}", flush=True)
         if "unavailable" in statuses or any("insufficient_quota" in r.get("detail", "") for r in result.records):
