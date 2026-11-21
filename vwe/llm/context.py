@@ -66,12 +66,29 @@ class RequestContext:
                 "prior_readings": json.dumps(list(self.prior_readings))}
 
 
+def _preprocessed(p0_source: str) -> str:
+    """Expand P0's own macros with the qualified frontend wrapper (P0 only)."""
+    import tempfile
+    from pathlib import Path
+    from ..tools import frontend
+    with tempfile.TemporaryDirectory(prefix="vwe-ctx-") as tmp:
+        src = Path(tmp) / "p0.c"
+        src.write_text(p0_source, encoding="utf-8")
+        text, _, how = frontend.preprocess(src, synth=False, timeout_s=60)
+    if how == "failed":
+        raise ContextError("P0 signature unavailable: preprocessing failed")
+    return text
+
+
 def p0_signature_text(p0_source: str, function: str) -> str:
-    """Render the P0 function declaration (no body, no comments)."""
+    """Render the P0 function declaration (no body, no comments); macro sizes appear expanded."""
     try:
         analysis = analyze(without_comments(p0_source), function)
-    except UnsupportedC as exc:
-        raise ContextError(f"P0 signature unavailable: {exc}") from exc
+    except UnsupportedC:
+        try:
+            analysis = analyze(_preprocessed(p0_source), function)
+        except UnsupportedC as exc:
+            raise ContextError(f"P0 signature unavailable: {exc}") from exc
     for node in analysis.ast.ext:
         if isinstance(node, C.FuncDef) and node.decl.name == function:
             return c_generator.CGenerator().visit(node.decl) + ";"
