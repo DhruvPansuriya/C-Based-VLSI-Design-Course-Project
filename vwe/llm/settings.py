@@ -58,8 +58,8 @@ def load_llm_settings(path: str | Path | None = None) -> LLMSettings:
     for name, table in raw.get("families", {}).items():
         if not isinstance(table, dict) or table.keys() - {"adapter", "model_id", "api_key_env", "api_key_file"}:
             raise ConfigError(f"families.{name} has unknown keys")
-        if table.get("adapter") not in {"mock", "anthropic", "openai"}:
-            raise ConfigError(f"families.{name}.adapter must be mock, anthropic or openai")
+        if table.get("adapter") not in {"mock", "anthropic", "openai", "groq"}:
+            raise ConfigError(f"families.{name}.adapter must be mock, anthropic, openai or groq")
         key_file = table.get("api_key_file")
         if key_file is not None and (not isinstance(key_file, str) or not key_file.strip()):
             raise ConfigError(f"families.{name}.api_key_file must be a path string")
