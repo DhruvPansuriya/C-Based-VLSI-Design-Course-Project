@@ -30,7 +30,12 @@ def main() -> int:
     ap.add_argument("--cache-dir", type=Path, default=Path("~/.cache/vwe/llm").expanduser())
     ap.add_argument("--pause", type=float, default=0.0, help="seconds between tasks (free-tier token limits)")
     ap.add_argument("--only", nargs="*", help="task ids to (re)generate")
+    ap.add_argument("--no-retry-wait", action="store_true",
+                    help="do not back off on rate limits (use when a daily token cap is exhausted)")
     args = ap.parse_args()
+    if args.no_retry_wait:
+        from vwe.llm import providers
+        providers._HttpProvider.RETRY_DELAYS = ()
     settings = load_llm_settings()
     roots = sorted(p for p in args.tasks.iterdir() if (p / "task.json").is_file())[: args.max_tasks]
     if args.only:
