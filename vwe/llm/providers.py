@@ -42,8 +42,10 @@ def tls_context() -> ssl.SSLContext:
 
 def urllib_transport(url: str, headers: Mapping[str, str], body: bytes, timeout_s: int,
                      method: str = "POST") -> bytes:
+    # A generic client name: some gateways reject the default Python-urllib agent (HTTP 403).
     request = urllib.request.Request(url, data=body if method == "POST" else None,
-                                     headers=dict(headers), method=method)
+                                     headers={"User-Agent": "vwe-llm-client/0.1", **dict(headers)},
+                                     method=method)
     try:
         with urllib.request.urlopen(request, timeout=timeout_s, context=tls_context()) as response:  # noqa: S310
             return response.read()
