@@ -272,12 +272,12 @@ def test_backoff_only_for_transient_errors(context, tmp_path, monkeypatch):
     provider = OpenAIProvider("openai", "m", "TEST_KEY", transport=transport)
     provider.sleep = sleeps.append
     assert LLMClient(provider, "m", cache_dir=tmp_path / "a").generate(context, TEMPLATE).status == "ok"
-    assert len(calls) == 3 and sleeps == [2.0, 8.0]
+    assert len(calls) == 3 and sleeps == [5.0, 20.0]
     quota = OpenAIProvider("openai", "m", "TEST_KEY",
                            transport=lambda *a: (_ for _ in ()).throw(ProviderError("HTTP 429 (insufficient_quota)")))
     quota.sleep = sleeps.append
     result = LLMClient(quota, "m", cache_dir=tmp_path / "b").generate(context, TEMPLATE)
-    assert result.status == "failed" and "insufficient_quota" in result.detail and sleeps == [2.0, 8.0]
+    assert result.status == "failed" and "insufficient_quota" in result.detail and sleeps == [5.0, 20.0]
 
 
 def test_groq_uses_openai_layout_on_its_own_endpoint(context, tmp_path, monkeypatch):
