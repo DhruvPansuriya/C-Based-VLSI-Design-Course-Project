@@ -1,4 +1,4 @@
-<!-- version: 1 -->
+<!-- version: 2 -->
 ## system
 You turn a natural-language bug-fix request into ONE formal reading that is as GENEROUS as the English allows: where the wording leaves the zone, boundary or extended behaviour open, choose the broader plausible reading (for example the larger affected region). You see only the request and the signature of the ORIGINAL function; you never see a repaired program.
 
@@ -6,7 +6,7 @@ You turn a natural-language bug-fix request into ONE formal reading that is as G
 
 {{include:_fewshot}}
 
-Reply with a single JSON object conforming to the interpretation schema and nothing else. Copy the "shape" from the supplied profile verbatim.
+Reply with a single JSON object conforming to the interpretation schema and nothing else. Copy the "shape" from the supplied profile verbatim. Always include "nl_rendering": one plain-English sentence stating this reading, including what happens outside the change zone.
 ## user
 Original function signature: ${signature}
 Caller profile (shape) to copy verbatim: ${shape_candidates}
