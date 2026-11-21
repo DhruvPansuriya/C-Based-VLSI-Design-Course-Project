@@ -1,0 +1,691 @@
+{
+  "task_id": "chrysalis_chstone_filtep_use",
+  "request_id": "original",
+  "sha256": "13de0571b4a447d020cd0f292f5d2a6e1564cc062f88224f9f7c52c677390eb8",
+  "members": [
+    {
+      "id": "chrysalis_chstone_filtep_use.groq_gptoss.strict.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "prompt": "strict",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "rlt1": [
+            -1000,
+            1000
+          ],
+          "al1": [
+            -1000,
+            1000
+          ],
+          "rlt2": [
+            -1000,
+            1000
+          ],
+          "al2": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_ret == old_ret"
+        }
+      ],
+      "ext": "out_ret == old_ret",
+      "reach": "true",
+      "nl_rendering": "Treat the relevant value as unsigned, otherwise keep the original behavior unchanged.",
+      "request_type": "T1"
+    },
+    {
+      "id": "chrysalis_chstone_filtep_use.groq_gptoss.permissive.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "prompt": "permissive",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "rlt1": [
+            -1000,
+            1000
+          ],
+          "al1": [
+            -1000,
+            1000
+          ],
+          "rlt2": [
+            -1000,
+            1000
+          ],
+          "al2": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_ret == old_ret"
+        }
+      ],
+      "ext": "out_ret == old_ret",
+      "reach": "true",
+      "nl_rendering": "The function now uses the intended unsigned interpretation for the value that was previously sign\u2011extended, while all other observable behavior remains exactly as before.",
+      "request_type": "T1"
+    },
+    {
+      "id": "chrysalis_chstone_filtep_use.groq_gptoss.adversarial.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "prompt": "adversarial",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "rlt1": [
+            -1000,
+            1000
+          ],
+          "al1": [
+            -1000,
+            1000
+          ],
+          "rlt2": [
+            -1000,
+            1000
+          ],
+          "al2": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_ret == (old_ret & UINT16_MAX)"
+        }
+      ],
+      "ext": "out_ret == old_ret",
+      "reach": "true",
+      "nl_rendering": "Interpret the bug as the function returning a 16\u2011bit unsigned value that was sign\u2011extended to a signed int; fix it by masking the result to 16 bits while leaving all other behavior unchanged.",
+      "request_type": "T1"
+    },
+    {
+      "id": "chrysalis_chstone_filtep_use.groq_qwen.strict.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "prompt": "strict",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "rlt1": [
+            -1000,
+            1000
+          ],
+          "al1": [
+            -1000,
+            1000
+          ],
+          "rlt2": [
+            -1000,
+            1000
+          ],
+          "al2": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_ret == (rlt1 + al1 + rlt2 + al2)",
+          "nl_trace": "Fix the conversion so the intended (unsigned) value is used",
+          "uses_old_output": false
+        }
+      ],
+      "ext": "unknown",
+      "reach": "true",
+      "nl_rendering": "The function returns the sum of rlt1, al1, rlt2, and al2, ensuring that values are treated as unsigned to prevent sign-extension errors, while all other behaviour remains unchanged.",
+      "request_type": "T1"
+    },
+    {
+      "id": "chrysalis_chstone_filtep_use.groq_qwen.permissive.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "prompt": "permissive",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "rlt1": [
+            -1000,
+            1000
+          ],
+          "al1": [
+            -1000,
+            1000
+          ],
+          "rlt2": [
+            -1000,
+            1000
+          ],
+          "al2": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_ret == old_ret",
+          "nl_trace": "keep all other behaviour unchanged",
+          "uses_old_output": true
+        }
+      ],
+      "ext": "out_ret == old_ret",
+      "reach": "true",
+      "nl_rendering": "The function should behave exactly as the original for all inputs, as the specific sign-extension fix is not formally determinable from the request without the original code, but the intent is to correct the value calculation while preserving the overall structure.",
+      "request_type": "T1"
+    },
+    {
+      "id": "chrysalis_chstone_filtep_use.groq_qwen.adversarial.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "prompt": "adversarial",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "rlt1": [
+            -1000,
+            1000
+          ],
+          "al1": [
+            -1000,
+            1000
+          ],
+          "rlt2": [
+            -1000,
+            1000
+          ],
+          "al2": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_ret == (rlt1 + al1 + rlt2 + al2)",
+          "nl_trace": "Fix the conversion so the intended (unsigned) value is used",
+          "uses_old_output": false
+        }
+      ],
+      "ext": "out_ret == old_ret",
+      "reach": "true",
+      "nl_rendering": "The function must return the exact arithmetic sum of the four integer inputs, treating them as their raw bit patterns to avoid sign-extension artifacts, while preserving the original behavior for all inputs where the original function was already correct.",
+      "request_type": "T1"
+    }
+  ],
+  "generation": {
+    "runs": 1,
+    "families": [
+      "groq_gptoss",
+      "groq_qwen"
+    ],
+    "p1_seen_by_any_llm": false,
+    "live_families": [
+      "groq_gptoss",
+      "groq_qwen"
+    ],
+    "independent_live_family_count": 2,
+    "prompts": {
+      "typing": {
+        "version": "1",
+        "sha256": "d205e470414fbf901f6218f7626634a03bb6d50f2db5e3d606e651cb175b48ba"
+      },
+      "shape": {
+        "version": "1",
+        "sha256": "fd83396fa193d2a4db032be30085eee0a8e8594a06fc7300e2cb17c4e70c16e9"
+      },
+      "strict": {
+        "version": "2",
+        "sha256": "cad4e4428f3ab5a291b0c5c870865cc81dd8aa058e63a48d591e241094ee868e"
+      },
+      "permissive": {
+        "version": "2",
+        "sha256": "7e1436cc35c5dfff8ad88b8c8b6de1001313092ec7ccceaeeb7d7467025710fa"
+      },
+      "adversarial": {
+        "version": "2",
+        "sha256": "42a00cce3b2df6fe11fd008694b028fe31e08bb332977b19778e03c079190a52"
+      }
+    },
+    "shape_policy": "caller profile copied into every reading; model shape retained in records"
+  },
+  "records": [
+    {
+      "family": "groq_gptoss",
+      "prompt": "typing",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "typing",
+          "version": "1",
+          "sha256": "d205e470414fbf901f6218f7626634a03bb6d50f2db5e3d606e651cb175b48ba"
+        },
+        "schema_sha256": "63850d6960ea3c85c4624a40561308eff2998d791e4ded34ab849d7ae41850c2",
+        "attempts": [
+          {
+            "request_key": "0e05b70a24259f74e72e1d1426071e9728c83458cb5a41caf310506632657fbc",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "family": "groq_gptoss",
+      "prompt": "shape",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "shape",
+          "version": "1",
+          "sha256": "fd83396fa193d2a4db032be30085eee0a8e8594a06fc7300e2cb17c4e70c16e9"
+        },
+        "schema_sha256": "330d8e128137e475be2b723200eef319a85b19f8108c16abf37ad52db991add0",
+        "attempts": [
+          {
+            "request_key": "dc7f5f456d27952a0d7650c3a48ff3e0818c8597a0593d3fc738bc7bd3b82aa6",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "agrees_with_caller_profile": true
+    },
+    {
+      "family": "groq_gptoss",
+      "prompt": "strict",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "strict",
+          "version": "2",
+          "sha256": "cad4e4428f3ab5a291b0c5c870865cc81dd8aa058e63a48d591e241094ee868e"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "4f7f56170df0d18488cc24d3565ff7cb3982aac1f8cf8ba5f6518980e4289051",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true,
+      "model_shape_replaced": false
+    },
+    {
+      "family": "groq_gptoss",
+      "prompt": "permissive",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "permissive",
+          "version": "2",
+          "sha256": "7e1436cc35c5dfff8ad88b8c8b6de1001313092ec7ccceaeeb7d7467025710fa"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "04145d782fd7c384bd6d021d954f218aac03a170fa3fc3bf2aea5d594c67ee90",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true,
+      "model_shape_replaced": false
+    },
+    {
+      "family": "groq_gptoss",
+      "prompt": "adversarial",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "adversarial",
+          "version": "2",
+          "sha256": "42a00cce3b2df6fe11fd008694b028fe31e08bb332977b19778e03c079190a52"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "a786c8f5a25d1297424cdcb8935e0c0f5ebcb797c50063c3c4c82e6e59322866",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "typing",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "typing",
+          "version": "1",
+          "sha256": "d205e470414fbf901f6218f7626634a03bb6d50f2db5e3d606e651cb175b48ba"
+        },
+        "schema_sha256": "63850d6960ea3c85c4624a40561308eff2998d791e4ded34ab849d7ae41850c2",
+        "attempts": [
+          {
+            "request_key": "c73347d87c822b2a7dd3ceafecbd8786940b6ca30f528ec905910f9e992bc2a6",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "shape",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "shape",
+          "version": "1",
+          "sha256": "fd83396fa193d2a4db032be30085eee0a8e8594a06fc7300e2cb17c4e70c16e9"
+        },
+        "schema_sha256": "330d8e128137e475be2b723200eef319a85b19f8108c16abf37ad52db991add0",
+        "attempts": [
+          {
+            "request_key": "107e617ad7a5de583f39fa3d56b6811b00cfd08aee096cb5343b0936aa37ecc4",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "agrees_with_caller_profile": true
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "strict",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "strict",
+          "version": "2",
+          "sha256": "cad4e4428f3ab5a291b0c5c870865cc81dd8aa058e63a48d591e241094ee868e"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "db0031ed1273aee47b9998ca4cdcff0ba42b24788930e0e5e30f2685a96dbfda",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true,
+      "model_shape_replaced": false
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "permissive",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "permissive",
+          "version": "2",
+          "sha256": "7e1436cc35c5dfff8ad88b8c8b6de1001313092ec7ccceaeeb7d7467025710fa"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "102561b5202baa3eb479178c22d0f927f74f6aa404096ba367b0db2c1b7a0807",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true,
+      "model_shape_replaced": false
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "adversarial",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "adversarial",
+          "version": "2",
+          "sha256": "42a00cce3b2df6fe11fd008694b028fe31e08bb332977b19778e03c079190a52"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "1e0513ffc6059a23687ed2cbcdf5efa245d30b7f96fd29b2e2744c897341223c",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true
+    }
+  ]
+}

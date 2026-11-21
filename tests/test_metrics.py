@@ -53,6 +53,7 @@ def test_paired_comparison_is_per_task_not_per_candidate():
     # five candidate wins in t1 count as ONE task win; t2 is one task loss
     assert (p["wins"], p["losses"], p["tasks_compared"]) == (1, 1, 2)
     assert p["net_right_decisions"] == 4 and p["sign_test_p"] == 1.0
+    assert p["net_wrong_decisions"] == -5 and (p["tasks_fewer_wrong"], p["tasks_more_wrong"]) == (1, 0)
 
 
 def test_cluster_bootstrap_is_deterministic_and_needs_two_tasks():
@@ -77,5 +78,5 @@ def test_report_writer_lists_every_wrong_decision(tmp_path):
     errors = (tmp_path / "errors.md").read_text()
     assert "**vwe** t1/a: REJECT E1" in errors and "**tests_only** t2/c: ACCEPT" in errors
     summary_md = (tmp_path / "summary.md").read_text()
-    assert "| vwe | 3 | 2 |" in summary_md and "Paired task-level comparison" in summary_md
+    assert "| vwe | 3 | 2 |" in summary_md and "fewer wrong" in summary_md
     assert "| OOB |" in summary_md

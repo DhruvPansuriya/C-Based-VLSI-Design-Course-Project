@@ -101,14 +101,16 @@ def write_reports(rows: list[M.Row], reasons: dict, bug_type: dict, out: Path, n
         lines.append(f"| {name} | {m['decided']} | {fmt(m['coverage'])} | {fmt(m['accept_precision'])} | "
                      f"{fmt(m['reject_precision'])} | {m['wrong']} |")
     lines += ["", "## Paired task-level comparison (method vs baseline)", "",
-              "| baseline | tasks | method better | baseline better | ties | net right decisions | sign-test p |",
-              "|---|---|---|---|---|---|---|"]
+              "Right decisions reward coverage; wrong decisions reward abstaining. Both are shown.", "",
+              "| baseline | tasks | more right (method/baseline) | net right | sign p | fewer wrong (method/baseline) | net wrong | sign p |",
+              "|---|---|---|---|---|---|---|---|"]
     for s in systems:
         if s == "vwe":
             continue
         p = M.paired_by_task(vwe_rows, [r for r in rows if r.system == s])
-        lines.append(f"| {s} | {p['tasks_compared']} | {p['wins']} | {p['losses']} | {p['ties']} | "
-                     f"{p['net_right_decisions']} | {fmt(p['sign_test_p'], 3)} |")
+        lines.append(f"| {s} | {p['tasks_compared']} | {p['wins']}/{p['losses']} | {p['net_right_decisions']} | "
+                     f"{fmt(p['sign_test_p'], 3)} | {p['tasks_fewer_wrong']}/{p['tasks_more_wrong']} | "
+                     f"{p['net_wrong_decisions']} | {fmt(p['wrong_sign_test_p'], 3)} |")
     lines += ["", "## Breakdown by bug type (method)", "", "| bug type | labelled | decided | wrong |", "|---|---|---|---|"]
     for k, m in M.breakdown(vwe_rows, bug_type).items():
         lines.append(f"| {k} | {m['labelled']} | {m['decided']} | {m['wrong']} |")
@@ -121,6 +123,11 @@ def write_reports(rows: list[M.Row], reasons: dict, bug_type: dict, out: Path, n
     lines += [f"- {n} x {k}" for k, n in sorted(counts.items(), key=lambda x: -x[1])]
     (out / "summary.md").write_text("\n".join(lines) + "\n")
     errs = ["# Wrong decisions (audit)", "",
+            "Explanations by system: **tests_only** accepts any candidate that runs without a sanitizer "
+            "finding, so functionally wrong but crash-free mutants are accepted. **regression_only** checks "
+            "only outside the strict reading's region: it accepts changes inside that region and, where the "
+            "generated region is narrower than the true fix, rejects P_ref itself (its witnesses are not "
+            "replayed). Any **vwe** entry is listed individually and must be investigated.", "",
             "Every ACCEPT of an incorrect candidate or REJECT of a correct one, per system. Each must be "
             "explained (bad label, reading miss, or tool/implementation bug). Wrong E0/E1 verdicts of the "
             "method are claimed impossible and fail the run.", ""]

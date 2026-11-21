@@ -65,7 +65,8 @@ def main() -> int:
                   "that generation, freezing and verification preserve verdicts. It is not evidence about "
                   "model quality.")
     lines = ["# Auto versus handwritten interpretations (examples 1, 2, 4)", "", header, "",
-             "| task | candidate | handwritten | auto (mock fixtures) | |", "|---|---|---|---|---|"]
+             f"| task | candidate | handwritten | auto ({'live' if live else 'mock fixtures'}) | |",
+             "|---|---|---|---|---|"]
     lines += [f"| {r[0]} | {r[1]} | {r[2]} | {r[3]} | {r[4]} |" for r in rows]
     lines += ["", f"Differences: {differences} of {len(rows)}."]
     if differences:
