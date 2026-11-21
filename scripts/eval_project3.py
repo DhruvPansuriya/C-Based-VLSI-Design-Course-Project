@@ -12,6 +12,7 @@ from collections import Counter, defaultdict
 import json
 from pathlib import Path
 import sys
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from time import monotonic
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -72,6 +73,14 @@ def summarise(rows: list[dict], out: Path, config: str) -> None:
     (out / "summary.md").write_text("\n".join(lines) + "\n")
 
 
+def _one(task_dir: Path, cid: str, config: str, runs_root: str) -> dict:
+    start = monotonic()
+    data = verify(task_dir, cid, load_config(config), "handwritten", runs_root=Path(runs_root)).data
+    return {"task": task_dir.name, "candidate": cid, "decision": data["decision"],
+            "evidence_class": data["evidence_class"], "reason": data["reason"],
+            "seconds": round(monotonic() - start, 1)}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--tasks", type=Path, default=ROOT / "benchmarks/project3/tasks")
@@ -79,8 +88,8 @@ def main() -> int:
     ap.add_argument("--out", type=Path, default=ROOT / "results/eval_project3")
     ap.add_argument("--runs-root", type=Path, default=ROOT / "runs/eval_project3")
     ap.add_argument("--resume", action="store_true", help="reuse rows already in raw.jsonl")
+    ap.add_argument("--jobs", type=int, default=1)
     args = ap.parse_args()
-    cfg = load_config(args.config)
     args.out.mkdir(parents=True, exist_ok=True)
     raw_path = args.out / "raw.jsonl"
     done = {}
@@ -88,22 +97,18 @@ def main() -> int:
         for line in raw_path.read_text().splitlines():
             r = json.loads(line)
             done[(r["task"], r["candidate"])] = r
-    verdicts = []
-    for task_dir in sorted(p for p in args.tasks.iterdir() if (p / "task.json").is_file()):
-        manifest = json.loads((task_dir / "task.json").read_text())
-        for cid in sorted(manifest["candidates"]):
-            if (task_dir.name, cid) in done:
-                verdicts.append(done[(task_dir.name, cid)])
-                continue
-            start = monotonic()
-            data = verify(task_dir, cid, cfg, "handwritten", runs_root=args.runs_root).data
-            v = {"task": task_dir.name, "candidate": cid, "decision": data["decision"],
-                 "evidence_class": data["evidence_class"], "reason": data["reason"],
-                 "seconds": round(monotonic() - start, 1)}
-            verdicts.append(v)
+    units = [(task_dir, cid) for task_dir in sorted(p for p in args.tasks.iterdir() if (p / "task.json").is_file())
+             for cid in sorted(json.loads((task_dir / "task.json").read_text())["candidates"])]
+    todo = [u for u in units if (u[0].name, u[1]) not in done]
+    with ProcessPoolExecutor(max_workers=max(1, args.jobs)) as pool:
+        futures = [pool.submit(_one, task_dir, cid, str(args.config), str(args.runs_root)) for task_dir, cid in todo]
+        for future in as_completed(futures):
+            v = future.result()
+            done[(v["task"], v["candidate"])] = v
             with raw_path.open("a") as stream:  # verdict only; labels are joined below
                 stream.write(json.dumps(v) + "\n")
-            print(task_dir.name, cid, v["decision"], v["evidence_class"], v["seconds"], flush=True)
+            print(v["task"], v["candidate"], v["decision"], v["evidence_class"], v["seconds"], flush=True)
+    verdicts = [done[(t.name, c)] for t, c in units]
     rows = []
     for v in verdicts:
         ev = json.loads((args.tasks / v["task"] / "eval/project3.json").read_text())
