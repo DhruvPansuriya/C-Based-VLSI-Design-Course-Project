@@ -3,7 +3,7 @@
 
 ## Current implementation
 
-Work proceeds on `implementation-start`. See [progress](plan/PROGRESS.md) and the [independent ZIP review](docs/CLAUDE_IMPORT_REVIEW.md), which records required soundness corrections before later tasks. The general `vwe verify` pipeline is not implemented yet.
+Work proceeds on `implementation-start`. See [progress](plan/PROGRESS.md) and the [independent ZIP review](docs/CLAUDE_IMPORT_REVIEW.md), which records required soundness corrections before later tasks. The bounded `vwe verify` pipeline is implemented for handwritten interpretations, with generated proof jobs, SAT/Z3 agreement, JSON/HTML reports and native sanitizer replay. Automatic interpretation generation remains planned.
 
 ```bash
 python3 -m venv .venv
@@ -13,11 +13,13 @@ make test
 make golden
 ```
 
-T01 adds three schema-validated task folders in `examples/tasks/` and `vwe.tasks.load_pipeline_view`. The immutable pipeline view excludes `eval_only`, acceptable-reading labels and all evaluation file contents; path traversal and symlinks into `eval/` are rejected. `load_full` is reserved for evaluation. The deliberately invalid n-1 reading is retained for future semantic validation.
+T01 adds three schema-validated task folders in `examples/tasks/` and `vwe.tasks.load_pipeline_view`. The immutable pipeline view excludes `eval_only`, acceptable-reading labels and all evaluation file contents; path traversal and symlinks into `eval/` are rejected. `load_full` is reserved for evaluation. The deliberately invalid n-1 reading is retained by the loader and discarded only after semantic validation establishes its invalidity.
 
 T02 adds structural admission and isolated simulation/synthesis analysis views. Run `make admission` for the three example tasks; artifacts record hashes, globals, pragmas, missing-body checks and remaining obligations. Structural `ok` is not a correctness verdict. See [T02 details](docs/T02_ADMISSION.md).
 
 T03 adds the restricted contract grammar, type checker and C observer emitter. Run `make contracts` to emit the stored examples without claiming validation; see [contract details](docs/T03_CONTRACTS.md).
+
+T10 is in progress: `make golden` runs the public pipeline on 13 candidates from Examples 1–4, including the collapsed-scope rounding example. Its expected verdicts are documented before execution in the task README. Examples 5–7 remain to be added. The independent handwritten harness runner is retained as `scripts/run_handwritten_examples.py`.
 
 Native CBMC 6.11.0 and Z3 are needed for the golden integration test; it is skipped when CBMC is absent. Linux tool installation is `bash tools/install_tools.sh`; macOS must use qualified native tools. The Docker recipe has not been run here and is not a sealed image.
 
@@ -51,7 +53,7 @@ it returns **ACCEPT / REJECT / UNDECIDED** with an evidence class (E0 computed, 
 | CBMC runner (pinned flags, JSON parsing, witness extraction) | `vwe/tools/cbmc.py` | implemented |
 | Verdict rules (draft §5.2) | `vwe/verdict.py` | implemented, unit-tested including Lemma 5 |
 | JSON Schemas (interpretation, interpretation set, task, verdict report) | `schemas/`, `vwe/schemas.py` | implemented, tested |
-| Golden harnesses for draft Examples 1, 2, 4 (10 candidates) | `spikes/examples/`, `scripts/run_golden_examples.py` | 10/10 verdicts match the draft (SAT and Z3 agree) |
+| Golden harnesses for draft Examples 1, 2, 4 (10 candidates) | `spikes/examples/`, `scripts/run_handwritten_examples.py` | 10/10 verdicts match the draft (SAT and Z3 agree) |
 | Tool-behaviour spikes T01–T06 (path cuts, missing bodies, abort, buffer sizing, nondeterminism, build views) | `spikes/tool_behaviour/` | logs in `results/tool_behaviour/` |
 | Native pre-pass and witness replay with ASan/UBSan | `vwe/replay.py`, [T09 guide](docs/T09_NATIVE.md) | implemented; fixed-input solver rechecks and executable contract checks |
 
@@ -61,7 +63,7 @@ it returns **ACCEPT / REJECT / UNDECIDED** with an evidence class (E0 computed, 
 tools/install_tools.sh                  # CBMC 6.11.0, ESBMC 8.7.0, Z3 5.4.1 (pinned)
 export PATH=/opt/cbmc/usr/bin:/opt/esbmc/release/bin:$PATH
 python3 -m pytest -q tests              # unit + schema + golden end-to-end
-python3 scripts/run_golden_examples.py  # prints each verdict with its witness
+python3 scripts/run_handwritten_examples.py  # independent original harness check
 spikes/tool_behaviour/run_spikes.sh     # re-runs the tool-behaviour spikes
 ```
 

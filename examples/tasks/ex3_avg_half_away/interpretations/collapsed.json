@@ -1,0 +1,31 @@
+{
+  "id": "ex3_avg_half_away.collapsed",
+  "provenance": {
+    "source": "handwritten"
+  },
+  "request_type": "T2",
+  "shape": {
+    "buffers": {},
+    "alias": "disjoint",
+    "bounds": {},
+    "value_bounds": {
+      "a": [
+        -1000,
+        1000
+      ],
+      "b": [
+        -1000,
+        1000
+      ]
+    }
+  },
+  "clauses": [
+    {
+      "zone": "a + b < 0 && (a + b) % 2 != 0",
+      "behaviour": "out_ret == (a + b) / 2 - 1"
+    }
+  ],
+  "ext": "out_ret == ((a + b) / 2 + ((a + b) % 2 == 0 ? 0 : (a + b > 0 ? 1 : -1)))",
+  "reach": "a + b < 0 && (a + b) % 2 != 0",
+  "nl_rendering": "Deliberately collapsed negative-odd zone; full half-away rule in Ext."
+}

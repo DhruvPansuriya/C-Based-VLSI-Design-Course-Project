@@ -26,5 +26,6 @@ T08 applies to the explicit initialized, disjoint caller profile in the task
 file. It leaves different surviving input profiles unresolved until separate
 profile proofs can be combined. E2 is conditional on a sound or complete
 reading of the intended request, as appropriate. Repair correctness and
-synthesis readiness have separate report fields. Automatic interpretation,
-native witness replay, pragma obligations, and synthesis remain later tasks.
+synthesis readiness have separate report fields. T09 adds native witness replay and acceptance differential checks; see
+[T09_NATIVE.md](T09_NATIVE.md). Automatic interpretation, pragma obligations,
+and synthesis remain later tasks.

@@ -4,8 +4,11 @@ import json
 
 from vwe.pipeline import verify
 from vwe.schemas import validate
-from .test_harness_equivalence import CASES
+from .test_harness_equivalence import EXPECTED
 from .test_harness_generator import EXAMPLES, REAL
+
+CASES = [(name, int(i), want) for name, variants in EXPECTED.items()
+         if not name.startswith("_") for i, want in variants.items()]
 
 
 @REAL
@@ -22,6 +25,9 @@ def test_reports_for_all_golden_candidates(tmp_path):
             witness = report.data["witness"]
             assert int(witness["inputs"]["n"]) >= 2
             assert witness["p0_output"]["idx[0]"] != witness["p1_output"]["idx[0]"]
+        if task == "ex3_avg_half_away" and variant == 1:
+            assert "scope disagreement" in report.data["reason"]
+            assert report.data["witness"]
         if want[0] == "ACCEPT":
             assert report.data["facts"]["synthesis_ready"] == "inconclusive"
             assert report.data["scope"]["native_acceptance"].startswith("confirmed:"), report.data
