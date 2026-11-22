@@ -15,8 +15,7 @@ contracts:
 spikes:
 	bash spikes/tool_behaviour/run_spikes.sh
 demo:
-	@echo "T11 demo is not implemented yet; use make golden for the existing prototype."
-	@exit 2
+	$(PYTHON) scripts/demo.py --out runs/demo
 eval:
 	@echo "T18 evaluation is not implemented yet."
 	@exit 2

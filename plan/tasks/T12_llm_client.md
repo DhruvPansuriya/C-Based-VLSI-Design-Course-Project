@@ -19,7 +19,7 @@ A single, safe way to call LLMs that makes the "no LLM ever sees P1" rule struct
 5. **Isolation tests (`tests/test_llm_isolation.py`):**
    - **(a) static:** `RequestContext` fields contain nothing typed as a candidate or path to `candidates/`;
    - **(b) canary:** insert the string `CANARY_P1_7f3a` into a candidate file, run the full pipeline with `--auto` using `MockProvider` (which records all prompts), and assert the canary never appears in any recorded prompt;
-   - **(c)** the FIFO structural-summary exception (T21) is the only other entry point, and it is tested separately.
+   - **(c)** there is no FIFO structural-summary exception. P1-derived state names and types must never enter a prompt. T21 uses deterministic/template invariants, and every generation entry point must pass the same canary boundary checks (see AGENTS.md and the import review).
 
 ## Acceptance criteria
 
