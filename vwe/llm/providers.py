@@ -126,7 +126,7 @@ class _HttpProvider:
                                       f"{self.api_key_env or '-'} unset and no key file)")
         return key
 
-    RETRY_DELAYS = (2.0, 8.0, 30.0)
+    RETRY_DELAYS = (5.0, 20.0, 60.0, 60.0)  # spans a per-minute token window
 
     def _post(self, headers: Mapping[str, str], payload: Mapping[str, Any]) -> Any:
         body = json.dumps(payload).encode()
