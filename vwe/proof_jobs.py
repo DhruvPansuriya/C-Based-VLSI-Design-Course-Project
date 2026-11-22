@@ -142,6 +142,8 @@ def run_job(bundle: HarnessBundle, *, config: Config | None = None,
                 prop, frozenset(bundle.program_symbols[1]))
         if bundle.kind == "contract_ub":
             return prop.property_id.startswith("vwe_observer_") or prop.description == "VWE.contract.evaluated"
+        if bundle.kind == "scope":
+            return prop.description == "VWE.scope.agreement"
         if bundle.kind == "e1":
             return prop.description == "VWE.E1.preservation"
         return prop.description == "VWE." + bundle.kind + ".equivalence"

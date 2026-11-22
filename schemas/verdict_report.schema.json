@@ -11,6 +11,8 @@
     "decision": {"enum": ["ACCEPT", "REJECT", "UNDECIDED"]},
     "evidence_class": {"enum": ["E0", "E1", "E2", "E3", "-"]},
     "reason": {"type": "string"},
+    "claim_target": {"enum": ["repair_correctness", "admission_policy", "build_view_consistency", "none"]},
+    "interpretations": {"type": "array", "items": {"type": "object"}},
     "conditional": {"type": "string", "description": "printed hypothesis under which the verdict is correct"},
     "witness": {
       "type": ["object", "null"],
