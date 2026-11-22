@@ -36,3 +36,10 @@ Details and scenarios: `docs/CLAUDE_IMPORT_REVIEW.md`.
 - Q18: standard headers containing GCC/Clang extensions may be unrepresentable to pycparser. Current answer is UNDECIDED, not attribute erasure. A richer parser or expanded qualified frontend profile is future work.
 - Q19: general local dependency snapshots, global pointer aliasing, and source-level macro idioms outside the closed dependency profile need qualification. Current frontend abstains on unsupported forms.
 - Q20: AST alpha renaming is a trusted implementation component. Scope/collision/native regression tests exist; a universal compiler-correctness proof is not claimed. Function-name introspection is excluded so renaming cannot silently change it.
+
+
+## T03 contract profile — 22 November 2026
+
+- Q21 resolved for the initial implementation: finite quantifiers lower to checked loops; no unverified solver-quantifier feature is required. Range/complexity limits are explicit UNKNOWN capabilities.
+- Q22: signed64 widening is not universal UB-freedom. V-G must check overflow/division/index/old-read guards; unsigned64/full mathematical integers and __int128 remain unsupported observer profiles until qualified.
+- Q23 resolved locally: generated observers agree with an independent evaluator on525 cases; a real CBMC test detects an eager exists-body OOB after an earlier true witness. These are regression/qualification evidence, not formal correctness of the translation.

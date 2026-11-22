@@ -17,6 +17,8 @@ T01 adds three schema-validated task folders in `examples/tasks/` and `vwe.tasks
 
 T02 adds structural admission and isolated simulation/synthesis analysis views. Run `make admission` for the three example tasks; artifacts record hashes, globals, pragmas, missing-body checks and remaining obligations. Structural `ok` is not a correctness verdict. See [T02 details](docs/T02_ADMISSION.md).
 
+T03 adds the restricted contract grammar, type checker and C observer emitter. Run `make contracts` to emit the stored examples without claiming validation; see [contract details](docs/T03_CONTRACTS.md).
+
 Native CBMC 6.11.0 and Z3 are needed for the golden integration test; it is skipped when CBMC is absent. Linux tool installation is `bash tools/install_tools.sh`; macOS must use qualified native tools. The Docker recipe has not been run here and is not a sealed image.
 
 ## Implementation plan (for the coding agent)
