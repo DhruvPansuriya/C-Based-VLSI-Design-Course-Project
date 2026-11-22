@@ -9,7 +9,7 @@ and the evidence; "not built" means not built.
 | Draft stage | Implemented as | Evidence / limits |
 |---|---|---|
 | 1 Admission and build views | `vwe/admission.py`, `vwe/views.py`, `vwe/c_frontend.py` | sim/synth views, forbidden constructs, unmodelled calls, new globals and interface changes; restricted C subset (`docs/T02_ADMISSION.md`) |
-| 2 Interpretation set, never reads P1 | handwritten JSON, or `vwe/interpret.py` + `vwe/llm/` (strict, permissive, adversarial, typing, shape prompts) | `RequestContext` has no candidate field; canary tests through `--auto` (`tests/test_llm_isolation.py`, `tests/test_interpret.py`). **Live generation not yet observed** (OpenAI account has no credit, Q24). Computed T3/T5 readings not built |
+| 2 Interpretation set, never reads P1 | handwritten JSON, or `vwe/interpret.py` + `vwe/llm/` (strict, permissive, adversarial, typing, shape prompts) | `RequestContext` has no candidate field; canary tests through `--auto`. Live generation verified with two families on Groq (gpt-oss-120b, Qwen 3.8-27B); OpenAI wired but without credit. Computed T5 preservation readings are used for EVAL-P3; computed T3 readings are not built |
 | 3 Objective validation, P0 only | `vwe/validate.py`, `vwe/regions.py` | V-G..V-4 with UNKNOWN kept; exact UB region only with both inclusions (import-review correction); `docs/T06_REGIONS.md`, `docs/T07_VALIDATION.md` |
 | 4 Differential pre-pass | `vwe/replay.py` (native sampling as hints only) | hints are re-proved formally before use |
 | 5 Formal checking | `vwe/harness/`, `vwe/proof_jobs.py`, `vwe/tools/cbmc.py` | mandatory `BASE_FLAGS`, exact-size `malloc`, audited path cuts, SAT and Z3 must agree; `docs/T05_VERIFICATION.md` |
@@ -31,12 +31,16 @@ accuracy estimate. Example 8 (FIFO) and Section 10 (temporal track, T21) are not
 | Draft plan | What exists | Deviation |
 |---|---|---|
 | ~20 tasks, human-authored requests, independent `phi_ref` (11.1–11.3) | 20 Chrysalis-HLS tasks (`docs/T15_BENCHMARKS.md`) | requests are fixed per-bug-type templates; `phi_ref` = equality with P_ref; sizes scaled to K=4 with an explicit value profile; one agent, no independent authors |
-| candidate pool incl. LLM fixes (11.4) | P_ref, unchanged P0, deterministic mutants (`docs/T16_POOLS.md`) | no LLM fixes (no credit) |
+| candidate pool incl. LLM fixes (11.4) | P_ref, unchanged P0, deterministic mutants (`docs/T16_POOLS.md`) | LLM candidate generation is implemented (`vwe/eval/candidate_gen.py`) but was not run, to conserve the free-tier token budget |
 | ground truth | formal identity vs P_ref + native differential testing, conservative combination | the formal half reuses this verifier; labels are for the bounded profile |
 | baselines B1–B4 (11.5) | B1 tests-only (crash/UB), B3 strict-only pipeline, B4 regression-only E1 | **B2 LLM-as-judge not built**: it sends P1 to an LLM (AGENTS.md rule 1) |
 | per-candidate McNemar, evidence-class risk–coverage (11.6) | task-clustered bootstrap, task-level sign test, predeclared policies (`vwe/eval/metrics.py`) | import-review statistical corrections |
 
-Results: `results/eval/summary.md`, `results/eval/errors.md` (written by `make eval`).
+Results: `results/eval/summary.md`, `results/eval/errors.md` (written by `make eval`), and
+`docs/T18_EVAL.md`. Summary: on 89 labelled Chrysalis candidates the method decides 1 (correct)
+and abstains on the rest; tests-only and regression-only baselines make 41 and 10 wrong
+decisions. A separate evaluation on the Project 3 team's 181 equivalence candidates
+(`docs/EVAL_P3.md`) gives 125 decisions, all agreeing with their labels.
 
 ## HLS integration (draft Section 12)
 
