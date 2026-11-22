@@ -1,0 +1,28 @@
+{
+  "tool": "HLSCheck",
+  "algorithm": "certified relational summaries with residual-C abstraction/refinement",
+  "status": "unsupported",
+  "source_sha256": {
+    "original": "966bfcab111db30808da089a868f990161e9e1ece3060b3cb491ae034ec80763",
+    "candidate": "6bc5bf3974c52a42e1e15ae7d9d5031c3feae4912440bc42eb9238cbdf0eac73"
+  },
+  "upstream_components": [
+    "Z3",
+    "ESBMC"
+  ],
+  "proof_dependencies": [],
+  "refinements": [],
+  "obligations": [],
+  "engine_selection": "No router: ESBMC checks the residual C product; custom SMT proofs justify region abstraction.",
+  "implementation_sha256": {
+    "hybrid.py": "d1ccb49365d9731a7ab638c150c420c7efa04108c697df4c66cd3895f738b059",
+    "frontend.py": "c09f8778dbb1751a3c55c40b5871b65740e028f20d6601c5a108124d10c240a9",
+    "miter.py": "77d41c642d8fc5af346e865fd033a92791830cb61bc252792180ef077688831d",
+    "relational.py": "82a63ee02a1ac6d655d4c6011f45acfed7864d18cc02cdb2c329bf9ef0109618",
+    "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+    "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307"
+  },
+  "reason": "Calls/recursion require explicit function models",
+  "elapsed_seconds": 0.400599,
+  "artifact_sha256": {}
+}

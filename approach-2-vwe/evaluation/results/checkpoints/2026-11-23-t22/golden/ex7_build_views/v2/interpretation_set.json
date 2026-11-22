@@ -1,0 +1,44 @@
+{
+  "task_id": "ex7_build_views",
+  "members": [
+    {
+      "id": "ex7_build_views.identity",
+      "provenance": {
+        "source": "computed",
+        "computed_kind": "T5_identity"
+      },
+      "request_type": "T5",
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "x": [
+            -100,
+            100
+          ]
+        }
+      },
+      "clauses": [],
+      "ext": "out_ret == old_ret",
+      "reach": "false",
+      "nl_rendering": "Behavior-preserving transformation; no repair change zone."
+    }
+  ],
+  "sha256": "7f3d59d14303662f5c3a040c1d2b961462e6d1be6ddc3bfd48d15b23dfd95a1f",
+  "discarded": [],
+  "generation": {
+    "runs": 1,
+    "families": [
+      "handwritten"
+    ],
+    "p1_seen_by_any_llm": false
+  },
+  "informational": {
+    "equivalence_classes": [
+      [
+        "ex7_build_views.identity"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+#include <stdint.h>
+
+/* LLM rewrite: distributive factoring, valid in the uint32_t ring. */
+uint32_t kernel(uint32_t x, uint32_t y, uint32_t z) {
+    return x * (y + z);
+}

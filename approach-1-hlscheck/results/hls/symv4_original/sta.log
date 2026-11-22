@@ -1,0 +1,140 @@
+OpenSTA 2.0.18 41f678fb6a Copyright (c) 2019, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Warning: There are 43 unconstrained endpoints.
+  Mout_Wdata_ram[32]
+  Mout_Wdata_ram[33]
+  Mout_Wdata_ram[34]
+  Mout_Wdata_ram[35]
+  Mout_Wdata_ram[36]
+  Mout_Wdata_ram[37]
+  Mout_Wdata_ram[38]
+  Mout_Wdata_ram[39]
+  Mout_Wdata_ram[40]
+  Mout_Wdata_ram[41]
+  Mout_Wdata_ram[42]
+  Mout_Wdata_ram[43]
+  Mout_Wdata_ram[44]
+  Mout_Wdata_ram[45]
+  Mout_Wdata_ram[46]
+  Mout_Wdata_ram[47]
+  Mout_Wdata_ram[48]
+  Mout_Wdata_ram[49]
+  Mout_Wdata_ram[50]
+  Mout_Wdata_ram[51]
+  Mout_Wdata_ram[52]
+  Mout_Wdata_ram[53]
+  Mout_Wdata_ram[54]
+  Mout_Wdata_ram[55]
+  Mout_Wdata_ram[56]
+  Mout_Wdata_ram[57]
+  Mout_Wdata_ram[58]
+  Mout_Wdata_ram[59]
+  Mout_Wdata_ram[60]
+  Mout_Wdata_ram[61]
+  Mout_Wdata_ram[62]
+  Mout_Wdata_ram[63]
+  Mout_data_ram_size[0]
+  Mout_data_ram_size[10]
+  Mout_data_ram_size[1]
+  Mout_data_ram_size[2]
+  Mout_data_ram_size[3]
+  Mout_data_ram_size[4]
+  Mout_data_ram_size[6]
+  Mout_data_ram_size[7]
+  Mout_data_ram_size[8]
+  Mout_data_ram_size[9]
+  Mout_we_ram[1]
+Startpoint: reset (input port clocked by core_clock)
+Endpoint: _6928_ (recovery check against rising-edge clock core_clock)
+Path Group: **async_default**
+Path Type: max
+
+      Delay        Time   Description
+-----------------------------------------------------------------
+   0.000000    0.000000   clock core_clock (rise edge)
+   0.000000    0.000000   clock network delay (ideal)
+   0.000000    0.000000 ^ input external delay
+   0.000000    0.000000 ^ reset (in)
+   0.000017    0.000017 ^ _6928_/RN (DFFR_X1)
+               0.000017   data arrival time
+
+  10.000000   10.000000   clock core_clock (rise edge)
+   0.000000   10.000000   clock network delay (ideal)
+   0.000000   10.000000   clock reconvergence pessimism
+              10.000000 ^ _6928_/CK (DFFR_X1)
+   0.049035   10.049035   library recovery time
+              10.049035   data required time
+-----------------------------------------------------------------
+              10.049035   data required time
+              -0.000017   data arrival time
+-----------------------------------------------------------------
+              10.049018   slack (MET)
+
+
+Startpoint: M_Rdata_ram[32] (input port clocked by core_clock)
+Endpoint: _6965_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+      Delay        Time   Description
+-----------------------------------------------------------------
+   0.000000    0.000000   clock core_clock (rise edge)
+   0.000000    0.000000   clock network delay (ideal)
+   0.000000    0.000000 v input external delay
+   0.000000    0.000000 v M_Rdata_ram[32] (in)
+   0.065769    0.065769 v _3893_/ZN (AND4_X1)
+   0.085734    0.151502 v _3896_/ZN (OR3_X1)
+   0.043368    0.194871 v _3899_/ZN (AND3_X1)
+   0.089456    0.284327 v _3902_/ZN (OR3_X1)
+   0.045188    0.329515 v _3903_/ZN (AND3_X1)
+   0.089897    0.419411 v _3906_/ZN (OR3_X1)
+   0.044493    0.463904 v _3908_/ZN (AND3_X1)
+   0.088279    0.552183 v _3912_/ZN (OR3_X1)
+   0.049656    0.601839 v _3914_/ZN (AND3_X1)
+   0.090446    0.692285 v _3916_/ZN (OR3_X1)
+   0.045459    0.737744 v _3919_/ZN (AND3_X1)
+   0.055971    0.793715 v _3928_/ZN (OR2_X1)
+   0.045851    0.839566 v _3967_/ZN (XNOR2_X1)
+   0.048443    0.888008 ^ _3972_/ZN (OAI21_X1)
+   0.041342    0.929350 v _4073_/ZN (OAI211_X1)
+   0.054897    0.984247 ^ _4138_/ZN (AOI21_X1)
+   0.030748    1.014995 v _4205_/ZN (OAI21_X1)
+   0.052397    1.067392 ^ _4281_/ZN (AOI21_X1)
+   0.030748    1.098139 v _4359_/ZN (OAI21_X1)
+   0.052397    1.150537 ^ _4443_/ZN (AOI21_X1)
+   0.030748    1.181284 v _4536_/ZN (OAI21_X1)
+   0.048024    1.229308 ^ _4628_/ZN (AOI21_X1)
+   0.035883    1.265191 v _4839_/ZN (OAI211_X1)
+   0.053348    1.318539 ^ _5189_/ZN (AOI211_X1)
+   0.038249    1.356788 v _5318_/ZN (OAI211_X1)
+   0.054912    1.411700 ^ _5592_/ZN (AOI211_X1)
+   0.035161    1.446861 v _5735_/ZN (OAI21_X1)
+   0.053512    1.500372 ^ _5882_/ZN (AOI21_X1)
+   0.032690    1.533062 v _6036_/ZN (OAI21_X1)
+   0.049564    1.582626 ^ _6197_/ZN (AOI21_X1)
+   0.029988    1.612614 v _6363_/ZN (OAI21_X1)
+   0.052069    1.664683 ^ _6535_/ZN (AOI21_X1)
+   0.030748    1.695431 v _6701_/ZN (OAI21_X1)
+   0.038604    1.734035 v _6819_/ZN (AND3_X1)
+   0.078235    1.812270 ^ _6820_/ZN (OAI33_X1)
+   0.000009    1.812279 ^ _6965_/D (DFF_X1)
+               1.812279   data arrival time
+
+  10.000000   10.000000   clock core_clock (rise edge)
+   0.000000   10.000000   clock network delay (ideal)
+   0.000000   10.000000   clock reconvergence pessimism
+              10.000000 ^ _6965_/CK (DFF_X1)
+  -0.043018    9.956983   library setup time
+               9.956983   data required time
+-----------------------------------------------------------------
+               9.956983   data required time
+              -1.812279   data arrival time
+-----------------------------------------------------------------
+               8.144703   slack (MET)
+
+
+worst slack 8.144703

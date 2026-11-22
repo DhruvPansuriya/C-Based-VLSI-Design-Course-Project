@@ -1,0 +1,51 @@
+{
+  "id": "granite2",
+  "label": "Granite-3.3-2B-Instruct",
+  "organization": "IBM",
+  "model": {
+    "id": "granite2",
+    "label": "Granite-3.3-2B-Instruct",
+    "organization": "IBM",
+    "repo": "ibm-granite/granite-3.3-2b-instruct-GGUF",
+    "revision": "7cdf86ccd1f1bb3491c9b7017b033f2e51367397",
+    "file": "granite-3.3-2b-instruct-Q4_K_M.gguf",
+    "bytes": 1545303328,
+    "sha256": "ac71e9e32c0bea919b409c5918f69ca74339854b0319c5065e4e9fb6d95c4852"
+  },
+  "messages_sha256": "36f7b1c39b23bb166d4ea2355226c217f8d83e06edaca3f5daa7b15b28dba6f7",
+  "candidate_sha256": "8264f9466065baf125608667213a715e871299abcbcb977d5eac411d6417f411",
+  "raw_response_sha256": "0835ec6a2470b1c2aa5859a597ef18ff0f8a200ee5eb322d057244ea58d2e186",
+  "elapsed_seconds": 1.83,
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 111,
+    "prompt_tokens": 278,
+    "total_tokens": 389,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 278,
+    "prompt_ms": 423.426,
+    "prompt_per_token_ms": 1.523115107913669,
+    "prompt_per_second": 656.5491963176565,
+    "predicted_n": 111,
+    "predicted_ms": 1348.922,
+    "predicted_per_token_ms": 12.262927272727273,
+    "predicted_per_second": 81.5465979500668
+  },
+  "extraction": "largest fenced code block; no semantic edits",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0,
+  "sampling": {
+    "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\granite-3.3-2b-instruct-Q4_K_M.gguf",
+    "messages": "See request.json",
+    "stream": false,
+    "seed": 5291,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "max_tokens": 768
+  }
+}

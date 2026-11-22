@@ -1,0 +1,32 @@
+void kernel(unsigned int a[8], unsigned int out[6]) {
+unsigned int __summary_input_0[8];
+__summary_input_0[0]=a[0];
+__summary_input_0[1]=a[1];
+__summary_input_0[2]=a[2];
+__summary_input_0[3]=a[3];
+__summary_input_0[4]=a[4];
+__summary_input_0[5]=a[5];
+__summary_input_0[6]=a[6];
+__summary_input_0[7]=a[7];
+unsigned int __summary_input_1[6];
+__summary_input_1[0]=out[0];
+__summary_input_1[1]=out[1];
+__summary_input_1[2]=out[2];
+__summary_input_1[3]=out[3];
+__summary_input_1[4]=out[4];
+__summary_input_1[5]=out[5];
+a[0]=__summary_input_0[0];
+a[1]=__summary_input_0[1];
+a[2]=__summary_input_0[2];
+a[3]=__summary_input_0[3];
+a[4]=__summary_input_0[4];
+a[5]=__summary_input_0[5];
+a[6]=__summary_input_0[6];
+a[7]=__summary_input_0[7];
+out[0]=((3u * __summary_input_0[0]) + (3u * __summary_input_0[2]) + (5u * __summary_input_0[1]));
+out[1]=((3u * __summary_input_0[1]) + (3u * __summary_input_0[3]) + (5u * __summary_input_0[2]));
+out[2]=((3u * __summary_input_0[2]) + (3u * __summary_input_0[4]) + (5u * __summary_input_0[3]));
+out[3]=((3u * __summary_input_0[3]) + (3u * __summary_input_0[5]) + (5u * __summary_input_0[4]));
+out[4]=((3u * __summary_input_0[4]) + (3u * __summary_input_0[6]) + (5u * __summary_input_0[5]));
+out[5]=((3u * __summary_input_0[5]) + (3u * __summary_input_0[7]) + (5u * __summary_input_0[6]));
+}

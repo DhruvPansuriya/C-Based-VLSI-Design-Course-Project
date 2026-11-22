@@ -1,0 +1,176 @@
+{
+  "task_id": "ex1_saturate",
+  "candidate_id": "v2",
+  "interpretation_mode": "handwritten",
+  "decision": "ACCEPT",
+  "evidence_class": "E2",
+  "claim_target": "repair_correctness",
+  "reason": "satisfies every interpretation",
+  "conditional": "The claim is bounded to the declared input profile, instrumented C checks, and reported unwind bounds. It also requires an adequate reading of the request. Acceptance requires at least one surviving interpretation that is sound for the intended repair.",
+  "witness": null,
+  "interpretation_set_sha256": "50973ac285e940f1adf3b6c48bc3930d9a26f7047b2e0f1d5b4bcb40350dcd73",
+  "interpretations": [
+    {
+      "id": "ex1_saturate.strict",
+      "nl_rendering": "Saturate overflow and preserve ordinary addition.",
+      "validation": "valid",
+      "outcome": "PROVED"
+    },
+    {
+      "id": "ex1_saturate.permissive",
+      "nl_rendering": "Any implementation returning the saturated sum is allowed.",
+      "validation": "valid",
+      "outcome": "PROVED"
+    }
+  ],
+  "facts": {
+    "preserves_outside_B_max": "inconclusive",
+    "synthesis_ready": "inconclusive",
+    "interpretations_satisfied": [
+      "ex1_saturate.permissive",
+      "ex1_saturate.strict"
+    ],
+    "interpretations_violated": [],
+    "preservation_or_ext_outside_B_max": "PROVED",
+    "esbmc": [
+      {
+        "status": "unsupported",
+        "detail": "ESBMC unavailable"
+      }
+    ]
+  },
+  "obligations": [
+    {
+      "name": "candidate safety on reference guard",
+      "outcome": "PROVED",
+      "note": "e0",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "reference on common keep region",
+      "outcome": "PROVED",
+      "note": "determinism",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "preservation or Ext outside scope union",
+      "outcome": "PROVED",
+      "note": "e1",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "scope agreement for ex1_saturate.permissive",
+      "outcome": "PROVED",
+      "note": "scope",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "scope agreement for ex1_saturate.strict",
+      "outcome": "PROVED",
+      "note": "scope",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "class keep reachability for ex1_saturate.permissive",
+      "outcome": "VIOLATED",
+      "note": "feasibility: main.assertion.1 VWE.feasibility.predicate",
+      "backends": {
+        "sat": "failure",
+        "z3": "failure"
+      },
+      "witness": {
+        "inputs": {
+          "a": "0",
+          "b": "0"
+        },
+        "p0_output": null,
+        "p1_output": null,
+        "replayed_natively": false
+      }
+    },
+    {
+      "name": "class path reachability for ex1_saturate.permissive",
+      "outcome": "PROVED",
+      "note": "all required regions reached after the call",
+      "backends": {
+        "sat": "failure",
+        "z3": "failure"
+      },
+      "witness": null
+    },
+    {
+      "name": "interpretation ex1_saturate.permissive",
+      "outcome": "PROVED",
+      "note": "class",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    }
+  ],
+  "scope": {
+    "K": 4,
+    "shape_min": {
+      "buffers": {},
+      "alias": "disjoint",
+      "bounds": {}
+    },
+    "shape_max": {
+      "buffers": {},
+      "alias": "disjoint",
+      "bounds": {}
+    },
+    "bounded_only": true,
+    "profiles": [
+      {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {}
+      }
+    ],
+    "reference_safe_guard": "!(false)",
+    "change_brackets": {
+      "B_min": "((a + b > 255)) && ((a + b > 255))",
+      "B_max": "((a + b > 255)) || ((a + b > 255)) || (a + b > 255) || (a + b > 255)"
+    },
+    "prepass": {
+      "samples": 14,
+      "seed": 0,
+      "requested_samples": 10000,
+      "seconds_budget": 2,
+      "stopped": "time budget"
+    },
+    "native_replay": [],
+    "native_acceptance": "confirmed: all 2 interpretations checked on 14 sampled inputs",
+    "uninitialized_model": "CBMC experimental local checks"
+  },
+  "tools": {
+    "cbmc": "6.11.0 (cbmc-6.11.0)",
+    "z3": "Z3 version 5.4.1 - 64 bit - build hashcode 145c0c51570a357cc558ce898ce77573ba9d4fbf",
+    "esbmc": "unavailable"
+  },
+  "timing": {
+    "wall_seconds": 21.881658917001914
+  }
+}

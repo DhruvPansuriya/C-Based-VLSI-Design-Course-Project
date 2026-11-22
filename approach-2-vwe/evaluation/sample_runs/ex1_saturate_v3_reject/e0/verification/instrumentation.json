@@ -1,0 +1,98 @@
+{
+  "sha256": "7b162ae7ea90c9dff945cd0dbca4a7c3bdf0765399127588354d23236880e623",
+  "reason": "",
+  "traps": [],
+  "uninitialized_local_pass": true,
+  "commands": [
+    {
+      "argv": [
+        "goto-cc",
+        "-std=c11",
+        "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/e0/a0.c",
+        "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/e0/a1.c",
+        "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/e0/main.c",
+        "-o",
+        "raw.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/e0/verification",
+      "returncode": 0,
+      "seconds": 0.16556733300967608,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--uninitialized-check",
+        "raw.goto",
+        "locals.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/e0/verification",
+      "returncode": 0,
+      "seconds": 0.006654999990132637,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--add-library",
+        "--no-malloc-may-fail",
+        "locals.goto",
+        "linked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/e0/verification",
+      "returncode": 0,
+      "seconds": 0.005516917008208111,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--list-goto-functions",
+        "linked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/e0/verification",
+      "returncode": 0,
+      "seconds": 0.005926375000854023,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--remove-function-body-regex",
+        "^(_Exit|_exit|_longjmp|abort|exit|longjmp|quick_exit|siglongjmp)$",
+        "linked.goto",
+        "removed.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/e0/verification",
+      "returncode": 0,
+      "seconds": 0.005587166000623256,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--generate-function-body",
+        "^(_Exit|_exit|_longjmp|abort|exit|longjmp|quick_exit|siglongjmp)$",
+        "--generate-function-body-options",
+        "assert-false-assume-false",
+        "removed.goto",
+        "checked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/e0/verification",
+      "returncode": 0,
+      "seconds": 0.005132542006322183,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--show-goto-functions",
+        "checked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/e0/verification",
+      "returncode": 0,
+      "seconds": 0.0046458750002784654,
+      "error": ""
+    }
+  ]
+}

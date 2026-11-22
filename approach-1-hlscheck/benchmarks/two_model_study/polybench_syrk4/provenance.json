@@ -1,0 +1,12 @@
+{
+  "id": "polybench_syrk4",
+  "source": "benchmarks/two_model_study/polybench_syrk4/original.c",
+  "function": "kernel",
+  "original_sha256": "5c671917d1b347ce62d58e5174f93b7a19802140bb230c9be55bf66b4023ff48",
+  "suite": "HLS-Eval / PolyBench",
+  "upstream_source": "datasets/hls-eval/hls_eval_data/polybench/syrk/syrk.cpp",
+  "upstream_sha256": "d80b42b45c817482445b5d20f2a3c70d888b9f523bc133919097a798bb311d7e",
+  "preparation": "Adapt PolyBench source through HLS-Eval: replace double with uint32_t, flatten row-major arrays, reduce dimensions to4, rename kernel_syrk to kernel, remove external includes and HLS pragma, and use literal loop limits. Dimensions30x30 and30x20 become4x4. Preserve the beta scaling, alpha accumulation and lower-triangle-only writes; upper-triangle c retains initial values. This unsigned integer benchmark is a new domain; no equivalence to upstream floating point is claimed.",
+  "category": "adapted_kernel",
+  "integer_domain": "All data are unsigned32 with modulo-2^32 arithmetic; valid pairwise-nonoverlapping parameter arrays; unchanged array elements remain observable."
+}

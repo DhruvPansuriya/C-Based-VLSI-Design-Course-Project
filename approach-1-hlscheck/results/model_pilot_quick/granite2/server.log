@@ -1,0 +1,16 @@
+0.00.176.899 I srv  llama_server: initializing ...
+0.00.176.911 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.177.503 W srv  server_setup: security: no API key is set and CORS allows all origins (see https://github.com/ggml-org/llama.cpp/pull/25655)
+0.00.187.314 I srv    load_model: loading model 'C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\tools\local_llm\granite-3.3-2b-instruct-Q4_K_M.gguf'
+0.01.863.815 I cmn          init: llama threadpool init, n_threads = 8
+0.02.114.476 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 2048, kv_unified = 'false'
+0.02.125.809 I srv  server_run_i: model loaded
+0.02.125.821 I srv  server_on_li: listening on http://127.0.0.1:8094
+0.02.513.161 I slot       select: id  0 | task -1 | selected slot by LRU, n_tokens = 0, t_last = -1
+0.02.513.230 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+0.04.285.714 I slot print_timing: id  0 | task 0 | prompt eval time =     423.43 ms /   278 tokens (    1.52 ms per token,   656.55 tokens per second)
+0.04.285.721 I slot print_timing: id  0 | task 0 |        eval time =    1348.92 ms /   111 tokens (   12.26 ms per token,    81.55 tokens per second)
+0.04.285.722 I slot print_timing: id  0 | task 0 |       total time =    1772.35 ms /   389 tokens
+0.04.285.723 I slot print_timing: id  0 | task 0 |    graphs reused =        110
+0.04.285.724 I slot print_timing: id  0 | task 0 |   graph reallocs =          0    /     0        (same size) / (changed size)
+0.04.285.799 I slot      release: id  0 | task 0 | stop processing: n_tokens = 388, truncated = 0

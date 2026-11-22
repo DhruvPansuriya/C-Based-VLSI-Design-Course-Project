@@ -1,0 +1,23 @@
+{
+  "status": "equivalent",
+  "assumptions": [
+    "32-bit int and unsigned int; uint32_t is unsigned int",
+    "All array parameters are valid, separately allocated, and nonoverlapping",
+    "Functional equality at function completion; no cycle-level RTL guarantee"
+  ],
+  "execution_steps": 158,
+  "paths": {
+    "original": 16,
+    "candidate": 2
+  },
+  "z3_version": "5.1.0",
+  "elapsed_seconds": 0.018591,
+  "case": "unswitch_optimized",
+  "expected": "equivalent",
+  "original": "benchmarks\\demo\\unswitch_original.c",
+  "candidate": "benchmarks\\demo\\unswitch_optimized.c",
+  "original_sha256": "7c5365ca9545acc01de39421dd4632b0c3b3d9c0ef9c4354400084308baf7d35",
+  "candidate_sha256": "6fc9674226bc6a9e318fa147dcde12f2c263f64ad5c87a091f8273b662475db6",
+  "provenance": "Initial Codex-session demonstration; buggy variants are deliberately seeded controls",
+  "hls_qor": "not measured"
+}

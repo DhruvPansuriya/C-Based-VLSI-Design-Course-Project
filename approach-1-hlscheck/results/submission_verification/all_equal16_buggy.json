@@ -1,0 +1,93 @@
+{
+  "case": "all_equal16",
+  "variant": "buggy",
+  "expected": "not_equivalent",
+  "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+  "transformation": "XOR/OR equality reduction",
+  "original": "benchmarks\\expanded\\all_equal16_original.c",
+  "candidate": "benchmarks\\expanded\\all_equal16_buggy.c",
+  "original_sha256": "ad70a27f2c1105734b4d01bc54bba28193fdc028a706716a1bdc1674397c3645",
+  "candidate_sha256": "3142581e0386b5302ffdb316378267a4f0082c1039ce875f22cb8206da8c849d",
+  "verification": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 73,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "a": [
+        4294967295,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "original_outputs": {
+      "a": [
+        4294967295,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "return": 0
+    },
+    "candidate_outputs": {
+      "a": [
+        4294967295,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "return": 1
+    },
+    "elapsed_seconds": 0.044418
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

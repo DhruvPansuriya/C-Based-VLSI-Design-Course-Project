@@ -1,0 +1,293 @@
+{
+  "passed": true,
+  "frozen_originals_checked": 12,
+  "raw_model_responses_and_candidates_checked": 24,
+  "identical_prompt_pairs_checked": 12,
+  "primary_smt_queries_replayed": 9,
+  "verified_candidates": 22,
+  "primary_compiled_c_pair_trials": 5808,
+  "supplementary_compiled_c_pair_trials": 5808,
+  "actual_hls_implementations": 34,
+  "rtl_transactions": 544,
+  "single_hls_configuration": true,
+  "native_supplement": [
+    {
+      "passed": true,
+      "harness_sha256": "8e0a3ad88cd91f400f9c3f5f9f68d78ab4f49049079f680ac3dc549b57e6c254",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\qwen15\\machsuite_gemm4",
+      "case": "machsuite_gemm4",
+      "model": "qwen15",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "ffbbefb87b1ab32e837640a360213c84f5cf36207fa439782aa49bb29f6da74e",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\gpt61sol\\machsuite_gemm4",
+      "case": "machsuite_gemm4",
+      "model": "gpt61sol",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "132b172f44652828ddf2c49708ca45027beca15a301dd04d4bc3bf16b0abfdb8",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\qwen15\\machsuite_stencil5",
+      "case": "machsuite_stencil5",
+      "model": "qwen15",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "befc2a81914540f76cd6d816036c7cba667d781a63159a84be8a3952417a7960",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\gpt61sol\\machsuite_stencil5",
+      "case": "machsuite_stencil5",
+      "model": "gpt61sol",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "44a9b11d6944bd9a585cb74e07e2ebeb8a4ebe1ed01b416c6a17a71217df22cb",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\qwen15\\polybench_mvt4",
+      "case": "polybench_mvt4",
+      "model": "qwen15",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "963bb7fc8ca1b9dc867f21e4c12ea17832eca366fd4de9f2611ec537a1794823",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\gpt61sol\\polybench_mvt4",
+      "case": "polybench_mvt4",
+      "model": "gpt61sol",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "1710d65c0c037486f0305d4c756c40994e7d204216811e883781307da7c2571a",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\qwen15\\polybench_atax4",
+      "case": "polybench_atax4",
+      "model": "qwen15",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "bc12e2b1dd46fdb029c772d39866c705c432c2031ceff09f02b2185bd1c6eb8d",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\qwen15\\polybench_bicg4",
+      "case": "polybench_bicg4",
+      "model": "qwen15",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "c9a54a91978c807744ae52a7fd6d62d43fb69c0f0a0e85be7006296fa07851e4",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\qwen15\\polybench_syrk4",
+      "case": "polybench_syrk4",
+      "model": "qwen15",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "e9fc0d4d30edf2e70eba6d0e1da68b8b344e560dcf6136236f981c6cf3256e1a",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\gpt61sol\\polybench_syrk4",
+      "case": "polybench_syrk4",
+      "model": "gpt61sol",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "c2c5e265e093cfb2f7357385f4252ec2b1b9b3e8b92d0847847f5a6e46cfb5ee",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\qwen15\\machsuite_rj_xtime",
+      "case": "machsuite_rj_xtime",
+      "model": "qwen15",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "0ee2bfa579be5fef96f674e6530752ba7c9e809dc6ba1e6bdba03ef9ee492e06",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\gpt61sol\\machsuite_rj_xtime",
+      "case": "machsuite_rj_xtime",
+      "model": "gpt61sol",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "c0d6ad501cfc4b172217336f9aa97e4a685549bd1afa981a7dd0ebae56f7d0ac",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\qwen15\\chstone_gsm_abs",
+      "case": "chstone_gsm_abs",
+      "model": "qwen15",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "f4ed3147b8653bebf8f2a4415a1d0fd0a16805ebbcc171f0e146866ead7c9610",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\gpt61sol\\chstone_gsm_abs",
+      "case": "chstone_gsm_abs",
+      "model": "gpt61sol",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "5ee34e2cff94cf55db90ba83ba7454c398fcfbc728d4821dc0878eaff234dd44",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\qwen15\\chstone_gsm_add",
+      "case": "chstone_gsm_add",
+      "model": "qwen15",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "5be337d4079042f5483909f15e47e666b6d1cc1e208654c77af1cc7356bbd962",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\gpt61sol\\chstone_gsm_add",
+      "case": "chstone_gsm_add",
+      "model": "gpt61sol",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "83445e603abb918db4347a565de83b3b29306409ca65d0fa06bd4a1e68436d1f",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\qwen15\\hlseval_extractFloat64Sign",
+      "case": "hlseval_extractFloat64Sign",
+      "model": "qwen15",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "fc85aca28f2b5a4f8e5e886b1c079de755695dc765b3a854ab0c243445d2a0b0",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\gpt61sol\\hlseval_extractFloat64Sign",
+      "case": "hlseval_extractFloat64Sign",
+      "model": "gpt61sol",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "cc31a0c14b4fd6bcf161b95314abc46e9314e15c7c7e9f54b259f08383168248",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\qwen15\\hlseval_extractFloat64Frac",
+      "case": "hlseval_extractFloat64Frac",
+      "model": "qwen15",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "997cd83f3935e27415936ba4b7d354395673e681fd4c73c7a42c6776e474c898",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\gpt61sol\\hlseval_extractFloat64Frac",
+      "case": "hlseval_extractFloat64Frac",
+      "model": "gpt61sol",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "bed7bb4702bf993b1e2d0de2470546d56ab34839b546fc7c7d37f1cbdab1bada",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\qwen15\\hlseval_float64_is_nan",
+      "case": "hlseval_float64_is_nan",
+      "model": "qwen15",
+      "trials": 264
+    },
+    {
+      "passed": true,
+      "harness_sha256": "7aee775a394b5a7a1e20694063dc5da5cc122b05e5ec2faedea40f9a5606a034",
+      "exit_code": 0,
+      "stdout": "PASS 264 typed comparisons",
+      "evidence": "results\\two_model_study\\native_supplement\\gpt61sol\\hlseval_float64_is_nan",
+      "case": "hlseval_float64_is_nan",
+      "model": "gpt61sol",
+      "trials": 264
+    }
+  ],
+  "native_harness_controls": [
+    {
+      "passed": true,
+      "harness_sha256": "4e5d7ef3835536ee6cd6ebbce482fd31ad8c672cbee9caf9bfb6dba5edcb610e",
+      "exit_code": 0,
+      "stdout": "PASS 32 typed comparisons",
+      "evidence": "results\\two_model_study\\harness_validation\\equal_control",
+      "id": "equal_control",
+      "expected": "no mismatch",
+      "provenance": "Deliberate harness control, not an LLM output"
+    },
+    {
+      "passed": true,
+      "harness_sha256": "945e27f23d0a9099df86bc73c1fc0e7e59b12ebc3ee9468a390f2725e8605ec9",
+      "exit_code": 1,
+      "stdout": "mismatch at test 2",
+      "evidence": "results\\two_model_study\\harness_validation\\u64_narrowing_fault",
+      "id": "u64_narrowing_fault",
+      "expected": "mismatch detected",
+      "provenance": "Deliberate harness control, not an LLM output"
+    },
+    {
+      "passed": true,
+      "harness_sha256": "df109adf596c6c73a4c71fccb5901652ee64d340a36cbb83bb493c9835af2d27",
+      "exit_code": 1,
+      "stdout": "mismatch at test 3",
+      "evidence": "results\\two_model_study\\harness_validation\\signed16_saturation_fault",
+      "id": "signed16_saturation_fault",
+      "expected": "mismatch detected",
+      "provenance": "Deliberate harness control, not an LLM output"
+    },
+    {
+      "passed": true,
+      "harness_sha256": "0f45c9651c92b5f9abb05904b912d7464979a5a05abefa0f449c5fd5c0f3ce4a",
+      "exit_code": 1,
+      "stdout": "mismatch at test 1",
+      "evidence": "results\\two_model_study\\harness_validation\\unwritten_array_boundary_fault",
+      "id": "unwritten_array_boundary_fault",
+      "expected": "mismatch detected",
+      "provenance": "Deliberate harness control, not an LLM output"
+    },
+    {
+      "passed": true,
+      "harness_sha256": "27e5ecdcc6c4f83ee03f3fb681f246a75d2d65005a00f0be5bfa7e08dfd0ab75",
+      "exit_code": 1,
+      "stdout": "mismatch at test 1",
+      "evidence": "results\\two_model_study\\harness_validation\\observable_temporary_fault",
+      "id": "observable_temporary_fault",
+      "expected": "mismatch detected",
+      "provenance": "Deliberate harness control, not an LLM output"
+    }
+  ],
+  "scope": "Exact raw-response extraction, current checker/retained driver hashes, source provenance, accepted SMT replay, independent-scalar compiled-C supplement, seeded harness controls and HLS source/testbench/configuration/RTL checks. No new model outputs or repairs.",
+  "figures_rendered_and_visually_reviewed": true,
+  "csv_and_all_twelve_dossier_links_checked": true,
+  "current_runner_sha256": "a3d4b477b48b85276dc63264c7b6a08d61dd86265ed4e6677a77eb7a9b157ba9",
+  "validator_sha256": "76f88509753771db0ec992ac2e0abfaa0a547af9f206f4084c1a5a0e3415e304",
+  "archived_upstream_source_snapshots_checked": 12
+}

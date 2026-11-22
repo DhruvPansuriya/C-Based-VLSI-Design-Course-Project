@@ -1,0 +1,17 @@
+{
+  "id": "chstone_gsm_abs",
+  "source": "benchmarks/two_model_study/chstone_gsm_abs/original.c",
+  "function": "kernel",
+  "original_sha256": "0ad38ffc272924b447237bb1559c92b171d3c843a2b58725e44c8c84099323ef",
+  "suite": "CHStone",
+  "upstream_source": "datasets/CHStone/gsm/add.c",
+  "upstream_sha256": "999c30c9a87e0c12b1d4be9a8dc5c396dfe18652320563191e6fd608a295cca9",
+  "preparation": "Reuse the type-preserving original leaf extraction (not any candidate). Retain all typedefs/macros, widths and source notices. Rename only gsm_abs to kernel before freezing; remove unrelated compilation-unit material as documented in the earlier extraction. No dimension, type or input-domain reduction.",
+  "category": "type_preserving_leaf",
+  "integer_domain": "Original primitive widths and typedefs preserved under ILP32; signed narrowing follows the selected target. Signed16 inputs and return; original saturation bounds and behavior retained.",
+  "prepared_original_source": "experiments/dataset_leaves/chstone_gsm_abs/original.c",
+  "source_function_original": "gsm_abs",
+  "upstream_header": "datasets/CHStone/gsm/private.h",
+  "upstream_header_sha256": "c86c12352157ecf1b1a6fc7764c3cab4443e2b470a737dfc0a8226ba4c7191c0",
+  "exact_original_function_sha256": "311fd58f1194349da71cce70d1d43d681c557c4ed46c659d2ec02280cab6eefb"
+}

@@ -1,0 +1,210 @@
+{
+  "tool": "HLSCheck",
+  "algorithm": "certified relational summaries with residual-C abstraction/refinement",
+  "status": "equivalent",
+  "source_sha256": {
+    "original": "51cc944f17906ea7104a7c9e830317401dfb4c15667f0192ef9241e588f0db01",
+    "candidate": "321b0c7b8e8da9bc2ded25313efdae85c9d8b0a6991f63ec944adfc002e65ecd"
+  },
+  "upstream_components": [
+    "Z3",
+    "ESBMC"
+  ],
+  "proof_dependencies": [
+    {
+      "id": "region_equality",
+      "result": "lemmas/region_equality.json",
+      "smt": "lemmas/region_equality.smt2",
+      "accepted_component_lemmas": [
+        {
+          "index": 1,
+          "status": "unsat",
+          "variables": [
+            "arg0_0",
+            "arg1_0"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_hamming8_optimized\\proof\\lemmas\\region_equality.lemma001.smt2"
+        },
+        {
+          "index": 2,
+          "status": "unsat",
+          "variables": [
+            "arg0_1",
+            "arg1_1"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_hamming8_optimized\\proof\\lemmas\\region_equality.lemma002.smt2"
+        },
+        {
+          "index": 3,
+          "status": "unsat",
+          "variables": [
+            "arg0_2",
+            "arg1_2"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_hamming8_optimized\\proof\\lemmas\\region_equality.lemma003.smt2"
+        },
+        {
+          "index": 4,
+          "status": "unsat",
+          "variables": [
+            "arg0_3",
+            "arg1_3"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_hamming8_optimized\\proof\\lemmas\\region_equality.lemma004.smt2"
+        },
+        {
+          "index": 5,
+          "status": "unsat",
+          "variables": [
+            "arg0_4",
+            "arg1_4"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_hamming8_optimized\\proof\\lemmas\\region_equality.lemma005.smt2"
+        },
+        {
+          "index": 6,
+          "status": "unsat",
+          "variables": [
+            "arg0_5",
+            "arg1_5"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_hamming8_optimized\\proof\\lemmas\\region_equality.lemma006.smt2"
+        },
+        {
+          "index": 7,
+          "status": "unsat",
+          "variables": [
+            "arg0_6",
+            "arg1_6"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_hamming8_optimized\\proof\\lemmas\\region_equality.lemma007.smt2"
+        },
+        {
+          "index": 8,
+          "status": "unsat",
+          "variables": [
+            "arg0_7",
+            "arg1_7"
+          ],
+          "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_hamming8_optimized\\proof\\lemmas\\region_equality.lemma008.smt2"
+        }
+      ]
+    }
+  ],
+  "refinements": [],
+  "obligations": [
+    {
+      "id": "region_equality",
+      "engine": "custom symbolic execution / Z3",
+      "status": "equivalent"
+    },
+    {
+      "id": "residual_0",
+      "engine": "ESBMC / Z3",
+      "abstraction": "shared_havoc",
+      "input_domain": "full stated domain",
+      "status": "equivalent"
+    }
+  ],
+  "engine_selection": "No router: ESBMC checks the residual C product; custom SMT proofs justify region abstraction.",
+  "implementation_sha256": {
+    "hybrid.py": "ebd6353ba34e48fded852c8697f755f0b4d025153469804eb7dca467d0c41096",
+    "frontend.py": "55eb23c16d35ce941254cb783a7e985571e12c5390cd75cbb08dd9aed85369e2",
+    "miter.py": "77d41c642d8fc5af346e865fd033a92791830cb61bc252792180ef077688831d",
+    "relational.py": "82a63ee02a1ac6d655d4c6011f45acfed7864d18cc02cdb2c329bf9ef0109618",
+    "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+    "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307"
+  },
+  "contract": {
+    "integer_model": "ILP32: char8/short16/int32/long32/long-long64; plain char signed",
+    "parameters": [
+      {
+        "position": 0,
+        "name": "a",
+        "length": 8,
+        "c_type": "unsigned int",
+        "bits": 32,
+        "signed": false
+      },
+      {
+        "position": 1,
+        "name": "b",
+        "length": 8,
+        "c_type": "unsigned int",
+        "bits": 32,
+        "signed": false
+      }
+    ],
+    "return_type": {
+      "c_type": "unsigned int",
+      "bits": 32,
+      "signed": false
+    },
+    "scalar_ranges": {},
+    "observations": "Return value and every final parameter-array element",
+    "memory": "All parameter arrays valid and pairwise nonoverlapping; initial contents shared by value",
+    "safety": "Both programs must be free of modelled undefined behavior on the entire stated input domain",
+    "proof_scope": "Functional C equivalence at completion, not cycle-level or C-to-RTL equivalence"
+  },
+  "region_analysis": {
+    "abstractable": true,
+    "left_statements": 3,
+    "right_statements": 3,
+    "whole_function": true,
+    "boundary": "Function exit: every parameter-array element and the return value",
+    "proof_status": "equivalent"
+  },
+  "residual_proof": {
+    "directory": "residual_0",
+    "abstraction": "shared_havoc",
+    "engine": "ESBMC with Z3",
+    "status": "equivalent",
+    "miter_sha256": "a38c94a9223d262206755b59492c271c0b9399ab0ba9d7dbdf5cfa303042fca1",
+    "returncode": 0,
+    "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+    "command": [
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_hamming8_optimized\\proof\\residual_0\\miter.c",
+      "--i386-win32",
+      "--32",
+      "--z3",
+      "--bv",
+      "--unwind",
+      "256",
+      "--overflow-check",
+      "--ub-shift-check",
+      "--uninitialised-vars-check",
+      "--multi-property"
+    ],
+    "max_unroll": 256,
+    "timeout_ms": 10000,
+    "elapsed_seconds": 0.240458,
+    "bounds_pointer_division_overflow_shift_uninitialized_unwinding_checks_retained": true
+  },
+  "engine_status": "equivalent",
+  "complete_unwinding_required": true,
+  "proof_scope": "Residual C proof plus all listed certified region/encoding lemmas",
+  "elapsed_seconds": 1.54391,
+  "artifact_sha256": {
+    "candidate_canonical.c": "bbb2517bb5b5ce4b79bac92222d5402df754ea6687d8295288ec41bb36b1741b",
+    "candidate_input.c": "321b0c7b8e8da9bc2ded25313efdae85c9d8b0a6991f63ec944adfc002e65ecd",
+    "contract.json": "2f6a3097ff2d692985e2455383749c02e32bafba5e7b2aa1415e62789203fb94",
+    "lemmas/candidate_region.c": "169a20f2f6480fde67c3c1de3f310079be2393af06ed68ef452e85fa561e596f",
+    "lemmas/original_region.c": "847187c579eb8572ae0c8b7e5149a8751d8ed74b2bf077cad6d5291debb7192f",
+    "lemmas/region_equality.json": "da453e30874e05f227b8c16ca893a0c961b1d381cf2b60afb842992ec141b73c",
+    "lemmas/region_equality.lemma001.smt2": "2cd52884e5f1c8f2e5deefcfe14ab6ec57ad3d5934293df6070f96f8937a151c",
+    "lemmas/region_equality.lemma002.smt2": "df3233216a37c2e0cca3f319ff3502d448d958320b99ccf5743169e4c30bf42e",
+    "lemmas/region_equality.lemma003.smt2": "0b124c1381fbc71256096b094ed611b103026d7ba5b06219821b2e772fa9a32f",
+    "lemmas/region_equality.lemma004.smt2": "aa6f2c6facb1f9d44323795f1c50de7245449ba8deae3656ac6024690a0cae73",
+    "lemmas/region_equality.lemma005.smt2": "ff4105c7fceadad52b28710850d23458dc0b7bbec4ad412a0b73129abb49b5f2",
+    "lemmas/region_equality.lemma006.smt2": "ec236b6ece69b4a921c7ebfef806a95ce849fae6796f65b7187202598a37cf51",
+    "lemmas/region_equality.lemma007.smt2": "1da11336d3a7aa3e1d49470d4c22f0ca8862808461ae411c1539209d9d4c1a69",
+    "lemmas/region_equality.lemma008.smt2": "423bb12ca59922210e3b1ffb0e241f9904c4bd3eeef70c9098eee10cdf60383a",
+    "lemmas/region_equality.smt2": "b0827deaa64a23084b517bbc6b03cec022f27617d34cb83074d643e4da5b310d",
+    "original_canonical.c": "e55d72764983a16f29ebe8b6d99d0013fcff1f081afc4d9cef34bb9d217e836b",
+    "original_input.c": "51cc944f17906ea7104a7c9e830317401dfb4c15667f0192ef9241e588f0db01",
+    "residual_0/esbmc.log": "b7595b67539458825525a5be69dd76a9f5355cf102351c9981eb4f58f0b8cdac",
+    "residual_0/miter.c": "a38c94a9223d262206755b59492c271c0b9399ab0ba9d7dbdf5cfa303042fca1",
+    "residual_0/result.json": "19139c55fe5ea7f0013f25d0b4e66ca3d2b166672829912737399ed73006fca5"
+  }
+}

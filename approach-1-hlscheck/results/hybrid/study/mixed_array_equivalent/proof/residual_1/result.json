@@ -1,0 +1,25 @@
+{
+  "engine": "ESBMC with Z3",
+  "status": "unknown",
+  "miter_sha256": "dabdc98df1ca40a405441ce810069afc041b15a785b5c13a0c2325018aa28d72",
+  "reason": "Residual verification exceeded the wall-clock limit",
+  "command": [
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_equivalent\\proof\\residual_1\\miter.c",
+    "--i386-win32",
+    "--32",
+    "--z3",
+    "--bv",
+    "--unwind",
+    "256",
+    "--overflow-check",
+    "--ub-shift-check",
+    "--uninitialised-vars-check",
+    "--multi-property",
+    "--generate-json-report"
+  ],
+  "max_unroll": 256,
+  "timeout_ms": 10000,
+  "elapsed_seconds": 10.057587,
+  "bounds_pointer_division_overflow_shift_uninitialized_unwinding_checks_retained": true
+}

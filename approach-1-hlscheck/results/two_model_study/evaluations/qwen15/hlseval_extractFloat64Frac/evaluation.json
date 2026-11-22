@@ -1,0 +1,36 @@
+{
+  "case": "hlseval_extractFloat64Frac",
+  "model": "qwen15",
+  "fingerprints": {
+    "original": "0f235a01e98718b0f588e0610379d76fed126c7a0ab8589913333a6feb94738c",
+    "candidate": "706eecd7288502a21481910edc314b928459555ce13fc51ed31669172d9eb545",
+    "runner": "baa1dfcb671df40a626778c0c623d231006ebb5f4ae4020523a3dce4604c1f80",
+    "checker": {
+      "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+      "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307",
+      "evidence.py": "eaf1b8fd1c130609bfdd43e8821f4458c494341a40d39b3c60cd0c28edb72ac5",
+      "frontend.py": "c09f8778dbb1751a3c55c40b5871b65740e028f20d6601c5a108124d10c240a9",
+      "hybrid.py": "d1ccb49365d9731a7ab638c150c420c7efa04108c697df4c66cd3895f738b059",
+      "miter.py": "77d41c642d8fc5af346e865fd033a92791830cb61bc252792180ef077688831d",
+      "pipeline.py": "a4b504daefbd3524a1d0a6fc5e872fd2a75b469c869cfb2c33a35711fa731567",
+      "relational.py": "82a63ee02a1ac6d655d4c6011f45acfed7864d18cc02cdb2c329bf9ef0109618",
+      "__init__.py": "13da1587e29ffc5bd31bdc71a826330fefa412b8d37017a7dd4a8941e0a663bc",
+      "__main__.py": "e2f9b802af8cfddc46a121da3878a74ae5abd5ad64443b4b2dfc01d5b781c1e1"
+    }
+  },
+  "messages_sha256": "efbce8d17ff570da8a025cf23ec62113be3d23ed96aba33ae1fd3c475139a27f",
+  "syntax_compiles": true,
+  "finish_reason": "stop",
+  "api_charge_usd": 0,
+  "status": "equivalent",
+  "reason": null,
+  "verification_seconds": 0.569637,
+  "ast_unchanged": false,
+  "smt_dependencies_replayed": true,
+  "native": {
+    "passed": true,
+    "trials": 264,
+    "harness_sha256": "2829a40012ce135de5532c9eb4d06d6ebc29c95cbdce7c2af093e5845d23339b",
+    "scope": "Compiled exact-width full-range typed edge/random inputs, supplementary to the formal proof"
+  }
+}

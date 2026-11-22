@@ -1,0 +1,18 @@
+; benchmark generated from python API
+(set-info :status unknown)
+(declare-fun arg0_8 () (_ BitVec 32))
+(declare-fun arg0_4 () (_ BitVec 32))
+(declare-fun arg0_12 () (_ BitVec 32))
+(declare-fun arg0_5 () (_ BitVec 32))
+(declare-fun arg0_15 () (_ BitVec 32))
+(declare-fun arg0_10 () (_ BitVec 32))
+(assert
+ (let (($x434896 (and (distinct (_ bv0 32) (_ bv0 32)) true)))
+(let ((?x379747 (bvmul (_ bv4294967295 32) arg0_8)))
+(let ((?x380121 (bvmul (_ bv4294967295 32) arg0_4)))
+(let ((?x741740 (bvmul (_ bv4294967295 32) arg0_12)))
+(let (($x325558 (and (distinct (_ bv0 32) (bvadd arg0_10 arg0_15 arg0_5 ?x741740 ?x380121 ?x379747)) true)))
+(let (($x723260 (or $x325558 $x434896 $x434896 $x434896 $x434896 $x434896 $x434896 $x434896 $x434896 $x434896 $x434896 $x434896 $x434896 $x434896 $x434896 $x434896 $x434896)))
+(let (($x19516 (and true true $x723260)))
+(or $x19516)))))))))
+(check-sat)

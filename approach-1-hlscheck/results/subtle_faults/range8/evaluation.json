@@ -1,0 +1,163 @@
+{
+  "fingerprints": {
+    "original": "fc2302c71eb082c92d53a2730ead450d28cf46af99c6cacb7adba1c3a4e7a49f",
+    "candidate": "a775e6d617f38197b7b589b27dc31989eb06bc637c2254bac4d3dd614c4732ec",
+    "evaluator": "c6045de93a412b74c1b8a184a264bc3a964ce015d2b4b5864f49909f7cf9cb9a",
+    "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+    "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307",
+    "pipeline.py": "a4b504daefbd3524a1d0a6fc5e872fd2a75b469c869cfb2c33a35711fa731567",
+    "native_helpers": "a83490a2ca85c768fe67d098c3b4b4899539a14db4ac582d6c8760bbf81917fe",
+    "timeout_ms": 15000
+  },
+  "manual_semantic_edits": false,
+  "syntax_compiles": true,
+  "ast_unchanged": false,
+  "verification": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 84,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "a": [
+        262145,
+        4294967295,
+        262144,
+        4,
+        3,
+        2,
+        1,
+        0
+      ]
+    },
+    "original_outputs": {
+      "a": [
+        262145,
+        4294967295,
+        262144,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "return": 4294967295
+    },
+    "candidate_outputs": {
+      "a": [
+        262145,
+        4294967295,
+        262144,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      "return": 1
+    },
+    "elapsed_seconds": 0.517901,
+    "backend": "hlscheck/Z3",
+    "fallback_used": false,
+    "initial_stage": {
+      "status": "not_equivalent",
+      "assumptions": [
+        "32-bit int and unsigned int; uint32_t is unsigned int",
+        "All array parameters are valid, separately allocated, and nonoverlapping",
+        "Functional equality at function completion; no cycle-level RTL guarantee"
+      ],
+      "execution_steps": 84,
+      "paths": {
+        "original": 1,
+        "candidate": 1
+      },
+      "z3_version": "5.1.0",
+      "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+      "component_lemmas": [],
+      "main_query_requires_component_lemmas": false,
+      "counterexample": {
+        "a": [
+          262145,
+          4294967295,
+          262144,
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      "original_outputs": {
+        "a": [
+          262145,
+          4294967295,
+          262144,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "return": 4294967295
+      },
+      "candidate_outputs": {
+        "a": [
+          262145,
+          4294967295,
+          262144,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        "return": 1
+      },
+      "elapsed_seconds": 0.517901
+    }
+  },
+  "status": "not_equivalent",
+  "smt_replay": {
+    "available": true,
+    "passed": true,
+    "witness_pinned": true,
+    "queries": [
+      {
+        "file": "symbolic.smt2",
+        "expected": "sat",
+        "observed": "sat"
+      }
+    ],
+    "scope": "Same Z3 solver; unrestricted UNSAT/lemma replay, SAT replay at recorded input. Not independent proof certificates."
+  },
+  "native": {
+    "passed": true,
+    "trials": 264,
+    "directed_trials": 8,
+    "random_trials": 256,
+    "mismatches": 256,
+    "first_mismatch_trial": 8,
+    "witness_replayed": true,
+    "witness_outputs_agree": true,
+    "harness_sha256": "1e9bc3abcae4f911bd9eddf8f976542f053bed9671fbd7d571d62447da9bc3eb",
+    "command": [
+      "C:\\MinGW\\mingw32\\bin\\clang.EXE",
+      "-std=c11",
+      "-O2",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\range8\\native_differential.c",
+      "-o",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\range8\\native_check_013.exe"
+    ],
+    "exit_code": 0
+  }
+}

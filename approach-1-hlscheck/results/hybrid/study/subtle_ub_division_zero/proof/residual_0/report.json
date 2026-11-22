@@ -1,0 +1,254 @@
+[
+  {
+    "coverage": {
+      "files": {
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_division_zero\\proof\\residual_0\\miter.c": {
+          "coverage_stats": {
+            "covered_lines": 3,
+            "total_hits": 3
+          },
+          "covered_lines": {
+            "19": {
+              "covered": true,
+              "hits": 1,
+              "type": "violation"
+            },
+            "25": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "30": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            }
+          }
+        }
+      }
+    },
+    "initial_values": {
+      "__hlscheck_input_1": {
+        "name": "__hlscheck_input_1",
+        "type": "unsigned",
+        "value": "0"
+      }
+    },
+    "source_files": {
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_division_zero\\proof\\residual_0\\miter.c": [
+        "",
+        "_Static_assert(sizeof(char)==1 && sizeof(short)==2 && sizeof(int)==4 &&",
+        "               sizeof(long)==4 && sizeof(long long)==8 && sizeof(void*)==4, \"HLSCheck ILP32 ABI\");",
+        "_Static_assert((char)-1 < 0, \"HLSCheck requires signed plain char\");",
+        "_Static_assert((unsigned char)-1 == 255, \"HLSCheck requires 8-bit bytes\");",
+        "",
+        "extern void __ESBMC_assert(_Bool, const char *);",
+        "extern void __ESBMC_assume(_Bool);",
+        "extern unsigned int __hlscheck_nondet_0(void);",
+        "extern unsigned int __hlscheck_nondet_1(void);",
+        "unsigned int __hlscheck_original(unsigned int x, unsigned int y)",
+        "{",
+        "  return (y) ? (x / y) : (0u);",
+        "}",
+        "",
+        "",
+        "unsigned int __hlscheck_candidate(unsigned int x, unsigned int y)",
+        "{",
+        "  return x / y;",
+        "}",
+        "",
+        "",
+        "int main(void) {",
+        "unsigned int __hlscheck_input_0=__hlscheck_nondet_0();",
+        "unsigned int __hlscheck_input_1=__hlscheck_nondet_1();",
+        "unsigned int __hlscheck_left_return=__hlscheck_original(__hlscheck_input_0,__hlscheck_input_1);",
+        "unsigned int __hlscheck_right_return=__hlscheck_candidate(__hlscheck_input_0,__hlscheck_input_1);",
+        "__ESBMC_assert((__hlscheck_left_return==__hlscheck_right_return),\"EQUIV:observables\");",
+        "return 0;",
+        "}"
+      ]
+    },
+    "status": "violation",
+    "steps": [
+      {
+        "assignment": {
+          "lhs": "__hlscheck_input_1",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_division_zero\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "25",
+        "step_number": 0,
+        "type": "assignment"
+      },
+      {
+        "assertion": {
+          "comment": "division by zero",
+          "cwe": [
+            369
+          ],
+          "guard": "y != 0",
+          "violated": true
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_division_zero\\proof\\residual_0\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "19",
+        "message": "division by zero",
+        "step_number": 1,
+        "type": "violation"
+      },
+      {
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_division_zero\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "30",
+        "message": "Assumption restriction",
+        "step_number": 2,
+        "type": "assume"
+      }
+    ]
+  },
+  {
+    "coverage": {
+      "files": {
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_division_zero\\proof\\residual_0\\miter.c": {
+          "coverage_stats": {
+            "covered_lines": 6,
+            "total_hits": 6
+          },
+          "covered_lines": {
+            "24": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "25": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "26": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "27": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "28": {
+              "covered": true,
+              "hits": 1,
+              "type": "violation"
+            },
+            "30": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            }
+          }
+        }
+      }
+    },
+    "initial_values": {
+      "__hlscheck_input_0": {
+        "name": "__hlscheck_input_0",
+        "type": "unsigned",
+        "value": "0"
+      },
+      "__hlscheck_input_1": {
+        "name": "__hlscheck_input_1",
+        "type": "unsigned",
+        "value": "0"
+      },
+      "__hlscheck_left_return": {
+        "name": "__hlscheck_left_return",
+        "type": "unsigned",
+        "value": "0"
+      },
+      "__hlscheck_right_return": {
+        "name": "__hlscheck_right_return",
+        "type": "unsigned",
+        "value": "4294967295"
+      }
+    },
+    "status": "violation",
+    "steps": [
+      {
+        "assignment": {
+          "lhs": "__hlscheck_input_0",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_division_zero\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "24",
+        "step_number": 0,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_input_1",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_division_zero\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "25",
+        "step_number": 1,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_return",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_division_zero\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "26",
+        "step_number": 2,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_return",
+          "lhs_type": "unsigned",
+          "rhs": "4294967295",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_division_zero\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "27",
+        "step_number": 3,
+        "type": "assignment"
+      },
+      {
+        "assertion": {
+          "comment": "EQUIV:observables",
+          "guard": "__hlscheck_left_return == __hlscheck_right_return",
+          "violated": true
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_division_zero\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "28",
+        "message": "EQUIV:observables",
+        "step_number": 4,
+        "type": "violation"
+      },
+      {
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\subtle_ub_division_zero\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "30",
+        "message": "Assumption restriction",
+        "step_number": 5,
+        "type": "assume"
+      }
+    ]
+  }
+]

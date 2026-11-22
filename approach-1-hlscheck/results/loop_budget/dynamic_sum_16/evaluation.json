@@ -1,0 +1,149 @@
+{
+  "id": "dynamic_sum_16",
+  "previous_status": "inconclusive",
+  "previous_max_unroll": 256,
+  "max_unroll": 17,
+  "timeout_ms_per_obligation": 60000,
+  "unchanged_scalar_ranges": {
+    "n": [
+      0,
+      16
+    ]
+  },
+  "status": "inconclusive",
+  "elapsed_seconds": 60.310751,
+  "verification": {
+    "tool": "HLSCheck",
+    "algorithm": "certified relational summaries with residual-C abstraction/refinement",
+    "status": "inconclusive",
+    "source_sha256": {
+      "original": "8f339ee8b7cb0427bed2d52e43ceb577124da6a7996ba35ea652210f56a8f94e",
+      "candidate": "c8d7d4d1c60c939c932d2eba0b940974b4b08abef4b016eb10fbe74e1597596e"
+    },
+    "upstream_components": [
+      "Z3",
+      "ESBMC"
+    ],
+    "proof_dependencies": [],
+    "refinements": [],
+    "obligations": [
+      {
+        "id": "region_equality",
+        "engine": "custom symbolic execution / Z3",
+        "status": "unsupported"
+      },
+      {
+        "id": "residual_0",
+        "engine": "ESBMC / Z3",
+        "abstraction": "none",
+        "input_domain": "full stated domain",
+        "status": "unknown"
+      }
+    ],
+    "engine_selection": "No router: ESBMC checks the residual C product; custom SMT proofs justify region abstraction.",
+    "implementation_sha256": {
+      "hybrid.py": "d1ccb49365d9731a7ab638c150c420c7efa04108c697df4c66cd3895f738b059",
+      "frontend.py": "55eb23c16d35ce941254cb783a7e985571e12c5390cd75cbb08dd9aed85369e2",
+      "miter.py": "77d41c642d8fc5af346e865fd033a92791830cb61bc252792180ef077688831d",
+      "relational.py": "82a63ee02a1ac6d655d4c6011f45acfed7864d18cc02cdb2c329bf9ef0109618",
+      "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+      "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307"
+    },
+    "contract": {
+      "integer_model": "ILP32: char8/short16/int32/long32/long-long64; plain char signed",
+      "parameters": [
+        {
+          "position": 0,
+          "name": "a",
+          "length": 16,
+          "c_type": "unsigned int",
+          "bits": 32,
+          "signed": false
+        },
+        {
+          "position": 1,
+          "name": "n",
+          "length": null,
+          "c_type": "unsigned int",
+          "bits": 32,
+          "signed": false
+        }
+      ],
+      "return_type": {
+        "c_type": "unsigned int",
+        "bits": 32,
+        "signed": false
+      },
+      "scalar_ranges": {
+        "n": [
+          0,
+          16
+        ]
+      },
+      "observations": "Return value and every final parameter-array element",
+      "memory": "All parameter arrays valid and pairwise nonoverlapping; initial contents shared by value",
+      "safety": "Both programs must be free of modelled undefined behavior on the entire stated input domain",
+      "proof_scope": "Functional C equivalence at completion, not cycle-level or C-to-RTL equivalence"
+    },
+    "region_analysis": {
+      "abstractable": false,
+      "left_statements": 3,
+      "right_statements": 5,
+      "whole_function": true,
+      "boundary": "Function exit: every parameter-array element and the return value",
+      "proof_status": "unsupported"
+    },
+    "residual_proof": {
+      "directory": "residual_0",
+      "abstraction": "none",
+      "engine": "ESBMC with Z3",
+      "status": "unknown",
+      "miter_sha256": "c38181fcf98ba42b50cad57e6936b3505b943b0b5d5939c6f3181e2db62ca6fc",
+      "reason": "Residual verification exceeded the wall-clock limit",
+      "command": [
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\loop_budget\\dynamic_sum_16\\proof\\residual_0\\miter.c",
+        "--i386-win32",
+        "--32",
+        "--z3",
+        "--bv",
+        "--unwind",
+        "17",
+        "--overflow-check",
+        "--ub-shift-check",
+        "--uninitialised-vars-check",
+        "--multi-property",
+        "--generate-json-report"
+      ],
+      "max_unroll": 17,
+      "timeout_ms": 60000,
+      "elapsed_seconds": 60.032839,
+      "bounds_pointer_division_overflow_shift_uninitialized_unwinding_checks_retained": true
+    },
+    "engine_status": "unknown",
+    "complete_unwinding_required": true,
+    "proof_scope": "Unabstracted C product-program verification",
+    "elapsed_seconds": 60.310751,
+    "artifact_sha256": {
+      "candidate_canonical.c": "b2bd9fb3a2423b12b24a80b714964e53d485efd607b1d5cfca0cd3e21c05b972",
+      "candidate_input.c": "c8d7d4d1c60c939c932d2eba0b940974b4b08abef4b016eb10fbe74e1597596e",
+      "contract.json": "f3ea3c060be7cacfba4e3492e63ab22a64bb53e4e4e9d8b1a812e811fe228afe",
+      "lemmas/candidate_region.c": "ccd469f54fed5bdf16d6e4327e08c7047f440fd7e801e8ab39cc8e5f2c356de1",
+      "lemmas/original_region.c": "c3558f99c5a0f151af763e233a64b542b6cb653685a2eb771ad00bae05de5839",
+      "lemmas/region_equality.json": "f6f324e6e458cd7e1e13818acfa7b76a3ed4ac12bdeb01e10a916eed30770ad2",
+      "original_canonical.c": "fa22c31668e301c1753877357ce8ed8e0f2f30a646fc643c9ecd6e2a67890698",
+      "original_input.c": "8f339ee8b7cb0427bed2d52e43ceb577124da6a7996ba35ea652210f56a8f94e",
+      "residual_0/esbmc.log": "0e0d0cf1f72477dc698d7d7a350ef3138872fd8a66f464710d34c07e10e441ab",
+      "residual_0/miter.c": "c38181fcf98ba42b50cad57e6936b3505b943b0b5d5939c6f3181e2db62ca6fc",
+      "residual_0/result.json": "bd44442caa2fa9b8edeb1037cd866a02a0f8f2c3c895bb277286ace84d0654c6"
+    }
+  },
+  "evidence": {
+    "passed": true,
+    "queries": [],
+    "matches_current_implementation": true,
+    "implementation_source": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\hlscheck",
+    "scope": "Matching current/archived implementation and saved artifact hashes; accepted SMT lemmas replayed with Z3. ESBMC log retained, not an independent proof certificate."
+  },
+  "scope": "Same C inputs and preconditions; smaller expansion cap with all unwinding assertions retained"
+}

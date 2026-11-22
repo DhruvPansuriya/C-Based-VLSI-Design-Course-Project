@@ -1,0 +1,46 @@
+{
+  "run_id": "6f44de8093d441e78287c09d41df3e22",
+  "task_id": "ex7_build_views",
+  "candidate_id": "v1",
+  "timestamp_utc": "2026-11-23T01:42:37.930621+00:00",
+  "p0_sha256": "ee3afddc33f75f502b62f445128e2b30aa2df9eb914171a35596a17d7d872069",
+  "p1_sha256": "e949d2cf14fd5043fdc2280dd6f69e14e6d2b02df130c5f977d0379dad33ffbb",
+  "requests": {
+    "original": "88391af913368e91b0c9835ae3c983bbb59f46f1d36b3995d1d9d4ae93f5fc3e"
+  },
+  "interpretation_set_sha256": "7f3d59d14303662f5c3a040c1d2b961462e6d1be6ddc3bfd48d15b23dfd95a1f",
+  "config": {
+    "bounds": {
+      "K": 2,
+      "max_unwind": 5
+    },
+    "timeouts": {
+      "cbmc_s": 60,
+      "esbmc_s": 30,
+      "equiv_pair_s": 30
+    },
+    "backends": {
+      "primary": [
+        "sat",
+        "z3"
+      ],
+      "confirm": "esbmc"
+    },
+    "native": {
+      "cc": "gcc",
+      "sanitize": "address,undefined",
+      "prepass_samples": 10000,
+      "seed": 0,
+      "prepass_seconds": 1
+    }
+  },
+  "tools": {
+    "cbmc": "6.11.0 (cbmc-6.11.0)",
+    "z3": "Z3 version 5.4.1 - 64 bit - build hashcode 145c0c51570a357cc558ce898ce77573ba9d4fbf",
+    "esbmc": "unavailable"
+  },
+  "timing": {
+    "wall_seconds": 8.207541374998982
+  },
+  "git_commit": "7947b2fa1aad4860d71a3df0dbb8f729f95af913"
+}

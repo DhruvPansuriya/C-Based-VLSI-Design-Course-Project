@@ -1,0 +1,132 @@
+{
+  "cases": [
+    {
+      "id": "mixed_array_equivalent",
+      "standalone_symbolic": {
+        "status": "unsupported",
+        "assumptions": [
+          "32-bit int and unsigned int; uint32_t is unsigned int",
+          "All array parameters are valid, separately allocated, and nonoverlapping",
+          "Functional equality at function completion; no cycle-level RTL guarantee"
+        ],
+        "reason": "A loop bound or array index depends on symbolic input",
+        "elapsed_seconds": 0.004162
+      },
+      "monolithic_bmc": {
+        "engine": "ESBMC with Z3",
+        "status": "unknown",
+        "miter_sha256": "d1d8efd4cec547b8438a1d77903e84bcfe870c5bd2f6ef34ef6e2c67ceef73d8",
+        "reason": "Residual verification exceeded the wall-clock limit",
+        "command": [
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_equivalent\\monolithic\\miter.c",
+          "--i386-win32",
+          "--32",
+          "--z3",
+          "--bv",
+          "--unwind",
+          "256",
+          "--overflow-check",
+          "--ub-shift-check",
+          "--uninitialised-vars-check",
+          "--multi-property",
+          "--generate-json-report"
+        ],
+        "max_unroll": 256,
+        "timeout_ms": 10000,
+        "elapsed_seconds": 10.064202,
+        "bounds_pointer_division_overflow_shift_uninitialized_unwinding_checks_retained": true
+      },
+      "hybrid_status": "inconclusive",
+      "hybrid_elapsed_seconds": 11.60195,
+      "hybrid_accepted_summary": true,
+      "hybrid_refinements": 1
+    },
+    {
+      "id": "mixed_array_incorrect",
+      "standalone_symbolic": {
+        "status": "unsupported",
+        "assumptions": [
+          "32-bit int and unsigned int; uint32_t is unsigned int",
+          "All array parameters are valid, separately allocated, and nonoverlapping",
+          "Functional equality at function completion; no cycle-level RTL guarantee"
+        ],
+        "reason": "A loop bound or array index depends on symbolic input",
+        "elapsed_seconds": 0.003995
+      },
+      "monolithic_bmc": {
+        "engine": "ESBMC with Z3",
+        "status": "not_equivalent",
+        "miter_sha256": "c4ae12074d857b30d4475437c1d159ca8e6a38abe9df3ce83e421269101929d0",
+        "returncode": 1,
+        "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+        "command": [
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_array_incorrect\\monolithic\\miter.c",
+          "--i386-win32",
+          "--32",
+          "--z3",
+          "--bv",
+          "--unwind",
+          "256",
+          "--overflow-check",
+          "--ub-shift-check",
+          "--uninitialised-vars-check",
+          "--multi-property",
+          "--generate-json-report"
+        ],
+        "max_unroll": 256,
+        "timeout_ms": 10000,
+        "elapsed_seconds": 0.559458,
+        "bounds_pointer_division_overflow_shift_uninitialized_unwinding_checks_retained": true
+      },
+      "hybrid_status": "not_equivalent",
+      "hybrid_elapsed_seconds": 2.644664,
+      "hybrid_accepted_summary": true,
+      "hybrid_refinements": 1
+    },
+    {
+      "id": "mixed_gemm_lookup",
+      "standalone_symbolic": {
+        "status": "unsupported",
+        "assumptions": [
+          "32-bit int and unsigned int; uint32_t is unsigned int",
+          "All array parameters are valid, separately allocated, and nonoverlapping",
+          "Functional equality at function completion; no cycle-level RTL guarantee"
+        ],
+        "reason": "A loop bound or array index depends on symbolic input",
+        "elapsed_seconds": 0.073953
+      },
+      "monolithic_bmc": {
+        "engine": "ESBMC with Z3",
+        "status": "unknown",
+        "miter_sha256": "62f4222c8c79c5d107aabc7e521b3febef29f5de68b3ce3c861ea2275497b82f",
+        "reason": "Residual verification exceeded the wall-clock limit",
+        "command": [
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\ablation\\mixed_gemm_lookup\\monolithic\\miter.c",
+          "--i386-win32",
+          "--32",
+          "--z3",
+          "--bv",
+          "--unwind",
+          "256",
+          "--overflow-check",
+          "--ub-shift-check",
+          "--uninitialised-vars-check",
+          "--multi-property",
+          "--generate-json-report"
+        ],
+        "max_unroll": 256,
+        "timeout_ms": 10000,
+        "elapsed_seconds": 10.04906,
+        "bounds_pointer_division_overflow_shift_uninitialized_unwinding_checks_retained": true
+      },
+      "hybrid_status": "equivalent",
+      "hybrid_elapsed_seconds": 1.060974,
+      "hybrid_accepted_summary": true,
+      "hybrid_refinements": 0
+    }
+  ],
+  "scope": "One measured run per method, common per-obligation limits. Hybrid may issue multiple obligations; not an equal-total-budget or statistical speedup study."
+}

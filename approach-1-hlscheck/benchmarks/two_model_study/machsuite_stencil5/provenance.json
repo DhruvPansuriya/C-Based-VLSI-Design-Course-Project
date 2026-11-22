@@ -1,0 +1,13 @@
+{
+  "id": "machsuite_stencil5",
+  "source": "benchmarks/two_model_study/machsuite_stencil5/original.c",
+  "function": "kernel",
+  "original_sha256": "8c46a73e96b8c5cf7b0b2ee7a25f26ac6f2bd090f01a4c9d6dc0479275937149",
+  "suite": "MachSuite",
+  "upstream_source": "datasets/MachSuite/stencil/stencil2d/stencil.c",
+  "upstream_sha256": "744680af76d8a528f555887d66027ff0fb1bfde458b0bb6332814dd406710f70",
+  "preparation": "Reuse the earlier original-only adaptation: 128x64 signed32 grid becomes5x5 uint32 flat grid with unchanged3x3 filter. Writes only the top-left3x3 of a5x5 output; remaining outputs retain incoming values. This is a new unsigned domain, not equivalence to upstream signed arithmetic.",
+  "category": "adapted_kernel",
+  "integer_domain": "All data are unsigned32 with modulo-2^32 arithmetic; valid pairwise-nonoverlapping parameter arrays; unchanged array elements remain observable.",
+  "prepared_original_source": "benchmarks/machsuite_u32/stencil_original.c"
+}

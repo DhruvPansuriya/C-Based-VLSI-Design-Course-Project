@@ -1,0 +1,31 @@
+{
+  "case": "count_nonzero16",
+  "variant": "optimized",
+  "expected": "equivalent",
+  "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+  "transformation": "Parallel predicate counters",
+  "original": "benchmarks\\expanded\\count_nonzero16_original.c",
+  "candidate": "benchmarks\\expanded\\count_nonzero16_optimized.c",
+  "original_sha256": "a4f0566a2ce187c3a234bb78d9b760ed7591ab9bfe01c70cd3ccc9c3b929cd64",
+  "candidate_sha256": "bb464a59a0289cc17317b24e600040ba69438c4bd80fb6fa2fd055b3e5a1b0b5",
+  "verification": {
+    "status": "equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 71,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "elapsed_seconds": 0.012391
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

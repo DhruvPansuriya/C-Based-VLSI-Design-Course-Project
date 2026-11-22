@@ -1,0 +1,88 @@
+OpenSTA 2.0.18 41f678fb6a Copyright (c) 2019, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Startpoint: a[4] (input port clocked by core_clock)
+Endpoint: return_port[31] (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+      Delay        Time   Description
+-----------------------------------------------------------------
+   0.000000    0.000000   clock core_clock (rise edge)
+   0.000000    0.000000   clock network delay (ideal)
+   0.000000    0.000000 v input external delay
+   0.000000    0.000000 v a[4] (in)
+   0.061966    0.061966 v _06410_/ZN (AND4_X1)
+   0.085128    0.147094 v _06413_/ZN (OR3_X1)
+   0.039622    0.186716 v _06415_/ZN (AND3_X1)
+   0.079700    0.266417 v _06418_/ZN (OR3_X1)
+   0.048902    0.315318 v _06420_/ZN (AND3_X1)
+   0.107386    0.422704 ^ _06508_/ZN (OAI33_X1)
+   0.031015    0.453719 v _06533_/ZN (AOI21_X1)
+   0.090427    0.544146 v _06534_/ZN (OR3_X1)
+   0.045087    0.589233 v _06536_/ZN (AND3_X1)
+   0.081144    0.670377 v _06539_/ZN (OR3_X1)
+   0.046327    0.716704 v _06541_/ZN (AND3_X1)
+   0.092686    0.809390 v _06543_/ZN (OR3_X1)
+   0.055302    0.864692 v _06545_/ZN (AND4_X1)
+   0.098061    0.962753 ^ _06548_/ZN (AOI211_X1)
+   0.041113    1.003866 v _06779_/ZN (OAI211_X1)
+   0.134141    1.138006 ^ _06912_/ZN (AOI21_X1)
+   0.042756    1.180763 v _07059_/ZN (OAI21_X1)
+   0.067909    1.248672 ^ _07215_/ZN (AOI21_X1)
+   0.036091    1.284763 v _07386_/ZN (OAI21_X1)
+   0.095754    1.380517 ^ _07560_/ZN (AOI21_X1)
+   0.040876    1.421393 v _07757_/ZN (OAI21_X1)
+   0.165800    1.587193 ^ _07956_/ZN (AOI21_X1)
+   0.010059    1.597252 v _08398_/ZN (NOR3_X1)
+   0.107893    1.705145 ^ _08637_/ZN (OAI33_X1)
+   0.250774    1.955919 ^ _08638_/Z (XOR2_X1)
+   0.025413    1.981331 v _08641_/ZN (AOI21_X1)
+   0.105647    2.086979 v _08642_/ZN (OR3_X1)
+   0.030611    2.117590 ^ _08758_/ZN (NAND2_X1)
+   0.017971    2.135560 v _08897_/ZN (AOI21_X1)
+   0.099149    2.234709 v _08898_/ZN (OR3_X1)
+   0.042040    2.276750 v _08900_/ZN (AND3_X1)
+   0.093381    2.370130 v _08903_/ZN (OR3_X1)
+   0.042040    2.412170 v _08905_/ZN (AND3_X1)
+   0.093381    2.505551 v _08908_/ZN (OR3_X1)
+   0.042041    2.547591 v _08910_/ZN (AND3_X1)
+   0.089498    2.637090 v _08913_/ZN (OR3_X1)
+   0.030624    2.667714 ^ _08934_/ZN (NAND2_X1)
+   0.018567    2.686280 v _09206_/ZN (AOI21_X1)
+   0.063249    2.749530 ^ _09208_/ZN (NOR3_X1)
+   0.018274    2.767804 v _09212_/ZN (NOR3_X1)
+   0.128404    2.896208 v _09215_/ZN (OR4_X1)
+   0.054330    2.950538 ^ _09219_/ZN (AOI21_X1)
+   0.017106    2.967644 v _09221_/ZN (NOR3_X1)
+   0.055433    3.023077 ^ _09225_/ZN (AOI21_X1)
+   0.030440    3.053517 v _09502_/ZN (OAI21_X1)
+   0.024424    3.077941 ^ _09783_/ZN (NAND2_X1)
+   0.014128    3.092068 v _10076_/ZN (AOI21_X1)
+   0.056856    3.148924 v _10078_/ZN (OR2_X1)
+   0.046312    3.195236 ^ _10395_/ZN (AOI21_X1)
+   0.030128    3.225364 v _10710_/ZN (OAI21_X1)
+   0.049176    3.274540 ^ _11382_/ZN (AOI21_X1)
+   0.030566    3.305107 v _11384_/ZN (OAI21_X1)
+   0.051084    3.356191 ^ _12050_/ZN (OAI21_X1)
+   0.024528    3.380719 v _12052_/ZN (OAI21_X1)
+   0.073063    3.453782 ^ _12285_/ZN (XNOR2_X1)
+   0.000002    3.453784 ^ return_port[31] (out)
+               3.453784   data arrival time
+
+  10.000000   10.000000   clock core_clock (rise edge)
+   0.000000   10.000000   clock network delay (ideal)
+   0.000000   10.000000   clock reconvergence pessimism
+   0.000000   10.000000   output external delay
+              10.000000   data required time
+-----------------------------------------------------------------
+              10.000000   data required time
+              -3.453784   data arrival time
+-----------------------------------------------------------------
+               6.546216   slack (MET)
+
+
+worst slack 6.546216

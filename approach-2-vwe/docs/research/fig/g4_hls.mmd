@@ -1,0 +1,11 @@
+flowchart TB
+  REF["P_ref: independent correct reference<br/>(evaluation labels + performance baseline only)"]
+  T1["(P0, N, P1)"] --> V1{"Repair verdict"}
+  V1 -- ACCEPT --> SR{"Synthesis readiness<br/>absolute UB-freedom on admitted inputs"}
+  SR -- yes --> T2["(P1, N_opt = 'optimise, keep behaviour', P2)"]
+  T2 --> V2{"Gate B verdict: type T5<br/>full equivalence + pragma obligations<br/>+ build-view equivalence"}
+  V2 -- ACCEPT --> HLS["Vitis HLS + implementation<br/>LUT FF DSP BRAM, WNS/period, latency, II"]
+  REF -.-> HLS
+  V1 -- "REJECT / UNDECIDED" --> FB["report + witness"]
+  SR -- no --> FB
+  V2 -- "REJECT / UNDECIDED" --> FB

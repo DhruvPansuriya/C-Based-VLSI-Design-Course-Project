@@ -1,0 +1,21 @@
+tm_machsuite_gemm4_gpt61sol_optimized cached
+tm_machsuite_gemm4_baseline_original cached
+tm_machsuite_stencil5_baseline_original cached
+tm_machsuite_stencil5_gpt61sol_optimized cached
+tm_polybench_mvt4_baseline_original cached
+tm_polybench_mvt4_gpt61sol_optimized cached
+tm_polybench_syrk4_baseline_original cached
+tm_machsuite_rj_xtime_baseline_original cached
+tm_machsuite_rj_xtime_gpt61sol_optimized complete {'cycles': 1.0, 'area_um2': 6.118, 'delay_ns': 0.09715}
+tm_chstone_gsm_abs_baseline_original cached
+tm_polybench_syrk4_gpt61sol_optimized complete {'cycles': 100.0, 'area_um2': 6405.546, 'delay_ns': 4.938995}
+tm_chstone_gsm_add_baseline_original cached
+tm_chstone_gsm_abs_gpt61sol_optimized complete {'cycles': 1.0, 'area_um2': 72.618, 'delay_ns': 0.650275}
+tm_hlseval_extractFloat64Sign_baseline_original cached
+tm_chstone_gsm_add_gpt61sol_optimized complete {'cycles': 1.0, 'area_um2': 105.07, 'delay_ns': 0.928095}
+tm_hlseval_extractFloat64Frac_baseline_original cached
+tm_hlseval_extractFloat64Sign_gpt61sol_optimized complete {'cycles': 1.0, 'area_um2': 0.532, 'delay_ns': 0.054166}
+tm_hlseval_float64_is_nan_baseline_original cached
+tm_hlseval_extractFloat64Frac_gpt61sol_optimized complete {'cycles': 1.0, 'area_um2': 0.532, 'delay_ns': 0.054166}
+tm_hlseval_float64_is_nan_gpt61sol_optimized complete {'cycles': 1.0, 'area_um2': 29.792, 'delay_ns': 0.200968}
+HLS finished 20 implementations; failures remain explicit

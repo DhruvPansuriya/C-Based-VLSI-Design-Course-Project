@@ -1,0 +1,35 @@
+{
+  "id": "granite2",
+  "label": "Granite-3.3-2B-Instruct",
+  "organization": "IBM",
+  "candidate_sha256": "8264f9466065baf125608667213a715e871299abcbcb977d5eac411d6417f411",
+  "messages_sha256": "36f7b1c39b23bb166d4ea2355226c217f8d83e06edaca3f5daa7b15b28dba6f7",
+  "generation_seconds": 1.83,
+  "finish_reason": "stop",
+  "syntax_compiles": true,
+  "status": "equivalent",
+  "verification_seconds": 1.239897,
+  "reason": null,
+  "ast_unchanged": false,
+  "evidence_replay_passed": true,
+  "native": {
+    "passed": true,
+    "trials": 264,
+    "directed_trials": 8,
+    "random_trials": 256,
+    "mismatches": 0,
+    "first_mismatch_trial": null,
+    "witness_replayed": null,
+    "witness_outputs_agree": null,
+    "harness_sha256": "2efaf73b11085b860143d757d5f3aac46ca66a32bd33facbe726ac83640f8f7b",
+    "command": [
+      "C:\\MinGW\\mingw32\\bin\\clang.EXE",
+      "-std=c11",
+      "-O2",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\model_pilot_quick\\granite2\\native_differential.c",
+      "-o",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\model_pilot_quick\\granite2\\native_check_002.exe"
+    ],
+    "exit_code": 0
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "case": "prefix",
+  "variant": "optimized",
+  "expected": "equivalent",
+  "origin": "educational prefix-sum reference",
+  "transformation": "incremental prefix accumulation",
+  "original": "benchmarks\\submission\\prefix_original.c",
+  "candidate": "benchmarks\\submission\\prefix_optimized.c",
+  "original_sha256": "966bfcab111db30808da089a868f990161e9e1ece3060b3cb491ae034ec80763",
+  "candidate_sha256": "bce502911df665cc7d079ed4ffddbeb927db71e9b9f4bcc012a6a1ba5109b896",
+  "verification": {
+    "status": "equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 205,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "elapsed_seconds": 0.009688
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

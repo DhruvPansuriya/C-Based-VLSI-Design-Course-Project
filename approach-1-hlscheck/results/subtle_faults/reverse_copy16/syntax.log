@@ -1,0 +1,4 @@
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\experiments\subtle_faults\reverse_copy16\candidate.c:6:35: warning: unused variable 'x' [-Wunused-variable]
+    6 |     for(int i=0;i<8;i++){uint32_t x=a[i],y=a[15-i];out[i]=y;out[15-i]=y;}
+      |                                   ^
+1 warning generated.

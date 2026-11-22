@@ -1,0 +1,56 @@
+{
+  "status": "not_equivalent",
+  "assumptions": [
+    "32-bit int and unsigned int; uint32_t is unsigned int",
+    "All array parameters are valid, separately allocated, and nonoverlapping",
+    "Functional equality at function completion; no cycle-level RTL guarantee"
+  ],
+  "execution_steps": 80,
+  "paths": {
+    "original": 1,
+    "candidate": 1
+  },
+  "z3_version": "5.1.0",
+  "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+  "component_lemmas": [],
+  "main_query_requires_component_lemmas": false,
+  "counterexample": {
+    "a": [
+      3283522137,
+      3318522964,
+      1784594519,
+      3956097104,
+      3922625685,
+      870139217,
+      4050595876,
+      402653184
+    ]
+  },
+  "original_outputs": {
+    "a": [
+      3283522137,
+      3318522964,
+      1784594519,
+      3956097104,
+      3922625685,
+      870139217,
+      4050595876,
+      402653184
+    ],
+    "return": 3647942692
+  },
+  "candidate_outputs": {
+    "a": [
+      3283522137,
+      3318522964,
+      1784594519,
+      3956097104,
+      3922625685,
+      870139217,
+      4050595876,
+      402653184
+    ],
+    "return": 3647942693
+  },
+  "elapsed_seconds": 1.512856
+}

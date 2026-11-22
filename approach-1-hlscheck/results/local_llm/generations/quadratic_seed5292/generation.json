@@ -1,0 +1,38 @@
+{
+  "id": "quadratic_seed5292",
+  "case": "quadratic",
+  "source": "benchmarks\\expanded\\quadratic_original.c",
+  "source_sha256": "b1a5c33f2e20a7e8a13c85d755f69da4f532c0075724d08387f37e8a2421ee44",
+  "request_sha256": "313e457ba443c9df610d0b77954cbc6b2d506f98d5e7af7aba154694a2f603a1",
+  "raw_response_sha256": "1a13f9bbe040417340233776ec93a76a1eb4b10e9b95a07bee33d58bda66d61f",
+  "candidate_sha256": "99b4e538bdf7bcb6b09e13937c25a28071f8066ab48c4beecbbdd3731e80614d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 81,
+    "prompt_tokens": 259,
+    "total_tokens": 340,
+    "prompt_tokens_details": {
+      "cached_tokens": 221
+    }
+  },
+  "timings": {
+    "cache_n": 221,
+    "prompt_n": 38,
+    "prompt_ms": 27.259,
+    "prompt_per_token_ms": 0.7173421052631579,
+    "prompt_per_second": 1394.0349976154664,
+    "predicted_n": 81,
+    "predicted_ms": 654.863,
+    "predicted_per_token_ms": 8.1857875,
+    "predicted_per_second": 122.16295622137758
+  },
+  "elapsed_seconds": 0.706,
+  "extraction": "largest fenced code block; no semantic edits",
+  "model_repository": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+  "model_revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+  "model_sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+  "runtime_release": "b12619",
+  "origin": "Actual independently generated local-model optimization attempt; not an injected mutation",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0
+}

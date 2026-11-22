@@ -1,0 +1,503 @@
+{
+  "case": "stencil",
+  "variant": "buggy",
+  "expected": "not_equivalent",
+  "origin": "MachSuite stencil2d adapted to uint32_t and 5x5 dimensions",
+  "transformation": "filter-column source unrolling",
+  "original": "benchmarks\\machsuite_u32\\stencil_original.c",
+  "candidate": "benchmarks\\machsuite_u32\\stencil_buggy.c",
+  "original_sha256": "8c46a73e96b8c5cf7b0b2ee7a25f26ac6f2bd090f01a4c9d6dc0479275937149",
+  "candidate_sha256": "7f72bb91e6a4dcfc8f3965388877f7806b0de012354318d698240c9aae496143",
+  "verification": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 704,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [
+      {
+        "index": 1,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg2_1",
+          "arg2_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma001.smt2"
+      },
+      {
+        "index": 2,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg2_7",
+          "arg2_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma002.smt2"
+      },
+      {
+        "index": 3,
+        "status": "sat",
+        "variables": [
+          "arg0_6",
+          "arg2_4",
+          "arg2_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma003.smt2"
+      },
+      {
+        "index": 4,
+        "status": "sat",
+        "variables": [
+          "arg0_12",
+          "arg2_7",
+          "arg2_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma004.smt2"
+      },
+      {
+        "index": 5,
+        "status": "sat",
+        "variables": [
+          "arg0_2",
+          "arg2_1",
+          "arg2_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma005.smt2"
+      },
+      {
+        "index": 6,
+        "status": "sat",
+        "variables": [
+          "arg0_7",
+          "arg2_4",
+          "arg2_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma006.smt2"
+      },
+      {
+        "index": 7,
+        "status": "sat",
+        "variables": [
+          "arg0_13",
+          "arg2_7",
+          "arg2_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma007.smt2"
+      },
+      {
+        "index": 8,
+        "status": "sat",
+        "variables": [
+          "arg0_3",
+          "arg2_1",
+          "arg2_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma008.smt2"
+      },
+      {
+        "index": 9,
+        "status": "sat",
+        "variables": [
+          "arg0_8",
+          "arg2_4",
+          "arg2_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma009.smt2"
+      },
+      {
+        "index": 10,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg2_4",
+          "arg2_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma010.smt2"
+      },
+      {
+        "index": 11,
+        "status": "sat",
+        "variables": [
+          "arg0_16",
+          "arg2_7",
+          "arg2_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma011.smt2"
+      },
+      {
+        "index": 12,
+        "status": "sat",
+        "variables": [
+          "arg0_6",
+          "arg2_1",
+          "arg2_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma012.smt2"
+      },
+      {
+        "index": 13,
+        "status": "sat",
+        "variables": [
+          "arg0_12",
+          "arg2_4",
+          "arg2_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma013.smt2"
+      },
+      {
+        "index": 14,
+        "status": "sat",
+        "variables": [
+          "arg0_17",
+          "arg2_7",
+          "arg2_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma014.smt2"
+      },
+      {
+        "index": 15,
+        "status": "sat",
+        "variables": [
+          "arg0_7",
+          "arg2_1",
+          "arg2_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma015.smt2"
+      },
+      {
+        "index": 16,
+        "status": "sat",
+        "variables": [
+          "arg0_13",
+          "arg2_4",
+          "arg2_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma016.smt2"
+      },
+      {
+        "index": 17,
+        "status": "sat",
+        "variables": [
+          "arg0_18",
+          "arg2_7",
+          "arg2_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma017.smt2"
+      },
+      {
+        "index": 18,
+        "status": "sat",
+        "variables": [
+          "arg0_8",
+          "arg2_1",
+          "arg2_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma018.smt2"
+      },
+      {
+        "index": 19,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg2_1",
+          "arg2_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma019.smt2"
+      },
+      {
+        "index": 20,
+        "status": "sat",
+        "variables": [
+          "arg0_16",
+          "arg2_4",
+          "arg2_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma020.smt2"
+      },
+      {
+        "index": 21,
+        "status": "sat",
+        "variables": [
+          "arg0_21",
+          "arg2_7",
+          "arg2_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma021.smt2"
+      },
+      {
+        "index": 22,
+        "status": "sat",
+        "variables": [
+          "arg0_12",
+          "arg2_1",
+          "arg2_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma022.smt2"
+      },
+      {
+        "index": 23,
+        "status": "sat",
+        "variables": [
+          "arg0_17",
+          "arg2_4",
+          "arg2_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma023.smt2"
+      },
+      {
+        "index": 24,
+        "status": "sat",
+        "variables": [
+          "arg0_22",
+          "arg2_7",
+          "arg2_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma024.smt2"
+      },
+      {
+        "index": 25,
+        "status": "sat",
+        "variables": [
+          "arg0_13",
+          "arg2_1",
+          "arg2_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma025.smt2"
+      },
+      {
+        "index": 26,
+        "status": "sat",
+        "variables": [
+          "arg0_18",
+          "arg2_4",
+          "arg2_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma026.smt2"
+      },
+      {
+        "index": 27,
+        "status": "sat",
+        "variables": [
+          "arg0_23",
+          "arg2_7",
+          "arg2_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\stencil_buggy.lemma027.smt2"
+      }
+    ],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "orig": [
+        0,
+        2614063989,
+        841993090,
+        3421799917,
+        0,
+        0,
+        131023708,
+        1165414319,
+        1303686571,
+        0,
+        0,
+        1736907631,
+        1256503197,
+        851229687,
+        0,
+        0,
+        2741538719,
+        2839396351,
+        148481189,
+        0,
+        0,
+        613679104,
+        1348312814,
+        452399146,
+        0
+      ],
+      "sol": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "filter": [
+        0,
+        4143817647,
+        3220709630,
+        0,
+        1442304063,
+        1417443947,
+        0,
+        3559586795,
+        2256206826
+      ]
+    },
+    "original_outputs": {
+      "orig": [
+        0,
+        2614063989,
+        841993090,
+        3421799917,
+        0,
+        0,
+        131023708,
+        1165414319,
+        1303686571,
+        0,
+        0,
+        1736907631,
+        1256503197,
+        851229687,
+        0,
+        0,
+        2741538719,
+        2839396351,
+        148481189,
+        0,
+        0,
+        613679104,
+        1348312814,
+        452399146,
+        0
+      ],
+      "sol": [
+        3836864295,
+        2732539507,
+        2085018069,
+        0,
+        0,
+        515920001,
+        3151734034,
+        2077979941,
+        0,
+        0,
+        467085545,
+        3498831867,
+        199187458,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "filter": [
+        0,
+        4143817647,
+        3220709630,
+        0,
+        1442304063,
+        1417443947,
+        0,
+        3559586795,
+        2256206826
+      ]
+    },
+    "candidate_outputs": {
+      "orig": [
+        0,
+        2614063989,
+        841993090,
+        3421799917,
+        0,
+        0,
+        131023708,
+        1165414319,
+        1303686571,
+        0,
+        0,
+        1736907631,
+        1256503197,
+        851229687,
+        0,
+        0,
+        2741538719,
+        2839396351,
+        148481189,
+        0,
+        0,
+        613679104,
+        1348312814,
+        452399146,
+        0
+      ],
+      "sol": [
+        3293329827,
+        2444146184,
+        2559808101,
+        0,
+        0,
+        4200981338,
+        2423799824,
+        263994297,
+        0,
+        0,
+        3121879166,
+        2176121172,
+        823510637,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "filter": [
+        0,
+        4143817647,
+        3220709630,
+        0,
+        1442304063,
+        1417443947,
+        0,
+        3559586795,
+        2256206826
+      ]
+    },
+    "elapsed_seconds": 2.214435
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

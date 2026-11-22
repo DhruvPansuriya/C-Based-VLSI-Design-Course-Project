@@ -1,0 +1,1079 @@
+{
+  "passed": false,
+  "cases": [
+    {
+      "case": "scale_optimized",
+      "expected": "equivalent",
+      "hlscheck": {
+        "status": "equivalent",
+        "assumptions": [
+          "32-bit int and unsigned int; uint32_t is unsigned int",
+          "All array parameters are valid, separately allocated, and nonoverlapping",
+          "Functional equality at function completion; no cycle-level RTL guarantee"
+        ],
+        "execution_steps": 48,
+        "paths": {
+          "original": 1,
+          "candidate": 1
+        },
+        "z3_version": "5.1.0",
+        "elapsed_seconds": 0.013537
+      },
+      "esbmc": {
+        "backend": "ESBMC",
+        "solver": "Z3",
+        "status": "equivalent",
+        "parameters": [
+          {
+            "name": "a",
+            "kind": "unsigned int",
+            "length": 8
+          },
+          {
+            "name": "out",
+            "kind": "unsigned int",
+            "length": 8
+          }
+        ],
+        "scalar_ranges": {},
+        "assumptions": [
+          "32-bit int/unsigned int",
+          "Array parameters valid and pairwise nonoverlapping",
+          "All scalar/array inputs symbolic over their full type domain except stated ranges",
+          "Default ESBMC bounds, pointer and unwinding checks retained; signed overflow and shift UB checks enabled"
+        ],
+        "command": [
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\scale_optimized\\harness.c",
+          "--z3",
+          "--bv",
+          "--unwind",
+          "256",
+          "--overflow-check",
+          "--ub-shift-check",
+          "--uninitialised-vars-check",
+          "--multi-property"
+        ],
+        "unwind": 256,
+        "timeout_seconds": 30,
+        "returncode": 0,
+        "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+        "solver_report": "Solving claim 'arithmetic overflow on add at file C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\scale_optimized\\harness.c line 31 column 30 function main' with solver Z3 v4.13.3",
+        "elapsed_seconds": 0.645459
+      },
+      "original": "benchmarks\\demo\\scale_original.c",
+      "candidate": "benchmarks\\demo\\scale_optimized.c",
+      "original_sha256": "711800ee8d53ca1e6d4d1441a8f0eecf1035dd68ded4a6733bf25d1d70556bb9",
+      "candidate_sha256": "03c043c69d50003b08c552df3c2b6568c4e725d322b5e01375eb3593f9818f33",
+      "provenance": "Codex-authored optimization",
+      "hls_qor": "not measured"
+    },
+    {
+      "case": "scale_buggy",
+      "expected": "not_equivalent",
+      "hlscheck": {
+        "status": "not_equivalent",
+        "assumptions": [
+          "32-bit int and unsigned int; uint32_t is unsigned int",
+          "All array parameters are valid, separately allocated, and nonoverlapping",
+          "Functional equality at function completion; no cycle-level RTL guarantee"
+        ],
+        "execution_steps": 48,
+        "paths": {
+          "original": 1,
+          "candidate": 1
+        },
+        "z3_version": "5.1.0",
+        "counterexample": {
+          "a": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "out": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_outputs": {
+          "a": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "out": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            11
+          ]
+        },
+        "candidate_outputs": {
+          "a": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "out": [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            7
+          ]
+        },
+        "elapsed_seconds": 0.007976
+      },
+      "esbmc": {
+        "backend": "ESBMC",
+        "solver": "Z3",
+        "status": "not_equivalent",
+        "parameters": [
+          {
+            "name": "a",
+            "kind": "unsigned int",
+            "length": 8
+          },
+          {
+            "name": "out",
+            "kind": "unsigned int",
+            "length": 8
+          }
+        ],
+        "scalar_ranges": {},
+        "assumptions": [
+          "32-bit int/unsigned int",
+          "Array parameters valid and pairwise nonoverlapping",
+          "All scalar/array inputs symbolic over their full type domain except stated ranges",
+          "Default ESBMC bounds, pointer and unwinding checks retained; signed overflow and shift UB checks enabled"
+        ],
+        "command": [
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\scale_buggy\\harness.c",
+          "--z3",
+          "--bv",
+          "--unwind",
+          "256",
+          "--overflow-check",
+          "--ub-shift-check",
+          "--uninitialised-vars-check",
+          "--multi-property"
+        ],
+        "unwind": 256,
+        "timeout_seconds": 30,
+        "returncode": 1,
+        "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+        "solver_report": "Solving claim 'arithmetic overflow on add at file C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\scale_buggy\\harness.c line 31 column 30 function main' with solver Z3 v4.13.3",
+        "elapsed_seconds": 0.62166
+      },
+      "original": "benchmarks\\demo\\scale_original.c",
+      "candidate": "benchmarks\\demo\\scale_buggy.c",
+      "original_sha256": "711800ee8d53ca1e6d4d1441a8f0eecf1035dd68ded4a6733bf25d1d70556bb9",
+      "candidate_sha256": "0ac842475c15b32fd100847e1e96791a4ad944517e834067b0c8321451934d5c",
+      "provenance": "Deliberately seeded negative control",
+      "hls_qor": "not measured"
+    },
+    {
+      "case": "unswitch_optimized",
+      "expected": "equivalent",
+      "hlscheck": {
+        "status": "equivalent",
+        "assumptions": [
+          "32-bit int and unsigned int; uint32_t is unsigned int",
+          "All array parameters are valid, separately allocated, and nonoverlapping",
+          "Functional equality at function completion; no cycle-level RTL guarantee"
+        ],
+        "execution_steps": 158,
+        "paths": {
+          "original": 16,
+          "candidate": 2
+        },
+        "z3_version": "5.1.0",
+        "elapsed_seconds": 0.023724
+      },
+      "esbmc": {
+        "backend": "ESBMC",
+        "solver": "Z3",
+        "status": "equivalent",
+        "parameters": [
+          {
+            "name": "x",
+            "kind": "unsigned int",
+            "length": null
+          },
+          {
+            "name": "b",
+            "kind": "unsigned int",
+            "length": 4
+          },
+          {
+            "name": "c",
+            "kind": "unsigned int",
+            "length": 4
+          },
+          {
+            "name": "a",
+            "kind": "unsigned int",
+            "length": 4
+          }
+        ],
+        "scalar_ranges": {},
+        "assumptions": [
+          "32-bit int/unsigned int",
+          "Array parameters valid and pairwise nonoverlapping",
+          "All scalar/array inputs symbolic over their full type domain except stated ranges",
+          "Default ESBMC bounds, pointer and unwinding checks retained; signed overflow and shift UB checks enabled"
+        ],
+        "command": [
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\unswitch_optimized\\harness.c",
+          "--z3",
+          "--bv",
+          "--unwind",
+          "256",
+          "--overflow-check",
+          "--ub-shift-check",
+          "--uninitialised-vars-check",
+          "--multi-property"
+        ],
+        "unwind": 256,
+        "timeout_seconds": 30,
+        "returncode": 0,
+        "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+        "solver_report": "Solving claim 'arithmetic overflow on add at file C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\unswitch_optimized\\harness.c line 49 column 30 function main' with solver Z3 v4.13.3",
+        "elapsed_seconds": 0.783843
+      },
+      "original": "benchmarks\\demo\\unswitch_original.c",
+      "candidate": "benchmarks\\demo\\unswitch_optimized.c",
+      "original_sha256": "7c5365ca9545acc01de39421dd4632b0c3b3d9c0ef9c4354400084308baf7d35",
+      "candidate_sha256": "6fc9674226bc6a9e318fa147dcde12f2c263f64ad5c87a091f8273b662475db6",
+      "provenance": "Codex-authored optimization",
+      "hls_qor": "not measured"
+    },
+    {
+      "case": "unswitch_buggy",
+      "expected": "not_equivalent",
+      "hlscheck": {
+        "status": "not_equivalent",
+        "assumptions": [
+          "32-bit int and unsigned int; uint32_t is unsigned int",
+          "All array parameters are valid, separately allocated, and nonoverlapping",
+          "Functional equality at function completion; no cycle-level RTL guarantee"
+        ],
+        "execution_steps": 158,
+        "paths": {
+          "original": 16,
+          "candidate": 2
+        },
+        "z3_version": "5.1.0",
+        "counterexample": {
+          "x": 10,
+          "b": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "c": [
+            1156851200,
+            1073741825,
+            0,
+            0
+          ],
+          "a": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_outputs": {
+          "b": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "c": [
+            1156851200,
+            1073741825,
+            0,
+            0
+          ],
+          "a": [
+            3138116096,
+            3221225471,
+            0,
+            0
+          ]
+        },
+        "candidate_outputs": {
+          "b": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "c": [
+            1156851200,
+            1073741825,
+            0,
+            0
+          ],
+          "a": [
+            1156851200,
+            1073741825,
+            0,
+            0
+          ]
+        },
+        "elapsed_seconds": 0.041088
+      },
+      "esbmc": {
+        "backend": "ESBMC",
+        "solver": "Z3",
+        "status": "not_equivalent",
+        "parameters": [
+          {
+            "name": "x",
+            "kind": "unsigned int",
+            "length": null
+          },
+          {
+            "name": "b",
+            "kind": "unsigned int",
+            "length": 4
+          },
+          {
+            "name": "c",
+            "kind": "unsigned int",
+            "length": 4
+          },
+          {
+            "name": "a",
+            "kind": "unsigned int",
+            "length": 4
+          }
+        ],
+        "scalar_ranges": {},
+        "assumptions": [
+          "32-bit int/unsigned int",
+          "Array parameters valid and pairwise nonoverlapping",
+          "All scalar/array inputs symbolic over their full type domain except stated ranges",
+          "Default ESBMC bounds, pointer and unwinding checks retained; signed overflow and shift UB checks enabled"
+        ],
+        "command": [
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\unswitch_buggy\\harness.c",
+          "--z3",
+          "--bv",
+          "--unwind",
+          "256",
+          "--overflow-check",
+          "--ub-shift-check",
+          "--uninitialised-vars-check",
+          "--multi-property"
+        ],
+        "unwind": 256,
+        "timeout_seconds": 30,
+        "returncode": 1,
+        "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+        "solver_report": "Solving claim 'arithmetic overflow on add at file C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\unswitch_buggy\\harness.c line 49 column 30 function main' with solver Z3 v4.13.3",
+        "elapsed_seconds": 0.647266
+      },
+      "original": "benchmarks\\demo\\unswitch_original.c",
+      "candidate": "benchmarks\\demo\\unswitch_buggy.c",
+      "original_sha256": "7c5365ca9545acc01de39421dd4632b0c3b3d9c0ef9c4354400084308baf7d35",
+      "candidate_sha256": "7fc91a66acb0c44b37cd58b27ec45fda427d8c64c0dcacdd559753c34c38cc72",
+      "provenance": "Deliberately seeded negative control",
+      "hls_qor": "not measured"
+    },
+    {
+      "case": "gemm_optimized",
+      "expected": "equivalent",
+      "hlscheck": {
+        "status": "equivalent",
+        "assumptions": [
+          "32-bit int and unsigned int; uint32_t is unsigned int",
+          "All array parameters are valid, separately allocated, and nonoverlapping",
+          "Functional equality at function completion; no cycle-level RTL guarantee"
+        ],
+        "execution_steps": 691,
+        "paths": {
+          "original": 1,
+          "candidate": 1
+        },
+        "z3_version": "5.1.0",
+        "elapsed_seconds": 0.032293
+      },
+      "esbmc": {
+        "backend": "ESBMC",
+        "solver": "Z3",
+        "status": "unknown",
+        "parameters": [
+          {
+            "name": "m1",
+            "kind": "unsigned int",
+            "length": 16
+          },
+          {
+            "name": "m2",
+            "kind": "unsigned int",
+            "length": 16
+          },
+          {
+            "name": "prod",
+            "kind": "unsigned int",
+            "length": 16
+          }
+        ],
+        "scalar_ranges": {},
+        "assumptions": [
+          "32-bit int/unsigned int",
+          "Array parameters valid and pairwise nonoverlapping",
+          "All scalar/array inputs symbolic over their full type domain except stated ranges",
+          "Default ESBMC bounds, pointer and unwinding checks retained; signed overflow and shift UB checks enabled"
+        ],
+        "command": [
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\gemm_optimized\\harness.c",
+          "--z3",
+          "--bv",
+          "--unwind",
+          "256",
+          "--overflow-check",
+          "--ub-shift-check",
+          "--uninitialised-vars-check",
+          "--multi-property"
+        ],
+        "unwind": 256,
+        "timeout_seconds": 30,
+        "reason": "External verifier exceeded its wall-clock timeout",
+        "elapsed_seconds": 40.02875
+      },
+      "original": "benchmarks\\machsuite_u32\\gemm_original.c",
+      "candidate": "benchmarks\\machsuite_u32\\gemm_optimized.c",
+      "original_sha256": "d34b316a62c77526f14598b5987f8b8a1dfe86a57d3bbda47702b89bfb50cb8f",
+      "candidate_sha256": "b00c6d42d612683b6b151b710171bdf6aefe6bd070f22ec3479d29cb5afedebd",
+      "provenance": "Codex-authored optimization",
+      "hls_qor": "not measured"
+    },
+    {
+      "case": "gemm_buggy",
+      "expected": "not_equivalent",
+      "hlscheck": {
+        "status": "not_equivalent",
+        "assumptions": [
+          "32-bit int and unsigned int; uint32_t is unsigned int",
+          "All array parameters are valid, separately allocated, and nonoverlapping",
+          "Functional equality at function completion; no cycle-level RTL guarantee"
+        ],
+        "execution_steps": 691,
+        "paths": {
+          "original": 1,
+          "candidate": 1
+        },
+        "z3_version": "5.1.0",
+        "counterexample": {
+          "m1": [
+            2512707164,
+            1401367327,
+            223810113,
+            27203687,
+            2815875003,
+            2010444747,
+            2044570367,
+            3656685131,
+            3417663217,
+            3758799537,
+            1626341691,
+            1558795281,
+            707501924,
+            3032331935,
+            357877327,
+            4137005116
+          ],
+          "m2": [
+            0,
+            2099248125,
+            2941250186,
+            1233263143,
+            3276340095,
+            0,
+            229524839,
+            684781573,
+            2624257357,
+            1169946415,
+            0,
+            1882300415,
+            3141785231,
+            4225826007,
+            1819017215,
+            0
+          ],
+          "prod": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "original_outputs": {
+          "m1": [
+            2512707164,
+            1401367327,
+            223810113,
+            27203687,
+            2815875003,
+            2010444747,
+            2044570367,
+            3656685131,
+            3417663217,
+            3758799537,
+            1626341691,
+            1558795281,
+            707501924,
+            3032331935,
+            357877327,
+            4137005116
+          ],
+          "m2": [
+            0,
+            2099248125,
+            2941250186,
+            1233263143,
+            3276340095,
+            0,
+            229524839,
+            684781573,
+            2624257357,
+            1169946415,
+            0,
+            1882300415,
+            3141785231,
+            4225826007,
+            1819017215,
+            0
+          ],
+          "prod": [
+            1986805623,
+            2190403676,
+            3685519786,
+            2114891102,
+            2934510157,
+            2976647069,
+            331575344,
+            1745986421,
+            755696141,
+            1834189897,
+            1400129040,
+            3886324977,
+            1807274024,
+            3922544057,
+            3882547365,
+            1467132680
+          ]
+        },
+        "candidate_outputs": {
+          "m1": [
+            2512707164,
+            1401367327,
+            223810113,
+            27203687,
+            2815875003,
+            2010444747,
+            2044570367,
+            3656685131,
+            3417663217,
+            3758799537,
+            1626341691,
+            1558795281,
+            707501924,
+            3032331935,
+            357877327,
+            4137005116
+          ],
+          "m2": [
+            0,
+            2099248125,
+            2941250186,
+            1233263143,
+            3276340095,
+            0,
+            229524839,
+            684781573,
+            2624257357,
+            1169946415,
+            0,
+            1882300415,
+            3141785231,
+            4225826007,
+            1819017215,
+            0
+          ],
+          "prod": [
+            1934717278,
+            2522639054,
+            2188962038,
+            135906860,
+            53133186,
+            1575429589,
+            4063271737,
+            1148500979,
+            3028429906,
+            2095208097,
+            2539420907,
+            286391307,
+            4048580061,
+            2737890449,
+            3376776457,
+            3959406102
+          ]
+        },
+        "elapsed_seconds": 4.996934
+      },
+      "esbmc": {
+        "backend": "ESBMC",
+        "solver": "Z3",
+        "status": "not_equivalent",
+        "parameters": [
+          {
+            "name": "m1",
+            "kind": "unsigned int",
+            "length": 16
+          },
+          {
+            "name": "m2",
+            "kind": "unsigned int",
+            "length": 16
+          },
+          {
+            "name": "prod",
+            "kind": "unsigned int",
+            "length": 16
+          }
+        ],
+        "scalar_ranges": {},
+        "assumptions": [
+          "32-bit int/unsigned int",
+          "Array parameters valid and pairwise nonoverlapping",
+          "All scalar/array inputs symbolic over their full type domain except stated ranges",
+          "Default ESBMC bounds, pointer and unwinding checks retained; signed overflow and shift UB checks enabled"
+        ],
+        "command": [
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\gemm_buggy\\harness.c",
+          "--z3",
+          "--bv",
+          "--unwind",
+          "256",
+          "--overflow-check",
+          "--ub-shift-check",
+          "--uninitialised-vars-check",
+          "--multi-property"
+        ],
+        "unwind": 256,
+        "timeout_seconds": 30,
+        "returncode": 1,
+        "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+        "solver_report": "Solving claim 'arithmetic overflow on add at file C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\gemm_buggy\\harness.c line 54 column 31 function main' with solver Z3 v4.13.3",
+        "elapsed_seconds": 6.639621
+      },
+      "original": "benchmarks\\machsuite_u32\\gemm_original.c",
+      "candidate": "benchmarks\\machsuite_u32\\gemm_buggy.c",
+      "original_sha256": "d34b316a62c77526f14598b5987f8b8a1dfe86a57d3bbda47702b89bfb50cb8f",
+      "candidate_sha256": "e0d7931a6d52ff6692576d2d4c2384775827b1f64b7b06b6eae7b0bf349a1c94",
+      "provenance": "Deliberately seeded negative control",
+      "hls_qor": "not measured"
+    },
+    {
+      "case": "stencil_optimized",
+      "expected": "equivalent",
+      "hlscheck": {
+        "status": "equivalent",
+        "assumptions": [
+          "32-bit int and unsigned int; uint32_t is unsigned int",
+          "All array parameters are valid, separately allocated, and nonoverlapping",
+          "Functional equality at function completion; no cycle-level RTL guarantee"
+        ],
+        "execution_steps": 704,
+        "paths": {
+          "original": 1,
+          "candidate": 1
+        },
+        "z3_version": "5.1.0",
+        "elapsed_seconds": 0.030045
+      },
+      "esbmc": {
+        "backend": "ESBMC",
+        "solver": "Z3",
+        "status": "equivalent",
+        "parameters": [
+          {
+            "name": "orig",
+            "kind": "unsigned int",
+            "length": 25
+          },
+          {
+            "name": "sol",
+            "kind": "unsigned int",
+            "length": 25
+          },
+          {
+            "name": "filter",
+            "kind": "unsigned int",
+            "length": 9
+          }
+        ],
+        "scalar_ranges": {},
+        "assumptions": [
+          "32-bit int/unsigned int",
+          "Array parameters valid and pairwise nonoverlapping",
+          "All scalar/array inputs symbolic over their full type domain except stated ranges",
+          "Default ESBMC bounds, pointer and unwinding checks retained; signed overflow and shift UB checks enabled"
+        ],
+        "command": [
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\stencil_optimized\\harness.c",
+          "--z3",
+          "--bv",
+          "--unwind",
+          "256",
+          "--overflow-check",
+          "--ub-shift-check",
+          "--uninitialised-vars-check",
+          "--multi-property"
+        ],
+        "unwind": 256,
+        "timeout_seconds": 30,
+        "returncode": 0,
+        "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+        "solver_report": "Solving claim 'arithmetic overflow on add at file C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\stencil_optimized\\harness.c line 57 column 31 function main' with solver Z3 v4.13.3",
+        "elapsed_seconds": 6.983359
+      },
+      "original": "benchmarks\\machsuite_u32\\stencil_original.c",
+      "candidate": "benchmarks\\machsuite_u32\\stencil_optimized.c",
+      "original_sha256": "8c46a73e96b8c5cf7b0b2ee7a25f26ac6f2bd090f01a4c9d6dc0479275937149",
+      "candidate_sha256": "3b3b99ec35449cc4986ad4a87a64d884753438507dee5f0703260449c2010603",
+      "provenance": "Codex-authored optimization",
+      "hls_qor": "not measured"
+    },
+    {
+      "case": "stencil_buggy",
+      "expected": "not_equivalent",
+      "hlscheck": {
+        "status": "not_equivalent",
+        "assumptions": [
+          "32-bit int and unsigned int; uint32_t is unsigned int",
+          "All array parameters are valid, separately allocated, and nonoverlapping",
+          "Functional equality at function completion; no cycle-level RTL guarantee"
+        ],
+        "execution_steps": 704,
+        "paths": {
+          "original": 1,
+          "candidate": 1
+        },
+        "z3_version": "5.1.0",
+        "counterexample": {
+          "orig": [
+            0,
+            1158309949,
+            3835805851,
+            1434179612,
+            0,
+            0,
+            1897923937,
+            2229992959,
+            23044779,
+            0,
+            0,
+            1101282518,
+            2272868159,
+            2118634956,
+            0,
+            0,
+            2589507045,
+            1710000063,
+            1764808726,
+            0,
+            0,
+            2985149679,
+            3989857825,
+            2198556512,
+            0
+          ],
+          "sol": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "filter": [
+            0,
+            3452813311,
+            1703285055,
+            0,
+            1585411400,
+            614948408,
+            0,
+            2641223673,
+            1108836351
+          ]
+        },
+        "original_outputs": {
+          "orig": [
+            0,
+            1158309949,
+            3835805851,
+            1434179612,
+            0,
+            0,
+            1897923937,
+            2229992959,
+            23044779,
+            0,
+            0,
+            1101282518,
+            2272868159,
+            2118634956,
+            0,
+            0,
+            2589507045,
+            1710000063,
+            1764808726,
+            0,
+            0,
+            2985149679,
+            3989857825,
+            2198556512,
+            0
+          ],
+          "sol": [
+            3539726815,
+            924496868,
+            3088051816,
+            0,
+            0,
+            3358159958,
+            3423107103,
+            2619281947,
+            0,
+            0,
+            2351417137,
+            4130722102,
+            2950355652,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "filter": [
+            0,
+            3452813311,
+            1703285055,
+            0,
+            1585411400,
+            614948408,
+            0,
+            2641223673,
+            1108836351
+          ]
+        },
+        "candidate_outputs": {
+          "orig": [
+            0,
+            1158309949,
+            3835805851,
+            1434179612,
+            0,
+            0,
+            1897923937,
+            2229992959,
+            23044779,
+            0,
+            0,
+            1101282518,
+            2272868159,
+            2118634956,
+            0,
+            0,
+            2589507045,
+            1710000063,
+            1764808726,
+            0,
+            0,
+            2985149679,
+            3989857825,
+            2198556512,
+            0
+          ],
+          "sol": [
+            2738515475,
+            2888812590,
+            2141297792,
+            0,
+            0,
+            2503739796,
+            2335512681,
+            1392932767,
+            0,
+            0,
+            4024581883,
+            3231969228,
+            331627172,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "filter": [
+            0,
+            3452813311,
+            1703285055,
+            0,
+            1585411400,
+            614948408,
+            0,
+            2641223673,
+            1108836351
+          ]
+        },
+        "elapsed_seconds": 2.197296
+      },
+      "esbmc": {
+        "backend": "ESBMC",
+        "solver": "Z3",
+        "status": "not_equivalent",
+        "parameters": [
+          {
+            "name": "orig",
+            "kind": "unsigned int",
+            "length": 25
+          },
+          {
+            "name": "sol",
+            "kind": "unsigned int",
+            "length": 25
+          },
+          {
+            "name": "filter",
+            "kind": "unsigned int",
+            "length": 9
+          }
+        ],
+        "scalar_ranges": {},
+        "assumptions": [
+          "32-bit int/unsigned int",
+          "Array parameters valid and pairwise nonoverlapping",
+          "All scalar/array inputs symbolic over their full type domain except stated ranges",
+          "Default ESBMC bounds, pointer and unwinding checks retained; signed overflow and shift UB checks enabled"
+        ],
+        "command": [
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+          "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\stencil_buggy\\harness.c",
+          "--z3",
+          "--bv",
+          "--unwind",
+          "256",
+          "--overflow-check",
+          "--ub-shift-check",
+          "--uninitialised-vars-check",
+          "--multi-property"
+        ],
+        "unwind": 256,
+        "timeout_seconds": 30,
+        "returncode": 1,
+        "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+        "solver_report": "Solving claim 'arithmetic overflow on add at file C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\benchmarks\\stencil_buggy\\harness.c line 57 column 31 function main' with solver Z3 v4.13.3",
+        "elapsed_seconds": 8.147127
+      },
+      "original": "benchmarks\\machsuite_u32\\stencil_original.c",
+      "candidate": "benchmarks\\machsuite_u32\\stencil_buggy.c",
+      "original_sha256": "8c46a73e96b8c5cf7b0b2ee7a25f26ac6f2bd090f01a4c9d6dc0479275937149",
+      "candidate_sha256": "7f72bb91e6a4dcfc8f3965388877f7806b0de012354318d698240c9aae496143",
+      "provenance": "Deliberately seeded negative control",
+      "hls_qor": "not measured"
+    }
+  ],
+  "hlscheck_passed": true,
+  "reference_conclusive": 7,
+  "reference_total": 8,
+  "reference_agrees_when_conclusive": true
+}

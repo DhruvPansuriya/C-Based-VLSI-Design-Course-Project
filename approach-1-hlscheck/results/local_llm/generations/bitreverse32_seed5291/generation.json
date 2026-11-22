@@ -1,0 +1,38 @@
+{
+  "id": "bitreverse32_seed5291",
+  "case": "bitreverse32",
+  "source": "benchmarks\\expanded\\bitreverse32_original.c",
+  "source_sha256": "1061706098a75b2fa2c0ff02ff2f876a32903df13e9a566a6cba83d5c0a8ff00",
+  "request_sha256": "bc577b6e66885d38e679ed6ad21d0f50f04a4eca9530cd129fc6db3b549c9b72",
+  "raw_response_sha256": "7cd1a149487a8e722700e92e39342e7dc46100a3ae2d5d7faf7335c5dfdc7e3d",
+  "candidate_sha256": "1061706098a75b2fa2c0ff02ff2f876a32903df13e9a566a6cba83d5c0a8ff00",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 86,
+    "prompt_tokens": 272,
+    "total_tokens": 358,
+    "prompt_tokens_details": {
+      "cached_tokens": 229
+    }
+  },
+  "timings": {
+    "cache_n": 229,
+    "prompt_n": 43,
+    "prompt_ms": 27.842,
+    "prompt_per_token_ms": 0.6474883720930232,
+    "prompt_per_second": 1544.4292795057827,
+    "predicted_n": 86,
+    "predicted_ms": 706.695,
+    "predicted_per_token_ms": 8.314058823529413,
+    "predicted_per_second": 120.27819639306912
+  },
+  "elapsed_seconds": 0.754,
+  "extraction": "largest fenced code block; no semantic edits",
+  "model_repository": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+  "model_revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+  "model_sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+  "runtime_release": "b12619",
+  "origin": "Actual independently generated local-model optimization attempt; not an injected mutation",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0
+}

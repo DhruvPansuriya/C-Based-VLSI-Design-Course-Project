@@ -1,0 +1,78 @@
+OpenSTA 2.0.18 41f678fb6a Copyright (c) 2019, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Startpoint: y[0] (input port clocked by core_clock)
+Endpoint: return_port[31] (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+      Delay        Time   Description
+-----------------------------------------------------------------
+   0.000000    0.000000   clock core_clock (rise edge)
+   0.000000    0.000000   clock network delay (ideal)
+   0.000000    0.000000 ^ input external delay
+   0.000000    0.000000 ^ y[0] (in)
+   0.028682    0.028682 v _2948_/ZN (NAND2_X1)
+   0.050475    0.079157 ^ _2963_/ZN (OAI21_X1)
+   0.026272    0.105429 v _2966_/ZN (AOI21_X1)
+   0.045804    0.151233 ^ _2969_/ZN (OAI21_X1)
+   0.026588    0.177821 v _2970_/ZN (AOI21_X1)
+   0.675221    0.853042 ^ _2974_/ZN (XNOR2_X1)
+   0.049189    0.902232 v _5229_/ZN (NAND3_X1)
+   0.058729    0.960960 ^ _5230_/ZN (OAI21_X1)
+   0.078949    1.039909 ^ _5239_/Z (XOR2_X1)
+   0.023996    1.063905 v _5240_/ZN (NAND2_X1)
+   0.038524    1.102429 v _5242_/ZN (AND2_X1)
+   0.039883    1.142312 v _5259_/ZN (XNOR2_X1)
+   0.094659    1.236970 v _5260_/ZN (OR3_X1)
+   0.038220    1.275190 v _5322_/ZN (AND3_X1)
+   0.078077    1.353267 v _5330_/ZN (OR3_X1)
+   0.038496    1.391763 v _5391_/ZN (AND3_X1)
+   0.088975    1.480738 v _5394_/ZN (OR3_X1)
+   0.046118    1.526856 v _5442_/ZN (AND3_X1)
+   0.105783    1.632640 v _5480_/ZN (OR4_X1)
+   0.041818    1.674457 v _5514_/ZN (AND3_X1)
+   0.100405    1.774863 v _5544_/ZN (OR4_X1)
+   0.029043    1.803905 ^ _5569_/ZN (NAND3_X1)
+   0.015490    1.819396 v _5571_/ZN (AOI21_X1)
+   0.057141    1.876537 v _5572_/ZN (OR2_X1)
+   0.047159    1.923695 ^ _5573_/ZN (AOI21_X1)
+   0.016599    1.940295 v _5575_/ZN (NOR2_X1)
+   0.033261    1.973556 ^ _5577_/ZN (OAI211_X1)
+   0.042605    2.016161 ^ _5578_/ZN (AND2_X1)
+   0.023739    2.039901 v _5579_/ZN (OAI21_X1)
+   0.042809    2.082710 ^ _5581_/ZN (AOI21_X1)
+   0.030932    2.113642 v _5582_/ZN (OAI21_X1)
+   0.049388    2.163029 ^ _5583_/ZN (AOI21_X1)
+   0.036058    2.199088 v _5584_/ZN (OAI21_X1)
+   0.022727    2.221815 ^ _5585_/ZN (NAND2_X1)
+   0.022877    2.244692 v _5590_/ZN (OAI21_X1)
+   0.023076    2.267768 ^ _5591_/ZN (NAND2_X1)
+   0.022188    2.289956 v _5594_/ZN (AOI21_X1)
+   0.052142    2.342098 ^ _5595_/ZN (OAI21_X1)
+   0.022815    2.364913 v _5598_/ZN (NAND3_X1)
+   0.040069    2.404982 v _5599_/ZN (AND2_X1)
+   0.095834    2.500816 ^ _5602_/ZN (AOI221_X1)
+   0.046604    2.547420 v _5604_/ZN (OAI33_X1)
+   0.050787    2.598207 ^ _5605_/ZN (AOI21_X1)
+   0.024991    2.623198 v _5767_/ZN (OAI21_X1)
+   0.073215    2.696413 ^ _5882_/ZN (XNOR2_X1)
+   0.000002    2.696415 ^ return_port[31] (out)
+               2.696415   data arrival time
+
+  10.000000   10.000000   clock core_clock (rise edge)
+   0.000000   10.000000   clock network delay (ideal)
+   0.000000   10.000000   clock reconvergence pessimism
+   0.000000   10.000000   output external delay
+              10.000000   data required time
+-----------------------------------------------------------------
+              10.000000   data required time
+              -2.696415   data arrival time
+-----------------------------------------------------------------
+               7.303586   slack (MET)
+
+
+worst slack 7.303586

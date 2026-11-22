@@ -1,0 +1,41 @@
+OpenSTA 2.0.18 41f678fb6a Copyright (c) 2019, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Warning: There is 1 unconstrained endpoint.
+  return_port[15]
+Startpoint: a[2] (input port clocked by core_clock)
+Endpoint: return_port[10] (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+      Delay        Time   Description
+-----------------------------------------------------------------
+   0.000000    0.000000   clock core_clock (rise edge)
+   0.000000    0.000000   clock network delay (ideal)
+   0.000000    0.000000 v input external delay
+   0.000000    0.000000 v a[2] (in)
+   0.150787    0.150787 ^ _050_/ZN (NOR4_X1)
+   0.098251    0.249038 ^ _055_/ZN (AND4_X1)
+   0.036742    0.285780 v _062_/ZN (NAND4_X1)
+   0.126031    0.411812 ^ _070_/ZN (NOR4_X1)
+   0.154777    0.566589 v _078_/ZN (NAND4_X1)
+   0.083685    0.650274 ^ _100_/ZN (OAI21_X1)
+   0.000002    0.650276 ^ return_port[10] (out)
+               0.650276   data arrival time
+
+  10.000000   10.000000   clock core_clock (rise edge)
+   0.000000   10.000000   clock network delay (ideal)
+   0.000000   10.000000   clock reconvergence pessimism
+   0.000000   10.000000   output external delay
+              10.000000   data required time
+-----------------------------------------------------------------
+              10.000000   data required time
+              -0.650276   data arrival time
+-----------------------------------------------------------------
+               9.349725   slack (MET)
+
+
+worst slack 9.349725

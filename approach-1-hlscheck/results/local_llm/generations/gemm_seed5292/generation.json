@@ -1,0 +1,38 @@
+{
+  "id": "gemm_seed5292",
+  "case": "gemm",
+  "source": "benchmarks\\machsuite_u32\\gemm_original.c",
+  "source_sha256": "d34b316a62c77526f14598b5987f8b8a1dfe86a57d3bbda47702b89bfb50cb8f",
+  "request_sha256": "2aab7f8cc1b7ed527497b43863d4c0efd59b3472c068eef9ce9bf20c9674ed83",
+  "raw_response_sha256": "963d9ea3d912d0cfa31a56a69a4c4689b8b160950a04f52ba2c376d887670630",
+  "candidate_sha256": "61f9cead83891e16c6bd5175dd25c0950a2169116b6332dca1f938d0e26be86d",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 120,
+    "prompt_tokens": 346,
+    "total_tokens": 466,
+    "prompt_tokens_details": {
+      "cached_tokens": 345
+    }
+  },
+  "timings": {
+    "cache_n": 345,
+    "prompt_n": 1,
+    "prompt_ms": 8.177,
+    "prompt_per_token_ms": 8.177,
+    "prompt_per_second": 122.29423994129877,
+    "predicted_n": 120,
+    "predicted_ms": 945.106,
+    "predicted_per_token_ms": 7.942067226890757,
+    "predicted_per_second": 125.91180248564712
+  },
+  "elapsed_seconds": 0.981,
+  "extraction": "largest fenced code block; no semantic edits",
+  "model_repository": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+  "model_revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+  "model_sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+  "runtime_release": "b12619",
+  "origin": "Actual independently generated local-model optimization attempt; not an injected mutation",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0
+}

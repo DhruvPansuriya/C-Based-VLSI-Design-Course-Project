@@ -1,0 +1,80 @@
+{
+  "task_id": "ex2_argmax",
+  "members": [
+    {
+      "id": "ex2_argmax.permissive",
+      "provenance": {
+        "source": "handwritten"
+      },
+      "request_type": "T1",
+      "shape": {
+        "buffers": {
+          "a": "n",
+          "idx": "1"
+        },
+        "alias": "disjoint",
+        "bounds": {
+          "n": [
+            0,
+            2
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "n <= 0",
+          "behaviour": "out_idx[0] == -1 && out_ret == INT_MIN"
+        }
+      ],
+      "ext": "n == 0 ? (out_ret == INT_MIN && out_idx[0] == -1) : (out_ret == old_ret && out_idx[0] == old_idx[0])",
+      "reach": "n == 0",
+      "nl_rendering": "On the declared n>=0 domain, empty means n<=0; implementation strategy is unconstrained."
+    },
+    {
+      "id": "ex2_argmax.strict",
+      "provenance": {
+        "source": "handwritten"
+      },
+      "request_type": "T1",
+      "shape": {
+        "buffers": {
+          "a": "n",
+          "idx": "1"
+        },
+        "alias": "disjoint",
+        "bounds": {
+          "n": [
+            0,
+            2
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "n == 0",
+          "behaviour": "out_ret == INT_MIN && out_idx[0] == -1"
+        }
+      ],
+      "ext": "n == 0 ? (out_ret == INT_MIN && out_idx[0] == -1) : (out_ret == old_ret && out_idx[0] == old_idx[0])",
+      "reach": "n == 0",
+      "nl_rendering": "Handle empty input; preserve the first maximum for nonempty input."
+    }
+  ],
+  "sha256": "8fa3c67e260822c5951b538abadc616d0cb11f8a1d34a6648531dd27449873aa",
+  "discarded": [],
+  "generation": {
+    "runs": 1,
+    "families": [
+      "handwritten"
+    ],
+    "p1_seen_by_any_llm": false
+  },
+  "informational": {
+    "equivalence_classes": [
+      [
+        "ex2_argmax.permissive",
+        "ex2_argmax.strict"
+      ]
+    ]
+  }
+}

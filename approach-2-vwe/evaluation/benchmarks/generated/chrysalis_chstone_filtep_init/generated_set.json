@@ -1,0 +1,683 @@
+{
+  "task_id": "chrysalis_chstone_filtep_init",
+  "request_id": "original",
+  "sha256": "4bb099a86962a653dbff100b128ea91246b42d5b64adfefd76e4239c98a2930a",
+  "members": [
+    {
+      "id": "chrysalis_chstone_filtep_init.groq_gptoss.strict.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "prompt": "strict",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "rlt1": [
+            -1000,
+            1000
+          ],
+          "al1": [
+            -1000,
+            1000
+          ],
+          "rlt2": [
+            -1000,
+            1000
+          ],
+          "al2": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [],
+      "ext": "out_ret == old_ret",
+      "reach": "unknown",
+      "nl_rendering": "Initialize the uninitialized variable with its intended value, leaving the function\u2019s return unchanged for all inputs.",
+      "request_type": "T3"
+    },
+    {
+      "id": "chrysalis_chstone_filtep_init.groq_gptoss.permissive.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "prompt": "permissive",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "rlt1": [
+            -1000,
+            1000
+          ],
+          "al1": [
+            -1000,
+            1000
+          ],
+          "rlt2": [
+            -1000,
+            1000
+          ],
+          "al2": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_ret == old_ret"
+        }
+      ],
+      "ext": "out_ret == old_ret",
+      "reach": "true",
+      "nl_rendering": "For all inputs the function returns exactly the same result as before, preserving all other behavior while providing the missing initial value.",
+      "request_type": "T3"
+    },
+    {
+      "id": "chrysalis_chstone_filtep_init.groq_gptoss.adversarial.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "prompt": "adversarial",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "rlt1": [
+            -1000,
+            1000
+          ],
+          "al1": [
+            -1000,
+            1000
+          ],
+          "rlt2": [
+            -1000,
+            1000
+          ],
+          "al2": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "rlt1 == rlt2",
+          "behaviour": "out_ret == old_ret"
+        }
+      ],
+      "ext": "unknown",
+      "reach": "1",
+      "nl_rendering": "When rlt1 equals rlt2 the function must return exactly the same value as before; for all other inputs the effect of initializing the variable is unspecified.",
+      "request_type": "T3"
+    },
+    {
+      "id": "chrysalis_chstone_filtep_init.groq_qwen.strict.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "prompt": "strict",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "rlt1": [
+            -1000,
+            1000
+          ],
+          "al1": [
+            -1000,
+            1000
+          ],
+          "rlt2": [
+            -1000,
+            1000
+          ],
+          "al2": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [],
+      "ext": "out_ret == old_ret",
+      "reach": "unknown",
+      "nl_rendering": "The function must behave exactly as the original for all inputs, as the specific intended initial value is not provided in the request.",
+      "request_type": "T3"
+    },
+    {
+      "id": "chrysalis_chstone_filtep_init.groq_qwen.permissive.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "prompt": "permissive",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "rlt1": [
+            -1000,
+            1000
+          ],
+          "al1": [
+            -1000,
+            1000
+          ],
+          "rlt2": [
+            -1000,
+            1000
+          ],
+          "al2": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_ret == 0",
+          "nl_trace": "Give it the intended initial value so the result is well defined"
+        }
+      ],
+      "ext": "unknown",
+      "reach": "true",
+      "nl_rendering": "The function always returns 0 to ensure the result is well-defined, replacing the previous undefined behavior caused by reading an uninitialized variable.",
+      "request_type": "T3"
+    },
+    {
+      "id": "chrysalis_chstone_filtep_init.groq_qwen.adversarial.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "prompt": "adversarial",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "rlt1": [
+            -1000,
+            1000
+          ],
+          "al1": [
+            -1000,
+            1000
+          ],
+          "rlt2": [
+            -1000,
+            1000
+          ],
+          "al2": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_ret == 0",
+          "nl_trace": "Give it the intended initial value so the result is well defined"
+        }
+      ],
+      "ext": "unknown",
+      "reach": "true",
+      "nl_rendering": "The function must return 0 for all inputs, assuming the 'intended initial value' of the uninitialized variable is 0, which overrides any other logic.",
+      "request_type": "T3"
+    }
+  ],
+  "generation": {
+    "runs": 1,
+    "families": [
+      "groq_gptoss",
+      "groq_qwen"
+    ],
+    "p1_seen_by_any_llm": false,
+    "live_families": [
+      "groq_gptoss",
+      "groq_qwen"
+    ],
+    "independent_live_family_count": 2,
+    "prompts": {
+      "typing": {
+        "version": "1",
+        "sha256": "d205e470414fbf901f6218f7626634a03bb6d50f2db5e3d606e651cb175b48ba"
+      },
+      "shape": {
+        "version": "1",
+        "sha256": "fd83396fa193d2a4db032be30085eee0a8e8594a06fc7300e2cb17c4e70c16e9"
+      },
+      "strict": {
+        "version": "2",
+        "sha256": "cad4e4428f3ab5a291b0c5c870865cc81dd8aa058e63a48d591e241094ee868e"
+      },
+      "permissive": {
+        "version": "2",
+        "sha256": "7e1436cc35c5dfff8ad88b8c8b6de1001313092ec7ccceaeeb7d7467025710fa"
+      },
+      "adversarial": {
+        "version": "2",
+        "sha256": "42a00cce3b2df6fe11fd008694b028fe31e08bb332977b19778e03c079190a52"
+      }
+    },
+    "shape_policy": "caller profile copied into every reading; model shape retained in records"
+  },
+  "records": [
+    {
+      "family": "groq_gptoss",
+      "prompt": "typing",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "typing",
+          "version": "1",
+          "sha256": "d205e470414fbf901f6218f7626634a03bb6d50f2db5e3d606e651cb175b48ba"
+        },
+        "schema_sha256": "63850d6960ea3c85c4624a40561308eff2998d791e4ded34ab849d7ae41850c2",
+        "attempts": [
+          {
+            "request_key": "4e4ed05b45bfa9ce581ba5bd2530d40ff8954cb3b3151348cebd711965b04b25",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "family": "groq_gptoss",
+      "prompt": "shape",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "shape",
+          "version": "1",
+          "sha256": "fd83396fa193d2a4db032be30085eee0a8e8594a06fc7300e2cb17c4e70c16e9"
+        },
+        "schema_sha256": "330d8e128137e475be2b723200eef319a85b19f8108c16abf37ad52db991add0",
+        "attempts": [
+          {
+            "request_key": "025389d9326654d68b7d10c1c252dcde03ee351737b14d23030a9d81871b1d9f",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "agrees_with_caller_profile": true
+    },
+    {
+      "family": "groq_gptoss",
+      "prompt": "strict",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "strict",
+          "version": "2",
+          "sha256": "cad4e4428f3ab5a291b0c5c870865cc81dd8aa058e63a48d591e241094ee868e"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "a4000848d121bbde8c4c8872cf1da57209c826960e2558114a2fa08e1779b046",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true,
+      "model_shape_replaced": false
+    },
+    {
+      "family": "groq_gptoss",
+      "prompt": "permissive",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "permissive",
+          "version": "2",
+          "sha256": "7e1436cc35c5dfff8ad88b8c8b6de1001313092ec7ccceaeeb7d7467025710fa"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "779ba67c20b5250d9152e95b07269c9ea1e5971c16a17b2a6347adf830be77a6",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true,
+      "model_shape_replaced": false
+    },
+    {
+      "family": "groq_gptoss",
+      "prompt": "adversarial",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live",
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "adversarial",
+          "version": "2",
+          "sha256": "42a00cce3b2df6fe11fd008694b028fe31e08bb332977b19778e03c079190a52"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "e9c66fec988d7bb9b4470830d5e18cf418fb0b53df9f1e795482e5941266ad70",
+            "origin": "live",
+            "error": "schema violation at shape: ['{\"alias\": \"disjoint\", \"bounds\": {}, \"buffers\": {}, \"value_bounds\": {\"al1\": [-1000, 1000], \"al2\": [-1000, 1000], \"rlt1\": [-1000, 1000], \"rlt2\": [-1000, 1000]}}'] is not of type 'object'"
+          },
+          {
+            "request_key": "81f04b8606ebd5d95175265fb7462569c17e1462dbef85a42329df2bed276878",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "typing",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "typing",
+          "version": "1",
+          "sha256": "d205e470414fbf901f6218f7626634a03bb6d50f2db5e3d606e651cb175b48ba"
+        },
+        "schema_sha256": "63850d6960ea3c85c4624a40561308eff2998d791e4ded34ab849d7ae41850c2",
+        "attempts": [
+          {
+            "request_key": "95863762a62a784b674dac9c7b06b9271c8a8b294bb6898702c4faf666edc242",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "shape",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "shape",
+          "version": "1",
+          "sha256": "fd83396fa193d2a4db032be30085eee0a8e8594a06fc7300e2cb17c4e70c16e9"
+        },
+        "schema_sha256": "330d8e128137e475be2b723200eef319a85b19f8108c16abf37ad52db991add0",
+        "attempts": [
+          {
+            "request_key": "c70aab464fa5bd494993185a2e1eb2b66ee25e5abfb05571e87945d0ee1140b1",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "agrees_with_caller_profile": true
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "strict",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "strict",
+          "version": "2",
+          "sha256": "cad4e4428f3ab5a291b0c5c870865cc81dd8aa058e63a48d591e241094ee868e"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "fb80ab3f91d22ec2124f12b85fcf6190a3985d35f546e4d5bc670b58f8ffbda5",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true,
+      "model_shape_replaced": false
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "permissive",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "permissive",
+          "version": "2",
+          "sha256": "7e1436cc35c5dfff8ad88b8c8b6de1001313092ec7ccceaeeb7d7467025710fa"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "e9dbfb08dbec624dcd0b712644177e8f87a97e7acbf5427e76bf8bc04c4eab93",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true,
+      "model_shape_replaced": false
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "adversarial",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "adversarial",
+          "version": "2",
+          "sha256": "42a00cce3b2df6fe11fd008694b028fe31e08bb332977b19778e03c079190a52"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "c1858ef5c1601beb2ecc930c544a593a5b1144d8b3834d1d0e21b050f5a48744",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true
+    }
+  ]
+}

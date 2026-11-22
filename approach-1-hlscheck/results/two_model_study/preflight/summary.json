@@ -1,0 +1,151 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "id": "machsuite_stencil5",
+      "original_sha256": "8c46a73e96b8c5cf7b0b2ee7a25f26ac6f2bd090f01a4c9d6dc0479275937149",
+      "syntax_compiles": true,
+      "process_isolation": true,
+      "status": "equivalent",
+      "elapsed_seconds": 0.538461,
+      "reason": null,
+      "proof_dependencies": 1,
+      "exit_code": 0,
+      "saved_evidence_replay_passed": true
+    },
+    {
+      "id": "polybench_mvt4",
+      "original_sha256": "fcc767d4f17abc039a77517a8cddd0266cc67e98d03410848b90ce727475a9f4",
+      "syntax_compiles": true,
+      "process_isolation": true,
+      "status": "equivalent",
+      "elapsed_seconds": 0.543054,
+      "reason": null,
+      "proof_dependencies": 1,
+      "exit_code": 0,
+      "saved_evidence_replay_passed": true
+    },
+    {
+      "id": "machsuite_gemm4",
+      "original_sha256": "d34b316a62c77526f14598b5987f8b8a1dfe86a57d3bbda47702b89bfb50cb8f",
+      "syntax_compiles": true,
+      "process_isolation": true,
+      "status": "equivalent",
+      "elapsed_seconds": 0.555365,
+      "reason": null,
+      "proof_dependencies": 1,
+      "exit_code": 0,
+      "saved_evidence_replay_passed": true
+    },
+    {
+      "id": "polybench_bicg4",
+      "original_sha256": "9c85f887d8cb43fc45e057cc325e2a2591cc1ff089e4d16ce386b44fda6eb8e1",
+      "syntax_compiles": true,
+      "process_isolation": true,
+      "status": "equivalent",
+      "elapsed_seconds": 0.537467,
+      "reason": null,
+      "proof_dependencies": 1,
+      "exit_code": 0,
+      "saved_evidence_replay_passed": true
+    },
+    {
+      "id": "polybench_atax4",
+      "original_sha256": "9c80ac32ecce7877190da99f0a9cf906fe476396afdfba0e0cd3af57cbeef407",
+      "syntax_compiles": true,
+      "process_isolation": true,
+      "status": "equivalent",
+      "elapsed_seconds": 0.530039,
+      "reason": null,
+      "proof_dependencies": 1,
+      "exit_code": 0,
+      "saved_evidence_replay_passed": true
+    },
+    {
+      "id": "polybench_syrk4",
+      "original_sha256": "5c671917d1b347ce62d58e5174f93b7a19802140bb230c9be55bf66b4023ff48",
+      "syntax_compiles": true,
+      "process_isolation": true,
+      "status": "equivalent",
+      "elapsed_seconds": 0.543684,
+      "reason": null,
+      "proof_dependencies": 1,
+      "exit_code": 0,
+      "saved_evidence_replay_passed": true
+    },
+    {
+      "id": "machsuite_rj_xtime",
+      "original_sha256": "34fd938e7af02c899c0d1d1f7c4e390cfc3cd40fe28d8940010a81d52ee9dcb3",
+      "syntax_compiles": true,
+      "process_isolation": true,
+      "status": "equivalent",
+      "elapsed_seconds": 0.552203,
+      "reason": null,
+      "proof_dependencies": 0,
+      "exit_code": 0,
+      "saved_evidence_replay_passed": true
+    },
+    {
+      "id": "chstone_gsm_abs",
+      "original_sha256": "0ad38ffc272924b447237bb1559c92b171d3c843a2b58725e44c8c84099323ef",
+      "syntax_compiles": true,
+      "process_isolation": true,
+      "status": "equivalent",
+      "elapsed_seconds": 0.581812,
+      "reason": null,
+      "proof_dependencies": 0,
+      "exit_code": 0,
+      "saved_evidence_replay_passed": true
+    },
+    {
+      "id": "chstone_gsm_add",
+      "original_sha256": "576ad7505e040b46dff1896f3961b88e7c8a55b1bbd2613fc7b8da6b8f60410a",
+      "syntax_compiles": true,
+      "process_isolation": true,
+      "status": "equivalent",
+      "elapsed_seconds": 0.601199,
+      "reason": null,
+      "proof_dependencies": 0,
+      "exit_code": 0,
+      "saved_evidence_replay_passed": true
+    },
+    {
+      "id": "hlseval_extractFloat64Frac",
+      "original_sha256": "0f235a01e98718b0f588e0610379d76fed126c7a0ab8589913333a6feb94738c",
+      "syntax_compiles": true,
+      "process_isolation": true,
+      "status": "equivalent",
+      "elapsed_seconds": 0.504873,
+      "reason": null,
+      "proof_dependencies": 0,
+      "exit_code": 0,
+      "saved_evidence_replay_passed": true
+    },
+    {
+      "id": "hlseval_float64_is_nan",
+      "original_sha256": "c37136647e0670ce12cc509d5bdd9d2c69116f86b7cabbe51e2bd4ce98ddab0a",
+      "syntax_compiles": true,
+      "process_isolation": true,
+      "status": "equivalent",
+      "elapsed_seconds": 0.511921,
+      "reason": null,
+      "proof_dependencies": 0,
+      "exit_code": 0,
+      "saved_evidence_replay_passed": true
+    },
+    {
+      "id": "hlseval_extractFloat64Sign",
+      "original_sha256": "80674aae1cf198b0280da369ce91d63be3f30b72f67e32299ddc1f252a7fb1bd",
+      "syntax_compiles": true,
+      "process_isolation": true,
+      "status": "equivalent",
+      "elapsed_seconds": 0.508284,
+      "reason": null,
+      "proof_dependencies": 0,
+      "exit_code": 0,
+      "saved_evidence_replay_passed": true
+    }
+  ],
+  "elapsed_seconds": 4.159,
+  "scope": "Syntax and original-vs-self equivalence/safety under current HLSCheck model. Checks isolated in separate processes; evidence replay sequential. No HLS claim."
+}

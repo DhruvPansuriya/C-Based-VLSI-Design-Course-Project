@@ -1,0 +1,12 @@
+pilot_prefix_baseline_original complete {'cycles': 62.0, 'area_um2': 1857.478, 'delay_ns': 1.90062}
+pilot_prefix_granite2_optimized complete {'cycles': 62.0, 'area_um2': 1857.478, 'delay_ns': 1.90062}
+pilot_prefix_gpt61sol_optimized complete {'cycles': 26.0, 'area_um2': 913.178, 'delay_ns': 1.509744}
+
+All candidates are preserved without repair. Inconclusive/unsupported results are not classified as semantic errors. This pilot demonstrates the pipeline, not model accuracy or a reliable model ranking.
+
+| Model | Equivalence outcome | Changed AST | Area (um^2) | Cycles | Delay (ns) | Latency speedup | Area x latency change |
+| --- | --- | --- | ---: | ---: | ---: | ---: | ---: |
+| Original | reference | - | 1857.48 | 62 | 1.901 | 1.00x | 0% |
+| Qwen2.5-Coder-1.5B | unsupported | yes | - | - | - | - | - |
+| SmolLM2-360M-Instruct | compile_failure | unknown | - | - | - | - | - |
+| Granite-3.3-2B-Instruct | equivalent | yes | 1857.48 | 62 | 1.901 | 1.00x | +0.00% |

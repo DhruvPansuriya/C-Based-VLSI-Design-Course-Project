@@ -1,0 +1,10 @@
+flowchart TD
+  F0["Step-function C (one call = one logical tick)<br/>Moore outputs, synchronous reset input rst"]
+  F1["Class recognition + parameters<br/>(LLM proposal, checked: D = storage length)"]
+  F2["Template conventions (no-bypass, bypass, reset styles)<br/>kept if P0 conforms on G_env minus bug traces"]
+  F3["Reference queue Q from external inputs only;<br/>per-tick conformance S1, reset S2, hold S3"]
+  F4["D*R response lemma: proved once per template"]
+  F5["Per candidate: BMC to depth K_t;<br/>unbounded via checked invariant or k-induction"]
+  F6["Lockstep product P0 x P1 under G_env guard"]
+  F7["Verdict with evidence class;<br/>logical ticks only, no RTL timing claim"]
+  F0 --> F1 --> F2 --> F3 --> F4 --> F5 --> F6 --> F7

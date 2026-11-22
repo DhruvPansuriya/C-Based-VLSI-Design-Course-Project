@@ -1,0 +1,38 @@
+{
+  "id": "parity32_seed5292",
+  "case": "parity32",
+  "source": "benchmarks\\expanded\\parity32_original.c",
+  "source_sha256": "2144016aecc1ec992f7d016d7bb9c024f686c2735ae638889370b1dd88e7c784",
+  "request_sha256": "8624fef601536bd1151392226943a47a8062e1e0e41f90d17c9ca2abf8e6e3ec",
+  "raw_response_sha256": "3f5a06e5e67600732190463662fb36803d85977ce1cf0266809e45dec639fc49",
+  "candidate_sha256": "fa6a168cf4ae4640ce463db344990c90074e56c14a100b8c353c3aaa5a00c071",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 81,
+    "prompt_tokens": 266,
+    "total_tokens": 347,
+    "prompt_tokens_details": {
+      "cached_tokens": 212
+    }
+  },
+  "timings": {
+    "cache_n": 212,
+    "prompt_n": 54,
+    "prompt_ms": 26.949,
+    "prompt_per_token_ms": 0.4990555555555556,
+    "prompt_per_second": 2003.784927084493,
+    "predicted_n": 81,
+    "predicted_ms": 635.709,
+    "predicted_per_token_ms": 7.946362499999999,
+    "predicted_per_second": 125.84374297044718
+  },
+  "elapsed_seconds": 0.677,
+  "extraction": "largest fenced code block; no semantic edits",
+  "model_repository": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+  "model_revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+  "model_sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+  "runtime_release": "b12619",
+  "origin": "Actual independently generated local-model optimization attempt; not an injected mutation",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0
+}

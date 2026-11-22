@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "scope": "LP64 compiled simulation reference agrees with target ILP32 long-local and -1L usual arithmetic conversion behavior",
+  "trials": 16,
+  "compiler": "WSL gcc -std=c11",
+  "build_stderr": ""
+}

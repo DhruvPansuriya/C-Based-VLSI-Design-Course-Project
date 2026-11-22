@@ -1,0 +1,25 @@
+{
+  "command": [
+    "cbmc",
+    "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/bug_safety/verification/checked.goto",
+    "--bounds-check",
+    "--pointer-check",
+    "--div-by-zero-check",
+    "--signed-overflow-check",
+    "--undefined-shift-check",
+    "--pointer-primitive-check",
+    "--unwinding-assertions",
+    "--no-self-loops-to-assumptions",
+    "--no-malloc-may-fail",
+    "--z3",
+    "--json-ui",
+    "--trace",
+    "--unwind",
+    "9",
+    "--no-library"
+  ],
+  "status": "success",
+  "returncode": 0,
+  "seconds": 0.026858417011681013,
+  "stderr_tail": ""
+}

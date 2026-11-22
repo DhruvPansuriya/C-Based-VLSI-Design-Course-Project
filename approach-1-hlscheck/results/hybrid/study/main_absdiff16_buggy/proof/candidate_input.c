@@ -1,0 +1,8 @@
+#include <stdint.h>
+
+/* SEEDED NEGATIVE CONTROL: flip the low bit of the first result.
+   Not a spontaneous LLM error. */
+void kernel(uint32_t a[16], uint32_t b[16], uint32_t out[16]) {
+    for(int i=0;i<16;i++){uint32_t x=a[i],y=b[i];uint32_t high=x>y?x:y;uint32_t low=x>y?y:x;out[i]=high-low;}
+    out[0]^=1u;
+}

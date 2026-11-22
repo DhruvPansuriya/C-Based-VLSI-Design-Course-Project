@@ -1,0 +1,142 @@
+ESBMC version 8.7.0 64-bit x86_64 windows
+
+Target: 32-bit little-endian i386-unknown-win32 with esbmclibc
+Parsing C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_triangular_matvec4_optimized\proof\residual_0\miter.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.188s
+GOTO program processing time: 0.001s
+Starting Bounded Model Checking
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+Symex completed in: 0.003s (176 assignments)
+Caching time: 0.000s (removed 0 assertions)
+Slicing time: 0.001s (removed 175 assignments)
+Generated 73 VCC(s), 0 remaining after simplification (1 assignments)
+BMC program time: 0.004s
+
+** Results:
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_triangular_matvec4_optimized\proof\residual_0\miter.c, function main
+  PASSED       [main.uninitialised-variable.1]   line 26  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.2]   line 28  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.3]   line 30  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.4]   line 32  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.5]   line 34  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.6]   line 36  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.7]   line 38  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.8]   line 40  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.9]   line 42  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.10]  line 44  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.11]  line 46  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.12]  line 48  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.13]  line 50  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.14]  line 52  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.15]  line 54  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.16]  line 56  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.17]  line 60  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.18]  line 62  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.19]  line 64  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.20]  line 66  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.21]  line 70  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.22]  line 72  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.23]  line 74  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.24]  line 76  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.assertion.1]                line 79  EQUIV:observables
+  PASSED       [main.uninitialised-variable.25]  line 79  use of uninitialized variable: __hlscheck_left_0 [2[0]]
+  PASSED       [main.uninitialised-variable.26]  line 79  use of uninitialized variable: __hlscheck_left_0 [2[1]]
+  PASSED       [main.uninitialised-variable.27]  line 79  use of uninitialized variable: __hlscheck_left_0 [2[2]]
+  PASSED       [main.uninitialised-variable.28]  line 79  use of uninitialized variable: __hlscheck_left_0 [2[3]]
+  PASSED       [main.uninitialised-variable.29]  line 79  use of uninitialized variable: __hlscheck_left_0 [2[4]]
+  PASSED       [main.uninitialised-variable.30]  line 79  use of uninitialized variable: __hlscheck_left_0 [2[5]]
+  PASSED       [main.uninitialised-variable.31]  line 79  use of uninitialized variable: __hlscheck_left_0 [2[6]]
+  PASSED       [main.uninitialised-variable.32]  line 79  use of uninitialized variable: __hlscheck_left_0 [2[7]]
+  PASSED       [main.uninitialised-variable.33]  line 79  use of uninitialized variable: __hlscheck_left_0 [2[8]]
+  PASSED       [main.uninitialised-variable.34]  line 79  use of uninitialized variable: __hlscheck_left_0 [2[9]]
+  PASSED       [main.uninitialised-variable.35]  line 79  use of uninitialized variable: __hlscheck_left_0 [2[10]]
+  PASSED       [main.uninitialised-variable.36]  line 79  use of uninitialized variable: __hlscheck_left_0 [2[11]]
+  PASSED       [main.uninitialised-variable.37]  line 79  use of uninitialized variable: __hlscheck_left_0 [2[12]]
+  PASSED       [main.uninitialised-variable.38]  line 79  use of uninitialized variable: __hlscheck_left_0 [2[13]]
+  PASSED       [main.uninitialised-variable.39]  line 79  use of uninitialized variable: __hlscheck_left_0 [2[14]]
+  PASSED       [main.uninitialised-variable.40]  line 79  use of uninitialized variable: __hlscheck_left_0 [2[15]]
+  PASSED       [main.uninitialised-variable.41]  line 79  use of uninitialized variable: __hlscheck_left_1 [5[0]]
+  PASSED       [main.uninitialised-variable.42]  line 79  use of uninitialized variable: __hlscheck_left_1 [5[1]]
+  PASSED       [main.uninitialised-variable.43]  line 79  use of uninitialized variable: __hlscheck_left_1 [5[2]]
+  PASSED       [main.uninitialised-variable.44]  line 79  use of uninitialized variable: __hlscheck_left_1 [5[3]]
+  PASSED       [main.uninitialised-variable.45]  line 79  use of uninitialized variable: __hlscheck_left_2 [8[0]]
+  PASSED       [main.uninitialised-variable.46]  line 79  use of uninitialized variable: __hlscheck_left_2 [8[1]]
+  PASSED       [main.uninitialised-variable.47]  line 79  use of uninitialized variable: __hlscheck_left_2 [8[2]]
+  PASSED       [main.uninitialised-variable.48]  line 79  use of uninitialized variable: __hlscheck_left_2 [8[3]]
+  PASSED       [main.uninitialised-variable.49]  line 79  use of uninitialized variable: __hlscheck_right_0 [3[0]]
+  PASSED       [main.uninitialised-variable.50]  line 79  use of uninitialized variable: __hlscheck_right_0 [3[1]]
+  PASSED       [main.uninitialised-variable.51]  line 79  use of uninitialized variable: __hlscheck_right_0 [3[2]]
+  PASSED       [main.uninitialised-variable.52]  line 79  use of uninitialized variable: __hlscheck_right_0 [3[3]]
+  PASSED       [main.uninitialised-variable.53]  line 79  use of uninitialized variable: __hlscheck_right_0 [3[4]]
+  PASSED       [main.uninitialised-variable.54]  line 79  use of uninitialized variable: __hlscheck_right_0 [3[5]]
+  PASSED       [main.uninitialised-variable.55]  line 79  use of uninitialized variable: __hlscheck_right_0 [3[6]]
+  PASSED       [main.uninitialised-variable.56]  line 79  use of uninitialized variable: __hlscheck_right_0 [3[7]]
+  PASSED       [main.uninitialised-variable.57]  line 79  use of uninitialized variable: __hlscheck_right_0 [3[8]]
+  PASSED       [main.uninitialised-variable.58]  line 79  use of uninitialized variable: __hlscheck_right_0 [3[9]]
+  PASSED       [main.uninitialised-variable.59]  line 79  use of uninitialized variable: __hlscheck_right_0 [3[10]]
+  PASSED       [main.uninitialised-variable.60]  line 79  use of uninitialized variable: __hlscheck_right_0 [3[11]]
+  PASSED       [main.uninitialised-variable.61]  line 79  use of uninitialized variable: __hlscheck_right_0 [3[12]]
+  PASSED       [main.uninitialised-variable.62]  line 79  use of uninitialized variable: __hlscheck_right_0 [3[13]]
+  PASSED       [main.uninitialised-variable.63]  line 79  use of uninitialized variable: __hlscheck_right_0 [3[14]]
+  PASSED       [main.uninitialised-variable.64]  line 79  use of uninitialized variable: __hlscheck_right_0 [3[15]]
+  PASSED       [main.uninitialised-variable.65]  line 79  use of uninitialized variable: __hlscheck_right_1 [6[0]]
+  PASSED       [main.uninitialised-variable.66]  line 79  use of uninitialized variable: __hlscheck_right_1 [6[1]]
+  PASSED       [main.uninitialised-variable.67]  line 79  use of uninitialized variable: __hlscheck_right_1 [6[2]]
+  PASSED       [main.uninitialised-variable.68]  line 79  use of uninitialized variable: __hlscheck_right_1 [6[3]]
+  PASSED       [main.uninitialised-variable.69]  line 79  use of uninitialized variable: __hlscheck_right_2 [9[0]]
+  PASSED       [main.uninitialised-variable.70]  line 79  use of uninitialized variable: __hlscheck_right_2 [9[1]]
+  PASSED       [main.uninitialised-variable.71]  line 79  use of uninitialized variable: __hlscheck_right_2 [9[2]]
+  PASSED       [main.uninitialised-variable.72]  line 79  use of uninitialized variable: __hlscheck_right_2 [9[3]]
+
+** 0 of 73 properties failed, 73 passed
+
+VERIFICATION SUCCESSFUL

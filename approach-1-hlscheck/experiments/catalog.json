@@ -1,0 +1,486 @@
+{
+  "schema_version": 2,
+  "top_function": "kernel",
+  "data_model": "unsigned 32-bit; parameter arrays nonaliasing",
+  "generation": "Candidates authored by the Codex LLM during this conversation; no external API calls or response IDs are claimed",
+  "cases": [
+    {
+      "name": "scale",
+      "directory": "benchmarks/demo",
+      "origin": "educational microkernel",
+      "transformation": "strength reduction and two-way unrolling"
+    },
+    {
+      "name": "unswitch",
+      "directory": "benchmarks/demo",
+      "origin": "CS5291 course example adapted to unsigned data and fixed bounds",
+      "transformation": "loop unswitching"
+    },
+    {
+      "name": "gemm",
+      "directory": "benchmarks/machsuite_u32",
+      "origin": "MachSuite gemm/ncubed adapted to uint32_t and 4x4 dimensions",
+      "transformation": "loop interchange and scalar reuse"
+    },
+    {
+      "name": "stencil",
+      "directory": "benchmarks/machsuite_u32",
+      "origin": "MachSuite stencil2d adapted to uint32_t and 5x5 dimensions",
+      "transformation": "filter-column source unrolling"
+    },
+    {
+      "name": "prefix",
+      "directory": "benchmarks/submission",
+      "origin": "educational prefix-sum reference",
+      "transformation": "incremental prefix accumulation"
+    },
+    {
+      "name": "fir",
+      "directory": "benchmarks/submission",
+      "origin": "educational symmetric FIR reference",
+      "transformation": "symmetric pre-addition"
+    },
+    {
+      "name": "boxfilter",
+      "directory": "benchmarks/submission",
+      "origin": "educational 3x3 box-filter reference",
+      "transformation": "separable sliding-window reuse"
+    },
+    {
+      "name": "factor",
+      "directory": "benchmarks/submission",
+      "origin": "educational arithmetic control",
+      "transformation": "distributive factoring"
+    },
+    {
+      "name": "dot16",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Four independent dot-product accumulators",
+      "rationale": "Break the single accumulation dependency while preserving modulo arithmetic; extra multipliers may increase area.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "reduction",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "sum32",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Four-way partial-sum reduction",
+      "rationale": "Expose independent accumulations and reduce loop-control iterations; hardware gain remains empirical.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "reduction",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "xor32",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Four-way XOR reduction",
+      "rationale": "Use associativity of XOR to shorten a dependency chain; shares the reduction family with sum32, not an independent application.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "reduction",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "min8",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Balanced comparison tree",
+      "rationale": "Replace seven serial comparison/select steps with a three-level tree; related min/max variants are reported as such.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "comparison reduction",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "max8",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Balanced comparison tree",
+      "rationale": "Replace seven serial comparison/select steps with a three-level tree; related min/max variants are reported as such.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "comparison reduction",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "range8",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Fuse minimum and maximum scans",
+      "rationale": "Reuse each memory read to update both extrema; source reference computes both on the same unrestricted input.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "comparison reduction",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "count_nonzero16",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Parallel predicate counters",
+      "rationale": "Expose four independent count accumulators without input-dependent loop bounds.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "predicate reduction",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "all_equal16",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "XOR/OR equality reduction",
+      "rationale": "Replace repeated Boolean comparisons with a bitwise difference reduction followed by one equality test.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "predicate reduction",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "parity32",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "XOR-fold parity",
+      "rationale": "Reduce a 32-iteration bit scan to five XOR-fold stages.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "bit manipulation",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "popcount8",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Byte-wide SWAR population count",
+      "rationale": "Count the low eight bits with parallel masked add/subtract stages; all high input bits are ignored in both versions.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "bit manipulation",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "bitreverse32",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Staged mask-and-swap bit reversal",
+      "rationale": "Replace serial bit extraction with five permutation stages.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "bit manipulation",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "byteswap32",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Two-stage byte permutation",
+      "rationale": "Replace the byte-collection loop with pairwise byte swaps and a half-word swap.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "bit manipulation",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "crc8_byte",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Two-step CRC recurrence unrolling",
+      "rationale": "Unroll a byte-wide polynomial-0x07 recurrence by two; this is a small CRC-like educational primitive, not a named protocol conformance claim.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "bit manipulation",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "hamming8",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Replace nested bit scans with byte SWAR",
+      "rationale": "Reuse the byte-popcount technique across eight XOR differences; belongs to the same population-count family as popcount8.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "bit manipulation",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "clamp16",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Upper-bit saturation test",
+      "rationale": "Exploit the power-of-two unsigned threshold; the compiler may already recognize the same hardware.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "elementwise",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "threshold_pack8",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Split threshold packing into two independent lanes",
+      "rationale": "Expose four low and four high output-bit computations independently.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "elementwise",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "absdiff16",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Share comparison before subtraction",
+      "rationale": "Select larger/smaller operands then subtract; may change mux/subtractor sharing.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "elementwise",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "squared_distance8",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Expand squared distance into three reductions",
+      "rationale": "A deliberate candidate to test algebraic normalization and hardware trade-offs; more multiplies may regress QoR. Distance is modular, not real-valued.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "arithmetic",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "saxpy16",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Two-lane SAXPY source unrolling",
+      "rationale": "Expose two independent multiply-add outputs while preserving unsigned wraparound.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "elementwise",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "quadratic",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Horner-form quadratic evaluation",
+      "rationale": "Factor a polynomial to alter multiplier/addition scheduling; both versions use modular arithmetic.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "arithmetic",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "convolution1d8",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Exploit three-tap coefficient symmetry",
+      "rationale": "Pre-add mirrored samples before multiplication, applied to a sliding valid convolution.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "filter",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "moving_sum16",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Sliding four-element window sum",
+      "rationale": "Replace repeated window recomputation with one outgoing subtraction and incoming addition.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "filter",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "triangular_fir16",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Reuse adjacent pair sums",
+      "rationale": "Factor a [1,2,1] filter into reusable pair sums, avoiding a temporary array.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "filter",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "gaussian5",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Separable integer Gaussian filter",
+      "rationale": "Factor the 3x3 outer-product coefficient matrix into horizontal and vertical filters. Buffer cost is included in hardware area.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "image",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "integral_image4",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Dynamic-programming summed-area table",
+      "rationale": "Reuse already computed rectangle sums rather than recomputing every rectangle; preserves all final output cells.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "image",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "transpose4",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Two-element transpose staging",
+      "rationale": "Stage pairs of source reads and expose two destination writes per loop body.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "data movement",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "matvec4",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Expand matrix-vector inner product with balanced sums",
+      "rationale": "Expose four products and a balanced adder tree per row.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "linear algebra",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "gemm_local4",
+      "origin": "MachSuite gemm/ncubed reduced unsigned 4x4 adaptation; same original algorithm as the earlier gemm pair; BSD license retained",
+      "transformation": "Keep four row accumulators local during GEMM interchange",
+      "rationale": "Follow up the earlier regressing GEMM candidate: reuse m1 reads while writing each product only once.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "linear algebra",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "syrk4",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Compute one triangle of a Gram matrix",
+      "rationale": "Exploit symmetry of A*A-transpose for arbitrary unsigned A; no symmetry assumption on input data is introduced.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "linear algebra",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "rank1_update4",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Hoist the row scalar and expand a rank-one update",
+      "rationale": "Reuse x[r] across four output products and expose column parallelism.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "linear algebra",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "triangular_matvec4",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Tighten triangular loop bounds",
+      "rationale": "Eliminate iterations with a false structural predicate, without restricting input matrix values.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "linear algebra",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "symv4",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Reuse stored triangular matrix elements",
+      "rationale": "The original already defines a symmetric matrix using lower-triangle storage; reuse each stored value for both output contributions.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "linear algebra",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "matrix_trace4",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Traverse only diagonal indices",
+      "rationale": "Remove a scan over non-diagonal entries; this is a small control/memory microkernel.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "linear algebra",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "matrix_diagsum4",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Direct traversal of two disjoint diagonals",
+      "rationale": "For the fixed even dimension the two diagonals do not overlap; no data-domain restriction is required. Related to matrix_trace4.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "linear algebra",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "histogram4",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Fuse four fixed-bin histogram scans",
+      "rationale": "Read each input once and update four explicit counters; avoids symbolic output indices in the checker.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "predicate reduction",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "search_count16",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Two independent equality-count lanes",
+      "rationale": "Split a scan into partial counters; an equality-count variant of the predicate-reduction family.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "predicate reduction",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "reverse_copy16",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Paired reverse-copy staging",
+      "rationale": "Read symmetric input pairs and emit two output writes per iteration.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "data movement",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "deinterleave16",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Fuse even/odd extraction loops",
+      "rationale": "Combine two related output scans, retaining independent observable arrays.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "data movement",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "interleave8",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Fuse interleaving output loops",
+      "rationale": "Pair adjacent destination writes; related to the inverse deinterleave operation.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "data movement",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "maxpool4",
+      "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+      "transformation": "Balanced two-by-two max pooling",
+      "rationale": "Expose a fixed comparison tree and avoid a generic nested reduction loop; same comparison family as max8.",
+      "directory": "benchmarks/expanded",
+      "algorithm_group": "image",
+      "negative_control": "Flip bit zero of the scalar return or first designated output element",
+      "generation_round": 2
+    },
+    {
+      "name": "moving_sum_register16",
+      "directory": "benchmarks/feedback",
+      "origin": "Explicit follow-up against the existing benchmarks/expanded/moving_sum16_original.c reference; not a new independent original algorithm",
+      "transformation": "Keep the four-element moving window in scalar registers",
+      "rationale": "Follow up the sliding-sum area regression: load only one new input per output, with explicit local window state instead of rereading the outgoing array element.",
+      "algorithm_group": "feedback variants",
+      "comparison_parent_pairs": [
+        "moving_sum16"
+      ],
+      "generation_round": 3,
+      "negative_control": "Flip bit zero of the first output element after the full candidate computation"
+    },
+    {
+      "name": "gemm_tile2",
+      "directory": "benchmarks/feedback",
+      "origin": "Explicit follow-up against the existing benchmarks/machsuite_u32/gemm_original.c reference; not a new independent original algorithm",
+      "transformation": "Tile GEMM columns by two with local accumulators",
+      "rationale": "Follow up the four-accumulator design: test whether two simultaneous output accumulators reduce mapped area while retaining some row-input reuse. Improvement is determined by measurements.",
+      "algorithm_group": "feedback variants",
+      "comparison_parent_pairs": [
+        "gemm",
+        "gemm_local4"
+      ],
+      "generation_round": 3,
+      "negative_control": "Flip bit zero of the first output element after the full candidate computation"
+    }
+  ],
+  "study_unit": "One original/candidate pair; each pair is two synthesized implementations",
+  "case_count": 50,
+  "source_design_count": 100
+}

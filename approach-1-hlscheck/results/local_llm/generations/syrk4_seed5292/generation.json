@@ -1,0 +1,38 @@
+{
+  "id": "syrk4_seed5292",
+  "case": "syrk4",
+  "source": "benchmarks\\expanded\\syrk4_original.c",
+  "source_sha256": "96b3d566620c663fedad5dc0a4ddddd2d17a0eaa168e504d8032e85c1d22aba9",
+  "request_sha256": "4259c2c929f77d70a3d67f51652ec7b1fd9d3e89c2bca55164695e600767f6fb",
+  "raw_response_sha256": "0c275ea56a4e7012a90bdd7cda4129334907238d11992cc8ee5e7d1dcda6608a",
+  "candidate_sha256": "c26cb0ebb47a68a225b553542e6466b4c4cc598c0e84c6912a195f39b3d1d3fb",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 301,
+    "prompt_tokens": 303,
+    "total_tokens": 604,
+    "prompt_tokens_details": {
+      "cached_tokens": 229
+    }
+  },
+  "timings": {
+    "cache_n": 229,
+    "prompt_n": 74,
+    "prompt_ms": 38.068,
+    "prompt_per_token_ms": 0.5144324324324324,
+    "prompt_per_second": 1943.8898812651046,
+    "predicted_n": 301,
+    "predicted_ms": 2417.994,
+    "predicted_per_token_ms": 8.059980000000001,
+    "predicted_per_second": 124.06978677366443
+  },
+  "elapsed_seconds": 2.485,
+  "extraction": "largest fenced code block; no semantic edits",
+  "model_repository": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+  "model_revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+  "model_sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+  "runtime_release": "b12619",
+  "origin": "Actual independently generated local-model optimization attempt; not an injected mutation",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0
+}

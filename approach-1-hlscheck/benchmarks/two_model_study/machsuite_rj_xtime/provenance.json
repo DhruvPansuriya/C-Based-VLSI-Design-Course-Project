@@ -1,0 +1,17 @@
+{
+  "id": "machsuite_rj_xtime",
+  "source": "benchmarks/two_model_study/machsuite_rj_xtime/original.c",
+  "function": "kernel",
+  "original_sha256": "34fd938e7af02c899c0d1d1f7c4e390cfc3cd40fe28d8940010a81d52ee9dcb3",
+  "suite": "MachSuite",
+  "upstream_source": "datasets/MachSuite/aes/aes/aes.c",
+  "upstream_sha256": "e865f122b2d58654d86ddf7c12dfaf59a4a711d13263052371665203a0f865d6",
+  "preparation": "Reuse the type-preserving original leaf extraction (not any candidate). Retain all typedefs/macros, widths and source notices. Rename only rj_xtime to kernel before freezing; remove unrelated compilation-unit material as documented in the earlier extraction. No dimension, type or input-domain reduction.",
+  "category": "type_preserving_leaf",
+  "integer_domain": "Original primitive widths and typedefs preserved under ILP32; signed narrowing follows the selected target. Unsigned8 input and return; full0..255 input domain.",
+  "prepared_original_source": "experiments/dataset_leaves/machsuite_rj_xtime/original.c",
+  "source_function_original": "rj_xtime",
+  "upstream_header": "datasets/MachSuite/aes/aes/aes.h",
+  "upstream_header_sha256": "a37e392b484bd0f7e60d6a9a4477ff5eb17c3665ab8f8909be230362d5b0ddd3",
+  "exact_original_function_sha256": "741644114746ed913a55c76df7db475ebbdf9890e8b56799046acebb5dc763e5"
+}

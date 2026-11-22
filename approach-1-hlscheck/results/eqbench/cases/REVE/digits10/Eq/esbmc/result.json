@@ -1,0 +1,35 @@
+{
+  "backend": "ESBMC",
+  "solver": "Z3",
+  "status": "unknown",
+  "parameters": [
+    {
+      "name": "n",
+      "kind": "int",
+      "length": null
+    }
+  ],
+  "scalar_ranges": {},
+  "assumptions": [
+    "32-bit int/unsigned int",
+    "Array parameters valid and pairwise nonoverlapping",
+    "All scalar/array inputs symbolic over their full type domain except stated ranges",
+    "Default ESBMC bounds, pointer and unwinding checks retained; signed overflow and shift UB checks enabled"
+  ],
+  "command": [
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\eqbench\\cases\\REVE\\digits10\\Eq\\esbmc\\harness.c",
+    "--z3",
+    "--bv",
+    "--unwind",
+    "32",
+    "--overflow-check",
+    "--ub-shift-check",
+    "--uninitialised-vars-check",
+    "--multi-property"
+  ],
+  "unwind": 32,
+  "timeout_seconds": 3,
+  "reason": "External verifier exceeded its wall-clock timeout",
+  "elapsed_seconds": 13.045149
+}

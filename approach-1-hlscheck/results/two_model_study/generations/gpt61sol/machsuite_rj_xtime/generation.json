@@ -1,0 +1,20 @@
+{
+  "model": "gpt61sol",
+  "case": "machsuite_rj_xtime",
+  "messages_sha256": "ef87b73a573e06ee72010ff897013981027111977e5ae19a856eab3a8b379fb0",
+  "original_sha256": "34fd938e7af02c899c0d1d1f7c4e390cfc3cd40fe28d8940010a81d52ee9dcb3",
+  "raw_response_sha256": "9450b213ee19fd467355615ab750ab062abf0eeb275ab34986c8ef4a26ff115d",
+  "candidate_sha256": "9450b213ee19fd467355615ab750ab062abf0eeb275ab34986c8ef4a26ff115d",
+  "extraction": "entire response; no semantic edits",
+  "finish_reason": "complete",
+  "invocation": {
+    "model": "gpt-6.1-sol",
+    "fork_turns": "none",
+    "task_name": "two_model_aes",
+    "task_text": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation.\n\nQuickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\n#include <stdint.h>\nuint8_t kernel(uint8_t x)\n{\n    return (x & 0x80) ? ((x << 1) ^ 0x1b) : (x << 1);\n}\n```\n",
+    "source": "Actual first code response returned by fresh collaboration.spawn_agent task; no repair or verification feedback"
+  },
+  "sampling_controls": "Not exposed by Codex",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0
+}

@@ -1,0 +1,98 @@
+{
+  "sha256": "90ec19360792bfa0d3caccf80c4475d268ed67d75a6a4ea90fd4d66e57256d04",
+  "reason": "",
+  "traps": [],
+  "uninitialized_local_pass": true,
+  "commands": [
+    {
+      "argv": [
+        "goto-cc",
+        "-std=c11",
+        "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/fixed/0/a0.c",
+        "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/fixed/0/a1.c",
+        "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/fixed/0/main.c",
+        "-o",
+        "raw.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/fixed/0/verification",
+      "returncode": 0,
+      "seconds": 0.1606993750028778,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--uninitialized-check",
+        "raw.goto",
+        "locals.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/fixed/0/verification",
+      "returncode": 0,
+      "seconds": 0.0065853749983944,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--add-library",
+        "--no-malloc-may-fail",
+        "locals.goto",
+        "linked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/fixed/0/verification",
+      "returncode": 0,
+      "seconds": 0.006140666009741835,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--list-goto-functions",
+        "linked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/fixed/0/verification",
+      "returncode": 0,
+      "seconds": 0.004983000006177463,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--remove-function-body-regex",
+        "^(_Exit|_exit|_longjmp|abort|exit|longjmp|quick_exit|siglongjmp)$",
+        "linked.goto",
+        "removed.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/fixed/0/verification",
+      "returncode": 0,
+      "seconds": 0.005540250000194646,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--generate-function-body",
+        "^(_Exit|_exit|_longjmp|abort|exit|longjmp|quick_exit|siglongjmp)$",
+        "--generate-function-body-options",
+        "assert-false-assume-false",
+        "removed.goto",
+        "checked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/fixed/0/verification",
+      "returncode": 0,
+      "seconds": 0.005645375000312924,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--show-goto-functions",
+        "checked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/fixed/0/verification",
+      "returncode": 0,
+      "seconds": 0.005662583993398584,
+      "error": ""
+    }
+  ]
+}

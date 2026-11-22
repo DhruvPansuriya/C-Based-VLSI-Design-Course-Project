@@ -1,0 +1,18 @@
+; benchmark generated from python API
+(set-info :status unknown)
+(declare-fun arg0_3 () (_ BitVec 32))
+(declare-fun arg0_2 () (_ BitVec 32))
+(declare-fun arg0_1 () (_ BitVec 32))
+(declare-fun arg0_0 () (_ BitVec 32))
+(assert
+ (let (($x427894 (and (distinct (_ bv0 32) (_ bv0 32)) true)))
+(let ((?x361263 ((_ extract 0 0) arg0_3)))
+(let ((?x425884 ((_ extract 0 0) arg0_2)))
+(let ((?x499124 ((_ extract 0 0) arg0_1)))
+(let ((?x498218 ((_ extract 0 0) arg0_0)))
+(let ((?x478779 (concat ((_ extract 31 1) (bvadd arg0_0 arg0_1 arg0_2 arg0_3)) (bvnot (bvadd ?x498218 ?x499124 ?x425884 ?x361263)))))
+(let (($x426631 (and (distinct (_ bv0 32) (bvadd arg0_0 arg0_1 arg0_2 arg0_3 (bvmul (_ bv4294967295 32) ?x478779))) true)))
+(let (($x14318 (or $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x426631 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894 $x427894)))
+(let (($x510926 (and true true $x14318)))
+(or $x510926)))))))))))
+(check-sat)

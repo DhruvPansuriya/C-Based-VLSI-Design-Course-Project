@@ -1,0 +1,12 @@
+ex1_saturate   v1: expected ACCEPT    E2  got ACCEPT    E2  OK  satisfies every interpretation  
+ex1_saturate   v2: expected ACCEPT    E2  got ACCEPT    E2  OK  satisfies every interpretation  
+ex1_saturate   v3: expected REJECT    E1  got REJECT    E1  OK  regression outside B_max rejected by every Ext  {'a': '0', 'b': '0'}
+ex1_saturate   v4: expected REJECT    E2  got REJECT    E2  OK  violates every interpretation  {'a': '153', 'b': '214'}
+ex1_saturate   v5: expected REJECT    E2  got REJECT    E2  OK  violates every interpretation  {'a': '231', 'b': '108'}
+ex2_argmax     v1: expected ACCEPT    E2  got ACCEPT    E2  OK  satisfies every interpretation  
+ex2_argmax     v2: expected REJECT    E1  got REJECT    E1  OK  regression outside B_max rejected by every Ext  {'n': '3'}
+ex2_argmax     v3: expected REJECT    E0  got REJECT    E0  OK  computed fact: E0: p1_argmax.pointer_dereference.41 dereference failure: pointer outside object bounds in a[(signed long int)i]  {'n': '3'}
+ex4_sum        v1: expected ACCEPT    E2  got ACCEPT    E2  OK  satisfies every interpretation  
+ex4_sum        v2: expected REJECT    E0  got REJECT    E0  OK  computed fact: E0: p1_sum.pointer_dereference.5 dereference failure: pointer outside object bounds in a[(signed long int)i]  {'n': '1'}
+ex2_B_ub_is_n_eq_0 {'P0 UB witnesses n': ['0'], 'P0 safe for n>=1': True}
+ex4_shape_n_minus_1_discarded_by_V_G {'contract UB under (n-1) shape': True, 'properties': ['main.pointer_dereference.23', 'main.overflow.4']}
