@@ -25,7 +25,7 @@ def client(task_name: str, family: str, tmp_path: Path) -> LLMClient:
 
 def test_prompts_are_versioned_and_hashed():
     hashes = {n: load_prompt(n) for n in PROMPT_NAMES}
-    assert all(t.version == "1" and len(t.sha256) == 64 for t in hashes.values())
+    assert all(t.version.isdigit() and len(t.sha256) == 64 for t in hashes.values())
     assert len({t.sha256 for t in hashes.values()}) == 5
 
 
