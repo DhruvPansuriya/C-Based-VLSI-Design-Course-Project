@@ -22,11 +22,15 @@ Working branch: `implementation-start`. Original archive preserved in the import
 | T13 interpretation generation | implemented locally with authored mock fixtures only; no live model run; computed readings not implemented | `docs/T13_INTERPRET.md`; `tests/test_interpret.py`; `results/auto_vs_handwritten.md` (10/10 same, mock fixtures) |
 | T14 repetition/stability | implemented locally with mock fixtures; no live stability measurement; monotonicity premise documented | `docs/T14_STABILITY.md`; `tests/test_stability.py` |
 | T15 benchmark ingestion | 30 Chrysalis-HLS tasks adapted deterministically (pinned commits); template requests, no independent authoring; sources regenerated, not committed (licences) | `docs/T15_BENCHMARKS.md`; `benchmarks/adaptation_log.json` |
-| T16–T22 | planned | corrections in the import review apply before implementing affected cards |
+| T16 pools/labels | tooling done; labeller bug (V-2 discarded identity) found and fixed; full run in progress | `docs/T16_POOLS.md` |
+| T17 baselines | B1/B3/B4 done; B2 not implemented (would send P1 to an LLM) | `vwe/eval/baselines.py` |
+| T18 metrics | metrics, runner and audit done; evaluation pending labels and live readings | `vwe/eval/metrics.py`, `scripts/run_eval.py` |
+| T19–T21 | optional, not started | |
+| T22 | in progress | | corrections in the import review apply before implementing affected cards |
 
 Hosted CI is green on Python3.10 and Python3.12 for T00/T01. First hosted run exposed a Python3.10 dependency mismatch, fixed in d43a092. Safety commit c0884a5 also passed hosted CI on both Python versions: https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45022723368 . Docker, ESBMC, Vitis and live provider execution have not been repeated on this macOS host. Imported Linux logs remain labeled as imported.
 
-Next implementation card: T15 benchmark ingestion (T12–T14 done with mock/fixtures; live providers unverified). M1 (bounded handwritten checker) and M2 (offline professor demo) are complete. Automatic generation, benchmark evaluation and HLS QoR measurement remain planned.
+Next: finish T16 labels, run T18 evaluation, T22 consolidation. Live OpenAI generation is blocked on API credit (Q24). M1 (bounded handwritten checker) and M2 (offline professor demo) are complete. Automatic generation, benchmark evaluation and HLS QoR measurement remain planned.
 
 T02 commit87b3909 passed hosted CI on Python3.10/3.12 while T03 work continued: https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45027090279 .
 
