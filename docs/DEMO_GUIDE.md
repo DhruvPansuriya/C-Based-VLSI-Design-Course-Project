@@ -57,5 +57,5 @@ decision.
 make demo-steps                                                     # ex2_argmax v2, pauses
 python scripts/demo_steps.py --task ex1_saturate --candidate v3     # no pauses
 python scripts/demo_steps.py --task ex1_saturate --candidate v3 --auto mock    # generated readings (fixtures)
-python scripts/demo_steps.py --task ex1_saturate --candidate v3 --auto openai  # live; needs API credit
+python scripts/demo_steps.py --task ex1_saturate --candidate v3 --auto groq    # live readings (gpt-oss + Qwen)
 ```
