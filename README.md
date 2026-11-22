@@ -1,6 +1,20 @@
 # C-Based VLSI Design Course Project
 
 
+## Current implementation
+
+Work proceeds on `implementation-start`. See [progress](plan/PROGRESS.md) and the [independent ZIP review](docs/CLAUDE_IMPORT_REVIEW.md), which records required soundness corrections before later tasks. The general `vwe verify` pipeline is not implemented yet.
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -e .
+make test
+.venv/bin/vwe --version
+make golden
+```
+
+Native CBMC 6.11.0 and Z3 are needed for the golden integration test; it is skipped when CBMC is absent. Linux tool installation is `bash tools/install_tools.sh`; macOS must use qualified native tools. The Docker recipe has not been run here and is not a sealed image.
+
 ## Implementation plan (for the coding agent)
 
 Start at [`plan/00_START_HERE.md`](plan/00_START_HERE.md). The rules every change must respect are in [`AGENTS.md`](AGENTS.md). The phased plan and milestones are in [`plan/01_PLAN.md`](plan/01_PLAN.md), with one file per task in [`plan/tasks/`](plan/tasks/) (T00–T22). Unresolved facts are tracked in [`plan/OPEN_QUESTIONS.md`](plan/OPEN_QUESTIONS.md). Tasks T00–T11 are the minimum for a working end-to-end demo.
@@ -24,7 +38,7 @@ it returns **ACCEPT / REJECT / UNDECIDED** with an evidence class (E0 computed, 
 | `docs/technical-design/02_technical_design_document.md` | Technical design: architecture, versions, modules, schemas, harness generation, orchestration, testing, benchmarks, evaluation, reproducibility, milestones, risks |
 | `docs/technical-design/03_links_versions_and_verification_log.md` | Every external link and version, and how it was verified |
 
-## What already runs
+## Imported prototype (original status; see progress for new checks)
 
 | Area | Path | Status |
 |---|---|---|
