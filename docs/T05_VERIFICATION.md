@@ -31,8 +31,10 @@ reads, still need coverage qualification before the pipeline relies on them.
 The optional ESBMC adapter checks the qualified source subset and returns
 agreement, disagreement, or unsupported. Cross-tool disagreement may veto an
 ACCEPT. A source profile requiring CBMC pointer identity, allocation, or trap
-instrumentation has no qualified ESBMC adapter yet. CI exercises the correct
-saturation example against the pinned Linux binary. The macOS ARM64 asset
+instrumentation has no qualified ESBMC adapter yet. ESBMC v8.7 uses its own
+assert and assume names. The adapter maps both explicitly, and CI exercises both
+the correct saturation example and the incorrect 254-on-overflow candidate.
+[ESBMC v8.7 intrinsic lowering](https://github.com/esbmc/esbmc/blob/v8.7/src/goto-programs/builtin_functions.cpp) The macOS ARM64 asset
 matched the published checksum but requires compatible dynamic libraries. The
 local installation could not load the packaged executable against its Boost
 library. [ESBMC v8.7 release](https://github.com/esbmc/esbmc/releases/tag/v8.7)

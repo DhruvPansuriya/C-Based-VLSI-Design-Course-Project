@@ -47,16 +47,21 @@ def confirm(files: Sequence[Path], *, unwind: int, cwd: Path, timeout_s: int = 6
                              r"quick_exit|longjmp|_longjmp|siglongjmp)\b")
     if any(p.suffix != ".c" or unsupported.search(p.read_text()) for p in files):
         return ConfirmationResult(Confirmation.UNSUPPORTED, "requires a different ESBMC model")
+    if any(d.split("=", 1)[0].startswith(("__CPROVER", "__ESBMC")) for d in defines):
+        return ConfirmationResult(Confirmation.UNSUPPORTED, "defines cannot override verifier intrinsics")
+    intrinsics = ["-D__CPROVER_assume=__ESBMC_assume",
+                  "-D__CPROVER_assert=__ESBMC_assert"]
     command = ["esbmc", *[str(f.resolve()) for f in files],
-               *[f"-D{d}" for d in defines], "--unwind", str(unwind), "--z3", "--overflow-check"]
+               *intrinsics, *[f"-D{d}" for d in defines], "--unwind", str(unwind), "--z3", "--overflow-check"]
     run = execute(command, cwd=cwd, timeout_s=timeout_s)
     log = run.stdout + "\n" + run.stderr
     markers = re.findall(r"^\s*VERIFICATION (SUCCESSFUL|FAILED|UNKNOWN)\s*$", log, re.M)
     if run.error or len(markers) != 1:
         return ConfirmationResult(Confirmation.UNSUPPORTED, run.error or "no unique ESBMC result", run)
     if markers == ["SUCCESSFUL"] and run.returncode == 0:
-        if re.search(r"\b(?:ignored|unsupported|assumed away|no body)\b", log, re.I):
-            return ConfirmationResult(Confirmation.UNSUPPORTED, "ESBMC reported a model limitation", run)
+        diagnostic = re.search(r"^.*\b(?:ignored|unsupported|assumed away|no body)\b.*$", log, re.I | re.M)
+        if diagnostic:
+            return ConfirmationResult(Confirmation.UNSUPPORTED, diagnostic[0].strip(), run)
         return ConfirmationResult(Confirmation.AGREE, "ESBMC completed the source check", run)
     if markers == ["FAILED"] and run.returncode == 1:
         if re.search(r"unwinding assertion", log, re.I):
