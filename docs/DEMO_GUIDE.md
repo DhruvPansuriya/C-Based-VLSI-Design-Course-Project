@@ -43,3 +43,19 @@ command returns nonzero on a verdict mismatch or timing-budget violation.
 Validated locally on 23 November 2026: nine rows match in **61.2 seconds**,
 with the slowest case at **32.1 seconds**. The full suite passes **325 tests**,
 with one local ESBMC-unavailable skip. The artifact index's nine links resolve.
+
+## Step-by-step demo (`make demo-steps`)
+
+`scripts/demo_steps.py` runs the real pipeline on one candidate and prints each
+stage as it completes: inputs, readings, admission, P0-only regions, reading
+validation/freezing, every proof obligation (with witnesses and P0/P1 outputs),
+native replay and the verdict. `--interactive` pauses between steps. The stages are
+observed through `verify(on_step=...)`, which receives copies and cannot change a
+decision.
+
+```sh
+make demo-steps                                                     # ex2_argmax v2, pauses
+python scripts/demo_steps.py --task ex1_saturate --candidate v3     # no pauses
+python scripts/demo_steps.py --task ex1_saturate --candidate v3 --auto mock    # generated readings (fixtures)
+python scripts/demo_steps.py --task ex1_saturate --candidate v3 --auto openai  # live; needs API credit
+```
