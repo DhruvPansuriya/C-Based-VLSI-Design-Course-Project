@@ -25,3 +25,33 @@ RESULTS.md; subtle-fault labels are per case from their `summary.json`, checked 
 python scripts/adapt_project3.py --handoff <extracted>/Project3_Team_Handoff
 python scripts/eval_project3.py            # results/eval_project3/summary.md
 ```
+
+## Results (2026-11-23, `results/eval_project3/summary.md`)
+
+181 candidates; **125 decided (coverage 0.69); all 125 agree with Project 3's labels; 0
+disagreements.** Evidence classes: E0 = 4 (all four decided candidate-UB controls), E1 = 73
+(regressions, including every decided seeded one-bit fault), E2 = 48 (accepted rewrites).
+
+| cohort | label | n | VWE ACCEPT | VWE REJECT | UNDECIDED |
+|---|---|---|---|---|---|
+| main | equivalent | 51 | 30 | 0 | 21 |
+| main | not_equivalent | 50 | 0 | 35 | 15 |
+| subtle faults | equivalent | 20 | 18 | 0 | 2 |
+| subtle faults | not_equivalent | 54 | 0 | 38 | 16 |
+| subtle faults | candidate_undefined | 6 | 0 | 4 | 2 |
+
+Abstentions (56): 48 have no certified P0 reference guard. In 32 of those 34 tasks the cause is a
+**SAT-backend timeout (120 s) on P0's determinism self-composition** for multiplication-heavy
+kernels (dot16, gemm, matvec, convolution, ...); VWE requires SAT and Z3 to agree, so a SAT
+timeout blocks the guard. 5 more are SAT timeouts on later obligations, and 3 are the CBMC
+uninitialised-array false positive vetoed by native replay (Q27).
+
+Comparison with their checker: their checker agrees with its labels on 181/181. For the main
+cohort this is partly by construction (labels come from their proofs); the subtle-fault labels
+were set before checking. VWE reaches the same conclusion independently on every case it
+decides, with a different method (CBMC SAT/Z3 relational harnesses, fixed-input re-proof,
+sanitizer replay) and no LLM. VWE decides fewer cases (0.69 vs their 1.00 coverage) under this
+laptop's 120 s budget. Their checker is not rerun here; their outcomes are read from their
+recorded results.
+
+Mean time per verdict: 80.7 s (3 workers on an 8-core laptop, with the opt-in P0-only cache).
