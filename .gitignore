@@ -11,3 +11,6 @@ build/
 dist/
 .coverage
 .DS_Store
+
+# T15: adapted benchmark sources are regenerated from pinned third_party/ (per-program licences)
+benchmarks/tasks/

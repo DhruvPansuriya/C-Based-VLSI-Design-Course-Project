@@ -1,0 +1,289 @@
+{
+  "commit": "63be1a13a706cdbef4b88fab25aa21167f978b74",
+  "selected": [
+    {
+      "task_id": "chrysalis_machsuite_init_oob",
+      "suite": "MachSuite",
+      "design": "init",
+      "type": "OOB",
+      "function": "init"
+    },
+    {
+      "task_id": "chrysalis_machsuite_init_init",
+      "suite": "MachSuite",
+      "design": "init",
+      "type": "INIT",
+      "function": "init"
+    },
+    {
+      "task_id": "chrysalis_chstone_uppol2_shft",
+      "suite": "CHStone",
+      "design": "uppol2",
+      "type": "SHFT",
+      "function": "uppol2"
+    },
+    {
+      "task_id": "chrysalis_vitis_hls_introductory_examples_bypass_inf",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "bypass",
+      "type": "INF",
+      "function": "bypass"
+    },
+    {
+      "task_id": "chrysalis_chstone_abs_use",
+      "suite": "CHStone",
+      "design": "abs",
+      "type": "USE",
+      "function": "abs"
+    },
+    {
+      "task_id": "chrysalis_chstone_abs_zero",
+      "suite": "CHStone",
+      "design": "abs",
+      "type": "ZERO",
+      "function": "abs"
+    },
+    {
+      "task_id": "chrysalis_h_264_six_tab_mlu",
+      "suite": "H.264",
+      "design": "six_tab",
+      "type": "MLU",
+      "function": "six_tab"
+    },
+    {
+      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_oob",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "pass",
+      "type": "OOB",
+      "function": "pass"
+    },
+    {
+      "task_id": "chrysalis_chstone_filtep_init",
+      "suite": "CHStone",
+      "design": "filtep",
+      "type": "INIT",
+      "function": "filtep"
+    },
+    {
+      "task_id": "chrysalis_vitis_hls_introductory_examples_bypass_1_shft",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "bypass_1",
+      "type": "SHFT",
+      "function": "bypass"
+    },
+    {
+      "task_id": "chrysalis_chstone_filtep_use",
+      "suite": "CHStone",
+      "design": "filtep",
+      "type": "USE",
+      "function": "filtep"
+    },
+    {
+      "task_id": "chrysalis_chstone_uppol1_zero",
+      "suite": "CHStone",
+      "design": "uppol1",
+      "type": "ZERO",
+      "function": "uppol1"
+    },
+    {
+      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_mlu",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "pass",
+      "type": "MLU",
+      "function": "pass"
+    },
+    {
+      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_4_oob",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "pass_4",
+      "type": "OOB",
+      "function": "pass"
+    },
+    {
+      "task_id": "chrysalis_chstone_uppol1_init",
+      "suite": "CHStone",
+      "design": "uppol1",
+      "type": "INIT",
+      "function": "uppol1"
+    },
+    {
+      "task_id": "chrysalis_vitis_hls_introductory_examples_bypass_shft",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "bypass",
+      "type": "SHFT",
+      "function": "bypass"
+    },
+    {
+      "task_id": "chrysalis_chstone_uppol2_use",
+      "suite": "CHStone",
+      "design": "uppol2",
+      "type": "USE",
+      "function": "uppol2"
+    },
+    {
+      "task_id": "chrysalis_h_264_inverserasterscan_zero",
+      "suite": "H.264",
+      "design": "InverseRasterScan",
+      "type": "ZERO",
+      "function": "InverseRasterScan"
+    },
+    {
+      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_4_mlu",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "pass_4",
+      "type": "MLU",
+      "function": "pass"
+    },
+    {
+      "task_id": "chrysalis_vitis_hls_introductory_examples_bypass_1_oob",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "bypass_1",
+      "type": "OOB",
+      "function": "bypass"
+    },
+    {
+      "task_id": "chrysalis_h_264_six_tab_init",
+      "suite": "H.264",
+      "design": "six_tab",
+      "type": "INIT",
+      "function": "six_tab"
+    },
+    {
+      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_1_use",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "pass_1",
+      "type": "USE",
+      "function": "pass"
+    },
+    {
+      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_5_zero",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "pass_5",
+      "type": "ZERO",
+      "function": "pass"
+    },
+    {
+      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_2_mlu",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "pass_2",
+      "type": "MLU",
+      "function": "pass"
+    },
+    {
+      "task_id": "chrysalis_h_264_inverserasterscan_oob",
+      "suite": "H.264",
+      "design": "InverseRasterScan",
+      "type": "OOB",
+      "function": "InverseRasterScan"
+    },
+    {
+      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_1_init",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "pass_1",
+      "type": "INIT",
+      "function": "pass"
+    },
+    {
+      "task_id": "chrysalis_vitis_hls_introductory_examples_add_kernel_mlu",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "add_kernel",
+      "type": "MLU",
+      "function": "add_kernel"
+    },
+    {
+      "task_id": "chrysalis_vitis_hls_introductory_examples_add_kernel_oob",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "add_kernel",
+      "type": "OOB",
+      "function": "add_kernel"
+    },
+    {
+      "task_id": "chrysalis_vitis_hls_introductory_examples_double_pass_1_init",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "Double_pass_1",
+      "type": "INIT",
+      "function": "Double_pass"
+    },
+    {
+      "task_id": "chrysalis_vitis_hls_introductory_examples_pass_5_mlu",
+      "suite": "Vitis-HLS-Introductory-Examples",
+      "design": "pass_5",
+      "type": "MLU",
+      "function": "pass"
+    }
+  ],
+  "skipped": {
+    "P_ref undefined on every sampled input after size scaling (sanitizer probe)": 15,
+    "does not compile as standalone C11 (missing declarations from other files)": 129,
+    "edit is not inside a function": 1,
+    "faulty edit does not apply exactly once": 209,
+    "frontend reports unsupported/forbidden constructs": 20,
+    "frontend: <stdin>:13:24: before: *": 4,
+    "frontend: <stdin>:27:1: before: while": 1,
+    "frontend: <stdin>:2:15: before: *": 1,
+    "frontend: <stdin>:2:1: Invalid function definition": 25,
+    "frontend: <stdin>:2:23: before: *": 5,
+    "frontend: <stdin>:2:24: before: *": 3,
+    "frontend: <stdin>:2:26: before: *": 7,
+    "frontend: <stdin>:2:29: before: x": 4,
+    "frontend: <stdin>:2:30: before: inA": 2,
+    "frontend: <stdin>:2:34: before: triangle_2d": 1,
+    "frontend: <stdin>:2:38: before: *": 3,
+    "frontend: <stdin>:2:42: before: *": 6,
+    "frontend: <stdin>:2:44: before: *": 3,
+    "frontend: <stdin>:3:1: Invalid function definition": 4,
+    "frontend: <stdin>:3:26: before: minver_hw": 1,
+    "frontend: <stdin>:3:28: before: sin_table": 4,
+    "frontend: <stdin>:4:1: Invalid function definition": 3,
+    "frontend: <stdin>:4:21: before: x_aux": 6,
+    "frontend: <stdin>:5:19: before: inrun": 5,
+    "frontend: <stdin>:5:19: before: vec1": 4,
+    "frontend: <stdin>:6:17: before: nodes": 6,
+    "frontend: <stdin>:6:20: before: obs": 6,
+    "frontend: <stdin>:9:35: before: *": 3,
+    "frontend: <stdin>:9:40: before: *": 5,
+    "outside the supported C subset (float, C++, struct, I/O or references)": 3472,
+    "pointer parameter buf has no declared size": 14,
+    "pointer parameter dlti has no declared size": 3,
+    "pointer parameter matrix has no declared size": 8,
+    "pointer parameter p_xhtbl_bits has no declared size": 7,
+    "undefined identifier ALLOCATION needs a missing header": 17,
+    "undefined identifier ARRAY_PARTITION needs a missing header": 84,
+    "undefined identifier ARRAY_RESHAPE needs a missing header": 8,
+    "undefined identifier ASSIGN_OFFSET_FOR_BANKS needs a missing header": 5,
+    "undefined identifier BF_LONG needs a missing header": 5,
+    "undefined identifier BIND_STORAGE needs a missing header": 10,
+    "undefined identifier BUS_A needs a missing header": 8,
+    "undefined identifier BYTE needs a missing header": 14,
+    "undefined identifier COLORING_FB needs a missing header": 4,
+    "undefined identifier COMPUTE needs a missing header": 10,
+    "undefined identifier CPF needs a missing header": 11,
+    "undefined identifier DATAFLOW needs a missing header": 8,
+    "undefined identifier DATA_T needs a missing header": 3,
+    "undefined identifier DATA_TYPE needs a missing header": 153,
+    "undefined identifier DEGREE_GUESS needs a missing header": 12,
+    "undefined identifier DOT needs a missing header": 7,
+    "undefined identifier FACTOR needs a missing header": 6,
+    "undefined identifier FFT8 needs a missing header": 2,
+    "undefined identifier FIND_MAX_DIST needs a missing header": 9,
+    "undefined identifier FIX_32_12 needs a missing header": 2,
+    "undefined identifier FLOW_INNER needs a missing header": 4,
+    "undefined identifier FUNC needs a missing header": 10,
+    "undefined identifier FUNCTION_INSTANTIATE needs a missing header": 7,
+    "undefined identifier GELU_TANH_COEFF_CUBIC needs a missing header": 4,
+    "undefined identifier GRAD needs a missing header": 4,
+    "undefined identifier GRAD_Z_INNER needs a missing header": 3,
+    "undefined identifier HLS needs a missing header": 612,
+    "undefined identifier INLINE needs a missing header": 3,
+    "undefined identifier INT32 needs a missing header": 4,
+    "undefined identifier LOOP_I needs a missing header": 12,
+    "undefined identifier LOOP_X needs a missing header": 3,
+    "undefined identifier Q_POP needs a missing header": 3,
+    "undefined identifier READ needs a missing header": 4,
+    "undefined identifier RELU needs a missing header": 3,
+    "undefined identifier SASR needs a missing header": 1,
+    "undefined identifier SUM_LOOP needs a missing header": 12,
+    "undefined identifier TYPE needs a missing header": 104,
+    "undefined identifier WRITE needs a missing header": 4
+  }
+}
