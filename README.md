@@ -1,0 +1,48 @@
+# C-Based VLSI Design Course Project
+
+
+## Implementation plan (for the coding agent)
+
+Start at [`plan/00_START_HERE.md`](plan/00_START_HERE.md). The rules every change must respect are in [`AGENTS.md`](AGENTS.md). The phased plan and milestones are in [`plan/01_PLAN.md`](plan/01_PLAN.md), with one file per task in [`plan/tasks/`](plan/tasks/) (T00–T22). Unresolved facts are tracked in [`plan/OPEN_QUESTIONS.md`](plan/OPEN_QUESTIONS.md). Tasks T00–T11 are the minimum for a working end-to-end demo.
+
+Formal verification of LLM-repaired and optimised HLS code.
+
+**Verdicts with Evidence (VWE)** is a fully automatic tool. Given
+
+- a buggy C function `P0`,
+- a natural-language fix request `N`, and
+- an AI-revised version `P1`,
+
+it returns **ACCEPT / REJECT / UNDECIDED** with an evidence class (E0 computed, E1 behaviour-light, E2 interpretive), a concrete witness input and a report. It uses CBMC with an unmodified Z3 solver, ESBMC as a confirmation-only second verifier, and sanitizer replay.
+
+## Documents
+
+| Document | What it contains |
+|---|---|
+| `docs/research/Verdicts_with_Evidence_Final_Draft.pdf` | The research draft: theory, theorems, pipeline, worked examples, evaluation design |
+| `docs/technical-design/01_review_of_final_draft.md` | Implementer's review of the draft, with tool behaviour checked by running CBMC 6.11.0 / ESBMC 8.7.0 |
+| `docs/technical-design/02_technical_design_document.md` | Technical design: architecture, versions, modules, schemas, harness generation, orchestration, testing, benchmarks, evaluation, reproducibility, milestones, risks |
+| `docs/technical-design/03_links_versions_and_verification_log.md` | Every external link and version, and how it was verified |
+
+## What already runs
+
+| Area | Path | Status |
+|---|---|---|
+| CBMC runner (pinned flags, JSON parsing, witness extraction) | `vwe/tools/cbmc.py` | implemented |
+| Verdict rules (draft §5.2) | `vwe/verdict.py` | implemented, unit-tested including Lemma 5 |
+| JSON Schemas (interpretation, interpretation set, task, verdict report) | `schemas/`, `vwe/schemas.py` | implemented, tested |
+| Golden harnesses for draft Examples 1, 2, 4 (10 candidates) | `spikes/examples/`, `scripts/run_golden_examples.py` | 10/10 verdicts match the draft (SAT and Z3 agree) |
+| Tool-behaviour spikes T01–T06 (path cuts, missing bodies, abort, buffer sizing, nondeterminism, build views) | `spikes/tool_behaviour/` | logs in `results/tool_behaviour/` |
+| Native witness replay with ASan/UBSan | `spikes/replay/` | demonstrated |
+
+## Quick start
+
+```bash
+tools/install_tools.sh                  # CBMC 6.11.0, ESBMC 8.7.0, Z3 5.4.1 (pinned)
+export PATH=/opt/cbmc/usr/bin:/opt/esbmc/release/bin:$PATH
+python3 -m pytest -q tests              # unit + schema + golden end-to-end
+python3 scripts/run_golden_examples.py  # prints each verdict with its witness
+spikes/tool_behaviour/run_spikes.sh     # re-runs the tool-behaviour spikes
+```
+
+Or with Docker: `docker build -f docker/Dockerfile -t vwe . && docker run --rm vwe`.
