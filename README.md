@@ -1,7 +1,11 @@
 # Verdicts with Evidence — C-Based VLSI Design Course Project
 
+> **Live demo:** follow [docs/LIVE_DEMO.md](docs/LIVE_DEMO.md): commands in order, where the code,
+> test cases, benchmarks and results are, and likely questions. Reports and slides for both
+> approaches (VWE and HLSCheck) are in [docs/report/](docs/report/README.md).
+
 **Status: T00–T18 implemented on `implementation-start`, plus a separate evaluation on the
-Project 3 team benchmarks.** VWE checks bounded C repairs with CBMC SAT/Z3 proof jobs,
+HLSCheck (Approach-1) benchmarks, our first approach.** VWE checks bounded C repairs with CBMC SAT/Z3 proof jobs,
 fixed-input confirmation and isolated sanitizer replay. Interpretations come from task JSON or
 are generated live from P0 and the request only, by two model families (gpt-oss-120b and Qwen
 via Groq). T19–T21 (HLS pragma gate, Vitis QoR, FIFO) are optional and not started.
@@ -9,13 +13,13 @@ via Groq). T19–T21 (HLS pragma gate, Vitis QoR, FIFO) are optional and not sta
 | Evaluation | Result | Read |
 |---|---|---|
 | Golden Examples 1–7 (authored) | 20/20 match | [T11 checkpoint](results/checkpoints/2026-11-23-t11/README.md) |
-| Project 3 benchmarks (181 candidates, T5 preservation) | **125 decided, 125/125 agree with their labels, 0 wrong**; coverage 0.69 | [EVAL-P3](docs/EVAL_P3.md) |
+| HLSCheck (Approach-1) benchmarks (181 candidates, T5 preservation) | **125 decided, 125/125 agree with the labels, 0 wrong**; coverage 0.69 | [EVAL-P3](docs/EVAL_P3.md) |
 | Chrysalis-HLS adaptation (89 labelled candidates, live readings) | method 1 decision, **0 wrong**, coverage 0.01; tests-only 41 wrong, regression-only 10 wrong | [T18](docs/T18_EVAL.md) |
 | Live auto vs handwritten (Examples 1, 2, 4) | 3 same, 7 conservative abstentions, explained | [results](results/auto_vs_handwritten_live.md) |
 
 The method has made no wrong decision in any evaluation so far; its cost is abstention. On
 Chrysalis tasks almost every abstention comes from bugs that are invisible in the scaled profile
-or from solver timeouts; on Project 3 most come from SAT timeouts on multiplication kernels.
+or from solver timeouts; on the HLSCheck cases most come from SAT timeouts on multiplication kernels.
 These are bounded, profile-local results on adapted or authored tasks, not a general accuracy
 estimate. See [the implementation report](docs/IMPLEMENTATION_REPORT.md).
 
@@ -26,7 +30,8 @@ estimate. See [the implementation report](docs/IMPLEMENTATION_REPORT.md).
 2. [Preserved results](results/checkpoints/2026-11-23-t11/README.md): the twenty-case
    table, standalone reports, logs, provenance and checksums. [HTML report index](results/checkpoints/2026-11-23-t11/index.html).
 3. [Progress and next actions](plan/PROGRESS.md): completed milestones and what remains.
-4. [Professor demo guide](docs/DEMO_GUIDE.md): a short presentation script.
+4. [Live demo guide](docs/LIVE_DEMO.md) (commands, file map, results locations) and the older
+   [professor demo script](docs/DEMO_GUIDE.md).
 5. [Research draft](docs/research/Verdicts_with_Evidence_Final_Draft.md), then the
    [import review and required corrections](docs/CLAUDE_IMPORT_REVIEW.md).
 
