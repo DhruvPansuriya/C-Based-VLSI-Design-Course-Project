@@ -295,5 +295,6 @@ def test_groq_uses_openai_layout_on_its_own_endpoint(context, tmp_path, monkeypa
     assert seen["urls"][0] == "https://api.groq.com/openai/v1/chat/completions"
     assert seen["body"]["model"] == "pinned"
     assert list_models(p, transport=transport) == ["a", "b"]
-    fam = load_llm_settings().families["groq"]
-    assert fam.adapter == "groq" and fam.model_id == "" and fam.api_key_file.name == "groq.key"
+    fams = load_llm_settings().families
+    assert {fams["groq_gptoss"].model_id, fams["groq_qwen"].model_id} == {"openai/gpt-oss-120b", "qwen/qwen3.8-27b"}
+    assert all(fams[f].adapter == "groq" and fams[f].api_key_file.name == "groq.key" for f in ("groq_gptoss", "groq_qwen"))
