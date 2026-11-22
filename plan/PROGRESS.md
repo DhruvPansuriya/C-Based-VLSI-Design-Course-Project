@@ -20,11 +20,12 @@ Working branch: `implementation-start`. Original archive preserved in the import
 | T11 professor demo (M2) | complete | `make demo`: 9/9 rows in 61.2 seconds, slowest 32.1 seconds; 325 tests passed, 1 skipped; `docs/DEMO_GUIDE.md` |
 | T12 LLM client | implemented locally (mock/cache/unavailable only; no live provider run) | `docs/T12_LLM.md`; `tests/test_llm_client.py`, `tests/test_llm_isolation.py` |
 | T13 interpretation generation | implemented locally with authored mock fixtures only; no live model run; computed readings not implemented | `docs/T13_INTERPRET.md`; `tests/test_interpret.py`; `results/auto_vs_handwritten.md` (10/10 same, mock fixtures) |
-| T14–T22 | planned | corrections in the import review apply before implementing affected cards |
+| T14 repetition/stability | implemented locally with mock fixtures; no live stability measurement; monotonicity premise documented | `docs/T14_STABILITY.md`; `tests/test_stability.py` |
+| T15–T22 | planned | corrections in the import review apply before implementing affected cards |
 
 Hosted CI is green on Python3.10 and Python3.12 for T00/T01. First hosted run exposed a Python3.10 dependency mismatch, fixed in d43a092. Safety commit c0884a5 also passed hosted CI on both Python versions: https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45022723368 . Docker, ESBMC, Vitis and live provider execution have not been repeated on this macOS host. Imported Linux logs remain labeled as imported.
 
-Next implementation card: T14 repetition/stability (T12/T13 done with mock/fixtures; live providers unverified). M1 (bounded handwritten checker) and M2 (offline professor demo) are complete. Automatic generation, benchmark evaluation and HLS QoR measurement remain planned.
+Next implementation card: T15 benchmark ingestion (T12–T14 done with mock/fixtures; live providers unverified). M1 (bounded handwritten checker) and M2 (offline professor demo) are complete. Automatic generation, benchmark evaluation and HLS QoR measurement remain planned.
 
 T02 commit87b3909 passed hosted CI on Python3.10/3.12 while T03 work continued: https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45027090279 .
 

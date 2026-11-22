@@ -132,15 +132,19 @@ class LLMClient:
         self.temperature, self.seed = temperature, seed
         self.log_path = log_path
 
+    def _seed(self, offset: int) -> int | None:
+        """Per-run seed: base seed plus run index (a request parameter, not a guarantee)."""
+        return None if self.seed is None else self.seed + offset
+
     # --- cache -------------------------------------------------------------
     def request_key(self, messages: Sequence[Message], schema_hash: str, run_index: int,
-                    label: str) -> str:
+                    label: str, seed_offset: int = 0) -> str:
         return sha256(_canonical({
             "cache_format": CACHE_FORMAT, "provider": self.provider.name,
             "family": self.provider.family, "model_id": self.model_id,
             "messages": [[m.role, m.content] for m in messages], "schema": schema_hash,
-            "temperature": self.temperature, "seed": self.seed, "run_index": run_index,
-            "label": label}).encode()).hexdigest()
+            "temperature": self.temperature, "seed": self._seed(seed_offset),
+            "run_index": run_index, "label": label}).encode()).hexdigest()
 
     def _cache_path(self, key: str) -> Path | None:
         return self.cache_dir / f"{key}.json" if self.cache_dir else None
@@ -172,15 +176,15 @@ class LLMClient:
         os.replace(tmp, path)
 
     def _call(self, messages: Sequence[Message], schema: Mapping[str, Any], schema_hash: str,
-              run_index: int, label: str) -> tuple[str, str, str]:
-        key = self.request_key(messages, schema_hash, run_index, label)
+              run_index: int, label: str, seed_offset: int = 0) -> tuple[str, str, str]:
+        key = self.request_key(messages, schema_hash, run_index, label, seed_offset)
         cached = self._read_cache(key)
         if cached is not None:
             return key, cached["raw"], "cache:" + ("live" if cached.get("is_live") else "mock")
         if self.offline:
             raise CacheMiss(f"offline cache miss for request {key[:12]}")
         raw = self.provider.complete(messages, schema, self.model_id, self.temperature,
-                                     self.seed, label)
+                                     self._seed(seed_offset), label)
         if not isinstance(raw, str):
             raise ProviderError("provider returned a non-text response")
         self._write_cache(key, raw)
@@ -196,7 +200,8 @@ class LLMClient:
         status, parsed, detail = "failed", None, "no attempt made"
         for _ in range(self.max_retries + 1):
             try:
-                key, raw, origin = self._call(messages, schema, schema_hash, run_index, template.name)
+                key, raw, origin = self._call(messages, schema, schema_hash, run_index,
+                                              template.name, seed_offset=run_index)
             except ProviderUnavailable as exc:
                 status, detail = "unavailable", str(exc)
                 break
@@ -241,7 +246,7 @@ class LLMClient:
         """Run-manifest record. Contains no credentials or environment values."""
         return {"status": status, "provider": self.provider.name, "family": self.provider.family,
                 "model_id": self.model_id, "provider_is_live": bool(self.provider.is_live),
-                "temperature": self.temperature, "seed": self.seed,
+                "temperature": self.temperature, "seed": self._seed(run_index),
                 "seed_note": "recorded request parameter; provider determinism is not assumed",
                 "run_index": run_index, "max_retries": self.max_retries, "offline": self.offline,
                 "prompt": {"name": template.name, "version": template.version,
