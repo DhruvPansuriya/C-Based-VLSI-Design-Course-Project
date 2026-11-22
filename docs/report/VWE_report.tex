@@ -34,23 +34,29 @@
 \thispagestyle{empty}
 \vspace*{\fill}
 \begin{center}
-{\Huge\bfseries Verdicts with Evidence (VWE)}\\[10pt]
-{\Large Checking whether an AI-made change to a C function really does what was asked}\\[10pt]
-{\normalsize Project report \quad$\cdot$\quad C-Based VLSI Design (CS5291)}\\[10pt]
-\textbf{Submitted by}\\[3pt]
-\begin{tabular}{@{}c@{}}
+{\large\scshape\color{ink} Indian Institute of Technology Guwahati}\\[2pt]
+{\small\color{black!70} Course Project \quad$\cdot$\quad C-Based VLSI Design (CS5291)}\\[14pt]
+{\color{ink}\rule{\linewidth}{1.4pt}}\\[-6pt]
+{\color{acc}\rule{\linewidth}{0.5pt}}\\[12pt]
+{\fontsize{30}{36}\selectfont\bfseries\color{ink} Verdicts with Evidence (VWE)}\\[10pt]
+{\Large\itshape\color{acc} Checking whether an AI-made change to a C function\\[2pt] really does what was asked}\\[10pt]
+{\color{acc}\rule{\linewidth}{0.5pt}}\\[-6pt]
+{\color{ink}\rule{\linewidth}{1.4pt}}\\[16pt]
+\begin{minipage}[t]{0.48\linewidth}\centering
+{\small\scshape\color{acc} Submitted by}\\[4pt]
 Dhruvkumar R Pansuriya (230101071)\\
 Aryan Kaushik (230101018)\\
 Lasya Madhu Sundar (230101058)
-\end{tabular}\\[8pt]
-\begin{tabular}{@{}c@{}}
-\textbf{Instructor}\\[2pt]
-Dr.\ Chandan Karfa
-\end{tabular}\\[8pt]
-{\large Indian Institute of Technology Guwahati}\\[6pt]
-{\small 23 November 2026}\\[4pt]
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\linewidth}\centering
+{\small\scshape\color{acc} Instructor}\\[4pt]
+Dr.\ Chandan Karfa\\[10pt]
+{\small\scshape\color{acc} Date}\\[4pt]
+23 November 2026
+\end{minipage}\\[16pt]
+{\color{black!30}\rule{0.6\linewidth}{0.4pt}}\\[6pt]
 {\small Code, tests and results:
-\url{https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project}
+\href{https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/tree/implementation-start}{\nolinkurl{https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project}}\\
 (branch \texttt{implementation-start})}
 \end{center}
 \vspace{2pt}
@@ -507,15 +513,16 @@ and proofs of the theorems in our design document.\\\bottomrule
 
 \section{How we tested it}
 \begin{center}
-\begin{tikzpicture}[node distance=4mm and 6mm]
-\node[box,text width=26mm] (src) {public Chrysalis-HLS\\bugs (fixed versions)};
-\node[box,right=of src,text width=24mm] (ad) {make tasks: apply bug,\\shrink sizes to 4,\\write request};
-\node[box,right=of ad,text width=24mm] (pool) {candidates:\\correct code, old code,\\small mutations};
-\node[box,right=of pool,text width=26mm] (lab) {labels: proof against\\correct code and\\random testing};
-\node[box,below=7mm of ad,text width=24mm] (sys) {VWE and three\\simpler checkers};
-\node[box,right=of sys,text width=24mm] (met) {results: precision,\\coverage, per-task\\comparison, errors};
+\begin{tikzpicture}[node distance=9mm and 7mm,
+  tb/.style={box,text width=30mm,minimum height=15mm}]
+\node[tb] (src) {public Chrysalis-HLS\\bugs (fixed versions)};
+\node[tb,right=of src] (ad) {make tasks: apply bug,\\shrink sizes to 4,\\write request};
+\node[tb,right=of ad] (pool) {candidates: correct\\code, old code,\\small mutations};
+\node[tb,right=of pool] (lab) {labels: proof against\\correct code and\\random testing};
+\node[tb,below=of pool] (sys) {VWE and three\\simpler checkers\\(labels hidden)};
+\node[tb,below=of lab,fill=softw,draw=warn] (met) {results: precision,\\coverage, per-task\\comparison, errors};
 \draw[arr] (src)--(ad); \draw[arr] (ad)--(pool); \draw[arr] (pool)--(lab);
-\draw[arr] (pool.south) |- (sys.east); \draw[arr] (sys)--(met); \draw[arr] (lab.south) |- (met.east);
+\draw[arr] (pool)--(sys); \draw[arr] (sys)--(met); \draw[arr] (lab)--node[lab,right]{joined at end}(met);
 \end{tikzpicture}
 \end{center}
 We made the labels separately and only matched them with VWE's answers at the end. A candidate is
@@ -777,6 +784,7 @@ coverage & the share of candidates that get ACCEPT or REJECT instead of UNDECIDE
 \end{tabularx}
 
 \section{How to reproduce}
+\noindent Code, tests and results: \href{https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/tree/implementation-start}{\nolinkurl{https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project}} (branch \texttt{implementation-start}).
 \begin{lstlisting}[language=bash]
 python3 -m venv .venv && .venv/bin/python -m pip install -e .
 make test            # 434 passed, 1 skipped (ESBMC only runs on Linux)
