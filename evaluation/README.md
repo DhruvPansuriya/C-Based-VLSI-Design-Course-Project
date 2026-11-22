@@ -21,7 +21,7 @@ Everything we measured is here. Nothing in this folder needs to be re-run to rea
 
 ## How to run each one again
 
-From the `approach-2-vwe` folder, with `.venv` active:
+From the VWE folder (the top of the `approach-2-vwe` branch, or `approach-2-vwe/` on `main`), with `.venv` active:
 
 ```sh
 make golden                                    # golden examples
