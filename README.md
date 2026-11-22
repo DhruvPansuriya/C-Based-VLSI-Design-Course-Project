@@ -53,7 +53,7 @@ it returns **ACCEPT / REJECT / UNDECIDED** with an evidence class (E0 computed, 
 | JSON Schemas (interpretation, interpretation set, task, verdict report) | `schemas/`, `vwe/schemas.py` | implemented, tested |
 | Golden harnesses for draft Examples 1, 2, 4 (10 candidates) | `spikes/examples/`, `scripts/run_golden_examples.py` | 10/10 verdicts match the draft (SAT and Z3 agree) |
 | Tool-behaviour spikes T01–T06 (path cuts, missing bodies, abort, buffer sizing, nondeterminism, build views) | `spikes/tool_behaviour/` | logs in `results/tool_behaviour/` |
-| Native witness replay with ASan/UBSan | `spikes/replay/` | demonstrated |
+| Native pre-pass and witness replay with ASan/UBSan | `vwe/replay.py`, [T09 guide](docs/T09_NATIVE.md) | implemented; fixed-input solver rechecks and executable contract checks |
 
 ## Original Linux prototype commands
 

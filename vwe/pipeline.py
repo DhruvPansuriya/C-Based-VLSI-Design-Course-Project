@@ -18,6 +18,7 @@ from .harness.profile import plain
 from .proof_jobs import JobResult, run_job
 from .regions import compute_regions
 from .report import VerdictReport, write_json
+from .replay import NativeSession, bind_inputs
 from .tasks import TaskError, load_pipeline_view
 from .tools import cbmc, esbmc
 from .tools.frontend import execute
@@ -91,6 +92,10 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
     witness_names: dict[str, str] = {}
     reference_guard: str | None = None
     change_brackets: dict[str, str] = {}
+    native_session: NativeSession | None = None
+    replay_results: list[dict[str, str]] = []
+    samples_checked = 0
+    acceptance_check = "not applicable"
 
     def record(label: str, result: JobResult) -> Obligation:
         ob = result.obligation
@@ -108,11 +113,16 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
         evaluated = {r.id: r.state.value for r in frozen.results} if frozen else {}
         shape = plain(task.caller_domain)
         digest = frozen.sha256 if frozen else sha256(canonical([])).hexdigest()
+        reported_witness = _witness(verdict.witness, witness_names)
+        if reported_witness:
+            reported_witness["replayed_natively"] = bool(replay_results) and all(
+                r["status"] == "confirmed" for r in replay_results)
+            reported_witness["replay_results"] = replay_results
         report = VerdictReport(out, {
             "task_id": task.task_id, "candidate_id": candidate_id, "decision": verdict.decision,
             "evidence_class": verdict.evidence_class, "claim_target": verdict.claim_target,
             "reason": verdict.reason, "conditional": _conditional(verdict),
-            "witness": _witness(verdict.witness, witness_names), "interpretation_set_sha256": digest,
+            "witness": reported_witness, "interpretation_set_sha256": digest,
             "interpretations": [{"id": i["id"], "nl_rendering": i.get("nl_rendering", ""),
                                  "validation": evaluated.get(i["id"], "not checked"),
                                  "outcome": class_status.get(i["id"], "not checked")}
@@ -121,7 +131,11 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
             "scope": {"K": cfg.bounds.K, "shape_min": shape, "shape_max": shape,
                       "bounded_only": True, "profiles": [shape], "reference_safe_guard": reference_guard,
                       "change_brackets": change_brackets,
-                      "prepass": "not implemented", "native_replay": "not implemented",
+                      "prepass": {"samples": samples_checked, "seed": cfg.native.seed,
+                                  "requested_samples": cfg.native.prepass_samples,
+                                  "seconds_budget": cfg.native.prepass_seconds,
+                                  "stopped": native_session.prepass_stopped if native_session else "not run"},
+                      "native_replay": replay_results, "native_acceptance": acceptance_check,
                       "uninitialized_model": "CBMC experimental local checks"},
             "tools": tool_versions, "timing": {"wall_seconds": monotonic() - started},
         })
@@ -142,6 +156,28 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
         report.write()
         write_json(root / "latest.json", report.data)
         return report
+
+    def session(generator: Generator) -> NativeSession:
+        nonlocal native_session
+        if native_session is None:
+            native_session = NativeSession(generator, out / "native", cfg.native)
+        return native_session
+
+    def confirm_rejection(verdict: Verdict, generator: Generator,
+                          checks: list[tuple[HarnessBundle, Obligation]]) -> Verdict:
+        for index, (job, obligation) in enumerate(checks):
+            if obligation.witness is None:
+                return _unknown("solver counterexample has no input trace")
+            fixed = bind_inputs(job, obligation.witness, out / "fixed" / str(index))
+            verified = run(fixed, "counterexample with fixed inputs " + str(index))
+            if verified.outcome is not Outcome.VIOLATED:
+                return _unknown("counterexample did not reproduce with its inputs fixed", verdict.witness)
+            result = session(generator).confirm(verdict.evidence_class, obligation.witness,
+                                                f"witness-{index}")
+            replay_results.append({"status": result.status, "reason": result.reason})
+            if result.status not in {"confirmed", "p0_undefined"}:
+                return _unknown("native replay " + result.status + ": " + result.reason, verdict.witness)
+        return verdict
 
     if not cbmc.cbmc_available():
         return finish(_unknown("CBMC is unavailable"))
@@ -164,9 +200,24 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
         if reference_guard is None:
             return finish(_unknown("no certified safe and deterministic reference guard"))
         gen = Generator(p0, p1, task.caller_domain, config=cfg, reference_guard=reference_guard)
-        e0 = run(gen.gen_core(out / "e0", (), part="e0"), "candidate safety on reference guard")
+        e0_job = gen.gen_core(out / "e0", (), part="e0")
+        eligible = frozen.fully_validated and all(
+            canonical(i["shape"]) == canonical(task.caller_domain) for i in frozen.members
+        )
+        hint = None
+        if cfg.native.prepass_samples:
+            hint, samples_checked = session(gen).prepass(
+                frozen.members if eligible else (), cfg.native.prepass_samples, cfg.native.seed)
+        e0 = None
+        if hint and hint.kind == "e0":
+            candidate = run(bind_inputs(e0_job, hint.inputs, out / "prepass_e0"), "pre-pass safety hint")
+            if candidate.outcome is Outcome.VIOLATED:
+                e0 = candidate
+        if e0 is None:
+            e0 = run(e0_job, "candidate safety on reference guard")
         if e0.outcome is Outcome.VIOLATED:
-            return finish(decide(Evidence(e0, Obligation(Outcome.INCONCLUSIVE), False)))
+            verdict = decide(Evidence(e0, Obligation(Outcome.INCONCLUSIVE), False))
+            return finish(confirm_rejection(verdict, gen, [(e0_job, e0)]))
         if e0.outcome is Outcome.INCONCLUSIVE:
             return finish(_unknown(e0.note))
         if not frozen.fully_validated:
@@ -183,8 +234,21 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
                                *(f"({i['reach']})" for i in members if i["reach"] != "unknown")]),
         )
         if p1.views_differ:
-            views = run(gen.gen_views_equiv(out / "views"), "build-view consistency")
+            view_job = gen.gen_views_equiv(out / "views")
+            views = run(view_job, "build-view consistency")
             if views.outcome is Outcome.VIOLATED:
+                if views.witness is None:
+                    return finish(_unknown("build-view counterexample has no input trace"))
+                fixed = bind_inputs(view_job, views.witness, out / "fixed_views")
+                check = run(fixed, "build-view counterexample with fixed inputs")
+                if check.outcome is not Outcome.VIOLATED:
+                    return finish(_unknown("build-view counterexample did not reproduce", views.witness))
+                view_session = NativeSession(gen, out / "native_views", cfg.native, build_views=True)
+                replay = view_session.confirm("views", views.witness, "witness")
+                replay_results.append({"status": replay.status, "reason": replay.reason})
+                if replay.status != "confirmed":
+                    return finish(_unknown("native replay " + replay.status + ": " + replay.reason,
+                                           views.witness))
                 return finish(Verdict("REJECT", "E0", views.note, views.witness, "build_view_consistency"))
             if views.outcome is Outcome.INCONCLUSIVE:
                 return finish(_unknown("build-view consistency is unresolved", views.witness))
@@ -195,10 +259,16 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
                    "reference on common keep region")
         if keep.outcome is not Outcome.PROVED:
             return finish(_unknown("reference behaviour on the common keep region is unresolved"))
-        e1 = run(e1_job, "preservation or Ext outside scope union")
+        e1 = None
+        if hint and hint.kind == "e1":
+            candidate = run(bind_inputs(e1_job, hint.inputs, out / "prepass_e1"), "pre-pass preservation hint")
+            if candidate.outcome is Outcome.VIOLATED:
+                e1 = candidate
+        if e1 is None:
+            e1 = run(e1_job, "preservation or Ext outside scope union")
         facts["preservation_or_ext_outside_B_max"] = e1.outcome.value
         if e1.outcome is Outcome.VIOLATED:
-            return finish(decide(Evidence(e0, e1, True)))
+            return finish(confirm_rejection(decide(Evidence(e0, e1, True)), gen, [(e1_job, e1)]))
         if e1.outcome is Outcome.INCONCLUSIVE:
             return finish(_unknown(e1.note))
 
@@ -210,6 +280,7 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
 
         assessed: dict[str, Obligation] = {}
         confirmations: list[HarnessBundle] = []
+        refutations: list[tuple[HarnessBundle, Obligation]] = []
         for index, group in enumerate(frozen.classes):
             interp = by_id[group[0]]
             base = out / "classes" / str(index)
@@ -229,6 +300,8 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
                 assessed[group[0]] = run(check, "interpretation " + group[0])
                 if assessed[group[0]].outcome is Outcome.PROVED:
                     confirmations.append(check)
+                elif assessed[group[0]].outcome is Outcome.VIOLATED:
+                    refutations.append((check, assessed[group[0]]))
             else:
                 assessed[group[0]] = vacuity
             for name in group:
@@ -239,7 +312,13 @@ def verify(task_dir: str | Path, candidate_id: str, cfg: Config | None = None,
             elif outcome == Outcome.VIOLATED.value:
                 facts["interpretations_violated"].append(name)
         verdict = decide(Evidence(e0, e1, True, assessed))
+        if verdict.decision == "REJECT":
+            verdict = confirm_rejection(verdict, gen, refutations)
         if verdict.decision == "ACCEPT":
+            native_check = session(gen).check_acceptance(members)
+            acceptance_check = native_check.status + ": " + native_check.reason
+            if native_check.status == "discrepancy":
+                return finish(_unknown(native_check.reason))
             for bundle in confirmations:
                 check = esbmc.confirm(bundle.files, unwind=bundle.unwind,
                                       cwd=bundle.folder, timeout_s=cfg.timeouts.esbmc_s)
