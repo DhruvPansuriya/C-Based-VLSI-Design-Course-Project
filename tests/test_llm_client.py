@@ -188,10 +188,12 @@ def test_openai_layout_and_malformed_reply(context, tmp_path, monkeypatch):
 
 
 # --- configuration -----------------------------------------------------------------
-def test_shipped_config_pins_no_model_ids():
+def test_shipped_config_pins_only_verified_model_ids():
     settings = load_llm_settings()
     assert settings.families["mock"].adapter == "mock"
-    assert settings.families["anthropic"].model_id == "" and settings.families["openai"].model_id == ""
+    assert settings.families["anthropic"].model_id == ""  # not verified on any account
+    assert settings.families["openai"].model_id == "gpt-4.1-mini-2025-04-14"  # GET /v1/models, 2026-11-23
+    assert settings.families["openai"].api_key_file.name == "openai.key"
     assert settings.max_retries == 2
 
 
@@ -210,3 +212,47 @@ def test_bad_config_rejected(tmp_path):
         load_llm_settings(bad)
     with pytest.raises(ConfigError):
         build_client(load_llm_settings(), "nope")
+
+
+def test_key_file_is_read_at_call_time_and_never_stored(context, tmp_path, monkeypatch):
+    monkeypatch.delenv("UNSET_KEY_ENV_FOR_TEST", raising=False)
+    key_file = tmp_path / "k.key"
+    key_file.write_text("sk-file-secret-999\n")
+    seen = {}
+    def transport(url, headers, body, timeout):
+        seen.update(headers)
+        return json.dumps({"choices": [{"message": {"content": GOOD}}]}).encode()
+    provider = OpenAIProvider("openai", "pinned", "UNSET_KEY_ENV_FOR_TEST", transport=transport,
+                              api_key_file=key_file)
+    c = LLMClient(provider, "pinned", cache_dir=tmp_path / "cache", log_path=tmp_path / "log.jsonl")
+    assert c.generate(context, TEMPLATE).status == "ok"
+    assert seen["Authorization"] == "Bearer sk-file-secret-999"
+    stored = "".join(p.read_text() for p in (tmp_path / "cache").glob("*.json")) + (tmp_path / "log.jsonl").read_text()
+    assert "sk-file-secret" not in stored
+
+
+def test_config_key_file_resolves_relative_to_project(tmp_path):
+    (tmp_path / "config").mkdir()
+    cfg = tmp_path / "config" / "llm.toml"
+    cfg.write_text('[families.o]\nadapter = "openai"\nmodel_id = "m"\napi_key_file = "config/secrets/x.key"\n')
+    assert load_llm_settings(cfg).families["o"].api_key_file == (tmp_path / "config/secrets/x.key").resolve()
+
+
+def test_tls_context_verifies_certificates():
+    import ssl
+    from vwe.llm.providers import tls_context
+    ctx = tls_context()
+    assert ctx.verify_mode == ssl.CERT_REQUIRED and ctx.check_hostname
+    assert ctx.cert_store_stats()["x509_ca"] > 0
+
+
+def test_http_error_reports_vendor_code_but_not_message():
+    import io, urllib.error
+    from vwe.llm.providers import _error_code
+    body = json.dumps({"error": {"type": "insufficient_quota", "code": "credit_balance_exhausted",
+                                 "message": "echo of SECRET-REQUEST-TEXT"}}).encode()
+    exc = urllib.error.HTTPError("u", 429, "x", {}, io.BytesIO(body))
+    code = _error_code(exc)
+    assert "insufficient_quota" in code and "credit_balance_exhausted" in code
+    assert "SECRET" not in code
+    assert _error_code(urllib.error.HTTPError("u", 500, "x", {}, io.BytesIO(b"not json"))) == ""
