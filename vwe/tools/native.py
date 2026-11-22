@@ -69,8 +69,11 @@ def _execute_driver(command: Sequence[str], cwd: Path, timeout: int) -> CommandR
     shell = "ulimit -c 0 && ulimit -t 5 && ulimit -f 2048 && ulimit -n 64 && exec " + shlex.join(command)
     argv = [executable, "-c", shell]
     begin = time.monotonic()
-    env = {"PATH": "/usr/bin:/bin", "LC_ALL": "C", "ASAN_OPTIONS": "detect_leaks=0",
-           "UBSAN_OPTIONS": "halt_on_error=1", "TMPDIR": str(cwd)}
+    # Symbolization can launch slow helper processes under the isolated
+    # runtime. Replay needs the sanitizer diagnostic, not symbolic stack names.
+    env = {"PATH": "/usr/bin:/bin", "LC_ALL": "C",
+           "ASAN_OPTIONS": "detect_leaks=0:symbolize=0",
+           "UBSAN_OPTIONS": "halt_on_error=1:symbolize=0", "TMPDIR": str(cwd)}
     try:
         with subprocess.Popen(argv, cwd=cwd, env=env, stdin=subprocess.DEVNULL,
                               stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
