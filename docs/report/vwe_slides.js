@@ -149,8 +149,8 @@ const sets = [
   ["Chrysalis-HLS (public bugs)", ["20 tasks, 97 candidates: correct code, unchanged buggy code, small mutations",
     "Labels: bounded proof against the correct code + 10,000 sanitizer runs",
     "Requests from templates; sizes shrunk to 4"]],
-  ["Approach-1 (other team)", ["181 candidates: their rewrites, one-bit faults, 80 subtle faults",
-    "Their equivalence labels",
+  ["HLSCheck (Approach-1)", ["181 candidates from our first approach: rewrites, one-bit faults, 80 subtle faults",
+    "HLSCheck's equivalence labels",
     "One computed \"keep behaviour\" reading, no LLM; sizes up to 32"]],
   ["Baselines", ["B1: tests only (no crash = accept)", "B3: our pipeline, strict reading only",
     "B4: regression check only", "B2 (LLM judge) not built: it would show P1 to a model"]],
@@ -174,7 +174,7 @@ s.addTable([
   ["Golden examples (ours)", "20", "20 of 20 match"],
   ["Demo", "9", "9 of 9, 65 s total"],
   ["Chrysalis-HLS bugs", "89", "1 decided, 0 wrong"],
-  ["Approach-1 cases", "181", "125 decided, 0 wrong"],
+  ["HLSCheck cases", "181", "125 decided, 0 wrong"],
   ["Live LLM readings", "10", "3 same, 7 undecided, 0 opposite"],
 ], { x: 0.45, y: 1.1, w: 4.7, colW: [1.9, 0.7, 2.1], fontSize: 11, color: C.text1,
   border: { type: "solid", color: HEX.line, pt: 0.75 }, rowH: 0.42 });
@@ -186,16 +186,16 @@ box(s, C, 0.45, 4.15, 9.1, 0.8, "No wrong decision anywhere. The cost is coverag
 
 // 9. Approach-1
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Evaluation" });
-s.addText("VWE on Approach-1's 181 cases", { placeholder: "title" });
+s.addText("VWE on HLSCheck's 181 cases (Approach-1)", { placeholder: "title" });
 stat(s, C, 0.45, 1.05, 1.5, "181", "candidates");
 stat(s, C, 2.0, 1.05, 1.5, "125", "decided (69%)");
-stat(s, C, 3.55, 1.05, 1.5, "0", "disagree with\ntheir labels", HEX.warn);
+stat(s, C, 3.55, 1.05, 1.5, "0", "disagree with\nHLSCheck labels", HEX.warn);
 stackbars(s, C, 5.3, 1.45, 4.25, [["equivalent", [48, 0, 23]], ["not equivalent", [0, 73, 31]], ["undefined (4 / 2)", [0, 4, 2]]],
-  [["ACCEPT", HEX.acc], ["REJECT", HEX.warn], ["UNDECIDED", HEX.line, HEX.ink]], { title: "VWE answer, by their label", rowH: 0.62 });
+  [["ACCEPT", HEX.acc], ["REJECT", HEX.warn], ["UNDECIDED", HEX.line, HEX.ink]], { title: "VWE answer, by HLSCheck label", rowH: 0.62 });
 bullets(s, C, 0.45, 2.45, 4.7, 2.6, [
-  "Their task: is an LLM-optimised HLS kernel equal to the original? We ran each as \"optimise without changing behaviour\", with no LLM.",
+  "HLSCheck asks: is an LLM-optimised HLS kernel equal to the original? VWE ran each as \"optimise without changing behaviour\", with no LLM.",
   "Evidence: E0 = 4, E1 = 73, E2 = 48. Median 17.7 s when decided.",
-  "All 5 faults that escaped their tests were caught (REJECT E1).",
+  "All 5 faults that escaped the 264 test inputs were caught (REJECT E1).",
   "One CBMC false alarm (gaussian5) was stopped by the real replay.",
 ], 11.5);
 box(s, C, 5.3, 4.1, 4.25, 0.85, "Undecided: 48 no safe reference guard, 5 solver timeouts, 3 replay mismatches.",
