@@ -1,0 +1,23 @@
+# LLM client policy. Model ids are intentionally EMPTY: pin an id only after
+# checking the provider account (plan/OPEN_QUESTIONS.md Q7). A family with an
+# empty model id or unset key reports "unavailable"; it never falls back to mock.
+
+[client]
+cache_dir = "~/.cache/vwe/llm"
+max_retries = 2
+temperature = 0.0
+timeout_s = 120
+
+[families.mock]
+adapter = "mock"
+model_id = "mock-fixture-1"
+
+[families.anthropic]
+adapter = "anthropic"
+model_id = ""
+api_key_env = "ANTHROPIC_API_KEY"
+
+[families.openai]
+adapter = "openai"
+model_id = ""
+api_key_env = "OPENAI_API_KEY"

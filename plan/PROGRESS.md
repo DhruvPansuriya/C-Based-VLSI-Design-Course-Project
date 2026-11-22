@@ -18,11 +18,12 @@ Working branch: `implementation-start`. Original archive preserved in the import
 | T09 native pre-pass and witness replay | complete and pushed; hosted CI green at `12fc14c` | Fixed-input SAT/Z3 rechecks, ASan/UBSan replay, executable acceptance observers and explicit discrepancy handling; `docs/T09_NATIVE.md` |
 | T10 draft golden suite (M1) | complete and pushed (`d7ebb71`) | 20/20 public-pipeline golden candidates; 323 passed, 1 skipped; 77 focused fixture and soundness checks; `docs/T10_GOLDEN.md` |
 | T11 professor demo (M2) | complete | `make demo`: 9/9 rows in 61.2 seconds, slowest 32.1 seconds; 325 tests passed, 1 skipped; `docs/DEMO_GUIDE.md` |
-| T12–T22 | planned | corrections in the import review apply before implementing affected cards |
+| T12 LLM client | implemented locally (mock/cache/unavailable only; no live provider run) | `docs/T12_LLM.md`; `tests/test_llm_client.py`, `tests/test_llm_isolation.py` |
+| T13–T22 | planned | corrections in the import review apply before implementing affected cards |
 
 Hosted CI is green on Python3.10 and Python3.12 for T00/T01. First hosted run exposed a Python3.10 dependency mismatch, fixed in d43a092. Safety commit c0884a5 also passed hosted CI on both Python versions: https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45022723368 . Docker, ESBMC, Vitis and live provider execution have not been repeated on this macOS host. Imported Linux logs remain labeled as imported.
 
-Next implementation card: T12 provider-neutral LLM client. M1 (bounded handwritten checker) and M2 (offline professor demo) are complete. Automatic generation, benchmark evaluation and HLS QoR measurement remain planned.
+Next implementation card: T13 interpretation generation (T12 client done; live providers unverified). M1 (bounded handwritten checker) and M2 (offline professor demo) are complete. Automatic generation, benchmark evaluation and HLS QoR measurement remain planned.
 
 T02 commit87b3909 passed hosted CI on Python3.10/3.12 while T03 work continued: https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45027090279 .
 
