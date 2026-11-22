@@ -20,6 +20,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', type=Path, default=ROOT / 'runs/golden')
     parser.add_argument('--workers', type=int, choices=range(1, 5), default=3)
+    parser.add_argument('--task', help='Run only one task from the golden manifest')
     args = parser.parse_args()
     if not cbmc.cbmc_available():
         print('cbmc not found on PATH; see tools/install_tools.sh', file=sys.stderr)
@@ -27,6 +28,10 @@ def main() -> int:
     expected = json.loads((ROOT / 'tests/golden/expected.json').read_text())
     cases = [(task, variant, want) for task, variants in expected.items()
              if not task.startswith('_') for variant, want in variants.items()]
+    if args.task:
+        cases = [case for case in cases if case[0] == args.task]
+        if not cases:
+            parser.error('unknown golden task: ' + args.task)
     args.out.mkdir(parents=True, exist_ok=True)
 
     def check(case: tuple[str, str, list[str]]) -> dict:
@@ -39,12 +44,13 @@ def main() -> int:
                 'match': got == want, 'reason': report.data['reason'],
                 'witness': report.data['witness'], 'report': str(report.folder / 'report.json')}
 
+    rows = []
     with ThreadPoolExecutor(max_workers=args.workers) as workers:
-        rows = list(workers.map(check, cases))
-    for row in rows:
-        print(f"{row['example']:24s} v{row['variant']}: "
-              f"expected {' '.join(row['expected']):12s} got {' '.join(row['got']):12s} "
-              f"{'OK' if row['match'] else 'MISMATCH'}  {row['reason']}", flush=True)
+        for row in workers.map(check, cases):
+            rows.append(row)
+            print(f"{row['example']:24s} v{row['variant']}: "
+                  f"expected {' '.join(row['expected']):12s} got {' '.join(row['got']):12s} "
+                  f"{'OK' if row['match'] else 'MISMATCH'}  {row['reason']}", flush=True)
     (args.out / 'golden_results.json').write_text(json.dumps(
         {'cbmc_version': cbmc.version(), 'pipeline': 'vwe.pipeline.verify', 'rows': rows},
         indent=2) + '\n')

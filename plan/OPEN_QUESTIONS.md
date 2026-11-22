@@ -43,3 +43,23 @@ Details and scenarios: `docs/CLAUDE_IMPORT_REVIEW.md`.
 - Q21 resolved for the initial implementation: finite quantifiers lower to checked loops; no unverified solver-quantifier feature is required. Range/complexity limits are explicit UNKNOWN capabilities.
 - Q22: signed64 widening is not universal UB-freedom. V-G must check overflow/division/index/old-read guards; unsigned64/full mathematical integers and __int128 remain unsupported observer profiles until qualified.
 - Q23 resolved locally: generated observers agree with an independent evaluator on525 cases; a real CBMC test detects an eager exists-body OOB after an earlier true witness. These are regression/qualification evidence, not formal correctness of the translation.
+
+## T10 fixture qualification — 23 November 2026
+
+- CBMC 6.11.0 traces for unsigned 32-bit inputs and signed 64-bit outputs use
+  decimal C tokens such as `1454710343u` and `691556611l`. Normalize verified
+  integer-token suffixes at trace extraction; unsupported representations stay
+  unchanged and cannot silently bind a replay input. Example 5's unchanged
+  candidate now reproduces REJECT E2 after fixed-input SAT/Z3 and native checks.
+- One macOS full-suite replay timed out after printing an ASan overflow report.
+  Disabling sanitizer symbolization produced ten consecutive confirmed replays
+  in under half a second each. Timeouts remain errors even with partial ASan
+  output (`tests/test_native.py`). No golden expectation was changed to hide it.
+- Example 6 uses a last-element-first copy to expose a qualified unconditional
+  store certificate. Its declared shape is src=n+1, dst=cap; the resulting
+  P0-only exact region is n>=cap. General copy-loop inference remains outside
+  this narrow certificate.
+- Example 5 uses a signed 64-bit return carrier for unsigned 32-bit arithmetic,
+  reserving -1 as an out-of-band error code. This makes saturation/error
+  disagreement executable without conflating an error code with a wrapped
+  unsigned result. The adaptation and prederived expectations are in its README.

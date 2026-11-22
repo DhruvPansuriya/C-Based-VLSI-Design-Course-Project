@@ -30,10 +30,14 @@ def edit_manifest(folder,change):
     p=folder/'task.json';d=json.loads(p.read_text());change(d);p.write_text(json.dumps(d))
 
 
-@pytest.mark.parametrize('tid,count',[('ex1_saturate',5),('ex2_argmax',3),('ex4_sum',2),('ex3_avg_half_away',3)])
-def test_tasks_validate_and_snapshots_are_complete(tid,count):
+@pytest.mark.parametrize('tid,count,readings',[
+    ('ex1_saturate',5,2),('ex2_argmax',3,2),('ex3_avg_half_away',3,2),
+    ('ex4_sum',2,3),('ex5_add32_ambiguous',3,3),('ex6_copy_overflow',2,1),
+    ('ex7_build_views',2,1),
+])
+def test_tasks_validate_and_snapshots_are_complete(tid,count,readings):
     t=load_pipeline_view(TASKS/tid)
-    assert t.task_id==tid and len(t.candidates)==count and len(t.interpretations)>=2
+    assert t.task_id==tid and len(t.candidates)==count and len(t.interpretations)==readings
     assert len({r['provenance']['source'] for r in t.interpretations})==1
     assert t.p0.sha256==sha256((TASKS/tid/'p0.c').read_bytes()).hexdigest()
     assert 'p0_' not in t.p0.text and 'p1_' not in t.p0.text

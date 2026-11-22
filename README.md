@@ -19,7 +19,7 @@ T02 adds structural admission and isolated simulation/synthesis analysis views. 
 
 T03 adds the restricted contract grammar, type checker and C observer emitter. Run `make contracts` to emit the stored examples without claiming validation; see [contract details](docs/T03_CONTRACTS.md).
 
-T10 is in progress: `make golden` runs the public pipeline on 13 candidates from Examples 1–4, including the collapsed-scope rounding example. Its expected verdicts are documented before execution in the task README. Examples 5–7 remain to be added. The independent handwritten harness runner is retained as `scripts/run_handwritten_examples.py`.
+T10 now includes 20 candidates across draft Examples 1–7: rounding scope disagreement, ambiguous overflow handling, copy safety/preservation and simulation/synthesis divergence. `make golden` exercises the public pipeline; `--task ex5_add32_ambiguous` selects one task. Expectations are documented before execution in each new task README. `make golden` matches all 20 expectations; the full suite passes 323 tests with one skip. The independent handwritten harness runner is retained as `scripts/run_handwritten_examples.py`.
 
 Native CBMC 6.11.0 and Z3 are needed for the golden integration test; it is skipped when CBMC is absent. Linux tool installation is `bash tools/install_tools.sh`; macOS must use qualified native tools. The Docker recipe has not been run here and is not a sealed image.
 

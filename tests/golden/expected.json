@@ -59,5 +59,39 @@
       "REJECT",
       "E2"
     ]
+  },
+  "ex5_add32_ambiguous": {
+    "1": [
+      "UNDECIDED",
+      "-"
+    ],
+    "2": [
+      "UNDECIDED",
+      "-"
+    ],
+    "3": [
+      "REJECT",
+      "E2"
+    ]
+  },
+  "ex6_copy_overflow": {
+    "1": [
+      "ACCEPT",
+      "E2"
+    ],
+    "2": [
+      "REJECT",
+      "E1"
+    ]
+  },
+  "ex7_build_views": {
+    "1": [
+      "REJECT",
+      "E0"
+    ],
+    "2": [
+      "ACCEPT",
+      "E2"
+    ]
   }
 }
