@@ -49,3 +49,20 @@ The T12/T13 cards have been aligned with the reviewed no-P1 information boundary
 and the requirement that incomplete UB-region evidence remain UNKNOWN.
 
 T11 completion evidence: `runs/t11-full-validation.log` (325 passed, 1 skipped), `runs/t11-demo-validation.log` (nine rows match; 61.2 seconds total; slowest case 32.1 seconds). `runs/demo/index.html` links to nine existing reports. Demo-only profiles explicitly use K=2; authoritative task profiles are preserved.
+
+## Durable T11 handover
+
+The [committed evidence checkpoint](../results/checkpoints/2026-11-23-t11/README.md)
+preserves the existing 20-case golden run, 9-row demo, full-suite log, individual
+reports, configurations/hashes and compressed solver/native text evidence. It was
+packaged without rerunning verification. `results/golden/` remains the imported
+ten-case prototype. New conversations should read the saved evidence and the
+[methodology walkthrough](../docs/METHODOLOGY_WALKTHROUGH.md) first. The 23 cards
+are T00–T22; no remaining card is required merely to demonstrate the completed
+T00–T11 handwritten-interpretation tool. Additional claims require their matching
+automation, evaluation or synthesis work.
+
+Hosted T10/T11 CI subsequently completed successfully on Python 3.10 and 3.12.
+The [completed CI metadata](../results/ci/2026-11-23-t10-t11.json) is stored
+separately from the checkpoint's original in-progress CI observation. Evidence
+packaging/integrity checks pass 12 tests without invoking verification tools.
