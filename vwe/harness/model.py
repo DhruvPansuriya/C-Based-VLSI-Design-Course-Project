@@ -17,6 +17,7 @@ class HarnessBundle:
     profile_sha256: str
     reference_guard: str|None=None
     e1_decisive: bool=False
+    program_symbols: tuple[tuple[str,...],tuple[str,...]]=((),())
 
     @property
     def ready_for_decision(self) -> bool:
