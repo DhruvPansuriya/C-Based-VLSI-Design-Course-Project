@@ -278,3 +278,22 @@ def test_backoff_only_for_transient_errors(context, tmp_path, monkeypatch):
     quota.sleep = sleeps.append
     result = LLMClient(quota, "m", cache_dir=tmp_path / "b").generate(context, TEMPLATE)
     assert result.status == "failed" and "insufficient_quota" in result.detail and sleeps == [2.0, 8.0]
+
+
+def test_groq_uses_openai_layout_on_its_own_endpoint(context, tmp_path, monkeypatch):
+    from vwe.llm import GroqProvider, list_models
+    monkeypatch.setenv("TEST_KEY", "gsk-test")
+    seen = {}
+    def transport(url, headers, body, timeout, *rest):
+        seen.setdefault("urls", []).append(url)
+        if url.endswith("/models"):
+            return json.dumps({"data": [{"id": "b"}, {"id": "a"}]}).encode()
+        seen["body"] = json.loads(body)
+        return json.dumps({"choices": [{"message": {"content": GOOD}}]}).encode()
+    p = GroqProvider("groq", "pinned", "TEST_KEY", transport=transport)
+    assert LLMClient(p, "pinned", cache_dir=tmp_path).generate(context, TEMPLATE).status == "ok"
+    assert seen["urls"][0] == "https://api.groq.com/openai/v1/chat/completions"
+    assert seen["body"]["model"] == "pinned"
+    assert list_models(p, transport=transport) == ["a", "b"]
+    fam = load_llm_settings().families["groq"]
+    assert fam.adapter == "groq" and fam.model_id == "" and fam.api_key_file.name == "groq.key"
