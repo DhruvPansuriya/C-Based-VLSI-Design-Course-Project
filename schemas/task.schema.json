@@ -2,47 +2,177 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/schemas/task.schema.json",
   "title": "BenchmarkTask",
-  "description": "One evaluation task. P_ref and Phi_ref are evaluation-only and must never be read by the verdict pipeline.",
+  "description": "Task manifest. Pipeline loaders whitelist source/request/candidate/interpretation/caller-domain data; eval_only and acceptable_readings are evaluation-only.",
   "type": "object",
-  "required": ["task_id", "source", "function", "p0", "requests", "eval_only"],
+  "required": [
+    "task_id",
+    "source",
+    "function",
+    "p0",
+    "requests",
+    "eval_only",
+    "candidates",
+    "interpretations",
+    "caller_domain"
+  ],
   "additionalProperties": false,
   "properties": {
-    "task_id": {"type": "string"},
+    "task_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]+$"
+    },
     "source": {
       "type": "object",
-      "required": ["suite", "origin"],
+      "required": [
+        "suite",
+        "origin"
+      ],
       "properties": {
-        "suite": {"enum": ["CHStone", "MachSuite", "PolyBench", "Chrysalis-HLS", "IntroClass", "Codeflaws", "fresh", "fifo"]},
-        "origin": {"type": "string", "description": "URL + commit or archive hash"},
-        "license": {"type": "string"},
-        "adaptations": {"type": "array", "items": {"type": "string"}}
-      }
+        "suite": {
+          "enum": [
+            "CHStone",
+            "MachSuite",
+            "PolyBench",
+            "Chrysalis-HLS",
+            "IntroClass",
+            "Codeflaws",
+            "fresh",
+            "fifo"
+          ]
+        },
+        "origin": {
+          "type": "string",
+          "description": "URL + commit or archive hash"
+        },
+        "license": {
+          "type": "string"
+        },
+        "adaptations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
     },
-    "function": {"type": "string"},
-    "p0": {"type": "string", "description": "path to buggy C file"},
+    "function": {
+      "type": "string",
+      "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+    },
+    "p0": {
+      "type": "string",
+      "description": "path to buggy C file"
+    },
     "requests": {
-      "type": "array", "minItems": 1,
+      "type": "array",
+      "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["id", "text", "origin"],
+        "required": [
+          "id",
+          "origin"
+        ],
         "properties": {
-          "id": {"type": "string"},
-          "text": {"type": "string"},
-          "origin": {"enum": ["brief_author", "paraphrase", "student_group", "ambiguous_variant", "injection_test"]},
-          "ambiguous": {"type": "boolean"},
-          "acceptable_readings": {"type": "array", "items": {"type": "string"}}
-        }
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "origin": {
+            "enum": [
+              "brief_author",
+              "paraphrase",
+              "student_group",
+              "ambiguous_variant",
+              "injection_test"
+            ]
+          },
+          "ambiguous": {
+            "type": "boolean"
+          },
+          "acceptable_readings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "file": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "additionalProperties": false,
+        "oneOf": [
+          {
+            "required": [
+              "text"
+            ],
+            "not": {
+              "required": [
+                "file"
+              ]
+            }
+          },
+          {
+            "required": [
+              "file"
+            ],
+            "not": {
+              "required": [
+                "text"
+              ]
+            }
+          }
+        ]
       }
     },
     "eval_only": {
       "type": "object",
-      "required": ["p_ref", "phi_ref", "true_shape"],
+      "required": [
+        "p_ref",
+        "phi_ref",
+        "true_shape"
+      ],
       "properties": {
-        "p_ref": {"type": "string"},
-        "phi_ref": {"type": "string", "description": "path to reference specification harness/expression file"},
-        "true_shape": {"type": "object"},
-        "true_change_zone": {"type": "string"}
+        "p_ref": {
+          "type": "string"
+        },
+        "phi_ref": {
+          "type": "string",
+          "description": "path to reference specification harness/expression file"
+        },
+        "true_shape": {
+          "type": "object"
+        },
+        "true_change_zone": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "candidates": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": {
+        "pattern": "^[A-Za-z0-9_.-]+$"
+      },
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
       }
+    },
+    "interpretations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "caller_domain": {
+      "$ref": "interpretation.schema.json#/$defs/shape"
     }
   }
 }

@@ -13,6 +13,8 @@ make test
 make golden
 ```
 
+T01 adds three schema-validated task folders in `examples/tasks/` and `vwe.tasks.load_pipeline_view`. The immutable pipeline view excludes `eval_only`, acceptable-reading labels and all evaluation file contents; path traversal and symlinks into `eval/` are rejected. `load_full` is reserved for evaluation. The deliberately invalid n-1 reading is retained for future semantic validation.
+
 Native CBMC 6.11.0 and Z3 are needed for the golden integration test; it is skipped when CBMC is absent. Linux tool installation is `bash tools/install_tools.sh`; macOS must use qualified native tools. The Docker recipe has not been run here and is not a sealed image.
 
 ## Implementation plan (for the coding agent)
