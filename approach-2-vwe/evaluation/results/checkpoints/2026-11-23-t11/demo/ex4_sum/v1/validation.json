@@ -1,0 +1,40 @@
+{
+  "p0_sha256": "1e7c07205502537d40e2d982dab93922a8fb82b28dfe57f8b818818a5ff62ec3",
+  "interpretation_set_sha256": "395fc89e4eaed033f6f6de062446efae754e0ef2e0ed5949f845eb2164b7d0f7",
+  "checks": [
+    {
+      "id": "ex4_sum.invalid_n_minus_1",
+      "state": "invalid",
+      "check": "V-G",
+      "detail": "contract_ub: vwe_observer_2.pointer_dereference.1 dereference failure: pointer NULL in ve_arg_0[ve_t_3]",
+      "witness": {
+        "__vwe_in_scalar_1_0": "1",
+        "__vwe_in_null_0": "TRUE"
+      }
+    },
+    {
+      "id": "ex4_sum.permissive",
+      "state": "valid",
+      "check": "V-4",
+      "detail": "joint output tuple proved for every modeled input",
+      "witness": {
+        "__vwe_in_scalar_1_0": "2",
+        "__vwe_in_null_0": "TRUE",
+        "__vwe_in_buffer_0_0_0": "0",
+        "__vwe_in_buffer_0_1_0": "1"
+      }
+    },
+    {
+      "id": "ex4_sum.strict",
+      "state": "valid",
+      "check": "V-4",
+      "detail": "joint output tuple proved for every modeled input",
+      "witness": {
+        "__vwe_in_scalar_1_0": "2",
+        "__vwe_in_null_0": "TRUE",
+        "__vwe_in_buffer_0_0_0": "0",
+        "__vwe_in_buffer_0_1_0": "1"
+      }
+    }
+  ]
+}

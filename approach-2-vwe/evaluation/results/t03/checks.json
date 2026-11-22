@@ -1,0 +1,35 @@
+{
+  "checked_utc": "2026-11-22T13:57:53.477035+00:00",
+  "host": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+  "lark": "1.3.1",
+  "profile": "VE-DSL-1 signed64 LP64",
+  "checks": {
+    "make_test": "229 passed",
+    "make_golden": "10/10 matched",
+    "make_contracts": "28 emitted; V-G not run",
+    "native_semantic_cases": 525,
+    "cbmc_eager_quantifier_oob": "detected",
+    "wheel_grammar_smoke": "PASS",
+    "actionlint": "PASS"
+  },
+  "source_sha256": {
+    "vwe/contract/__init__.py": "1deb075f5812b2fa9bb8fcbce4041f2510ab327a8e898f9932017384c6992e05",
+    "vwe/contract/ast.py": "8d55ab2aa9aef46ceb4a177b2ce7686d89252cabd9b326c264b492604165f51f",
+    "vwe/contract/emit.py": "80ea5818038511a4ced362d78fc1d1c6b9f4fef606c21e78cfe1bbfc15bccb93",
+    "vwe/contract/env.py": "fd543f6f16767551e8932729eb7f519dab9baebdc432c0a5ee1143dd86c5d1e6",
+    "vwe/contract/evaluate.py": "5f12c6c0f713631c9127611e44e28f64c069c7dcb7990ac5d12241ea73ad31e7",
+    "vwe/contract/grammar.lark": "bdcad9dc334003de32cc744d5d942bb83cfcd2a00c45e25122eba6feba2234eb",
+    "vwe/contract/parser.py": "a7973732a07b621429322ef319e7d72de95733bfd592728c496eed620596db31",
+    "vwe/contract/typecheck.py": "7df51d74a380839df2510fb19ac1e0026ca143b2ec73cfdec7dfb3a11b0e1bad"
+  },
+  "limitations": [
+    "Emission is not a repair verdict.",
+    "V-G evaluator safety and V-3 old-definedness remain T07 obligations.",
+    "Unsupported widths/resources remain UNKNOWN."
+  ],
+  "sources": [
+    "https://lark-parser.readthedocs.io/en/stable/grammar.html",
+    "https://lark-parser.readthedocs.io/en/stable/visitors.html",
+    "https://lark-parser.readthedocs.io/en/stable/classes.html"
+  ]
+}

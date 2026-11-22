@@ -1,0 +1,739 @@
+{
+  "task_id": "chrysalis_gnn_builder_gather_node_neighbors_inf",
+  "request_id": "original",
+  "sha256": "20d5f288f8035cbed06a504c37a54b73bb67683fc550914b896eeb258816c905",
+  "members": [
+    {
+      "id": "chrysalis_gnn_builder_gather_node_neighbors_inf.groq_gptoss.strict.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "prompt": "strict",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {
+          "node_neighbors": "4",
+          "neightbor_table_offsets": "4",
+          "neighbor_table": "4"
+        },
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "node": [
+            -1000,
+            1000
+          ],
+          "node_in_degree": [
+            -1000,
+            1000
+          ],
+          "node_neighbors": [
+            -1000,
+            1000
+          ],
+          "neightbor_table_offsets": [
+            -1000,
+            1000
+          ],
+          "neighbor_table": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "1",
+          "behaviour": "forall(i,0,4, out_node_neighbors[i] == old_node_neighbors[i]) && forall(i,0,4, out_neightbor_table_offsets[i] == old_neightbor_table_offsets[i])"
+        }
+      ],
+      "ext": "out_ret == old_ret && forall(i,0,4, out_node_neighbors[i] == old_node_neighbors[i]) && forall(i,0,4, out_neightbor_table_offsets[i] == old_neightbor_table_offsets[i])",
+      "reach": "node_in_degree",
+      "request_type": "T2",
+      "nl_rendering": "The loop now terminates after the intended number of iterations (bounded by node_in_degree) and all output arrays remain exactly as they were before."
+    },
+    {
+      "id": "chrysalis_gnn_builder_gather_node_neighbors_inf.groq_gptoss.permissive.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "prompt": "permissive",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {
+          "node_neighbors": "4",
+          "neightbor_table_offsets": "4",
+          "neighbor_table": "4"
+        },
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "node": [
+            -1000,
+            1000
+          ],
+          "node_in_degree": [
+            -1000,
+            1000
+          ],
+          "node_neighbors": [
+            -1000,
+            1000
+          ],
+          "neightbor_table_offsets": [
+            -1000,
+            1000
+          ],
+          "neighbor_table": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "node_in_degree >= 0 && node_in_degree <= 4",
+          "behaviour": "forall(i,0,4, out_node_neighbors[i] == old_node_neighbors[i]) && forall(i,0,4, out_neightbor_table_offsets[i] == old_neightbor_table_offsets[i])"
+        }
+      ],
+      "ext": "forall(i,0,4, out_node_neighbors[i] == old_node_neighbors[i]) && forall(i,0,4, out_neightbor_table_offsets[i] == old_neightbor_table_offsets[i])",
+      "reach": "true",
+      "nl_rendering": "For inputs where node_in_degree is between 0 and 4 inclusive, the function behaves exactly as before; the loop bound is corrected to always terminate, and the observable outputs remain unchanged for all inputs.",
+      "request_type": "T4"
+    },
+    {
+      "id": "chrysalis_gnn_builder_gather_node_neighbors_inf.groq_gptoss.adversarial.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "prompt": "adversarial",
+        "run_index": 0
+      },
+      "request_type": "T3",
+      "shape": {
+        "buffers": {
+          "node_neighbors": "4",
+          "neightbor_table_offsets": "4",
+          "neighbor_table": "4"
+        },
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "node": [
+            -1000,
+            1000
+          ],
+          "node_in_degree": [
+            -1000,
+            1000
+          ],
+          "node_neighbors": [
+            -1000,
+            1000
+          ],
+          "neightbor_table_offsets": [
+            -1000,
+            1000
+          ],
+          "neighbor_table": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "node_in_degree > 0",
+          "behaviour": "forall(i,0,min(node_in_degree,4), out_node_neighbors[i] == old_node_neighbors[i]) && forall(i,0,min(node_in_degree,4), out_neightbor_table_offsets[i] == old_neightbor_table_offsets[i]) && forall(i,0,min(node_in_degree,4), out_neighbor_table[i] == old_neighbor_table[i])"
+        }
+      ],
+      "ext": "forall(i,0,4, out_node_neighbors[i] == old_node_neighbors[i]) && forall(i,0,4, out_neightbor_table_offsets[i] == old_neightbor_table_offsets[i]) && forall(i,0,4, out_neighbor_table[i] == old_neighbor_table[i])",
+      "reach": "node_in_degree > 0",
+      "nl_rendering": "The loop now runs at most min(node_in_degree,4) iterations, clamping to the four\u2011element output arrays, and otherwise leaves all output arrays exactly as before."
+    },
+    {
+      "id": "chrysalis_gnn_builder_gather_node_neighbors_inf.groq_qwen.strict.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "prompt": "strict",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {
+          "node_neighbors": "4",
+          "neightbor_table_offsets": "4",
+          "neighbor_table": "4"
+        },
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "node": [
+            -1000,
+            1000
+          ],
+          "node_in_degree": [
+            -1000,
+            1000
+          ],
+          "node_neighbors": [
+            -1000,
+            1000
+          ],
+          "neightbor_table_offsets": [
+            -1000,
+            1000
+          ],
+          "neighbor_table": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_node_neighbors[0] == old_node_neighbors[0] && out_node_neighbors[1] == old_node_neighbors[1] && out_node_neighbors[2] == old_node_neighbors[2] && out_node_neighbors[3] == old_node_neighbors[3]",
+          "nl_trace": "keep all other behaviour unchanged",
+          "uses_old_output": true
+        }
+      ],
+      "ext": "out_node_neighbors[0] == old_node_neighbors[0] && out_node_neighbors[1] == old_node_neighbors[1] && out_node_neighbors[2] == old_node_neighbors[2] && out_node_neighbors[3] == old_node_neighbors[3]",
+      "reach": "true",
+      "nl_rendering": "The function must terminate after the intended iterations and produce exactly the same output values in node_neighbors as the original function for all inputs.",
+      "request_type": "T4"
+    },
+    {
+      "id": "chrysalis_gnn_builder_gather_node_neighbors_inf.groq_qwen.permissive.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "prompt": "permissive",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {
+          "node_neighbors": "4",
+          "neightbor_table_offsets": "4",
+          "neighbor_table": "4"
+        },
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "node": [
+            -1000,
+            1000
+          ],
+          "node_in_degree": [
+            -1000,
+            1000
+          ],
+          "node_neighbors": [
+            -1000,
+            1000
+          ],
+          "neightbor_table_offsets": [
+            -1000,
+            1000
+          ],
+          "neighbor_table": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_node_neighbors[0] == old_node_neighbors[0] && out_node_neighbors[1] == old_node_neighbors[1] && out_node_neighbors[2] == old_node_neighbors[2] && out_node_neighbors[3] == old_node_neighbors[3]",
+          "nl_trace": "keep all other behaviour unchanged",
+          "uses_old_output": true
+        }
+      ],
+      "ext": "out_node_neighbors[0] == old_node_neighbors[0] && out_node_neighbors[1] == old_node_neighbors[1] && out_node_neighbors[2] == old_node_neighbors[2] && out_node_neighbors[3] == old_node_neighbors[3]",
+      "reach": "true",
+      "nl_rendering": "The function must terminate and produce the exact same values in node_neighbors as the original function for all inputs.",
+      "request_type": "T4"
+    },
+    {
+      "id": "chrysalis_gnn_builder_gather_node_neighbors_inf.groq_qwen.adversarial.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "prompt": "adversarial",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {
+          "node_neighbors": "4",
+          "neightbor_table_offsets": "4",
+          "neighbor_table": "4"
+        },
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "node": [
+            -1000,
+            1000
+          ],
+          "node_in_degree": [
+            -1000,
+            1000
+          ],
+          "node_neighbors": [
+            -1000,
+            1000
+          ],
+          "neightbor_table_offsets": [
+            -1000,
+            1000
+          ],
+          "neighbor_table": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_ret == old_ret && (forall(i, 0, 4, out_node_neighbors[i] == old_node_neighbors[i]) || true)",
+          "nl_trace": "Fix the loop bound so it terminates after the intended iterations; keep all other behaviour unchanged.",
+          "uses_old_output": false
+        }
+      ],
+      "ext": "unknown",
+      "reach": "true",
+      "nl_rendering": "The function must terminate for all inputs, but the specific values written to node_neighbors are not constrained by the request beyond the requirement that the loop executes the intended number of iterations, which may differ from the original infinite or incorrect execution path.",
+      "request_type": "T4"
+    }
+  ],
+  "generation": {
+    "runs": 1,
+    "families": [
+      "groq_gptoss",
+      "groq_qwen"
+    ],
+    "p1_seen_by_any_llm": false,
+    "live_families": [
+      "groq_gptoss",
+      "groq_qwen"
+    ],
+    "independent_live_family_count": 2,
+    "prompts": {
+      "typing": {
+        "version": "1",
+        "sha256": "d205e470414fbf901f6218f7626634a03bb6d50f2db5e3d606e651cb175b48ba"
+      },
+      "shape": {
+        "version": "1",
+        "sha256": "fd83396fa193d2a4db032be30085eee0a8e8594a06fc7300e2cb17c4e70c16e9"
+      },
+      "strict": {
+        "version": "2",
+        "sha256": "cad4e4428f3ab5a291b0c5c870865cc81dd8aa058e63a48d591e241094ee868e"
+      },
+      "permissive": {
+        "version": "2",
+        "sha256": "7e1436cc35c5dfff8ad88b8c8b6de1001313092ec7ccceaeeb7d7467025710fa"
+      },
+      "adversarial": {
+        "version": "2",
+        "sha256": "42a00cce3b2df6fe11fd008694b028fe31e08bb332977b19778e03c079190a52"
+      }
+    },
+    "shape_policy": "caller profile copied into every reading; model shape retained in records"
+  },
+  "records": [
+    {
+      "family": "groq_gptoss",
+      "prompt": "typing",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "typing",
+          "version": "1",
+          "sha256": "d205e470414fbf901f6218f7626634a03bb6d50f2db5e3d606e651cb175b48ba"
+        },
+        "schema_sha256": "63850d6960ea3c85c4624a40561308eff2998d791e4ded34ab849d7ae41850c2",
+        "attempts": [
+          {
+            "request_key": "aafd06814b9ceb437e5e1a8d87724eccc57cec497bac7fcb74f89748fe015745",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "family": "groq_gptoss",
+      "prompt": "shape",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "shape",
+          "version": "1",
+          "sha256": "fd83396fa193d2a4db032be30085eee0a8e8594a06fc7300e2cb17c4e70c16e9"
+        },
+        "schema_sha256": "330d8e128137e475be2b723200eef319a85b19f8108c16abf37ad52db991add0",
+        "attempts": [
+          {
+            "request_key": "a4943aac729e07479b5119bddd116edecc04879e7572b376ed0121be6952d446",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "agrees_with_caller_profile": false
+    },
+    {
+      "family": "groq_gptoss",
+      "prompt": "strict",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "strict",
+          "version": "2",
+          "sha256": "cad4e4428f3ab5a291b0c5c870865cc81dd8aa058e63a48d591e241094ee868e"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "e968a91fccfa56a82bfc363d879d4df56723a4c6ba2389b2ed164e1432a9bec8",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true,
+      "model_shape_replaced": false
+    },
+    {
+      "family": "groq_gptoss",
+      "prompt": "permissive",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "permissive",
+          "version": "2",
+          "sha256": "7e1436cc35c5dfff8ad88b8c8b6de1001313092ec7ccceaeeb7d7467025710fa"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "640691133f963407ef325cda55b63b6f633ebcc4d070dde25d45ab52aea719f5",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true,
+      "model_shape_replaced": false
+    },
+    {
+      "family": "groq_gptoss",
+      "prompt": "adversarial",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "adversarial",
+          "version": "2",
+          "sha256": "42a00cce3b2df6fe11fd008694b028fe31e08bb332977b19778e03c079190a52"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "1983b97c8b4206179cafba90c1a71eb8f1f63b1b8bc6cbbb90f31a7fbbe14343",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "typing",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "typing",
+          "version": "1",
+          "sha256": "d205e470414fbf901f6218f7626634a03bb6d50f2db5e3d606e651cb175b48ba"
+        },
+        "schema_sha256": "63850d6960ea3c85c4624a40561308eff2998d791e4ded34ab849d7ae41850c2",
+        "attempts": [
+          {
+            "request_key": "e7c933bcc416dec373a0be2c8ec587e8f498bbb6c5fc7e66df93126391501b3d",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "shape",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "shape",
+          "version": "1",
+          "sha256": "fd83396fa193d2a4db032be30085eee0a8e8594a06fc7300e2cb17c4e70c16e9"
+        },
+        "schema_sha256": "330d8e128137e475be2b723200eef319a85b19f8108c16abf37ad52db991add0",
+        "attempts": [
+          {
+            "request_key": "5a1f985e318d3b761f5a222df118df2147242551f4fa761e2bc4a8cb7bce1de0",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "agrees_with_caller_profile": true
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "strict",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "strict",
+          "version": "2",
+          "sha256": "cad4e4428f3ab5a291b0c5c870865cc81dd8aa058e63a48d591e241094ee868e"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "f41d76bdcf5c6ae3c39c497d7c6382270a9daf5a030d0564840a23450f2d6c20",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true,
+      "model_shape_replaced": false
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "permissive",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "permissive",
+          "version": "2",
+          "sha256": "7e1436cc35c5dfff8ad88b8c8b6de1001313092ec7ccceaeeb7d7467025710fa"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "ddabddc044b40bf387e29dc305d4992d0a797d9c5af45dae098585f62167086a",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true,
+      "model_shape_replaced": false
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "adversarial",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "adversarial",
+          "version": "2",
+          "sha256": "42a00cce3b2df6fe11fd008694b028fe31e08bb332977b19778e03c079190a52"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "fb28c554dfdd377bb24b26fba28991912bf68ec7b0b470338ffe9887a0129b07",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true
+    }
+  ]
+}

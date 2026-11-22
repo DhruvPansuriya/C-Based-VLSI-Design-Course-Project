@@ -1,0 +1,54 @@
+{
+  "profile_sha256": "83fd11dc608ed05bafb4aa0d18e063e7304ffd38d62513b45ac9e246d80e7940",
+  "p0_sha256": "267db3e0a66287205bf93a45b542c70a746cb6f59213cfe80f2772329bc40483",
+  "proposed_ub": "(n) <= 0",
+  "exact_ub": "(n) <= 0",
+  "exact_nd": "false",
+  "reference_safe_guard": "!((n) <= 0)",
+  "ub_coverage": {
+    "outcome": "PROVED",
+    "witness": null,
+    "note": "reference_safety"
+  },
+  "ub_witness": {
+    "outcome": "VIOLATED",
+    "witness": {
+      "__vwe_in_scalar_1_0": "0",
+      "__vwe_in_null_0": "TRUE",
+      "__vwe_in_null_2": "FALSE",
+      "__vwe_in_buffer_2_0_0": "0"
+    },
+    "note": "reference_safety: p0_argmax.pointer_dereference.1 dereference failure: pointer NULL in a[(signed long int)0]"
+  },
+  "predicate_reach": {
+    "outcome": "VIOLATED",
+    "witness": {
+      "__vwe_in_scalar_1_0": "0",
+      "__vwe_in_null_0": "TRUE",
+      "__vwe_in_null_2": "FALSE",
+      "__vwe_in_buffer_2_0_0": "0"
+    },
+    "note": "feasibility: main.assertion.3 VWE.feasibility.predicate"
+  },
+  "universal_inside": {
+    "outcome": "PROVED",
+    "witness": null,
+    "note": "input_rule"
+  },
+  "determinism_outside": {
+    "outcome": "PROVED",
+    "witness": null,
+    "note": "determinism"
+  },
+  "safe_guard_reach": {
+    "outcome": "VIOLATED",
+    "witness": {
+      "__vwe_in_scalar_1_0": "1",
+      "__vwe_in_null_0": "TRUE",
+      "__vwe_in_buffer_0_0_0": "0",
+      "__vwe_in_null_2": "FALSE",
+      "__vwe_in_buffer_2_0_0": "0"
+    },
+    "note": "feasibility: main.assertion.3 VWE.feasibility.predicate"
+  }
+}

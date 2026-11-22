@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/schemas/request_typing.schema.json",
+  "title": "RequestTyping",
+  "description": "Informational classification of a request N (never derived from P1).",
+  "type": "object",
+  "required": ["type", "rationale"],
+  "additionalProperties": false,
+  "properties": {
+    "type": {"enum": ["T1", "T2", "T3", "T4", "T5", "T6"]},
+    "rationale": {"type": "string", "maxLength": 2000}
+  }
+}

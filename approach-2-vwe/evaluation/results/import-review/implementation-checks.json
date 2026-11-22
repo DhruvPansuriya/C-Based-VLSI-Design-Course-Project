@@ -1,0 +1,51 @@
+{
+  "checked_utc": "2026-11-22T12:31:26.369134+00:00",
+  "host": "macOS-27.2.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.3",
+  "tools": {
+    "cbmc": "6.11.0 (cbmc-6.11.0)",
+    "z3": "Z3 version 5.4.1 - 64 bit - build hashcode 145c0c51570a357cc558ce898ce77573ba9d4fbf",
+    "actionlint": "1.7.12"
+  },
+  "checks": [
+    {
+      "command": "make test",
+      "result": "PASS",
+      "tests": 101
+    },
+    {
+      "command": "make golden",
+      "result": "PASS",
+      "candidate_verdicts": 10
+    },
+    {
+      "command": ".cache/actionlint/actionlint -shellcheck= .github/workflows/ci.yml",
+      "result": "PASS"
+    },
+    {
+      "command": "wheel install in a clean venv outside checkout; config/schema lookup; python -m vwe --version",
+      "result": "PASS"
+    },
+    {
+      "command": "bash -n tools/install_tools.sh",
+      "result": "PASS"
+    }
+  ],
+  "hosted_ci": {
+    "T01_run_id": 45022277087,
+    "url": "https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45022277087",
+    "python310": "PASS",
+    "python312": "PASS",
+    "safety_run_id": 45022723368,
+    "safety_url": "https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/actions/runs/45022723368",
+    "safety_commit": "c0884a5ebf59f880be4e012c50fbebc26267d863",
+    "safety_python310": "PASS",
+    "safety_python312": "PASS"
+  },
+  "limitations": [
+    "General vwe verify is T08 and is not implemented.",
+    "T05 prerequisite is not complete linked-GOTO instrumentation/confirmation.",
+    "No ESBMC semantic confirmation, Docker build, Vitis run or provider API call performed locally.",
+    "Imported Linux logs are distinct from new local and hosted evidence."
+  ]
+}

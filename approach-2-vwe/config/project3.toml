@@ -1,0 +1,22 @@
+# EVAL-P3 profile: fixed kernel arrays up to 32 elements and loops up to 32 iterations.
+[bounds]
+K = 32
+max_unwind = 40
+
+[timeouts]
+cbmc_s = 120
+esbmc_s = 120
+equiv_pair_s = 120
+
+[backends]
+primary = ["sat", "z3"]
+confirm = "esbmc"
+
+[native]
+cc = "gcc"
+sanitize = "address,undefined"
+prepass_samples = 10000
+seed = 0
+prepass_seconds = 2
+
+[llm]

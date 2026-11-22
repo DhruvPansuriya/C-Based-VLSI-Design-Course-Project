@@ -1,0 +1,21 @@
+[bounds]
+K = 4
+max_unwind = 9
+
+[timeouts]
+cbmc_s = 600
+esbmc_s = 600
+equiv_pair_s = 120
+
+[backends]
+primary = ["sat", "z3"]
+confirm = "esbmc"
+
+[native]
+cc = "gcc"
+sanitize = "address,undefined"
+prepass_samples = 10000
+seed = 0
+prepass_seconds = 2
+
+[llm]

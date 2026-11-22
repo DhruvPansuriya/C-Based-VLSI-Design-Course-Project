@@ -1,0 +1,177 @@
+{
+  "task_id": "ex4_sum",
+  "candidate_id": "v2",
+  "decision": "REJECT",
+  "evidence_class": "E0",
+  "claim_target": "repair_correctness",
+  "reason": "computed fact: e0: p1_sum.pointer_dereference.5 dereference failure: pointer outside object bounds in a[(signed long int)i]",
+  "conditional": "The recorded input belongs to the exact caller profile and the certified safe and deterministic reference guard. The candidate violates a modeled check there.",
+  "witness": {
+    "inputs": {
+      "n": "1",
+      "a uses NULL when size is zero": "FALSE",
+      "a[0]": "0"
+    },
+    "p0_output": null,
+    "p1_output": null,
+    "replayed_natively": true,
+    "replay_results": [
+      {
+        "status": "confirmed",
+        "reason": "heap-buffer-overflow"
+      }
+    ]
+  },
+  "interpretation_set_sha256": "e7c7ee589f5bb8f08daee998fed4f83d96ea2eb8e0bc11e80b132d4906514252",
+  "interpretations": [
+    {
+      "id": "ex4_sum.strict",
+      "nl_rendering": "Sum every logical element on the explicitly bounded caller domain.",
+      "validation": "valid",
+      "outcome": "not checked"
+    },
+    {
+      "id": "ex4_sum.permissive",
+      "nl_rendering": "Sum every logical element on the explicitly bounded caller domain.",
+      "validation": "valid",
+      "outcome": "not checked"
+    },
+    {
+      "id": "ex4_sum.invalid_n_minus_1",
+      "nl_rendering": "Deliberately invalid contract/shape pair: n-element sum over n-1 elements; T07 must reject it.",
+      "validation": "invalid",
+      "outcome": "not checked"
+    }
+  ],
+  "facts": {
+    "preserves_outside_B_max": "inconclusive",
+    "synthesis_ready": "inconclusive",
+    "interpretations_satisfied": [],
+    "interpretations_violated": []
+  },
+  "obligations": [
+    {
+      "name": "pre-pass safety hint",
+      "outcome": "VIOLATED",
+      "note": "e0: p1_sum.pointer_dereference.5 dereference failure: pointer outside object bounds in a[(signed long int)i]",
+      "backends": {
+        "sat": "failure",
+        "z3": "failure"
+      },
+      "witness": {
+        "inputs": {
+          "n": "1",
+          "a uses NULL when size is zero": "FALSE",
+          "a[0]": "0"
+        },
+        "p0_output": null,
+        "p1_output": null,
+        "replayed_natively": false
+      }
+    },
+    {
+      "name": "counterexample with fixed inputs 0",
+      "outcome": "VIOLATED",
+      "note": "e0: p1_sum.pointer_dereference.5 dereference failure: pointer outside object bounds in a[(signed long int)i]",
+      "backends": {
+        "sat": "failure",
+        "z3": "failure"
+      },
+      "witness": {
+        "inputs": {
+          "n": "1",
+          "a uses NULL when size is zero": "FALSE",
+          "a[0]": "0"
+        },
+        "p0_output": null,
+        "p1_output": null,
+        "replayed_natively": false
+      }
+    }
+  ],
+  "scope": {
+    "K": 4,
+    "shape_min": {
+      "buffers": {
+        "a": "n"
+      },
+      "alias": "disjoint",
+      "bounds": {
+        "n": [
+          1,
+          4
+        ]
+      },
+      "value_bounds": {
+        "a": [
+          -1000,
+          1000
+        ]
+      }
+    },
+    "shape_max": {
+      "buffers": {
+        "a": "n"
+      },
+      "alias": "disjoint",
+      "bounds": {
+        "n": [
+          1,
+          4
+        ]
+      },
+      "value_bounds": {
+        "a": [
+          -1000,
+          1000
+        ]
+      }
+    },
+    "bounded_only": true,
+    "profiles": [
+      {
+        "buffers": {
+          "a": "n"
+        },
+        "alias": "disjoint",
+        "bounds": {
+          "n": [
+            1,
+            4
+          ]
+        },
+        "value_bounds": {
+          "a": [
+            -1000,
+            1000
+          ]
+        }
+      }
+    ],
+    "reference_safe_guard": "!(false)",
+    "change_brackets": {},
+    "prepass": {
+      "samples": 1,
+      "seed": 0,
+      "requested_samples": 10000,
+      "seconds_budget": 2,
+      "stopped": "safety hint"
+    },
+    "native_replay": [
+      {
+        "status": "confirmed",
+        "reason": "heap-buffer-overflow"
+      }
+    ],
+    "native_acceptance": "not applicable",
+    "uninitialized_model": "CBMC experimental local checks"
+  },
+  "tools": {
+    "cbmc": "6.11.0 (cbmc-6.11.0)",
+    "z3": "Z3 version 5.4.1 - 64 bit - build hashcode 145c0c51570a357cc558ce898ce77573ba9d4fbf",
+    "esbmc": "unavailable"
+  },
+  "timing": {
+    "wall_seconds": 36.913012124998204
+  }
+}

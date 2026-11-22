@@ -1,0 +1,12 @@
+.venv/bin/python scripts/demo.py --out runs/demo
+VWE offline demo: K=2, explicitly reduced caller profiles, handwritten interpretations. No provider calls.
+Correct saturation                         ACCEPT E2        20.9s
+Always 255 breaks ordinary sums            REJECT E1        17.3s
+Tie-break regression                       REJECT E1        24.6s
+New out-of-bounds read + native replay     REJECT E0        22.3s
+Include the final element                  ACCEPT E2        32.1s
+Read one past the exact buffer             REJECT E0        24.7s
+Overflow readings disagree                 UNDECIDED -      21.3s
+Simulation and synthesis disagree          REJECT E0         8.0s
+Abort path-cut defence                     DEMONSTRATED      0.3s
+Total: 61.2s. Reports: /Users/dhruvrpansuriya/Documents/IITG Acad/Sem 7/C-based VLSI Design/Project/c-based-vlsi-design-course-project/runs/demo/index.html

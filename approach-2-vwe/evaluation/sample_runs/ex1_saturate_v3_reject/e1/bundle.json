@@ -1,0 +1,61 @@
+{
+  "kind": "e1",
+  "folder": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/e1",
+  "files": [
+    "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/e1/a0.c",
+    "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/e1/a1.c",
+    "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/e1/main.c"
+  ],
+  "entry_point": "main",
+  "unwind": 9,
+  "watch": [
+    "__vwe_in_scalar_0_0",
+    "__vwe_in_scalar_1_0",
+    "__vwe_out_one_ret",
+    "__vwe_out_zero_ret"
+  ],
+  "property_labels": [
+    "VWE.E1.preservation"
+  ],
+  "prerequisites": [
+    "qualified-admission",
+    "qualified-path-cut-and-uninitialized-model",
+    "nonvacuous-profile",
+    "reference-safe-and-deterministic-on-E1-keep",
+    "all-interpretations-validated",
+    "scope-conflict-veto",
+    "observer-UB-freedom",
+    "old-observer-definedness"
+  ],
+  "profile_sha256": "7fcb50738529c9fcb8692335fe91930d4787cf78f6a411f03a928b23b0042f0c",
+  "reference_guard": "!(false)",
+  "e1_decisive": true,
+  "program_symbols": [
+    [
+      "p0_add8"
+    ],
+    [
+      "p1_add8"
+    ]
+  ],
+  "witness_names": [
+    [
+      "__vwe_in_scalar_0_0",
+      "a"
+    ],
+    [
+      "__vwe_in_scalar_1_0",
+      "b"
+    ]
+  ],
+  "job_sha256": "5b48758ff1f6d0485c97a6259a2371536378efee8951c793eef5721ce0205ca4",
+  "generated_file_sha256": {
+    "frame.h": "52d41756bb701b0143cbf8820fc322810c6e4f648ac2823e8e21f3f6ecc88f82",
+    "a0.c": "00948ecfd600152c25208eda8cdbac961cd50c36192357494f17b90257ceddd8",
+    "a1.c": "395f9b4a6e6c44c59b9e5530ced4292b63626ffe2deafaa649bc8e57ec896076",
+    "main.c": "69d84ee76027ef096cda5232e3c53c509e8a2c7d15cb3f131e32dc755936146a"
+  },
+  "emitted_not_proved": true,
+  "input_storage": "initialized",
+  "old_placeholders": "initialized; guard certificates required"
+}

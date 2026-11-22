@@ -1,0 +1,54 @@
+{
+  "kind": "contract_ub",
+  "folder": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub",
+  "files": [
+    "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+    "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+    "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/main.c"
+  ],
+  "entry_point": "main",
+  "unwind": 9,
+  "watch": [
+    "__vwe_in_scalar_0_0",
+    "__vwe_in_scalar_1_0"
+  ],
+  "property_labels": [
+    "VWE.contract.evaluated"
+  ],
+  "prerequisites": [
+    "qualified-admission",
+    "qualified-path-cut-and-uninitialized-model",
+    "nonvacuous-profile"
+  ],
+  "profile_sha256": "7fcb50738529c9fcb8692335fe91930d4787cf78f6a411f03a928b23b0042f0c",
+  "reference_guard": "true",
+  "e1_decisive": false,
+  "program_symbols": [
+    [
+      "p0_add8"
+    ],
+    [
+      "vwe_second_add8"
+    ]
+  ],
+  "witness_names": [
+    [
+      "__vwe_in_scalar_0_0",
+      "a"
+    ],
+    [
+      "__vwe_in_scalar_1_0",
+      "b"
+    ]
+  ],
+  "job_sha256": "70d79bf1a1bc139a06680d04ff1a3a28133a8f265e92cd6b55e982c101a223e4",
+  "generated_file_sha256": {
+    "frame.h": "52d41756bb701b0143cbf8820fc322810c6e4f648ac2823e8e21f3f6ecc88f82",
+    "a0.c": "00948ecfd600152c25208eda8cdbac961cd50c36192357494f17b90257ceddd8",
+    "a1.c": "4c76fb645c0783c507dc3938aa5d393b1fc239fc918c88f29ab648d6165096b1",
+    "main.c": "69ceadda0b0e947f1dc4ffd74d9ce12e6221e07689f1c55a0a9d16e51b980567"
+  },
+  "emitted_not_proved": true,
+  "input_storage": "initialized",
+  "old_placeholders": "initialized; guard certificates required"
+}
