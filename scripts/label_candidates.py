@@ -15,8 +15,7 @@ from time import monotonic
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from vwe.config import load_config  # noqa: E402
-from vwe.eval.labels import as_json, label_pool  # noqa: E402
-from vwe.pipeline import verify  # noqa: E402
+from vwe.eval.labels import as_json, formal_identity, label_pool  # noqa: E402
 
 
 def main() -> int:
@@ -33,16 +32,15 @@ def main() -> int:
     roots = sorted(p for p in args.tasks.iterdir() if (p / "task.json").is_file()) if args.all \
         else [args.tasks / t for t in args.task]
 
-    def formal(label_task: Path, cid: str) -> tuple[str, str]:
-        data = verify(label_task, cid, cfg, "handwritten", runs_root=args.runs_root).data
-        return data["decision"], f"{data['evidence_class']}: {data['reason']}"
+    def formal(task_dir: Path, cid: str) -> tuple[str, str]:
+        return formal_identity(task_dir, cid, cfg, args.runs_root / task_dir.name / cid)
 
     summary = json.loads(args.summary.read_text()) if args.summary.is_file() else {"tasks": {}}
     for root in roots:
         start = monotonic()
         manifest = json.loads((root / "task.json").read_text())
         pool = {c: (root / f).read_text() for c, f in manifest["candidates"].items()}
-        labels = label_pool(root, pool, args.runs_root / root.name, formal, samples=args.samples)
+        labels = label_pool(root, pool, formal, samples=args.samples)
         (root / "eval/labels.json").write_text(json.dumps(as_json(labels), indent=2) + "\n")
         counts = Counter(l.label for l in labels)
         flags = [f"{l.candidate}: {l.flag}" for l in labels if l.flag]
