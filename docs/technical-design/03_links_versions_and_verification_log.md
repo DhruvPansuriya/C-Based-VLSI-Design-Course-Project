@@ -42,3 +42,10 @@ Checked on 22 November 2026, from an Ubuntu 24.04.5 container.
 
 - `results/tool_behaviour/spikes_cbmc-6.11.0_esbmc-8.7.0.log`: T01–T06 outputs.
 - `results/golden/golden_run.log` and `results/golden/golden_results.json`: Examples 1, 2, 4 (10 candidates), with SAT/Z3 agreement and side checks.
+
+
+## New T02 frontend qualification (22 November 2026, macOS arm64)
+
+CBMC/goto tools6.11.0 and pycparser3.0 were exercised locally; raw evidence is `results/t02/frontend-capabilities.json`. This is distinct from the imported Ubuntu logs above. Newly checked facts: preprocessing banner suppression with --verbosity0, rejection of the concatenated -U__SYNTHESIS__ option, internal CPROVER helpers in undefined listings, isolated macro views and their repeatable hashes. Full T02 behavior and limitations: `../T02_ADMISSION.md`.
+
+Official sources checked: [pinned cbmc(1)](https://github.com/diffblue/cbmc/blob/cbmc-6.11.0/doc/man/cbmc.1), [pinned goto-instrument(1)](https://github.com/diffblue/cbmc/blob/cbmc-6.11.0/doc/man/goto-instrument.1), [pycparser release source](https://github.com/eliben/pycparser/blob/release_v3.00/README.rst). No new dependency versions were introduced. config/whitelist.toml is packaged as shared data.

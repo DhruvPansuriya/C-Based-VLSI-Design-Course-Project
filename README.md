@@ -15,6 +15,8 @@ make golden
 
 T01 adds three schema-validated task folders in `examples/tasks/` and `vwe.tasks.load_pipeline_view`. The immutable pipeline view excludes `eval_only`, acceptable-reading labels and all evaluation file contents; path traversal and symlinks into `eval/` are rejected. `load_full` is reserved for evaluation. The deliberately invalid n-1 reading is retained for future semantic validation.
 
+T02 adds structural admission and isolated simulation/synthesis analysis views. Run `make admission` for the three example tasks; artifacts record hashes, globals, pragmas, missing-body checks and remaining obligations. Structural `ok` is not a correctness verdict. See [T02 details](docs/T02_ADMISSION.md).
+
 Native CBMC 6.11.0 and Z3 are needed for the golden integration test; it is skipped when CBMC is absent. Linux tool installation is `bash tools/install_tools.sh`; macOS must use qualified native tools. The Docker recipe has not been run here and is not a sealed image.
 
 ## Implementation plan (for the coding agent)

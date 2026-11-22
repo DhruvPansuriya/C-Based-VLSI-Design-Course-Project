@@ -41,3 +41,10 @@ The tests must cover:
 
 - `pycparser` needs preprocessed C without GCC extensions. Add `-D__attribute__(x)=` and similar defines when needed, and record them.
 - Keep views byte-identical across runs (hashes are part of the report).
+
+
+## Implementation note — 22 November 2026
+
+Implemented in `vwe/admission.py`, `vwe/views.py`, `vwe/c_frontend.py` and `vwe/tools/frontend.py`; demo command: `make admission`. See `docs/T02_ADMISSION.md` for interfaces and current capability limits.
+
+Correctness adjustments: use scope-aware AST alpha renaming instead of word-boundary replacement; do not erase attributes/layout features; retain GCC fallback as explicitly unqualified; clear the simulation macro in an isolated wrapper because the probed `-U__SYNTHESIS__` spelling is rejected. Policy E0 carries `claim_target=admission_policy`. Pragma/build equivalence and library-model linking remain later proof obligations.
