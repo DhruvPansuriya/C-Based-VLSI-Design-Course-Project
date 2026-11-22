@@ -1,0 +1,13 @@
+{
+  "p0_sha256": "ee3afddc33f75f502b62f445128e2b30aa2df9eb914171a35596a17d7d872069",
+  "interpretation_set_sha256": "7f3d59d14303662f5c3a040c1d2b961462e6d1be6ddc3bfd48d15b23dfd95a1f",
+  "checks": [
+    {
+      "id": "ex7_build_views.identity",
+      "state": "valid",
+      "check": "V-4",
+      "detail": "joint output tuple proved for every modeled input",
+      "witness": null
+    }
+  ]
+}

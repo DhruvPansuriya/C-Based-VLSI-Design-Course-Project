@@ -1,0 +1,203 @@
+{
+  "task_id": "ex2_argmax",
+  "candidate_id": "v1",
+  "interpretation_mode": "handwritten",
+  "decision": "ACCEPT",
+  "evidence_class": "E2",
+  "claim_target": "repair_correctness",
+  "reason": "satisfies every interpretation",
+  "conditional": "The claim is bounded to the declared input profile, instrumented C checks, and reported unwind bounds. It also requires an adequate reading of the request. Acceptance requires at least one surviving interpretation that is sound for the intended repair.",
+  "witness": null,
+  "interpretation_set_sha256": "83eb81112e912193672418eff80db0a3cf77d2f922b5e6ff4fc2faefd5cd3c52",
+  "interpretations": [
+    {
+      "id": "ex2_argmax.strict",
+      "nl_rendering": "Handle empty input; preserve the first maximum for nonempty input.",
+      "validation": "valid",
+      "outcome": "PROVED"
+    },
+    {
+      "id": "ex2_argmax.permissive",
+      "nl_rendering": "On the declared n>=0 domain, empty means n<=0; implementation strategy is unconstrained.",
+      "validation": "valid",
+      "outcome": "PROVED"
+    }
+  ],
+  "facts": {
+    "preserves_outside_B_max": "inconclusive",
+    "synthesis_ready": "inconclusive",
+    "interpretations_satisfied": [
+      "ex2_argmax.permissive",
+      "ex2_argmax.strict"
+    ],
+    "interpretations_violated": [],
+    "preservation_or_ext_outside_B_max": "PROVED",
+    "esbmc": [
+      {
+        "status": "unsupported",
+        "detail": "ESBMC unavailable"
+      }
+    ]
+  },
+  "obligations": [
+    {
+      "name": "candidate safety on reference guard",
+      "outcome": "PROVED",
+      "note": "e0",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "reference on common keep region",
+      "outcome": "PROVED",
+      "note": "determinism",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "preservation or Ext outside scope union",
+      "outcome": "PROVED",
+      "note": "e1",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "scope agreement for ex2_argmax.permissive",
+      "outcome": "PROVED",
+      "note": "scope",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "scope agreement for ex2_argmax.strict",
+      "outcome": "PROVED",
+      "note": "scope",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "class keep reachability for ex2_argmax.permissive",
+      "outcome": "VIOLATED",
+      "note": "feasibility: main.assertion.3 VWE.feasibility.predicate",
+      "backends": {
+        "sat": "failure",
+        "z3": "failure"
+      },
+      "witness": {
+        "inputs": {
+          "n": "1",
+          "a uses NULL when size is zero": "TRUE",
+          "a[0]": "0",
+          "idx uses NULL when size is zero": "FALSE",
+          "idx[0]": "0"
+        },
+        "p0_output": null,
+        "p1_output": null,
+        "replayed_natively": false
+      }
+    },
+    {
+      "name": "class path reachability for ex2_argmax.permissive",
+      "outcome": "PROVED",
+      "note": "all required regions reached after the call",
+      "backends": {
+        "sat": "failure",
+        "z3": "failure"
+      },
+      "witness": null
+    },
+    {
+      "name": "interpretation ex2_argmax.permissive",
+      "outcome": "PROVED",
+      "note": "class",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    }
+  ],
+  "scope": {
+    "K": 4,
+    "shape_min": {
+      "buffers": {
+        "a": "n",
+        "idx": "1"
+      },
+      "alias": "disjoint",
+      "bounds": {
+        "n": [
+          0,
+          4
+        ]
+      }
+    },
+    "shape_max": {
+      "buffers": {
+        "a": "n",
+        "idx": "1"
+      },
+      "alias": "disjoint",
+      "bounds": {
+        "n": [
+          0,
+          4
+        ]
+      }
+    },
+    "bounded_only": true,
+    "profiles": [
+      {
+        "buffers": {
+          "a": "n",
+          "idx": "1"
+        },
+        "alias": "disjoint",
+        "bounds": {
+          "n": [
+            0,
+            4
+          ]
+        }
+      }
+    ],
+    "reference_safe_guard": "!((n) <= 0)",
+    "change_brackets": {
+      "B_min": "((n <= 0)) && ((n == 0))",
+      "B_max": "((n <= 0)) || ((n == 0)) || (n == 0) || (n == 0)"
+    },
+    "prepass": {
+      "samples": 7,
+      "seed": 0,
+      "requested_samples": 10000,
+      "seconds_budget": 2,
+      "stopped": "time budget"
+    },
+    "native_replay": [],
+    "native_acceptance": "confirmed: all 2 interpretations checked on 7 sampled inputs",
+    "uninitialized_model": "CBMC experimental local checks"
+  },
+  "tools": {
+    "cbmc": "6.11.0 (cbmc-6.11.0)",
+    "z3": "Z3 version 5.4.1 - 64 bit - build hashcode 145c0c51570a357cc558ce898ce77573ba9d4fbf",
+    "esbmc": "unavailable"
+  },
+  "timing": {
+    "wall_seconds": 38.52863579199766
+  }
+}
