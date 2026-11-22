@@ -103,7 +103,7 @@
       }
     },
     "ext": {
-      "oneOf": [
+      "anyOf": [
         {
           "$ref": "#/$defs/expr"
         },

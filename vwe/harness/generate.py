@@ -8,9 +8,11 @@ from typing import Any,Mapping,Sequence
 from ..config import Config
 from ..views import BuildView,Views
 from ..contract.emit import emit_function,EmittedFunction
-from ..contract.ast import Sort
+from ..contract.ast import Expr, Sort
+from ..contract.parser import parse
 from ..contract.typecheck import typecheck
-from .adapter import Layout
+from .adapter import Global, Layout
+from .constructive import assignments
 from .profile import Profile,plain
 from .layout import HarnessUnsupported
 from .model import HarnessBundle
@@ -100,6 +102,13 @@ class Generator:
         return self._generate(out, "feasibility" if reachability else "input_rule",
                               (), guard=guard, predicate=predicate)
 
+    def gen_validation(self, out: str | Path, interps: Sequence[Mapping[str,Any]], mode: str) -> HarnessBundle:
+        self._interpretations(interps)
+        expected = {"bug": 1, "possible": 1, "constructive": 1, "equivalence": 2}
+        if mode not in expected or len(interps) != expected[mode]:
+            raise ValueError("invalid interpretation validation job")
+        return self._generate(out, "validation_" + mode, interps)
+
     def _generate(self,out: str|Path,kind: str,interps: Sequence[Mapping[str,Any]],*,
                   after_call: bool=True,prog: str='p0',guard: str='true',
                   predicate: str='true') -> HarnessBundle:
@@ -127,7 +136,7 @@ class _Builder:
             self.line(f'__CPROVER_assume({_literal(lo)} <= {name} && {name} <= {_literal(hi)});')
         if watch:self.watch.append(name)
 
-    def emit(self,expr: str,*,boolean: bool=True) -> EmittedFunction:
+    def emit(self,expr: str | Expr,*,boolean: bool=True) -> EmittedFunction:
         f=emit_function(expr,self.profile.env,name='vwe_observer_'+str(len(self.observers)),boolean=boolean)
         self.observers.append(f)
         self.unwind=max(self.unwind,max((n+1 for _,n in f.loop_limits),default=1))
@@ -139,7 +148,7 @@ class _Builder:
         if missing: raise HarnessUnsupported('no observation binding for '+','.join(sorted(missing)))
         return f.name+'('+', '.join(b[n] for n in f.parameters)+')'
 
-    def expression(self,expr: str,*,boolean: bool=True) -> str:
+    def expression(self,expr: str | Expr,*,boolean: bool=True) -> str:
         return self.call(self.emit(expr,boolean=boolean))
 
     def assertion(self,expr: str,label: str) -> None:
@@ -202,7 +211,7 @@ class _Builder:
         # Old observer placeholders are initialized. A separate old-definedness
         # certificate must authorize every evaluation that can read them.
 
-    def bind_flat_global(self,glob,prefix: str,root: str) -> None:
+    def bind_flat_global(self,glob: Global,prefix: str,root: str) -> None:
         name=prefix+glob.name
         symbol=self.profile.env.symbols.get(name)
         if symbol is None or symbol.length is None:
@@ -280,6 +289,56 @@ class _Builder:
         # Conservatively all type-correct old values: UB-free here is sufficient
         # but not necessary on the reachable old-output relation.
 
+    def clause_relation(self, interp: Mapping[str, Any]) -> str:
+        terms = [f"(!({self.expression(c['zone'])}) || ({self.expression(c['behaviour'])}))"
+                 for c in interp["clauses"]]
+        return "(" + (" && ".join(terms) or "1") + ")"
+
+    def validation(self, mode: str) -> None:
+        interp = self.interps[0]
+        zone = self.g._zone((interp,))
+        clauses = interp["clauses"]
+        if mode == "validation_bug":
+            self.line("__CPROVER_assume(" + self.expression(zone) + ");")
+            self.program_call("a0", "zero")
+            # Compare each applicable repair predicate against P0's actual
+            # output. Both roles refer to the same observed state.
+            for name, symbol in self.profile.env.symbols.items():
+                if symbol.role == "output" and name in self.bindings:
+                    self.bindings[name] = self.bindings["old_" + name[4:]]
+            self.assertion(self.clause_relation(interp), "VWE.validation_bug.predicate")
+            return
+        self.fresh_outputs()
+        if mode == "validation_equivalence":
+            other = self.interps[1]
+            other_zone = self.g._zone((other,))
+            region_equal = f"({self.expression(zone)}) == ({self.expression(other_zone)})"
+            relation_equal = f"{self.clause_relation(interp)} == {self.clause_relation(other)}"
+            self.assertion(f"({region_equal}) && ({relation_equal})",
+                           "VWE.validation_equivalence.predicate")
+            return
+        if mode == "validation_possible":
+            self.line("__CPROVER_assume(" + self.expression(zone) + ");")
+            self.assertion("!(" + self.clause_relation(interp) + ")",
+                           "VWE.validation_possible.predicate")
+            return
+        for clause in clauses:
+            plan = assignments(parse(clause["behaviour"]), self.profile.env)
+            if plan is None or any(
+                self.emit(write.value, boolean=False).uses_old for write in plan
+            ):
+                raise HarnessUnsupported("no constructive input-only output tuple")
+            self.line("if (" + self.expression(clause["zone"]) + ") {")
+            for write in plan:
+                symbol = self.profile.env.symbols[write.name]
+                target = self.bindings[write.name]
+                if write.index is not None:
+                    target = f"(({symbol.scalar.c_name} *)({target}))[{write.index}]"
+                value = self.expression(write.value, boolean=False)
+                self.line(f"{target}=({symbol.scalar.c_name})({value});")
+            self.line("}")
+        self.assertion(self.clause_relation(interp), "VWE.validation_constructive.predicate")
+
     def build(self,after_call: bool,prog: str,guard: str,predicate: str) -> HarnessBundle:
         g=self.g;kind=self.kind
         self.seed(('zero','one'))
@@ -321,6 +380,8 @@ class _Builder:
             if kind=='determinism':self.line('__CPROVER_assume('+self.expression(guard)+');')
             self.program_call('a0','zero');self.program_call('a1','one')
             self.assertion(self.equivalent(),'VWE.'+kind+'.equivalence')
+        elif kind.startswith('validation_'):
+            self.validation(kind)
         elif kind=='reference_safety':
             self.line('__CPROVER_assume('+self.expression(guard)+');')
             self.program_call('a0','zero')
