@@ -1,0 +1,98 @@
+{
+  "sha256": "32fa921113e6b1fff9e9ad0da194a37cfc38499a661c9296e3306a7384c343f6",
+  "reason": "",
+  "traps": [],
+  "uninitialized_local_pass": true,
+  "commands": [
+    {
+      "argv": [
+        "goto-cc",
+        "-std=c11",
+        "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/inside_reach/a0.c",
+        "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/inside_reach/a1.c",
+        "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/inside_reach/main.c",
+        "-o",
+        "raw.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/inside_reach/verification",
+      "returncode": 0,
+      "seconds": 0.18711420900945086,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--uninitialized-check",
+        "raw.goto",
+        "locals.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/inside_reach/verification",
+      "returncode": 0,
+      "seconds": 0.007133375009289011,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--add-library",
+        "--no-malloc-may-fail",
+        "locals.goto",
+        "linked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/inside_reach/verification",
+      "returncode": 0,
+      "seconds": 0.006673167008557357,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--list-goto-functions",
+        "linked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/inside_reach/verification",
+      "returncode": 0,
+      "seconds": 0.005133083002874628,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--remove-function-body-regex",
+        "^(_Exit|_exit|_longjmp|abort|exit|longjmp|quick_exit|siglongjmp)$",
+        "linked.goto",
+        "removed.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/inside_reach/verification",
+      "returncode": 0,
+      "seconds": 0.005866541003342718,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--generate-function-body",
+        "^(_Exit|_exit|_longjmp|abort|exit|longjmp|quick_exit|siglongjmp)$",
+        "--generate-function-body-options",
+        "assert-false-assume-false",
+        "removed.goto",
+        "checked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/inside_reach/verification",
+      "returncode": 0,
+      "seconds": 0.0066885000123875216,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--show-goto-functions",
+        "checked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/inside_reach/verification",
+      "returncode": 0,
+      "seconds": 0.005668209007126279,
+      "error": ""
+    }
+  ]
+}

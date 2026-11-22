@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+runs/
+third_party/
+*.gb
+.venv/
+.cache/
+*.egg-info/
+build/
+dist/
+.coverage
+.DS_Store
+
+# T15: adapted benchmark sources are regenerated from pinned third_party/ (per-program licences)
+evaluation/benchmarks/tasks/
+
+# Local provider credentials (never commit)
+config/secrets/
+# EVAL-P3: generated from the user-supplied Project 3 handoff (not redistributed)
+evaluation/benchmarks/project3/tasks/
