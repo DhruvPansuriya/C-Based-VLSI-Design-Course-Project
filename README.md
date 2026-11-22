@@ -7,7 +7,7 @@ Team: Dhruvkumar R Pansuriya (230101071), Aryan Kaushik (230101018), Lasya Madhu
 When a language model rewrites C code, someone has to decide whether the new code is right. We
 worked on this in two ways. Each approach has its own folder with its code, tests, benchmarks,
 results, report and slides. The same code is also on its own branch,
-[`approach-1-hlscheck`](../../tree/approach-1-hlscheck) and [`approach-2-vwe`](../../tree/approach-2-vwe).
+[`approach-1-hlscheck`](https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/tree/approach-1-hlscheck) and [`approach-2-vwe`](https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/tree/approach-2-vwe).
 
 | Folder | Approach | Question it answers |
 |---|---|---|
