@@ -1,6 +1,6 @@
 # scripts/ - commands for the demo and the evaluation
 
-Run all of them from the `approach-2-vwe` folder with the virtual environment active.
+Run all of them from the VWE folder (the top of the `approach-2-vwe` branch, or `approach-2-vwe/` on `main`) with the virtual environment active.
 
 **Demo**
 

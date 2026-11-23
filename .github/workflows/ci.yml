@@ -1,17 +1,10 @@
-name: vwe-tests
-on:
-  push:
-    paths: ['approach-2-vwe/**', '.github/**']
-  pull_request:
-    paths: ['approach-2-vwe/**', '.github/**']
+name: tests
+on: [push, pull_request]
 permissions:
   contents: read
 jobs:
   unit-and-golden:
     runs-on: ubuntu-24.04
-    defaults:
-      run:
-        working-directory: approach-2-vwe
     strategy:
       fail-fast: false
       matrix:
@@ -25,7 +18,7 @@ jobs:
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y bubblewrap
-          sudo install -m 0644 ../.github/bwrap.apparmor /etc/apparmor.d/vwe-bwrap
+          sudo install -m 0644 .github/bwrap.apparmor /etc/apparmor.d/vwe-bwrap
           sudo apparmor_parser -r /etc/apparmor.d/vwe-bwrap
           bwrap --unshare-all --die-with-parent --ro-bind / / --dev /dev --proc /proc -- /usr/bin/true
       - uses: actions/cache@v4
@@ -57,7 +50,7 @@ jobs:
         with:
           name: evidence-python-${{ matrix.python-version }}
           path: |
-            approach-2-vwe/runs/golden
-            approach-2-vwe/runs/admission
-            approach-2-vwe/runs/contracts
+            runs/golden
+            runs/admission
+            runs/contracts
           if-no-files-found: warn

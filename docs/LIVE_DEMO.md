@@ -17,8 +17,9 @@ ESBMC is not installed locally; it only runs in CI and can only cancel an ACCEPT
 
 ### A. Set up the screen (2 minutes, before the professor arrives)
 
-1. Open VS Code, then **File > Open Folder...** and choose the `approach-2-vwe` folder inside the
-   repository (all commands below run from there).
+1. Open VS Code, then **File > Open Folder...** and choose the VWE folder: `approach-2-vwe/` if you
+   cloned `main`, or the repository itself if you cloned the `approach-2-vwe` branch. All commands
+   below run from there.
 2. Open a terminal: **View > Terminal** (or Ctrl + backtick). It opens at the bottom, already in the
    repository folder.
 3. In the terminal, type once:
