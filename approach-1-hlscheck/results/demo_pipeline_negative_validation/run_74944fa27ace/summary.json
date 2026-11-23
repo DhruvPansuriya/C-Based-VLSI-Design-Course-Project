@@ -1,0 +1,66 @@
+{
+  "run_id": "74944fa27ace",
+  "status": "not_equivalent",
+  "hls_requested": true,
+  "run_directory": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline_negative_validation\\run_74944fa27ace",
+  "stages": [
+    {
+      "number": 1,
+      "name": "READ AND VALIDATE THE SUPPLIED FILES"
+    },
+    {
+      "number": 2,
+      "name": "FORMAL C-TO-C EQUIVALENCE"
+    }
+  ],
+  "inputs": {
+    "original": {
+      "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\benchmarks\\pipeline_smoke\\wrong_original.c",
+      "raw_sha256": "e035aedf198279e9898380fb5cb6221774acbe1e6d1f50d8d9bdc0980e994da5",
+      "snapshot": "inputs/original_source.c",
+      "snapshot_sha256": "e035aedf198279e9898380fb5cb6221774acbe1e6d1f50d8d9bdc0980e994da5"
+    },
+    "optimized": {
+      "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\benchmarks\\pipeline_smoke\\wrong_optimized.c",
+      "raw_sha256": "96552db0478c1cc30919c38d98205ec4194050afb2457310084286b95b81b111",
+      "snapshot": "inputs/optimized_source.c",
+      "snapshot_sha256": "96552db0478c1cc30919c38d98205ec4194050afb2457310084286b95b81b111"
+    }
+  },
+  "pipeline_sha256": "2762a44f5822c3dd29ac0728b3ba3d268d626531980a47d31bd251ae9637e81e",
+  "testbench_generator_sha256": "0c54d63c2d2454c7b8cc73d2d565a7df7d48462f8877a59910036c418d993a7d",
+  "contract": {
+    "integer_model": "ILP32: char8/short16/int32/long32/long-long64; plain char signed",
+    "parameters": [
+      {
+        "position": 0,
+        "name": "x",
+        "length": null,
+        "c_type": "unsigned int",
+        "bits": 32,
+        "signed": false
+      }
+    ],
+    "return_type": {
+      "c_type": "unsigned int",
+      "bits": 32,
+      "signed": false
+    },
+    "scalar_ranges": {},
+    "observations": "Return value and every final parameter-array element",
+    "memory": "All parameter arrays valid and pairwise nonoverlapping; initial contents shared by value",
+    "safety": "Both programs must be free of modelled undefined behavior on the entire stated input domain",
+    "proof_scope": "Functional C equivalence at completion, not cycle-level or C-to-RTL equivalence"
+  },
+  "verification": {
+    "status": "not_equivalent",
+    "elapsed_seconds": 0.477138,
+    "proof": "proof/result.json"
+  },
+  "native_witness": {
+    "available": true,
+    "passed": true,
+    "harness_sha256": "e2631b87aa6bc4a291e2d1714c89df57c2e5f4db96b64630170dc59c15afb0d2",
+    "scope": "Actual original C and candidate C at the complete verified input; no abstract state is executed"
+  }
+}

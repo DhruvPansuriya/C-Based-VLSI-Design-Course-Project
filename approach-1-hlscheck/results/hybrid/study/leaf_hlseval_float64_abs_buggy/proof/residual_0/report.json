@@ -1,0 +1,153 @@
+[
+  {
+    "coverage": {
+      "files": {
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\leaf_hlseval_float64_abs_buggy\\proof\\residual_0\\miter.c": {
+          "coverage_stats": {
+            "covered_lines": 5,
+            "total_hits": 5
+          },
+          "covered_lines": {
+            "23": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "24": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "25": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "26": {
+              "covered": true,
+              "hits": 1,
+              "type": "violation"
+            },
+            "28": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            }
+          }
+        }
+      }
+    },
+    "initial_values": {
+      "__hlscheck_input_0": {
+        "name": "__hlscheck_input_0",
+        "type": "unsigned",
+        "value": "4611686018427387904"
+      },
+      "__hlscheck_left_return": {
+        "name": "__hlscheck_left_return",
+        "type": "unsigned",
+        "value": "4611686018427387904"
+      },
+      "__hlscheck_right_return": {
+        "name": "__hlscheck_right_return",
+        "type": "unsigned",
+        "value": "0"
+      }
+    },
+    "source_files": {
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\leaf_hlseval_float64_abs_buggy\\proof\\residual_0\\miter.c": [
+        "",
+        "_Static_assert(sizeof(char)==1 && sizeof(short)==2 && sizeof(int)==4 &&",
+        "               sizeof(long)==4 && sizeof(long long)==8 && sizeof(void*)==4, \"HLSCheck ILP32 ABI\");",
+        "_Static_assert((char)-1 < 0, \"HLSCheck requires signed plain char\");",
+        "_Static_assert((unsigned char)-1 == 255, \"HLSCheck requires 8-bit bytes\");",
+        "",
+        "extern void __ESBMC_assert(_Bool, const char *);",
+        "extern void __ESBMC_assume(_Bool);",
+        "extern unsigned long long int __hlscheck_nondet_0(void);",
+        "unsigned long long int __hlscheck_original(unsigned long long int x)",
+        "{",
+        "  return x & 0x7fffffffffffffffULL;",
+        "}",
+        "",
+        "",
+        "unsigned long long int __hlscheck_candidate(unsigned long long int x)",
+        "{",
+        "  return (x << 2) >> 2;",
+        "}",
+        "",
+        "",
+        "int main(void) {",
+        "unsigned long long int __hlscheck_input_0=__hlscheck_nondet_0();",
+        "unsigned long long int __hlscheck_left_return=__hlscheck_original(__hlscheck_input_0);",
+        "unsigned long long int __hlscheck_right_return=__hlscheck_candidate(__hlscheck_input_0);",
+        "__ESBMC_assert((__hlscheck_left_return==__hlscheck_right_return),\"EQUIV:observables\");",
+        "return 0;",
+        "}"
+      ]
+    },
+    "status": "violation",
+    "steps": [
+      {
+        "assignment": {
+          "lhs": "__hlscheck_input_0",
+          "lhs_type": "unsigned",
+          "rhs": "4611686018427387904",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\leaf_hlseval_float64_abs_buggy\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "23",
+        "step_number": 0,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_return",
+          "lhs_type": "unsigned",
+          "rhs": "4611686018427387904",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\leaf_hlseval_float64_abs_buggy\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "24",
+        "step_number": 1,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_return",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\leaf_hlseval_float64_abs_buggy\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "25",
+        "step_number": 2,
+        "type": "assignment"
+      },
+      {
+        "assertion": {
+          "comment": "EQUIV:observables",
+          "guard": "__hlscheck_left_return == __hlscheck_right_return",
+          "violated": true
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\leaf_hlseval_float64_abs_buggy\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "26",
+        "message": "EQUIV:observables",
+        "step_number": 3,
+        "type": "violation"
+      },
+      {
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\leaf_hlseval_float64_abs_buggy\\proof\\residual_0\\miter.c",
+        "function": "main",
+        "line": "28",
+        "message": "Assumption restriction",
+        "step_number": 4,
+        "type": "assume"
+      }
+    ]
+  }
+]

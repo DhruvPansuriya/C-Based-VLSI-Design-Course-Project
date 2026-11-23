@@ -1,0 +1,680 @@
+{
+  "case": "gemm",
+  "variant": "buggy",
+  "expected": "not_equivalent",
+  "origin": "MachSuite gemm/ncubed adapted to uint32_t and 4x4 dimensions",
+  "transformation": "loop interchange and scalar reuse",
+  "original": "benchmarks\\machsuite_u32\\gemm_original.c",
+  "candidate": "benchmarks\\machsuite_u32\\gemm_buggy.c",
+  "original_sha256": "d34b316a62c77526f14598b5987f8b8a1dfe86a57d3bbda47702b89bfb50cb8f",
+  "candidate_sha256": "e0d7931a6d52ff6692576d2d4c2384775827b1f64b7b06b6eae7b0bf349a1c94",
+  "verification": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 691,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [
+      {
+        "index": 1,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg1_1",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma001.smt2"
+      },
+      {
+        "index": 2,
+        "status": "sat",
+        "variables": [
+          "arg0_2",
+          "arg1_2",
+          "arg1_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma002.smt2"
+      },
+      {
+        "index": 3,
+        "status": "sat",
+        "variables": [
+          "arg0_3",
+          "arg1_12",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma003.smt2"
+      },
+      {
+        "index": 4,
+        "status": "sat",
+        "variables": [
+          "arg0_0",
+          "arg1_1",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma004.smt2"
+      },
+      {
+        "index": 5,
+        "status": "sat",
+        "variables": [
+          "arg0_2",
+          "arg1_6",
+          "arg1_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma005.smt2"
+      },
+      {
+        "index": 6,
+        "status": "sat",
+        "variables": [
+          "arg0_3",
+          "arg1_13",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma006.smt2"
+      },
+      {
+        "index": 7,
+        "status": "sat",
+        "variables": [
+          "arg0_0",
+          "arg1_2",
+          "arg1_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma007.smt2"
+      },
+      {
+        "index": 8,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg1_6",
+          "arg1_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma008.smt2"
+      },
+      {
+        "index": 9,
+        "status": "sat",
+        "variables": [
+          "arg0_3",
+          "arg1_11",
+          "arg1_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma009.smt2"
+      },
+      {
+        "index": 10,
+        "status": "sat",
+        "variables": [
+          "arg0_0",
+          "arg1_12",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma010.smt2"
+      },
+      {
+        "index": 11,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg1_13",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma011.smt2"
+      },
+      {
+        "index": 12,
+        "status": "sat",
+        "variables": [
+          "arg0_2",
+          "arg1_11",
+          "arg1_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma012.smt2"
+      },
+      {
+        "index": 13,
+        "status": "sat",
+        "variables": [
+          "arg0_5",
+          "arg1_1",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma013.smt2"
+      },
+      {
+        "index": 14,
+        "status": "sat",
+        "variables": [
+          "arg0_6",
+          "arg1_2",
+          "arg1_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma014.smt2"
+      },
+      {
+        "index": 15,
+        "status": "sat",
+        "variables": [
+          "arg0_7",
+          "arg1_12",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma015.smt2"
+      },
+      {
+        "index": 16,
+        "status": "sat",
+        "variables": [
+          "arg0_4",
+          "arg1_1",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma016.smt2"
+      },
+      {
+        "index": 17,
+        "status": "sat",
+        "variables": [
+          "arg0_6",
+          "arg1_6",
+          "arg1_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma017.smt2"
+      },
+      {
+        "index": 18,
+        "status": "sat",
+        "variables": [
+          "arg0_7",
+          "arg1_13",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma018.smt2"
+      },
+      {
+        "index": 19,
+        "status": "sat",
+        "variables": [
+          "arg0_4",
+          "arg1_2",
+          "arg1_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma019.smt2"
+      },
+      {
+        "index": 20,
+        "status": "sat",
+        "variables": [
+          "arg0_5",
+          "arg1_6",
+          "arg1_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma020.smt2"
+      },
+      {
+        "index": 21,
+        "status": "sat",
+        "variables": [
+          "arg0_7",
+          "arg1_11",
+          "arg1_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma021.smt2"
+      },
+      {
+        "index": 22,
+        "status": "sat",
+        "variables": [
+          "arg0_4",
+          "arg1_12",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma022.smt2"
+      },
+      {
+        "index": 23,
+        "status": "sat",
+        "variables": [
+          "arg0_5",
+          "arg1_13",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma023.smt2"
+      },
+      {
+        "index": 24,
+        "status": "sat",
+        "variables": [
+          "arg0_6",
+          "arg1_11",
+          "arg1_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma024.smt2"
+      },
+      {
+        "index": 25,
+        "status": "sat",
+        "variables": [
+          "arg0_10",
+          "arg1_2",
+          "arg1_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma025.smt2"
+      },
+      {
+        "index": 26,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg1_12",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma026.smt2"
+      },
+      {
+        "index": 27,
+        "status": "sat",
+        "variables": [
+          "arg0_9",
+          "arg1_1",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma027.smt2"
+      },
+      {
+        "index": 28,
+        "status": "sat",
+        "variables": [
+          "arg0_10",
+          "arg1_6",
+          "arg1_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma028.smt2"
+      },
+      {
+        "index": 29,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg1_13",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma029.smt2"
+      },
+      {
+        "index": 30,
+        "status": "sat",
+        "variables": [
+          "arg0_8",
+          "arg1_1",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma030.smt2"
+      },
+      {
+        "index": 31,
+        "status": "sat",
+        "variables": [
+          "arg0_11",
+          "arg1_11",
+          "arg1_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma031.smt2"
+      },
+      {
+        "index": 32,
+        "status": "sat",
+        "variables": [
+          "arg0_8",
+          "arg1_2",
+          "arg1_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma032.smt2"
+      },
+      {
+        "index": 33,
+        "status": "sat",
+        "variables": [
+          "arg0_9",
+          "arg1_6",
+          "arg1_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma033.smt2"
+      },
+      {
+        "index": 34,
+        "status": "sat",
+        "variables": [
+          "arg0_10",
+          "arg1_11",
+          "arg1_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma034.smt2"
+      },
+      {
+        "index": 35,
+        "status": "sat",
+        "variables": [
+          "arg0_8",
+          "arg1_12",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma035.smt2"
+      },
+      {
+        "index": 36,
+        "status": "sat",
+        "variables": [
+          "arg0_9",
+          "arg1_13",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma036.smt2"
+      },
+      {
+        "index": 37,
+        "status": "sat",
+        "variables": [
+          "arg0_13",
+          "arg1_1",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma037.smt2"
+      },
+      {
+        "index": 38,
+        "status": "sat",
+        "variables": [
+          "arg0_14",
+          "arg1_2",
+          "arg1_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma038.smt2"
+      },
+      {
+        "index": 39,
+        "status": "sat",
+        "variables": [
+          "arg0_15",
+          "arg1_12",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma039.smt2"
+      },
+      {
+        "index": 40,
+        "status": "sat",
+        "variables": [
+          "arg0_12",
+          "arg1_1",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma040.smt2"
+      },
+      {
+        "index": 41,
+        "status": "sat",
+        "variables": [
+          "arg0_14",
+          "arg1_6",
+          "arg1_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma041.smt2"
+      },
+      {
+        "index": 42,
+        "status": "sat",
+        "variables": [
+          "arg0_15",
+          "arg1_13",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma042.smt2"
+      },
+      {
+        "index": 43,
+        "status": "sat",
+        "variables": [
+          "arg0_12",
+          "arg1_2",
+          "arg1_8"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma043.smt2"
+      },
+      {
+        "index": 44,
+        "status": "sat",
+        "variables": [
+          "arg0_13",
+          "arg1_6",
+          "arg1_9"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma044.smt2"
+      },
+      {
+        "index": 45,
+        "status": "sat",
+        "variables": [
+          "arg0_15",
+          "arg1_11",
+          "arg1_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma045.smt2"
+      },
+      {
+        "index": 46,
+        "status": "sat",
+        "variables": [
+          "arg0_12",
+          "arg1_12",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma046.smt2"
+      },
+      {
+        "index": 47,
+        "status": "sat",
+        "variables": [
+          "arg0_13",
+          "arg1_13",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma047.smt2"
+      },
+      {
+        "index": 48,
+        "status": "sat",
+        "variables": [
+          "arg0_14",
+          "arg1_11",
+          "arg1_14"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\submission_verification\\gemm_buggy.lemma048.smt2"
+      }
+    ],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "m1": [
+        686596121,
+        3772911372,
+        4102649573,
+        1715655136,
+        4111565191,
+        1091414610,
+        3746720213,
+        275617691,
+        1168499187,
+        1272253884,
+        2555834029,
+        2070369235,
+        2296595831,
+        1741737932,
+        2507817495,
+        3975590831
+      ],
+      "m2": [
+        0,
+        4209483506,
+        3380699136,
+        706404311,
+        2916858135,
+        0,
+        793508638,
+        176228506,
+        3034841088,
+        1659908298,
+        0,
+        2023092458,
+        610643968,
+        3523215360,
+        1308748467,
+        0
+      ],
+      "prod": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "original_outputs": {
+      "m1": [
+        686596121,
+        3772911372,
+        4102649573,
+        1715655136,
+        4111565191,
+        1091414610,
+        3746720213,
+        275617691,
+        1168499187,
+        1272253884,
+        2555834029,
+        2070369235,
+        2296595831,
+        1741737932,
+        2507817495,
+        3975590831
+      ],
+      "m2": [
+        0,
+        4209483506,
+        3380699136,
+        706404311,
+        2916858135,
+        0,
+        793508638,
+        176228506,
+        3034841088,
+        1659908298,
+        0,
+        2023092458,
+        610643968,
+        3523215360,
+        1308748467,
+        0
+      ],
+      "prod": [
+        2987460116,
+        914392660,
+        1272211208,
+        815924873,
+        3498778462,
+        3252565424,
+        1225239293,
+        3416314727,
+        2430150628,
+        4228994616,
+        2254604945,
+        453963087,
+        4253050708,
+        3229913764,
+        459904837,
+        2876791215
+      ]
+    },
+    "candidate_outputs": {
+      "m1": [
+        686596121,
+        3772911372,
+        4102649573,
+        1715655136,
+        4111565191,
+        1091414610,
+        3746720213,
+        275617691,
+        1168499187,
+        1272253884,
+        2555834029,
+        2070369235,
+        2296595831,
+        1741737932,
+        2507817495,
+        3975590831
+      ],
+      "m2": [
+        0,
+        4209483506,
+        3380699136,
+        706404311,
+        2916858135,
+        0,
+        793508638,
+        176228506,
+        3034841088,
+        1659908298,
+        0,
+        2023092458,
+        610643968,
+        3523215360,
+        1308748467,
+        0
+      ],
+      "prod": [
+        3514492024,
+        4089326037,
+        4159436344,
+        329163807,
+        1105515953,
+        2353167189,
+        3847792738,
+        780239343,
+        2775389933,
+        1544389641,
+        372475190,
+        869668087,
+        3516157905,
+        4252833705,
+        29721838,
+        1152453653
+      ]
+    },
+    "elapsed_seconds": 8.1884
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

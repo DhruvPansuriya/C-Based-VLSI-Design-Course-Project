@@ -1,0 +1,40 @@
+{
+  "case": "byteswap32",
+  "variant": "buggy",
+  "expected": "not_equivalent",
+  "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+  "transformation": "Two-stage byte permutation",
+  "original": "benchmarks\\expanded\\byteswap32_original.c",
+  "candidate": "benchmarks\\expanded\\byteswap32_buggy.c",
+  "original_sha256": "90795d45851e75030af958450b91a9464cec16e5b7a67ace125c646238917ec9",
+  "candidate_sha256": "e4b436856166331211803590f9203173e3dd4e71546b8ebf33bd83c55e43c60a",
+  "verification": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 17,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "x": 0
+    },
+    "original_outputs": {
+      "return": 0
+    },
+    "candidate_outputs": {
+      "return": 1
+    },
+    "elapsed_seconds": 0.009584
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

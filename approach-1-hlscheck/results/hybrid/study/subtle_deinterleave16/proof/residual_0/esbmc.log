@@ -1,0 +1,610 @@
+ESBMC version 8.7.0 64-bit x86_64 windows
+
+Target: 32-bit little-endian i386-unknown-win32 with esbmclibc
+Parsing C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.243s
+GOTO program processing time: 0.007s
+Starting Bounded Model Checking
+Unwinding loop 4 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 4 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original
+Unwinding loop 3 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 27 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 27 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 27 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 27 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 27 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 27 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 27 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 27 column 3 function __hlscheck_candidate
+Symex completed in: 0.030s (545 assignments)
+Caching time: 0.000s (removed 40 assertions)
+Slicing time: 0.000s (removed 479 assignments)
+Generated 515 VCC(s), 25 remaining after simplification (26 assignments)
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 17 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 17 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 14 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 17 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 17 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 14 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 17 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 17 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 14 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 17 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 17 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 14 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 17 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 17 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 14 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 17 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 17 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 14 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 17 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 17 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 14 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 17 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 17 column 5 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 14 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 29 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 27 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 29 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 27 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 29 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 27 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 29 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 27 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 29 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 27 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 29 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 27 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 29 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 27 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 29 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on mul at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 30 column 5 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 27 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'EQUIV:observables at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 111 column 1 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+
+[Counterexample]
+
+
+State 1 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 111 column 1 function main thread 0
+----------------------------------------------------
+Violated property:
+  file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c line 111 column 1 function main
+  EQUIV:observables
+  __hlscheck_left_0[0] == __hlscheck_right_0[0] && __hlscheck_left_0[1] == __hlscheck_right_0[1] && __hlscheck_left_0[2] == __hlscheck_right_0[2] && __hlscheck_left_0[3] == __hlscheck_right_0[3] && __hlscheck_left_0[4] == __hlscheck_right_0[4] && __hlscheck_left_0[5] == __hlscheck_right_0[5] && __hlscheck_left_0[6] == __hlscheck_right_0[6] && __hlscheck_left_0[7] == __hlscheck_right_0[7] && __hlscheck_left_0[8] == __hlscheck_right_0[8] && __hlscheck_left_0[9] == __hlscheck_right_0[9] && __hlscheck_left_0[10] == __hlscheck_right_0[10] && __hlscheck_left_0[11] == __hlscheck_right_0[11] && __hlscheck_left_0[12] == __hlscheck_right_0[12] && __hlscheck_left_0[13] == __hlscheck_right_0[13] && __hlscheck_left_0[14] == __hlscheck_right_0[14] && __hlscheck_left_0[15] == __hlscheck_right_0[15] && __hlscheck_left_1[0] == __hlscheck_right_1[0] && __hlscheck_left_1[1] == __hlscheck_right_1[1] && __hlscheck_left_1[2] == __hlscheck_right_1[2] && __hlscheck_left_1[3] == __hlscheck_right_1[3] && __hlscheck_left_1[4] == __hlscheck_right_1[4] && __hlscheck_left_1[5] == __hlscheck_right_1[5] && __hlscheck_left_1[6] == __hlscheck_right_1[6] && __hlscheck_left_1[7] == __hlscheck_right_1[7] && __hlscheck_left_2[0] == __hlscheck_right_2[0] && __hlscheck_left_2[1] == __hlscheck_right_2[1] && __hlscheck_left_2[2] == __hlscheck_right_2[2] && __hlscheck_left_2[3] == __hlscheck_right_2[3] && __hlscheck_left_2[4] == __hlscheck_right_2[4] && __hlscheck_left_2[5] == __hlscheck_right_2[5] && __hlscheck_left_2[6] == __hlscheck_right_2[6] && __hlscheck_left_2[7] == __hlscheck_right_2[7]
+
+BMC program time: 0.495s
+
+** Results:
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c, function __hlscheck_candidate
+  PASSED       [__hlscheck_candidate.uninitialised-variable.1]  line  27  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.1]     line  27  arithmetic overflow on add
+  PASSED       [__hlscheck_candidate.uninitialised-variable.2]  line  27  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.2]     line  29  arithmetic overflow on mul
+  PASSED       [__hlscheck_candidate.assertion.1]               line  29  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.1]   line  29  dereference failure: array bounds violated
+  PASSED       [__hlscheck_candidate.uninitialised-variable.3]  line  29  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.3]     line  30  arithmetic overflow on add
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.4]     line  30  arithmetic overflow on mul
+  PASSED       [__hlscheck_candidate.assertion.2]               line  30  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.2]   line  30  dereference failure: array bounds violated
+  PASSED       [__hlscheck_candidate.uninitialised-variable.4]  line  30  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.assertion.3]               line  31  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.3]   line  31  dereference failure: array bounds violated
+  PASSED       [__hlscheck_candidate.uninitialised-variable.5]  line  31  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.uninitialised-variable.6]  line  31  use of uninitialized variable: x
+  PASSED       [__hlscheck_candidate.assertion.4]               line  32  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.4]   line  32  dereference failure: array bounds violated
+  PASSED       [__hlscheck_candidate.uninitialised-variable.7]  line  32  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.uninitialised-variable.8]  line  32  use of uninitialized variable: x
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c, function __hlscheck_original
+  PASSED       [__hlscheck_original.uninitialised-variable.1]   line  14  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.arithmetic-overflow.1]      line  14  arithmetic overflow on add
+  PASSED       [__hlscheck_original.uninitialised-variable.2]   line  14  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.arithmetic-overflow.2]      line  16  arithmetic overflow on mul
+  PASSED       [__hlscheck_original.assertion.1]                line  16  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_original.array-bounds-violated.1]    line  16  dereference failure: array bounds violated
+  PASSED       [__hlscheck_original.uninitialised-variable.3]   line  16  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.arithmetic-overflow.3]      line  17  arithmetic overflow on add
+  PASSED       [__hlscheck_original.arithmetic-overflow.4]      line  17  arithmetic overflow on mul
+  PASSED       [__hlscheck_original.assertion.2]                line  17  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_original.array-bounds-violated.2]    line  17  dereference failure: array bounds violated
+  PASSED       [__hlscheck_original.uninitialised-variable.4]   line  17  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.assertion.3]                line  18  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_original.array-bounds-violated.3]    line  18  dereference failure: array bounds violated
+  PASSED       [__hlscheck_original.uninitialised-variable.5]   line  18  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.uninitialised-variable.6]   line  18  use of uninitialized variable: x
+  PASSED       [__hlscheck_original.assertion.4]                line  19  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_original.array-bounds-violated.4]    line  19  dereference failure: array bounds violated
+  PASSED       [__hlscheck_original.uninitialised-variable.7]   line  19  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.uninitialised-variable.8]   line  19  use of uninitialized variable: y
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\subtle_deinterleave16\proof\residual_0\miter.c, function main
+  PASSED       [main.uninitialised-variable.1]                  line  41  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.2]                  line  42  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.3]                  line  43  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.4]                  line  44  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.5]                  line  45  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.6]                  line  46  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.7]                  line  47  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.8]                  line  48  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.9]                  line  49  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.10]                 line  50  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.11]                 line  51  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.12]                 line  52  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.13]                 line  53  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.14]                 line  54  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.15]                 line  55  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.16]                 line  56  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.17]                 line  57  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.18]                 line  58  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.19]                 line  59  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.20]                 line  60  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.21]                 line  61  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.22]                 line  62  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.23]                 line  63  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.24]                 line  64  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.25]                 line  65  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.26]                 line  66  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.27]                 line  67  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.28]                 line  68  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.29]                 line  69  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.30]                 line  70  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.31]                 line  71  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.32]                 line  72  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.33]                 line  75  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.34]                 line  76  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.35]                 line  77  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.36]                 line  78  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.37]                 line  79  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.38]                 line  80  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.39]                 line  81  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.40]                 line  82  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.41]                 line  83  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.42]                 line  84  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.43]                 line  85  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.44]                 line  86  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.45]                 line  87  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.46]                 line  88  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.47]                 line  89  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.48]                 line  90  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.49]                 line  93  use of uninitialized variable: __hlscheck_input_2
+  PASSED       [main.uninitialised-variable.50]                 line  94  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.51]                 line  95  use of uninitialized variable: __hlscheck_input_2
+  PASSED       [main.uninitialised-variable.52]                 line  96  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.53]                 line  97  use of uninitialized variable: __hlscheck_input_2
+  PASSED       [main.uninitialised-variable.54]                 line  98  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.55]                 line  99  use of uninitialized variable: __hlscheck_input_2
+  PASSED       [main.uninitialised-variable.56]                 line 100  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.57]                 line 101  use of uninitialized variable: __hlscheck_input_2
+  PASSED       [main.uninitialised-variable.58]                 line 102  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.59]                 line 103  use of uninitialized variable: __hlscheck_input_2
+  PASSED       [main.uninitialised-variable.60]                 line 104  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.61]                 line 105  use of uninitialized variable: __hlscheck_input_2
+  PASSED       [main.uninitialised-variable.62]                 line 106  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.63]                 line 107  use of uninitialized variable: __hlscheck_input_2
+  PASSED       [main.uninitialised-variable.64]                 line 108  use of uninitialized variable: __hlscheck_left_2
+  FAILED       [main.assertion.1]                               line 111  EQUIV:observables
+  PASSED       [main.uninitialised-variable.65]                 line 111  use of uninitialized variable: __hlscheck_left_0 [2[0]]
+  PASSED       [main.uninitialised-variable.66]                 line 111  use of uninitialized variable: __hlscheck_left_0 [2[1]]
+  PASSED       [main.uninitialised-variable.67]                 line 111  use of uninitialized variable: __hlscheck_left_0 [2[2]]
+  PASSED       [main.uninitialised-variable.68]                 line 111  use of uninitialized variable: __hlscheck_left_0 [2[3]]
+  PASSED       [main.uninitialised-variable.69]                 line 111  use of uninitialized variable: __hlscheck_left_0 [2[4]]
+  PASSED       [main.uninitialised-variable.70]                 line 111  use of uninitialized variable: __hlscheck_left_0 [2[5]]
+  PASSED       [main.uninitialised-variable.71]                 line 111  use of uninitialized variable: __hlscheck_left_0 [2[6]]
+  PASSED       [main.uninitialised-variable.72]                 line 111  use of uninitialized variable: __hlscheck_left_0 [2[7]]
+  PASSED       [main.uninitialised-variable.73]                 line 111  use of uninitialized variable: __hlscheck_left_0 [2[8]]
+  PASSED       [main.uninitialised-variable.74]                 line 111  use of uninitialized variable: __hlscheck_left_0 [2[9]]
+  PASSED       [main.uninitialised-variable.75]                 line 111  use of uninitialized variable: __hlscheck_left_0 [2[10]]
+  PASSED       [main.uninitialised-variable.76]                 line 111  use of uninitialized variable: __hlscheck_left_0 [2[11]]
+  PASSED       [main.uninitialised-variable.77]                 line 111  use of uninitialized variable: __hlscheck_left_0 [2[12]]
+  PASSED       [main.uninitialised-variable.78]                 line 111  use of uninitialized variable: __hlscheck_left_0 [2[13]]
+  PASSED       [main.uninitialised-variable.79]                 line 111  use of uninitialized variable: __hlscheck_left_0 [2[14]]
+  PASSED       [main.uninitialised-variable.80]                 line 111  use of uninitialized variable: __hlscheck_left_0 [2[15]]
+  PASSED       [main.uninitialised-variable.81]                 line 111  use of uninitialized variable: __hlscheck_left_1 [5[0]]
+  PASSED       [main.uninitialised-variable.82]                 line 111  use of uninitialized variable: __hlscheck_left_1 [5[1]]
+  PASSED       [main.uninitialised-variable.83]                 line 111  use of uninitialized variable: __hlscheck_left_1 [5[2]]
+  PASSED       [main.uninitialised-variable.84]                 line 111  use of uninitialized variable: __hlscheck_left_1 [5[3]]
+  PASSED       [main.uninitialised-variable.85]                 line 111  use of uninitialized variable: __hlscheck_left_1 [5[4]]
+  PASSED       [main.uninitialised-variable.86]                 line 111  use of uninitialized variable: __hlscheck_left_1 [5[5]]
+  PASSED       [main.uninitialised-variable.87]                 line 111  use of uninitialized variable: __hlscheck_left_1 [5[6]]
+  PASSED       [main.uninitialised-variable.88]                 line 111  use of uninitialized variable: __hlscheck_left_1 [5[7]]
+  PASSED       [main.uninitialised-variable.89]                 line 111  use of uninitialized variable: __hlscheck_left_2 [8[0]]
+  PASSED       [main.uninitialised-variable.90]                 line 111  use of uninitialized variable: __hlscheck_left_2 [8[1]]
+  PASSED       [main.uninitialised-variable.91]                 line 111  use of uninitialized variable: __hlscheck_left_2 [8[2]]
+  PASSED       [main.uninitialised-variable.92]                 line 111  use of uninitialized variable: __hlscheck_left_2 [8[3]]
+  PASSED       [main.uninitialised-variable.93]                 line 111  use of uninitialized variable: __hlscheck_left_2 [8[4]]
+  PASSED       [main.uninitialised-variable.94]                 line 111  use of uninitialized variable: __hlscheck_left_2 [8[5]]
+  PASSED       [main.uninitialised-variable.95]                 line 111  use of uninitialized variable: __hlscheck_left_2 [8[6]]
+  PASSED       [main.uninitialised-variable.96]                 line 111  use of uninitialized variable: __hlscheck_left_2 [8[7]]
+  PASSED       [main.uninitialised-variable.97]                 line 111  use of uninitialized variable: __hlscheck_right_0 [3[0]]
+  PASSED       [main.uninitialised-variable.98]                 line 111  use of uninitialized variable: __hlscheck_right_0 [3[1]]
+  PASSED       [main.uninitialised-variable.99]                 line 111  use of uninitialized variable: __hlscheck_right_0 [3[2]]
+  PASSED       [main.uninitialised-variable.100]                line 111  use of uninitialized variable: __hlscheck_right_0 [3[3]]
+  PASSED       [main.uninitialised-variable.101]                line 111  use of uninitialized variable: __hlscheck_right_0 [3[4]]
+  PASSED       [main.uninitialised-variable.102]                line 111  use of uninitialized variable: __hlscheck_right_0 [3[5]]
+  PASSED       [main.uninitialised-variable.103]                line 111  use of uninitialized variable: __hlscheck_right_0 [3[6]]
+  PASSED       [main.uninitialised-variable.104]                line 111  use of uninitialized variable: __hlscheck_right_0 [3[7]]
+  PASSED       [main.uninitialised-variable.105]                line 111  use of uninitialized variable: __hlscheck_right_0 [3[8]]
+  PASSED       [main.uninitialised-variable.106]                line 111  use of uninitialized variable: __hlscheck_right_0 [3[9]]
+  PASSED       [main.uninitialised-variable.107]                line 111  use of uninitialized variable: __hlscheck_right_0 [3[10]]
+  PASSED       [main.uninitialised-variable.108]                line 111  use of uninitialized variable: __hlscheck_right_0 [3[11]]
+  PASSED       [main.uninitialised-variable.109]                line 111  use of uninitialized variable: __hlscheck_right_0 [3[12]]
+  PASSED       [main.uninitialised-variable.110]                line 111  use of uninitialized variable: __hlscheck_right_0 [3[13]]
+  PASSED       [main.uninitialised-variable.111]                line 111  use of uninitialized variable: __hlscheck_right_0 [3[14]]
+  PASSED       [main.uninitialised-variable.112]                line 111  use of uninitialized variable: __hlscheck_right_0 [3[15]]
+  PASSED       [main.uninitialised-variable.113]                line 111  use of uninitialized variable: __hlscheck_right_1 [6[0]]
+  PASSED       [main.uninitialised-variable.114]                line 111  use of uninitialized variable: __hlscheck_right_1 [6[1]]
+  PASSED       [main.uninitialised-variable.115]                line 111  use of uninitialized variable: __hlscheck_right_1 [6[2]]
+  PASSED       [main.uninitialised-variable.116]                line 111  use of uninitialized variable: __hlscheck_right_1 [6[3]]
+  PASSED       [main.uninitialised-variable.117]                line 111  use of uninitialized variable: __hlscheck_right_1 [6[4]]
+  PASSED       [main.uninitialised-variable.118]                line 111  use of uninitialized variable: __hlscheck_right_1 [6[5]]
+  PASSED       [main.uninitialised-variable.119]                line 111  use of uninitialized variable: __hlscheck_right_1 [6[6]]
+  PASSED       [main.uninitialised-variable.120]                line 111  use of uninitialized variable: __hlscheck_right_1 [6[7]]
+  PASSED       [main.uninitialised-variable.121]                line 111  use of uninitialized variable: __hlscheck_right_2 [9[0]]
+  PASSED       [main.uninitialised-variable.122]                line 111  use of uninitialized variable: __hlscheck_right_2 [9[1]]
+  PASSED       [main.uninitialised-variable.123]                line 111  use of uninitialized variable: __hlscheck_right_2 [9[2]]
+  PASSED       [main.uninitialised-variable.124]                line 111  use of uninitialized variable: __hlscheck_right_2 [9[3]]
+  PASSED       [main.uninitialised-variable.125]                line 111  use of uninitialized variable: __hlscheck_right_2 [9[4]]
+  PASSED       [main.uninitialised-variable.126]                line 111  use of uninitialized variable: __hlscheck_right_2 [9[5]]
+  PASSED       [main.uninitialised-variable.127]                line 111  use of uninitialized variable: __hlscheck_right_2 [9[6]]
+  PASSED       [main.uninitialised-variable.128]                line 111  use of uninitialized variable: __hlscheck_right_2 [9[7]]
+
+** 1 of 169 properties failed, 168 passed
+Solver: Z3 v4.13.3 â€¢ Decision procedure total time: 0.011s â€¢ Avg: 0.000s/property
+
+VERIFICATION FAILED

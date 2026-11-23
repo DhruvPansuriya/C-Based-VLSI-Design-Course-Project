@@ -1,0 +1,20 @@
+{
+  "model": "gpt61sol",
+  "case": "chstone_gsm_add",
+  "messages_sha256": "f031c62701d81adbcc921afc19cf0fc59d0333bf1c0b7ccc05b226b060aaa1ba",
+  "original_sha256": "576ad7505e040b46dff1896f3961b88e7c8a55b1bbd2613fc7b8da6b8f60410a",
+  "raw_response_sha256": "409516af9c32eea2daecd9b0a07e45b184d0038925a81bb023453f1fb68fee7e",
+  "candidate_sha256": "409516af9c32eea2daecd9b0a07e45b184d0038925a81bb023453f1fb68fee7e",
+  "extraction": "entire response; no semantic edits",
+  "finish_reason": "complete",
+  "invocation": {
+    "model": "gpt-6.1-sol",
+    "fork_turns": "none",
+    "task_name": "two_model_add",
+    "task_text": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation.\n\nQuickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\n/*\n+--------------------------------------------------------------------------+\n| CHStone : a suite of benchmark programs for C-based High-Level Synthesis |\n| ======================================================================== |\n|                                                                          |\n| * Collected and Modified : Y. Hara, H. Tomiyama, S. Honda,               |\n|                            H. Takada and K. Ishii                        |\n|                            Nagoya University, Japan                      |\n|                                                                          |\n| * Remark :                                                               |\n|    1. This source code is modified to unify the formats of the benchmark |\n|       programs in CHStone.                                               |\n|    2. Test vectors are added for CHStone.                                |\n|    3. If \"main_result\" is 0 at the end of the program, the program is    |\n|       correctly executed.                                                |\n|    4. Please follow the copyright of each benchmark program.             |\n+--------------------------------------------------------------------------+\n*/\n/*\n * Copyright 1992 by Jutta Degener and Carsten Bormann, Technische\n * Universitaet Berlin.  See the accompanying file \"COPYRIGHT\" for\n * details.  THERE IS ABSOLUTELY NO WARRANTY FOR THIS SOFTWARE.\n */\n\n\ntypedef short word;\ntypedef long longword;\n#define MIN_WORD ((-32767)-1)\n#define MAX_WORD (32767)\n#define saturate(x) ((x)<MIN_WORD?MIN_WORD:(x)>MAX_WORD?MAX_WORD:(x))\nword\nkernel (word a, word b)\n{\n  longword sum;\n  sum = (longword) a + (longword) b;\n  return saturate (sum);\n}\n```\n",
+    "source": "Actual first code response returned by fresh collaboration.spawn_agent task; no repair or verification feedback"
+  },
+  "sampling_controls": "Not exposed by Codex",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0
+}

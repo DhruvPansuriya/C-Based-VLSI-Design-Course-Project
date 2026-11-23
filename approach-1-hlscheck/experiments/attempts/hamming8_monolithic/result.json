@@ -1,0 +1,30 @@
+{
+  "case": "hamming8",
+  "variant": "optimized",
+  "expected": "equivalent",
+  "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+  "transformation": "Replace nested bit scans with byte SWAR",
+  "original": "benchmarks\\expanded\\hamming8_original.c",
+  "candidate": "benchmarks\\expanded\\hamming8_optimized.c",
+  "original_sha256": "e71a55c25cae5c4e78276d4a37a4451746381ed56d9e1635e699aa2d252851a6",
+  "candidate_sha256": "bc50655c6c6ea5a21c16dbd2a44e97899b5198e3597052598daeef7883737d3e",
+  "verification": {
+    "status": "unknown",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 236,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "reason": "canceled",
+    "elapsed_seconds": 30.034879
+  },
+  "checker_sha256": "2702c0af67f6f2b164214e249445b9f2a81b8b8a0ac864583f990bf41290bbbb",
+  "timeout_ms": 30000
+}

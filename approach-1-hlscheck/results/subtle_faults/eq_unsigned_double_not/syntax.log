@@ -1,0 +1,4 @@
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\experiments\subtle_faults\eq_unsigned_double_not\candidate.c:2:38: warning: unused parameter 'y' [-Wunused-parameter]
+    2 | uint32_t kernel(uint32_t x, uint32_t y){return ~(~x);}
+      |                                      ^
+1 warning generated.

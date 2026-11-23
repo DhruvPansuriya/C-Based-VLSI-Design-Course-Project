@@ -1,0 +1,15 @@
+; benchmark generated from python API
+(set-info :status unknown)
+(declare-fun arg2 () (_ BitVec 32))
+(declare-fun arg0_0 () (_ BitVec 32))
+(declare-fun arg1_0 () (_ BitVec 32))
+(assert
+ (let (($x528673 (and (distinct (_ bv0 32) (_ bv0 32)) true)))
+(let ((?x481984 (bvnot (bvadd ((_ extract 0 0) arg1_0) (bvmul ((_ extract 0 0) arg0_0) ((_ extract 0 0) arg2))))))
+(let ((?x488649 (concat ((_ extract 31 1) (bvadd arg1_0 (bvmul arg0_0 arg2))) ?x481984)))
+(let ((?x431695 (bvmul arg0_0 arg2)))
+(let (($x357801 (and (distinct (_ bv0 32) (bvadd arg1_0 ?x431695 (bvmul (_ bv4294967295 32) ?x488649))) true)))
+(let (($x489510 (or $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x357801 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673 $x528673)))
+(let (($x509018 (and true true $x489510)))
+(or $x509018)))))))))
+(check-sat)

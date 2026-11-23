@@ -1,0 +1,342 @@
+[
+  {
+    "coverage": {
+      "files": {
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_convolution1d8_buggy\\proof\\residual_1\\miter.c": {
+          "coverage_stats": {
+            "covered_lines": 10,
+            "total_hits": 11
+          },
+          "covered_lines": {
+            "107": {
+              "covered": true,
+              "hits": 1,
+              "type": "violation"
+            },
+            "109": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "18": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "48": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "49": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "50": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "51": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "52": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "53": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "77": {
+              "covered": true,
+              "hits": 2,
+              "type": "execution"
+            }
+          }
+        }
+      }
+    },
+    "initial_values": {
+      "__hlscheck_left_1": {
+        "name": "__hlscheck_left_1",
+        "type": "array",
+        "value": "{ 0, 0, 0, 0, 0, 0 }"
+      },
+      "__hlscheck_right_1": {
+        "name": "__hlscheck_right_1",
+        "type": "array",
+        "value": "{ 0, 0, 0, 0, 0, 0 }"
+      },
+      "out[0]": {
+        "name": "out[0]",
+        "type": "unsigned",
+        "value": "0"
+      },
+      "out[1]": {
+        "name": "out[1]",
+        "type": "unsigned",
+        "value": "0"
+      }
+    },
+    "source_files": {
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_convolution1d8_buggy\\proof\\residual_1\\miter.c": [
+        "",
+        "_Static_assert(sizeof(char)==1 && sizeof(short)==2 && sizeof(int)==4 &&",
+        "               sizeof(long)==4 && sizeof(long long)==8 && sizeof(void*)==4, \"HLSCheck ILP32 ABI\");",
+        "_Static_assert((char)-1 < 0, \"HLSCheck requires signed plain char\");",
+        "_Static_assert((unsigned char)-1 == 255, \"HLSCheck requires 8-bit bytes\");",
+        "",
+        "extern void __ESBMC_assert(_Bool, const char *);",
+        "extern void __ESBMC_assume(_Bool);",
+        "extern unsigned int __hlscheck_nondet_0(void);",
+        "extern unsigned int __hlscheck_nondet_1(void);",
+        "void __hlscheck_original(unsigned int a[8], unsigned int out[6])",
+        "{",
+        "}",
+        "",
+        "",
+        "void __hlscheck_candidate(unsigned int a[8], unsigned int out[6])",
+        "{",
+        "  out[0] ^= 1u;",
+        "}",
+        "",
+        "",
+        "void __hlscheck_summary(unsigned int a[8], unsigned int out[6])",
+        "{",
+        "  unsigned int __summary_input_0[8];",
+        "  __summary_input_0[0] = a[0];",
+        "  __summary_input_0[1] = a[1];",
+        "  __summary_input_0[2] = a[2];",
+        "  __summary_input_0[3] = a[3];",
+        "  __summary_input_0[4] = a[4];",
+        "  __summary_input_0[5] = a[5];",
+        "  __summary_input_0[6] = a[6];",
+        "  __summary_input_0[7] = a[7];",
+        "  unsigned int __summary_input_1[6];",
+        "  __summary_input_1[0] = out[0];",
+        "  __summary_input_1[1] = out[1];",
+        "  __summary_input_1[2] = out[2];",
+        "  __summary_input_1[3] = out[3];",
+        "  __summary_input_1[4] = out[4];",
+        "  __summary_input_1[5] = out[5];",
+        "  a[0] = __summary_input_0[0];",
+        "  a[1] = __summary_input_0[1];",
+        "  a[2] = __summary_input_0[2];",
+        "  a[3] = __summary_input_0[3];",
+        "  a[4] = __summary_input_0[4];",
+        "  a[5] = __summary_input_0[5];",
+        "  a[6] = __summary_input_0[6];",
+        "  a[7] = __summary_input_0[7];",
+        "  out[0] = ((3u * __summary_input_0[0]) + (3u * __summary_input_0[2])) + (5u * __summary_input_0[1]);",
+        "  out[1] = ((3u * __summary_input_0[1]) + (3u * __summary_input_0[3])) + (5u * __summary_input_0[2]);",
+        "  out[2] = ((3u * __summary_input_0[2]) + (3u * __summary_input_0[4])) + (5u * __summary_input_0[3]);",
+        "  out[3] = ((3u * __summary_input_0[3]) + (3u * __summary_input_0[5])) + (5u * __summary_input_0[4]);",
+        "  out[4] = ((3u * __summary_input_0[4]) + (3u * __summary_input_0[6])) + (5u * __summary_input_0[5]);",
+        "  out[5] = ((3u * __summary_input_0[5]) + (3u * __summary_input_0[7])) + (5u * __summary_input_0[6]);",
+        "}",
+        "",
+        "",
+        "int main(void) {",
+        "unsigned int __hlscheck_input_0[8]={__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0()};",
+        "unsigned int __hlscheck_left_0[8], __hlscheck_right_0[8];",
+        "__hlscheck_left_0[0]=__hlscheck_input_0[0];",
+        "__hlscheck_right_0[0]=__hlscheck_left_0[0];",
+        "__hlscheck_left_0[1]=__hlscheck_input_0[1];",
+        "__hlscheck_right_0[1]=__hlscheck_left_0[1];",
+        "__hlscheck_left_0[2]=__hlscheck_input_0[2];",
+        "__hlscheck_right_0[2]=__hlscheck_left_0[2];",
+        "__hlscheck_left_0[3]=__hlscheck_input_0[3];",
+        "__hlscheck_right_0[3]=__hlscheck_left_0[3];",
+        "__hlscheck_left_0[4]=__hlscheck_input_0[4];",
+        "__hlscheck_right_0[4]=__hlscheck_left_0[4];",
+        "__hlscheck_left_0[5]=__hlscheck_input_0[5];",
+        "__hlscheck_right_0[5]=__hlscheck_left_0[5];",
+        "__hlscheck_left_0[6]=__hlscheck_input_0[6];",
+        "__hlscheck_right_0[6]=__hlscheck_left_0[6];",
+        "__hlscheck_left_0[7]=__hlscheck_input_0[7];",
+        "__hlscheck_right_0[7]=__hlscheck_left_0[7];",
+        "unsigned int __hlscheck_input_1[6]={__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1(),__hlscheck_nondet_1()};",
+        "unsigned int __hlscheck_left_1[6], __hlscheck_right_1[6];",
+        "__hlscheck_left_1[0]=__hlscheck_input_1[0];",
+        "__hlscheck_right_1[0]=__hlscheck_left_1[0];",
+        "__hlscheck_left_1[1]=__hlscheck_input_1[1];",
+        "__hlscheck_right_1[1]=__hlscheck_left_1[1];",
+        "__hlscheck_left_1[2]=__hlscheck_input_1[2];",
+        "__hlscheck_right_1[2]=__hlscheck_left_1[2];",
+        "__hlscheck_left_1[3]=__hlscheck_input_1[3];",
+        "__hlscheck_right_1[3]=__hlscheck_left_1[3];",
+        "__hlscheck_left_1[4]=__hlscheck_input_1[4];",
+        "__hlscheck_right_1[4]=__hlscheck_left_1[4];",
+        "__hlscheck_left_1[5]=__hlscheck_input_1[5];",
+        "__hlscheck_right_1[5]=__hlscheck_left_1[5];",
+        "__hlscheck_summary(__hlscheck_left_0,__hlscheck_left_1);",
+        "__hlscheck_right_0[0]=__hlscheck_left_0[0];",
+        "__hlscheck_right_0[1]=__hlscheck_left_0[1];",
+        "__hlscheck_right_0[2]=__hlscheck_left_0[2];",
+        "__hlscheck_right_0[3]=__hlscheck_left_0[3];",
+        "__hlscheck_right_0[4]=__hlscheck_left_0[4];",
+        "__hlscheck_right_0[5]=__hlscheck_left_0[5];",
+        "__hlscheck_right_0[6]=__hlscheck_left_0[6];",
+        "__hlscheck_right_0[7]=__hlscheck_left_0[7];",
+        "__hlscheck_right_1[0]=__hlscheck_left_1[0];",
+        "__hlscheck_right_1[1]=__hlscheck_left_1[1];",
+        "__hlscheck_right_1[2]=__hlscheck_left_1[2];",
+        "__hlscheck_right_1[3]=__hlscheck_left_1[3];",
+        "__hlscheck_right_1[4]=__hlscheck_left_1[4];",
+        "__hlscheck_right_1[5]=__hlscheck_left_1[5];",
+        "__hlscheck_original(__hlscheck_left_0,__hlscheck_left_1);",
+        "__hlscheck_candidate(__hlscheck_right_0,__hlscheck_right_1);",
+        "__ESBMC_assert((__hlscheck_left_0[0]==__hlscheck_right_0[0]) && (__hlscheck_left_0[1]==__hlscheck_right_0[1]) && (__hlscheck_left_0[2]==__hlscheck_right_0[2]) && (__hlscheck_left_0[3]==__hlscheck_right_0[3]) && (__hlscheck_left_0[4]==__hlscheck_right_0[4]) && (__hlscheck_left_0[5]==__hlscheck_right_0[5]) && (__hlscheck_left_0[6]==__hlscheck_right_0[6]) && (__hlscheck_left_0[7]==__hlscheck_right_0[7]) && (__hlscheck_left_1[0]==__hlscheck_right_1[0]) && (__hlscheck_left_1[1]==__hlscheck_right_1[1]) && (__hlscheck_left_1[2]==__hlscheck_right_1[2]) && (__hlscheck_left_1[3]==__hlscheck_right_1[3]) && (__hlscheck_left_1[4]==__hlscheck_right_1[4]) && (__hlscheck_left_1[5]==__hlscheck_right_1[5]),\"EQUIV:observables\");",
+        "return 0;",
+        "}"
+      ]
+    },
+    "status": "violation",
+    "steps": [
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_1",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_convolution1d8_buggy\\proof\\residual_1\\miter.c",
+        "function": "main",
+        "line": "77",
+        "step_number": 0,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_1",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_convolution1d8_buggy\\proof\\residual_1\\miter.c",
+        "function": "main",
+        "line": "77",
+        "step_number": 1,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[0]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_convolution1d8_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "48",
+        "step_number": 2,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[1]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_convolution1d8_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "49",
+        "step_number": 3,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[2]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_convolution1d8_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "50",
+        "step_number": 4,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[3]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_convolution1d8_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "51",
+        "step_number": 5,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[4]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_convolution1d8_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "52",
+        "step_number": 6,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[5]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_convolution1d8_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "53",
+        "step_number": 7,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[0]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_convolution1d8_buggy\\proof\\residual_1\\miter.c",
+        "function": "__hlscheck_candidate",
+        "line": "18",
+        "step_number": 8,
+        "type": "assignment"
+      },
+      {
+        "assertion": {
+          "comment": "EQUIV:observables",
+          "guard": "__hlscheck_left_0[0] == __hlscheck_right_0[0] && __hlscheck_left_0[1] == __hlscheck_right_0[1] && __hlscheck_left_0[2] == __hlscheck_right_0[2] && __hlscheck_left_0[3] == __hlscheck_right_0[3] && __hlscheck_left_0[4] == __hlscheck_right_0[4] && __hlscheck_left_0[5] == __hlscheck_right_0[5] && __hlscheck_left_0[6] == __hlscheck_right_0[6] && __hlscheck_left_0[7] == __hlscheck_right_0[7] && __hlscheck_left_1[0] == __hlscheck_right_1[0] && __hlscheck_left_1[1] == __hlscheck_right_1[1] && __hlscheck_left_1[2] == __hlscheck_right_1[2] && __hlscheck_left_1[3] == __hlscheck_right_1[3] && __hlscheck_left_1[4] == __hlscheck_right_1[4] && __hlscheck_left_1[5] == __hlscheck_right_1[5]",
+          "violated": true
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_convolution1d8_buggy\\proof\\residual_1\\miter.c",
+        "function": "main",
+        "line": "107",
+        "message": "EQUIV:observables",
+        "step_number": 9,
+        "type": "violation"
+      },
+      {
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_convolution1d8_buggy\\proof\\residual_1\\miter.c",
+        "function": "main",
+        "line": "109",
+        "message": "Assumption restriction",
+        "step_number": 10,
+        "type": "assume"
+      }
+    ]
+  }
+]

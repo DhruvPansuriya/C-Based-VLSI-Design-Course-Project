@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "comparisons": 264,
+  "cpp_standard": "c++17",
+  "command": [
+    "C:\\MinGW\\mingw32\\bin\\clang++.EXE",
+    "-std=c++17",
+    "-O2",
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\matmul_loop_order\\native_cpp_test.cpp",
+    "-o",
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\matmul_loop_order\\matmul_cpp_check.exe"
+  ],
+  "harness_sha256": "d64fe5a9a9564ff09747f27f03568aac0a37ef43e69487780d4a22acadec92bf",
+  "sample_stdout": "A = B = rows [1..4], [5..8], [9..12], [13..16]; A*B:\n  90  100  110  120 \n 202  228  254  280 \n 314  356  398  440 \n 426  484  542  600 \n"
+}

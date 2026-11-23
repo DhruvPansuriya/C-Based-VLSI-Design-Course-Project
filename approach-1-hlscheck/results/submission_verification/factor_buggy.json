@@ -1,0 +1,42 @@
+{
+  "case": "factor",
+  "variant": "buggy",
+  "expected": "not_equivalent",
+  "origin": "educational arithmetic control",
+  "transformation": "distributive factoring",
+  "original": "benchmarks\\submission\\factor_original.c",
+  "candidate": "benchmarks\\submission\\factor_buggy.c",
+  "original_sha256": "4c5ab0c47fe19460d398b0ac0b97c451aa195b9a8a78967aa4d96700a1827e9a",
+  "candidate_sha256": "361790b87f13c0812f0ce1ecb158f1421a73e36892d721598b5236a92e52cd10",
+  "verification": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 4,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "x": 269051746,
+      "y": 0,
+      "z": 2998257497
+    },
+    "original_outputs": {
+      "return": 518790930
+    },
+    "candidate_outputs": {
+      "return": 2998257497
+    },
+    "elapsed_seconds": 0.037466
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

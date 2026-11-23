@@ -1,0 +1,38 @@
+{
+  "id": "triangular_matvec4_seed5292",
+  "case": "triangular_matvec4",
+  "source": "benchmarks\\expanded\\triangular_matvec4_original.c",
+  "source_sha256": "15a86280cc9ba8e62a44b1ba000df6e9fa4def37f2a481c2e5a2e548fb9e6224",
+  "request_sha256": "01be39f174d3cbc70d10c7aed89ce2cc3d7f4b655960b45926bd7e354f823f45",
+  "raw_response_sha256": "d97362d90f55c578347c9a0ffdf69a9cccddf364fc2776be0a8f80a1266b4029",
+  "candidate_sha256": "783657d09bdf5379703a64ab007731604b2322e3bdea8e2e08589bd4f93057d6",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 133,
+    "prompt_tokens": 300,
+    "total_tokens": 433,
+    "prompt_tokens_details": {
+      "cached_tokens": 227
+    }
+  },
+  "timings": {
+    "cache_n": 227,
+    "prompt_n": 73,
+    "prompt_ms": 38.389,
+    "prompt_per_token_ms": 0.5258767123287672,
+    "prompt_per_second": 1901.5863919351898,
+    "predicted_n": 133,
+    "predicted_ms": 1063.175,
+    "predicted_per_token_ms": 8.054356060606061,
+    "predicted_per_second": 124.15641827544854
+  },
+  "elapsed_seconds": 1.12,
+  "extraction": "largest fenced code block; no semantic edits",
+  "model_repository": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+  "model_revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+  "model_sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+  "runtime_release": "b12619",
+  "origin": "Actual independently generated local-model optimization attempt; not an injected mutation",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0
+}

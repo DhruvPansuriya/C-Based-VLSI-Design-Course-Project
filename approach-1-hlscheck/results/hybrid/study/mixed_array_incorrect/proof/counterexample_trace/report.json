@@ -1,0 +1,1813 @@
+[
+  {
+    "coverage": {
+      "files": {
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c": {
+          "coverage_stats": {
+            "covered_lines": 90,
+            "total_hits": 92
+          },
+          "covered_lines": {
+            "100": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "102": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "103": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "104": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "105": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "106": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "107": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "108": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "109": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "110": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "111": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "112": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "113": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "114": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "115": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "116": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "117": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "118": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "119": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "120": {
+              "covered": true,
+              "hits": 1,
+              "type": "violation"
+            },
+            "26": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "27": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "28": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "29": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "30": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "31": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "32": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "33": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "34": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "35": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "36": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "37": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "38": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "39": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "40": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "41": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "42": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "43": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "44": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "45": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "46": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "47": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "48": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "49": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "50": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "51": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "52": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "53": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "54": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "55": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "56": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "57": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "58": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "59": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "64": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "65": {
+              "covered": true,
+              "hits": 2,
+              "type": "execution"
+            },
+            "66": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "67": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "68": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "69": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "70": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "71": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "72": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "73": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "74": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "75": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "76": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "77": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "78": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "79": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "80": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "81": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "82": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "83": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "84": {
+              "covered": true,
+              "hits": 2,
+              "type": "execution"
+            },
+            "85": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "86": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "87": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "88": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "89": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "90": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "91": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "92": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "93": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "94": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "95": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "96": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "97": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "98": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            },
+            "99": {
+              "covered": true,
+              "hits": 1,
+              "type": "execution"
+            }
+          }
+        }
+      }
+    },
+    "initial_values": {
+      "__hlscheck_input_0": {
+        "name": "__hlscheck_input_0",
+        "type": "array",
+        "value": "{ 1, 1, 1, 1, 1, 6553, 1, 0 }"
+      },
+      "__hlscheck_left_0": {
+        "name": "__hlscheck_left_0",
+        "type": "array",
+        "value": "{ 0, 0, 0, 0, 0, 0, 0, 0 }"
+      },
+      "__hlscheck_left_0[0]": {
+        "name": "__hlscheck_left_0[0]",
+        "type": "unsigned",
+        "value": "1"
+      },
+      "__hlscheck_right_0": {
+        "name": "__hlscheck_right_0",
+        "type": "array",
+        "value": "{ 13, 13, 13, 13, 13, 13, 13, 0 }"
+      }
+    },
+    "source_files": {
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c": [
+        "",
+        "_Static_assert(sizeof(char)==1 && sizeof(short)==2 && sizeof(int)==4 &&",
+        "               sizeof(long)==4 && sizeof(long long)==8 && sizeof(void*)==4, \"HLSCheck ILP32 ABI\");",
+        "_Static_assert((char)-1 < 0, \"HLSCheck requires signed plain char\");",
+        "_Static_assert((unsigned char)-1 == 255, \"HLSCheck requires 8-bit bytes\");",
+        "",
+        "extern void __ESBMC_assert(_Bool, const char *);",
+        "extern void __ESBMC_assume(_Bool);",
+        "extern unsigned int __hlscheck_nondet_0(void);",
+        "extern unsigned int __hlscheck_nondet_1(void);",
+        "extern unsigned int __hlscheck_nondet_2(void);",
+        "unsigned int __hlscheck_original(unsigned int a[8], unsigned int index, unsigned int out[8])",
+        "{",
+        "  return out[index & 7u];",
+        "}",
+        "",
+        "",
+        "unsigned int __hlscheck_candidate(unsigned int a[8], unsigned int index, unsigned int out[8])",
+        "{",
+        "  return (a[index % 8u] * 13u) + 1u;",
+        "}",
+        "",
+        "",
+        "void __hlscheck_summary(unsigned int a[8], unsigned int index, unsigned int out[8])",
+        "{",
+        "  unsigned int __summary_input_0[8];",
+        "  __summary_input_0[0] = a[0];",
+        "  __summary_input_0[1] = a[1];",
+        "  __summary_input_0[2] = a[2];",
+        "  __summary_input_0[3] = a[3];",
+        "  __summary_input_0[4] = a[4];",
+        "  __summary_input_0[5] = a[5];",
+        "  __summary_input_0[6] = a[6];",
+        "  __summary_input_0[7] = a[7];",
+        "  unsigned int __summary_input_2[8];",
+        "  __summary_input_2[0] = out[0];",
+        "  __summary_input_2[1] = out[1];",
+        "  __summary_input_2[2] = out[2];",
+        "  __summary_input_2[3] = out[3];",
+        "  __summary_input_2[4] = out[4];",
+        "  __summary_input_2[5] = out[5];",
+        "  __summary_input_2[6] = out[6];",
+        "  __summary_input_2[7] = out[7];",
+        "  a[0] = __summary_input_0[0];",
+        "  a[1] = __summary_input_0[1];",
+        "  a[2] = __summary_input_0[2];",
+        "  a[3] = __summary_input_0[3];",
+        "  a[4] = __summary_input_0[4];",
+        "  a[5] = __summary_input_0[5];",
+        "  a[6] = __summary_input_0[6];",
+        "  a[7] = __summary_input_0[7];",
+        "  out[0] = 13u * __summary_input_0[0];",
+        "  out[1] = 13u * __summary_input_0[1];",
+        "  out[2] = 13u * __summary_input_0[2];",
+        "  out[3] = 13u * __summary_input_0[3];",
+        "  out[4] = 13u * __summary_input_0[4];",
+        "  out[5] = 13u * __summary_input_0[5];",
+        "  out[6] = 13u * __summary_input_0[6];",
+        "  out[7] = 13u * __summary_input_0[7];",
+        "}",
+        "",
+        "",
+        "int main(void) {",
+        "unsigned int __hlscheck_input_0[8]={__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0()};",
+        "unsigned int __hlscheck_left_0[8], __hlscheck_right_0[8];",
+        "__hlscheck_left_0[0]=__hlscheck_input_0[0];",
+        "__hlscheck_right_0[0]=__hlscheck_left_0[0];",
+        "__hlscheck_left_0[1]=__hlscheck_input_0[1];",
+        "__hlscheck_right_0[1]=__hlscheck_left_0[1];",
+        "__hlscheck_left_0[2]=__hlscheck_input_0[2];",
+        "__hlscheck_right_0[2]=__hlscheck_left_0[2];",
+        "__hlscheck_left_0[3]=__hlscheck_input_0[3];",
+        "__hlscheck_right_0[3]=__hlscheck_left_0[3];",
+        "__hlscheck_left_0[4]=__hlscheck_input_0[4];",
+        "__hlscheck_right_0[4]=__hlscheck_left_0[4];",
+        "__hlscheck_left_0[5]=__hlscheck_input_0[5];",
+        "__hlscheck_right_0[5]=__hlscheck_left_0[5];",
+        "__hlscheck_left_0[6]=__hlscheck_input_0[6];",
+        "__hlscheck_right_0[6]=__hlscheck_left_0[6];",
+        "__hlscheck_left_0[7]=__hlscheck_input_0[7];",
+        "__hlscheck_right_0[7]=__hlscheck_left_0[7];",
+        "unsigned int __hlscheck_input_1=__hlscheck_nondet_1();",
+        "unsigned int __hlscheck_input_2[8]={__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2(),__hlscheck_nondet_2()};",
+        "unsigned int __hlscheck_left_2[8], __hlscheck_right_2[8];",
+        "__hlscheck_left_2[0]=__hlscheck_input_2[0];",
+        "__hlscheck_right_2[0]=__hlscheck_left_2[0];",
+        "__hlscheck_left_2[1]=__hlscheck_input_2[1];",
+        "__hlscheck_right_2[1]=__hlscheck_left_2[1];",
+        "__hlscheck_left_2[2]=__hlscheck_input_2[2];",
+        "__hlscheck_right_2[2]=__hlscheck_left_2[2];",
+        "__hlscheck_left_2[3]=__hlscheck_input_2[3];",
+        "__hlscheck_right_2[3]=__hlscheck_left_2[3];",
+        "__hlscheck_left_2[4]=__hlscheck_input_2[4];",
+        "__hlscheck_right_2[4]=__hlscheck_left_2[4];",
+        "__hlscheck_left_2[5]=__hlscheck_input_2[5];",
+        "__hlscheck_right_2[5]=__hlscheck_left_2[5];",
+        "__hlscheck_left_2[6]=__hlscheck_input_2[6];",
+        "__hlscheck_right_2[6]=__hlscheck_left_2[6];",
+        "__hlscheck_left_2[7]=__hlscheck_input_2[7];",
+        "__hlscheck_right_2[7]=__hlscheck_left_2[7];",
+        "__hlscheck_summary(__hlscheck_left_0,__hlscheck_input_1,__hlscheck_left_2);",
+        "__hlscheck_right_0[0]=__hlscheck_left_0[0];",
+        "__hlscheck_right_0[1]=__hlscheck_left_0[1];",
+        "__hlscheck_right_0[2]=__hlscheck_left_0[2];",
+        "__hlscheck_right_0[3]=__hlscheck_left_0[3];",
+        "__hlscheck_right_0[4]=__hlscheck_left_0[4];",
+        "__hlscheck_right_0[5]=__hlscheck_left_0[5];",
+        "__hlscheck_right_0[6]=__hlscheck_left_0[6];",
+        "__hlscheck_right_0[7]=__hlscheck_left_0[7];",
+        "__hlscheck_right_2[0]=__hlscheck_left_2[0];",
+        "__hlscheck_right_2[1]=__hlscheck_left_2[1];",
+        "__hlscheck_right_2[2]=__hlscheck_left_2[2];",
+        "__hlscheck_right_2[3]=__hlscheck_left_2[3];",
+        "__hlscheck_right_2[4]=__hlscheck_left_2[4];",
+        "__hlscheck_right_2[5]=__hlscheck_left_2[5];",
+        "__hlscheck_right_2[6]=__hlscheck_left_2[6];",
+        "__hlscheck_right_2[7]=__hlscheck_left_2[7];",
+        "unsigned int __hlscheck_left_return=__hlscheck_original(__hlscheck_left_0,__hlscheck_input_1,__hlscheck_left_2);",
+        "unsigned int __hlscheck_right_return=__hlscheck_candidate(__hlscheck_right_0,__hlscheck_input_1,__hlscheck_right_2);",
+        "__ESBMC_assert((__hlscheck_left_0[0]==__hlscheck_right_0[0]) && (__hlscheck_left_0[1]==__hlscheck_right_0[1]) && (__hlscheck_left_0[2]==__hlscheck_right_0[2]) && (__hlscheck_left_0[3]==__hlscheck_right_0[3]) && (__hlscheck_left_0[4]==__hlscheck_right_0[4]) && (__hlscheck_left_0[5]==__hlscheck_right_0[5]) && (__hlscheck_left_0[6]==__hlscheck_right_0[6]) && (__hlscheck_left_0[7]==__hlscheck_right_0[7]) && (__hlscheck_left_2[0]==__hlscheck_right_2[0]) && (__hlscheck_left_2[1]==__hlscheck_right_2[1]) && (__hlscheck_left_2[2]==__hlscheck_right_2[2]) && (__hlscheck_left_2[3]==__hlscheck_right_2[3]) && (__hlscheck_left_2[4]==__hlscheck_right_2[4]) && (__hlscheck_left_2[5]==__hlscheck_right_2[5]) && (__hlscheck_left_2[6]==__hlscheck_right_2[6]) && (__hlscheck_left_2[7]==__hlscheck_right_2[7]) && (__hlscheck_left_return==__hlscheck_right_return),\"EQUIV:observables\");",
+        "return 0;",
+        "}"
+      ]
+    },
+    "status": "violation",
+    "steps": [
+      {
+        "assignment": {
+          "lhs": "__hlscheck_input_0",
+          "lhs_type": "array",
+          "rhs": "{ 1, 1, 1, 1, 1, 6553, 1, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "64",
+        "step_number": 0,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_0",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0, 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "65",
+        "step_number": 1,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0",
+          "lhs_type": "array",
+          "rhs": "{ 13, 13, 13, 13, 13, 13, 13, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "65",
+        "step_number": 2,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_0[0]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "66",
+        "step_number": 3,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[0]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "67",
+        "step_number": 4,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_0[1]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "68",
+        "step_number": 5,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[1]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "69",
+        "step_number": 6,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_0[2]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "70",
+        "step_number": 7,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[2]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "71",
+        "step_number": 8,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_0[3]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "72",
+        "step_number": 9,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[3]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "73",
+        "step_number": 10,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_0[4]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "74",
+        "step_number": 11,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[4]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "75",
+        "step_number": 12,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_0[5]",
+          "lhs_type": "unsigned",
+          "rhs": "6553",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "76",
+        "step_number": 13,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[5]",
+          "lhs_type": "unsigned",
+          "rhs": "6553",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "77",
+        "step_number": 14,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_0[6]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "78",
+        "step_number": 15,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[6]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "79",
+        "step_number": 16,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_0[7]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "80",
+        "step_number": 17,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[7]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "81",
+        "step_number": 18,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_input_1",
+          "lhs_type": "unsigned",
+          "rhs": "7",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "82",
+        "step_number": 19,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_input_2",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0, 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "83",
+        "step_number": 20,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_2",
+          "lhs_type": "array",
+          "rhs": "{ 805306384, 805306384, 805306384, 805306384, 805306384, 805306384, 805306384, 1 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "84",
+        "step_number": 21,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0, 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "84",
+        "step_number": 22,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_2[0]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "85",
+        "step_number": 23,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[0]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "86",
+        "step_number": 24,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_2[1]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "87",
+        "step_number": 25,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[1]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "88",
+        "step_number": 26,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_2[2]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "89",
+        "step_number": 27,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[2]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "90",
+        "step_number": 28,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_2[3]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "91",
+        "step_number": 29,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[3]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "92",
+        "step_number": 30,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_2[4]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "93",
+        "step_number": 31,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[4]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "94",
+        "step_number": 32,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_2[5]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "95",
+        "step_number": 33,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[5]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "96",
+        "step_number": 34,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_2[6]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "97",
+        "step_number": 35,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[6]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "98",
+        "step_number": 36,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_2[7]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "99",
+        "step_number": 37,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[7]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "100",
+        "step_number": 38,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_0",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0, 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "26",
+        "step_number": 39,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_0[0]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "27",
+        "step_number": 40,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_0[1]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "28",
+        "step_number": 41,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_0[2]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "29",
+        "step_number": 42,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_0[3]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "30",
+        "step_number": 43,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_0[4]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "31",
+        "step_number": 44,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_0[5]",
+          "lhs_type": "unsigned",
+          "rhs": "6553",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "32",
+        "step_number": 45,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_0[6]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "33",
+        "step_number": 46,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_0[7]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "34",
+        "step_number": 47,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_2",
+          "lhs_type": "array",
+          "rhs": "{ 0, 0, 0, 0, 0, 0, 0, 0 }",
+          "rhs_type": "array"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "35",
+        "step_number": 48,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_2[0]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "36",
+        "step_number": 49,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_2[1]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "37",
+        "step_number": 50,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_2[2]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "38",
+        "step_number": 51,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_2[3]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "39",
+        "step_number": 52,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_2[4]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "40",
+        "step_number": 53,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_2[5]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "41",
+        "step_number": 54,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_2[6]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "42",
+        "step_number": 55,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__summary_input_2[7]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "43",
+        "step_number": 56,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "a[0]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "44",
+        "step_number": 57,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "a[1]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "45",
+        "step_number": 58,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "a[2]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "46",
+        "step_number": 59,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "a[3]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "47",
+        "step_number": 60,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "a[4]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "48",
+        "step_number": 61,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "a[5]",
+          "lhs_type": "unsigned",
+          "rhs": "6553",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "49",
+        "step_number": 62,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "a[6]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "50",
+        "step_number": 63,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "a[7]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "51",
+        "step_number": 64,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[0]",
+          "lhs_type": "unsigned",
+          "rhs": "13",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "52",
+        "step_number": 65,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[1]",
+          "lhs_type": "unsigned",
+          "rhs": "13",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "53",
+        "step_number": 66,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[2]",
+          "lhs_type": "unsigned",
+          "rhs": "13",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "54",
+        "step_number": 67,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[3]",
+          "lhs_type": "unsigned",
+          "rhs": "13",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "55",
+        "step_number": 68,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[4]",
+          "lhs_type": "unsigned",
+          "rhs": "13",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "56",
+        "step_number": 69,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[5]",
+          "lhs_type": "unsigned",
+          "rhs": "85189",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "57",
+        "step_number": 70,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[6]",
+          "lhs_type": "unsigned",
+          "rhs": "13",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "58",
+        "step_number": 71,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "out[7]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "__hlscheck_summary",
+        "line": "59",
+        "step_number": 72,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[0]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "102",
+        "step_number": 73,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[1]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "103",
+        "step_number": 74,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[2]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "104",
+        "step_number": 75,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[3]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "105",
+        "step_number": 76,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[4]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "106",
+        "step_number": 77,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[5]",
+          "lhs_type": "unsigned",
+          "rhs": "6553",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "107",
+        "step_number": 78,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[6]",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "108",
+        "step_number": 79,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_0[7]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "109",
+        "step_number": 80,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[0]",
+          "lhs_type": "unsigned",
+          "rhs": "13",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "110",
+        "step_number": 81,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[1]",
+          "lhs_type": "unsigned",
+          "rhs": "13",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "111",
+        "step_number": 82,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[2]",
+          "lhs_type": "unsigned",
+          "rhs": "13",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "112",
+        "step_number": 83,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[3]",
+          "lhs_type": "unsigned",
+          "rhs": "13",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "113",
+        "step_number": 84,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[4]",
+          "lhs_type": "unsigned",
+          "rhs": "13",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "114",
+        "step_number": 85,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[5]",
+          "lhs_type": "unsigned",
+          "rhs": "85189",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "115",
+        "step_number": 86,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[6]",
+          "lhs_type": "unsigned",
+          "rhs": "13",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "116",
+        "step_number": 87,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_2[7]",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "117",
+        "step_number": 88,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_left_return",
+          "lhs_type": "unsigned",
+          "rhs": "0",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "118",
+        "step_number": 89,
+        "type": "assignment"
+      },
+      {
+        "assignment": {
+          "lhs": "__hlscheck_right_return",
+          "lhs_type": "unsigned",
+          "rhs": "1",
+          "rhs_type": "unsigned"
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "119",
+        "step_number": 90,
+        "type": "assignment"
+      },
+      {
+        "assertion": {
+          "comment": "EQUIV:observables",
+          "guard": "__hlscheck_left_0[0] == __hlscheck_right_0[0] && __hlscheck_left_0[1] == __hlscheck_right_0[1] && __hlscheck_left_0[2] == __hlscheck_right_0[2] && __hlscheck_left_0[3] == __hlscheck_right_0[3] && __hlscheck_left_0[4] == __hlscheck_right_0[4] && __hlscheck_left_0[5] == __hlscheck_right_0[5] && __hlscheck_left_0[6] == __hlscheck_right_0[6] && __hlscheck_left_0[7] == __hlscheck_right_0[7] && __hlscheck_left_2[0] == __hlscheck_right_2[0] && __hlscheck_left_2[1] == __hlscheck_right_2[1] && __hlscheck_left_2[2] == __hlscheck_right_2[2] && __hlscheck_left_2[3] == __hlscheck_right_2[3] && __hlscheck_left_2[4] == __hlscheck_right_2[4] && __hlscheck_left_2[5] == __hlscheck_right_2[5] && __hlscheck_left_2[6] == __hlscheck_right_2[6] && __hlscheck_left_2[7] == __hlscheck_right_2[7] && __hlscheck_left_return == __hlscheck_right_return",
+          "violated": true
+        },
+        "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\mixed_array_incorrect\\proof\\counterexample_trace\\miter.c",
+        "function": "main",
+        "line": "120",
+        "message": "EQUIV:observables",
+        "step_number": 91,
+        "type": "violation"
+      }
+    ]
+  }
+]

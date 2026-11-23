@@ -1,0 +1,11 @@
+--- original.c
++++ candidate.c
+@@ -7,7 +7,7 @@
+         uint32_t sum = image[r * 5] + image[r * 5 + 1] + image[r * 5 + 2];
+         horizontal[r * 3] = sum;
+         for (int c = 1; c < 3; c++) {
+-            sum = sum - image[r * 5 + c - 1] + image[r * 5 + c + 2];
++            sum = sum - image[r * 5 + c - 1] + image[r * 5 + c + 1];
+             horizontal[r * 3 + c] = sum;
+         }
+     }

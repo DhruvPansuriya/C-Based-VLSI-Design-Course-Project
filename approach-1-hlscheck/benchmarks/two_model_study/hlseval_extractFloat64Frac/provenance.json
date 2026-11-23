@@ -1,0 +1,17 @@
+{
+  "id": "hlseval_extractFloat64Frac",
+  "source": "benchmarks/two_model_study/hlseval_extractFloat64Frac/original.c",
+  "function": "kernel",
+  "original_sha256": "0f235a01e98718b0f588e0610379d76fed126c7a0ab8589913333a6feb94738c",
+  "suite": "hls-eval",
+  "upstream_source": "datasets/hls-eval/hls_eval_data/chstone/df_extractFloat64Frac/extractFloat64Frac.cpp",
+  "upstream_sha256": "018b7723650402575b116820543899213e462edcc6944262cac9ca5bb7eccccd",
+  "preparation": "Reuse the type-preserving original leaf extraction (not any candidate). Retain all typedefs/macros, widths and source notices. Rename only extractFloat64Frac to kernel before freezing; remove unrelated compilation-unit material as documented in the earlier extraction. No dimension, type or input-domain reduction.",
+  "category": "type_preserving_leaf",
+  "integer_domain": "Original primitive widths and typedefs preserved under ILP32; signed narrowing follows the selected target. Binary64 values are unsigned64 bit patterns, not floating-point arithmetic.",
+  "prepared_original_source": "experiments/dataset_leaves/hlseval_extractFloat64Frac/original.c",
+  "source_function_original": "extractFloat64Frac",
+  "upstream_header": "datasets/hls-eval/hls_eval_data/chstone/df_extractFloat64Frac/extractFloat64Frac.h",
+  "upstream_header_sha256": "bbc33bf3be13a1248768ca3c2cd650cf9ce71b34e2a891515e72d8bafc32abb2",
+  "exact_original_function_sha256": "9be8e7a8850287826d19daa2d6d9b28d54c25da582b7360fad5fb937252bea41"
+}

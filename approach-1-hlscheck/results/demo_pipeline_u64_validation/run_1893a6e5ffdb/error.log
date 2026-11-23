@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\scripts\design_pipeline.py", line 351, in run_pipeline
+    hardware = run_hardware(directory / 'manifest.json', args, say,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\scripts\design_pipeline.py", line 186, in run_hardware
+    return json.loads((Path(manifest_path).parent / 'hardware.json').read_text())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\pathlib.py", line 1027, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline_u64_validation\\run_1893a6e5ffdb\\hardware.json'

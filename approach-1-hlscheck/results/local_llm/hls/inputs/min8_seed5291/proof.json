@@ -1,0 +1,42 @@
+{
+  "original_sha256": "e0f2736d0afd4329c5ffea1780fefe1c220376cec7299674eb71a7808fdf68e6",
+  "candidate_sha256": "ae4191bfe0e8778c60a07777ef84abe37db8e7d979280754730112caf033fa5f",
+  "verification": {
+    "status": "equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 1042,
+    "paths": {
+      "original": 1,
+      "candidate": 128
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "elapsed_seconds": 29.991054,
+    "backend": "hlscheck/Z3",
+    "fallback_used": false,
+    "initial_stage": {
+      "status": "equivalent",
+      "assumptions": [
+        "32-bit int and unsigned int; uint32_t is unsigned int",
+        "All array parameters are valid, separately allocated, and nonoverlapping",
+        "Functional equality at function completion; no cycle-level RTL guarantee"
+      ],
+      "execution_steps": 1042,
+      "paths": {
+        "original": 1,
+        "candidate": 128
+      },
+      "z3_version": "5.1.0",
+      "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+      "component_lemmas": [],
+      "main_query_requires_component_lemmas": false,
+      "elapsed_seconds": 29.991054
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "qwen15",
+  "label": "Qwen2.5-Coder-1.5B",
+  "organization": "Qwen / Alibaba",
+  "model": {
+    "id": "qwen15",
+    "label": "Qwen2.5-Coder-1.5B",
+    "organization": "Qwen / Alibaba",
+    "repo": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+    "revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+    "file": "qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+    "bytes": 1117320768,
+    "sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046"
+  },
+  "messages_sha256": "36f7b1c39b23bb166d4ea2355226c217f8d83e06edaca3f5daa7b15b28dba6f7",
+  "candidate_sha256": "6bc5bf3974c52a42e1e15ae7d9d5031c3feae4912440bc42eb9238cbdf0eac73",
+  "raw_response_sha256": "33f73c2c0fbae41a3c7cfd9faeaf78c1a94fba43568003faa98f3f69e7671cb5",
+  "elapsed_seconds": 0.892,
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 69,
+    "prompt_tokens": 250,
+    "total_tokens": 319,
+    "prompt_tokens_details": {
+      "cached_tokens": 0
+    }
+  },
+  "timings": {
+    "cache_n": 0,
+    "prompt_n": 250,
+    "prompt_ms": 290.298,
+    "prompt_per_token_ms": 1.161192,
+    "prompt_per_second": 861.1840246918684,
+    "predicted_n": 69,
+    "predicted_ms": 550.035,
+    "predicted_per_token_ms": 8.08875,
+    "predicted_per_second": 123.62849636841293
+  },
+  "extraction": "largest fenced code block; no semantic edits",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0,
+  "sampling": {
+    "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+    "messages": "See request.json",
+    "stream": false,
+    "seed": 5291,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "max_tokens": 768
+  }
+}

@@ -1,0 +1,98 @@
+OpenSTA 2.0.18 41f678fb6a Copyright (c) 2019, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Warning: There are 31 unconstrained endpoints.
+  return_port[10]
+  return_port[11]
+  return_port[12]
+  return_port[13]
+  return_port[14]
+  return_port[15]
+  return_port[16]
+  return_port[17]
+  return_port[18]
+  return_port[19]
+  return_port[1]
+  return_port[20]
+  return_port[21]
+  return_port[22]
+  return_port[23]
+  return_port[24]
+  return_port[25]
+  return_port[26]
+  return_port[27]
+  return_port[28]
+  return_port[29]
+  return_port[2]
+  return_port[30]
+  return_port[31]
+  return_port[3]
+  return_port[4]
+  return_port[5]
+  return_port[6]
+  return_port[7]
+  return_port[8]
+  return_port[9]
+Startpoint: reset (input port clocked by core_clock)
+Endpoint: _162_ (recovery check against rising-edge clock core_clock)
+Path Group: **async_default**
+Path Type: max
+
+      Delay        Time   Description
+-----------------------------------------------------------------
+   0.000000    0.000000   clock core_clock (rise edge)
+   0.000000    0.000000   clock network delay (ideal)
+   0.000000    0.000000 ^ input external delay
+   0.000000    0.000000 ^ reset (in)
+   0.000017    0.000017 ^ _162_/RN (DFFR_X1)
+               0.000017   data arrival time
+
+  10.000000   10.000000   clock core_clock (rise edge)
+   0.000000   10.000000   clock network delay (ideal)
+   0.000000   10.000000   clock reconvergence pessimism
+              10.000000 ^ _162_/CK (DFFR_X1)
+   0.049035   10.049035   library recovery time
+              10.049035   data required time
+-----------------------------------------------------------------
+              10.049035   data required time
+              -0.000017   data arrival time
+-----------------------------------------------------------------
+              10.049018   slack (MET)
+
+
+Startpoint: _165_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _160_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+      Delay        Time   Description
+-----------------------------------------------------------------
+   0.000000    0.000000   clock core_clock (rise edge)
+   0.000000    0.000000   clock network delay (ideal)
+   0.000000    0.000000 ^ _165_/CK (DFF_X1)
+   0.193319    0.193319 ^ _165_/Q (DFF_X1)
+   0.063884    0.257203 v _097_/ZN (NAND4_X1)
+   0.127257    0.384460 ^ _098_/ZN (NOR4_X1)
+   0.030397    0.414857 v _102_/ZN (NOR2_X1)
+   0.059038    0.473895 v _104_/ZN (OR2_X1)
+   0.031872    0.505767 v _105_/ZN (AND2_X1)
+   0.000009    0.505775 v _160_/D (DFF_X1)
+               0.505775   data arrival time
+
+  10.000000   10.000000   clock core_clock (rise edge)
+   0.000000   10.000000   clock network delay (ideal)
+   0.000000   10.000000   clock reconvergence pessimism
+              10.000000 ^ _160_/CK (DFF_X1)
+  -0.039637    9.960362   library setup time
+               9.960362   data required time
+-----------------------------------------------------------------
+               9.960362   data required time
+              -0.505775   data arrival time
+-----------------------------------------------------------------
+               9.454588   slack (MET)
+
+
+worst slack 9.454588

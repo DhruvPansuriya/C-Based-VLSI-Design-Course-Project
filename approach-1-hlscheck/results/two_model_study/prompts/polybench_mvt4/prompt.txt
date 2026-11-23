@@ -1,0 +1,25 @@
+You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation.
+
+Quickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.
+Preserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.
+The target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.
+Return complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.
+
+Original source:
+```c
+/* Dataset-derived integer adaptation; see provenance.json and ../README.md. */
+#include <stdint.h>
+
+void kernel(uint32_t x1[4], uint32_t x2[4], uint32_t y_1[4], uint32_t y_2[4], uint32_t a[16]) {
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            x1[i] = x1[i] + a[i * 4 + j] * y_1[j];
+        }
+    }
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            x2[i] = x2[i] + a[j * 4 + i] * y_2[j];
+        }
+    }
+}
+```

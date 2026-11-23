@@ -1,0 +1,17 @@
+{
+  "id": "hlseval_extractFloat64Sign",
+  "source": "benchmarks/two_model_study/hlseval_extractFloat64Sign/original.c",
+  "function": "kernel",
+  "original_sha256": "80674aae1cf198b0280da369ce91d63be3f30b72f67e32299ddc1f252a7fb1bd",
+  "suite": "hls-eval",
+  "upstream_source": "datasets/hls-eval/hls_eval_data/chstone/df_extractFloat64Sign/extractFloat64Sign.cpp",
+  "upstream_sha256": "9275b86f86456652026a7b5f3ff42b8b003babb223face2dc9b05326ec4d1ab6",
+  "preparation": "Reuse the type-preserving original leaf extraction (not any candidate). Retain all typedefs/macros, widths and source notices. Rename only extractFloat64Sign to kernel before freezing; remove unrelated compilation-unit material as documented in the earlier extraction. No dimension, type or input-domain reduction.",
+  "category": "type_preserving_leaf",
+  "integer_domain": "Original primitive widths and typedefs preserved under ILP32; signed narrowing follows the selected target. Binary64 values are unsigned64 bit patterns, not floating-point arithmetic.",
+  "prepared_original_source": "experiments/dataset_leaves/hlseval_extractFloat64Sign/original.c",
+  "source_function_original": "extractFloat64Sign",
+  "upstream_header": "datasets/hls-eval/hls_eval_data/chstone/df_extractFloat64Sign/extractFloat64Sign.h",
+  "upstream_header_sha256": "eee96fb650730edd3fb87493c530adbf85d59cf776a15fcbb2860eb37c86cd64",
+  "exact_original_function_sha256": "3a3843dd23957dc6d62098067d088ae2307c92227acbd3103d6c6f8d8885fce6"
+}

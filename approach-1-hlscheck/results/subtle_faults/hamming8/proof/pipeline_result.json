@@ -1,0 +1,320 @@
+{
+  "status": "not_equivalent",
+  "assumptions": [
+    "32-bit int and unsigned int; uint32_t is unsigned int",
+    "All array parameters are valid, separately allocated, and nonoverlapping",
+    "Functional equality at function completion; no cycle-level RTL guarantee"
+  ],
+  "execution_steps": 108,
+  "paths": {
+    "original": 1,
+    "candidate": 1
+  },
+  "z3_version": "5.1.0",
+  "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+  "component_lemmas": [
+    {
+      "index": 1,
+      "status": "sat",
+      "variables": [
+        "arg0_0",
+        "arg1_0"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\hamming8\\proof\\symbolic.lemma001.smt2"
+    },
+    {
+      "index": 2,
+      "status": "sat",
+      "variables": [
+        "arg0_1",
+        "arg1_1"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\hamming8\\proof\\symbolic.lemma002.smt2"
+    },
+    {
+      "index": 3,
+      "status": "sat",
+      "variables": [
+        "arg0_2",
+        "arg1_2"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\hamming8\\proof\\symbolic.lemma003.smt2"
+    },
+    {
+      "index": 4,
+      "status": "sat",
+      "variables": [
+        "arg0_3",
+        "arg1_3"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\hamming8\\proof\\symbolic.lemma004.smt2"
+    },
+    {
+      "index": 5,
+      "status": "sat",
+      "variables": [
+        "arg0_4",
+        "arg1_4"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\hamming8\\proof\\symbolic.lemma005.smt2"
+    },
+    {
+      "index": 6,
+      "status": "sat",
+      "variables": [
+        "arg0_5",
+        "arg1_5"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\hamming8\\proof\\symbolic.lemma006.smt2"
+    },
+    {
+      "index": 7,
+      "status": "sat",
+      "variables": [
+        "arg0_6",
+        "arg1_6"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\hamming8\\proof\\symbolic.lemma007.smt2"
+    },
+    {
+      "index": 8,
+      "status": "sat",
+      "variables": [
+        "arg0_7",
+        "arg1_7"
+      ],
+      "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\hamming8\\proof\\symbolic.lemma008.smt2"
+    }
+  ],
+  "main_query_requires_component_lemmas": false,
+  "counterexample": {
+    "a": [
+      192,
+      0,
+      36,
+      0,
+      21,
+      244,
+      165,
+      1
+    ],
+    "b": [
+      130,
+      140,
+      4,
+      34,
+      21,
+      205,
+      216,
+      5
+    ]
+  },
+  "original_outputs": {
+    "a": [
+      192,
+      0,
+      36,
+      0,
+      21,
+      244,
+      165,
+      1
+    ],
+    "b": [
+      130,
+      140,
+      4,
+      34,
+      21,
+      205,
+      216,
+      5
+    ],
+    "return": 19
+  },
+  "candidate_outputs": {
+    "a": [
+      192,
+      0,
+      36,
+      0,
+      21,
+      244,
+      165,
+      1
+    ],
+    "b": [
+      130,
+      140,
+      4,
+      34,
+      21,
+      205,
+      216,
+      5
+    ],
+    "return": 29
+  },
+  "elapsed_seconds": 0.520486,
+  "backend": "hlscheck/Z3",
+  "fallback_used": false,
+  "initial_stage": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 108,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [
+      {
+        "index": 1,
+        "status": "sat",
+        "variables": [
+          "arg0_0",
+          "arg1_0"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\hamming8\\proof\\symbolic.lemma001.smt2"
+      },
+      {
+        "index": 2,
+        "status": "sat",
+        "variables": [
+          "arg0_1",
+          "arg1_1"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\hamming8\\proof\\symbolic.lemma002.smt2"
+      },
+      {
+        "index": 3,
+        "status": "sat",
+        "variables": [
+          "arg0_2",
+          "arg1_2"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\hamming8\\proof\\symbolic.lemma003.smt2"
+      },
+      {
+        "index": 4,
+        "status": "sat",
+        "variables": [
+          "arg0_3",
+          "arg1_3"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\hamming8\\proof\\symbolic.lemma004.smt2"
+      },
+      {
+        "index": 5,
+        "status": "sat",
+        "variables": [
+          "arg0_4",
+          "arg1_4"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\hamming8\\proof\\symbolic.lemma005.smt2"
+      },
+      {
+        "index": 6,
+        "status": "sat",
+        "variables": [
+          "arg0_5",
+          "arg1_5"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\hamming8\\proof\\symbolic.lemma006.smt2"
+      },
+      {
+        "index": 7,
+        "status": "sat",
+        "variables": [
+          "arg0_6",
+          "arg1_6"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\hamming8\\proof\\symbolic.lemma007.smt2"
+      },
+      {
+        "index": 8,
+        "status": "sat",
+        "variables": [
+          "arg0_7",
+          "arg1_7"
+        ],
+        "smt_file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\hamming8\\proof\\symbolic.lemma008.smt2"
+      }
+    ],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "a": [
+        192,
+        0,
+        36,
+        0,
+        21,
+        244,
+        165,
+        1
+      ],
+      "b": [
+        130,
+        140,
+        4,
+        34,
+        21,
+        205,
+        216,
+        5
+      ]
+    },
+    "original_outputs": {
+      "a": [
+        192,
+        0,
+        36,
+        0,
+        21,
+        244,
+        165,
+        1
+      ],
+      "b": [
+        130,
+        140,
+        4,
+        34,
+        21,
+        205,
+        216,
+        5
+      ],
+      "return": 19
+    },
+    "candidate_outputs": {
+      "a": [
+        192,
+        0,
+        36,
+        0,
+        21,
+        244,
+        165,
+        1
+      ],
+      "b": [
+        130,
+        140,
+        4,
+        34,
+        21,
+        205,
+        216,
+        5
+      ],
+      "return": 29
+    },
+    "elapsed_seconds": 0.520486
+  }
+}

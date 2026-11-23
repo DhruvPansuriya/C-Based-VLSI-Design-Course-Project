@@ -1,0 +1,17 @@
+#include <stdint.h>
+
+/* Educational reference: recompute each prefix independently. */
+void kernel(uint32_t a[8], uint32_t out[8]) {
+    for (int i = 0; i < 8; i++) {
+        out[i] = a[0]; // Initialize the first prefix to a[0]
+
+        // Add subsequent elements only if the prefix is smaller than 2^32
+        for (int j = 1; j <= i; j++) {
+            if (a[j] + out[j - 1] < 0) {
+                out[j] = a[j] + out[j - 1]; // Prevent overflow
+            } else {
+                break; // Prefix is already larger than 2^32, no need to add more elements
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+{
+  "case": "bitreverse32",
+  "variant": "buggy",
+  "expected": "not_equivalent",
+  "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+  "transformation": "Staged mask-and-swap bit reversal",
+  "original": "benchmarks\\expanded\\bitreverse32_original.c",
+  "candidate": "benchmarks\\expanded\\bitreverse32_buggy.c",
+  "original_sha256": "1061706098a75b2fa2c0ff02ff2f876a32903df13e9a566a6cba83d5c0a8ff00",
+  "candidate_sha256": "e0337d7973b1b22b83a3860e2ac7dbfe488ef92d825542029a2c12fcadb36ba6",
+  "verification": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 140,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "x": 0
+    },
+    "original_outputs": {
+      "return": 0
+    },
+    "candidate_outputs": {
+      "return": 1
+    },
+    "elapsed_seconds": 0.02485
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

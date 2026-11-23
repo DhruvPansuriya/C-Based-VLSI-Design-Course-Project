@@ -1,0 +1,23 @@
+You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation.
+
+Quickly optimize this small kernel for HLS, prioritizing lower area times execution latency.
+Preserve the function name, exact interface, every final parameter-array value, and behavior for all inputs.
+uint32_t arithmetic wraps modulo 2^32. Arrays are valid and nonoverlapping. Do not add input restrictions.
+Return exactly one complete C11 function with #include <stdint.h>. Do not use helper functions, library calls,
+dynamic memory, extra macros or vendor pragmas. Return code only, without explanation.
+
+Original source:
+```c
+#include <stdint.h>
+
+/* Educational reference: recompute each prefix independently. */
+void kernel(uint32_t a[8], uint32_t out[8]) {
+    for (int i = 0; i < 8; i++) {
+        uint32_t sum = 0u;
+        for (int j = 0; j <= i; j++) {
+            sum += a[j];
+        }
+        out[i] = sum;
+    }
+}
+```

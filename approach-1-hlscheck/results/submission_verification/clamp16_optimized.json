@@ -1,0 +1,31 @@
+{
+  "case": "clamp16",
+  "variant": "optimized",
+  "expected": "equivalent",
+  "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+  "transformation": "Upper-bit saturation test",
+  "original": "benchmarks\\expanded\\clamp16_original.c",
+  "candidate": "benchmarks\\expanded\\clamp16_optimized.c",
+  "original_sha256": "56c2d7705f9463d60ad8bd2fea34de250b729e1cf65313b1ad1f4f2fa6b6fd92",
+  "candidate_sha256": "94d6a370e325446f7f65eb4ac867dc3fb2c040e498ca16822cfdb17b79df0961",
+  "verification": {
+    "status": "equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 104,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "elapsed_seconds": 0.014511
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

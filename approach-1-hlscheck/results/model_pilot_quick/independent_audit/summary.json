@@ -1,0 +1,87 @@
+{
+  "same_prompt": {
+    "qwen_request_matches_protocol": true,
+    "computed_messages_sha256": "36f7b1c39b23bb166d4ea2355226c217f8d83e06edaca3f5daa7b15b28dba6f7",
+    "gpt_recorded_prompt_hash_matches": true,
+    "note": "Local request message content is directly checked; GPT reference prompt hash is checked against its saved generation record. Codex sampling controls differ as stated in the protocol."
+  },
+  "formal_checks": [
+    {
+      "id": "qwen15",
+      "status": "unsupported",
+      "reason": "Calls/recursion require explicit function models",
+      "elapsed_seconds": 0.400599,
+      "directory": "qwen_proof",
+      "exit_code": 2
+    },
+    {
+      "id": "gpt61sol",
+      "status": "equivalent",
+      "reason": null,
+      "elapsed_seconds": 0.79723,
+      "directory": "gpt_proof",
+      "exit_code": 0
+    }
+  ],
+  "gpt_smt_replay_passed": true,
+  "qwen_native_witness": {
+    "input_a": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "initial_out": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "observed_original_out": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "observed_candidate_out": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "native_mismatch_confirmed": true,
+    "harness_sha256": "ab0f18b63cd10b27290e1db0df31dc597ac22b69c8bbace04fd8d8b0d5802f81",
+    "candidate_sha256": "6bc5bf3974c52a42e1e15ae7d9d5031c3feae4912440bc42eb9238cbdf0eac73",
+    "compiler_command": [
+      "clang",
+      "-std=c11",
+      "-Wall",
+      "-Wextra",
+      "-O2",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\model_pilot_quick\\independent_audit\\qwen_native_witness.c",
+      "-o",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\model_pilot_quick\\independent_audit\\qwen_native_check.exe"
+    ],
+    "run_exit_code": 0,
+    "stdout": "original: 1 2 3 4 5 6 7 8\ncandidate: 0 0 0 0 0 0 0 0\nmismatch: 1\n",
+    "defined_behavior_review": "For a[i]+0u, conversion to unsigned 32-bit always fits, so __builtin_add_overflow stores a[i] and returns false. That call completes before the enclosing assignment stores its false return as zero into out[i]. Arrays are valid and disjoint; indexes are 0..7. No signed-overflow or unsequenced-write issue occurs for this expression.",
+    "evidence_kind": "Concrete compiled-C mismatch, not a formal HLSCheck refutation. The formal checker reports unsupported for this source."
+  },
+  "scope": "Independent audit only; no candidate repair, resampling, model calls, or edits to the main pilot records."
+}

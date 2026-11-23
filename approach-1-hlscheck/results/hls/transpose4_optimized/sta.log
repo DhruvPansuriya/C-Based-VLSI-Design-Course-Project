@@ -1,0 +1,79 @@
+OpenSTA 2.0.18 41f678fb6a Copyright (c) 2019, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Warning: There are 10 unconstrained endpoints.
+  Mout_data_ram_size[0]
+  Mout_data_ram_size[10]
+  Mout_data_ram_size[1]
+  Mout_data_ram_size[2]
+  Mout_data_ram_size[3]
+  Mout_data_ram_size[4]
+  Mout_data_ram_size[6]
+  Mout_data_ram_size[7]
+  Mout_data_ram_size[8]
+  Mout_data_ram_size[9]
+Startpoint: reset (input port clocked by core_clock)
+Endpoint: _1349_ (recovery check against rising-edge clock core_clock)
+Path Group: **async_default**
+Path Type: max
+
+      Delay        Time   Description
+-----------------------------------------------------------------
+   0.000000    0.000000   clock core_clock (rise edge)
+   0.000000    0.000000   clock network delay (ideal)
+   0.000000    0.000000 ^ input external delay
+   0.000000    0.000000 ^ reset (in)
+   0.000017    0.000017 ^ _1349_/RN (DFFR_X1)
+               0.000017   data arrival time
+
+  10.000000   10.000000   clock core_clock (rise edge)
+   0.000000   10.000000   clock network delay (ideal)
+   0.000000   10.000000   clock reconvergence pessimism
+              10.000000 ^ _1349_/CK (DFFR_X1)
+   0.049035   10.049035   library recovery time
+              10.049035   data required time
+-----------------------------------------------------------------
+              10.049035   data required time
+              -0.000017   data arrival time
+-----------------------------------------------------------------
+              10.049018   slack (MET)
+
+
+Startpoint: _1351_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _1445_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+      Delay        Time   Description
+-----------------------------------------------------------------
+   0.000000    0.000000   clock core_clock (rise edge)
+   0.000000    0.000000   clock network delay (ideal)
+   0.000000    0.000000 ^ _1351_/CK (DFF_X1)
+   0.103139    0.103139 v _1351_/Q (DFF_X1)
+   0.025088    0.128226 ^ _0663_/ZN (INV_X1)
+   0.023126    0.151352 v _0710_/ZN (NAND2_X1)
+   0.088414    0.239766 ^ _0711_/ZN (INV_X1)
+   0.127958    0.367723 v _0712_/ZN (NAND2_X1)
+   0.817622    1.185345 ^ _0713_/ZN (INV_X1)
+   0.101659    1.287004 v _1290_/ZN (OAI221_X1)
+   0.051142    1.338147 ^ _1291_/ZN (OAI21_X1)
+   0.000009    1.338156 ^ _1445_/D (DFF_X1)
+               1.338156   data arrival time
+
+  10.000000   10.000000   clock core_clock (rise edge)
+   0.000000   10.000000   clock network delay (ideal)
+   0.000000   10.000000   clock reconvergence pessimism
+              10.000000 ^ _1445_/CK (DFF_X1)
+  -0.042114    9.957887   library setup time
+               9.957887   data required time
+-----------------------------------------------------------------
+               9.957887   data required time
+              -1.338156   data arrival time
+-----------------------------------------------------------------
+               8.619731   slack (MET)
+
+
+worst slack 8.619731

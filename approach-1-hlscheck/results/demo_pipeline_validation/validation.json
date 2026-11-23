@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "positive_end_to_end_runs": {
+    "matmul": {
+      "summary": "results/demo_pipeline_validation/run_ada9001fc0a9/summary.json",
+      "stages": 7,
+      "formal_status": "equivalent",
+      "native_trials": 264,
+      "rtl_transactions": 32,
+      "hardware_outcome": "regressed"
+    },
+    "u64": {
+      "summary": "results/demo_pipeline_u64_validation/run_96b4ba90a519/summary.json",
+      "stages": 7,
+      "formal_status": "equivalent",
+      "native_trials": 264,
+      "rtl_transactions": 32,
+      "hardware_outcome": "unchanged"
+    }
+  },
+  "negative_run": {
+    "summary": "results/demo_pipeline_negative_validation/run_74944fa27ace/summary.json",
+    "counterexample_reproduced": true,
+    "hardware_skipped": true
+  },
+  "regression_tests": 98,
+  "regression_failures": 0,
+  "new_pipeline_controls": 6,
+  "lp64_reference_width_check": {
+    "passed": true,
+    "scope": "LP64 compiled simulation reference agrees with target ILP32 long-local and -1L usual arithmetic conversion behavior",
+    "trials": 16,
+    "compiler": "WSL gcc -std=c11",
+    "build_stderr": ""
+  },
+  "scope": "Two fresh full hardware pipeline runs, a real incorrect candidate stopped before HLS, prerequisite/stale-input controls and the complete test suite. Earlier worker startup errors and the legacy 10-second test timeout remain recorded; final suite uses the project 60-second witness budget."
+}

@@ -1,0 +1,174 @@
+
+_Static_assert(sizeof(char)==1 && sizeof(short)==2 && sizeof(int)==4 &&
+               sizeof(long)==4 && sizeof(long long)==8 && sizeof(void*)==4, "HLSCheck ILP32 ABI");
+_Static_assert((char)-1 < 0, "HLSCheck requires signed plain char");
+_Static_assert((unsigned char)-1 == 255, "HLSCheck requires 8-bit bytes");
+
+extern void __ESBMC_assert(_Bool, const char *);
+extern void __ESBMC_assume(_Bool);
+extern unsigned int __hlscheck_nondet_0(void);
+extern unsigned int __hlscheck_nondet_1(void);
+unsigned int __hlscheck_original(unsigned int a[64], unsigned int n)
+{
+  unsigned int s = 0u;
+  for (unsigned int i = 0u; i < n; i++)
+    s += a[i];
+
+  return s;
+}
+
+
+unsigned int __hlscheck_candidate(unsigned int a[64], unsigned int n)
+{
+  unsigned int s0 = 0u;
+  unsigned int s1 = 0u;
+  for (unsigned int i = 0u; (i + 1u) < n; i += 2u)
+  {
+    s0 += a[i];
+    s1 += a[i + 1u];
+  }
+
+  if ((n & 1u) != 0u)
+    s0 += a[n - 1u];
+  return s0 + s1;
+}
+
+
+int main(void) {
+unsigned int __hlscheck_input_0[64]={__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0(),__hlscheck_nondet_0()};
+unsigned int __hlscheck_left_0[64], __hlscheck_right_0[64];
+__hlscheck_left_0[0]=__hlscheck_input_0[0];
+__hlscheck_right_0[0]=__hlscheck_left_0[0];
+__hlscheck_left_0[1]=__hlscheck_input_0[1];
+__hlscheck_right_0[1]=__hlscheck_left_0[1];
+__hlscheck_left_0[2]=__hlscheck_input_0[2];
+__hlscheck_right_0[2]=__hlscheck_left_0[2];
+__hlscheck_left_0[3]=__hlscheck_input_0[3];
+__hlscheck_right_0[3]=__hlscheck_left_0[3];
+__hlscheck_left_0[4]=__hlscheck_input_0[4];
+__hlscheck_right_0[4]=__hlscheck_left_0[4];
+__hlscheck_left_0[5]=__hlscheck_input_0[5];
+__hlscheck_right_0[5]=__hlscheck_left_0[5];
+__hlscheck_left_0[6]=__hlscheck_input_0[6];
+__hlscheck_right_0[6]=__hlscheck_left_0[6];
+__hlscheck_left_0[7]=__hlscheck_input_0[7];
+__hlscheck_right_0[7]=__hlscheck_left_0[7];
+__hlscheck_left_0[8]=__hlscheck_input_0[8];
+__hlscheck_right_0[8]=__hlscheck_left_0[8];
+__hlscheck_left_0[9]=__hlscheck_input_0[9];
+__hlscheck_right_0[9]=__hlscheck_left_0[9];
+__hlscheck_left_0[10]=__hlscheck_input_0[10];
+__hlscheck_right_0[10]=__hlscheck_left_0[10];
+__hlscheck_left_0[11]=__hlscheck_input_0[11];
+__hlscheck_right_0[11]=__hlscheck_left_0[11];
+__hlscheck_left_0[12]=__hlscheck_input_0[12];
+__hlscheck_right_0[12]=__hlscheck_left_0[12];
+__hlscheck_left_0[13]=__hlscheck_input_0[13];
+__hlscheck_right_0[13]=__hlscheck_left_0[13];
+__hlscheck_left_0[14]=__hlscheck_input_0[14];
+__hlscheck_right_0[14]=__hlscheck_left_0[14];
+__hlscheck_left_0[15]=__hlscheck_input_0[15];
+__hlscheck_right_0[15]=__hlscheck_left_0[15];
+__hlscheck_left_0[16]=__hlscheck_input_0[16];
+__hlscheck_right_0[16]=__hlscheck_left_0[16];
+__hlscheck_left_0[17]=__hlscheck_input_0[17];
+__hlscheck_right_0[17]=__hlscheck_left_0[17];
+__hlscheck_left_0[18]=__hlscheck_input_0[18];
+__hlscheck_right_0[18]=__hlscheck_left_0[18];
+__hlscheck_left_0[19]=__hlscheck_input_0[19];
+__hlscheck_right_0[19]=__hlscheck_left_0[19];
+__hlscheck_left_0[20]=__hlscheck_input_0[20];
+__hlscheck_right_0[20]=__hlscheck_left_0[20];
+__hlscheck_left_0[21]=__hlscheck_input_0[21];
+__hlscheck_right_0[21]=__hlscheck_left_0[21];
+__hlscheck_left_0[22]=__hlscheck_input_0[22];
+__hlscheck_right_0[22]=__hlscheck_left_0[22];
+__hlscheck_left_0[23]=__hlscheck_input_0[23];
+__hlscheck_right_0[23]=__hlscheck_left_0[23];
+__hlscheck_left_0[24]=__hlscheck_input_0[24];
+__hlscheck_right_0[24]=__hlscheck_left_0[24];
+__hlscheck_left_0[25]=__hlscheck_input_0[25];
+__hlscheck_right_0[25]=__hlscheck_left_0[25];
+__hlscheck_left_0[26]=__hlscheck_input_0[26];
+__hlscheck_right_0[26]=__hlscheck_left_0[26];
+__hlscheck_left_0[27]=__hlscheck_input_0[27];
+__hlscheck_right_0[27]=__hlscheck_left_0[27];
+__hlscheck_left_0[28]=__hlscheck_input_0[28];
+__hlscheck_right_0[28]=__hlscheck_left_0[28];
+__hlscheck_left_0[29]=__hlscheck_input_0[29];
+__hlscheck_right_0[29]=__hlscheck_left_0[29];
+__hlscheck_left_0[30]=__hlscheck_input_0[30];
+__hlscheck_right_0[30]=__hlscheck_left_0[30];
+__hlscheck_left_0[31]=__hlscheck_input_0[31];
+__hlscheck_right_0[31]=__hlscheck_left_0[31];
+__hlscheck_left_0[32]=__hlscheck_input_0[32];
+__hlscheck_right_0[32]=__hlscheck_left_0[32];
+__hlscheck_left_0[33]=__hlscheck_input_0[33];
+__hlscheck_right_0[33]=__hlscheck_left_0[33];
+__hlscheck_left_0[34]=__hlscheck_input_0[34];
+__hlscheck_right_0[34]=__hlscheck_left_0[34];
+__hlscheck_left_0[35]=__hlscheck_input_0[35];
+__hlscheck_right_0[35]=__hlscheck_left_0[35];
+__hlscheck_left_0[36]=__hlscheck_input_0[36];
+__hlscheck_right_0[36]=__hlscheck_left_0[36];
+__hlscheck_left_0[37]=__hlscheck_input_0[37];
+__hlscheck_right_0[37]=__hlscheck_left_0[37];
+__hlscheck_left_0[38]=__hlscheck_input_0[38];
+__hlscheck_right_0[38]=__hlscheck_left_0[38];
+__hlscheck_left_0[39]=__hlscheck_input_0[39];
+__hlscheck_right_0[39]=__hlscheck_left_0[39];
+__hlscheck_left_0[40]=__hlscheck_input_0[40];
+__hlscheck_right_0[40]=__hlscheck_left_0[40];
+__hlscheck_left_0[41]=__hlscheck_input_0[41];
+__hlscheck_right_0[41]=__hlscheck_left_0[41];
+__hlscheck_left_0[42]=__hlscheck_input_0[42];
+__hlscheck_right_0[42]=__hlscheck_left_0[42];
+__hlscheck_left_0[43]=__hlscheck_input_0[43];
+__hlscheck_right_0[43]=__hlscheck_left_0[43];
+__hlscheck_left_0[44]=__hlscheck_input_0[44];
+__hlscheck_right_0[44]=__hlscheck_left_0[44];
+__hlscheck_left_0[45]=__hlscheck_input_0[45];
+__hlscheck_right_0[45]=__hlscheck_left_0[45];
+__hlscheck_left_0[46]=__hlscheck_input_0[46];
+__hlscheck_right_0[46]=__hlscheck_left_0[46];
+__hlscheck_left_0[47]=__hlscheck_input_0[47];
+__hlscheck_right_0[47]=__hlscheck_left_0[47];
+__hlscheck_left_0[48]=__hlscheck_input_0[48];
+__hlscheck_right_0[48]=__hlscheck_left_0[48];
+__hlscheck_left_0[49]=__hlscheck_input_0[49];
+__hlscheck_right_0[49]=__hlscheck_left_0[49];
+__hlscheck_left_0[50]=__hlscheck_input_0[50];
+__hlscheck_right_0[50]=__hlscheck_left_0[50];
+__hlscheck_left_0[51]=__hlscheck_input_0[51];
+__hlscheck_right_0[51]=__hlscheck_left_0[51];
+__hlscheck_left_0[52]=__hlscheck_input_0[52];
+__hlscheck_right_0[52]=__hlscheck_left_0[52];
+__hlscheck_left_0[53]=__hlscheck_input_0[53];
+__hlscheck_right_0[53]=__hlscheck_left_0[53];
+__hlscheck_left_0[54]=__hlscheck_input_0[54];
+__hlscheck_right_0[54]=__hlscheck_left_0[54];
+__hlscheck_left_0[55]=__hlscheck_input_0[55];
+__hlscheck_right_0[55]=__hlscheck_left_0[55];
+__hlscheck_left_0[56]=__hlscheck_input_0[56];
+__hlscheck_right_0[56]=__hlscheck_left_0[56];
+__hlscheck_left_0[57]=__hlscheck_input_0[57];
+__hlscheck_right_0[57]=__hlscheck_left_0[57];
+__hlscheck_left_0[58]=__hlscheck_input_0[58];
+__hlscheck_right_0[58]=__hlscheck_left_0[58];
+__hlscheck_left_0[59]=__hlscheck_input_0[59];
+__hlscheck_right_0[59]=__hlscheck_left_0[59];
+__hlscheck_left_0[60]=__hlscheck_input_0[60];
+__hlscheck_right_0[60]=__hlscheck_left_0[60];
+__hlscheck_left_0[61]=__hlscheck_input_0[61];
+__hlscheck_right_0[61]=__hlscheck_left_0[61];
+__hlscheck_left_0[62]=__hlscheck_input_0[62];
+__hlscheck_right_0[62]=__hlscheck_left_0[62];
+__hlscheck_left_0[63]=__hlscheck_input_0[63];
+__hlscheck_right_0[63]=__hlscheck_left_0[63];
+unsigned int __hlscheck_input_1=__hlscheck_nondet_1();
+__ESBMC_assume(__hlscheck_input_1>=((unsigned int)0ULL) && __hlscheck_input_1<=((unsigned int)64ULL));
+unsigned int __hlscheck_left_return=__hlscheck_original(__hlscheck_left_0,__hlscheck_input_1);
+unsigned int __hlscheck_right_return=__hlscheck_candidate(__hlscheck_right_0,__hlscheck_input_1);
+__ESBMC_assert((__hlscheck_left_0[0]==__hlscheck_right_0[0]) && (__hlscheck_left_0[1]==__hlscheck_right_0[1]) && (__hlscheck_left_0[2]==__hlscheck_right_0[2]) && (__hlscheck_left_0[3]==__hlscheck_right_0[3]) && (__hlscheck_left_0[4]==__hlscheck_right_0[4]) && (__hlscheck_left_0[5]==__hlscheck_right_0[5]) && (__hlscheck_left_0[6]==__hlscheck_right_0[6]) && (__hlscheck_left_0[7]==__hlscheck_right_0[7]) && (__hlscheck_left_0[8]==__hlscheck_right_0[8]) && (__hlscheck_left_0[9]==__hlscheck_right_0[9]) && (__hlscheck_left_0[10]==__hlscheck_right_0[10]) && (__hlscheck_left_0[11]==__hlscheck_right_0[11]) && (__hlscheck_left_0[12]==__hlscheck_right_0[12]) && (__hlscheck_left_0[13]==__hlscheck_right_0[13]) && (__hlscheck_left_0[14]==__hlscheck_right_0[14]) && (__hlscheck_left_0[15]==__hlscheck_right_0[15]) && (__hlscheck_left_0[16]==__hlscheck_right_0[16]) && (__hlscheck_left_0[17]==__hlscheck_right_0[17]) && (__hlscheck_left_0[18]==__hlscheck_right_0[18]) && (__hlscheck_left_0[19]==__hlscheck_right_0[19]) && (__hlscheck_left_0[20]==__hlscheck_right_0[20]) && (__hlscheck_left_0[21]==__hlscheck_right_0[21]) && (__hlscheck_left_0[22]==__hlscheck_right_0[22]) && (__hlscheck_left_0[23]==__hlscheck_right_0[23]) && (__hlscheck_left_0[24]==__hlscheck_right_0[24]) && (__hlscheck_left_0[25]==__hlscheck_right_0[25]) && (__hlscheck_left_0[26]==__hlscheck_right_0[26]) && (__hlscheck_left_0[27]==__hlscheck_right_0[27]) && (__hlscheck_left_0[28]==__hlscheck_right_0[28]) && (__hlscheck_left_0[29]==__hlscheck_right_0[29]) && (__hlscheck_left_0[30]==__hlscheck_right_0[30]) && (__hlscheck_left_0[31]==__hlscheck_right_0[31]) && (__hlscheck_left_0[32]==__hlscheck_right_0[32]) && (__hlscheck_left_0[33]==__hlscheck_right_0[33]) && (__hlscheck_left_0[34]==__hlscheck_right_0[34]) && (__hlscheck_left_0[35]==__hlscheck_right_0[35]) && (__hlscheck_left_0[36]==__hlscheck_right_0[36]) && (__hlscheck_left_0[37]==__hlscheck_right_0[37]) && (__hlscheck_left_0[38]==__hlscheck_right_0[38]) && (__hlscheck_left_0[39]==__hlscheck_right_0[39]) && (__hlscheck_left_0[40]==__hlscheck_right_0[40]) && (__hlscheck_left_0[41]==__hlscheck_right_0[41]) && (__hlscheck_left_0[42]==__hlscheck_right_0[42]) && (__hlscheck_left_0[43]==__hlscheck_right_0[43]) && (__hlscheck_left_0[44]==__hlscheck_right_0[44]) && (__hlscheck_left_0[45]==__hlscheck_right_0[45]) && (__hlscheck_left_0[46]==__hlscheck_right_0[46]) && (__hlscheck_left_0[47]==__hlscheck_right_0[47]) && (__hlscheck_left_0[48]==__hlscheck_right_0[48]) && (__hlscheck_left_0[49]==__hlscheck_right_0[49]) && (__hlscheck_left_0[50]==__hlscheck_right_0[50]) && (__hlscheck_left_0[51]==__hlscheck_right_0[51]) && (__hlscheck_left_0[52]==__hlscheck_right_0[52]) && (__hlscheck_left_0[53]==__hlscheck_right_0[53]) && (__hlscheck_left_0[54]==__hlscheck_right_0[54]) && (__hlscheck_left_0[55]==__hlscheck_right_0[55]) && (__hlscheck_left_0[56]==__hlscheck_right_0[56]) && (__hlscheck_left_0[57]==__hlscheck_right_0[57]) && (__hlscheck_left_0[58]==__hlscheck_right_0[58]) && (__hlscheck_left_0[59]==__hlscheck_right_0[59]) && (__hlscheck_left_0[60]==__hlscheck_right_0[60]) && (__hlscheck_left_0[61]==__hlscheck_right_0[61]) && (__hlscheck_left_0[62]==__hlscheck_right_0[62]) && (__hlscheck_left_0[63]==__hlscheck_right_0[63]) && (__hlscheck_left_return==__hlscheck_right_return),"EQUIV:observables");
+return 0;
+}

@@ -1,0 +1,147 @@
+ESBMC version 8.7.0 64-bit x86_64 windows
+
+Target: 32-bit little-endian i386-unknown-win32 with esbmclibc
+Parsing C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.139s
+GOTO program processing time: 0.000s
+Starting Bounded Model Checking
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+WARNING: no body for function __hlscheck_nondet_2
+Symex completed in: 0.002s (106 assignments)
+Caching time: 0.000s (removed 0 assertions)
+Slicing time: 0.001s (removed 88 assignments)
+Generated 35 VCC(s), 7 remaining after simplification (18 assignments)
+Slicing time: 0.000s (removed 7 assignments)
+Solving claim 'dereference failure: Incorrect alignment when accessing data object at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 7 assignments)
+Solving claim 'dereference failure: array bounds violated at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 7 assignments)
+Solving claim 'dereference failure: Incorrect alignment when accessing data object at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c line 14 column 3 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 7 assignments)
+Solving claim 'dereference failure: Incorrect alignment when accessing data object at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c line 20 column 3 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 7 assignments)
+Solving claim 'dereference failure: array bounds violated at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c line 20 column 3 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 7 assignments)
+Solving claim 'dereference failure: Incorrect alignment when accessing data object at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c line 20 column 3 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'EQUIV:observables at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c line 48 column 1 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.007s
+
+[Counterexample]
+
+
+State 1 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c line 26 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_0 = { 13, 13, 13, 0 }
+
+State 2 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c line 35 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_input_1 = 3 (00000000 00000000 00000000 00000011)
+
+State 3 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c line 37 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_2 = { 15, 15, 15, 8388608 }
+
+State 4 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c line 46 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_return = 0 (00000000 00000000 00000000 00000000)
+
+State 5 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c line 47 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_return = 2152333057 (10000000 01001001 11111111 00000001)
+
+State 6 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c line 48 column 1 function main thread 0
+----------------------------------------------------
+Violated property:
+  file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c line 48 column 1 function main
+  EQUIV:observables
+  __hlscheck_left_0[0] == __hlscheck_right_0[0] && __hlscheck_left_0[1] == __hlscheck_right_0[1] && __hlscheck_left_0[2] == __hlscheck_right_0[2] && __hlscheck_left_0[3] == __hlscheck_right_0[3] && __hlscheck_left_2[0] == __hlscheck_right_2[0] && __hlscheck_left_2[1] == __hlscheck_right_2[1] && __hlscheck_left_2[2] == __hlscheck_right_2[2] && __hlscheck_left_2[3] == __hlscheck_right_2[3] && __hlscheck_left_return == __hlscheck_right_return
+
+BMC program time: 0.068s
+
+** Results:
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c, function __hlscheck_candidate
+  PASSED       [__hlscheck_candidate.assertion.1]              line 20  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.1]  line 20  dereference failure: array bounds violated
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c, function __hlscheck_original
+  PASSED       [__hlscheck_original.assertion.1]               line 14  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_original.array-bounds-violated.1]   line 14  dereference failure: array bounds violated
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\live_demo\3\proof\residual_0\miter.c, function main
+  PASSED       [main.uninitialised-variable.1]                 line 28  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.2]                 line 30  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.3]                 line 32  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.4]                 line 34  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.5]                 line 39  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.6]                 line 41  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.7]                 line 43  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.8]                 line 45  use of uninitialized variable: __hlscheck_left_2
+  PASSED       [main.uninitialised-variable.9]                 line 46  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.10]                line 47  use of uninitialized variable: __hlscheck_input_1
+  FAILED       [main.assertion.1]                              line 48  EQUIV:observables
+  PASSED       [main.uninitialised-variable.11]                line 48  use of uninitialized variable: __hlscheck_left_0 [2[0]]
+  PASSED       [main.uninitialised-variable.12]                line 48  use of uninitialized variable: __hlscheck_left_0 [2[1]]
+  PASSED       [main.uninitialised-variable.13]                line 48  use of uninitialized variable: __hlscheck_left_0 [2[2]]
+  PASSED       [main.uninitialised-variable.14]                line 48  use of uninitialized variable: __hlscheck_left_0 [2[3]]
+  PASSED       [main.uninitialised-variable.15]                line 48  use of uninitialized variable: __hlscheck_left_2 [6[0]]
+  PASSED       [main.uninitialised-variable.16]                line 48  use of uninitialized variable: __hlscheck_left_2 [6[1]]
+  PASSED       [main.uninitialised-variable.17]                line 48  use of uninitialized variable: __hlscheck_left_2 [6[2]]
+  PASSED       [main.uninitialised-variable.18]                line 48  use of uninitialized variable: __hlscheck_left_2 [6[3]]
+  PASSED       [main.uninitialised-variable.19]                line 48  use of uninitialized variable: __hlscheck_left_return
+  PASSED       [main.uninitialised-variable.20]                line 48  use of uninitialized variable: __hlscheck_right_0 [3[0]]
+  PASSED       [main.uninitialised-variable.21]                line 48  use of uninitialized variable: __hlscheck_right_0 [3[1]]
+  PASSED       [main.uninitialised-variable.22]                line 48  use of uninitialized variable: __hlscheck_right_0 [3[2]]
+  PASSED       [main.uninitialised-variable.23]                line 48  use of uninitialized variable: __hlscheck_right_0 [3[3]]
+  PASSED       [main.uninitialised-variable.24]                line 48  use of uninitialized variable: __hlscheck_right_2 [7[0]]
+  PASSED       [main.uninitialised-variable.25]                line 48  use of uninitialized variable: __hlscheck_right_2 [7[1]]
+  PASSED       [main.uninitialised-variable.26]                line 48  use of uninitialized variable: __hlscheck_right_2 [7[2]]
+  PASSED       [main.uninitialised-variable.27]                line 48  use of uninitialized variable: __hlscheck_right_2 [7[3]]
+  PASSED       [main.uninitialised-variable.28]                line 48  use of uninitialized variable: __hlscheck_right_return
+
+** 1 of 33 properties failed, 32 passed
+Solver: Z3 v4.13.3 â€¢ Decision procedure total time: 0.014s â€¢ Avg: 0.000s/property
+
+VERIFICATION FAILED

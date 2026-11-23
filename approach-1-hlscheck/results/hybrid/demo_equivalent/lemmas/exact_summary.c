@@ -1,0 +1,36 @@
+void transform(unsigned int a[8], unsigned int index, unsigned int out[8]) {
+unsigned int __summary_input_0[8];
+__summary_input_0[0]=a[0];
+__summary_input_0[1]=a[1];
+__summary_input_0[2]=a[2];
+__summary_input_0[3]=a[3];
+__summary_input_0[4]=a[4];
+__summary_input_0[5]=a[5];
+__summary_input_0[6]=a[6];
+__summary_input_0[7]=a[7];
+unsigned int __summary_input_2[8];
+__summary_input_2[0]=out[0];
+__summary_input_2[1]=out[1];
+__summary_input_2[2]=out[2];
+__summary_input_2[3]=out[3];
+__summary_input_2[4]=out[4];
+__summary_input_2[5]=out[5];
+__summary_input_2[6]=out[6];
+__summary_input_2[7]=out[7];
+a[0]=__summary_input_0[0];
+a[1]=__summary_input_0[1];
+a[2]=__summary_input_0[2];
+a[3]=__summary_input_0[3];
+a[4]=__summary_input_0[4];
+a[5]=__summary_input_0[5];
+a[6]=__summary_input_0[6];
+a[7]=__summary_input_0[7];
+out[0]=(13u * __summary_input_0[0]);
+out[1]=(13u * __summary_input_0[1]);
+out[2]=(13u * __summary_input_0[2]);
+out[3]=(13u * __summary_input_0[3]);
+out[4]=(13u * __summary_input_0[4]);
+out[5]=(13u * __summary_input_0[5]);
+out[6]=(13u * __summary_input_0[6]);
+out[7]=(13u * __summary_input_0[7]);
+}

@@ -1,0 +1,38 @@
+{
+  "id": "stencil_seed5291",
+  "case": "stencil",
+  "source": "benchmarks\\machsuite_u32\\stencil_original.c",
+  "source_sha256": "8c46a73e96b8c5cf7b0b2ee7a25f26ac6f2bd090f01a4c9d6dc0479275937149",
+  "request_sha256": "3c7a2d32fb706ca7e7cff6b574eb8fdec3357d8778844d742215488d837ec3e5",
+  "raw_response_sha256": "72ca4e1377764f64aa5b81fbab674e71cba36b102607fa402904c0e5834bd72a",
+  "candidate_sha256": "7fd90a7bb1cf2c5b42c67ab80c41128788ac61d2d627f074d09258233f7eae11",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 175,
+    "prompt_tokens": 376,
+    "total_tokens": 551,
+    "prompt_tokens_details": {
+      "cached_tokens": 210
+    }
+  },
+  "timings": {
+    "cache_n": 210,
+    "prompt_n": 166,
+    "prompt_ms": 59.092,
+    "prompt_per_token_ms": 0.3559759036144578,
+    "prompt_per_second": 2809.178907466324,
+    "predicted_n": 175,
+    "predicted_ms": 1410.717,
+    "predicted_per_token_ms": 8.107568965517242,
+    "predicted_per_second": 123.34153483654056
+  },
+  "elapsed_seconds": 1.502,
+  "extraction": "largest fenced code block; no semantic edits",
+  "model_repository": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+  "model_revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+  "model_sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+  "runtime_release": "b12619",
+  "origin": "Actual independently generated local-model optimization attempt; not an injected mutation",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0
+}

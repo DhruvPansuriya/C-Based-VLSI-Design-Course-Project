@@ -1,0 +1,174 @@
+{
+  "id": "fir_16",
+  "family": "fir",
+  "scale": 16,
+  "original": "benchmarks/large/fir_16/original.c",
+  "candidate": "benchmarks/large/fir_16/candidate.c",
+  "function": "kernel",
+  "expected": "equivalent",
+  "input_words_u32": 16,
+  "dominant_operations_original": 16,
+  "scalar_ranges": {},
+  "origin": "Generated educational size-scaled kernel, not an unmodified external benchmark or a new model sampling experiment",
+  "fingerprint": {
+    "source_sha256": [
+      "225876e0206ab10ada3dad49628705eec98488f926965f42209007b8185157b7",
+      "16352a57f906a55a403da0554dfd8a9590b6b3047a16e49d283ce33e7b37ef6a"
+    ],
+    "engine_sha256": {
+      "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+      "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307",
+      "evidence.py": "eaf1b8fd1c130609bfdd43e8821f4458c494341a40d39b3c60cd0c28edb72ac5",
+      "frontend.py": "55eb23c16d35ce941254cb783a7e985571e12c5390cd75cbb08dd9aed85369e2",
+      "hybrid.py": "d1ccb49365d9731a7ab638c150c420c7efa04108c697df4c66cd3895f738b059",
+      "miter.py": "77d41c642d8fc5af346e865fd033a92791830cb61bc252792180ef077688831d",
+      "pipeline.py": "a4b504daefbd3524a1d0a6fc5e872fd2a75b469c869cfb2c33a35711fa731567",
+      "relational.py": "82a63ee02a1ac6d655d4c6011f45acfed7864d18cc02cdb2c329bf9ef0109618",
+      "__init__.py": "13da1587e29ffc5bd31bdc71a826330fefa412b8d37017a7dd4a8941e0a663bc",
+      "__main__.py": "e2f9b802af8cfddc46a121da3878a74ae5abd5ad64443b4b2dfc01d5b781c1e1"
+    },
+    "timeout_ms": 60000,
+    "max_unroll": 256,
+    "scalar_ranges": {}
+  },
+  "status": "equivalent",
+  "elapsed_seconds": 0.929232,
+  "verification": {
+    "tool": "HLSCheck",
+    "algorithm": "certified relational summaries with residual-C abstraction/refinement",
+    "status": "equivalent",
+    "source_sha256": {
+      "original": "160f50f5f728dc2b49d1347ec35592d164f0ba09568468f91b6630295b207880",
+      "candidate": "e5be6c5f363af00b61ada2490601c0ed6e73a7a240fc18078c2b1d188635803b"
+    },
+    "upstream_components": [
+      "Z3",
+      "ESBMC"
+    ],
+    "proof_dependencies": [
+      {
+        "id": "region_equality",
+        "result": "lemmas/region_equality.json",
+        "smt": "lemmas/region_equality.smt2",
+        "accepted_component_lemmas": []
+      }
+    ],
+    "refinements": [],
+    "obligations": [
+      {
+        "id": "region_equality",
+        "engine": "custom symbolic execution / Z3",
+        "status": "equivalent"
+      },
+      {
+        "id": "residual_0",
+        "engine": "ESBMC / Z3",
+        "abstraction": "shared_havoc",
+        "input_domain": "full stated domain",
+        "status": "equivalent"
+      }
+    ],
+    "engine_selection": "No router: ESBMC checks the residual C product; custom SMT proofs justify region abstraction.",
+    "implementation_sha256": {
+      "hybrid.py": "d1ccb49365d9731a7ab638c150c420c7efa04108c697df4c66cd3895f738b059",
+      "frontend.py": "55eb23c16d35ce941254cb783a7e985571e12c5390cd75cbb08dd9aed85369e2",
+      "miter.py": "77d41c642d8fc5af346e865fd033a92791830cb61bc252792180ef077688831d",
+      "relational.py": "82a63ee02a1ac6d655d4c6011f45acfed7864d18cc02cdb2c329bf9ef0109618",
+      "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+      "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307"
+    },
+    "contract": {
+      "integer_model": "ILP32: char8/short16/int32/long32/long-long64; plain char signed",
+      "parameters": [
+        {
+          "position": 0,
+          "name": "a",
+          "length": 16,
+          "c_type": "unsigned int",
+          "bits": 32,
+          "signed": false
+        }
+      ],
+      "return_type": {
+        "c_type": "unsigned int",
+        "bits": 32,
+        "signed": false
+      },
+      "scalar_ranges": {},
+      "observations": "Return value and every final parameter-array element",
+      "memory": "All parameter arrays valid and pairwise nonoverlapping; initial contents shared by value",
+      "safety": "Both programs must be free of modelled undefined behavior on the entire stated input domain",
+      "proof_scope": "Functional C equivalence at completion, not cycle-level or C-to-RTL equivalence"
+    },
+    "region_analysis": {
+      "abstractable": true,
+      "left_statements": 3,
+      "right_statements": 3,
+      "whole_function": true,
+      "boundary": "Function exit: every parameter-array element and the return value",
+      "proof_status": "equivalent"
+    },
+    "residual_proof": {
+      "directory": "residual_0",
+      "abstraction": "shared_havoc",
+      "engine": "ESBMC with Z3",
+      "status": "equivalent",
+      "miter_sha256": "4dc5f781a275597236ab726a38c3ee25b33401733fd0db97e150dc0370d02a15",
+      "returncode": 0,
+      "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+      "command": [
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\large\\fir_16\\proof\\residual_0\\miter.c",
+        "--i386-win32",
+        "--32",
+        "--z3",
+        "--bv",
+        "--unwind",
+        "256",
+        "--overflow-check",
+        "--ub-shift-check",
+        "--uninitialised-vars-check",
+        "--multi-property"
+      ],
+      "max_unroll": 256,
+      "timeout_ms": 60000,
+      "elapsed_seconds": 0.275717,
+      "bounds_pointer_division_overflow_shift_uninitialized_unwinding_checks_retained": true
+    },
+    "engine_status": "equivalent",
+    "complete_unwinding_required": true,
+    "proof_scope": "Residual C proof plus all listed certified region/encoding lemmas",
+    "elapsed_seconds": 0.929232,
+    "artifact_sha256": {
+      "candidate_canonical.c": "1528c0c4671dad3fd5ec482603e6445499f36d60521de26f4c76195b7d65051d",
+      "candidate_input.c": "e5be6c5f363af00b61ada2490601c0ed6e73a7a240fc18078c2b1d188635803b",
+      "contract.json": "9302b1b2874b272bab56f685ea00c892ba82f11cc9d79e24db7fde504328b18f",
+      "lemmas/candidate_region.c": "7116be1207d6224e00df927a7ba848acc50d3e1fd3cb9c8e9e9013a4110320a9",
+      "lemmas/original_region.c": "72a150404c1afb650f94e1e2274db4a8e41a65e99ae7ecdc1680fab12daa8cf7",
+      "lemmas/region_equality.json": "bc19b7a72c9d3bd45bbcd9886499eab36e3ff339077ca78c40d9c0407a83ee1b",
+      "lemmas/region_equality.smt2": "716c5bfba262934a276f663899830f644efaed4ffd5689bc3458547d17b7b31f",
+      "original_canonical.c": "2090cc93f833f29899529e9f81e2c3a926fac73953547498e5076e2befa2b0b8",
+      "original_input.c": "160f50f5f728dc2b49d1347ec35592d164f0ba09568468f91b6630295b207880",
+      "residual_0/esbmc.log": "cb4df9aa316fdf4b7c1d76c50814017cc4ddc17818245a808efa2312a7ad1f17",
+      "residual_0/miter.c": "4dc5f781a275597236ab726a38c3ee25b33401733fd0db97e150dc0370d02a15",
+      "residual_0/result.json": "66f37ea276f26c71bdccfe41e9a0d7bf8a986c52c99fff0784464b2440eb4746"
+    }
+  },
+  "smt_replay": {
+    "passed": true,
+    "queries": [
+      {
+        "query": "lemmas/region_equality.smt2",
+        "expected": "unsat",
+        "observed": "unsat"
+      }
+    ],
+    "matches_current_implementation": true,
+    "implementation_source": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\hlscheck",
+    "scope": "Matching current/archived implementation and saved artifact hashes; accepted SMT lemmas replayed with Z3. ESBMC log retained, not an independent proof certificate."
+  },
+  "native_witness": {
+    "available": false
+  },
+  "matched_expected": true
+}

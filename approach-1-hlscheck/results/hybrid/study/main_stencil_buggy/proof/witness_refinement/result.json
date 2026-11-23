@@ -1,0 +1,26 @@
+{
+  "engine": "ESBMC with Z3",
+  "status": "unknown",
+  "miter_sha256": "a6314911c35c2ab978dc5ace7b5fca9d984b4c26ce84ec1eb444c28f1d2bfcc8",
+  "reason": "Residual verification exceeded the wall-clock limit",
+  "command": [
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_stencil_buggy\\proof\\witness_refinement\\miter.c",
+    "--i386-win32",
+    "--32",
+    "--z3",
+    "--bv",
+    "--unwind",
+    "256",
+    "--overflow-check",
+    "--ub-shift-check",
+    "--uninitialised-vars-check",
+    "--multi-property",
+    "--generate-json-report",
+    "--no-slice"
+  ],
+  "max_unroll": 256,
+  "timeout_ms": 10000,
+  "elapsed_seconds": 10.036027,
+  "bounds_pointer_division_overflow_shift_uninitialized_unwinding_checks_retained": true
+}

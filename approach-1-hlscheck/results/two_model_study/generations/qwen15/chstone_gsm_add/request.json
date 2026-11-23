@@ -1,0 +1,18 @@
+{
+  "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+    },
+    {
+      "role": "user",
+      "content": "Quickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\n/*\n+--------------------------------------------------------------------------+\n| CHStone : a suite of benchmark programs for C-based High-Level Synthesis |\n| ======================================================================== |\n|                                                                          |\n| * Collected and Modified : Y. Hara, H. Tomiyama, S. Honda,               |\n|                            H. Takada and K. Ishii                        |\n|                            Nagoya University, Japan                      |\n|                                                                          |\n| * Remark :                                                               |\n|    1. This source code is modified to unify the formats of the benchmark |\n|       programs in CHStone.                                               |\n|    2. Test vectors are added for CHStone.                                |\n|    3. If \"main_result\" is 0 at the end of the program, the program is    |\n|       correctly executed.                                                |\n|    4. Please follow the copyright of each benchmark program.             |\n+--------------------------------------------------------------------------+\n*/\n/*\n * Copyright 1992 by Jutta Degener and Carsten Bormann, Technische\n * Universitaet Berlin.  See the accompanying file \"COPYRIGHT\" for\n * details.  THERE IS ABSOLUTELY NO WARRANTY FOR THIS SOFTWARE.\n */\n\n\ntypedef short word;\ntypedef long longword;\n#define MIN_WORD ((-32767)-1)\n#define MAX_WORD (32767)\n#define saturate(x) ((x)<MIN_WORD?MIN_WORD:(x)>MAX_WORD?MAX_WORD:(x))\nword\nkernel (word a, word b)\n{\n  longword sum;\n  sum = (longword) a + (longword) b;\n  return saturate (sum);\n}\n```\n"
+    }
+  ],
+  "stream": false,
+  "seed": 5291,
+  "temperature": 0.2,
+  "top_p": 0.95,
+  "max_tokens": 1536
+}

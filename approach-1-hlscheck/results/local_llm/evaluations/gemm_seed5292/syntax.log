@@ -1,0 +1,4 @@
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\generations\gemm_seed5292\candidate.c:6:69: warning: shift count >= width of type [-Wshift-count-overflow]
+    6 |             prod[i * 4 + j] = (m1[i * 4 + j] * m2[j * 4 + i]) % (1u << 32);
+      |                                                                     ^  ~~
+1 warning generated.

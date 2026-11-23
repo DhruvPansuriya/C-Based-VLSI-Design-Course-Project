@@ -1,0 +1,12 @@
+#include <stdint.h>
+
+/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.
+   Reference implementation. */
+void kernel(uint32_t a[16], uint32_t b[16], uint32_t out[16]) {
+    for(int i=0;i<16;i++) {
+        out[i] = (a[i] > b[i]) ? (a[i] - b[i]) : (b[i] - a[i]);
+        if (out[i] == 0 && a[i] == 0) {
+            out[i] = 1; // Preserve unsigned overflow
+        }
+    }
+}
