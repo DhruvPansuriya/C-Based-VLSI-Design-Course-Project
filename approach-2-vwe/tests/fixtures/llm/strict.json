@@ -1,9 +1,0 @@
-{
-  "id": "fixture.strict",
-  "provenance": {"source": "llm", "model_family": "mock", "prompt": "strict"},
-  "shape": {"buffers": {}, "alias": "disjoint", "bounds": {}},
-  "clauses": [{"zone": "a + b > 255", "behaviour": "out_ret == 255"}],
-  "ext": "out_ret == min(a + b, 255)",
-  "reach": "a + b > 255",
-  "nl_rendering": "Saturate on overflow, preserve the rest."
-}

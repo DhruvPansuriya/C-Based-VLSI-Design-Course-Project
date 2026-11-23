@@ -1,7 +1,0 @@
-# LP64 model obligations, not permission to ignore missing library bodies.
-# T05 must link and qualify the named CBMC models before proof evidence is valid.
-[functions]
-memcpy = "void *memcpy(void *dst, const void *src, unsigned long n);"
-memset = "void *memset(void *dst, int value, unsigned long n);"
-abs = "int abs(int x);"
-labs = "long labs(long x);"
