@@ -1,0 +1,692 @@
+[
+  {
+    "program": "CBMC 6.11.0 (cbmc-6.11.0)"
+  },
+  {
+    "messageText": "CBMC version 6.11.0 (cbmc-6.11.0) 64-bit arm64 macos",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Reading GOTO program from file runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification/checked.goto",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Generating GOTO Program",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Adding CPROVER library (arm64)",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Removal of function pointers and virtual functions",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Generic Property Instrumentation",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Starting Bounded Model Checking",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Passing problem to SMT2 QF_AUFBV using Z3",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "converting SSA",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Running SMT2 QF_AUFBV using Z3",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "result": [
+      {
+        "description": "VWE.contract.evaluated",
+        "property": "main.assertion.1",
+        "sourceLocation": {
+          "comment": "VWE.contract.evaluated",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/main.c",
+          "function": "main",
+          "line": "48",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check" ],
+          "propertyClass": "assertion",
+          "propertyId": "main.assertion.1",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer NULL in in->s0_0",
+        "property": "__vwe_a0_call.pointer_dereference.1",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer NULL in in->s0_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "11",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.1",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer invalid in in->s0_0",
+        "property": "__vwe_a0_call.pointer_dereference.2",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer invalid in in->s0_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "11",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.2",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: deallocated dynamic object in in->s0_0",
+        "property": "__vwe_a0_call.pointer_dereference.3",
+        "sourceLocation": {
+          "comment": "dereference failure: deallocated dynamic object in in->s0_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "11",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.3",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: dead object in in->s0_0",
+        "property": "__vwe_a0_call.pointer_dereference.4",
+        "sourceLocation": {
+          "comment": "dereference failure: dead object in in->s0_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "11",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.4",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer outside object bounds in in->s0_0",
+        "property": "__vwe_a0_call.pointer_dereference.5",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer outside object bounds in in->s0_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "11",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.5",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: invalid integer address in in->s0_0",
+        "property": "__vwe_a0_call.pointer_dereference.6",
+        "sourceLocation": {
+          "comment": "dereference failure: invalid integer address in in->s0_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "11",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.6",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer NULL in in->s1_0",
+        "property": "__vwe_a0_call.pointer_dereference.7",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer NULL in in->s1_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "13",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.7",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer invalid in in->s1_0",
+        "property": "__vwe_a0_call.pointer_dereference.8",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer invalid in in->s1_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "13",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.8",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: deallocated dynamic object in in->s1_0",
+        "property": "__vwe_a0_call.pointer_dereference.9",
+        "sourceLocation": {
+          "comment": "dereference failure: deallocated dynamic object in in->s1_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "13",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.9",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: dead object in in->s1_0",
+        "property": "__vwe_a0_call.pointer_dereference.10",
+        "sourceLocation": {
+          "comment": "dereference failure: dead object in in->s1_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "13",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.10",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer outside object bounds in in->s1_0",
+        "property": "__vwe_a0_call.pointer_dereference.11",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer outside object bounds in in->s1_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "13",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.11",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: invalid integer address in in->s1_0",
+        "property": "__vwe_a0_call.pointer_dereference.12",
+        "sourceLocation": {
+          "comment": "dereference failure: invalid integer address in in->s1_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "13",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.12",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer NULL in out->r0",
+        "property": "__vwe_a0_call.pointer_dereference.13",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer NULL in out->r0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "15",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.13",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer invalid in out->r0",
+        "property": "__vwe_a0_call.pointer_dereference.14",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer invalid in out->r0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "15",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.14",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: deallocated dynamic object in out->r0",
+        "property": "__vwe_a0_call.pointer_dereference.15",
+        "sourceLocation": {
+          "comment": "dereference failure: deallocated dynamic object in out->r0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "15",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.15",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: dead object in out->r0",
+        "property": "__vwe_a0_call.pointer_dereference.16",
+        "sourceLocation": {
+          "comment": "dereference failure: dead object in out->r0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "15",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.16",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer outside object bounds in out->r0",
+        "property": "__vwe_a0_call.pointer_dereference.17",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer outside object bounds in out->r0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "15",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.17",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: invalid integer address in out->r0",
+        "property": "__vwe_a0_call.pointer_dereference.18",
+        "sourceLocation": {
+          "comment": "dereference failure: invalid integer address in out->r0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a0.c",
+          "function": "__vwe_a0_call",
+          "line": "15",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a0_call.pointer_dereference.18",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer NULL in in->s0_0",
+        "property": "__vwe_a1_call.pointer_dereference.1",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer NULL in in->s0_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "11",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.1",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer invalid in in->s0_0",
+        "property": "__vwe_a1_call.pointer_dereference.2",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer invalid in in->s0_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "11",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.2",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: deallocated dynamic object in in->s0_0",
+        "property": "__vwe_a1_call.pointer_dereference.3",
+        "sourceLocation": {
+          "comment": "dereference failure: deallocated dynamic object in in->s0_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "11",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.3",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: dead object in in->s0_0",
+        "property": "__vwe_a1_call.pointer_dereference.4",
+        "sourceLocation": {
+          "comment": "dereference failure: dead object in in->s0_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "11",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.4",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer outside object bounds in in->s0_0",
+        "property": "__vwe_a1_call.pointer_dereference.5",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer outside object bounds in in->s0_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "11",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.5",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: invalid integer address in in->s0_0",
+        "property": "__vwe_a1_call.pointer_dereference.6",
+        "sourceLocation": {
+          "comment": "dereference failure: invalid integer address in in->s0_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "11",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.6",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer NULL in in->s1_0",
+        "property": "__vwe_a1_call.pointer_dereference.7",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer NULL in in->s1_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "13",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.7",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer invalid in in->s1_0",
+        "property": "__vwe_a1_call.pointer_dereference.8",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer invalid in in->s1_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "13",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.8",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: deallocated dynamic object in in->s1_0",
+        "property": "__vwe_a1_call.pointer_dereference.9",
+        "sourceLocation": {
+          "comment": "dereference failure: deallocated dynamic object in in->s1_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "13",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.9",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: dead object in in->s1_0",
+        "property": "__vwe_a1_call.pointer_dereference.10",
+        "sourceLocation": {
+          "comment": "dereference failure: dead object in in->s1_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "13",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.10",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer outside object bounds in in->s1_0",
+        "property": "__vwe_a1_call.pointer_dereference.11",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer outside object bounds in in->s1_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "13",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.11",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: invalid integer address in in->s1_0",
+        "property": "__vwe_a1_call.pointer_dereference.12",
+        "sourceLocation": {
+          "comment": "dereference failure: invalid integer address in in->s1_0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "13",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.12",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer NULL in out->r0",
+        "property": "__vwe_a1_call.pointer_dereference.13",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer NULL in out->r0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "15",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.13",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer invalid in out->r0",
+        "property": "__vwe_a1_call.pointer_dereference.14",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer invalid in out->r0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "15",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.14",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: deallocated dynamic object in out->r0",
+        "property": "__vwe_a1_call.pointer_dereference.15",
+        "sourceLocation": {
+          "comment": "dereference failure: deallocated dynamic object in out->r0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "15",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.15",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: dead object in out->r0",
+        "property": "__vwe_a1_call.pointer_dereference.16",
+        "sourceLocation": {
+          "comment": "dereference failure: dead object in out->r0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "15",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.16",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: pointer outside object bounds in out->r0",
+        "property": "__vwe_a1_call.pointer_dereference.17",
+        "sourceLocation": {
+          "comment": "dereference failure: pointer outside object bounds in out->r0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "15",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.17",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "dereference failure: invalid integer address in out->r0",
+        "property": "__vwe_a1_call.pointer_dereference.18",
+        "sourceLocation": {
+          "comment": "dereference failure: invalid integer address in out->r0",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/a1.c",
+          "function": "__vwe_a1_call",
+          "line": "15",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "pointer dereference",
+          "propertyFatal": true,
+          "propertyId": "__vwe_a1_call.pointer_dereference.18",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "arithmetic overflow on signed + in (signed long long int)ve_arg_0 + (signed long long int)ve_arg_1",
+        "property": "vwe_observer_0.overflow.1",
+        "sourceLocation": {
+          "comment": "arithmetic overflow on signed + in (signed long long int)ve_arg_0 + (signed long long int)ve_arg_1",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/main.c",
+          "function": "vwe_observer_0",
+          "line": "12",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "overflow",
+          "propertyId": "vwe_observer_0.overflow.1",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "arithmetic overflow on signed + in (signed long long int)ve_arg_0 + (signed long long int)ve_arg_1",
+        "property": "vwe_observer_2.overflow.1",
+        "sourceLocation": {
+          "comment": "arithmetic overflow on signed + in (signed long long int)ve_arg_0 + (signed long long int)ve_arg_1",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/main.c",
+          "function": "vwe_observer_2",
+          "line": "20",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "overflow",
+          "propertyId": "vwe_observer_2.overflow.1",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      },
+      {
+        "description": "arithmetic overflow on signed + in (signed long long int)ve_arg_0 + (signed long long int)ve_arg_1",
+        "property": "vwe_observer_3.overflow.1",
+        "sourceLocation": {
+          "comment": "arithmetic overflow on signed + in (signed long long int)ve_arg_0 + (signed long long int)ve_arg_1",
+          "file": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/main.c",
+          "function": "vwe_observer_3",
+          "line": "24",
+          "pragma": [ "checked:bounds-check", "checked:pointer-check", "checked:div-by-zero-check", "checked:signed-overflow-check", "checked:undefined-shift-check", "checked:pointer-primitive-check", "checked:memory-leak-check", "checked:memory-cleanup-check", "checked:float-div-by-zero-check", "checked:enum-range-check", "checked:unsigned-overflow-check", "checked:pointer-overflow-check", "checked:conversion-check", "checked:float-overflow-check", "checked:nan-check" ],
+          "propertyClass": "overflow",
+          "propertyId": "vwe_observer_3.overflow.1",
+          "workingDirectory": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/contract_ub/verification"
+        },
+        "status": "SUCCESS"
+      }
+    ]
+  },
+  {
+    "messageText": "VERIFICATION SUCCESSFUL",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "cProverStatus": "success"
+  }
+]
