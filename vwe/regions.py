@@ -1,7 +1,11 @@
 """P0-only computed regions, with separate coverage and exactness evidence."""
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, fields
+from functools import lru_cache
+from hashlib import sha256
+import os
+import tempfile
 import json
 from pathlib import Path
 from typing import Any, Mapping
@@ -109,6 +113,67 @@ def _initial_buffer_write(gen: Generator) -> tuple[str, str] | None:
 def compute_regions(p0: Views, shape: Mapping[str, Any], out: Path, *,
                     proposed_ub: str | None = None, config: Config | None = None,
                     parallel: bool = True) -> RegionResult:
+    """P0-only regions, optionally reused from an evaluation cache (off by default).
+
+    Set VWE_REGION_CACHE to a directory to reuse results across candidates and
+    baselines of one evaluation. The key covers P0's source and both preprocessed
+    views, the exact profile, the proposed region, the full configuration and the
+    hash of the verifier's own source code; every reuse leaves cache_hit.json.
+    """
+    cache_dir = os.environ.get("VWE_REGION_CACHE")
+    if not cache_dir:
+        return _compute_regions(p0, shape, out, proposed_ub=proposed_ub, config=config, parallel=parallel)
+    cfg = config or Config()
+    key = sha256(json.dumps({
+        "p0": p0.source_sha256, "views": [p0.sim.sha256, p0.synth.sha256],
+        "shape": _plain(shape), "proposed_ub": proposed_ub,
+        "config": {k: asdict(getattr(cfg, k)) for k in ("bounds", "timeouts", "backends", "native")},
+        "code": _code_hash()}, sort_keys=True, default=str).encode()).hexdigest()
+    entry = Path(cache_dir) / f"{key}.json"
+    out.mkdir(parents=True, exist_ok=True)
+    if entry.is_file():
+        result = _from_json(json.loads(entry.read_text()))
+        (out / "regions.json").write_text(json.dumps(asdict(result), indent=2) + "\n")
+        (out / "cache_hit.json").write_text(json.dumps({"key": key, "entry": str(entry)}) + "\n")
+        return result
+    result = _compute_regions(p0, shape, out, proposed_ub=proposed_ub, config=cfg, parallel=parallel)
+    entry.parent.mkdir(parents=True, exist_ok=True)
+    fd, tmp = tempfile.mkstemp(dir=entry.parent, suffix=".tmp")
+    with os.fdopen(fd, "w") as stream:
+        json.dump(asdict(result), stream)
+    os.replace(tmp, entry)
+    return result
+
+
+@lru_cache(maxsize=1)
+def _code_hash() -> str:
+    h = sha256()
+    for path in sorted(Path(__file__).resolve().parent.rglob("*.py")):
+        h.update(path.read_bytes())
+    return h.hexdigest()
+
+
+def _plain(value: Any) -> Any:
+    if isinstance(value, Mapping):
+        return {k: _plain(v) for k, v in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_plain(v) for v in value]
+    return value
+
+
+def _from_json(doc: Mapping[str, Any]) -> RegionResult:
+    values = {}
+    for f in fields(RegionResult):
+        v = doc[f.name]
+        if isinstance(v, dict) and "outcome" in v:
+            v = Obligation(Outcome(v["outcome"]), v.get("witness"), v.get("note", ""))
+        values[f.name] = v
+    return RegionResult(**values)
+
+
+def _compute_regions(p0: Views, shape: Mapping[str, Any], out: Path, *,
+                     proposed_ub: str | None = None, config: Config | None = None,
+                     parallel: bool = True) -> RegionResult:
     """Certify what the bounded queries support for one exact input profile.
 
     Safety outside P plus a witness inside P certifies an overapproximation.

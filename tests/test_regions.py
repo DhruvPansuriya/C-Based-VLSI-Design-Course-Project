@@ -1,7 +1,9 @@
 """Computed regions distinguish an exact region from a safe overapproximation."""
 import pytest
 
+from pathlib import Path
 from vwe.regions import compute_regions
+from vwe.tools import cbmc
 from vwe.verdict import Outcome
 from vwe.views import make_views
 from .test_harness_generator import REAL, example
@@ -47,3 +49,26 @@ def test_uninitialized_read_is_not_defined_nondeterminism(tmp_path):
     assert "uninitialized_local" in report.ub_witness.note
     assert report.exact_ub is None
     assert report.exact_nd is None
+
+
+@pytest.mark.skipif(not cbmc.cbmc_available(), reason="CBMC unavailable")
+def test_region_cache_is_opt_in_exact_and_keyed_on_code_and_config(tmp_path, monkeypatch):
+    from dataclasses import asdict
+    from vwe.config import Config, Timeouts
+    from vwe.regions import compute_regions
+    from vwe.tasks import load_pipeline_view
+    from vwe.views import make_views
+    task = load_pipeline_view(Path(__file__).resolve().parent.parent / "examples/tasks/ex2_argmax")
+    (tmp_path / "p0.c").write_text(task.p0.text)
+    views = make_views(tmp_path / "p0.c", task.function, tmp_path / "views", prefix="p0")
+    monkeypatch.setenv("VWE_REGION_CACHE", str(tmp_path / "cache"))
+    first = compute_regions(views, task.caller_domain, tmp_path / "a")
+    assert not (tmp_path / "a/cache_hit.json").exists()
+    second = compute_regions(views, task.caller_domain, tmp_path / "b")
+    assert (tmp_path / "b/cache_hit.json").exists() and asdict(second) == asdict(first)
+    other = Config(timeouts=Timeouts(cbmc_s=599))
+    compute_regions(views, task.caller_domain, tmp_path / "c", config=other)
+    assert not (tmp_path / "c/cache_hit.json").exists()  # configuration is part of the key
+    monkeypatch.delenv("VWE_REGION_CACHE")
+    compute_regions(views, task.caller_domain, tmp_path / "d")
+    assert not (tmp_path / "d/cache_hit.json").exists()  # off by default
