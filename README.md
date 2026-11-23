@@ -15,6 +15,39 @@ from CBMC, or a concrete input that breaks P1 and that we have actually run.
 
 ## How it works
 
+```mermaid
+flowchart LR
+    P0["P0<br/>original code"]
+    N["N<br/>English request"]
+    P1["P1<br/>new code"]
+    P0 --> S2
+    N --> S2["2. Readings<br/>strict, permissive, adversarial<br/>(LLM sees P0 and N only)"]
+    P0 --> S1["1. Admission<br/>parse P0 and P1"]
+    P1 --> S1
+    S1 --> S3["3. Checks on P0 only<br/>reference guard,<br/>validate and freeze readings"]
+    S2 --> S3
+    S3 --> S4["4. Proofs with CBMC<br/>SAT and Z3 must agree<br/>E0, E1, E2"]
+    P1 --> S4
+    S4 --> S5["5. Confirm<br/>fixed-input re-proof,<br/>real run with ASan/UBSan"]
+    S5 --> S6["6. Verdict<br/>ACCEPT / REJECT / UNDECIDED"]
+    S6 --> S7["7. Report<br/>report.html, report.json"]
+```
+
+How the verdict is decided:
+
+```mermaid
+flowchart TD
+    Q0{"New crash or UB in P1<br/>where P0 is safe?"} -- "yes, proved" --> R0["REJECT E0"]
+    Q0 -- no --> Q1{"Old behaviour changed<br/>outside every change zone?"}
+    Q1 -- "yes, proved" --> R1["REJECT E1"]
+    Q1 -- no --> Q2{"Does P1 meet<br/>every reading?"}
+    Q2 -- "yes, proved" --> A2["ACCEPT E2"]
+    Q2 -- "fails every reading" --> R2["REJECT E2"]
+    Q2 -- "mixed, or not proved" --> U["UNDECIDED"]
+```
+
+In words:
+
 1. **Admission.** Parse P0 and P1, in the normal build and with `__SYNTHESIS__` defined. The
    signature must be the same, and the code must use only C we can model.
 2. **Readings.** Write down several possible meanings of N (strict, permissive, adversarial). They
