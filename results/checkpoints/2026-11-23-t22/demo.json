@@ -1,0 +1,277 @@
+{
+  "K": 2,
+  "profiles": {
+    "ex1_saturate": {
+      "buffers": {},
+      "alias": "disjoint",
+      "bounds": {}
+    },
+    "ex2_argmax": {
+      "buffers": {
+        "a": "n",
+        "idx": "1"
+      },
+      "alias": "disjoint",
+      "bounds": {
+        "n": [
+          0,
+          2
+        ]
+      }
+    },
+    "ex4_sum": {
+      "buffers": {
+        "a": "n"
+      },
+      "alias": "disjoint",
+      "bounds": {
+        "n": [
+          1,
+          2
+        ]
+      },
+      "value_bounds": {
+        "a": [
+          -1000,
+          1000
+        ]
+      }
+    },
+    "ex5_add32_ambiguous": {
+      "buffers": {},
+      "alias": "disjoint",
+      "bounds": {}
+    },
+    "ex7_build_views": {
+      "buffers": {},
+      "alias": "disjoint",
+      "bounds": {},
+      "value_bounds": {
+        "x": [
+          -100,
+          100
+        ]
+      }
+    }
+  },
+  "seconds": 65.2154556660098,
+  "within_budget": true,
+  "rows": [
+    {
+      "label": "Correct saturation",
+      "task": "ex1_saturate",
+      "candidate": "v1",
+      "decision": "ACCEPT",
+      "evidence_class": "E2",
+      "match": true,
+      "seconds": 20.5759753750026,
+      "reason": "satisfies every interpretation",
+      "report": "demo/ex1_saturate/v1/report.html",
+      "witness": null
+    },
+    {
+      "label": "Always 255 breaks ordinary sums",
+      "task": "ex1_saturate",
+      "candidate": "v3",
+      "decision": "REJECT",
+      "evidence_class": "E1",
+      "match": true,
+      "seconds": 16.57012862499687,
+      "reason": "regression outside B_max rejected by every Ext",
+      "report": "demo/ex1_saturate/v3/report.html",
+      "witness": {
+        "inputs": {
+          "a": "0",
+          "b": "0"
+        },
+        "p0_output": {
+          "ret": "0"
+        },
+        "p1_output": {
+          "ret": "255"
+        },
+        "replayed_natively": true,
+        "replay_results": [
+          {
+            "status": "confirmed",
+            "reason": "captured observations match the fixed solver witness"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Tie-break regression",
+      "task": "ex2_argmax",
+      "candidate": "v2",
+      "decision": "REJECT",
+      "evidence_class": "E1",
+      "match": true,
+      "seconds": 26.588148542010458,
+      "reason": "regression outside B_max rejected by every Ext",
+      "report": "demo/ex2_argmax/v2/report.html",
+      "witness": {
+        "inputs": {
+          "n": "2",
+          "a uses NULL when size is zero": "TRUE",
+          "a[0]": "1929615236",
+          "a[1]": "1929615236",
+          "idx uses NULL when size is zero": "FALSE",
+          "idx[0]": "0"
+        },
+        "p0_output": {
+          "ret": "1929615236",
+          "a[0]": "1929615236",
+          "a[1]": "1929615236",
+          "idx[0]": "0"
+        },
+        "p1_output": {
+          "ret": "1929615236",
+          "a[0]": "1929615236",
+          "a[1]": "1929615236",
+          "idx[0]": "1"
+        },
+        "replayed_natively": true,
+        "replay_results": [
+          {
+            "status": "confirmed",
+            "reason": "captured observations match the fixed solver witness"
+          }
+        ]
+      }
+    },
+    {
+      "label": "New out-of-bounds read + native replay",
+      "task": "ex2_argmax",
+      "candidate": "v3",
+      "decision": "REJECT",
+      "evidence_class": "E0",
+      "match": true,
+      "seconds": 24.12246033300471,
+      "reason": "computed fact: e0: p1_argmax.pointer_dereference.41 dereference failure: pointer outside object bounds in a[(signed long int)i]",
+      "report": "demo/ex2_argmax/v3/report.html",
+      "witness": {
+        "inputs": {
+          "n": "1",
+          "a uses NULL when size is zero": "TRUE",
+          "a[0]": "1",
+          "idx uses NULL when size is zero": "TRUE",
+          "idx[0]": "1"
+        },
+        "p0_output": null,
+        "p1_output": null,
+        "replayed_natively": true,
+        "replay_results": [
+          {
+            "status": "confirmed",
+            "reason": "heap-buffer-overflow"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Include the final element",
+      "task": "ex4_sum",
+      "candidate": "v1",
+      "decision": "ACCEPT",
+      "evidence_class": "E2",
+      "match": true,
+      "seconds": 32.842782957988675,
+      "reason": "satisfies every interpretation",
+      "report": "demo/ex4_sum/v1/report.html",
+      "witness": null
+    },
+    {
+      "label": "Read one past the exact buffer",
+      "task": "ex4_sum",
+      "candidate": "v2",
+      "decision": "REJECT",
+      "evidence_class": "E0",
+      "match": true,
+      "seconds": 24.77296558400849,
+      "reason": "computed fact: e0: p1_sum.pointer_dereference.5 dereference failure: pointer outside object bounds in a[(signed long int)i]",
+      "report": "demo/ex4_sum/v2/report.html",
+      "witness": {
+        "inputs": {
+          "n": "1",
+          "a uses NULL when size is zero": "FALSE",
+          "a[0]": "0"
+        },
+        "p0_output": null,
+        "p1_output": null,
+        "replayed_natively": true,
+        "replay_results": [
+          {
+            "status": "confirmed",
+            "reason": "heap-buffer-overflow"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Overflow readings disagree",
+      "task": "ex5_add32_ambiguous",
+      "candidate": "v2",
+      "decision": "UNDECIDED",
+      "evidence_class": "-",
+      "match": true,
+      "seconds": 23.717353665997507,
+      "reason": "ambiguous: interpretations disagree",
+      "report": "demo/ex5_add32_ambiguous/v2/report.html",
+      "witness": {
+        "inputs": {
+          "a": "4829467",
+          "b": "4290202505"
+        },
+        "p0_output": null,
+        "p1_output": {
+          "ret": "-1"
+        },
+        "replayed_natively": false,
+        "replay_results": []
+      }
+    },
+    {
+      "label": "Simulation and synthesis disagree",
+      "task": "ex7_build_views",
+      "candidate": "v1",
+      "decision": "REJECT",
+      "evidence_class": "E0",
+      "match": true,
+      "seconds": 8.207541374998982,
+      "reason": "views: main.assertion.1 VWE.views.equivalence",
+      "report": "demo/ex7_build_views/v1/report.html",
+      "witness": {
+        "inputs": {
+          "x": "92"
+        },
+        "p0_output": {
+          "ret": "93"
+        },
+        "p1_output": {
+          "ret": "94"
+        },
+        "replayed_natively": true,
+        "replay_results": [
+          {
+            "status": "confirmed",
+            "reason": "captured observations match the fixed solver witness"
+          }
+        ]
+      }
+    },
+    {
+      "label": "Abort path-cut defence",
+      "decision": "DEMONSTRATED",
+      "evidence_class": "-",
+      "match": true,
+      "seconds": 0.6475814169971272,
+      "reason": "Unprotected SUCCESS; audited SAT/Z3 trap caught the path cut",
+      "report": "demo/path_cut/report.html",
+      "unprotected": "success",
+      "protected": {
+        "sat": true,
+        "z3": true
+      }
+    }
+  ]
+}

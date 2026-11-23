@@ -1,0 +1,63 @@
+{
+  "profile_sha256": "fda399b2b9523555c82309d2bc877c800c35603046e29aad850812766b25f87f",
+  "p0_sha256": "21b55d511d676c1fd7acffda6eeffa3295f10f229e2586c138197c369f71a084",
+  "proposed_ub": "(n) < 0 || (cap) <= (n)",
+  "exact_ub": "(n) < 0 || (cap) <= (n)",
+  "exact_nd": "false",
+  "reference_safe_guard": "!((n) < 0 || (cap) <= (n))",
+  "ub_coverage": {
+    "outcome": "PROVED",
+    "witness": null,
+    "note": "reference_safety"
+  },
+  "ub_witness": {
+    "outcome": "VIOLATED",
+    "witness": {
+      "__vwe_in_scalar_2_0": "2",
+      "__vwe_in_scalar_3_0": "1",
+      "__vwe_in_null_0": "TRUE",
+      "__vwe_in_buffer_0_0_0": "0",
+      "__vwe_in_buffer_0_1_0": "0",
+      "__vwe_in_buffer_0_2_0": "0",
+      "__vwe_in_null_1": "TRUE",
+      "__vwe_in_buffer_1_0_0": "0"
+    },
+    "note": "reference_safety: p0_copy.pointer_dereference.5 dereference failure: pointer outside object bounds in dst[(signed long int)n]"
+  },
+  "predicate_reach": {
+    "outcome": "VIOLATED",
+    "witness": {
+      "__vwe_in_scalar_2_0": "2",
+      "__vwe_in_scalar_3_0": "1",
+      "__vwe_in_null_0": "TRUE",
+      "__vwe_in_buffer_0_0_0": "0",
+      "__vwe_in_buffer_0_1_0": "0",
+      "__vwe_in_buffer_0_2_0": "0",
+      "__vwe_in_null_1": "TRUE",
+      "__vwe_in_buffer_1_0_0": "16"
+    },
+    "note": "feasibility: main.assertion.3 VWE.feasibility.predicate"
+  },
+  "universal_inside": {
+    "outcome": "PROVED",
+    "witness": null,
+    "note": "input_rule"
+  },
+  "determinism_outside": {
+    "outcome": "PROVED",
+    "witness": null,
+    "note": "determinism"
+  },
+  "safe_guard_reach": {
+    "outcome": "VIOLATED",
+    "witness": {
+      "__vwe_in_scalar_2_0": "0",
+      "__vwe_in_scalar_3_0": "1",
+      "__vwe_in_null_0": "TRUE",
+      "__vwe_in_buffer_0_0_0": "0",
+      "__vwe_in_null_1": "TRUE",
+      "__vwe_in_buffer_1_0_0": "0"
+    },
+    "note": "feasibility: main.assertion.3 VWE.feasibility.predicate"
+  }
+}
