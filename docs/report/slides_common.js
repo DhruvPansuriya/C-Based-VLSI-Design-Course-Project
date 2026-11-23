@@ -72,8 +72,8 @@ function label(slide, C, x, y, w, h, text, opts = {}) {
 }
 
 // Big number with a caption underneath.
-function stat(slide, C, x, y, w, num, caption, color) {
-  slide.addText(num, { x, y, w, h: 0.75, isTextBox: true, margin: 0, fontSize: 40, bold: true,
+function stat(slide, C, x, y, w, num, caption, color, size) {
+  slide.addText(num, { x, y, w, h: 0.75, isTextBox: true, margin: 0, fontSize: size || 40, bold: true,
     color: color || C.accent1, align: "center", fontFace: THEME.headFontFace });
   slide.addText(caption, { x, y: y + 0.75, w, h: 0.5, isTextBox: true, margin: 0, fontSize: 11,
     color: C.text1, align: "center", valign: "top" });
@@ -89,12 +89,12 @@ function hbars(slide, C, x, y, w, rows, opts = {}) {
   const max = opts.max || Math.max(...rows.map(r => r[1]), 1);
   const lw = opts.labelW || 1.7, rh = opts.rowH || 0.5, bw = w - lw - 0.5;
   if (opts.title) label(slide, C, x, y - 0.4, w, 0.3, opts.title, { fontSize: 12, bold: true });
-  rows.forEach(([name, v, color], i) => {
+  rows.forEach(([name, v, color, shown], i) => {
     const yy = y + i * rh;
     label(slide, C, x, yy, lw - 0.1, rh * 0.8, name, { fontSize: 11, align: "right", valign: "middle" });
     const len = Math.max(bw * v / max, 0.02);
     slide.addShape("rect", { x: x + lw, y: yy + 0.08, w: len, h: rh * 0.8 - 0.16, fill: { color: color || HEX.warn }, line: { color: color || HEX.warn, width: 0 } });
-    label(slide, C, x + lw + len + 0.06, yy, 0.6, rh * 0.8, String(v), { fontSize: 12, bold: true, valign: "middle" });
+    label(slide, C, x + lw + len + 0.06, yy, 0.7, rh * 0.8, shown ?? String(v), { fontSize: 12, bold: true, valign: "middle" });
   });
 }
 
