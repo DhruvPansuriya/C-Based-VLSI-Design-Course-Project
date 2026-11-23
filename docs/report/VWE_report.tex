@@ -67,8 +67,8 @@ answer: either a proof, or a concrete input that shows the problem and that we h
 Since English requests can mean more than one thing, VWE writes down several possible meanings of
 $N$, using only $\Pz$ and $N$. It never shows $\Po$ to the language model. It then uses the CBMC
 model checker to check two things: that $\Po$ makes the requested change, and that it leaves the
-rest of $\Pz$'s behaviour alone. We tested VWE on 181 cases from another course team's project
-(we call it Approach-1). VWE gave a decision on 125 of them and agreed with that team's answer on
+rest of $\Pz$'s behaviour alone. We also tested VWE on 181 cases from HLSCheck, our first approach to this
+project (Approach-1). VWE gave a decision on 125 of them and agreed with HLSCheck's label on
 all 125. On a second benchmark built from public HLS bugs, VWE made no wrong decision, but it
 declined to decide almost every case. This report explains how the method works, which tools it
 uses, one full example, and what we measured.
@@ -504,7 +504,7 @@ rate-limit handling), versioned prompts, the \texttt{vwe interpret} and \texttt{
 commands, and repeated runs to measure stability. Working live with two model families.\\
 Evaluation (T15 to T18) & 20 tasks built from the public Chrysalis-HLS bug dataset, candidate
 fixes, correct/incorrect labels, three simpler checkers to compare against, and the statistics.\\
-Approach-1 evaluation & VWE run on the other team's 181 cases (Section~\ref{sec:approach1}).\\
+HLSCheck evaluation & VWE run on HLSCheck's 181 cases (Section~\ref{sec:approach1}).\\
 Not done & the HLS pragma checks and real synthesis numbers (T19, T20), the FIFO extension (T21),
 and proofs of the theorems in our design document.\\\bottomrule
 \end{tabularx}\end{center}
@@ -547,8 +547,8 @@ Demo & 9 rows taken from the golden examples with smaller input sizes (K=2) & 9 
 Chrysalis-HLS & 20 tasks from a public HLS bug dataset; candidates are the correct code, the
 unchanged buggy code and small mutations; labels from a proof plus random testing & 97 (89
 labelled) & median 7.3 s, mean 45.8 s, max 367 s & 1 decided, correct; 0 wrong\\
-Approach-1 & the other team's kernels: their rewrites, their one-bit faults and their 80
-subtle-fault cases, with their labels & 181 & median 17.7 s if decided, about 248 s if not & 125
+HLSCheck (Approach-1) & our first approach's kernels: its rewrites, one-bit faults and 80
+subtle-fault cases, with its labels & 181 & median 17.7 s if decided, about 248 s if not & 125
 decided, all agree; 0 wrong\\
 Live readings & Examples 1, 2 and 4 with readings written by two live models instead of by us & 10
 & like the golden cases & 3 same, 7 undecided, 0 opposite\\\bottomrule
@@ -614,9 +614,9 @@ no visible effect, so check V-2 rightly removed every reading that said ``$\Pz$ 
 by task, VWE made fewer wrong decisions than the tests-only checker on 12 of the 20 tasks and more on
 none (sign test, $p<0.001$), and fewer than the regression-only checker on 5 tasks and more on none.
 
-\subsection{Approach-1 cases}
-181 candidates from the other team's project: 51 rewrites, 50 one-bit faults and 80 subtle-fault
-cases. VWE decided 125 and agreed with their answer on all 125. A decided case took a median of
+\subsection{HLSCheck (Approach-1) cases}
+181 candidates from HLSCheck, our first approach: 51 rewrites, 50 one-bit faults and 80 subtle-fault
+cases. VWE decided 125 and agreed with HLSCheck's label on all 125. A decided case took a median of
 17.7 s; cases that ended undecided took about 248 s, almost all of it waiting for solver timeouts.
 The full run took about 4.1 machine-hours with three parallel workers. Section~\ref{sec:approach1}
 gives the details.
@@ -628,14 +628,14 @@ answer. In one case the adversarial reading left ``outside the zone'' unspecifie
 reading used a pointer inside a condition, which our reading language cannot evaluate. The model
 readings never caused a wrong answer, but they lowered how often VWE could decide.
 
-\section{How VWE did on the Approach-1 cases}
+\section{How VWE did on the HLSCheck (Approach-1) cases}
 \label{sec:approach1}
-\textbf{Approach-1} is the other course team's project, which we received as a zip file. In their
-setup, an LLM rewrites a C kernel to get better hardware. Their checker, which combines their own
-symbolic execution and Z3 with ESBMC, proves that the rewrite still computes the same thing. Only
-proved rewrites go on to high-level synthesis, where they measure area and latency. Their test set
+\textbf{HLSCheck} (Approach-1) is our first approach to this project, described in its own report.
+There, an LLM rewrites a C kernel to get better hardware. HLSCheck combines our own symbolic
+execution and Z3 with ESBMC to prove that the rewrite still computes the same thing. Only proved
+rewrites go on to high-level synthesis, where area and latency are measured. Its test set
 has two parts. The \emph{main set} has 51 kernels, each with a correct rewrite and a version with
-one output bit flipped on purpose. The \emph{subtle-fault set} has 80 cases with their own labels:
+one output bit flipped on purpose. The \emph{subtle-fault set} has 80 labelled cases:
 54 not equivalent, 20 equivalent, and 6 where the new code has undefined behaviour.
 
 \paragraph{How we ran VWE on them.} Each kernel became a VWE task with request type T5, ``improve the
@@ -643,9 +643,9 @@ hardware without changing behaviour''. No language model was needed: the only re
 output equals the original's'', with no change zone. So E1 decides everything except new undefined
 behaviour, which is E0. We changed two things and recorded them per task: we replaced
 \texttt{<stdint.h>} with plain type definitions, and we raised the size bound to 32 and the loop
-bound to 40, because their arrays and loops go up to 32. We kept their files outside our repository,
-and we only matched their labels after all of VWE's answers were done. We did not rerun their
-checker; we used the results they recorded.
+bound to 40, because HLSCheck's arrays and loops go up to 32. The HLSCheck files stay outside this repository,
+and we only matched the labels after all of VWE's answers were done. We did not rerun HLSCheck
+for this comparison; we used its recorded results.
 
 \begin{center}
 \begin{tikzpicture}[x=0.075cm,y=0.55cm]
@@ -668,7 +668,7 @@ checker; we used the results they recorded.
 
 \begin{center}\small
 \begin{tabular}{@{}lrrrrl@{}}\toprule
-group (their label) & cases & ACCEPT & REJECT & UNDECIDED & VWE evidence\\\midrule
+group (HLSCheck label) & cases & ACCEPT & REJECT & UNDECIDED & VWE evidence\\\midrule
 main: correct rewrite & 51 & 30 & 0 & 21 & E2\\
 main: one bit flipped & 50 & 0 & 35 & 15 & E1 (input run for real)\\
 subtle: equivalent change & 20 & 18 & 0 & 2 & E2\\
@@ -677,12 +677,12 @@ subtle: undefined behaviour & 6 & 0 & 4 & 2 & E0 (confirmed by sanitizer)\\\midr
 total & 181 & 48 & 77 & 56 & 125 decided, \textbf{0 disagreements}\\\bottomrule
 \end{tabular}\end{center}
 
-\paragraph{Bugs their tests missed.} Approach-1's report lists five bugs that got past their 264
-test inputs and were only found by their proof. VWE rejected all five, each with a concrete input
+\paragraph{Bugs the tests missed.} The HLSCheck report lists five bugs that got past its 264
+test inputs and were only found by its proof. VWE rejected all five, each with a concrete input
 that both solvers confirmed and that we ran under sanitizers:
 \begin{center}\small
 \begin{tabular}{@{}lll@{}}\toprule
-case & their description & VWE\\\midrule
+case & HLSCheck description & VWE\\\midrule
 \texttt{all\_equal16} & differences cancel out under XOR & REJECT E1\\
 \texttt{clamp16} & the clamp kicks in one value too early & REJECT E1\\
 \texttt{threshold\_pack8} & a rare equality case & REJECT E1\\
@@ -708,17 +708,17 @@ instead of wrongly rejecting a correct rewrite. This is the reason the confirmat
 \paragraph{The two approaches compared.}
 \begin{center}\small
 \noindent\begin{tabularx}{\linewidth}{@{}l>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}\toprule
- & Approach-1 (their checker) & VWE (our project)\\\midrule
+ & HLSCheck (Approach-1) & VWE (Approach-2)\\\midrule
 question & does the rewrite compute the same thing as the original? & does $\Po$ do what $N$ asks, and leave the rest unchanged?\\
 specification & full equivalence, fixed & readings of $N$; here, ``no change in behaviour''\\
-engine & their own symbolic execution with Z3, then ESBMC/Z3 on what is left & generated harnesses checked by CBMC with both SAT and Z3\\
+engine & our own symbolic execution with Z3, then ESBMC/Z3 on what is left & generated harnesses checked by CBMC with both SAT and Z3\\
 confirmation & re-checking the SMT result, compiled-C tests, RTL simulation & re-proof with fixed inputs, real runs with sanitizers; ESBMC can only cancel an ACCEPT\\
-cases decided & 181 of 181 (their records) & 125 of 181 (our laptop, 120 s limit)\\
+cases decided & 181 of 181 (recorded runs) & 125 of 181 (our laptop, 120 s limit)\\
 wrong answers & none against its labels & none against the same labels\\
 other features & HLS synthesis and area, latency and timing numbers (Bambu, Yosys, OpenSTA) & requests that ask for a real behaviour change, and ambiguous requests; no hardware numbers\\\bottomrule
 \end{tabularx}\end{center}
-On every case VWE decided, it gave the same answer as Approach-1, using a different engine and no
-language model. It decided fewer cases with the time limit we used. Approach-1 also measures the
+On every case VWE decided, it gave the same answer as HLSCheck, using a different engine and no
+language model. It decided fewer cases with the time limit we used. HLSCheck also measures the
 hardware, which VWE does not. VWE can also check requests that are meant to change behaviour,
 which a pure equivalence checker cannot.
 
@@ -727,7 +727,7 @@ which a pure equivalence checker cannot.
 \item \textbf{No wrong answers so far.} Across every evaluation, none of VWE's decisions was
 wrong, and there was no wrong E0 or E1 verdict, which the design says should be impossible.
 \item \textbf{The cost is undecided cases.} VWE decides often when the request is precise (69\% on
-Approach-1) and rarely on our shrunk Chrysalis bugs, where the bug often disappears. The biggest
+HLSCheck's cases) and rarely on our shrunk Chrysalis bugs, where the bug often disappears. The biggest
 limit is solver time: the SAT solver is slow on 32- and 64-bit multiplication, while Z3 usually
 finishes.
 \item \textbf{Keeping $\Po$ away from the model works.} Readings from two different model families
@@ -752,7 +752,7 @@ verdict. This needs a careful argument and tests before we change the verdict ru
 \item \textbf{Requests written by people.} Our Chrysalis requests come from templates. A set of
 real, human-written fix requests would say much more about how well the readings capture intent.
 \item \textbf{Hardware side.} Check HLS pragmas (for example that a pipeline or dependence pragma is
-safe) and measure area and latency with an HLS tool, as Approach-1 does.
+safe) and measure area and latency with an HLS tool, as HLSCheck does.
 \item \textbf{Larger inputs.} Grow the size bounds, or prove that results for small sizes carry over
 to larger ones.
 \end{itemize}
@@ -762,10 +762,10 @@ We built VWE, a tool that checks whether an AI-made change to a C function does 
 request asked, and gives evidence for every answer. It keeps several readings of the request, never
 lets the language model see the code it is judging, checks both the change and everything that
 should stay the same, and confirms every failure by running it for real. Across our own examples,
-a public bug dataset and the other team's 181 cases, VWE did not give a single wrong answer. Its
+a public bug dataset and the 181 HLSCheck cases, VWE did not give a single wrong answer. Its
 weakness is that it often says ``undecided'', mostly because of solver time limits and, on the
-public dataset, because shrinking the programs hid the bugs. On the other team's cases it agreed with
-them every time it decided, and it also caught the five bugs that their tests had missed. We think
+public dataset, because shrinking the programs hid the bugs. On the HLSCheck cases it agreed with
+the labels every time it decided, and it also caught the five bugs that the tests had missed. We think
 this is the right trade-off for checking AI-written code: it is better to say ``not sure'' than to
 accept a wrong fix.
 
@@ -788,8 +788,8 @@ python3 -m venv .venv && .venv/bin/python -m pip install -e .
 make test            # 434 passed, 1 skipped (ESBMC only runs on Linux)
 make golden          # 20 of 20 example cases match
 make demo-steps      # one candidate, every step printed as it runs
-python scripts/adapt_project3.py --handoff <unzipped folder>  # Approach-1 tasks
-python scripts/eval_project3.py                               # Approach-1 results
+python scripts/adapt_project3.py --handoff <unzipped folder>  # HLSCheck tasks
+python scripts/eval_project3.py                               # HLSCheck results
 make eval            # Chrysalis evaluation
 \end{lstlisting}
 Saved results: \texttt{results/checkpoints/2026-11-23-t22/}, \texttt{results/eval/} and
@@ -811,14 +811,14 @@ accelerator design and customized architectures. In \emph{IISWC}, 2014.
 for practical C-based high-level synthesis. In \emph{ISCAS}, 2008.
 \item Chrysalis-HLS bug dataset, UIUC ChenLab. \url{https://github.com/UIUC-ChenLab/Chrysalis-HLS}
 (commit \texttt{63be1a1}).
-\item Bambu high-level synthesis framework (used by Approach-1). \url{https://github.com/ferrandi/PandA-bambu}
+\item Bambu high-level synthesis framework (used by HLSCheck). \url{https://github.com/ferrandi/PandA-bambu}
 \item pycparser, a C parser in Python. \url{https://github.com/eliben/pycparser}
 \item Lark parsing toolkit. \url{https://github.com/lark-parser/lark}
 \item Groq API, models \texttt{openai/gpt-oss-120b} and \texttt{qwen/qwen3.8-27b}, used on 23 November
 2026. \url{https://console.groq.com}
 \item Our design document: \emph{Verdicts with Evidence}, final draft, in our repository under
 \path{docs/research/}.
-\item Approach-1: Project 3 team handoff (LLM-optimised HLS code with formal equivalence),
-supplied to us as \texttt{Project3\_Team.zip}.
+\item HLSCheck (Approach-1): our first approach, formal equivalence of LLM-optimised HLS code with
+measured hardware; code and evidence in \texttt{Project3\_Team.zip}, report \texttt{Approach1\_report.pdf}.
 \end{enumerate}
 \end{document}
