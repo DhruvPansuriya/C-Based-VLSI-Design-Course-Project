@@ -12,15 +12,16 @@ rewrite preserves behavior, then measure its synthesized hardware. Correctness
 and hardware benefit are separate decisions: a correct rewrite can be slower
 or larger.
 
-```text
-Original C + LLM candidate
-    -> input/contract checks
-    -> formal C-to-C equivalence
-    -> proof-evidence replay and input binding
-    -> compiled-C edge/random checks
-    -> Bambu HLS + Verilator RTL simulation
-    -> Yosys area + OpenSTA timing
-    -> original/candidate comparison
+```mermaid
+flowchart LR
+    IN["Original C kernel<br/>+ LLM-optimised version"] --> S1["1. Input and<br/>contract checks"]
+    S1 --> S2["2. Formal C-to-C equivalence<br/>symbolic execution + Z3,<br/>ESBMC on the product program"]
+    S2 --> S3["3. Proof evidence replay<br/>and input binding"]
+    S3 --> S4["4. Compiled-C edge<br/>and random checks"]
+    S4 --> S5["5. Bambu HLS +<br/>Verilator RTL simulation"]
+    S5 --> S6["6. Yosys area +<br/>OpenSTA timing"]
+    S6 --> S7["7. Compare original<br/>and optimised hardware"]
+    S2 -- "not equivalent<br/>or not proved" --> STOP["Stop with a witness,<br/>no synthesis"]
 ```
 
 The checker lives in `hlscheck/`. Our symbolic executor and Z3 prove relations
