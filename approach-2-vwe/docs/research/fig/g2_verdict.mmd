@@ -1,0 +1,20 @@
+flowchart TD
+  S["Interpretation set I = {I_1..I_m}<br/>each = (shape, clauses, Ext)"]
+  Q0{"New UB / nondeterminism / build-view<br/>mismatch in P1 under the LARGEST<br/>plausible shape, where P0 is safe?"}
+  Q1{"Regression outside B_max whose new<br/>output every known Ext rejects<br/>(and no Ext is 'unknown')?"}
+  Q2{"P1 satisfies every I_k<br/>under the SMALLEST plausible shape?<br/>(proved, complete scope, confirmed)"}
+  Q3{"P1 violates every I_k?"}
+  R0["REJECT, E-obj"]
+  A["ACCEPT, E-int"]
+  R1["REJECT, E-int"]
+  U["UNDECIDED (ambiguous or<br/>scope disagreement) + witness"]
+  T["timeout / bound / unconfirmed"] --> U2["UNDECIDED (inconclusive)"]
+  S --> Q0
+  Q0 -- yes --> R0
+  Q0 -- no --> Q1
+  Q1 -- yes --> R0
+  Q1 -- no --> Q2
+  Q2 -- yes --> A
+  Q2 -- no --> Q3
+  Q3 -- yes --> R1
+  Q3 -- no --> U

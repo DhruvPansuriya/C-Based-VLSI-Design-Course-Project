@@ -1,0 +1,4593 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verdicts with Evidence</title>
+<style>
+body {max-width: 68rem; margin: 2rem auto; padding: 0 1rem; font: 1rem/1.55 system-ui,sans-serif; color: #182536}
+header {background:#eef3f8; padding:1.2rem; border-left:.4rem solid #2e536d}
+pre {background:#f3f6f9; padding:.8rem; overflow:auto; font-size:.85rem}
+table {border-collapse:collapse; width:100%}
+th,td {text-align:left; padding:.5rem; border-bottom:1px solid #cbd6df; vertical-align:top}
+summary {cursor:pointer} h1 {margin:.2rem 0}
+</style>
+<body>
+<header><div>ex4_sum / v1</div>
+<h1>ACCEPT E2</h1>
+<p>satisfies every interpretation</p><p>The claim is bounded to the declared input profile, instrumented C checks, and reported unwind bounds. It also requires an adequate reading of the request. Acceptance requires at least one surviving interpretation that is sound for the intended repair.</p></header>
+<h2>Witness</h2>
+<p>No counterexample was reported.</p>
+<h2>Interpretations</h2>
+<p><strong>ex4_sum.strict</strong> · valid · PROVED<br>Sum every logical element on the explicitly bounded caller domain.</p>
+<p><strong>ex4_sum.permissive</strong> · valid · PROVED<br>Sum every logical element on the explicitly bounded caller domain.</p>
+<p><strong>ex4_sum.invalid_n_minus_1</strong> · invalid · not checked<br>Deliberately invalid contract/shape pair: n-element sum over n-1 elements; T07 must reject it.</p>
+<h2>Obligations</h2><table><tr><th>Query</th><th>Outcome</th><th>Backends and detail</th></tr>
+<tr><td>candidate safety on reference guard</td><td>PROVED</td><td>e0<pre>{
+  &quot;sat&quot;: &quot;success&quot;,
+  &quot;z3&quot;: &quot;success&quot;
+}</pre></td></tr>
+<tr><td>reference on common keep region</td><td>PROVED</td><td>determinism<pre>{
+  &quot;sat&quot;: &quot;success&quot;,
+  &quot;z3&quot;: &quot;success&quot;
+}</pre></td></tr>
+<tr><td>preservation or Ext outside scope union</td><td>PROVED</td><td>e1<pre>{
+  &quot;sat&quot;: &quot;success&quot;,
+  &quot;z3&quot;: &quot;success&quot;
+}</pre></td></tr>
+<tr><td>scope agreement for ex4_sum.permissive</td><td>PROVED</td><td>scope<pre>{
+  &quot;sat&quot;: &quot;success&quot;,
+  &quot;z3&quot;: &quot;success&quot;
+}</pre></td></tr>
+<tr><td>scope agreement for ex4_sum.strict</td><td>PROVED</td><td>scope<pre>{
+  &quot;sat&quot;: &quot;success&quot;,
+  &quot;z3&quot;: &quot;success&quot;
+}</pre></td></tr>
+<tr><td>class keep reachability for ex4_sum.permissive</td><td>PROVED</td><td>feasibility<pre>{
+  &quot;sat&quot;: &quot;success&quot;,
+  &quot;z3&quot;: &quot;success&quot;
+}</pre></td></tr>
+<tr><td>class path reachability for ex4_sum.permissive</td><td>PROVED</td><td>all required regions reached after the call<pre>{
+  &quot;sat&quot;: &quot;failure&quot;,
+  &quot;z3&quot;: &quot;failure&quot;
+}</pre></td></tr>
+<tr><td>interpretation ex4_sum.permissive</td><td>PROVED</td><td>class<pre>{
+  &quot;sat&quot;: &quot;success&quot;,
+  &quot;z3&quot;: &quot;success&quot;
+}</pre></td></tr>
+</table>
+<h2>Facts</h2><pre>{
+  &quot;preserves_outside_B_max&quot;: &quot;inconclusive&quot;,
+  &quot;synthesis_ready&quot;: &quot;inconclusive&quot;,
+  &quot;interpretations_satisfied&quot;: [
+    &quot;ex4_sum.permissive&quot;,
+    &quot;ex4_sum.strict&quot;
+  ],
+  &quot;interpretations_violated&quot;: [],
+  &quot;preservation_or_ext_outside_B_max&quot;: &quot;PROVED&quot;,
+  &quot;esbmc&quot;: [
+    {
+      &quot;status&quot;: &quot;unsupported&quot;,
+      &quot;detail&quot;: &quot;ESBMC unavailable&quot;
+    }
+  ]
+}</pre>
+<h2>Scope</h2><pre>{
+  &quot;K&quot;: 2,
+  &quot;shape_min&quot;: {
+    &quot;buffers&quot;: {
+      &quot;a&quot;: &quot;n&quot;
+    },
+    &quot;alias&quot;: &quot;disjoint&quot;,
+    &quot;bounds&quot;: {
+      &quot;n&quot;: [
+        1,
+        2
+      ]
+    },
+    &quot;value_bounds&quot;: {
+      &quot;a&quot;: [
+        -1000,
+        1000
+      ]
+    }
+  },
+  &quot;shape_max&quot;: {
+    &quot;buffers&quot;: {
+      &quot;a&quot;: &quot;n&quot;
+    },
+    &quot;alias&quot;: &quot;disjoint&quot;,
+    &quot;bounds&quot;: {
+      &quot;n&quot;: [
+        1,
+        2
+      ]
+    },
+    &quot;value_bounds&quot;: {
+      &quot;a&quot;: [
+        -1000,
+        1000
+      ]
+    }
+  },
+  &quot;bounded_only&quot;: true,
+  &quot;profiles&quot;: [
+    {
+      &quot;buffers&quot;: {
+        &quot;a&quot;: &quot;n&quot;
+      },
+      &quot;alias&quot;: &quot;disjoint&quot;,
+      &quot;bounds&quot;: {
+        &quot;n&quot;: [
+          1,
+          2
+        ]
+      },
+      &quot;value_bounds&quot;: {
+        &quot;a&quot;: [
+          -1000,
+          1000
+        ]
+      }
+    }
+  ],
+  &quot;reference_safe_guard&quot;: &quot;!(false)&quot;,
+  &quot;change_brackets&quot;: {
+    &quot;B_min&quot;: &quot;((n &gt; 0)) &amp;&amp; ((n &gt;= 1))&quot;,
+    &quot;B_max&quot;: &quot;((n &gt; 0)) || ((n &gt;= 1)) || (n &gt;= 1) || (n &gt;= 1)&quot;
+  },
+  &quot;prepass&quot;: {
+    &quot;samples&quot;: 1,
+    &quot;seed&quot;: 0,
+    &quot;requested_samples&quot;: 10000,
+    &quot;seconds_budget&quot;: 1,
+    &quot;stopped&quot;: &quot;time budget&quot;
+  },
+  &quot;native_replay&quot;: [],
+  &quot;native_acceptance&quot;: &quot;confirmed: all 2 interpretations checked on 1 sampled inputs&quot;,
+  &quot;uninitialized_model&quot;: &quot;CBMC experimental local checks&quot;
+}</pre>
+<h2>Tools</h2><pre>{
+  &quot;cbmc&quot;: &quot;6.11.0 (cbmc-6.11.0)&quot;,
+  &quot;z3&quot;: &quot;Z3 version 5.4.1 - 64 bit - build hashcode 145c0c51570a357cc558ce898ce77573ba9d4fbf&quot;,
+  &quot;esbmc&quot;: &quot;unavailable&quot;
+}</pre>
+<h2>Timing</h2><pre>{
+  &quot;wall_seconds&quot;: 32.10204099999828
+}</pre>
+<h2>Generated job sources</h2>
+<details><summary>classes/0/keep_reach</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(void) {
+  return 1;
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(int ve_arg_0) {
+  return (!(((((long long)ve_arg_0)) &gt; ((0LL)))));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1());
+  __CPROVER_assert(!(vwe_observer_2(__vwe_in_scalar_1_0)), &quot;VWE.feasibility.predicate&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int p1_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; n; i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p1_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>classes/0/obligation</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt; ((0LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_3(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt; ((0LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_4(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __vwe_a1_call(&amp;__vwe_in, &amp;__vwe_one, __vwe_one_b0);
+  __CPROVER_output(&quot;__vwe_out_one_ret&quot;, __vwe_one.r0);
+  if (__vwe_len_0&gt;0) {
+  __CPROVER_output(&quot;__vwe_out_one_a[0]&quot;, __vwe_a1_get_0(__vwe_one_b0,0).f0);
+  }
+  if (__vwe_len_0&gt;1) {
+  __CPROVER_output(&quot;__vwe_out_one_a[1]&quot;, __vwe_a1_get_0(__vwe_one_b0,1).f0);
+  }
+  if (!(vwe_observer_2(__vwe_in_scalar_1_0))) {
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero, __vwe_zero_b0);
+  __CPROVER_output(&quot;__vwe_out_zero_ret&quot;, __vwe_zero.r0);
+  if (__vwe_len_0&gt;0) {
+  __CPROVER_output(&quot;__vwe_out_zero_a[0]&quot;, __vwe_a0_get_0(__vwe_zero_b0,0).f0);
+  }
+  if (__vwe_len_0&gt;1) {
+  __CPROVER_output(&quot;__vwe_out_zero_a[1]&quot;, __vwe_a0_get_0(__vwe_zero_b0,1).f0);
+  }
+  __CPROVER_assert(((__vwe_zero.r0==__vwe_one.r0) &amp;&amp; ((__vwe_len_0&lt;=0 || __vwe_a0_get_0(__vwe_zero_b0,0).f0==__vwe_a1_get_0(__vwe_one_b0,0).f0)) &amp;&amp; ((__vwe_len_0&lt;=1 || __vwe_a0_get_0(__vwe_zero_b0,1).f0==__vwe_a1_get_0(__vwe_one_b0,1).f0))), &quot;VWE.class.preservation&quot;);
+  }
+  if (vwe_observer_3(__vwe_in_scalar_1_0)) {
+  __CPROVER_assert(vwe_observer_4(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_one.r0), &quot;VWE.class.clause.0&quot;);
+  }
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int p1_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; n; i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p1_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>classes/0/vacuity</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt; ((0LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt; ((0LL)));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __vwe_a1_call(&amp;__vwe_in, &amp;__vwe_one, __vwe_one_b0);
+  if (!(vwe_observer_1(__vwe_in_scalar_1_0))) {
+  __CPROVER_assert(0, &quot;VWE.vacuity.keep&quot;);
+  }
+  if (vwe_observer_2(__vwe_in_scalar_1_0)) {
+  __CPROVER_assert(0, &quot;VWE.vacuity.zone.0.0&quot;);
+  }
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int p1_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; n; i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p1_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>e0</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(void) {
+  return (!(0));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1());
+  __vwe_a1_call(&amp;__vwe_in, &amp;__vwe_one, __vwe_one_b0);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int p1_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; n; i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p1_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>e1</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(int ve_arg_0) {
+  int ve_t_0 = !!(((((long long)ve_arg_0)) &gt; ((0LL))));
+  if (!ve_t_0) {
+    ve_t_0 = !!(((((long long)ve_arg_0)) &gt;= ((1LL))));
+  }
+  int ve_t_1 = !!(ve_t_0);
+  if (!ve_t_1) {
+    ve_t_1 = !!(((((long long)ve_arg_0)) &gt;= ((1LL))));
+  }
+  int ve_t_2 = !!(ve_t_1);
+  if (!ve_t_2) {
+    ve_t_2 = !!(((((long long)ve_arg_0)) &gt;= ((1LL))));
+  }
+  return (!(ve_t_2));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_3(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1(__vwe_in_scalar_1_0));
+  __vwe_a1_call(&amp;__vwe_in, &amp;__vwe_one, __vwe_one_b0);
+  __CPROVER_output(&quot;__vwe_out_one_ret&quot;, __vwe_one.r0);
+  if (__vwe_len_0&gt;0) {
+  __CPROVER_output(&quot;__vwe_out_one_a[0]&quot;, __vwe_a1_get_0(__vwe_one_b0,0).f0);
+  }
+  if (__vwe_len_0&gt;1) {
+  __CPROVER_output(&quot;__vwe_out_one_a[1]&quot;, __vwe_a1_get_0(__vwe_one_b0,1).f0);
+  }
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero, __vwe_zero_b0);
+  __CPROVER_output(&quot;__vwe_out_zero_ret&quot;, __vwe_zero.r0);
+  if (__vwe_len_0&gt;0) {
+  __CPROVER_output(&quot;__vwe_out_zero_a[0]&quot;, __vwe_a0_get_0(__vwe_zero_b0,0).f0);
+  }
+  if (__vwe_len_0&gt;1) {
+  __CPROVER_output(&quot;__vwe_out_zero_a[1]&quot;, __vwe_a0_get_0(__vwe_zero_b0,1).f0);
+  }
+  __CPROVER_assert(((__vwe_zero.r0==__vwe_one.r0) &amp;&amp; ((__vwe_len_0&lt;=0 || __vwe_a0_get_0(__vwe_zero_b0,0).f0==__vwe_a1_get_0(__vwe_one_b0,0).f0)) &amp;&amp; ((__vwe_len_0&lt;=1 || __vwe_a0_get_0(__vwe_zero_b0,1).f0==__vwe_a1_get_0(__vwe_one_b0,1).f0))) || vwe_observer_2(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_one.r0) || vwe_observer_3(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_one.r0), &quot;VWE.E1.preservation&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int p1_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; n; i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p1_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>e1_keep</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(int ve_arg_0) {
+  int ve_t_0 = !!(((((long long)ve_arg_0)) &gt; ((0LL))));
+  if (!ve_t_0) {
+    ve_t_0 = !!(((((long long)ve_arg_0)) &gt;= ((1LL))));
+  }
+  int ve_t_1 = !!(ve_t_0);
+  if (!ve_t_1) {
+    ve_t_1 = !!(((((long long)ve_arg_0)) &gt;= ((1LL))));
+  }
+  int ve_t_2 = !!(ve_t_1);
+  if (!ve_t_2) {
+    ve_t_2 = !!(((((long long)ve_arg_0)) &gt;= ((1LL))));
+  }
+  return (!(ve_t_2));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1(__vwe_in_scalar_1_0));
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero, __vwe_zero_b0);
+  __vwe_a1_call(&amp;__vwe_in, &amp;__vwe_one, __vwe_one_b0);
+  __CPROVER_assert(((__vwe_zero.r0==__vwe_one.r0) &amp;&amp; ((__vwe_len_0&lt;=0 || __vwe_a0_get_0(__vwe_zero_b0,0).f0==__vwe_a1_get_0(__vwe_one_b0,0).f0)) &amp;&amp; ((__vwe_len_0&lt;=1 || __vwe_a0_get_0(__vwe_zero_b0,1).f0==__vwe_a1_get_0(__vwe_one_b0,1).f0))), &quot;VWE.determinism.equivalence&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/0/contract_ub</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+int nondet___vwe_4(void);
+int nondet___vwe_5(void);
+int nondet___vwe_6(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) - ((1LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt;= ((1LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_3(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt;= ((1LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_4(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 1, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  int __vwe_one_result_0=nondet___vwe_3();
+  __vwe_one.r0=__vwe_one_result_0;
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_fresh_one_0_0;
+  int __vwe_one_fresh_0_0_0=nondet___vwe_4();
+  __vwe_fresh_one_0_0.f0=__vwe_one_fresh_0_0_0;
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_fresh_one_0_0);
+  }
+  int __vwe_zero_result_0=nondet___vwe_5();
+  __vwe_zero.r0=__vwe_zero_result_0;
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_fresh_zero_0_0;
+  int __vwe_zero_fresh_0_0_0=nondet___vwe_6();
+  __vwe_fresh_zero_0_0.f0=__vwe_zero_fresh_0_0_0;
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_fresh_zero_0_0);
+  }
+  if (vwe_observer_1(__vwe_in_scalar_1_0)) {
+  (void)vwe_observer_2(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_one.r0);
+  }
+  (void)vwe_observer_3(__vwe_in_scalar_1_0);
+  (void)vwe_observer_4(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_one.r0);
+  __CPROVER_assert(1, &quot;VWE.contract.evaluated&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/1/bug</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt; ((0LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt; ((0LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_3(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1(__vwe_in_scalar_1_0));
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero, __vwe_zero_b0);
+  __CPROVER_assert(((!(vwe_observer_2(__vwe_in_scalar_1_0)) || (vwe_observer_3(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_zero.r0)))), &quot;VWE.validation_bug.predicate&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/1/bug_safety</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt; ((0LL)));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1(__vwe_in_scalar_1_0));
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero, __vwe_zero_b0);
+  __CPROVER_assert(1, &quot;VWE.reference_safety.completed&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/1/constructive</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+int nondet___vwe_4(void);
+int nondet___vwe_5(void);
+int nondet___vwe_6(void);
+int nondet___vwe_7(void);
+int nondet___vwe_8(void);
+int nondet___vwe_9(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_1(const int * ve_arg_0, int ve_arg_1) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ve_t_2;
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt; ((0LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_3(const int * ve_arg_0, int ve_arg_1) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ve_t_2;
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_4(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt; ((0LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_5(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  int __vwe_one_result_0=nondet___vwe_4();
+  __vwe_one.r0=__vwe_one_result_0;
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_fresh_one_0_0;
+  int __vwe_one_fresh_0_0_0=nondet___vwe_5();
+  __vwe_fresh_one_0_0.f0=__vwe_one_fresh_0_0_0;
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_fresh_one_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_fresh_one_0_1;
+  int __vwe_one_fresh_0_1_0=nondet___vwe_6();
+  __vwe_fresh_one_0_1.f0=__vwe_one_fresh_0_1_0;
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_fresh_one_0_1);
+  }
+  int __vwe_zero_result_0=nondet___vwe_7();
+  __vwe_zero.r0=__vwe_zero_result_0;
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_fresh_zero_0_0;
+  int __vwe_zero_fresh_0_0_0=nondet___vwe_8();
+  __vwe_fresh_zero_0_0.f0=__vwe_zero_fresh_0_0_0;
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_fresh_zero_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_fresh_zero_0_1;
+  int __vwe_zero_fresh_0_1_0=nondet___vwe_9();
+  __vwe_fresh_zero_0_1.f0=__vwe_zero_fresh_0_1_0;
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_fresh_zero_0_1);
+  }
+  if (vwe_observer_2(__vwe_in_scalar_1_0)) {
+  __vwe_one.r0=(int)(vwe_observer_3(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0));
+  }
+  __CPROVER_assert(((!(vwe_observer_4(__vwe_in_scalar_1_0)) || (vwe_observer_5(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_one.r0)))), &quot;VWE.validation_constructive.predicate&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/1/contract_ub</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+int nondet___vwe_4(void);
+int nondet___vwe_5(void);
+int nondet___vwe_6(void);
+int nondet___vwe_7(void);
+int nondet___vwe_8(void);
+int nondet___vwe_9(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt; ((0LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_3(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt;= ((1LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_4(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  int __vwe_one_result_0=nondet___vwe_4();
+  __vwe_one.r0=__vwe_one_result_0;
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_fresh_one_0_0;
+  int __vwe_one_fresh_0_0_0=nondet___vwe_5();
+  __vwe_fresh_one_0_0.f0=__vwe_one_fresh_0_0_0;
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_fresh_one_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_fresh_one_0_1;
+  int __vwe_one_fresh_0_1_0=nondet___vwe_6();
+  __vwe_fresh_one_0_1.f0=__vwe_one_fresh_0_1_0;
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_fresh_one_0_1);
+  }
+  int __vwe_zero_result_0=nondet___vwe_7();
+  __vwe_zero.r0=__vwe_zero_result_0;
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_fresh_zero_0_0;
+  int __vwe_zero_fresh_0_0_0=nondet___vwe_8();
+  __vwe_fresh_zero_0_0.f0=__vwe_zero_fresh_0_0_0;
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_fresh_zero_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_fresh_zero_0_1;
+  int __vwe_zero_fresh_0_1_0=nondet___vwe_9();
+  __vwe_fresh_zero_0_1.f0=__vwe_zero_fresh_0_1_0;
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_fresh_zero_0_1);
+  }
+  if (vwe_observer_1(__vwe_in_scalar_1_0)) {
+  (void)vwe_observer_2(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_one.r0);
+  }
+  (void)vwe_observer_3(__vwe_in_scalar_1_0);
+  (void)vwe_observer_4(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_one.r0);
+  __CPROVER_assert(1, &quot;VWE.contract.evaluated&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/1/reach_0</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(void) {
+  return 1;
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(void) {
+  return 1;
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1());
+  __CPROVER_assert(!(vwe_observer_2()), &quot;VWE.feasibility.predicate&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/1/reach_1</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(void) {
+  return 1;
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt; ((0LL)));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1());
+  __CPROVER_assert(!(vwe_observer_2(__vwe_in_scalar_1_0)), &quot;VWE.feasibility.predicate&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/1/reference</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(int ve_arg_0) {
+  return (!(((((long long)ve_arg_0)) &gt; ((0LL)))));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1(__vwe_in_scalar_1_0));
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero, __vwe_zero_b0);
+  __vwe_a1_call(&amp;__vwe_in, &amp;__vwe_one, __vwe_one_b0);
+  __CPROVER_assert(((__vwe_zero.r0==__vwe_one.r0) &amp;&amp; ((__vwe_len_0&lt;=0 || __vwe_a0_get_0(__vwe_zero_b0,0).f0==__vwe_a1_get_0(__vwe_one_b0,0).f0)) &amp;&amp; ((__vwe_len_0&lt;=1 || __vwe_a0_get_0(__vwe_zero_b0,1).f0==__vwe_a1_get_0(__vwe_one_b0,1).f0))), &quot;VWE.determinism.equivalence&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/2/bug</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt;= ((1LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt;= ((1LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_3(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1(__vwe_in_scalar_1_0));
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero, __vwe_zero_b0);
+  __CPROVER_assert(((!(vwe_observer_2(__vwe_in_scalar_1_0)) || (vwe_observer_3(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_zero.r0)))), &quot;VWE.validation_bug.predicate&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/2/bug_safety</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt;= ((1LL)));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1(__vwe_in_scalar_1_0));
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero, __vwe_zero_b0);
+  __CPROVER_assert(1, &quot;VWE.reference_safety.completed&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/2/constructive</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+int nondet___vwe_4(void);
+int nondet___vwe_5(void);
+int nondet___vwe_6(void);
+int nondet___vwe_7(void);
+int nondet___vwe_8(void);
+int nondet___vwe_9(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_1(const int * ve_arg_0, int ve_arg_1) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ve_t_2;
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt;= ((1LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_3(const int * ve_arg_0, int ve_arg_1) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ve_t_2;
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_4(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt;= ((1LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_5(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  int __vwe_one_result_0=nondet___vwe_4();
+  __vwe_one.r0=__vwe_one_result_0;
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_fresh_one_0_0;
+  int __vwe_one_fresh_0_0_0=nondet___vwe_5();
+  __vwe_fresh_one_0_0.f0=__vwe_one_fresh_0_0_0;
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_fresh_one_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_fresh_one_0_1;
+  int __vwe_one_fresh_0_1_0=nondet___vwe_6();
+  __vwe_fresh_one_0_1.f0=__vwe_one_fresh_0_1_0;
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_fresh_one_0_1);
+  }
+  int __vwe_zero_result_0=nondet___vwe_7();
+  __vwe_zero.r0=__vwe_zero_result_0;
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_fresh_zero_0_0;
+  int __vwe_zero_fresh_0_0_0=nondet___vwe_8();
+  __vwe_fresh_zero_0_0.f0=__vwe_zero_fresh_0_0_0;
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_fresh_zero_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_fresh_zero_0_1;
+  int __vwe_zero_fresh_0_1_0=nondet___vwe_9();
+  __vwe_fresh_zero_0_1.f0=__vwe_zero_fresh_0_1_0;
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_fresh_zero_0_1);
+  }
+  if (vwe_observer_2(__vwe_in_scalar_1_0)) {
+  __vwe_one.r0=(int)(vwe_observer_3(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0));
+  }
+  __CPROVER_assert(((!(vwe_observer_4(__vwe_in_scalar_1_0)) || (vwe_observer_5(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_one.r0)))), &quot;VWE.validation_constructive.predicate&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/2/contract_ub</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+int nondet___vwe_4(void);
+int nondet___vwe_5(void);
+int nondet___vwe_6(void);
+int nondet___vwe_7(void);
+int nondet___vwe_8(void);
+int nondet___vwe_9(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt;= ((1LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_3(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt;= ((1LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_4(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  int __vwe_one_result_0=nondet___vwe_4();
+  __vwe_one.r0=__vwe_one_result_0;
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_fresh_one_0_0;
+  int __vwe_one_fresh_0_0_0=nondet___vwe_5();
+  __vwe_fresh_one_0_0.f0=__vwe_one_fresh_0_0_0;
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_fresh_one_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_fresh_one_0_1;
+  int __vwe_one_fresh_0_1_0=nondet___vwe_6();
+  __vwe_fresh_one_0_1.f0=__vwe_one_fresh_0_1_0;
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_fresh_one_0_1);
+  }
+  int __vwe_zero_result_0=nondet___vwe_7();
+  __vwe_zero.r0=__vwe_zero_result_0;
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_fresh_zero_0_0;
+  int __vwe_zero_fresh_0_0_0=nondet___vwe_8();
+  __vwe_fresh_zero_0_0.f0=__vwe_zero_fresh_0_0_0;
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_fresh_zero_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_fresh_zero_0_1;
+  int __vwe_zero_fresh_0_1_0=nondet___vwe_9();
+  __vwe_fresh_zero_0_1.f0=__vwe_zero_fresh_0_1_0;
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_fresh_zero_0_1);
+  }
+  if (vwe_observer_1(__vwe_in_scalar_1_0)) {
+  (void)vwe_observer_2(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_one.r0);
+  }
+  (void)vwe_observer_3(__vwe_in_scalar_1_0);
+  (void)vwe_observer_4(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_one.r0);
+  __CPROVER_assert(1, &quot;VWE.contract.evaluated&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/2/reach_0</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(void) {
+  return 1;
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(void) {
+  return 1;
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1());
+  __CPROVER_assert(!(vwe_observer_2()), &quot;VWE.feasibility.predicate&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/2/reach_1</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(void) {
+  return 1;
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt;= ((1LL)));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1());
+  __CPROVER_assert(!(vwe_observer_2(__vwe_in_scalar_1_0)), &quot;VWE.feasibility.predicate&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/2/reference</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(int ve_arg_0) {
+  return (!(((((long long)ve_arg_0)) &gt;= ((1LL)))));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1(__vwe_in_scalar_1_0));
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero, __vwe_zero_b0);
+  __vwe_a1_call(&amp;__vwe_in, &amp;__vwe_one, __vwe_one_b0);
+  __CPROVER_assert(((__vwe_zero.r0==__vwe_one.r0) &amp;&amp; ((__vwe_len_0&lt;=0 || __vwe_a0_get_0(__vwe_zero_b0,0).f0==__vwe_a1_get_0(__vwe_one_b0,0).f0)) &amp;&amp; ((__vwe_len_0&lt;=1 || __vwe_a0_get_0(__vwe_zero_b0,1).f0==__vwe_a1_get_0(__vwe_one_b0,1).f0))), &quot;VWE.determinism.equivalence&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/pairs/0</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+int nondet___vwe_4(void);
+int nondet___vwe_5(void);
+int nondet___vwe_6(void);
+int nondet___vwe_7(void);
+int nondet___vwe_8(void);
+int nondet___vwe_9(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt; ((0LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt;= ((1LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_3(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt; ((0LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_4(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_5(int ve_arg_0) {
+  return ((((long long)ve_arg_0)) &gt;= ((1LL)));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_6(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  int __vwe_one_result_0=nondet___vwe_4();
+  __vwe_one.r0=__vwe_one_result_0;
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_fresh_one_0_0;
+  int __vwe_one_fresh_0_0_0=nondet___vwe_5();
+  __vwe_fresh_one_0_0.f0=__vwe_one_fresh_0_0_0;
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_fresh_one_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_fresh_one_0_1;
+  int __vwe_one_fresh_0_1_0=nondet___vwe_6();
+  __vwe_fresh_one_0_1.f0=__vwe_one_fresh_0_1_0;
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_fresh_one_0_1);
+  }
+  int __vwe_zero_result_0=nondet___vwe_7();
+  __vwe_zero.r0=__vwe_zero_result_0;
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_fresh_zero_0_0;
+  int __vwe_zero_fresh_0_0_0=nondet___vwe_8();
+  __vwe_fresh_zero_0_0.f0=__vwe_zero_fresh_0_0_0;
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_fresh_zero_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_fresh_zero_0_1;
+  int __vwe_zero_fresh_0_1_0=nondet___vwe_9();
+  __vwe_fresh_zero_0_1.f0=__vwe_zero_fresh_0_1_0;
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_fresh_zero_0_1);
+  }
+  __CPROVER_assert(((vwe_observer_1(__vwe_in_scalar_1_0)) == (vwe_observer_2(__vwe_in_scalar_1_0))) &amp;&amp; (((!(vwe_observer_3(__vwe_in_scalar_1_0)) || (vwe_observer_4(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_one.r0)))) == ((!(vwe_observer_5(__vwe_in_scalar_1_0)) || (vwe_observer_6(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_one.r0))))), &quot;VWE.validation_equivalence.predicate&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>regions/inside_reach</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(void) {
+  return 1;
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(void) {
+  return 0;
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1());
+  __CPROVER_assert(!(vwe_observer_2()), &quot;VWE.feasibility.predicate&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>regions/outside_determinism</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(void) {
+  return (!(0));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1());
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero, __vwe_zero_b0);
+  __vwe_a1_call(&amp;__vwe_in, &amp;__vwe_one, __vwe_one_b0);
+  __CPROVER_assert(((__vwe_zero.r0==__vwe_one.r0) &amp;&amp; ((__vwe_len_0&lt;=0 || __vwe_a0_get_0(__vwe_zero_b0,0).f0==__vwe_a1_get_0(__vwe_one_b0,0).f0)) &amp;&amp; ((__vwe_len_0&lt;=1 || __vwe_a0_get_0(__vwe_zero_b0,1).f0==__vwe_a1_get_0(__vwe_one_b0,1).f0))), &quot;VWE.determinism.equivalence&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>regions/outside_reach</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(void) {
+  return 1;
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(void) {
+  return (!(0));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1());
+  __CPROVER_assert(!(vwe_observer_2()), &quot;VWE.feasibility.predicate&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>regions/outside_safety</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(void) {
+  return (!(0));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1());
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero, __vwe_zero_b0);
+  __CPROVER_assert(1, &quot;VWE.reference_safety.completed&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=vwe_second_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>scope/0</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(int ve_arg_0) {
+  return (!(((((long long)ve_arg_0)) &gt; ((0LL)))));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1(__vwe_in_scalar_1_0));
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero, __vwe_zero_b0);
+  __CPROVER_output(&quot;__vwe_out_zero_ret&quot;, __vwe_zero.r0);
+  if (__vwe_len_0&gt;0) {
+  __CPROVER_output(&quot;__vwe_out_zero_a[0]&quot;, __vwe_a0_get_0(__vwe_zero_b0,0).f0);
+  }
+  if (__vwe_len_0&gt;1) {
+  __CPROVER_output(&quot;__vwe_out_zero_a[1]&quot;, __vwe_a0_get_0(__vwe_zero_b0,1).f0);
+  }
+  __vwe_a1_call(&amp;__vwe_in, &amp;__vwe_one, __vwe_one_b0);
+  __CPROVER_output(&quot;__vwe_out_one_ret&quot;, __vwe_one.r0);
+  if (__vwe_len_0&gt;0) {
+  __CPROVER_output(&quot;__vwe_out_one_a[0]&quot;, __vwe_a1_get_0(__vwe_one_b0,0).f0);
+  }
+  if (__vwe_len_0&gt;1) {
+  __CPROVER_output(&quot;__vwe_out_one_a[1]&quot;, __vwe_a1_get_0(__vwe_one_b0,1).f0);
+  }
+  __CPROVER_assert(((__vwe_zero.r0==__vwe_one.r0) &amp;&amp; ((__vwe_len_0&lt;=0 || __vwe_a0_get_0(__vwe_zero_b0,0).f0==__vwe_a1_get_0(__vwe_one_b0,0).f0)) &amp;&amp; ((__vwe_len_0&lt;=1 || __vwe_a0_get_0(__vwe_zero_b0,1).f0==__vwe_a1_get_0(__vwe_one_b0,1).f0))) || !(vwe_observer_2(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_one.r0)), &quot;VWE.scope.agreement&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int p1_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; n; i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p1_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>scope/1</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a0_size_0(void);
+void __vwe_a0_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a0_get_0(const void *, __vwe_size);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0);
+__vwe_size __vwe_a1_size_0(void);
+void __vwe_a1_set_0(void *, __vwe_size, struct __vwe_element_0);
+struct __vwe_element_0 __vwe_a1_get_0(const void *, __vwe_size);
+
+int nondet___vwe_0(void);
+_Bool nondet___vwe_1(void);
+int nondet___vwe_2(void);
+int nondet___vwe_3(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline long long vwe_observer_0(int ve_arg_0) {
+  return ((long long)ve_arg_0);
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(int ve_arg_0) {
+  return (!(((((long long)ve_arg_0)) &gt;= ((1LL)))));
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_2(const int * ve_arg_0, int ve_arg_1, int ve_arg_2) {
+  long long ve_t_0 = (0LL);
+  long long ve_t_1 = ((long long)ve_arg_1);
+  long long ve_t_2 = 0;
+  for (long long ve_t_3 = ve_t_0; ve_t_3 &lt; ve_t_1; ++ve_t_3) {
+    ve_t_2 += ((long long)ve_arg_0[ve_t_3]);
+  }
+  return ((((long long)ve_arg_2)) == (ve_t_2));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_1_0=nondet___vwe_0();
+  __CPROVER_assume(1LL &lt;= __vwe_in_scalar_1_0 &amp;&amp; __vwe_in_scalar_1_0 &lt;= 2LL);
+  __vwe_in.s1_0=__vwe_in_scalar_1_0;
+  long long __vwe_len_0=vwe_observer_0(__vwe_in_scalar_1_0);
+  __CPROVER_assert(0 &lt;= __vwe_len_0 &amp;&amp; __vwe_len_0 &lt;= 2, &quot;VWE.profile.length.a&quot;);
+  _Bool __vwe_in_null_0=nondet___vwe_1();
+  void *__vwe_input_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_zero_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a0_size_0());
+  void *__vwe_one_b0=(__vwe_len_0==0 &amp;&amp; __vwe_in_null_0) ? (void *)0 : malloc((__vwe_size)__vwe_len_0 * __vwe_a1_size_0());
+  if (__vwe_len_0&gt;0) {
+  struct __vwe_element_0 __vwe_e_0_0;
+  int __vwe_in_buffer_0_0_0=nondet___vwe_2();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_0_0 &amp;&amp; __vwe_in_buffer_0_0_0 &lt;= 1000LL);
+  __vwe_e_0_0.f0=__vwe_in_buffer_0_0_0;
+  __vwe_a0_set_0(__vwe_input_b0,0,__vwe_e_0_0);
+  __vwe_a0_set_0(__vwe_zero_b0,0,__vwe_e_0_0);
+  __vwe_a1_set_0(__vwe_one_b0,0,__vwe_e_0_0);
+  }
+  if (__vwe_len_0&gt;1) {
+  struct __vwe_element_0 __vwe_e_0_1;
+  int __vwe_in_buffer_0_1_0=nondet___vwe_3();
+  __CPROVER_assume((-1000LL) &lt;= __vwe_in_buffer_0_1_0 &amp;&amp; __vwe_in_buffer_0_1_0 &lt;= 1000LL);
+  __vwe_e_0_1.f0=__vwe_in_buffer_0_1_0;
+  __vwe_a0_set_0(__vwe_input_b0,1,__vwe_e_0_1);
+  __vwe_a0_set_0(__vwe_zero_b0,1,__vwe_e_0_1);
+  __vwe_a1_set_0(__vwe_one_b0,1,__vwe_e_0_1);
+  }
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_1(__vwe_in_scalar_1_0));
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero, __vwe_zero_b0);
+  __CPROVER_output(&quot;__vwe_out_zero_ret&quot;, __vwe_zero.r0);
+  if (__vwe_len_0&gt;0) {
+  __CPROVER_output(&quot;__vwe_out_zero_a[0]&quot;, __vwe_a0_get_0(__vwe_zero_b0,0).f0);
+  }
+  if (__vwe_len_0&gt;1) {
+  __CPROVER_output(&quot;__vwe_out_zero_a[1]&quot;, __vwe_a0_get_0(__vwe_zero_b0,1).f0);
+  }
+  __vwe_a1_call(&amp;__vwe_in, &amp;__vwe_one, __vwe_one_b0);
+  __CPROVER_output(&quot;__vwe_out_one_ret&quot;, __vwe_one.r0);
+  if (__vwe_len_0&gt;0) {
+  __CPROVER_output(&quot;__vwe_out_one_a[0]&quot;, __vwe_a1_get_0(__vwe_one_b0,0).f0);
+  }
+  if (__vwe_len_0&gt;1) {
+  __CPROVER_output(&quot;__vwe_out_one_a[1]&quot;, __vwe_a1_get_0(__vwe_one_b0,1).f0);
+  }
+  __CPROVER_assert(((__vwe_zero.r0==__vwe_one.r0) &amp;&amp; ((__vwe_len_0&lt;=0 || __vwe_a0_get_0(__vwe_zero_b0,0).f0==__vwe_a1_get_0(__vwe_one_b0,0).f0)) &amp;&amp; ((__vwe_len_0&lt;=1 || __vwe_a0_get_0(__vwe_zero_b0,1).f0==__vwe_a1_get_0(__vwe_one_b0,1).f0))) || !(vwe_observer_2(((const int *)__vwe_input_b0), __vwe_in_scalar_1_0, __vwe_one.r0)), &quot;VWE.scope.agreement&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s1_0;
+};
+struct __vwe_output {
+  int r0;
+};
+struct __vwe_element_0 {
+  int f0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; (n - 1); i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a0_size_0(void) { return sizeof(int); }
+void __vwe_a0_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a0_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p0_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int p1_sum(const int *a, int n)
+{
+  int s = 0;
+  for (int i = 0; i &lt; n; i++)
+    s += a[i];
+
+  return s;
+}
+
+
+
+__vwe_size __vwe_a1_size_0(void) { return sizeof(int); }
+void __vwe_a1_set_0(void *raw, __vwe_size i, struct __vwe_element_0 e) {
+  int *v=(int *)raw;
+  v[i]=e.f0;
+}
+struct __vwe_element_0 __vwe_a1_get_0(const void *raw, __vwe_size i) {
+  const int *v=(const int *)raw;
+  struct __vwe_element_0 e;
+  e.f0=v[i];
+  return e;
+}
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out, void *b0) {
+  int __vwe_arg_1;
+  __vwe_arg_1=in-&gt;s1_0;
+  int __vwe_ret=p1_sum((const int *)b0, __vwe_arg_1);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+</body></html>

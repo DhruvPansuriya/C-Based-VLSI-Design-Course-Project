@@ -1,0 +1,64 @@
+{
+  "task_id": "ex3_avg_half_away",
+  "source": {
+    "suite": "fresh",
+    "origin": "VWE research draft Section 9 Example 3, author-written fixture",
+    "adaptations": [
+      "Bound both inputs to [-1000,1000] to isolate rounding from signed overflow.",
+      "Both readings deliberately collapse the change zone to negative odd sums."
+    ]
+  },
+  "function": "avg",
+  "p0": "p0.c",
+  "requests": [
+    {
+      "id": "original",
+      "file": "request.txt",
+      "origin": "brief_author"
+    }
+  ],
+  "candidates": {
+    "v1": "candidates/v1.c",
+    "v2": "candidates/v2.c",
+    "v3": "candidates/v3.c"
+  },
+  "interpretations": [
+    "interpretations/strict.json",
+    "interpretations/collapsed.json"
+  ],
+  "caller_domain": {
+    "buffers": {},
+    "alias": "disjoint",
+    "bounds": {},
+    "value_bounds": {
+      "a": [
+        -1000,
+        1000
+      ],
+      "b": [
+        -1000,
+        1000
+      ]
+    }
+  },
+  "eval_only": {
+    "p_ref": "eval/p_ref.c",
+    "phi_ref": "eval/phi_ref.c",
+    "true_shape": {
+      "buffers": {},
+      "alias": "disjoint",
+      "bounds": {},
+      "value_bounds": {
+        "a": [
+          -1000,
+          1000
+        ],
+        "b": [
+          -1000,
+          1000
+        ]
+      }
+    },
+    "true_change_zone": "(a + b) % 2 != 0"
+  }
+}

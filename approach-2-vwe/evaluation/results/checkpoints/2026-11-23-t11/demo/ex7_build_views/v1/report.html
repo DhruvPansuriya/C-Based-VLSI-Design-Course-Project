@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verdicts with Evidence</title>
+<style>
+body {max-width: 68rem; margin: 2rem auto; padding: 0 1rem; font: 1rem/1.55 system-ui,sans-serif; color: #182536}
+header {background:#eef3f8; padding:1.2rem; border-left:.4rem solid #2e536d}
+pre {background:#f3f6f9; padding:.8rem; overflow:auto; font-size:.85rem}
+table {border-collapse:collapse; width:100%}
+th,td {text-align:left; padding:.5rem; border-bottom:1px solid #cbd6df; vertical-align:top}
+summary {cursor:pointer} h1 {margin:.2rem 0}
+</style>
+<body>
+<header><div>ex7_build_views / v1</div>
+<h1>REJECT E0</h1>
+<p>views: main.assertion.1 VWE.views.equivalence</p><p>The recorded input distinguishes the two build views under the declared caller profile.</p></header>
+<h2>Witness</h2>
+<table><thead><tr><th>Observation</th><th>Value</th></tr></thead><tbody>
+<tr><td>inputs</td><td><pre>{
+  &quot;x&quot;: &quot;92&quot;
+}</pre></td></tr>
+<tr><td>p0_output</td><td><pre>{
+  &quot;ret&quot;: &quot;93&quot;
+}</pre></td></tr>
+<tr><td>p1_output</td><td><pre>{
+  &quot;ret&quot;: &quot;94&quot;
+}</pre></td></tr>
+<tr><td>replayed_natively</td><td><pre>true</pre></td></tr>
+<tr><td>replay_results</td><td><pre>[
+  {
+    &quot;status&quot;: &quot;confirmed&quot;,
+    &quot;reason&quot;: &quot;captured observations match the fixed solver witness&quot;
+  }
+]</pre></td></tr>
+</tbody></table>
+<h2>Interpretations</h2>
+<p><strong>ex7_build_views.identity</strong> · valid · not checked<br>Behavior-preserving transformation; no repair change zone.</p>
+<h2>Obligations</h2><table><tr><th>Query</th><th>Outcome</th><th>Backends and detail</th></tr>
+<tr><td>candidate safety on reference guard</td><td>PROVED</td><td>e0<pre>{
+  &quot;sat&quot;: &quot;success&quot;,
+  &quot;z3&quot;: &quot;success&quot;
+}</pre></td></tr>
+<tr><td>build-view consistency</td><td>VIOLATED</td><td>views: main.assertion.1 VWE.views.equivalence<pre>{
+  &quot;sat&quot;: &quot;failure&quot;,
+  &quot;z3&quot;: &quot;failure&quot;
+}</pre></td></tr>
+<tr><td>build-view counterexample with fixed inputs</td><td>VIOLATED</td><td>views: main.assertion.1 VWE.views.equivalence<pre>{
+  &quot;sat&quot;: &quot;failure&quot;,
+  &quot;z3&quot;: &quot;failure&quot;
+}</pre></td></tr>
+</table>
+<h2>Facts</h2><pre>{
+  &quot;preserves_outside_B_max&quot;: &quot;inconclusive&quot;,
+  &quot;synthesis_ready&quot;: &quot;inconclusive&quot;,
+  &quot;interpretations_satisfied&quot;: [],
+  &quot;interpretations_violated&quot;: []
+}</pre>
+<h2>Scope</h2><pre>{
+  &quot;K&quot;: 2,
+  &quot;shape_min&quot;: {
+    &quot;buffers&quot;: {},
+    &quot;alias&quot;: &quot;disjoint&quot;,
+    &quot;bounds&quot;: {},
+    &quot;value_bounds&quot;: {
+      &quot;x&quot;: [
+        -100,
+        100
+      ]
+    }
+  },
+  &quot;shape_max&quot;: {
+    &quot;buffers&quot;: {},
+    &quot;alias&quot;: &quot;disjoint&quot;,
+    &quot;bounds&quot;: {},
+    &quot;value_bounds&quot;: {
+      &quot;x&quot;: [
+        -100,
+        100
+      ]
+    }
+  },
+  &quot;bounded_only&quot;: true,
+  &quot;profiles&quot;: [
+    {
+      &quot;buffers&quot;: {},
+      &quot;alias&quot;: &quot;disjoint&quot;,
+      &quot;bounds&quot;: {},
+      &quot;value_bounds&quot;: {
+        &quot;x&quot;: [
+          -100,
+          100
+        ]
+      }
+    }
+  ],
+  &quot;reference_safe_guard&quot;: &quot;!(false)&quot;,
+  &quot;change_brackets&quot;: {
+    &quot;B_min&quot;: &quot;(false)&quot;,
+    &quot;B_max&quot;: &quot;(false) || (false)&quot;
+  },
+  &quot;prepass&quot;: {
+    &quot;samples&quot;: 5,
+    &quot;seed&quot;: 0,
+    &quot;requested_samples&quot;: 10000,
+    &quot;seconds_budget&quot;: 1,
+    &quot;stopped&quot;: &quot;time budget&quot;
+  },
+  &quot;native_replay&quot;: [
+    {
+      &quot;status&quot;: &quot;confirmed&quot;,
+      &quot;reason&quot;: &quot;captured observations match the fixed solver witness&quot;
+    }
+  ],
+  &quot;native_acceptance&quot;: &quot;not applicable&quot;,
+  &quot;uninitialized_model&quot;: &quot;CBMC experimental local checks&quot;
+}</pre>
+<h2>Tools</h2><pre>{
+  &quot;cbmc&quot;: &quot;6.11.0 (cbmc-6.11.0)&quot;,
+  &quot;z3&quot;: &quot;Z3 version 5.4.1 - 64 bit - build hashcode 145c0c51570a357cc558ce898ce77573ba9d4fbf&quot;,
+  &quot;esbmc&quot;: &quot;unavailable&quot;
+}</pre>
+<h2>Timing</h2><pre>{
+  &quot;wall_seconds&quot;: 8.026776790997246
+}</pre>
+<h2>Generated job sources</h2>
+<details><summary>e0</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out);
+
+int nondet___vwe_0(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_0(void) {
+  return (!(0));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_0_0=nondet___vwe_0();
+  __CPROVER_assume((-100LL) &lt;= __vwe_in_scalar_0_0 &amp;&amp; __vwe_in_scalar_0_0 &lt;= 100LL);
+  __vwe_in.s0_0=__vwe_in_scalar_0_0;
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_0());
+  __vwe_a1_call(&amp;__vwe_in, &amp;__vwe_one);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s0_0;
+};
+struct __vwe_output {
+  int r0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=p0_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int p1_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=p1_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>fixed_views</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out);
+
+int nondet___vwe_0(void);
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_0_0=nondet___vwe_0();
+  __CPROVER_assume(__vwe_in_scalar_0_0 == 92LL);
+  __CPROVER_assume((-100LL) &lt;= __vwe_in_scalar_0_0 &amp;&amp; __vwe_in_scalar_0_0 &lt;= 100LL);
+  __vwe_in.s0_0=__vwe_in_scalar_0_0;
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero);
+  __CPROVER_output(&quot;__vwe_out_zero_ret&quot;, __vwe_zero.r0);
+  __vwe_a1_call(&amp;__vwe_in, &amp;__vwe_one);
+  __CPROVER_output(&quot;__vwe_out_one_ret&quot;, __vwe_one.r0);
+  __CPROVER_assert(((__vwe_zero.r0==__vwe_one.r0)), &quot;VWE.views.equivalence&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s0_0;
+};
+struct __vwe_output {
+  int r0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p1_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=p1_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_transform(int x)
+{
+  return x + 2;
+}
+
+
+
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=vwe_second_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/0/constructive</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out);
+
+int nondet___vwe_0(void);
+int nondet___vwe_1(void);
+int nondet___vwe_2(void);
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_0_0=nondet___vwe_0();
+  __CPROVER_assume((-100LL) &lt;= __vwe_in_scalar_0_0 &amp;&amp; __vwe_in_scalar_0_0 &lt;= 100LL);
+  __vwe_in.s0_0=__vwe_in_scalar_0_0;
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  int __vwe_one_result_0=nondet___vwe_1();
+  __vwe_one.r0=__vwe_one_result_0;
+  int __vwe_zero_result_0=nondet___vwe_2();
+  __vwe_zero.r0=__vwe_zero_result_0;
+  __CPROVER_assert((1), &quot;VWE.validation_constructive.predicate&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s0_0;
+};
+struct __vwe_output {
+  int r0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=p0_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=vwe_second_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/0/contract_ub</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out);
+
+int nondet___vwe_0(void);
+int nondet___vwe_1(void);
+int nondet___vwe_2(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_0(void) {
+  return 0;
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(int ve_arg_0, int ve_arg_1) {
+  return ((((long long)ve_arg_1)) == (((long long)ve_arg_0)));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_0_0=nondet___vwe_0();
+  __CPROVER_assume((-100LL) &lt;= __vwe_in_scalar_0_0 &amp;&amp; __vwe_in_scalar_0_0 &lt;= 100LL);
+  __vwe_in.s0_0=__vwe_in_scalar_0_0;
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  int __vwe_one_result_0=nondet___vwe_1();
+  __vwe_one.r0=__vwe_one_result_0;
+  int __vwe_zero_result_0=nondet___vwe_2();
+  __vwe_zero.r0=__vwe_zero_result_0;
+  (void)vwe_observer_0();
+  (void)vwe_observer_1(__vwe_zero.r0, __vwe_one.r0);
+  __CPROVER_assert(1, &quot;VWE.contract.evaluated&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s0_0;
+};
+struct __vwe_output {
+  int r0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=p0_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=vwe_second_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/0/reach_0</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out);
+
+int nondet___vwe_0(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_0(void) {
+  return 1;
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(void) {
+  return 1;
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_0_0=nondet___vwe_0();
+  __CPROVER_assume((-100LL) &lt;= __vwe_in_scalar_0_0 &amp;&amp; __vwe_in_scalar_0_0 &lt;= 100LL);
+  __vwe_in.s0_0=__vwe_in_scalar_0_0;
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_0());
+  __CPROVER_assert(!(vwe_observer_1()), &quot;VWE.feasibility.predicate&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s0_0;
+};
+struct __vwe_output {
+  int r0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=p0_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=vwe_second_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>interpretations/checks/0/reference</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out);
+
+int nondet___vwe_0(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_0(void) {
+  return (!(0));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_0_0=nondet___vwe_0();
+  __CPROVER_assume((-100LL) &lt;= __vwe_in_scalar_0_0 &amp;&amp; __vwe_in_scalar_0_0 &lt;= 100LL);
+  __vwe_in.s0_0=__vwe_in_scalar_0_0;
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_0());
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero);
+  __vwe_a1_call(&amp;__vwe_in, &amp;__vwe_one);
+  __CPROVER_assert(((__vwe_zero.r0==__vwe_one.r0)), &quot;VWE.determinism.equivalence&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s0_0;
+};
+struct __vwe_output {
+  int r0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=p0_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=vwe_second_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>regions/inside_reach</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out);
+
+int nondet___vwe_0(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_0(void) {
+  return 1;
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(void) {
+  return 0;
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_0_0=nondet___vwe_0();
+  __CPROVER_assume((-100LL) &lt;= __vwe_in_scalar_0_0 &amp;&amp; __vwe_in_scalar_0_0 &lt;= 100LL);
+  __vwe_in.s0_0=__vwe_in_scalar_0_0;
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_0());
+  __CPROVER_assert(!(vwe_observer_1()), &quot;VWE.feasibility.predicate&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s0_0;
+};
+struct __vwe_output {
+  int r0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=p0_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=vwe_second_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>regions/outside_determinism</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out);
+
+int nondet___vwe_0(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_0(void) {
+  return (!(0));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_0_0=nondet___vwe_0();
+  __CPROVER_assume((-100LL) &lt;= __vwe_in_scalar_0_0 &amp;&amp; __vwe_in_scalar_0_0 &lt;= 100LL);
+  __vwe_in.s0_0=__vwe_in_scalar_0_0;
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_0());
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero);
+  __vwe_a1_call(&amp;__vwe_in, &amp;__vwe_one);
+  __CPROVER_assert(((__vwe_zero.r0==__vwe_one.r0)), &quot;VWE.determinism.equivalence&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s0_0;
+};
+struct __vwe_output {
+  int r0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=p0_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=vwe_second_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>regions/outside_reach</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out);
+
+int nondet___vwe_0(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_0(void) {
+  return 1;
+}
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_1(void) {
+  return (!(0));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_0_0=nondet___vwe_0();
+  __CPROVER_assume((-100LL) &lt;= __vwe_in_scalar_0_0 &amp;&amp; __vwe_in_scalar_0_0 &lt;= 100LL);
+  __vwe_in.s0_0=__vwe_in_scalar_0_0;
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_0());
+  __CPROVER_assert(!(vwe_observer_1()), &quot;VWE.feasibility.predicate&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s0_0;
+};
+struct __vwe_output {
+  int r0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=p0_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=vwe_second_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>regions/outside_safety</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out);
+
+int nondet___vwe_0(void);
+/* VE-DSL-1 observer: V-G/old-definedness checks are still required. */
+static inline int vwe_observer_0(void) {
+  return (!(0));
+}
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_0_0=nondet___vwe_0();
+  __CPROVER_assume((-100LL) &lt;= __vwe_in_scalar_0_0 &amp;&amp; __vwe_in_scalar_0_0 &lt;= 100LL);
+  __vwe_in.s0_0=__vwe_in_scalar_0_0;
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __CPROVER_assume(vwe_observer_0());
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero);
+  __CPROVER_assert(1, &quot;VWE.reference_safety.completed&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s0_0;
+};
+struct __vwe_output {
+  int r0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p0_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=p0_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=vwe_second_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+<details><summary>views</summary>
+<h3>main.c</h3><pre>#include &lt;stdlib.h&gt;
+#include &quot;frame.h&quot;
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out);
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out);
+
+int nondet___vwe_0(void);
+
+int main(void) {
+  struct __vwe_input __vwe_in={0};
+  int __vwe_in_scalar_0_0=nondet___vwe_0();
+  __CPROVER_assume((-100LL) &lt;= __vwe_in_scalar_0_0 &amp;&amp; __vwe_in_scalar_0_0 &lt;= 100LL);
+  __vwe_in.s0_0=__vwe_in_scalar_0_0;
+  struct __vwe_output __vwe_one={0};
+  struct __vwe_output __vwe_zero={0};
+  __vwe_a0_call(&amp;__vwe_in, &amp;__vwe_zero);
+  __CPROVER_output(&quot;__vwe_out_zero_ret&quot;, __vwe_zero.r0);
+  __vwe_a1_call(&amp;__vwe_in, &amp;__vwe_one);
+  __CPROVER_output(&quot;__vwe_out_one_ret&quot;, __vwe_one.r0);
+  __CPROVER_assert(((__vwe_zero.r0==__vwe_one.r0)), &quot;VWE.views.equivalence&quot;);
+  return 0;
+}
+</pre>
+<h3>frame.h</h3><pre>#ifndef VWE_FRAME_H
+#define VWE_FRAME_H
+typedef __typeof__(sizeof(int)) __vwe_size;
+_Static_assert(sizeof(int)==4 &amp;&amp; sizeof(long)==8 &amp;&amp; sizeof(void*)==8 &amp;&amp; (char)-1&lt;0, &quot;VWE LP64 signed-char profile&quot;);
+struct __vwe_input {
+  int s0_0;
+};
+struct __vwe_output {
+  int r0;
+};
+#endif
+</pre>
+<h3>a0.c</h3><pre>#include &quot;frame.h&quot;
+int p1_transform(int x)
+{
+  return x + 1;
+}
+
+
+
+void __vwe_a0_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=p1_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+<h3>a1.c</h3><pre>#include &quot;frame.h&quot;
+int vwe_second_transform(int x)
+{
+  return x + 2;
+}
+
+
+
+void __vwe_a1_call(const struct __vwe_input *in, struct __vwe_output *out) {
+  int __vwe_arg_0;
+  __vwe_arg_0=in-&gt;s0_0;
+  int __vwe_ret=vwe_second_transform(__vwe_arg_0);
+  out-&gt;r0=__vwe_ret;
+}
+</pre>
+</details>
+</body></html>

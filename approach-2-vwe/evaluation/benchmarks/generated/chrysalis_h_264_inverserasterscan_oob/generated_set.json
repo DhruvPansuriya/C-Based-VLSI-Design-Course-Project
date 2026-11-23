@@ -1,0 +1,714 @@
+{
+  "task_id": "chrysalis_h_264_inverserasterscan_oob",
+  "request_id": "original",
+  "sha256": "2a06ee881550770ef91bb08c014a9924abbb41f76ae3e8d0b3b17f0e4473525b",
+  "members": [
+    {
+      "id": "chrysalis_h_264_inverserasterscan_oob.groq_gptoss.strict.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "prompt": "strict",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "a": [
+            -1000,
+            1000
+          ],
+          "b": [
+            -1000,
+            1000
+          ],
+          "c": [
+            -1000,
+            1000
+          ],
+          "d": [
+            -1000,
+            1000
+          ],
+          "e": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_ret == old_ret"
+        }
+      ],
+      "ext": "out_ret == old_ret",
+      "reach": "unknown",
+      "nl_rendering": "The function returns the same value as before for all inputs, while any out-of-bounds array accesses are corrected internally.",
+      "request_type": "T2"
+    },
+    {
+      "id": "chrysalis_h_264_inverserasterscan_oob.groq_gptoss.permissive.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "prompt": "permissive",
+        "run_index": 0
+      },
+      "request_type": "T2",
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "a": [
+            -1000,
+            1000
+          ],
+          "b": [
+            -1000,
+            1000
+          ],
+          "c": [
+            -1000,
+            1000
+          ],
+          "d": [
+            -1000,
+            1000
+          ],
+          "e": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_ret == old_ret"
+        }
+      ],
+      "ext": "out_ret == old_ret",
+      "reach": "true",
+      "nl_rendering": "For every combination of inputs the function now guarantees that any internal array accesses stay within the array bounds while returning exactly the same result as the original implementation."
+    },
+    {
+      "id": "chrysalis_h_264_inverserasterscan_oob.groq_gptoss.adversarial.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "prompt": "adversarial",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "a": [
+            -1000,
+            1000
+          ],
+          "b": [
+            -1000,
+            1000
+          ],
+          "c": [
+            -1000,
+            1000
+          ],
+          "d": [
+            -1000,
+            1000
+          ],
+          "e": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "(a < 0 || a > 255 || b < 0 || b > 255 || c < 0 || c > 255 || d < 0 || d > 255 || e < 0 || e > 255)",
+          "behaviour": "out_ret == 0"
+        }
+      ],
+      "ext": "out_ret == old_ret",
+      "reach": "(a < 0 || a > 255 || b < 0 || b > 255 || c < 0 || c > 255 || d < 0 || d > 255 || e < 0 || e > 255)",
+      "nl_rendering": "When any argument falls outside the 0\u2011255 range the function returns a safe default (0) instead of the previous undefined result; otherwise it behaves exactly as before.",
+      "request_type": "T3"
+    },
+    {
+      "id": "chrysalis_h_264_inverserasterscan_oob.groq_qwen.strict.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "prompt": "strict",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "a": [
+            -1000,
+            1000
+          ],
+          "b": [
+            -1000,
+            1000
+          ],
+          "c": [
+            -1000,
+            1000
+          ],
+          "d": [
+            -1000,
+            1000
+          ],
+          "e": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_ret == old_ret",
+          "nl_trace": "Fix the indexing so every access stays in bounds and the function computes its intended result; keep all other behaviour unchanged.",
+          "uses_old_output": true
+        }
+      ],
+      "ext": "out_ret == old_ret",
+      "reach": "true",
+      "nl_rendering": "For all inputs, the function must return the same value as the original function, implying that the original function's logic was correct for all valid inputs and the fix only prevents out-of-bounds access without altering the computed result for valid cases.",
+      "request_type": "T1"
+    },
+    {
+      "id": "chrysalis_h_264_inverserasterscan_oob.groq_qwen.permissive.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "prompt": "permissive",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "a": [
+            -1000,
+            1000
+          ],
+          "b": [
+            -1000,
+            1000
+          ],
+          "c": [
+            -1000,
+            1000
+          ],
+          "d": [
+            -1000,
+            1000
+          ],
+          "e": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_ret == old_ret",
+          "nl_trace": "Fix the indexing so every access stays in bounds and the function computes its intended result; keep all other behaviour unchanged."
+        }
+      ],
+      "ext": "out_ret == old_ret",
+      "reach": "true",
+      "nl_rendering": "For all inputs, the function must return the same value as the original implementation, ensuring that any internal array accesses are corrected to stay within bounds while preserving the intended computational result.",
+      "request_type": "T1"
+    },
+    {
+      "id": "chrysalis_h_264_inverserasterscan_oob.groq_qwen.adversarial.0",
+      "provenance": {
+        "source": "llm",
+        "model_family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "prompt": "adversarial",
+        "run_index": 0
+      },
+      "shape": {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {},
+        "value_bounds": {
+          "a": [
+            -1000,
+            1000
+          ],
+          "b": [
+            -1000,
+            1000
+          ],
+          "c": [
+            -1000,
+            1000
+          ],
+          "d": [
+            -1000,
+            1000
+          ],
+          "e": [
+            -1000,
+            1000
+          ]
+        }
+      },
+      "clauses": [
+        {
+          "zone": "true",
+          "behaviour": "out_ret == old_ret",
+          "nl_trace": "Fix the indexing so every access stays in bounds and the function computes its intended result; keep all other behaviour unchanged.",
+          "uses_old_output": true
+        }
+      ],
+      "ext": "out_ret == old_ret",
+      "reach": "true",
+      "nl_rendering": "The function must return exactly the same value as the original buggy function for every possible input, implying that the original logic was mathematically correct for all valid inputs and the fix only prevents out-of-bounds access without altering the computed result for any case.",
+      "request_type": "T1"
+    }
+  ],
+  "generation": {
+    "runs": 1,
+    "families": [
+      "groq_gptoss",
+      "groq_qwen"
+    ],
+    "p1_seen_by_any_llm": false,
+    "live_families": [
+      "groq_gptoss",
+      "groq_qwen"
+    ],
+    "independent_live_family_count": 2,
+    "prompts": {
+      "typing": {
+        "version": "1",
+        "sha256": "d205e470414fbf901f6218f7626634a03bb6d50f2db5e3d606e651cb175b48ba"
+      },
+      "shape": {
+        "version": "1",
+        "sha256": "fd83396fa193d2a4db032be30085eee0a8e8594a06fc7300e2cb17c4e70c16e9"
+      },
+      "strict": {
+        "version": "2",
+        "sha256": "cad4e4428f3ab5a291b0c5c870865cc81dd8aa058e63a48d591e241094ee868e"
+      },
+      "permissive": {
+        "version": "2",
+        "sha256": "7e1436cc35c5dfff8ad88b8c8b6de1001313092ec7ccceaeeb7d7467025710fa"
+      },
+      "adversarial": {
+        "version": "2",
+        "sha256": "42a00cce3b2df6fe11fd008694b028fe31e08bb332977b19778e03c079190a52"
+      }
+    },
+    "shape_policy": "caller profile copied into every reading; model shape retained in records"
+  },
+  "records": [
+    {
+      "family": "groq_gptoss",
+      "prompt": "typing",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "typing",
+          "version": "1",
+          "sha256": "d205e470414fbf901f6218f7626634a03bb6d50f2db5e3d606e651cb175b48ba"
+        },
+        "schema_sha256": "63850d6960ea3c85c4624a40561308eff2998d791e4ded34ab849d7ae41850c2",
+        "attempts": [
+          {
+            "request_key": "396b7c73cd4b74a3136fc60df952881d3cdf993565dcfbd30fa1fde6d94ebaa6",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "family": "groq_gptoss",
+      "prompt": "shape",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "shape",
+          "version": "1",
+          "sha256": "fd83396fa193d2a4db032be30085eee0a8e8594a06fc7300e2cb17c4e70c16e9"
+        },
+        "schema_sha256": "330d8e128137e475be2b723200eef319a85b19f8108c16abf37ad52db991add0",
+        "attempts": [
+          {
+            "request_key": "4e2ee359b0968fb668ee943f69319941356f2a5d4c0dfc99e97d451286c37cd9",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "agrees_with_caller_profile": true
+    },
+    {
+      "family": "groq_gptoss",
+      "prompt": "strict",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "strict",
+          "version": "2",
+          "sha256": "cad4e4428f3ab5a291b0c5c870865cc81dd8aa058e63a48d591e241094ee868e"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "533fd7204ba9e3809a907f3ce1d37f45bd75da8f14371426b3bcffc010a3cb59",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true,
+      "model_shape_replaced": false
+    },
+    {
+      "family": "groq_gptoss",
+      "prompt": "permissive",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "permissive",
+          "version": "2",
+          "sha256": "7e1436cc35c5dfff8ad88b8c8b6de1001313092ec7ccceaeeb7d7467025710fa"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "c1702f5266034e0658823d63e486f3a0f43e3ecd9e3979d7d7cc81035c1a69f3",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true,
+      "model_shape_replaced": false
+    },
+    {
+      "family": "groq_gptoss",
+      "prompt": "adversarial",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_gptoss",
+        "model_id": "openai/gpt-oss-120b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "adversarial",
+          "version": "2",
+          "sha256": "42a00cce3b2df6fe11fd008694b028fe31e08bb332977b19778e03c079190a52"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "c66e47bc6cb7e732f6b32551ab0ea2eb9bdf09c14f001e494b59d44893d5bf91",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "typing",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "typing",
+          "version": "1",
+          "sha256": "d205e470414fbf901f6218f7626634a03bb6d50f2db5e3d606e651cb175b48ba"
+        },
+        "schema_sha256": "63850d6960ea3c85c4624a40561308eff2998d791e4ded34ab849d7ae41850c2",
+        "attempts": [
+          {
+            "request_key": "296ca8747720278900429c6778eadba29c89b97d8b171afa9fb56e79bc6ae4a3",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "shape",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "shape",
+          "version": "1",
+          "sha256": "fd83396fa193d2a4db032be30085eee0a8e8594a06fc7300e2cb17c4e70c16e9"
+        },
+        "schema_sha256": "330d8e128137e475be2b723200eef319a85b19f8108c16abf37ad52db991add0",
+        "attempts": [
+          {
+            "request_key": "5d2ad5c3f721c47edd21b9d83a72176d5f1b796e9356c7fcd9cac5606ee14b70",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "agrees_with_caller_profile": true
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "strict",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "strict",
+          "version": "2",
+          "sha256": "cad4e4428f3ab5a291b0c5c870865cc81dd8aa058e63a48d591e241094ee868e"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "67d41cd48cd678320336e75fe4b45efd88e116ca2ae820ac17ade7ab37b0a4d2",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true,
+      "model_shape_replaced": false
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "permissive",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "permissive",
+          "version": "2",
+          "sha256": "7e1436cc35c5dfff8ad88b8c8b6de1001313092ec7ccceaeeb7d7467025710fa"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "674c38a88ed0847cdf8c7086b5519c2b3ccb292e11fb5d8a101187480e216f1d",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true,
+      "model_shape_replaced": false
+    },
+    {
+      "family": "groq_qwen",
+      "prompt": "adversarial",
+      "run_index": 0,
+      "status": "ok",
+      "detail": "schema-valid JSON",
+      "origins": [
+        "live"
+      ],
+      "live": true,
+      "provenance": {
+        "status": "ok",
+        "provider": "groq",
+        "family": "groq_qwen",
+        "model_id": "qwen/qwen3.8-27b",
+        "provider_is_live": true,
+        "temperature": 0.0,
+        "seed": 0,
+        "seed_note": "recorded request parameter; provider determinism is not assumed",
+        "run_index": 0,
+        "max_retries": 2,
+        "offline": false,
+        "prompt": {
+          "name": "adversarial",
+          "version": "2",
+          "sha256": "42a00cce3b2df6fe11fd008694b028fe31e08bb332977b19778e03c079190a52"
+        },
+        "schema_sha256": "0ac9f87c043bf0b3987efb717121ed124f0b80fabe777a6313840e55856d7425",
+        "attempts": [
+          {
+            "request_key": "f4439ec76b039e0c7b40b4d5783337cdb19d0a896755db0a82cc3ac4fdcc6b23",
+            "origin": "live",
+            "error": null
+          }
+        ]
+      },
+      "accepted": true
+    }
+  ]
+}

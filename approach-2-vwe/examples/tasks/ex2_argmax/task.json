@@ -1,0 +1,61 @@
+{
+  "task_id": "ex2_argmax",
+  "source": {
+    "suite": "fresh",
+    "origin": "VWE research draft Section 9, author-written fixture",
+    "license": "No additional license granted by this adapter",
+    "adaptations": [
+      "Converted standalone spike function names to their public signature.",
+      "Caller input bounds are explicit and are not inferred from a candidate."
+    ]
+  },
+  "function": "argmax",
+  "p0": "p0.c",
+  "requests": [
+    {
+      "id": "original",
+      "file": "request.txt",
+      "origin": "brief_author"
+    }
+  ],
+  "candidates": {
+    "v1": "candidates/v1.c",
+    "v2": "candidates/v2.c",
+    "v3": "candidates/v3.c"
+  },
+  "interpretations": [
+    "interpretations/strict.json",
+    "interpretations/permissive.json"
+  ],
+  "caller_domain": {
+    "buffers": {
+      "a": "n",
+      "idx": "1"
+    },
+    "alias": "disjoint",
+    "bounds": {
+      "n": [
+        0,
+        4
+      ]
+    }
+  },
+  "eval_only": {
+    "p_ref": "eval/p_ref.c",
+    "phi_ref": "eval/phi_ref.c",
+    "true_shape": {
+      "buffers": {
+        "a": "n",
+        "idx": "1"
+      },
+      "alias": "disjoint",
+      "bounds": {
+        "n": [
+          0,
+          4
+        ]
+      }
+    },
+    "true_change_zone": "n == 0"
+  }
+}

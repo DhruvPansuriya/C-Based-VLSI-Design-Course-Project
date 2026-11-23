@@ -1,0 +1,36 @@
+{
+  "p0_sha256": "5a8e7d3ee3493ea41630497069bf2c195a07177e22f40b1d08ced57b6a55da81",
+  "interpretation_set_sha256": "595fd63c0d1288e2a3149590a89f38c6cf0ed16d8dc3268fb01f7635b5161cc6",
+  "checks": [
+    {
+      "id": "ex5_add32_ambiguous.adversarial",
+      "state": "valid",
+      "check": "V-4",
+      "detail": "joint output tuple proved for every modeled input",
+      "witness": {
+        "__vwe_in_scalar_0_0": "2147483648",
+        "__vwe_in_scalar_1_0": "2147483648"
+      }
+    },
+    {
+      "id": "ex5_add32_ambiguous.permissive",
+      "state": "valid",
+      "check": "V-4",
+      "detail": "joint output tuple proved for every modeled input",
+      "witness": {
+        "__vwe_in_scalar_0_0": "2147483648",
+        "__vwe_in_scalar_1_0": "2147483648"
+      }
+    },
+    {
+      "id": "ex5_add32_ambiguous.strict",
+      "state": "valid",
+      "check": "V-4",
+      "detail": "joint output tuple proved for every modeled input",
+      "witness": {
+        "__vwe_in_scalar_0_0": "2147483648",
+        "__vwe_in_scalar_1_0": "2147483648"
+      }
+    }
+  ]
+}

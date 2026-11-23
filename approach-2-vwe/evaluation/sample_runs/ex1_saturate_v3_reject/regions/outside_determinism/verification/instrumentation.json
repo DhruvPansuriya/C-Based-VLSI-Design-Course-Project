@@ -1,0 +1,98 @@
+{
+  "sha256": "a95397430f1757c37dc881aedc2a8e80aebed4ab567281dc2f0308c5c3ab4393",
+  "reason": "",
+  "traps": [],
+  "uninitialized_local_pass": true,
+  "commands": [
+    {
+      "argv": [
+        "goto-cc",
+        "-std=c11",
+        "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/outside_determinism/a0.c",
+        "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/outside_determinism/a1.c",
+        "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/outside_determinism/main.c",
+        "-o",
+        "raw.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/outside_determinism/verification",
+      "returncode": 0,
+      "seconds": 0.19774391700048,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--uninitialized-check",
+        "raw.goto",
+        "locals.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/outside_determinism/verification",
+      "returncode": 0,
+      "seconds": 0.00600608300010208,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--add-library",
+        "--no-malloc-may-fail",
+        "locals.goto",
+        "linked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/outside_determinism/verification",
+      "returncode": 0,
+      "seconds": 0.005150917000719346,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--list-goto-functions",
+        "linked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/outside_determinism/verification",
+      "returncode": 0,
+      "seconds": 0.004385749998618849,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--remove-function-body-regex",
+        "^(_Exit|_exit|_longjmp|abort|exit|longjmp|quick_exit|siglongjmp)$",
+        "linked.goto",
+        "removed.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/outside_determinism/verification",
+      "returncode": 0,
+      "seconds": 0.005069582999567501,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--generate-function-body",
+        "^(_Exit|_exit|_longjmp|abort|exit|longjmp|quick_exit|siglongjmp)$",
+        "--generate-function-body-options",
+        "assert-false-assume-false",
+        "removed.goto",
+        "checked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/outside_determinism/verification",
+      "returncode": 0,
+      "seconds": 0.005234833006397821,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--show-goto-functions",
+        "checked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/regions/outside_determinism/verification",
+      "returncode": 0,
+      "seconds": 0.005422791989985853,
+      "error": ""
+    }
+  ]
+}

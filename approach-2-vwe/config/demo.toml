@@ -1,0 +1,15 @@
+[bounds]
+K = 2
+max_unwind = 5
+
+[timeouts]
+cbmc_s = 60
+esbmc_s = 30
+equiv_pair_s = 30
+
+[native]
+cc = "gcc"
+sanitize = "address,undefined"
+prepass_samples = 10000
+seed = 0
+prepass_seconds = 1

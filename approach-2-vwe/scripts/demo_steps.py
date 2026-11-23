@@ -1,0 +1,230 @@
+#!/usr/bin/env python3
+"""Step-by-step demo: run the real VWE pipeline on one candidate and show every stage.
+
+Each stage is printed as the pipeline completes it (via the observational
+``on_step`` hook of ``vwe.pipeline.verify``); nothing here decides a verdict.
+
+    python scripts/demo_steps.py                          # ex2_argmax, candidate v2
+    python scripts/demo_steps.py --task ex1_saturate --candidate v3 --interactive
+    python scripts/demo_steps.py --task ex1_saturate --candidate v3 --auto mock
+    python scripts/demo_steps.py --task ex1_saturate --candidate v3 --auto groq     # live (Groq, 2 families)
+"""
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+import sys
+import textwrap
+from time import monotonic
+
+ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+
+from vwe.config import load_config  # noqa: E402
+from vwe.pipeline import verify  # noqa: E402
+from vwe.tasks import load_pipeline_view  # noqa: E402
+
+COLORS = {"ACCEPT": "32", "PROVED": "32", "valid": "32", "ok": "32", "confirmed": "32",
+          "REJECT": "31", "VIOLATED": "31", "invalid": "31",
+          "UNDECIDED": "33", "INCONCLUSIVE": "33", "unknown": "33"}
+
+# What each proof obligation means, keyed by the label prefix the pipeline records.
+EXPLAIN = [
+    ("candidate safety", "E0: does P1 introduce undefined behaviour where P0 is safe?"),
+    ("pre-pass safety", "E0 hint from native random testing, re-proved formally"),
+    ("build-view", "Do the simulation and synthesis builds of P1 agree?"),
+    ("reference on common keep", "Is P0 itself deterministic where every reading keeps behaviour?"),
+    ("pre-pass preservation", "E1 hint from native random testing, re-proved formally"),
+    ("preservation or Ext", "E1: outside every reading's change region, does P1 keep P0's behaviour?"),
+    ("scope agreement", "Do the readings agree about what may change (scope veto)?"),
+    ("class keep reachability", "Vacuity probe: can inputs outside the change region occur?"),
+    ("class path reachability", "Vacuity probe: can this reading's zone actually be reached?"),
+    ("interpretation", "E2: does P1 satisfy this reading of the request?"),
+    ("counterexample with fixed inputs", "Re-check the solver witness with its inputs fixed"),
+]
+
+
+MEANING = {
+    ("REJECT", "E0"): "P1 has a computed defect (new undefined behaviour, nondeterminism or a build-view "
+                      "mismatch) on an input where P0 is fine. This needs no interpretation of N at all.",
+    ("REJECT", "E1"): "Outside every reading's change region, P1 changes P0's behaviour in a way every "
+                      "reading forbids: a regression, whatever N exactly meant.",
+    ("REJECT", "E2"): "P1 violates every surviving reading of N. Conditional on the reading set covering "
+                      "what N means.",
+    ("ACCEPT", "E2"): "P1 satisfies every surviving reading and preserves P0 elsewhere, within the bounded "
+                      "caller profile. Conditional on the readings and the profile being adequate.",
+}
+
+
+class Printer:
+    def __init__(self, interactive: bool, color: bool) -> None:
+        self.interactive, self.color, self.n = interactive, color, 0
+        self.start = monotonic()
+
+    def paint(self, text: str) -> str:
+        code = next((c for k, c in COLORS.items() if k in text.split()), None)
+        return f"\033[{code}m{text}\033[0m" if self.color and code else text
+
+    def header(self, title: str, why: str = "") -> None:
+        if self.interactive and self.n:
+            input("\n  [Enter] next step ...")
+        self.n += 1
+        elapsed = monotonic() - self.start
+        print(f"\n\033[1m{'=' * 78}\n STEP {self.n}: {title}   (t={elapsed:.1f}s)\n{'=' * 78}\033[0m"
+              if self.color else f"\n{'=' * 78}\n STEP {self.n}: {title}   (t={elapsed:.1f}s)\n{'=' * 78}")
+        if why:
+            print(textwrap.fill(why, 78, initial_indent="  ", subsequent_indent="  "))
+
+    def line(self, text: str = "") -> None:
+        print("  " + self.paint(text) if text else "")
+
+    def code(self, text: str) -> None:
+        for row in text.rstrip().splitlines():
+            print("    | " + row)
+
+
+def show_inputs(p: Printer, task, candidate: str) -> None:
+    p.header("Inputs", "VWE receives the original buggy function P0, the natural-language request N, "
+             "a candidate revision P1 and an explicit caller profile (sizes and value ranges).")
+    p.line(f"task {task.task_id}, function {task.function}()")
+    p.line("P0 (original):"); p.code(task.p0.text)
+    p.line("N (request):"); p.code(task.requests[0].text)
+    p.line(f"P1 (candidate {candidate}) - shown to you, never to any LLM:")
+    p.code(task.candidates[candidate].source.text)
+    p.line("caller profile: " + json.dumps(json.loads(json.dumps(task.caller_domain, default=dict)),
+                                           default=dict))
+
+
+def show_readings(p: Printer, task, mode: str, generated) -> None:
+    if mode == "handwritten":
+        p.header("Interpretations of N (handwritten)",
+                 "Several readings of the English request are checked, not one. Here they come "
+                 "from the task folder; with --auto they are generated by an LLM from P0 and N only.")
+        readings = task.interpretations
+    else:
+        g = generated.generation
+        p.header("Interpretations of N (generated)",
+                 f"Generated from P0's signature and N only. Families: {', '.join(g['families'])}; "
+                 f"answered live: {', '.join(g['live_families']) or 'none (mock fixtures / cache)'}.")
+        for r in generated.records:
+            p.line(f"{r['family']}/{r['prompt']}#{r['run_index']}: {r['status']}  {r.get('detail', '')[:60]}")
+        readings = generated.members
+    for r in readings:
+        p.line(f"- {r['id']}: {r.get('nl_rendering', '')}")
+        for c in r["clauses"]:
+            p.line(f"    when {c['zone']}:  {c['behaviour']}")
+        p.line(f"    elsewhere: {r['ext']}    reach: {r['reach']}")
+
+
+def on_step_factory(p: Printer):
+    def on_step(stage: str, data: dict) -> None:
+        if stage == "admission":
+            p.header("Structural admission (P0 and P1)",
+                     "Parse both programs in simulation and synthesis views, refuse forbidden "
+                     "constructs, unmodelled calls, new globals or interface changes.")
+            p.line(f"status: {data['status']}  -  {data['reason']}")
+            p.line(f"build views differ: {data['views_differ']};  HLS pragmas seen: {data['pragmas']}")
+        elif stage == "regions":
+            p.header("P0-only reference regions",
+                     "Using P0 alone, certify where the original program is safe and deterministic. "
+                     "Only there can P0 serve as the reference for 'preserve old behaviour'.")
+            p.line(f"proposed UB region: {data['proposed_ub']}   exact UB region: {data['exact_ub']}")
+            guard = data["reference_safe_guard"]
+            p.line(f"certified safe reference guard: {guard}" if guard else
+                   "UNKNOWN: no certified safe reference guard (verdict will abstain)")
+        elif stage == "interpretations":
+            p.header("Validate and freeze the readings (P0 only, before looking at P1)",
+                     "Each reading is checked for well-formedness, that it actually asks for a change, "
+                     "and that some output satisfies it for every input. Invalid readings are dropped; "
+                     "unknown ones block a universal verdict. The frozen set is hashed.")
+            for c in data["checks"]:
+                p.line(f"{c['id']}: {c['state']}  ({c['check']}: {c['detail'][:70]})")
+            p.line(f"equivalence classes: {data['equivalence_classes']}")
+            p.line(f"frozen set sha256: {data['sha256'][:16]}...")
+        elif stage == "obligation":
+            meaning = next((m for k, m in EXPLAIN if data["name"].startswith(k)), "proof obligation")
+            p.header(f"Proof: {data['name']}", meaning)
+            backends = ", ".join(f"{b}={s}" for b, s in data["backends"].items()) or "-"
+            p.line(f"outcome: {data['outcome']}   backends: {backends}")
+            if data.get("note"):
+                p.line(f"note: {data['note'][:110]}")
+            if data.get("witness") and data["witness"].get("inputs"):
+                w = data["witness"]
+                p.line(f"witness inputs: {w['inputs']}")
+                if w.get("p0_output") or w.get("p1_output"):
+                    p.line(f"  P0 output: {w.get('p0_output')}   P1 output: {w.get('p1_output')}")
+        elif stage == "replay":
+            p.header("Native witness replay",
+                     "Compile P0 and P1 with AddressSanitizer/UBSan and run the witness for real, "
+                     "so a REJECT never rests on a solver trace alone.")
+            p.line(f"witness {data['witness']}: {data['status']}  -  {data['reason'][:100]}")
+        elif stage == "verdict":
+            p.header("Verdict")
+            p.line(f"{data['decision']}  {data['evidence_class']}   claim: {data['claim_target']}")
+            p.line(f"reason: {data['reason']}")
+            if data.get("conditional"):
+                p.line(f"conditional on: {data['conditional']}")
+            if data.get("witness"):
+                p.line(f"witness: {data['witness'].get('inputs')}  "
+                       f"(replayed natively: {data['witness'].get('replayed_natively')})")
+            sat = data["facts"].get("interpretations_satisfied", [])
+            vio = data["facts"].get("interpretations_violated", [])
+            p.line(f"readings satisfied: {sat or '-'}   violated: {vio or '-'}")
+            meaning = MEANING.get((data["decision"], data["evidence_class"]),
+                                  "UNDECIDED: some required evidence could not be established (ambiguity, "
+                                  "unresolved scope, timeouts or unconfirmed witnesses). VWE abstains "
+                                  "rather than guess.")
+            p.line()
+            print(textwrap.fill("What this means: " + meaning, 78, initial_indent="  ", subsequent_indent="  "))
+    return on_step
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--task", default="ex2_argmax")
+    ap.add_argument("--candidate", default="v2")
+    ap.add_argument("--auto", choices=("mock", "groq", "openai"), help="generate readings instead of handwritten")
+    ap.add_argument("--interactive", action="store_true", help="pause after every step")
+    ap.add_argument("--no-color", action="store_true")
+    ap.add_argument("--config", type=Path)
+    ap.add_argument("--runs-root", type=Path, default=Path("runs/demo-steps"))
+    ap.add_argument("--list", action="store_true", help="list example tasks and candidates, then exit")
+    args = ap.parse_args()
+    if args.list:
+        for folder in sorted((ROOT / "examples/tasks").iterdir()):
+            if (folder / "task.json").is_file():
+                t = load_pipeline_view(folder)
+                print(f"{t.task_id:24s} candidates: {', '.join(sorted(t.candidates))}")
+        return 0
+    task_dir = ROOT / "examples/tasks" / args.task if not Path(args.task).is_dir() else Path(args.task)
+    task = load_pipeline_view(task_dir)
+    if args.candidate not in task.candidates:
+        ap.error(f"unknown candidate {args.candidate!r}; choose from {sorted(task.candidates)}")
+    p = Printer(args.interactive, sys.stdout.isatty() and not args.no_color)
+    show_inputs(p, task, args.candidate)
+    generated = None
+    if args.auto:
+        from vwe.interpret import generate_interpretations
+        from vwe.llm import LLMClient, MockProvider, build_client, load_llm_settings
+        cache = args.runs_root / "llm-cache"
+        if args.auto == "mock":
+            fixtures = ROOT / "tests/fixtures/llm/auto" / task.task_id
+            if not fixtures.is_dir():
+                ap.error(f"no mock fixtures for {task.task_id}; use --auto openai or handwritten mode")
+            clients = [LLMClient(MockProvider(fixture_dir=fixtures, family="mock"), "authored-fixture",
+                                 cache_dir=cache)]
+        else:
+            families = ("groq_gptoss", "groq_qwen") if args.auto == "groq" else ("openai",)
+            clients = [build_client(load_llm_settings(), f, cache_dir=cache, seed=0,
+                                    log_path=args.runs_root / "llm_log.jsonl") for f in families]
+        generated = generate_interpretations(task, clients, out_dir=args.runs_root / task.task_id / "interpret")
+    show_readings(p, task, "auto" if args.auto else "handwritten", generated)
+    report = verify(task_dir, args.candidate, load_config(args.config), "auto" if args.auto else "handwritten",
+                    runs_root=args.runs_root, generated=generated, on_step=on_step_factory(p))
+    print(f"\n  Full evidence: {report.folder / 'report.html'}\n")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,284 @@
+{
+  "task_id": "ex5_add32_ambiguous",
+  "candidate_id": "v2",
+  "decision": "UNDECIDED",
+  "evidence_class": "-",
+  "claim_target": "repair_correctness",
+  "reason": "ambiguous: interpretations disagree",
+  "conditional": "The recorded evidence does not establish a repair verdict on the declared profile.",
+  "witness": {
+    "inputs": {
+      "a": "4829467",
+      "b": "4290202505"
+    },
+    "p0_output": null,
+    "p1_output": {
+      "ret": "-1"
+    },
+    "replayed_natively": false,
+    "replay_results": []
+  },
+  "interpretation_set_sha256": "595fd63c0d1288e2a3149590a89f38c6cf0ed16d8dc3268fb01f7635b5161cc6",
+  "interpretations": [
+    {
+      "id": "ex5_add32_ambiguous.strict",
+      "nl_rendering": "Saturate overflow.",
+      "validation": "valid",
+      "outcome": "VIOLATED"
+    },
+    {
+      "id": "ex5_add32_ambiguous.permissive",
+      "nl_rendering": "Use saturation or an explicit out-of-band error; do not silently wrap.",
+      "validation": "valid",
+      "outcome": "PROVED"
+    },
+    {
+      "id": "ex5_add32_ambiguous.adversarial",
+      "nl_rendering": "Return the reserved -1 error code on overflow.",
+      "validation": "valid",
+      "outcome": "PROVED"
+    }
+  ],
+  "facts": {
+    "preserves_outside_B_max": "inconclusive",
+    "synthesis_ready": "inconclusive",
+    "interpretations_satisfied": [
+      "ex5_add32_ambiguous.adversarial",
+      "ex5_add32_ambiguous.permissive"
+    ],
+    "interpretations_violated": [
+      "ex5_add32_ambiguous.strict"
+    ],
+    "preservation_or_ext_outside_B_max": "PROVED"
+  },
+  "obligations": [
+    {
+      "name": "candidate safety on reference guard",
+      "outcome": "PROVED",
+      "note": "e0",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "reference on common keep region",
+      "outcome": "PROVED",
+      "note": "determinism",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "preservation or Ext outside scope union",
+      "outcome": "PROVED",
+      "note": "e1",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "scope agreement for ex5_add32_ambiguous.adversarial",
+      "outcome": "PROVED",
+      "note": "scope",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "scope agreement for ex5_add32_ambiguous.permissive",
+      "outcome": "PROVED",
+      "note": "scope",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "scope agreement for ex5_add32_ambiguous.strict",
+      "outcome": "PROVED",
+      "note": "scope",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "class keep reachability for ex5_add32_ambiguous.adversarial",
+      "outcome": "VIOLATED",
+      "note": "feasibility: main.assertion.1 VWE.feasibility.predicate",
+      "backends": {
+        "sat": "failure",
+        "z3": "failure"
+      },
+      "witness": {
+        "inputs": {
+          "a": "0",
+          "b": "0"
+        },
+        "p0_output": null,
+        "p1_output": null,
+        "replayed_natively": false
+      }
+    },
+    {
+      "name": "class path reachability for ex5_add32_ambiguous.adversarial",
+      "outcome": "PROVED",
+      "note": "all required regions reached after the call",
+      "backends": {
+        "sat": "failure",
+        "z3": "failure"
+      },
+      "witness": null
+    },
+    {
+      "name": "interpretation ex5_add32_ambiguous.adversarial",
+      "outcome": "PROVED",
+      "note": "class",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "class keep reachability for ex5_add32_ambiguous.permissive",
+      "outcome": "VIOLATED",
+      "note": "feasibility: main.assertion.1 VWE.feasibility.predicate",
+      "backends": {
+        "sat": "failure",
+        "z3": "failure"
+      },
+      "witness": {
+        "inputs": {
+          "a": "0",
+          "b": "0"
+        },
+        "p0_output": null,
+        "p1_output": null,
+        "replayed_natively": false
+      }
+    },
+    {
+      "name": "class path reachability for ex5_add32_ambiguous.permissive",
+      "outcome": "PROVED",
+      "note": "all required regions reached after the call",
+      "backends": {
+        "sat": "failure",
+        "z3": "failure"
+      },
+      "witness": null
+    },
+    {
+      "name": "interpretation ex5_add32_ambiguous.permissive",
+      "outcome": "PROVED",
+      "note": "class",
+      "backends": {
+        "sat": "success",
+        "z3": "success"
+      },
+      "witness": null
+    },
+    {
+      "name": "class keep reachability for ex5_add32_ambiguous.strict",
+      "outcome": "VIOLATED",
+      "note": "feasibility: main.assertion.1 VWE.feasibility.predicate",
+      "backends": {
+        "sat": "failure",
+        "z3": "failure"
+      },
+      "witness": {
+        "inputs": {
+          "a": "0",
+          "b": "0"
+        },
+        "p0_output": null,
+        "p1_output": null,
+        "replayed_natively": false
+      }
+    },
+    {
+      "name": "class path reachability for ex5_add32_ambiguous.strict",
+      "outcome": "PROVED",
+      "note": "all required regions reached after the call",
+      "backends": {
+        "sat": "failure",
+        "z3": "failure"
+      },
+      "witness": null
+    },
+    {
+      "name": "interpretation ex5_add32_ambiguous.strict",
+      "outcome": "VIOLATED",
+      "note": "class: main.assertion.2 VWE.class.clause.0",
+      "backends": {
+        "sat": "failure",
+        "z3": "failure"
+      },
+      "witness": {
+        "inputs": {
+          "a": "4829467",
+          "b": "4290202505"
+        },
+        "p0_output": null,
+        "p1_output": {
+          "ret": "-1"
+        },
+        "replayed_natively": false
+      }
+    }
+  ],
+  "scope": {
+    "K": 2,
+    "shape_min": {
+      "buffers": {},
+      "alias": "disjoint",
+      "bounds": {}
+    },
+    "shape_max": {
+      "buffers": {},
+      "alias": "disjoint",
+      "bounds": {}
+    },
+    "bounded_only": true,
+    "profiles": [
+      {
+        "buffers": {},
+        "alias": "disjoint",
+        "bounds": {}
+      }
+    ],
+    "reference_safe_guard": "!(false)",
+    "change_brackets": {
+      "B_min": "((a + b > UINT_MAX)) && ((a + b > UINT_MAX)) && ((a + b > UINT_MAX))",
+      "B_max": "((a + b > UINT_MAX)) || ((a + b > UINT_MAX)) || ((a + b > UINT_MAX)) || (a + b > UINT_MAX) || (a + b > UINT_MAX) || (a + b > UINT_MAX)"
+    },
+    "prepass": {
+      "samples": 4,
+      "seed": 0,
+      "requested_samples": 10000,
+      "seconds_budget": 1,
+      "stopped": "time budget"
+    },
+    "native_replay": [],
+    "native_acceptance": "not applicable",
+    "uninitialized_model": "CBMC experimental local checks"
+  },
+  "tools": {
+    "cbmc": "6.11.0 (cbmc-6.11.0)",
+    "z3": "Z3 version 5.4.1 - 64 bit - build hashcode 145c0c51570a357cc558ce898ce77573ba9d4fbf",
+    "esbmc": "unavailable"
+  },
+  "timing": {
+    "wall_seconds": 21.261265415996604
+  }
+}

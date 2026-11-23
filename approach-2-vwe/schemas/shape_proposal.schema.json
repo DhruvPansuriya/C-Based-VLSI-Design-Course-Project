@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/schemas/shape_proposal.schema.json",
+  "title": "ShapeProposal",
+  "description": "Informational buffer-size proposal from P0 signature and N; compared with the caller profile, never substituted for it.",
+  "type": "object",
+  "required": ["buffers", "rationale"],
+  "additionalProperties": false,
+  "properties": {
+    "buffers": {"type": "object", "additionalProperties": {"type": "string", "minLength": 1, "maxLength": 400}},
+    "rationale": {"type": "string", "maxLength": 2000}
+  }
+}

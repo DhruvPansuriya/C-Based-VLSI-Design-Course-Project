@@ -1,0 +1,98 @@
+{
+  "sha256": "db0d1aaecde52c9971b0544ab41f3ebec3e65ed00cd4b5f430005fcb1e7c07f1",
+  "reason": "",
+  "traps": [],
+  "uninitialized_local_pass": true,
+  "commands": [
+    {
+      "argv": [
+        "goto-cc",
+        "-std=c11",
+        "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/constructive/a0.c",
+        "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/constructive/a1.c",
+        "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/constructive/main.c",
+        "-o",
+        "raw.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/constructive/verification",
+      "returncode": 0,
+      "seconds": 0.15488829200330656,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--uninitialized-check",
+        "raw.goto",
+        "locals.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/constructive/verification",
+      "returncode": 0,
+      "seconds": 0.006554958003107458,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--add-library",
+        "--no-malloc-may-fail",
+        "locals.goto",
+        "linked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/constructive/verification",
+      "returncode": 0,
+      "seconds": 0.005802333995234221,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--list-goto-functions",
+        "linked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/constructive/verification",
+      "returncode": 0,
+      "seconds": 0.004925792003632523,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--remove-function-body-regex",
+        "^(_Exit|_exit|_longjmp|abort|exit|longjmp|quick_exit|siglongjmp)$",
+        "linked.goto",
+        "removed.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/constructive/verification",
+      "returncode": 0,
+      "seconds": 0.00555004199850373,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--generate-function-body",
+        "^(_Exit|_exit|_longjmp|abort|exit|longjmp|quick_exit|siglongjmp)$",
+        "--generate-function-body-options",
+        "assert-false-assume-false",
+        "removed.goto",
+        "checked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/constructive/verification",
+      "returncode": 0,
+      "seconds": 0.00531804098864086,
+      "error": ""
+    },
+    {
+      "argv": [
+        "goto-instrument",
+        "--show-goto-functions",
+        "checked.goto"
+      ],
+      "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/interpretations/checks/1/constructive/verification",
+      "returncode": 0,
+      "seconds": 0.004843250004341826,
+      "error": ""
+    }
+  ]
+}

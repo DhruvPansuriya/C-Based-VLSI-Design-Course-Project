@@ -1,0 +1,28 @@
+[
+  {
+    "argv": [
+      "cbmc",
+      "--bounds-check",
+      "--pointer-check",
+      "--div-by-zero-check",
+      "--signed-overflow-check",
+      "--undefined-shift-check",
+      "--pointer-primitive-check",
+      "--unwinding-assertions",
+      "--no-self-loops-to-assumptions",
+      "--no-malloc-may-fail",
+      "--c11",
+      "--preprocess",
+      "--verbosity",
+      "0",
+      "-D__SYNTHESIS__=1",
+      "unit.c"
+    ],
+    "cwd": "runs/demo-steps/ex1_saturate/v3/ed2be7e0a4814b15a4c3831dd3c471b7/admission/p1/views/synth",
+    "returncode": 0,
+    "stdout": "# 1 \"unit.c\"\n# 1 \"<built-in>\" 1\n# 1 \"<built-in>\" 3\n# 469 \"<built-in>\" 3\n# 1 \"<command line>\" 1\n# 1 \"<built-in>\" 2\n# 1 \"unit.c\" 2\n# 1 \"input.c\"\nunsigned char add8(unsigned char a, unsigned char b) { (void)a; (void)b; return 255u; }\n",
+    "stderr": "",
+    "seconds": 0.048822875003679655,
+    "error": ""
+  }
+]

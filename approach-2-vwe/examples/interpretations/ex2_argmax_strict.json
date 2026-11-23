@@ -1,0 +1,11 @@
+{
+  "id": "ex2.I1.strict.familyA",
+  "provenance": {"source": "llm", "model_family": "family-A", "prompt": "strict", "run_index": 0},
+  "request_type": "T1",
+  "shape": {"buffers": {"a": "n", "idx": "1"}, "alias": "disjoint", "bounds": {"n": [0, 4]}},
+  "clauses": [{"zone": "n == 0", "behaviour": "out_ret == INT_MIN && out_idx[0] == -1",
+               "nl_trace": "When the array is empty, return INT_MIN and set idx to -1"}],
+  "ext": "n == 0 ? (out_ret == INT_MIN && out_idx[0] == -1) : (out_ret == old_ret && out_idx[0] == old_idx[0])",
+  "reach": "n == 0",
+  "nl_rendering": "For an empty array return INT_MIN and idx = -1; for non-empty arrays behave exactly as before."
+}

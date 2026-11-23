@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/DhruvPansuriya/C-Based-VLSI-Design-Course-Project/schemas/verdict_report.schema.json",
+  "title": "VerdictReport",
+  "type": "object",
+  "required": ["task_id", "decision", "evidence_class", "conditional", "interpretation_set_sha256", "facts", "obligations", "scope", "tools", "timing"],
+  "additionalProperties": false,
+  "properties": {
+    "task_id": {"type": "string"},
+    "candidate_id": {"type": "string"},
+    "decision": {"enum": ["ACCEPT", "REJECT", "UNDECIDED"]},
+    "evidence_class": {"enum": ["E0", "E1", "E2", "E3", "-"]},
+    "reason": {"type": "string"},
+    "claim_target": {"enum": ["repair_correctness", "admission_policy", "build_view_consistency", "none"]},
+    "interpretations": {"type": "array", "items": {"type": "object"}},
+    "conditional": {"type": "string", "description": "printed hypothesis under which the verdict is correct"},
+    "witness": {
+      "type": ["object", "null"],
+      "properties": {
+        "inputs": {"type": "object"},
+        "p0_output": {},
+        "p1_output": {},
+        "replayed_natively": {"type": "boolean"}
+      }
+    },
+    "interpretation_mode": {"enum": ["handwritten", "auto"]},
+    "interpretation_set_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "facts": {
+      "type": "object",
+      "description": "interpretation-free facts (partitioned report)",
+      "properties": {
+        "preserves_outside_B_max": {"enum": ["proved", "refuted", "inconclusive"]},
+        "synthesis_ready": {"enum": ["proved", "refuted", "inconclusive"]},
+        "difference_witnesses": {"type": "array"},
+        "interpretations_satisfied": {"type": "array", "items": {"type": "string"}},
+        "interpretations_violated": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "obligations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "outcome", "backends"],
+        "properties": {
+          "name": {"type": "string"},
+          "outcome": {"enum": ["PROVED", "VIOLATED", "INCONCLUSIVE"]},
+          "backends": {"type": "object", "additionalProperties": {"enum": ["success", "failure", "error", "timeout", "skipped"]}},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "required": ["K", "shape_min", "shape_max"],
+      "properties": {
+        "K": {"type": "integer"},
+        "shape_min": {"type": "object"},
+        "shape_max": {"type": "object"},
+        "uncertain_region_estimate": {"type": "number"},
+        "bounded_only": {"type": "boolean"}
+      }
+    },
+    "tools": {"type": "object", "additionalProperties": {"type": "string"}},
+    "timing": {"type": "object", "additionalProperties": {"type": "number"}}
+  }
+}

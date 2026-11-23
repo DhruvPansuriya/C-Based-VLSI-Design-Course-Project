@@ -1,0 +1,14 @@
+{
+  "label": "Abort path-cut defence",
+  "decision": "DEMONSTRATED",
+  "evidence_class": "-",
+  "match": true,
+  "seconds": 0.2915329159950488,
+  "reason": "Unprotected SUCCESS; audited SAT/Z3 trap caught the path cut",
+  "report": "/Users/dhruvrpansuriya/Documents/IITG Acad/Sem 7/C-based VLSI Design/Project/c-based-vlsi-design-course-project/runs/demo/adbb260a5ae64070921f1116938ebc22/path_cut/report.html",
+  "unprotected": "success",
+  "protected": {
+    "sat": true,
+    "z3": true
+  }
+}
