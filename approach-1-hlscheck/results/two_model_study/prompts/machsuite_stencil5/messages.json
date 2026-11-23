@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+  },
+  {
+    "role": "user",
+    "content": "Quickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\n/* MachSuite-derived; copyright/license and adaptations documented in README.md. */\n#include <stdint.h>\n\nvoid kernel(uint32_t orig[25], uint32_t sol[25], uint32_t filter[9]) {\n    for (int r = 0; r < 3; r++) {\n        for (int c = 0; c < 3; c++) {\n            uint32_t temp = 0u;\n            for (int k1 = 0; k1 < 3; k1++) {\n                for (int k2 = 0; k2 < 3; k2++) {\n                    temp += filter[k1 * 3 + k2] * orig[(r + k1) * 5 + c + k2];\n                }\n            }\n            sol[r * 5 + c] = temp;\n        }\n    }\n}\n```\n"
+  }
+]

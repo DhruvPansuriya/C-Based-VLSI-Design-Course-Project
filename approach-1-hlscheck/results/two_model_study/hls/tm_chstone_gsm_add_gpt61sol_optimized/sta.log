@@ -1,0 +1,49 @@
+OpenSTA 2.0.18 41f678fb6a Copyright (c) 2019, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Startpoint: a[1] (input port clocked by core_clock)
+Endpoint: return_port[0] (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+      Delay        Time   Description
+-----------------------------------------------------------------
+   0.000000    0.000000   clock core_clock (rise edge)
+   0.000000    0.000000   clock network delay (ideal)
+   0.000000    0.000000 v input external delay
+   0.000000    0.000000 v a[1] (in)
+   0.063418    0.063418 ^ _106_/ZN (XNOR2_X1)
+   0.031179    0.094597 v _107_/ZN (OAI21_X1)
+   0.049270    0.143867 ^ _108_/ZN (AOI21_X1)
+   0.027543    0.171410 v _110_/ZN (OAI21_X1)
+   0.049270    0.220680 ^ _111_/ZN (AOI21_X1)
+   0.027543    0.248223 v _113_/ZN (OAI21_X1)
+   0.059885    0.308108 ^ _114_/ZN (AOI21_X1)
+   0.026847    0.334955 v _116_/ZN (AOI211_X1)
+   0.053776    0.388731 ^ _117_/ZN (OAI21_X1)
+   0.027073    0.415804 v _118_/ZN (AOI21_X1)
+   0.052449    0.468253 ^ _119_/ZN (OAI21_X1)
+   0.027073    0.495326 v _120_/ZN (AOI21_X1)
+   0.052103    0.547430 ^ _121_/ZN (OAI21_X1)
+   0.032869    0.580299 v _124_/ZN (AOI21_X1)
+   0.297321    0.877620 ^ _126_/ZN (NOR3_X1)
+   0.050473    0.928093 v _130_/ZN (AOI21_X1)
+   0.000002    0.928095 v return_port[0] (out)
+               0.928095   data arrival time
+
+  10.000000   10.000000   clock core_clock (rise edge)
+   0.000000   10.000000   clock network delay (ideal)
+   0.000000   10.000000   clock reconvergence pessimism
+   0.000000   10.000000   output external delay
+              10.000000   data required time
+-----------------------------------------------------------------
+              10.000000   data required time
+              -0.928095   data arrival time
+-----------------------------------------------------------------
+               9.071905   slack (MET)
+
+
+worst slack 9.071905

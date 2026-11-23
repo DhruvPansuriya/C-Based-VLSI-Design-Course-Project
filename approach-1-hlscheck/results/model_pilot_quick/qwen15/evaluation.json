@@ -1,0 +1,14 @@
+{
+  "id": "qwen15",
+  "label": "Qwen2.5-Coder-1.5B",
+  "organization": "Qwen / Alibaba",
+  "candidate_sha256": "6bc5bf3974c52a42e1e15ae7d9d5031c3feae4912440bc42eb9238cbdf0eac73",
+  "messages_sha256": "36f7b1c39b23bb166d4ea2355226c217f8d83e06edaca3f5daa7b15b28dba6f7",
+  "generation_seconds": 0.892,
+  "finish_reason": "stop",
+  "syntax_compiles": true,
+  "status": "unsupported",
+  "verification_seconds": 0.229811,
+  "reason": "Calls/recursion require explicit function models",
+  "ast_unchanged": false
+}

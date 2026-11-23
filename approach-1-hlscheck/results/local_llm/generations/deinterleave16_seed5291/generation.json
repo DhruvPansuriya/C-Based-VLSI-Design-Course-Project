@@ -1,0 +1,38 @@
+{
+  "id": "deinterleave16_seed5291",
+  "case": "deinterleave16",
+  "source": "benchmarks\\expanded\\deinterleave16_original.c",
+  "source_sha256": "a45e28b99abffd43c8eca90b75bf3a978c7fa832ab85ced146c8f94b7afb13f1",
+  "request_sha256": "e2288942b6f21c69d44efd84064890ba929069c6e5041d8347fde7c4c9a6a5d4",
+  "raw_response_sha256": "da45312d99eb7ce5efb3497c4406db74f902278e91005f910838cc3683d4d800",
+  "candidate_sha256": "d88c4d79e05723f27bdef21add9321f22d4befa3a954b3a129fa118221849bf9",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 98,
+    "prompt_tokens": 287,
+    "total_tokens": 385,
+    "prompt_tokens_details": {
+      "cached_tokens": 212
+    }
+  },
+  "timings": {
+    "cache_n": 212,
+    "prompt_n": 75,
+    "prompt_ms": 42.006,
+    "prompt_per_token_ms": 0.56008,
+    "prompt_per_second": 1785.4592201114126,
+    "predicted_n": 98,
+    "predicted_ms": 770.52,
+    "predicted_per_token_ms": 7.943505154639175,
+    "predicted_per_second": 125.88901001920782
+  },
+  "elapsed_seconds": 0.833,
+  "extraction": "largest fenced code block; no semantic edits",
+  "model_repository": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+  "model_revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+  "model_sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+  "runtime_release": "b12619",
+  "origin": "Actual independently generated local-model optimization attempt; not an injected mutation",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0
+}

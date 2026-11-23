@@ -1,0 +1,11 @@
+--- original.c
++++ candidate.c
+@@ -9,7 +9,7 @@
+             for(int k=0;k<4;k++) {
+                 uint32_t value=m1[i*4+k];
+                 s0+=value*m2[k*4+j];
+-                s1+=value*m2[k*4+j+1];
++                s1+=value*m2[k*4+j];
+             }
+             prod[i*4+j]=s0;
+             prod[i*4+j+1]=s1;

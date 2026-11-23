@@ -1,0 +1,38 @@
+{
+  "id": "absdiff16_seed5291",
+  "case": "absdiff16",
+  "source": "benchmarks\\expanded\\absdiff16_original.c",
+  "source_sha256": "4fb2285ef52ac7db6a24b12d781463f465ed133b75417305c6e0cf67b272ba28",
+  "request_sha256": "a0ecba2725d4a9d8d4140338c595d464d0fb537644af1394a15186f24cd879ac",
+  "raw_response_sha256": "5565f28c6623249d584ea9002222f23711a50c20707f2d86bfb3f0dd9ff12e6e",
+  "candidate_sha256": "e0be6c782bcc238682fd8101dd92b9b0bdc6b0ba6239a79dc910aaec252a6281",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 86,
+    "prompt_tokens": 283,
+    "total_tokens": 369,
+    "prompt_tokens_details": {
+      "cached_tokens": 212
+    }
+  },
+  "timings": {
+    "cache_n": 212,
+    "prompt_n": 71,
+    "prompt_ms": 39.558,
+    "prompt_per_token_ms": 0.5571549295774648,
+    "prompt_per_second": 1794.8329035846098,
+    "predicted_n": 86,
+    "predicted_ms": 713.82,
+    "predicted_per_token_ms": 8.397882352941178,
+    "predicted_per_second": 119.07763862038047
+  },
+  "elapsed_seconds": 0.764,
+  "extraction": "largest fenced code block; no semantic edits",
+  "model_repository": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+  "model_revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+  "model_sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+  "runtime_release": "b12619",
+  "origin": "Actual independently generated local-model optimization attempt; not an injected mutation",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0
+}

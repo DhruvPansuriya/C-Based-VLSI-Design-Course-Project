@@ -1,0 +1,539 @@
+ESBMC version 8.7.0 64-bit x86_64 windows
+
+Target: 32-bit little-endian i386-unknown-win32 with esbmclibc
+Parsing C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.206s
+GOTO program processing time: 0.004s
+Starting Bounded Model Checking
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+Symex completed in: 0.021s (394 assignments)
+Caching time: 0.000s (removed 0 assertions)
+Slicing time: 0.001s (removed 346 assignments)
+Generated 417 VCC(s), 1 remaining after simplification (48 assignments)
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'EQUIV:observables at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c line 207 column 1 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.003s
+Generating JSON report for trace: base-k256-0
+
+[Counterexample]
+
+
+State 1 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c line 151 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_left_1 = { 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 2 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c line 151 column 1 function main thread 0
+----------------------------------------------------
+  __hlscheck_right_1 = { 0, 0, 0, 0, 0, 0, 0, 0, 0 }
+
+State 3 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c line 85 column 3 function __hlscheck_summary thread 0
+----------------------------------------------------
+  out[0] = 3 (00000000 00000000 00000000 00000011)
+
+State 4 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c line 86 column 3 function __hlscheck_summary thread 0
+----------------------------------------------------
+  out[1] = 4 (00000000 00000000 00000000 00000100)
+
+State 5 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c line 87 column 3 function __hlscheck_summary thread 0
+----------------------------------------------------
+  out[2] = 2 (00000000 00000000 00000000 00000010)
+
+State 6 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c line 88 column 3 function __hlscheck_summary thread 0
+----------------------------------------------------
+  out[3] = 2 (00000000 00000000 00000000 00000010)
+
+State 7 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c line 89 column 3 function __hlscheck_summary thread 0
+----------------------------------------------------
+  out[4] = 4 (00000000 00000000 00000000 00000100)
+
+State 8 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c line 90 column 3 function __hlscheck_summary thread 0
+----------------------------------------------------
+  out[5] = 2 (00000000 00000000 00000000 00000010)
+
+State 9 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c line 91 column 3 function __hlscheck_summary thread 0
+----------------------------------------------------
+  out[6] = 1 (00000000 00000000 00000000 00000001)
+
+State 10 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c line 92 column 3 function __hlscheck_summary thread 0
+----------------------------------------------------
+  out[7] = 2 (00000000 00000000 00000000 00000010)
+
+State 11 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c line 93 column 3 function __hlscheck_summary thread 0
+----------------------------------------------------
+  out[8] = 1 (00000000 00000000 00000000 00000001)
+
+State 12 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c line 18 column 3 function __hlscheck_candidate thread 0
+----------------------------------------------------
+  out[0] = 2 (00000000 00000000 00000000 00000010)
+
+State 13 file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c line 207 column 1 function main thread 0
+----------------------------------------------------
+Violated property:
+  file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c line 207 column 1 function main
+  EQUIV:observables
+  __hlscheck_left_0[0] == __hlscheck_right_0[0] && __hlscheck_left_0[1] == __hlscheck_right_0[1] && __hlscheck_left_0[2] == __hlscheck_right_0[2] && __hlscheck_left_0[3] == __hlscheck_right_0[3] && __hlscheck_left_0[4] == __hlscheck_right_0[4] && __hlscheck_left_0[5] == __hlscheck_right_0[5] && __hlscheck_left_0[6] == __hlscheck_right_0[6] && __hlscheck_left_0[7] == __hlscheck_right_0[7] && __hlscheck_left_0[8] == __hlscheck_right_0[8] && __hlscheck_left_0[9] == __hlscheck_right_0[9] && __hlscheck_left_0[10] == __hlscheck_right_0[10] && __hlscheck_left_0[11] == __hlscheck_right_0[11] && __hlscheck_left_0[12] == __hlscheck_right_0[12] && __hlscheck_left_0[13] == __hlscheck_right_0[13] && __hlscheck_left_0[14] == __hlscheck_right_0[14] && __hlscheck_left_0[15] == __hlscheck_right_0[15] && __hlscheck_left_0[16] == __hlscheck_right_0[16] && __hlscheck_left_0[17] == __hlscheck_right_0[17] && __hlscheck_left_0[18] == __hlscheck_right_0[18] && __hlscheck_left_0[19] == __hlscheck_right_0[19] && __hlscheck_left_0[20] == __hlscheck_right_0[20] && __hlscheck_left_0[21] == __hlscheck_right_0[21] && __hlscheck_left_0[22] == __hlscheck_right_0[22] && __hlscheck_left_0[23] == __hlscheck_right_0[23] && __hlscheck_left_0[24] == __hlscheck_right_0[24] && __hlscheck_left_1[0] == __hlscheck_right_1[0] && __hlscheck_left_1[1] == __hlscheck_right_1[1] && __hlscheck_left_1[2] == __hlscheck_right_1[2] && __hlscheck_left_1[3] == __hlscheck_right_1[3] && __hlscheck_left_1[4] == __hlscheck_right_1[4] && __hlscheck_left_1[5] == __hlscheck_right_1[5] && __hlscheck_left_1[6] == __hlscheck_right_1[6] && __hlscheck_left_1[7] == __hlscheck_right_1[7] && __hlscheck_left_1[8] == __hlscheck_right_1[8]
+
+BMC program time: 0.050s
+
+** Results:
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c, function __hlscheck_candidate
+  PASSED       [__hlscheck_candidate.assertion.1]               line  18  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.1]   line  18  dereference failure: array bounds violated
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c, function __hlscheck_summary
+  PASSED       [__hlscheck_summary.assertion.1]                 line  25  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.1]     line  25  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.2]                 line  26  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.2]     line  26  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.3]                 line  27  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.3]     line  27  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.4]                 line  28  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.4]     line  28  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.5]                 line  29  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.5]     line  29  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.6]                 line  30  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.6]     line  30  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.7]                 line  31  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.7]     line  31  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.8]                 line  32  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.8]     line  32  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.9]                 line  33  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.9]     line  33  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.10]                line  34  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.10]    line  34  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.11]                line  35  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.11]    line  35  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.12]                line  36  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.12]    line  36  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.13]                line  37  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.13]    line  37  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.14]                line  38  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.14]    line  38  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.15]                line  39  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.15]    line  39  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.16]                line  40  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.16]    line  40  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.17]                line  41  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.17]    line  41  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.18]                line  42  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.18]    line  42  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.19]                line  43  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.19]    line  43  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.20]                line  44  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.20]    line  44  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.21]                line  45  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.21]    line  45  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.22]                line  46  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.22]    line  46  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.23]                line  47  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.23]    line  47  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.24]                line  48  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.24]    line  48  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.25]                line  49  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.25]    line  49  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.26]                line  51  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.26]    line  51  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.27]                line  52  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.27]    line  52  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.28]                line  53  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.28]    line  53  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.29]                line  54  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.29]    line  54  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.30]                line  55  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.30]    line  55  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.31]                line  56  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.31]    line  56  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.32]                line  57  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.32]    line  57  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.33]                line  58  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.33]    line  58  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.34]                line  59  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.34]    line  59  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.assertion.35]                line  60  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.35]    line  60  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.1]    line  60  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.36]                line  61  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.36]    line  61  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.2]    line  61  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.37]                line  62  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.37]    line  62  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.3]    line  62  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.38]                line  63  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.38]    line  63  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.4]    line  63  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.39]                line  64  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.39]    line  64  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.5]    line  64  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.40]                line  65  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.40]    line  65  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.6]    line  65  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.41]                line  66  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.41]    line  66  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.7]    line  66  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.42]                line  67  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.42]    line  67  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.8]    line  67  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.43]                line  68  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.43]    line  68  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.9]    line  68  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.44]                line  69  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.44]    line  69  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.10]   line  69  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.45]                line  70  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.45]    line  70  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.11]   line  70  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.46]                line  71  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.46]    line  71  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.12]   line  71  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.47]                line  72  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.47]    line  72  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.13]   line  72  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.48]                line  73  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.48]    line  73  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.14]   line  73  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.49]                line  74  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.49]    line  74  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.15]   line  74  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.50]                line  75  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.50]    line  75  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.16]   line  75  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.51]                line  76  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.51]    line  76  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.17]   line  76  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.52]                line  77  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.52]    line  77  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.18]   line  77  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.53]                line  78  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.53]    line  78  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.19]   line  78  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.54]                line  79  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.54]    line  79  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.20]   line  79  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.55]                line  80  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.55]    line  80  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.21]   line  80  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.56]                line  81  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.56]    line  81  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.22]   line  81  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.57]                line  82  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.57]    line  82  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.23]   line  82  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.58]                line  83  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.58]    line  83  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.24]   line  83  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.59]                line  84  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.59]    line  84  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.25]   line  84  use of uninitialized variable: __summary_input_0
+  PASSED       [__hlscheck_summary.assertion.60]                line  85  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.60]    line  85  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.26]   line  85  use of uninitialized variable: __summary_input_0 [1[0]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.27]   line  85  use of uninitialized variable: __summary_input_0 [1[10]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.28]   line  85  use of uninitialized variable: __summary_input_0 [1[12]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.29]   line  85  use of uninitialized variable: __summary_input_0 [1[2]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.30]   line  85  use of uninitialized variable: __summary_input_0 [1[1]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.31]   line  85  use of uninitialized variable: __summary_input_0 [1[11]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.32]   line  85  use of uninitialized variable: __summary_input_0 [1[5]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.33]   line  85  use of uninitialized variable: __summary_input_0 [1[7]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.34]   line  85  use of uninitialized variable: __summary_input_0 [1[6]]
+  PASSED       [__hlscheck_summary.assertion.61]                line  86  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.61]    line  86  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.35]   line  86  use of uninitialized variable: __summary_input_0 [1[1]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.36]   line  86  use of uninitialized variable: __summary_input_0 [1[11]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.37]   line  86  use of uninitialized variable: __summary_input_0 [1[13]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.38]   line  86  use of uninitialized variable: __summary_input_0 [1[3]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.39]   line  86  use of uninitialized variable: __summary_input_0 [1[12]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.40]   line  86  use of uninitialized variable: __summary_input_0 [1[2]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.41]   line  86  use of uninitialized variable: __summary_input_0 [1[6]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.42]   line  86  use of uninitialized variable: __summary_input_0 [1[8]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.43]   line  86  use of uninitialized variable: __summary_input_0 [1[7]]
+  PASSED       [__hlscheck_summary.assertion.62]                line  87  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.62]    line  87  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.44]   line  87  use of uninitialized variable: __summary_input_0 [1[12]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.45]   line  87  use of uninitialized variable: __summary_input_0 [1[14]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.46]   line  87  use of uninitialized variable: __summary_input_0 [1[2]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.47]   line  87  use of uninitialized variable: __summary_input_0 [1[4]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.48]   line  87  use of uninitialized variable: __summary_input_0 [1[13]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.49]   line  87  use of uninitialized variable: __summary_input_0 [1[3]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.50]   line  87  use of uninitialized variable: __summary_input_0 [1[7]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.51]   line  87  use of uninitialized variable: __summary_input_0 [1[9]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.52]   line  87  use of uninitialized variable: __summary_input_0 [1[8]]
+  PASSED       [__hlscheck_summary.assertion.63]                line  88  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.63]    line  88  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.53]   line  88  use of uninitialized variable: __summary_input_0 [1[15]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.54]   line  88  use of uninitialized variable: __summary_input_0 [1[17]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.55]   line  88  use of uninitialized variable: __summary_input_0 [1[5]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.56]   line  88  use of uninitialized variable: __summary_input_0 [1[7]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.57]   line  88  use of uninitialized variable: __summary_input_0 [1[10]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.58]   line  88  use of uninitialized variable: __summary_input_0 [1[12]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.59]   line  88  use of uninitialized variable: __summary_input_0 [1[16]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.60]   line  88  use of uninitialized variable: __summary_input_0 [1[6]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.61]   line  88  use of uninitialized variable: __summary_input_0 [1[11]]
+  PASSED       [__hlscheck_summary.assertion.64]                line  89  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.64]    line  89  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.62]   line  89  use of uninitialized variable: __summary_input_0 [1[16]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.63]   line  89  use of uninitialized variable: __summary_input_0 [1[18]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.64]   line  89  use of uninitialized variable: __summary_input_0 [1[6]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.65]   line  89  use of uninitialized variable: __summary_input_0 [1[8]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.66]   line  89  use of uninitialized variable: __summary_input_0 [1[11]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.67]   line  89  use of uninitialized variable: __summary_input_0 [1[13]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.68]   line  89  use of uninitialized variable: __summary_input_0 [1[17]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.69]   line  89  use of uninitialized variable: __summary_input_0 [1[7]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.70]   line  89  use of uninitialized variable: __summary_input_0 [1[12]]
+  PASSED       [__hlscheck_summary.assertion.65]                line  90  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.65]    line  90  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.71]   line  90  use of uninitialized variable: __summary_input_0 [1[17]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.72]   line  90  use of uninitialized variable: __summary_input_0 [1[19]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.73]   line  90  use of uninitialized variable: __summary_input_0 [1[7]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.74]   line  90  use of uninitialized variable: __summary_input_0 [1[9]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.75]   line  90  use of uninitialized variable: __summary_input_0 [1[12]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.76]   line  90  use of uninitialized variable: __summary_input_0 [1[14]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.77]   line  90  use of uninitialized variable: __summary_input_0 [1[18]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.78]   line  90  use of uninitialized variable: __summary_input_0 [1[8]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.79]   line  90  use of uninitialized variable: __summary_input_0 [1[13]]
+  PASSED       [__hlscheck_summary.assertion.66]                line  91  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.66]    line  91  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.80]   line  91  use of uninitialized variable: __summary_input_0 [1[10]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.81]   line  91  use of uninitialized variable: __summary_input_0 [1[12]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.82]   line  91  use of uninitialized variable: __summary_input_0 [1[20]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.83]   line  91  use of uninitialized variable: __summary_input_0 [1[22]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.84]   line  91  use of uninitialized variable: __summary_input_0 [1[11]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.85]   line  91  use of uninitialized variable: __summary_input_0 [1[15]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.86]   line  91  use of uninitialized variable: __summary_input_0 [1[17]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.87]   line  91  use of uninitialized variable: __summary_input_0 [1[21]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.88]   line  91  use of uninitialized variable: __summary_input_0 [1[16]]
+  PASSED       [__hlscheck_summary.assertion.67]                line  92  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.67]    line  92  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.89]   line  92  use of uninitialized variable: __summary_input_0 [1[11]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.90]   line  92  use of uninitialized variable: __summary_input_0 [1[13]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.91]   line  92  use of uninitialized variable: __summary_input_0 [1[21]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.92]   line  92  use of uninitialized variable: __summary_input_0 [1[23]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.93]   line  92  use of uninitialized variable: __summary_input_0 [1[12]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.94]   line  92  use of uninitialized variable: __summary_input_0 [1[16]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.95]   line  92  use of uninitialized variable: __summary_input_0 [1[18]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.96]   line  92  use of uninitialized variable: __summary_input_0 [1[22]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.97]   line  92  use of uninitialized variable: __summary_input_0 [1[17]]
+  PASSED       [__hlscheck_summary.assertion.68]                line  93  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_summary.array-bounds-violated.68]    line  93  dereference failure: array bounds violated
+  PASSED       [__hlscheck_summary.uninitialised-variable.98]   line  93  use of uninitialized variable: __summary_input_0 [1[12]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.99]   line  93  use of uninitialized variable: __summary_input_0 [1[14]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.100]  line  93  use of uninitialized variable: __summary_input_0 [1[22]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.101]  line  93  use of uninitialized variable: __summary_input_0 [1[24]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.102]  line  93  use of uninitialized variable: __summary_input_0 [1[13]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.103]  line  93  use of uninitialized variable: __summary_input_0 [1[17]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.104]  line  93  use of uninitialized variable: __summary_input_0 [1[19]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.105]  line  93  use of uninitialized variable: __summary_input_0 [1[23]]
+  PASSED       [__hlscheck_summary.uninitialised-variable.106]  line  93  use of uninitialized variable: __summary_input_0 [1[18]]
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\hybrid\study\main_gaussian5_buggy\proof\residual_1\miter.c, function main
+  PASSED       [main.uninitialised-variable.1]                  line 100  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.2]                  line 101  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.3]                  line 102  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.4]                  line 103  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.5]                  line 104  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.6]                  line 105  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.7]                  line 106  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.8]                  line 107  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.9]                  line 108  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.10]                 line 109  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.11]                 line 110  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.12]                 line 111  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.13]                 line 112  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.14]                 line 113  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.15]                 line 114  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.16]                 line 115  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.17]                 line 116  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.18]                 line 117  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.19]                 line 118  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.20]                 line 119  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.21]                 line 120  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.22]                 line 121  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.23]                 line 122  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.24]                 line 123  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.25]                 line 124  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.26]                 line 125  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.27]                 line 126  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.28]                 line 127  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.29]                 line 128  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.30]                 line 129  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.31]                 line 130  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.32]                 line 131  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.33]                 line 132  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.34]                 line 133  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.35]                 line 134  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.36]                 line 135  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.37]                 line 136  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.38]                 line 137  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.39]                 line 138  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.40]                 line 139  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.41]                 line 140  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.42]                 line 141  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.43]                 line 142  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.44]                 line 143  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.45]                 line 144  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.46]                 line 145  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.47]                 line 146  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.48]                 line 147  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.49]                 line 148  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.50]                 line 149  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.51]                 line 152  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.52]                 line 153  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.53]                 line 154  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.54]                 line 155  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.55]                 line 156  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.56]                 line 157  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.57]                 line 158  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.58]                 line 159  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.59]                 line 160  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.60]                 line 161  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.61]                 line 162  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.62]                 line 163  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.63]                 line 164  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.64]                 line 165  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.65]                 line 166  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.66]                 line 167  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.67]                 line 168  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.68]                 line 169  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.69]                 line 171  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.70]                 line 172  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.71]                 line 173  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.72]                 line 174  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.73]                 line 175  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.74]                 line 176  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.75]                 line 177  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.76]                 line 178  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.77]                 line 179  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.78]                 line 180  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.79]                 line 181  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.80]                 line 182  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.81]                 line 183  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.82]                 line 184  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.83]                 line 185  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.84]                 line 186  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.85]                 line 187  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.86]                 line 188  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.87]                 line 189  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.88]                 line 190  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.89]                 line 191  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.90]                 line 192  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.91]                 line 193  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.92]                 line 194  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.93]                 line 195  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.94]                 line 196  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.95]                 line 197  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.96]                 line 198  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.97]                 line 199  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.98]                 line 200  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.99]                 line 201  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.100]                line 202  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.101]                line 203  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.102]                line 204  use of uninitialized variable: __hlscheck_left_1
+  FAILED       [main.assertion.1]                               line 207  EQUIV:observables
+  PASSED       [main.uninitialised-variable.103]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[0]]
+  PASSED       [main.uninitialised-variable.104]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[1]]
+  PASSED       [main.uninitialised-variable.105]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[2]]
+  PASSED       [main.uninitialised-variable.106]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[3]]
+  PASSED       [main.uninitialised-variable.107]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[4]]
+  PASSED       [main.uninitialised-variable.108]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[5]]
+  PASSED       [main.uninitialised-variable.109]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[6]]
+  PASSED       [main.uninitialised-variable.110]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[7]]
+  PASSED       [main.uninitialised-variable.111]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[8]]
+  PASSED       [main.uninitialised-variable.112]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[9]]
+  PASSED       [main.uninitialised-variable.113]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[10]]
+  PASSED       [main.uninitialised-variable.114]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[11]]
+  PASSED       [main.uninitialised-variable.115]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[12]]
+  PASSED       [main.uninitialised-variable.116]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[13]]
+  PASSED       [main.uninitialised-variable.117]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[14]]
+  PASSED       [main.uninitialised-variable.118]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[15]]
+  PASSED       [main.uninitialised-variable.119]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[16]]
+  PASSED       [main.uninitialised-variable.120]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[17]]
+  PASSED       [main.uninitialised-variable.121]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[18]]
+  PASSED       [main.uninitialised-variable.122]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[19]]
+  PASSED       [main.uninitialised-variable.123]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[20]]
+  PASSED       [main.uninitialised-variable.124]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[21]]
+  PASSED       [main.uninitialised-variable.125]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[22]]
+  PASSED       [main.uninitialised-variable.126]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[23]]
+  PASSED       [main.uninitialised-variable.127]                line 207  use of uninitialized variable: __hlscheck_left_0 [2[24]]
+  PASSED       [main.uninitialised-variable.128]                line 207  use of uninitialized variable: __hlscheck_left_1 [5[0]]
+  PASSED       [main.uninitialised-variable.129]                line 207  use of uninitialized variable: __hlscheck_left_1 [5[1]]
+  PASSED       [main.uninitialised-variable.130]                line 207  use of uninitialized variable: __hlscheck_left_1 [5[2]]
+  PASSED       [main.uninitialised-variable.131]                line 207  use of uninitialized variable: __hlscheck_left_1 [5[3]]
+  PASSED       [main.uninitialised-variable.132]                line 207  use of uninitialized variable: __hlscheck_left_1 [5[4]]
+  PASSED       [main.uninitialised-variable.133]                line 207  use of uninitialized variable: __hlscheck_left_1 [5[5]]
+  PASSED       [main.uninitialised-variable.134]                line 207  use of uninitialized variable: __hlscheck_left_1 [5[6]]
+  PASSED       [main.uninitialised-variable.135]                line 207  use of uninitialized variable: __hlscheck_left_1 [5[7]]
+  PASSED       [main.uninitialised-variable.136]                line 207  use of uninitialized variable: __hlscheck_left_1 [5[8]]
+  PASSED       [main.uninitialised-variable.137]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[0]]
+  PASSED       [main.uninitialised-variable.138]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[1]]
+  PASSED       [main.uninitialised-variable.139]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[2]]
+  PASSED       [main.uninitialised-variable.140]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[3]]
+  PASSED       [main.uninitialised-variable.141]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[4]]
+  PASSED       [main.uninitialised-variable.142]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[5]]
+  PASSED       [main.uninitialised-variable.143]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[6]]
+  PASSED       [main.uninitialised-variable.144]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[7]]
+  PASSED       [main.uninitialised-variable.145]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[8]]
+  PASSED       [main.uninitialised-variable.146]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[9]]
+  PASSED       [main.uninitialised-variable.147]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[10]]
+  PASSED       [main.uninitialised-variable.148]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[11]]
+  PASSED       [main.uninitialised-variable.149]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[12]]
+  PASSED       [main.uninitialised-variable.150]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[13]]
+  PASSED       [main.uninitialised-variable.151]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[14]]
+  PASSED       [main.uninitialised-variable.152]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[15]]
+  PASSED       [main.uninitialised-variable.153]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[16]]
+  PASSED       [main.uninitialised-variable.154]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[17]]
+  PASSED       [main.uninitialised-variable.155]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[18]]
+  PASSED       [main.uninitialised-variable.156]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[19]]
+  PASSED       [main.uninitialised-variable.157]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[20]]
+  PASSED       [main.uninitialised-variable.158]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[21]]
+  PASSED       [main.uninitialised-variable.159]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[22]]
+  PASSED       [main.uninitialised-variable.160]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[23]]
+  PASSED       [main.uninitialised-variable.161]                line 207  use of uninitialized variable: __hlscheck_right_0 [3[24]]
+  PASSED       [main.uninitialised-variable.162]                line 207  use of uninitialized variable: __hlscheck_right_1 [6[0]]
+  PASSED       [main.uninitialised-variable.163]                line 207  use of uninitialized variable: __hlscheck_right_1 [6[1]]
+  PASSED       [main.uninitialised-variable.164]                line 207  use of uninitialized variable: __hlscheck_right_1 [6[2]]
+  PASSED       [main.uninitialised-variable.165]                line 207  use of uninitialized variable: __hlscheck_right_1 [6[3]]
+  PASSED       [main.uninitialised-variable.166]                line 207  use of uninitialized variable: __hlscheck_right_1 [6[4]]
+  PASSED       [main.uninitialised-variable.167]                line 207  use of uninitialized variable: __hlscheck_right_1 [6[5]]
+  PASSED       [main.uninitialised-variable.168]                line 207  use of uninitialized variable: __hlscheck_right_1 [6[6]]
+  PASSED       [main.uninitialised-variable.169]                line 207  use of uninitialized variable: __hlscheck_right_1 [6[7]]
+  PASSED       [main.uninitialised-variable.170]                line 207  use of uninitialized variable: __hlscheck_right_1 [6[8]]
+
+** 1 of 415 properties failed, 414 passed
+Solver: Z3 v4.13.3 â€¢ Decision procedure total time: 0.004s â€¢ Avg: 0.000s/property
+
+VERIFICATION FAILED

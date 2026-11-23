@@ -1,0 +1,59 @@
+{
+  "cases": [
+    {
+      "name": "self",
+      "original": "results/past/original.c",
+      "candidate": "results/past/self.c",
+      "liveouts": "a,out"
+    },
+    {
+      "name": "unroll_only",
+      "original": "results/past/original.c",
+      "candidate": "results/past/unroll_only.c",
+      "liveouts": "a,out"
+    },
+    {
+      "name": "strength_reduction",
+      "original": "results/past/original.c",
+      "candidate": "results/past/strength_reduction.c",
+      "liveouts": "a,out"
+    },
+    {
+      "name": "seeded_bug",
+      "original": "results/past/original.c",
+      "candidate": "results/past/seeded_bug.c",
+      "liveouts": "a,out"
+    },
+    {
+      "name": "strength_reduction_all_normalizations",
+      "original": "results/past/original.c",
+      "candidate": "results/past/strength_reduction.c",
+      "liveouts": "a,out",
+      "all_normalizations": 1
+    },
+    {
+      "name": "gemm_optimized",
+      "original": "results/past/gemm_original.c",
+      "candidate": "results/past/gemm_optimized.c",
+      "liveouts": "m1,m2,prod"
+    },
+    {
+      "name": "gemm_buggy",
+      "original": "results/past/gemm_original.c",
+      "candidate": "results/past/gemm_buggy.c",
+      "liveouts": "m1,m2,prod"
+    },
+    {
+      "name": "stencil_optimized",
+      "original": "results/past/stencil_original.c",
+      "candidate": "results/past/stencil_optimized.c",
+      "liveouts": "orig,sol,filter"
+    },
+    {
+      "name": "stencil_buggy",
+      "original": "results/past/stencil_original.c",
+      "candidate": "results/past/stencil_buggy.c",
+      "liveouts": "orig,sol,filter"
+    }
+  ]
+}

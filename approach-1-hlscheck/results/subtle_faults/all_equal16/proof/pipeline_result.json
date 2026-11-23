@@ -1,0 +1,162 @@
+{
+  "status": "not_equivalent",
+  "assumptions": [
+    "32-bit int and unsigned int; uint32_t is unsigned int",
+    "All array parameters are valid, separately allocated, and nonoverlapping",
+    "Functional equality at function completion; no cycle-level RTL guarantee"
+  ],
+  "execution_steps": 74,
+  "paths": {
+    "original": 1,
+    "candidate": 1
+  },
+  "z3_version": "5.1.0",
+  "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+  "component_lemmas": [],
+  "main_query_requires_component_lemmas": false,
+  "counterexample": {
+    "a": [
+      23,
+      16,
+      4294967282,
+      4294967280,
+      4294967264,
+      4294967264,
+      2147483632,
+      4294967280,
+      3221225442,
+      1073741792,
+      4294967269,
+      4294967266,
+      4294967264,
+      4294967280,
+      4294967280,
+      4294967264
+    ]
+  },
+  "original_outputs": {
+    "a": [
+      23,
+      16,
+      4294967282,
+      4294967280,
+      4294967264,
+      4294967264,
+      2147483632,
+      4294967280,
+      3221225442,
+      1073741792,
+      4294967269,
+      4294967266,
+      4294967264,
+      4294967280,
+      4294967280,
+      4294967264
+    ],
+    "return": 0
+  },
+  "candidate_outputs": {
+    "a": [
+      23,
+      16,
+      4294967282,
+      4294967280,
+      4294967264,
+      4294967264,
+      2147483632,
+      4294967280,
+      3221225442,
+      1073741792,
+      4294967269,
+      4294967266,
+      4294967264,
+      4294967280,
+      4294967280,
+      4294967264
+    ],
+    "return": 1
+  },
+  "elapsed_seconds": 0.108216,
+  "backend": "hlscheck/Z3",
+  "fallback_used": false,
+  "initial_stage": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 74,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "a": [
+        23,
+        16,
+        4294967282,
+        4294967280,
+        4294967264,
+        4294967264,
+        2147483632,
+        4294967280,
+        3221225442,
+        1073741792,
+        4294967269,
+        4294967266,
+        4294967264,
+        4294967280,
+        4294967280,
+        4294967264
+      ]
+    },
+    "original_outputs": {
+      "a": [
+        23,
+        16,
+        4294967282,
+        4294967280,
+        4294967264,
+        4294967264,
+        2147483632,
+        4294967280,
+        3221225442,
+        1073741792,
+        4294967269,
+        4294967266,
+        4294967264,
+        4294967280,
+        4294967280,
+        4294967264
+      ],
+      "return": 0
+    },
+    "candidate_outputs": {
+      "a": [
+        23,
+        16,
+        4294967282,
+        4294967280,
+        4294967264,
+        4294967264,
+        2147483632,
+        4294967280,
+        3221225442,
+        1073741792,
+        4294967269,
+        4294967266,
+        4294967264,
+        4294967280,
+        4294967280,
+        4294967264
+      ],
+      "return": 1
+    },
+    "elapsed_seconds": 0.108216
+  }
+}

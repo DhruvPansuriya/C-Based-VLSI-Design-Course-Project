@@ -1,0 +1,6 @@
+--- original.c
++++ candidate.c
+@@ -1,2 +1,2 @@
+ #include <stdint.h>
+-uint32_t kernel(uint32_t x[4]){return x[3];}
++uint32_t kernel(uint32_t x[4]){return x[4];}

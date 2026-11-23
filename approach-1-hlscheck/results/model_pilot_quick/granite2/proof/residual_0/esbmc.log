@@ -1,0 +1,757 @@
+ESBMC version 8.7.0 64-bit x86_64 windows
+
+Target: 32-bit little-endian i386-unknown-win32 with esbmclibc
+Parsing C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.164s
+GOTO program processing time: 0.003s
+Starting Bounded Model Checking
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_0
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+WARNING: no body for function __hlscheck_nondet_1
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 6 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 6 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 6 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 6 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 6 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 6 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 6 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 5 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 5 function __hlscheck_original
+Unwinding loop 6 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 13 column 3 function __hlscheck_original
+Unwinding loop 3 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 4 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 29 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 4 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 29 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 4 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 29 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 4 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 29 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 4 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 29 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 4 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 29 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 4 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 29 column 3 function __hlscheck_candidate
+Unwinding loop 3 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 3 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 5 function __hlscheck_candidate
+Unwinding loop 4 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 29 column 3 function __hlscheck_candidate
+Symex completed in: 0.034s (731 assignments)
+Caching time: 0.001s (removed 80 assertions)
+Slicing time: 0.001s (removed 487 assignments)
+Generated 875 VCC(s), 9 remaining after simplification (164 assignments)
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.002s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 13 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 13 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 13 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 13 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 13 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 13 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 13 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 16 column 29 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 13 column 26 function __hlscheck_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 29 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 29 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 29 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 29 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 29 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 29 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 29 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 32 column 29 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 154 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 29 column 26 function __hlscheck_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.002s (removed 0 assignments)
+Solving claim 'EQUIV:observables at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c line 82 column 1 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.002s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.002s
+BMC program time: 0.608s
+
+** Results:
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c, function __hlscheck_candidate
+  PASSED       [__hlscheck_candidate.uninitialised-variable.1]  line 29  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.1]     line 29  arithmetic overflow on add
+  PASSED       [__hlscheck_candidate.uninitialised-variable.2]  line 29  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.uninitialised-variable.3]  line 32  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.uninitialised-variable.4]  line 32  use of uninitialized variable: j
+  PASSED       [__hlscheck_candidate.arithmetic-overflow.2]     line 32  arithmetic overflow on add
+  PASSED       [__hlscheck_candidate.uninitialised-variable.5]  line 32  use of uninitialized variable: j
+  PASSED       [__hlscheck_candidate.assertion.1]               line 34  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.1]   line 34  dereference failure: array bounds violated
+  PASSED       [__hlscheck_candidate.uninitialised-variable.6]  line 34  use of uninitialized variable: j
+  PASSED       [__hlscheck_candidate.uninitialised-variable.7]  line 34  use of uninitialized variable: sum
+  PASSED       [__hlscheck_candidate.assertion.2]               line 37  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_candidate.array-bounds-violated.2]   line 37  dereference failure: array bounds violated
+  PASSED       [__hlscheck_candidate.uninitialised-variable.8]  line 37  use of uninitialized variable: i
+  PASSED       [__hlscheck_candidate.uninitialised-variable.9]  line 37  use of uninitialized variable: sum
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c, function __hlscheck_original
+  PASSED       [__hlscheck_original.uninitialised-variable.1]   line 13  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.arithmetic-overflow.1]      line 13  arithmetic overflow on add
+  PASSED       [__hlscheck_original.uninitialised-variable.2]   line 13  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.uninitialised-variable.3]   line 16  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.uninitialised-variable.4]   line 16  use of uninitialized variable: j
+  PASSED       [__hlscheck_original.arithmetic-overflow.2]      line 16  arithmetic overflow on add
+  PASSED       [__hlscheck_original.uninitialised-variable.5]   line 16  use of uninitialized variable: j
+  PASSED       [__hlscheck_original.assertion.1]                line 18  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_original.array-bounds-violated.1]    line 18  dereference failure: array bounds violated
+  PASSED       [__hlscheck_original.uninitialised-variable.6]   line 18  use of uninitialized variable: j
+  PASSED       [__hlscheck_original.uninitialised-variable.7]   line 18  use of uninitialized variable: sum
+  PASSED       [__hlscheck_original.assertion.2]                line 21  dereference failure: Incorrect alignment when accessing data object
+  PASSED       [__hlscheck_original.array-bounds-violated.2]    line 21  dereference failure: array bounds violated
+  PASSED       [__hlscheck_original.uninitialised-variable.8]   line 21  use of uninitialized variable: i
+  PASSED       [__hlscheck_original.uninitialised-variable.9]   line 21  use of uninitialized variable: sum
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\model_pilot_quick\granite2\proof\residual_0\miter.c, function main
+  PASSED       [main.uninitialised-variable.1]                  line 46  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.2]                  line 47  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.3]                  line 48  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.4]                  line 49  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.5]                  line 50  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.6]                  line 51  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.7]                  line 52  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.8]                  line 53  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.9]                  line 54  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.10]                 line 55  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.11]                 line 56  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.12]                 line 57  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.13]                 line 58  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.14]                 line 59  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.15]                 line 60  use of uninitialized variable: __hlscheck_input_0
+  PASSED       [main.uninitialised-variable.16]                 line 61  use of uninitialized variable: __hlscheck_left_0
+  PASSED       [main.uninitialised-variable.17]                 line 64  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.18]                 line 65  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.19]                 line 66  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.20]                 line 67  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.21]                 line 68  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.22]                 line 69  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.23]                 line 70  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.24]                 line 71  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.25]                 line 72  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.26]                 line 73  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.27]                 line 74  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.28]                 line 75  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.29]                 line 76  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.30]                 line 77  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.uninitialised-variable.31]                 line 78  use of uninitialized variable: __hlscheck_input_1
+  PASSED       [main.uninitialised-variable.32]                 line 79  use of uninitialized variable: __hlscheck_left_1
+  PASSED       [main.assertion.1]                               line 82  EQUIV:observables
+  PASSED       [main.uninitialised-variable.33]                 line 82  use of uninitialized variable: __hlscheck_left_0 [2[0]]
+  PASSED       [main.uninitialised-variable.34]                 line 82  use of uninitialized variable: __hlscheck_left_0 [2[1]]
+  PASSED       [main.uninitialised-variable.35]                 line 82  use of uninitialized variable: __hlscheck_left_0 [2[2]]
+  PASSED       [main.uninitialised-variable.36]                 line 82  use of uninitialized variable: __hlscheck_left_0 [2[3]]
+  PASSED       [main.uninitialised-variable.37]                 line 82  use of uninitialized variable: __hlscheck_left_0 [2[4]]
+  PASSED       [main.uninitialised-variable.38]                 line 82  use of uninitialized variable: __hlscheck_left_0 [2[5]]
+  PASSED       [main.uninitialised-variable.39]                 line 82  use of uninitialized variable: __hlscheck_left_0 [2[6]]
+  PASSED       [main.uninitialised-variable.40]                 line 82  use of uninitialized variable: __hlscheck_left_0 [2[7]]
+  PASSED       [main.uninitialised-variable.41]                 line 82  use of uninitialized variable: __hlscheck_left_1 [5[0]]
+  PASSED       [main.uninitialised-variable.42]                 line 82  use of uninitialized variable: __hlscheck_left_1 [5[1]]
+  PASSED       [main.uninitialised-variable.43]                 line 82  use of uninitialized variable: __hlscheck_left_1 [5[2]]
+  PASSED       [main.uninitialised-variable.44]                 line 82  use of uninitialized variable: __hlscheck_left_1 [5[3]]
+  PASSED       [main.uninitialised-variable.45]                 line 82  use of uninitialized variable: __hlscheck_left_1 [5[4]]
+  PASSED       [main.uninitialised-variable.46]                 line 82  use of uninitialized variable: __hlscheck_left_1 [5[5]]
+  PASSED       [main.uninitialised-variable.47]                 line 82  use of uninitialized variable: __hlscheck_left_1 [5[6]]
+  PASSED       [main.uninitialised-variable.48]                 line 82  use of uninitialized variable: __hlscheck_left_1 [5[7]]
+  PASSED       [main.uninitialised-variable.49]                 line 82  use of uninitialized variable: __hlscheck_right_0 [3[0]]
+  PASSED       [main.uninitialised-variable.50]                 line 82  use of uninitialized variable: __hlscheck_right_0 [3[1]]
+  PASSED       [main.uninitialised-variable.51]                 line 82  use of uninitialized variable: __hlscheck_right_0 [3[2]]
+  PASSED       [main.uninitialised-variable.52]                 line 82  use of uninitialized variable: __hlscheck_right_0 [3[3]]
+  PASSED       [main.uninitialised-variable.53]                 line 82  use of uninitialized variable: __hlscheck_right_0 [3[4]]
+  PASSED       [main.uninitialised-variable.54]                 line 82  use of uninitialized variable: __hlscheck_right_0 [3[5]]
+  PASSED       [main.uninitialised-variable.55]                 line 82  use of uninitialized variable: __hlscheck_right_0 [3[6]]
+  PASSED       [main.uninitialised-variable.56]                 line 82  use of uninitialized variable: __hlscheck_right_0 [3[7]]
+  PASSED       [main.uninitialised-variable.57]                 line 82  use of uninitialized variable: __hlscheck_right_1 [6[0]]
+  PASSED       [main.uninitialised-variable.58]                 line 82  use of uninitialized variable: __hlscheck_right_1 [6[1]]
+  PASSED       [main.uninitialised-variable.59]                 line 82  use of uninitialized variable: __hlscheck_right_1 [6[2]]
+  PASSED       [main.uninitialised-variable.60]                 line 82  use of uninitialized variable: __hlscheck_right_1 [6[3]]
+  PASSED       [main.uninitialised-variable.61]                 line 82  use of uninitialized variable: __hlscheck_right_1 [6[4]]
+  PASSED       [main.uninitialised-variable.62]                 line 82  use of uninitialized variable: __hlscheck_right_1 [6[5]]
+  PASSED       [main.uninitialised-variable.63]                 line 82  use of uninitialized variable: __hlscheck_right_1 [6[6]]
+  PASSED       [main.uninitialised-variable.64]                 line 82  use of uninitialized variable: __hlscheck_right_1 [6[7]]
+
+** 0 of 95 properties failed, 95 passed
+Solver: Z3 v4.13.3 â€¢ Decision procedure total time: 0.016s â€¢ Avg: 0.000s/property
+
+VERIFICATION SUCCESSFUL

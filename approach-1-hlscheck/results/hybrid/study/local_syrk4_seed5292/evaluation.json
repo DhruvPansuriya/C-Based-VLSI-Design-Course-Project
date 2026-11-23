@@ -1,0 +1,292 @@
+{
+  "id": "local_syrk4_seed5292",
+  "cohort": "local_model",
+  "function": "kernel",
+  "expected": "not_equivalent",
+  "previous_status": "not_equivalent",
+  "original": "results/local_llm/generations/syrk4_seed5292/original.c",
+  "candidate": "results/local_llm/generations/syrk4_seed5292/candidate.c",
+  "fingerprint": {
+    "sources": [
+      "96b3d566620c663fedad5dc0a4ddddd2d17a0eaa168e504d8032e85c1d22aba9",
+      "c26cb0ebb47a68a225b553542e6466b4c4cc598c0e84c6912a195f39b3d1d3fb"
+    ],
+    "engine": {
+      "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+      "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307",
+      "evidence.py": "bf3c033abdf74bf08a34bcfc2451971cbfb25dfc78cc4540dc7a37ca98548fbf",
+      "frontend.py": "55eb23c16d35ce941254cb783a7e985571e12c5390cd75cbb08dd9aed85369e2",
+      "hybrid.py": "ebd6353ba34e48fded852c8697f755f0b4d025153469804eb7dca467d0c41096",
+      "miter.py": "77d41c642d8fc5af346e865fd033a92791830cb61bc252792180ef077688831d",
+      "pipeline.py": "a4b504daefbd3524a1d0a6fc5e872fd2a75b469c869cfb2c33a35711fa731567",
+      "relational.py": "82a63ee02a1ac6d655d4c6011f45acfed7864d18cc02cdb2c329bf9ef0109618",
+      "__init__.py": "13da1587e29ffc5bd31bdc71a826330fefa412b8d37017a7dd4a8941e0a663bc",
+      "__main__.py": "1e5bbbf8bd038767e81be1d4962fa0801ceb117b7491a435b6c26a8bb909f5ab"
+    },
+    "driver": "e1602d10ea0b3cabda388870785e5c6e82c686a3dd86dc727f2af6e112ffa782",
+    "timeout_ms": 10000
+  },
+  "status": "not_equivalent",
+  "elapsed_seconds": 13.454752,
+  "accepted_summary": false,
+  "refinement_count": 0,
+  "smt_replay": {
+    "passed": true,
+    "queries": [],
+    "scope": "Current implementation and saved artifact hashes; accepted SMT lemmas replayed with Z3. ESBMC log retained, not an independent proof certificate."
+  },
+  "native_witness": {
+    "available": true,
+    "passed": true,
+    "harness_sha256": "59074dae75fc64946e2f6b1e2c5e1588ab2e114d05fe5598b430e88225c73cdd",
+    "scope": "Actual original C and candidate C at the complete verified input; no abstract state is executed"
+  },
+  "verification": {
+    "tool": "HLSCheck",
+    "algorithm": "certified relational summaries with residual-C abstraction/refinement",
+    "status": "not_equivalent",
+    "source_sha256": {
+      "original": "98d438bfdab353b600dbbceb318c0b96456fc0f3a656e510bfa4f4bdec1c65f8",
+      "candidate": "29fbc429d525c7dfd7a690ffb4606cf0cd2335658b630ba3fc89040070a22bbd"
+    },
+    "upstream_components": [
+      "Z3",
+      "ESBMC"
+    ],
+    "proof_dependencies": [],
+    "refinements": [],
+    "obligations": [
+      {
+        "id": "region_equality",
+        "engine": "custom symbolic execution / Z3",
+        "status": "not_equivalent"
+      },
+      {
+        "id": "residual_0",
+        "engine": "ESBMC / Z3",
+        "abstraction": "none",
+        "input_domain": "proposed counterexample only",
+        "status": "not_equivalent"
+      }
+    ],
+    "engine_selection": "No router: ESBMC checks the residual C product; custom SMT proofs justify region abstraction.",
+    "implementation_sha256": {
+      "hybrid.py": "ebd6353ba34e48fded852c8697f755f0b4d025153469804eb7dca467d0c41096",
+      "frontend.py": "55eb23c16d35ce941254cb783a7e985571e12c5390cd75cbb08dd9aed85369e2",
+      "miter.py": "77d41c642d8fc5af346e865fd033a92791830cb61bc252792180ef077688831d",
+      "relational.py": "82a63ee02a1ac6d655d4c6011f45acfed7864d18cc02cdb2c329bf9ef0109618",
+      "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+      "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307"
+    },
+    "contract": {
+      "integer_model": "ILP32: char8/short16/int32/long32/long-long64; plain char signed",
+      "parameters": [
+        {
+          "position": 0,
+          "name": "a",
+          "length": 16,
+          "c_type": "unsigned int",
+          "bits": 32,
+          "signed": false
+        },
+        {
+          "position": 1,
+          "name": "out",
+          "length": 16,
+          "c_type": "unsigned int",
+          "bits": 32,
+          "signed": false
+        }
+      ],
+      "return_type": {
+        "c_type": "void",
+        "bits": 0,
+        "signed": false
+      },
+      "scalar_ranges": {},
+      "observations": "Return value and every final parameter-array element",
+      "memory": "All parameter arrays valid and pairwise nonoverlapping; initial contents shared by value",
+      "safety": "Both programs must be free of modelled undefined behavior on the entire stated input domain",
+      "proof_scope": "Functional C equivalence at completion, not cycle-level or C-to-RTL equivalence"
+    },
+    "region_analysis": {
+      "abstractable": false,
+      "left_statements": 1,
+      "right_statements": 1,
+      "whole_function": false,
+      "boundary": "All parameter arrays; unchanged scalar parameters; no local live-outs",
+      "proof_status": "not_equivalent"
+    },
+    "proposed_counterexample": {
+      "a": [
+        210059766,
+        614031805,
+        4003710700,
+        438696963,
+        4126391685,
+        1498927633,
+        1802618985,
+        3021446580,
+        1096810496,
+        245628,
+        2428947220,
+        41184251,
+        451000218,
+        1569859077,
+        803562424,
+        3564058048
+      ],
+      "out": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "residual_proof": {
+      "directory": "residual_0",
+      "abstraction": "none",
+      "engine": "ESBMC with Z3",
+      "status": "not_equivalent",
+      "miter_sha256": "8616fb546afcf96568d1b4a06ceaeb2eb129fb0ff3a8436c76400e19c6e184ab",
+      "returncode": 1,
+      "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+      "command": [
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+        "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\local_syrk4_seed5292\\proof\\residual_0\\miter.c",
+        "--i386-win32",
+        "--32",
+        "--z3",
+        "--bv",
+        "--unwind",
+        "256",
+        "--overflow-check",
+        "--ub-shift-check",
+        "--uninitialised-vars-check",
+        "--multi-property"
+      ],
+      "max_unroll": 256,
+      "timeout_ms": 10000,
+      "elapsed_seconds": 4.888183,
+      "bounds_pointer_division_overflow_shift_uninitialized_unwinding_checks_retained": true
+    },
+    "engine_status": "not_equivalent",
+    "complete_unwinding_required": true,
+    "counterexample": {
+      "a": [
+        210059766,
+        614031805,
+        4003710700,
+        438696963,
+        4126391685,
+        1498927633,
+        1802618985,
+        3021446580,
+        1096810496,
+        245628,
+        2428947220,
+        41184251,
+        451000218,
+        1569859077,
+        803562424,
+        3564058048
+      ],
+      "out": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "counterexample_validation": "Actual unabstracted C miter refuted at the custom SMT witness",
+    "proof_scope": "Unabstracted C product-program verification",
+    "elapsed_seconds": 13.454752,
+    "artifact_sha256": {
+      "candidate_canonical.c": "5a7933f9810e3f0c10b2a3fb71e2dbbfd05e5685c70a0f421278e6cc50555ffa",
+      "candidate_input.c": "29fbc429d525c7dfd7a690ffb4606cf0cd2335658b630ba3fc89040070a22bbd",
+      "contract.json": "388ffc27765acc66b4b0bea450b33d350899b2e6ca5019e81d6a34aa15622ce7",
+      "lemmas/candidate_region.c": "108753e4f1c131fa5139a8756ade902016aa7a6dd32a71ec6cb504c2ec85acf7",
+      "lemmas/original_region.c": "3e69aafb083aedaa94ca5eca69a7d44a49f1274acf6e29d8075b67e0b021cc9a",
+      "lemmas/region_equality.json": "da10df88dc320886807914a0728a306718d54c173ed7a4e10627254c991104ed",
+      "lemmas/region_equality.lemma001.smt2": "227ec43dac0b2d6b35db2cc770af1faccd82ee5379d4d2259ceaae1ee0317989",
+      "lemmas/region_equality.lemma002.smt2": "296a7fac870ee391991627011e19ad70dbc8fe125d83a9ceef7c022aac5c23a1",
+      "lemmas/region_equality.lemma003.smt2": "ca48cba455a420084d510b7c178febe557ace196a514bf54355468fcadf20311",
+      "lemmas/region_equality.lemma004.smt2": "333f8b86653402d170a33b15abf5983966ee2e93216c9a3f47d076d672a84142",
+      "lemmas/region_equality.lemma005.smt2": "00eaa2caf81b485d9c236a258fac8356c789c1719ca6c4fd53f9d81bc7133a75",
+      "lemmas/region_equality.lemma006.smt2": "ca92131105d8540c0edea23094e111920c9a59c3bf9cac4a04640dded06988cf",
+      "lemmas/region_equality.lemma007.smt2": "8e9ae665e8db88db463db0dad3ff061fd14daddf39de7a3821d2ef1b7d46a156",
+      "lemmas/region_equality.lemma008.smt2": "5530e45172ecc13e760e26ee3fa164f5f017f281f9b00f9de670b489e782d5ef",
+      "lemmas/region_equality.lemma009.smt2": "5a6642b89fde6bb01013c439e0801f69d3e3ae874ecf0b66728dbf58c4e05722",
+      "lemmas/region_equality.lemma010.smt2": "7dd7f5c0f995ca753f124dfaf99c77256ab6c1cee1f180f2563e1d78e583ad13",
+      "lemmas/region_equality.lemma011.smt2": "508ecda082f04980d170ed484e7318bbcc2e602c32ea4a3315dd23ae8c8b128f",
+      "lemmas/region_equality.lemma012.smt2": "a220c5998024918ae781ec61b644b73a0df39bd43217cb0c7709145600e36245",
+      "lemmas/region_equality.lemma013.smt2": "db86ee7c6da12aa8cde58299a19af69a5c28ce284604caa1a4f229d949951793",
+      "lemmas/region_equality.lemma014.smt2": "1a48a53dedaf2948d139df0b5a2796d9f27a70e891945d42d3960e447e726443",
+      "lemmas/region_equality.lemma015.smt2": "58a305a1fd4f7fcb5e1e25b027511867e12741330dd4c036b268787aac2840cc",
+      "lemmas/region_equality.lemma016.smt2": "44e2d2eedae2b235def7192b7f99c2d4e968e7a6a1be7df12eae3a1dd5e2ef5d",
+      "lemmas/region_equality.lemma017.smt2": "f69cd5ffdf6f8e8086af40254569eded8885e0d3238cef198cb41bdc2d9b0886",
+      "lemmas/region_equality.lemma018.smt2": "46179291b64aa83d45419a0e00f414b62e79b750db6e7c7dc3892b22cecfb129",
+      "lemmas/region_equality.lemma019.smt2": "ab07d251bbb3b01f4349fb2ba54492ec17b2ee4c709f5d370860eea883e1a3bf",
+      "lemmas/region_equality.lemma020.smt2": "2629f3590d25d849d8fa733f66a2de8fa8bc5097b834673637fd07b91d88923f",
+      "lemmas/region_equality.lemma021.smt2": "a8a1a13c74b7f6a54efb921bc1936b7a4f3e6f09b0932ee393bd65c90ca39604",
+      "lemmas/region_equality.lemma022.smt2": "e112d6fe0f1bba230c4bf0e98bd22dc302881401bbbcd1d9ee33c083c08247b2",
+      "lemmas/region_equality.lemma023.smt2": "ef1e73248825321514bdd850736fb19011f67e56f3ec4d7cb3df19aeedd7f13a",
+      "lemmas/region_equality.lemma024.smt2": "616dd9dcdc02e44a6e1e80c7b401e6226df4c731a4584f08a8423ca4f133c698",
+      "lemmas/region_equality.lemma025.smt2": "2583a8088e52ed2e2d4f38f3ba318b4e75d55d6b97b4e1a74a1210a882e2e327",
+      "lemmas/region_equality.lemma026.smt2": "e3f1f82e4de0f34e314ecf93acfdfcce74c633a051bcf11c9aab45bef7c992a4",
+      "lemmas/region_equality.lemma027.smt2": "46188a60d10b865afde0fd1d61479254de7d88851fbac340d4a21c7ed0b55475",
+      "lemmas/region_equality.lemma028.smt2": "1248c78a1c96cb8c4fa3beb66474fc269f10af7b32f6a613dfabbd8c068d64e7",
+      "lemmas/region_equality.lemma029.smt2": "400f097af91425fb4621fc2e2bb05f04a92349481de83f55640d0cf17cc55992",
+      "lemmas/region_equality.lemma030.smt2": "5229ce971c7507c6cc8c12a19ce3e231dbd9dad927ca89535f1ce55ef69b8456",
+      "lemmas/region_equality.lemma031.smt2": "45670b169418175f473c7ee2efd24c0388a059beeb2013bb0942218e690c5fcb",
+      "lemmas/region_equality.lemma032.smt2": "d9b36d83152e680405a579ceb81a8530f4e67718c52bb66523f3d1174eb60153",
+      "lemmas/region_equality.lemma033.smt2": "78fca11c38da32f5e1c72b29ec10a904d0a11535f016aa391afea2544c4774a7",
+      "lemmas/region_equality.lemma034.smt2": "928fe910e92b2a9152fe610795c78d3c9ced7b52f5f8388ae730da036a3b535d",
+      "lemmas/region_equality.lemma035.smt2": "d4ad23d9bf9b009f288ba5857cb1062ecd93ea6ed9d8cd9695d79148aaadfca1",
+      "lemmas/region_equality.lemma036.smt2": "748dbc38250cfa9c5b587e9ef3147c8e3edf567bb98e249bb0b4d1b656131ad1",
+      "lemmas/region_equality.lemma037.smt2": "3ec33a80690c52d9525158a6739f62ccc1c644d12473ed7de3b937452aeef497",
+      "lemmas/region_equality.lemma038.smt2": "38b3ce3a0b1aa7d808d3cfdbe50223979a06931fd701858833be943af2e9a342",
+      "lemmas/region_equality.lemma039.smt2": "a2766a2bd71fb615f09bceaada8872b7edfd3cc2eee7a66491fe266e11c8fac3",
+      "lemmas/region_equality.lemma040.smt2": "65fac4b2c304c6fbf191b2d3a2e0aaf5da145e0e70a1990ad364638d073a4486",
+      "lemmas/region_equality.lemma041.smt2": "f15e17e0ad7813b91e971ce60e507ac7396e4ecdf919c55cb15b61936354073b",
+      "lemmas/region_equality.lemma042.smt2": "ae11632e32e913459dd125eba9550b6b52e9a464b5e8ba536247d4c8acff3d52",
+      "lemmas/region_equality.lemma043.smt2": "a496b4bf51a03f6a000c8941579d6b5a58894c0fa8eacce9e95dc6f00c2c82a4",
+      "lemmas/region_equality.lemma044.smt2": "1c02e573ec7400f18257c6485bd99ffa588be7318171858631666573052e102b",
+      "lemmas/region_equality.lemma045.smt2": "652c22b7af9369a9e22f10304f3ec1da5bfc345e2db15ddd7a713fa6bd55d1db",
+      "lemmas/region_equality.lemma046.smt2": "51fed49067d5c1094fe9980a461a30ac0f2c981e69cfcebc69dab6df4459bb1d",
+      "lemmas/region_equality.lemma047.smt2": "97826c08bb89e391e21a2c10d48ea0dffee861b889502c86ac1e582f51d220a4",
+      "lemmas/region_equality.lemma048.smt2": "2f0498cf6a023c9918fbb80cd1a97c80af39b8cbf74398f9332e13227160c328",
+      "lemmas/region_equality.smt2": "ae30fbd42fab567560943ea604e75fd74085133bf0844dddbccedfeae0d72481",
+      "original_canonical.c": "11e2a67044a6329304dd967151853bf8dadd16c59911b53b2f1899a79c427b0b",
+      "original_input.c": "98d438bfdab353b600dbbceb318c0b96456fc0f3a656e510bfa4f4bdec1c65f8",
+      "residual_0/esbmc.log": "5619eb690f1185090a6a26e14493f3d3b0180f7e7d01887aa00a6dd74d7c59c8",
+      "residual_0/miter.c": "8616fb546afcf96568d1b4a06ceaeb2eb129fb0ff3a8436c76400e19c6e184ab",
+      "residual_0/result.json": "605905f7b4f35e2dc16512fbe7c0bc204a15137fbec3a0d0b6485084635b5b66"
+    }
+  },
+  "matched_expected": true
+}

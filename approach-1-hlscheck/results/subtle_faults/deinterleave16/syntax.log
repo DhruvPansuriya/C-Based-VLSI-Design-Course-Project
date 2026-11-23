@@ -1,0 +1,4 @@
+C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\experiments\subtle_faults\deinterleave16\candidate.c:6:44: warning: unused variable 'y' [-Wunused-variable]
+    6 |     for(int i=0;i<8;i++){uint32_t x=a[2*i],y=a[2*i+1];even[i]=x;odd[i]=x;}
+      |                                            ^
+1 warning generated.

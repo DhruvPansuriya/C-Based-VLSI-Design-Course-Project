@@ -1,0 +1,194 @@
+{
+  "status": "not_equivalent",
+  "assumptions": [
+    "32-bit int and unsigned int; uint32_t is unsigned int",
+    "All array parameters are valid, separately allocated, and nonoverlapping",
+    "Functional equality at function completion; no cycle-level RTL guarantee"
+  ],
+  "execution_steps": 96,
+  "paths": {
+    "original": 1,
+    "candidate": 1
+  },
+  "z3_version": "5.1.0",
+  "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+  "component_lemmas": [],
+  "main_query_requires_component_lemmas": false,
+  "counterexample": {
+    "image": [
+      2875594563,
+      0,
+      4246527479,
+      0,
+      1419372732,
+      2,
+      48439816,
+      6,
+      3882678457,
+      16777215,
+      1695139739,
+      0,
+      412288838,
+      0,
+      2599827556,
+      2
+    ],
+    "out": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "original_outputs": {
+    "image": [
+      2875594563,
+      0,
+      4246527479,
+      0,
+      1419372732,
+      2,
+      48439816,
+      6,
+      3882678457,
+      16777215,
+      1695139739,
+      0,
+      412288838,
+      0,
+      2599827556,
+      2
+    ],
+    "out": [
+      2875594563,
+      4246527479,
+      3882678457,
+      2599827556
+    ]
+  },
+  "candidate_outputs": {
+    "image": [
+      2875594563,
+      0,
+      4246527479,
+      0,
+      1419372732,
+      2,
+      48439816,
+      6,
+      3882678457,
+      16777215,
+      1695139739,
+      0,
+      412288838,
+      0,
+      2599827556,
+      2
+    ],
+    "out": [
+      1419372732,
+      48439816,
+      412288838,
+      1695139739
+    ]
+  },
+  "elapsed_seconds": 0.292566,
+  "backend": "hlscheck/Z3",
+  "fallback_used": false,
+  "initial_stage": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 96,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "image": [
+        2875594563,
+        0,
+        4246527479,
+        0,
+        1419372732,
+        2,
+        48439816,
+        6,
+        3882678457,
+        16777215,
+        1695139739,
+        0,
+        412288838,
+        0,
+        2599827556,
+        2
+      ],
+      "out": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "original_outputs": {
+      "image": [
+        2875594563,
+        0,
+        4246527479,
+        0,
+        1419372732,
+        2,
+        48439816,
+        6,
+        3882678457,
+        16777215,
+        1695139739,
+        0,
+        412288838,
+        0,
+        2599827556,
+        2
+      ],
+      "out": [
+        2875594563,
+        4246527479,
+        3882678457,
+        2599827556
+      ]
+    },
+    "candidate_outputs": {
+      "image": [
+        2875594563,
+        0,
+        4246527479,
+        0,
+        1419372732,
+        2,
+        48439816,
+        6,
+        3882678457,
+        16777215,
+        1695139739,
+        0,
+        412288838,
+        0,
+        2599827556,
+        2
+      ],
+      "out": [
+        1419372732,
+        48439816,
+        412288838,
+        1695139739
+      ]
+    },
+    "elapsed_seconds": 0.292566
+  }
+}

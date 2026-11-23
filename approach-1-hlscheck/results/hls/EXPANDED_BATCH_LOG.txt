@@ -1,0 +1,96 @@
+scale_original cached
+unswitch_original cached
+scale_optimized cached
+gemm_original cached
+gemm_optimized cached
+unswitch_optimized cached
+stencil_optimized stencil_originalcached 
+cached
+prefix_original cached
+prefix_optimized cached
+fir_optimized cached
+fir_original cached
+boxfilter_originalboxfilter_optimized cached cached
+
+factor_original cached
+factor_optimized cached
+sum32_original complete {'cycles': 35.0, 'area_um2': 572.964, 'delay_ns': 1.454731}
+dot16_original complete {'cycles': 19.0, 'area_um2': 3993.724, 'delay_ns': 2.003526}
+dot16_optimized complete {'cycles': 19.0, 'area_um2': 8760.71, 'delay_ns': 2.967479}
+xor32_original complete {'cycles': 35.0, 'area_um2': 439.166, 'delay_ns': 1.128755}
+sum32_optimized complete {'cycles': 19.0, 'area_um2': 3992.394, 'delay_ns': 3.890273}
+xor32_optimized complete {'cycles': 19.0, 'area_um2': 2488.962, 'delay_ns': 3.206002}
+min8_original complete {'cycles': 11.0, 'area_um2': 803.054, 'delay_ns': 1.39448}
+min8_optimized complete {'cycles': 5.0, 'area_um2': 4145.078, 'delay_ns': 2.802105}
+max8_original complete {'cycles': 11.0, 'area_um2': 779.912, 'delay_ns': 0.972448}
+max8_optimized complete {'cycles': 5.0, 'area_um2': 4228.07, 'delay_ns': 2.914637}
+range8_original complete {'cycles': 11.0, 'area_um2': 1822.632, 'delay_ns': 1.743554}
+range8_optimized complete {'cycles': 11.0, 'area_um2': 1341.172, 'delay_ns': 1.456923}
+count_nonzero16_original complete {'cycles': 19.0, 'area_um2': 437.304, 'delay_ns': 1.414111}
+all_equal16_original complete {'cycles': 19.0, 'area_um2': 471.086, 'delay_ns': 0.696284}
+count_nonzero16_optimized complete {'cycles': 11.0, 'area_um2': 3587.808, 'delay_ns': 4.399541}
+all_equal16_optimized complete {'cycles': 19.0, 'area_um2': 669.256, 'delay_ns': 0.767285}
+parity32_original complete {'cycles': 34.0, 'area_um2': 130.34, 'delay_ns': 0.545412}
+parity32_optimized complete {'cycles': 1.0, 'area_um2': 50.008, 'delay_ns': 0.276039}
+popcount8_original complete {'cycles': 10.0, 'area_um2': 329.308, 'delay_ns': 0.747034}
+popcount8_optimized complete {'cycles': 1.0, 'area_um2': 29.26, 'delay_ns': 0.254551}
+bitreverse32_original complete {'cycles': 34.0, 'area_um2': 515.508, 'delay_ns': 0.689333}
+bitreverse32_optimized complete {'cycles': 1.0, 'area_um2': 0.532, 'delay_ns': 0.054166}
+byteswap32_original complete {'cycles': 6.0, 'area_um2': 308.826, 'delay_ns': 0.498322}
+byteswap32_optimized complete {'cycles': 1.0, 'area_um2': 0.532, 'delay_ns': 0.054166}
+crc8_byte_original complete {'cycles': 10.0, 'area_um2': 119.434, 'delay_ns': 0.322509}
+crc8_byte_optimized complete {'cycles': 6.0, 'area_um2': 119.966, 'delay_ns': 0.323469}
+hamming8_original complete {'cycles': 90.0, 'area_um2': 628.292, 'delay_ns': 1.089048}
+hamming8_optimized complete {'cycles': 11.0, 'area_um2': 567.644, 'delay_ns': 1.112183}
+clamp16_original complete {'cycles': 50.0, 'area_um2': 619.78, 'delay_ns': 1.322867}
+clamp16_optimized complete {'cycles': 50.0, 'area_um2': 619.78, 'delay_ns': 1.322867}
+threshold_pack8_original complete {'cycles': 11.0, 'area_um2': 250.838, 'delay_ns': 1.06167}
+threshold_pack8_optimized complete {'cycles': 7.0, 'area_um2': 326.648, 'delay_ns': 1.009282}
+absdiff16_original complete {'cycles': 50.0, 'area_um2': 1261.638, 'delay_ns': 1.401775}
+absdiff16_optimized complete {'cycles': 50.0, 'area_um2': 1258.18, 'delay_ns': 1.578079}
+squared_distance8_original complete {'cycles': 11.0, 'area_um2': 3889.984, 'delay_ns': 2.834007}
+squared_distance8_optimized complete {'cycles': 11.0, 'area_um2': 10618.986, 'delay_ns': 1.961218}
+saxpy16_original complete {'cycles': 50.0, 'area_um2': 4469.864, 'delay_ns': 1.923842}
+saxpy16_optimized complete {'cycles': 50.0, 'area_um2': 6051.5, 'delay_ns': 2.01845}
+quadratic_original complete {'cycles': 1.0, 'area_um2': 6971.594, 'delay_ns': 3.453784}
+quadratic_optimized complete {'cycles': 1.0, 'area_um2': 6971.594, 'delay_ns': 3.453784}
+convolution1d8_original complete {'cycles': 26.0, 'area_um2': 2310.476, 'delay_ns': 2.124615}
+convolution1d8_optimized complete {'cycles': 26.0, 'area_um2': 2125.074, 'delay_ns': 1.721547}
+moving_sum16_original complete {'cycles': 93.0, 'area_um2': 978.082, 'delay_ns': 1.541081}
+moving_sum16_optimized complete {'cycles': 41.0, 'area_um2': 3338.566, 'delay_ns': 1.973407}
+triangular_fir16_original complete {'cycles': 58.0, 'area_um2': 1958.026, 'delay_ns': 1.684715}
+triangular_fir16_optimized complete {'cycles': 45.0, 'area_um2': 1510.614, 'delay_ns': 2.214103}
+gaussian5_original complete {'cycles': 158.0, 'area_um2': 1800.82, 'delay_ns': 2.228545}
+gaussian5_optimized complete {'cycles': 102.0, 'area_um2': 8919.246, 'delay_ns': 5.689416}
+integral_image4_original complete {'cycles': 262.0, 'area_um2': 3076.024, 'delay_ns': 2.337226}
+integral_image4_optimized complete {'cycles': 102.0, 'area_um2': 3029.208, 'delay_ns': 2.786273}
+transpose4_original complete {'cycles': 58.0, 'area_um2': 804.65, 'delay_ns': 1.490048}
+transpose4_optimized complete {'cycles': 34.0, 'area_um2': 1390.382, 'delay_ns': 1.380269}
+matvec4_original complete {'cycles': 30.0, 'area_um2': 4250.946, 'delay_ns': 1.94475}
+matvec4_optimized complete {'cycles': 26.0, 'area_um2': 11156.04, 'delay_ns': 5.0738}
+gemm_local4_original complete {'cycles': 122.0, 'area_um2': 4506.572, 'delay_ns': 1.903448}
+gemm_local4_optimized complete {'cycles': 66.0, 'area_um2': 11236.904, 'delay_ns': 6.757516}
+syrk4_original complete {'cycles': 122.0, 'area_um2': 4528.916, 'delay_ns': 1.895306}
+syrk4_optimized complete {'cycles': 86.0, 'area_um2': 4692.506, 'delay_ns': 1.976299}
+rank1_update4_original complete {'cycles': 74.0, 'area_um2': 5331.438, 'delay_ns': 2.35069}
+rank1_update4_optimized complete {'cycles': 54.0, 'area_um2': 8667.344, 'delay_ns': 3.503572}
+triangular_matvec4_original complete {'cycles': 62.0, 'area_um2': 4971.008, 'delay_ns': 2.385772}
+triangular_matvec4_optimized complete {'cycles': 24.0, 'area_um2': 5360.964, 'delay_ns': 2.028725}
+symv4_original complete {'cycles': 30.0, 'area_um2': 4248.552, 'delay_ns': 1.855297}
+symv4_optimized complete {'cycles': 78.0, 'area_um2': 7941.962, 'delay_ns': 8.507551}
+matrix_trace4_original complete {'cycles': 50.0, 'area_um2': 850.934, 'delay_ns': 1.361559}
+matrix_trace4_optimized complete {'cycles': 7.0, 'area_um2': 544.502, 'delay_ns': 1.429226}
+matrix_diagsum4_original complete {'cycles': 58.0, 'area_um2': 865.83, 'delay_ns': 1.374372}
+matrix_diagsum4_optimized complete {'cycles': 7.0, 'area_um2': 806.778, 'delay_ns': 1.611322}
+histogram4_original complete {'cycles': 78.0, 'area_um2': 833.112, 'delay_ns': 1.301683}
+histogram4_optimized complete {'cycles': 21.0, 'area_um2': 2279.088, 'delay_ns': 1.537672}
+search_count16_original complete {'cycles': 19.0, 'area_um2': 490.504, 'delay_ns': 1.291082}
+search_count16_optimized complete {'cycles': 11.0, 'area_um2': 1427.888, 'delay_ns': 2.053227}
+reverse_copy16_original complete {'cycles': 50.0, 'area_um2': 784.7, 'delay_ns': 1.327367}
+reverse_copy16_optimized complete {'cycles': 34.0, 'area_um2': 1412.726, 'delay_ns': 1.791149}
+deinterleave16_original complete {'cycles': 50.0, 'area_um2': 1166.942, 'delay_ns': 1.691078}
+deinterleave16_optimized complete {'cycles': 34.0, 'area_um2': 1426.824, 'delay_ns': 2.048193}
+interleave8_original complete {'cycles': 50.0, 'area_um2': 1284.514, 'delay_ns': 1.308434}
+interleave8_optimized complete {'cycles': 50.0, 'area_um2': 1426.292, 'delay_ns': 1.958422}
+maxpool4_original complete {'cycles': 48.0, 'area_um2': 1074.64, 'delay_ns': 1.38692}
+maxpool4_optimized complete {'cycles': 20.0, 'area_um2': 2170.294, 'delay_ns': 2.605754}

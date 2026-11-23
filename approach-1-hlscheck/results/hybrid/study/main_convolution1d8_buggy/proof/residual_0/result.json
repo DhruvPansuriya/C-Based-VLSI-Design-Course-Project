@@ -1,0 +1,25 @@
+{
+  "engine": "ESBMC with Z3",
+  "status": "not_equivalent",
+  "miter_sha256": "b030218b16bed0b1cf8739c3b852dfe131227ed6f83a94efbfcf0b86539a1ec3",
+  "returncode": 1,
+  "version": "ESBMC version 8.7.0 64-bit x86_64 windows",
+  "command": [
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\esbmc-v8.7\\release\\bin\\esbmc.exe",
+    "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\hybrid\\study\\main_convolution1d8_buggy\\proof\\residual_0\\miter.c",
+    "--i386-win32",
+    "--32",
+    "--z3",
+    "--bv",
+    "--unwind",
+    "256",
+    "--overflow-check",
+    "--ub-shift-check",
+    "--uninitialised-vars-check",
+    "--multi-property"
+  ],
+  "max_unroll": 256,
+  "timeout_ms": 10000,
+  "elapsed_seconds": 0.240236,
+  "bounds_pointer_division_overflow_shift_uninitialized_unwinding_checks_retained": true
+}

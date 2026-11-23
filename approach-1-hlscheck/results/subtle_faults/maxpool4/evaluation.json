@@ -1,0 +1,243 @@
+{
+  "fingerprints": {
+    "original": "7f85223f15d6f3e86830101941fd162bdf9bdbdbd68a9170cba8912f79fb0f40",
+    "candidate": "b421b6ce177645b13caa5de8c0fbeb7741bef8d213bbba81b9bea5542f76d796",
+    "evaluator": "c6045de93a412b74c1b8a184a264bc3a964ce015d2b4b5864f49909f7cf9cb9a",
+    "checker.py": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+    "esbmc_backend.py": "90a9ab1ea378da78c9df8a43af1174f633011b72798211cff303057961289307",
+    "pipeline.py": "a4b504daefbd3524a1d0a6fc5e872fd2a75b469c869cfb2c33a35711fa731567",
+    "native_helpers": "a83490a2ca85c768fe67d098c3b4b4899539a14db4ac582d6c8760bbf81917fe",
+    "timeout_ms": 15000
+  },
+  "manual_semantic_edits": false,
+  "syntax_compiles": true,
+  "ast_unchanged": false,
+  "verification": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 96,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "image": [
+        2875594563,
+        0,
+        4246527479,
+        0,
+        1419372732,
+        2,
+        48439816,
+        6,
+        3882678457,
+        16777215,
+        1695139739,
+        0,
+        412288838,
+        0,
+        2599827556,
+        2
+      ],
+      "out": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "original_outputs": {
+      "image": [
+        2875594563,
+        0,
+        4246527479,
+        0,
+        1419372732,
+        2,
+        48439816,
+        6,
+        3882678457,
+        16777215,
+        1695139739,
+        0,
+        412288838,
+        0,
+        2599827556,
+        2
+      ],
+      "out": [
+        2875594563,
+        4246527479,
+        3882678457,
+        2599827556
+      ]
+    },
+    "candidate_outputs": {
+      "image": [
+        2875594563,
+        0,
+        4246527479,
+        0,
+        1419372732,
+        2,
+        48439816,
+        6,
+        3882678457,
+        16777215,
+        1695139739,
+        0,
+        412288838,
+        0,
+        2599827556,
+        2
+      ],
+      "out": [
+        1419372732,
+        48439816,
+        412288838,
+        1695139739
+      ]
+    },
+    "elapsed_seconds": 0.292566,
+    "backend": "hlscheck/Z3",
+    "fallback_used": false,
+    "initial_stage": {
+      "status": "not_equivalent",
+      "assumptions": [
+        "32-bit int and unsigned int; uint32_t is unsigned int",
+        "All array parameters are valid, separately allocated, and nonoverlapping",
+        "Functional equality at function completion; no cycle-level RTL guarantee"
+      ],
+      "execution_steps": 96,
+      "paths": {
+        "original": 1,
+        "candidate": 1
+      },
+      "z3_version": "5.1.0",
+      "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+      "component_lemmas": [],
+      "main_query_requires_component_lemmas": false,
+      "counterexample": {
+        "image": [
+          2875594563,
+          0,
+          4246527479,
+          0,
+          1419372732,
+          2,
+          48439816,
+          6,
+          3882678457,
+          16777215,
+          1695139739,
+          0,
+          412288838,
+          0,
+          2599827556,
+          2
+        ],
+        "out": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "original_outputs": {
+        "image": [
+          2875594563,
+          0,
+          4246527479,
+          0,
+          1419372732,
+          2,
+          48439816,
+          6,
+          3882678457,
+          16777215,
+          1695139739,
+          0,
+          412288838,
+          0,
+          2599827556,
+          2
+        ],
+        "out": [
+          2875594563,
+          4246527479,
+          3882678457,
+          2599827556
+        ]
+      },
+      "candidate_outputs": {
+        "image": [
+          2875594563,
+          0,
+          4246527479,
+          0,
+          1419372732,
+          2,
+          48439816,
+          6,
+          3882678457,
+          16777215,
+          1695139739,
+          0,
+          412288838,
+          0,
+          2599827556,
+          2
+        ],
+        "out": [
+          1419372732,
+          48439816,
+          412288838,
+          1695139739
+        ]
+      },
+      "elapsed_seconds": 0.292566
+    }
+  },
+  "status": "not_equivalent",
+  "smt_replay": {
+    "available": true,
+    "passed": true,
+    "witness_pinned": true,
+    "queries": [
+      {
+        "file": "symbolic.smt2",
+        "expected": "sat",
+        "observed": "sat"
+      }
+    ],
+    "scope": "Same Z3 solver; unrestricted UNSAT/lemma replay, SAT replay at recorded input. Not independent proof certificates."
+  },
+  "native": {
+    "passed": true,
+    "trials": 264,
+    "directed_trials": 8,
+    "random_trials": 256,
+    "mismatches": 256,
+    "first_mismatch_trial": 8,
+    "witness_replayed": true,
+    "witness_outputs_agree": true,
+    "harness_sha256": "79b81b03883825cf39858c257ef2b7b155cbf58b7830952dab8b3790fdd94b6b",
+    "command": [
+      "C:\\MinGW\\mingw32\\bin\\clang.EXE",
+      "-std=c11",
+      "-O2",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\maxpool4\\native_differential.c",
+      "-o",
+      "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\subtle_faults\\maxpool4\\native_check_047.exe"
+    ],
+    "exit_code": 0
+  }
+}

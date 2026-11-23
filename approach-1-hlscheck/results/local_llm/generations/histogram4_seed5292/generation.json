@@ -1,0 +1,38 @@
+{
+  "id": "histogram4_seed5292",
+  "case": "histogram4",
+  "source": "benchmarks\\expanded\\histogram4_original.c",
+  "source_sha256": "334e1ce176da979e7557d706260e5fc3bc06c7bde09a84a67de87a7bf0397958",
+  "request_sha256": "9863be6b2361c1db5b8cda053f552ff1bf72483189b7fa42178e1c89eec81bce",
+  "raw_response_sha256": "d343fb3e3f17256946b37698fabc0df829e34c29f2aac4ac13e9ced7677cb24f",
+  "candidate_sha256": "624647f7b58f264103fc7a31bb3a1085f1e224f63d9039c7a2940c2d8950f085",
+  "finish_reason": "stop",
+  "usage": {
+    "completion_tokens": 243,
+    "prompt_tokens": 302,
+    "total_tokens": 545,
+    "prompt_tokens_details": {
+      "cached_tokens": 218
+    }
+  },
+  "timings": {
+    "cache_n": 218,
+    "prompt_n": 84,
+    "prompt_ms": 38.577,
+    "prompt_per_token_ms": 0.45925,
+    "prompt_per_second": 2177.4632553075667,
+    "predicted_n": 243,
+    "predicted_ms": 1991.717,
+    "predicted_per_token_ms": 8.230235537190083,
+    "predicted_per_second": 121.5032055256846
+  },
+  "elapsed_seconds": 2.069,
+  "extraction": "largest fenced code block; no semantic edits",
+  "model_repository": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+  "model_revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+  "model_sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+  "runtime_release": "b12619",
+  "origin": "Actual independently generated local-model optimization attempt; not an injected mutation",
+  "manual_semantic_edits": false,
+  "api_charge_usd": 0
+}

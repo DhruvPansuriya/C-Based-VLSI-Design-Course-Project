@@ -1,0 +1,287 @@
+
+Target: 64-bit little-endian x86_64-unknown-windows with esbmclibc
+Parsing C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c
+Converting
+Generating GOTO Program
+GOTO program creation time: 0.167s
+GOTO program processing time: 0.001s
+Starting Bounded Model Checking
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 7 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 38 column 1 function main
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 7 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 38 column 1 function main
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 7 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 38 column 1 function main
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 7 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 38 column 1 function main
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 7 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 38 column 1 function main
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 7 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 38 column 1 function main
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 7 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 38 column 1 function main
+WARNING: no body for function __hls_nondet_uint
+Unwinding loop 7 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 38 column 1 function main
+Unwinding loop 5 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 5 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 5 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 5 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 5 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 5 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 5 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 11 column 3 function __hls_original
+Unwinding loop 6 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 14 column 3 function __hls_original
+Unwinding loop 6 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 14 column 3 function __hls_original
+Unwinding loop 6 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 14 column 3 function __hls_original
+Unwinding loop 6 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 14 column 3 function __hls_original
+Unwinding loop 6 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 14 column 3 function __hls_original
+Unwinding loop 6 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 14 column 3 function __hls_original
+Unwinding loop 6 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 14 column 3 function __hls_original
+Unwinding loop 3 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 25 column 3 function __hls_candidate
+Unwinding loop 3 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 25 column 3 function __hls_candidate
+Unwinding loop 3 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 25 column 3 function __hls_candidate
+Unwinding loop 3 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 25 column 3 function __hls_candidate
+Unwinding loop 3 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 25 column 3 function __hls_candidate
+Unwinding loop 3 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 25 column 3 function __hls_candidate
+Unwinding loop 3 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 25 column 3 function __hls_candidate
+Unwinding loop 4 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 28 column 3 function __hls_candidate
+Unwinding loop 4 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 28 column 3 function __hls_candidate
+Unwinding loop 4 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 28 column 3 function __hls_candidate
+Unwinding loop 4 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 28 column 3 function __hls_candidate
+Unwinding loop 4 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 28 column 3 function __hls_candidate
+Unwinding loop 4 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 28 column 3 function __hls_candidate
+Unwinding loop 4 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 28 column 3 function __hls_candidate
+Unwinding loop 8 iteration 1   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 46 column 1 function main
+Unwinding loop 8 iteration 2   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 46 column 1 function main
+Unwinding loop 8 iteration 3   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 46 column 1 function main
+Unwinding loop 8 iteration 4   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 46 column 1 function main
+Unwinding loop 8 iteration 5   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 46 column 1 function main
+Unwinding loop 8 iteration 6   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 46 column 1 function main
+Unwinding loop 8 iteration 7   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 46 column 1 function main
+Unwinding loop 8 iteration 8   file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 46 column 1 function main
+Symex completed in: 0.036s (335 assignments)
+Caching time: 0.000s (removed 36 assertions)
+Slicing time: 0.000s (removed 237 assignments)
+Generated 553 VCC(s), 9 remaining after simplification (150 assignments)
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 38 column 30 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 38 column 30 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 38 column 30 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 38 column 30 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 38 column 30 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 38 column 30 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 38 column 30 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 38 column 30 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 11 column 26 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.001s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 11 column 26 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 11 column 26 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 11 column 26 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 11 column 26 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 11 column 26 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 11 column 26 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 14 column 26 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 14 column 26 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 14 column 26 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 14 column 26 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 14 column 26 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 14 column 26 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 14 column 26 function __hls_original' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 25 column 26 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 25 column 26 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 25 column 26 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 25 column 26 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 25 column 26 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 25 column 26 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 25 column 26 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 28 column 26 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 28 column 26 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 28 column 26 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 28 column 26 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 28 column 26 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.001s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 28 column 26 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.000s
+Slicing time: 0.000s (removed 4 assignments)
+Solving claim 'arithmetic overflow on add at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 28 column 26 function __hls_candidate' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.000s
+Solving with solver Z3 v4.13.3
+Runtime decision procedure: 0.001s
+Slicing time: 0.000s (removed 0 assignments)
+Solving claim 'EQUIV:return at file C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\local_llm\evaluations\range8_seed5292\proof\esbmc\harness.c line 45 column 1 function main' with solver Z3 v4.13.3
+Encoding remaining VCC(s) using bit-vector/floating-point arithmetic
+Encoding to solver time: 0.001s
+Solving with solver Z3 v4.13.3
+
+External wall-clock timeout.

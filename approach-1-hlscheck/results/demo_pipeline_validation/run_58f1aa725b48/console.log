@@ -1,0 +1,37 @@
+HLSCheck: source equivalence -> native checks -> measured HLS comparison
+Fresh run: C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\demo_pipeline_validation\run_58f1aa725b48
+
+[1/7] READ AND VALIDATE THE SUPPLIED FILES
+  original: C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\matmul.cpp
+    source SHA256: b1f90a91336658f9d6ef3631b6de0a24956c9f6f11f0e184f34ea32523c3c7f8
+  optimized: C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\matmul_opti.cpp
+    source SHA256: 5fa4889aed68732b46bde3ac9fb104d287b974c725fbe2bbf90e1b4722ea4e71
+  Target: C11 / ILP32; .cpp files must use the supported C-compatible subset.
+  Functions: kernel vs kernel
+  Arrays: valid and nonoverlapping. Compare every final array element and the return value.
+  Scalar preconditions: {}
+
+[2/7] FORMAL C-TO-C EQUIVALENCE
+  Running HLSCheck; limit 60 s per solver/verifier obligation...
+  region_equality: equivalent [custom symbolic execution / Z3]
+  residual_0: equivalent [ESBMC / Z3]
+  VERDICT: equivalent (0.867 s)
+
+[3/7] REPLAY PROOF EVIDENCE AND BIND HLS INPUTS
+  Proof artifact hashes: PASS; accepted SMT queries replayed: 1.
+  original: HLS input is byte-identical to the verified source snapshot.
+  optimized: HLS input is byte-identical to the verified source snapshot.
+
+[4/7] COMPILED-C EDGE/RANDOM CHECKS
+  PASS: 264 typed edge/random comparisons
+  These checks supplement the formal proof; they do not replace it.
+
+[5/7] HLS GENERATION AND RTL SIMULATION
+  Fresh hardware runs; up to 2 designs in parallel. Target: Nangate45, 10 ns.
+  Each design continues from Bambu/Verilator into Yosys and OpenSTA independently.
+  FAILED: [Errno 2] No such file or directory: 'C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\results\\demo_pipeline_validation\\run_58f1aa725b48\\hardware.json'
+  The pipeline did not complete; no successful hardware comparison is reported.
+
+Run status: pipeline_error
+Summary: C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\demo_pipeline_validation\run_58f1aa725b48\summary.json
+Latest-run pointer: C:\Users\ARYAN\Desktop\7th Semester\C-Based VLSI Design\Course_Project\results\demo_pipeline_validation\latest.json

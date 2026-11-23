@@ -1,0 +1,127 @@
+{
+  "case": "matvec4",
+  "variant": "buggy",
+  "expected": "not_equivalent",
+  "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+  "transformation": "Expand matrix-vector inner product with balanced sums",
+  "original": "benchmarks\\expanded\\matvec4_original.c",
+  "candidate": "benchmarks\\expanded\\matvec4_buggy.c",
+  "original_sha256": "9858e09b3a201ab51fb70154142f992ac20aa31df5b43e2543575ab1615fdbdc",
+  "candidate_sha256": "4460b1d012cefa4f42f1eb9f337904385d0000f3577adaf6ffe14d45498a6400",
+  "verification": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 97,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "a": [
+        3908859853,
+        533004288,
+        536866218,
+        2069102592,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "x": [
+        3100589051,
+        536837788,
+        1424990208,
+        536859866
+      ],
+      "out": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "original_outputs": {
+      "a": [
+        3908859853,
+        533004288,
+        536866218,
+        2069102592,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "x": [
+        3100589051,
+        536837788,
+        1424990208,
+        536859866
+      ],
+      "out": [
+        1539110143,
+        0,
+        0,
+        0
+      ]
+    },
+    "candidate_outputs": {
+      "a": [
+        3908859853,
+        533004288,
+        536866218,
+        2069102592,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "x": [
+        3100589051,
+        536837788,
+        1424990208,
+        536859866
+      ],
+      "out": [
+        1539110142,
+        0,
+        0,
+        0
+      ]
+    },
+    "elapsed_seconds": 0.127569
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

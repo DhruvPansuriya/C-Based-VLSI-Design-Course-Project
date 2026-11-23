@@ -1,0 +1,35 @@
+{
+  "run_id": "ada9001fc0a9",
+  "run_directory": "/mnt/c/Users/ARYAN/Desktop/7th Semester/C-Based VLSI Design/Course_Project/results/demo_pipeline_validation/run_ada9001fc0a9",
+  "inputs": {
+    "original": {
+      "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\matmul.cpp",
+      "raw_sha256": "b1f90a91336658f9d6ef3631b6de0a24956c9f6f11f0e184f34ea32523c3c7f8",
+      "snapshot": "inputs/original_source.c",
+      "snapshot_sha256": "b1f90a91336658f9d6ef3631b6de0a24956c9f6f11f0e184f34ea32523c3c7f8",
+      "hls_source": "hls_inputs/original.c",
+      "hls_sha256": "b1f90a91336658f9d6ef3631b6de0a24956c9f6f11f0e184f34ea32523c3c7f8"
+    },
+    "optimized": {
+      "file": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\matmul_opti.cpp",
+      "raw_sha256": "5fa4889aed68732b46bde3ac9fb104d287b974c725fbe2bbf90e1b4722ea4e71",
+      "snapshot": "inputs/optimized_source.c",
+      "snapshot_sha256": "5fa4889aed68732b46bde3ac9fb104d287b974c725fbe2bbf90e1b4722ea4e71",
+      "hls_source": "hls_inputs/optimized.c",
+      "hls_sha256": "5fa4889aed68732b46bde3ac9fb104d287b974c725fbe2bbf90e1b4722ea4e71"
+    }
+  },
+  "proof_requirements": [
+    {
+      "folder": "proof",
+      "result_sha256": "f67ba7746d7cdf069740ce76a7c932406d5316bd3e1febf1d2c743ecb6b3cf80",
+      "source_sha256": {
+        "original": "b1f90a91336658f9d6ef3631b6de0a24956c9f6f11f0e184f34ea32523c3c7f8",
+        "candidate": "5fa4889aed68732b46bde3ac9fb104d287b974c725fbe2bbf90e1b4722ea4e71"
+      }
+    }
+  ],
+  "jobs": 2,
+  "testbench_sha256": "3ed7a86fccc0942c4781833ea9f6e3de52d49e6c46decc9d5b1dca67f4e0e7a5",
+  "native_result_sha256": "1dd809f4df17c92ee83c81a55d54b8d5a02008d8f2ffdf3e229a84b2832db2af"
+}

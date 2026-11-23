@@ -1,0 +1,18 @@
+{
+  "requested_model": "gpt-6.1-sol",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+    },
+    {
+      "role": "user",
+      "content": "Quickly optimize this small kernel for HLS, prioritizing lower area times execution latency.\nPreserve the function name, exact interface, every final parameter-array value, and behavior for all inputs.\nuint32_t arithmetic wraps modulo 2^32. Arrays are valid and nonoverlapping. Do not add input restrictions.\nReturn exactly one complete C11 function with #include <stdint.h>. Do not use helper functions, library calls,\ndynamic memory, extra macros or vendor pragmas. Return code only, without explanation.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational reference: recompute each prefix independently. */\nvoid kernel(uint32_t a[8], uint32_t out[8]) {\n    for (int i = 0; i < 8; i++) {\n        uint32_t sum = 0u;\n        for (int j = 0; j <= i; j++) {\n            sum += a[j];\n        }\n        out[i] = sum;\n    }\n}\n```\n"
+    }
+  ],
+  "submitted_task_text": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation.\n\nQuickly optimize this small kernel for HLS, prioritizing lower area times execution latency.\nPreserve the function name, exact interface, every final parameter-array value, and behavior for all inputs.\nuint32_t arithmetic wraps modulo 2^32. Arrays are valid and nonoverlapping. Do not add input restrictions.\nReturn exactly one complete C11 function with #include <stdint.h>. Do not use helper functions, library calls,\ndynamic memory, extra macros or vendor pragmas. Return code only, without explanation.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational reference: recompute each prefix independently. */\nvoid kernel(uint32_t a[8], uint32_t out[8]) {\n    for (int i = 0; i < 8; i++) {\n        uint32_t sum = 0u;\n        for (int j = 0; j <= i; j++) {\n            sum += a[j];\n        }\n        out[i] = sum;\n    }\n}\n```\n",
+  "transport": "collaboration.spawn_agent",
+  "fork_turns": "none",
+  "task_name": "gpt61_pilot_candidate",
+  "sampling_controls": "Not exposed; recorded as a separate reference"
+}

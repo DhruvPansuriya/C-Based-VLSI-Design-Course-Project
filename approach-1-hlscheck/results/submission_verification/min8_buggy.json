@@ -1,0 +1,69 @@
+{
+  "case": "min8",
+  "variant": "buggy",
+  "expected": "not_equivalent",
+  "origin": "Educational fixed-size uint32_t kernel, authored independently in this Codex session",
+  "transformation": "Balanced comparison tree",
+  "original": "benchmarks\\expanded\\min8_original.c",
+  "candidate": "benchmarks\\expanded\\min8_buggy.c",
+  "original_sha256": "e0f2736d0afd4329c5ffea1780fefe1c220376cec7299674eb71a7808fdf68e6",
+  "candidate_sha256": "d17486fa57f6b7292c898aed4a62ed1e63c03f96331cd2f6ac951d557e3eb8a3",
+  "verification": {
+    "status": "not_equivalent",
+    "assumptions": [
+      "32-bit int and unsigned int; uint32_t is unsigned int",
+      "All array parameters are valid, separately allocated, and nonoverlapping",
+      "Functional equality at function completion; no cycle-level RTL guarantee"
+    ],
+    "execution_steps": 28,
+    "paths": {
+      "original": 1,
+      "candidate": 1
+    },
+    "z3_version": "5.1.0",
+    "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+    "component_lemmas": [],
+    "main_query_requires_component_lemmas": false,
+    "counterexample": {
+      "a": [
+        3599180945,
+        3802604689,
+        4181889164,
+        2924422289,
+        1721996613,
+        1951055492,
+        3963815488,
+        2248445968
+      ]
+    },
+    "original_outputs": {
+      "a": [
+        3599180945,
+        3802604689,
+        4181889164,
+        2924422289,
+        1721996613,
+        1951055492,
+        3963815488,
+        2248445968
+      ],
+      "return": 1721996613
+    },
+    "candidate_outputs": {
+      "a": [
+        3599180945,
+        3802604689,
+        4181889164,
+        2924422289,
+        1721996613,
+        1951055492,
+        3963815488,
+        2248445968
+      ],
+      "return": 1721996612
+    },
+    "elapsed_seconds": 0.174264
+  },
+  "checker_sha256": "5b05336a357eeeecf4acc35f4ff9cfd2a76dc5294c779a4b977903532f7c473c",
+  "timeout_ms": 30000
+}

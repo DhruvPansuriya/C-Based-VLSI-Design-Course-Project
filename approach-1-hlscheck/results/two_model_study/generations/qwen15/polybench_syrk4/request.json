@@ -1,0 +1,18 @@
+{
+  "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+  "messages": [
+    {
+      "role": "system",
+      "content": "You optimize C11 kernels for high-level synthesis. Preserve exact behavior. Return only complete C source code, with no explanation."
+    },
+    {
+      "role": "user",
+      "content": "Quickly optimize this kernel for HLS, prioritizing lower mapped cell area times execution latency at a fixed 10 ns clock.\nPreserve the exact function name, return type, parameter types, array dimensions, every return value and every final parameter-array element for all admitted inputs.\nThe target is ILP32: char8, short16, int32, long32, long-long64; plain char is signed. Preserve integer promotions, signedness and unsigned modular arithmetic at each type's width. Arrays are valid and pairwise nonoverlapping. Do not add input restrictions.\nReturn complete C11 source containing exactly one function named kernel. Preserve required typedefs and macros and include stdint.h if needed. Do not add helper functions, function/library calls, compiler builtins, dynamic memory, globals or vendor pragmas. Do not use undefined behavior. Return code only, without explanation.\n\nOriginal source:\n```c\n/* Dataset-derived integer adaptation; see provenance.json and ../README.md. */\n#include <stdint.h>\n\nvoid kernel(uint32_t alpha, uint32_t beta, uint32_t c[16], uint32_t a[16]) {\n    for (int i = 0; i < 4; i++) {\n        for (int j = 0; j <= i; j++) {\n            c[i * 4 + j] *= beta;\n        }\n        for (int k = 0; k < 4; k++) {\n            for (int j = 0; j <= i; j++) {\n                c[i * 4 + j] += alpha * a[i * 4 + k] * a[j * 4 + k];\n            }\n        }\n    }\n}\n```\n"
+    }
+  ],
+  "stream": false,
+  "seed": 5291,
+  "temperature": 0.2,
+  "top_p": 0.95,
+  "max_tokens": 1536
+}

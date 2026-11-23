@@ -1,0 +1,1004 @@
+{
+  "provider": "Local llama.cpp / NVIDIA Vulkan",
+  "model_provenance": {
+    "model_repository": "Qwen/Qwen2.5-Coder-1.5B-Instruct-GGUF",
+    "model_revision": "f86cb2c1fa58255f8052cc32aeede1b7482d4361",
+    "model_file": "qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+    "model_bytes": 1117320768,
+    "model_sha256": "cc324af070c2ecbfd324a30884d2f951a7ff756aba85cb811a6ec436933bb046",
+    "model_quantization": "Q4_K_M",
+    "runtime_release": "b12619",
+    "runtime_url": "https://github.com/ggml-org/llama.cpp/releases/download/b12619/llama-b12619-bin-win-vulkan-x64.zip",
+    "runtime_sha256": "175d9013769997ab9145cc932f0dd2d89ab3cb6123aecbd83a9645e1cf5e5b9d",
+    "billing": "Local inference only. No external paid inference API calls."
+  },
+  "endpoint": "http://127.0.0.1:8089",
+  "api_charge_usd": 0,
+  "selection": [
+    "prefix",
+    "gemm",
+    "stencil",
+    "fir",
+    "boxfilter",
+    "moving_sum16",
+    "integral_image4",
+    "histogram4",
+    "syrk4",
+    "triangular_matvec4",
+    "parity32",
+    "popcount8",
+    "bitreverse32",
+    "absdiff16",
+    "min8",
+    "threshold_pack8",
+    "quadratic",
+    "convolution1d8",
+    "range8",
+    "deinterleave16"
+  ],
+  "sample_count": 40,
+  "protocol": "Fixed 20 sources x 2 seeds/temperatures. No verifier feedback or manual correction. All outcomes retained.",
+  "truncation_policy": "Length-limited responses are separately labeled; syntax failures are not semantic counterexamples.",
+  "attempts": [
+    {
+      "id": "prefix_seed5291",
+      "case": "prefix",
+      "source": "benchmarks\\submission\\prefix_original.c",
+      "source_sha256": "966bfcab111db30808da089a868f990161e9e1ece3060b3cb491ae034ec80763",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational reference: recompute each prefix independently. */\nvoid kernel(uint32_t a[8], uint32_t out[8]) {\n    for (int i = 0; i < 8; i++) {\n        uint32_t sum = 0u;\n        for (int j = 0; j <= i; j++) {\n            sum += a[j];\n        }\n        out[i] = sum;\n    }\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "gemm_seed5291",
+      "case": "gemm",
+      "source": "benchmarks\\machsuite_u32\\gemm_original.c",
+      "source_sha256": "d34b316a62c77526f14598b5987f8b8a1dfe86a57d3bbda47702b89bfb50cb8f",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n/* MachSuite-derived; copyright/license and adaptations documented in README.md. */\n#include <stdint.h>\n\nvoid kernel(uint32_t m1[16], uint32_t m2[16], uint32_t prod[16]) {\n    for (int i = 0; i < 4; i++) {\n        for (int j = 0; j < 4; j++) {\n            uint32_t sum = 0u;\n            for (int k = 0; k < 4; k++) {\n                sum += m1[i * 4 + k] * m2[k * 4 + j];\n            }\n            prod[i * 4 + j] = sum;\n        }\n    }\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "stencil_seed5291",
+      "case": "stencil",
+      "source": "benchmarks\\machsuite_u32\\stencil_original.c",
+      "source_sha256": "8c46a73e96b8c5cf7b0b2ee7a25f26ac6f2bd090f01a4c9d6dc0479275937149",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n/* MachSuite-derived; copyright/license and adaptations documented in README.md. */\n#include <stdint.h>\n\nvoid kernel(uint32_t orig[25], uint32_t sol[25], uint32_t filter[9]) {\n    for (int r = 0; r < 3; r++) {\n        for (int c = 0; c < 3; c++) {\n            uint32_t temp = 0u;\n            for (int k1 = 0; k1 < 3; k1++) {\n                for (int k2 = 0; k2 < 3; k2++) {\n                    temp += filter[k1 * 3 + k2] * orig[(r + k1) * 5 + c + k2];\n                }\n            }\n            sol[r * 5 + c] = temp;\n        }\n    }\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "fir_seed5291",
+      "case": "fir",
+      "source": "benchmarks\\submission\\fir_original.c",
+      "source_sha256": "40a9fd8465748b12a5f6db5af5ccf2fecc21a213960b86668b28e71a3da9f995",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Eight-tap symmetric integer FIR; unsigned arithmetic is modulo 2^32. */\nuint32_t kernel(uint32_t a[8]) {\n    uint32_t sum = a[0] * 3u;\n    sum += a[1] * 5u;\n    sum += a[2] * 7u;\n    sum += a[3] * 11u;\n    sum += a[4] * 11u;\n    sum += a[5] * 7u;\n    sum += a[6] * 5u;\n    sum += a[7] * 3u;\n    return sum;\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "boxfilter_seed5291",
+      "case": "boxfilter",
+      "source": "benchmarks\\submission\\boxfilter_original.c",
+      "source_sha256": "503d18c2a8751ab64fd28dc52079e24907d1c305d661e2ddb3354f5e3485fa59",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational 3x3 box sum over the nine valid windows of a 5x5 image. */\nvoid kernel(uint32_t image[25], uint32_t out[9]) {\n    for (int r = 0; r < 3; r++) {\n        for (int c = 0; c < 3; c++) {\n            uint32_t sum = 0u;\n            for (int y = 0; y < 3; y++) {\n                for (int x = 0; x < 3; x++) {\n                    sum += image[(r + y) * 5 + c + x];\n                }\n            }\n            out[r * 3 + c] = sum;\n        }\n    }\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "moving_sum16_seed5291",
+      "case": "moving_sum16",
+      "source": "benchmarks\\expanded\\moving_sum16_original.c",
+      "source_sha256": "cfa8d1d79c54aec578ff396c4379607c3eaa401a284144ef9f1860943e0192cb",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nvoid kernel(uint32_t a[16], uint32_t out[13]) {\n    for(int i=0;i<13;i++){uint32_t sum=0u;for(int j=0;j<4;j++) sum+=a[i+j];out[i]=sum;}\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "integral_image4_seed5291",
+      "case": "integral_image4",
+      "source": "benchmarks\\expanded\\integral_image4_original.c",
+      "source_sha256": "747a095197a660314353e99f4521b8ae537ca631e6bdcb186026e2a6f9eba94d",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nvoid kernel(uint32_t image[16], uint32_t out[16]) {\n    for(int r=0;r<4;r++) for(int c=0;c<4;c++){uint32_t sum=0u;for(int i=0;i<=r;i++) for(int j=0;j<=c;j++) sum+=image[i*4+j];out[r*4+c]=sum;}\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "histogram4_seed5291",
+      "case": "histogram4",
+      "source": "benchmarks\\expanded\\histogram4_original.c",
+      "source_sha256": "334e1ce176da979e7557d706260e5fc3bc06c7bde09a84a67de87a7bf0397958",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nvoid kernel(uint32_t a[16], uint32_t out[4]) {\n    for(int bin=0;bin<4;bin++){uint32_t count=0u;for(int i=0;i<16;i++) count+=((a[i]&3u)==(uint32_t)bin?1u:0u);out[bin]=count;}\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "syrk4_seed5291",
+      "case": "syrk4",
+      "source": "benchmarks\\expanded\\syrk4_original.c",
+      "source_sha256": "96b3d566620c663fedad5dc0a4ddddd2d17a0eaa168e504d8032e85c1d22aba9",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nvoid kernel(uint32_t a[16], uint32_t out[16]) {\n    for(int i=0;i<4;i++) for(int j=0;j<4;j++){uint32_t sum=0u;for(int k=0;k<4;k++) sum+=a[i*4+k]*a[j*4+k];out[i*4+j]=sum;}\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "triangular_matvec4_seed5291",
+      "case": "triangular_matvec4",
+      "source": "benchmarks\\expanded\\triangular_matvec4_original.c",
+      "source_sha256": "15a86280cc9ba8e62a44b1ba000df6e9fa4def37f2a481c2e5a2e548fb9e6224",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nvoid kernel(uint32_t a[16], uint32_t x[4], uint32_t out[4]) {\n    for(int r=0;r<4;r++){uint32_t sum=0u;for(int c=0;c<4;c++){if(c<=r) sum+=a[r*4+c]*x[c];}out[r]=sum;}\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "parity32_seed5291",
+      "case": "parity32",
+      "source": "benchmarks\\expanded\\parity32_original.c",
+      "source_sha256": "2144016aecc1ec992f7d016d7bb9c024f686c2735ae638889370b1dd88e7c784",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nuint32_t kernel(uint32_t x) {\n    uint32_t parity=0u;for(int i=0;i<32;i++) parity^=(x>>i)&1u;return parity;\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "popcount8_seed5291",
+      "case": "popcount8",
+      "source": "benchmarks\\expanded\\popcount8_original.c",
+      "source_sha256": "172bdc0fed00501725a4d43d15729bd91ffd8fa2c27d9a97bc8674a9cf55ff5c",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nuint32_t kernel(uint32_t x) {\n    uint32_t count=0u;for(int i=0;i<8;i++) count+=(x>>i)&1u;return count;\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "bitreverse32_seed5291",
+      "case": "bitreverse32",
+      "source": "benchmarks\\expanded\\bitreverse32_original.c",
+      "source_sha256": "1061706098a75b2fa2c0ff02ff2f876a32903df13e9a566a6cba83d5c0a8ff00",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nuint32_t kernel(uint32_t x) {\n    uint32_t y=0u;for(int i=0;i<32;i++){y=(y<<1)|(x&1u);x=x>>1;}return y;\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "absdiff16_seed5291",
+      "case": "absdiff16",
+      "source": "benchmarks\\expanded\\absdiff16_original.c",
+      "source_sha256": "4fb2285ef52ac7db6a24b12d781463f465ed133b75417305c6e0cf67b272ba28",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nvoid kernel(uint32_t a[16], uint32_t b[16], uint32_t out[16]) {\n    for(int i=0;i<16;i++) out[i]=a[i]>b[i]?a[i]-b[i]:b[i]-a[i];\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "min8_seed5291",
+      "case": "min8",
+      "source": "benchmarks\\expanded\\min8_original.c",
+      "source_sha256": "e0f2736d0afd4329c5ffea1780fefe1c220376cec7299674eb71a7808fdf68e6",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nuint32_t kernel(uint32_t a[8]) {\n    uint32_t value=a[0];for(int i=1;i<8;i++) value=a[i]<value?a[i]:value;return value;\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "threshold_pack8_seed5291",
+      "case": "threshold_pack8",
+      "source": "benchmarks\\expanded\\threshold_pack8_original.c",
+      "source_sha256": "e7cb3ff3a207b30b239e82a3187b757ee56b6a7a9cbb1178a28b3b695ae7f4a5",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nuint32_t kernel(uint32_t a[8]) {\n    uint32_t packed=0u;for(int i=0;i<8;i++) packed|=(a[i]>128u?1u:0u)<<i;return packed;\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "quadratic_seed5291",
+      "case": "quadratic",
+      "source": "benchmarks\\expanded\\quadratic_original.c",
+      "source_sha256": "b1a5c33f2e20a7e8a13c85d755f69da4f532c0075724d08387f37e8a2421ee44",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nuint32_t kernel(uint32_t x, uint32_t a, uint32_t b, uint32_t c) {\n    return a*x*x+b*x+c;\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "convolution1d8_seed5291",
+      "case": "convolution1d8",
+      "source": "benchmarks\\expanded\\convolution1d8_original.c",
+      "source_sha256": "81c9e816a1f7336112c62a19450ca413634c1c25e15f2af754ddc82a487cb839",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nvoid kernel(uint32_t a[8], uint32_t out[6]) {\n    for(int i=0;i<6;i++) out[i]=3u*a[i]+5u*a[i+1]+3u*a[i+2];\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "range8_seed5291",
+      "case": "range8",
+      "source": "benchmarks\\expanded\\range8_original.c",
+      "source_sha256": "bde9f77244f0d0f8e73da6cfb25445e7cf837f13f609fc36950de7b48b4b5af8",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nuint32_t kernel(uint32_t a[8]) {\n    uint32_t low=a[0],high=a[0];\n    for(int i=1;i<8;i++) low=a[i]<low?a[i]:low;\n    for(int j=1;j<8;j++) high=a[j]>high?a[j]:high;\n    return high-low;\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "deinterleave16_seed5291",
+      "case": "deinterleave16",
+      "source": "benchmarks\\expanded\\deinterleave16_original.c",
+      "source_sha256": "a45e28b99abffd43c8eca90b75bf3a978c7fa832ab85ced146c8f94b7afb13f1",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nvoid kernel(uint32_t a[16], uint32_t even[8], uint32_t odd[8]) {\n    for(int i=0;i<8;i++) even[i]=a[2*i];for(int j=0;j<8;j++) odd[j]=a[2*j+1];\n}\n\n```\n"
+          }
+        ],
+        "seed": 5291,
+        "temperature": 0.2,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "prefix_seed5292",
+      "case": "prefix",
+      "source": "benchmarks\\submission\\prefix_original.c",
+      "source_sha256": "966bfcab111db30808da089a868f990161e9e1ece3060b3cb491ae034ec80763",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational reference: recompute each prefix independently. */\nvoid kernel(uint32_t a[8], uint32_t out[8]) {\n    for (int i = 0; i < 8; i++) {\n        uint32_t sum = 0u;\n        for (int j = 0; j <= i; j++) {\n            sum += a[j];\n        }\n        out[i] = sum;\n    }\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "gemm_seed5292",
+      "case": "gemm",
+      "source": "benchmarks\\machsuite_u32\\gemm_original.c",
+      "source_sha256": "d34b316a62c77526f14598b5987f8b8a1dfe86a57d3bbda47702b89bfb50cb8f",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n/* MachSuite-derived; copyright/license and adaptations documented in README.md. */\n#include <stdint.h>\n\nvoid kernel(uint32_t m1[16], uint32_t m2[16], uint32_t prod[16]) {\n    for (int i = 0; i < 4; i++) {\n        for (int j = 0; j < 4; j++) {\n            uint32_t sum = 0u;\n            for (int k = 0; k < 4; k++) {\n                sum += m1[i * 4 + k] * m2[k * 4 + j];\n            }\n            prod[i * 4 + j] = sum;\n        }\n    }\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "stencil_seed5292",
+      "case": "stencil",
+      "source": "benchmarks\\machsuite_u32\\stencil_original.c",
+      "source_sha256": "8c46a73e96b8c5cf7b0b2ee7a25f26ac6f2bd090f01a4c9d6dc0479275937149",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n/* MachSuite-derived; copyright/license and adaptations documented in README.md. */\n#include <stdint.h>\n\nvoid kernel(uint32_t orig[25], uint32_t sol[25], uint32_t filter[9]) {\n    for (int r = 0; r < 3; r++) {\n        for (int c = 0; c < 3; c++) {\n            uint32_t temp = 0u;\n            for (int k1 = 0; k1 < 3; k1++) {\n                for (int k2 = 0; k2 < 3; k2++) {\n                    temp += filter[k1 * 3 + k2] * orig[(r + k1) * 5 + c + k2];\n                }\n            }\n            sol[r * 5 + c] = temp;\n        }\n    }\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "fir_seed5292",
+      "case": "fir",
+      "source": "benchmarks\\submission\\fir_original.c",
+      "source_sha256": "40a9fd8465748b12a5f6db5af5ccf2fecc21a213960b86668b28e71a3da9f995",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Eight-tap symmetric integer FIR; unsigned arithmetic is modulo 2^32. */\nuint32_t kernel(uint32_t a[8]) {\n    uint32_t sum = a[0] * 3u;\n    sum += a[1] * 5u;\n    sum += a[2] * 7u;\n    sum += a[3] * 11u;\n    sum += a[4] * 11u;\n    sum += a[5] * 7u;\n    sum += a[6] * 5u;\n    sum += a[7] * 3u;\n    return sum;\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "boxfilter_seed5292",
+      "case": "boxfilter",
+      "source": "benchmarks\\submission\\boxfilter_original.c",
+      "source_sha256": "503d18c2a8751ab64fd28dc52079e24907d1c305d661e2ddb3354f5e3485fa59",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational 3x3 box sum over the nine valid windows of a 5x5 image. */\nvoid kernel(uint32_t image[25], uint32_t out[9]) {\n    for (int r = 0; r < 3; r++) {\n        for (int c = 0; c < 3; c++) {\n            uint32_t sum = 0u;\n            for (int y = 0; y < 3; y++) {\n                for (int x = 0; x < 3; x++) {\n                    sum += image[(r + y) * 5 + c + x];\n                }\n            }\n            out[r * 3 + c] = sum;\n        }\n    }\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "moving_sum16_seed5292",
+      "case": "moving_sum16",
+      "source": "benchmarks\\expanded\\moving_sum16_original.c",
+      "source_sha256": "cfa8d1d79c54aec578ff396c4379607c3eaa401a284144ef9f1860943e0192cb",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nvoid kernel(uint32_t a[16], uint32_t out[13]) {\n    for(int i=0;i<13;i++){uint32_t sum=0u;for(int j=0;j<4;j++) sum+=a[i+j];out[i]=sum;}\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "integral_image4_seed5292",
+      "case": "integral_image4",
+      "source": "benchmarks\\expanded\\integral_image4_original.c",
+      "source_sha256": "747a095197a660314353e99f4521b8ae537ca631e6bdcb186026e2a6f9eba94d",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nvoid kernel(uint32_t image[16], uint32_t out[16]) {\n    for(int r=0;r<4;r++) for(int c=0;c<4;c++){uint32_t sum=0u;for(int i=0;i<=r;i++) for(int j=0;j<=c;j++) sum+=image[i*4+j];out[r*4+c]=sum;}\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "histogram4_seed5292",
+      "case": "histogram4",
+      "source": "benchmarks\\expanded\\histogram4_original.c",
+      "source_sha256": "334e1ce176da979e7557d706260e5fc3bc06c7bde09a84a67de87a7bf0397958",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nvoid kernel(uint32_t a[16], uint32_t out[4]) {\n    for(int bin=0;bin<4;bin++){uint32_t count=0u;for(int i=0;i<16;i++) count+=((a[i]&3u)==(uint32_t)bin?1u:0u);out[bin]=count;}\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "syrk4_seed5292",
+      "case": "syrk4",
+      "source": "benchmarks\\expanded\\syrk4_original.c",
+      "source_sha256": "96b3d566620c663fedad5dc0a4ddddd2d17a0eaa168e504d8032e85c1d22aba9",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nvoid kernel(uint32_t a[16], uint32_t out[16]) {\n    for(int i=0;i<4;i++) for(int j=0;j<4;j++){uint32_t sum=0u;for(int k=0;k<4;k++) sum+=a[i*4+k]*a[j*4+k];out[i*4+j]=sum;}\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "triangular_matvec4_seed5292",
+      "case": "triangular_matvec4",
+      "source": "benchmarks\\expanded\\triangular_matvec4_original.c",
+      "source_sha256": "15a86280cc9ba8e62a44b1ba000df6e9fa4def37f2a481c2e5a2e548fb9e6224",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nvoid kernel(uint32_t a[16], uint32_t x[4], uint32_t out[4]) {\n    for(int r=0;r<4;r++){uint32_t sum=0u;for(int c=0;c<4;c++){if(c<=r) sum+=a[r*4+c]*x[c];}out[r]=sum;}\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "parity32_seed5292",
+      "case": "parity32",
+      "source": "benchmarks\\expanded\\parity32_original.c",
+      "source_sha256": "2144016aecc1ec992f7d016d7bb9c024f686c2735ae638889370b1dd88e7c784",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nuint32_t kernel(uint32_t x) {\n    uint32_t parity=0u;for(int i=0;i<32;i++) parity^=(x>>i)&1u;return parity;\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "popcount8_seed5292",
+      "case": "popcount8",
+      "source": "benchmarks\\expanded\\popcount8_original.c",
+      "source_sha256": "172bdc0fed00501725a4d43d15729bd91ffd8fa2c27d9a97bc8674a9cf55ff5c",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nuint32_t kernel(uint32_t x) {\n    uint32_t count=0u;for(int i=0;i<8;i++) count+=(x>>i)&1u;return count;\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "bitreverse32_seed5292",
+      "case": "bitreverse32",
+      "source": "benchmarks\\expanded\\bitreverse32_original.c",
+      "source_sha256": "1061706098a75b2fa2c0ff02ff2f876a32903df13e9a566a6cba83d5c0a8ff00",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nuint32_t kernel(uint32_t x) {\n    uint32_t y=0u;for(int i=0;i<32;i++){y=(y<<1)|(x&1u);x=x>>1;}return y;\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "absdiff16_seed5292",
+      "case": "absdiff16",
+      "source": "benchmarks\\expanded\\absdiff16_original.c",
+      "source_sha256": "4fb2285ef52ac7db6a24b12d781463f465ed133b75417305c6e0cf67b272ba28",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nvoid kernel(uint32_t a[16], uint32_t b[16], uint32_t out[16]) {\n    for(int i=0;i<16;i++) out[i]=a[i]>b[i]?a[i]-b[i]:b[i]-a[i];\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "min8_seed5292",
+      "case": "min8",
+      "source": "benchmarks\\expanded\\min8_original.c",
+      "source_sha256": "e0f2736d0afd4329c5ffea1780fefe1c220376cec7299674eb71a7808fdf68e6",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nuint32_t kernel(uint32_t a[8]) {\n    uint32_t value=a[0];for(int i=1;i<8;i++) value=a[i]<value?a[i]:value;return value;\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "threshold_pack8_seed5292",
+      "case": "threshold_pack8",
+      "source": "benchmarks\\expanded\\threshold_pack8_original.c",
+      "source_sha256": "e7cb3ff3a207b30b239e82a3187b757ee56b6a7a9cbb1178a28b3b695ae7f4a5",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nuint32_t kernel(uint32_t a[8]) {\n    uint32_t packed=0u;for(int i=0;i<8;i++) packed|=(a[i]>128u?1u:0u)<<i;return packed;\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "quadratic_seed5292",
+      "case": "quadratic",
+      "source": "benchmarks\\expanded\\quadratic_original.c",
+      "source_sha256": "b1a5c33f2e20a7e8a13c85d755f69da4f532c0075724d08387f37e8a2421ee44",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nuint32_t kernel(uint32_t x, uint32_t a, uint32_t b, uint32_t c) {\n    return a*x*x+b*x+c;\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "convolution1d8_seed5292",
+      "case": "convolution1d8",
+      "source": "benchmarks\\expanded\\convolution1d8_original.c",
+      "source_sha256": "81c9e816a1f7336112c62a19450ca413634c1c25e15f2af754ddc82a487cb839",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nvoid kernel(uint32_t a[8], uint32_t out[6]) {\n    for(int i=0;i<6;i++) out[i]=3u*a[i]+5u*a[i+1]+3u*a[i+2];\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "range8_seed5292",
+      "case": "range8",
+      "source": "benchmarks\\expanded\\range8_original.c",
+      "source_sha256": "bde9f77244f0d0f8e73da6cfb25445e7cf837f13f609fc36950de7b48b4b5af8",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nuint32_t kernel(uint32_t a[8]) {\n    uint32_t low=a[0],high=a[0];\n    for(int i=1;i<8;i++) low=a[i]<low?a[i]:low;\n    for(int j=1;j<8;j++) high=a[j]>high?a[j]:high;\n    return high-low;\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    },
+    {
+      "id": "deinterleave16_seed5292",
+      "case": "deinterleave16",
+      "source": "benchmarks\\expanded\\deinterleave16_original.c",
+      "source_sha256": "a45e28b99abffd43c8eca90b75bf3a978c7fa832ab85ced146c8f94b7afb13f1",
+      "request": {
+        "model": "C:\\Users\\ARYAN\\Desktop\\7th Semester\\C-Based VLSI Design\\Course_Project\\tools\\local_llm\\qwen2.5-coder-1.5b-instruct-q4_k_m.gguf",
+        "messages": [
+          {
+            "role": "system",
+            "content": "You optimize C11 functions for high-level synthesis. Preserve exact C behavior and the full interface. Return only the complete C source code, with no explanation."
+          },
+          {
+            "role": "user",
+            "content": "Rewrite the following function to improve hardware area or function latency in HLS.\nPreserve its exact function name, return type, parameter types, array dimensions,\nevery return value, and all final parameter-array contents for every admitted input.\nAll uint32_t data use modulo-2^32 arithmetic. Arrays are valid and nonoverlapping.\nDo not add input restrictions. Use C11, not C++. Emit exactly one function, include\nstdint.h, and use no helper functions, dynamic memory, extra macros, or vendor pragmas.\nUse source transformations such as reuse, loop restructuring, or exposed parallelism\nwhen useful. Preserve unsigned overflow, boundary elements and edge cases.\n\nOriginal source:\n```c\n#include <stdint.h>\n\n/* Educational fixed-size uint32_t kernel, authored independently in this Codex session.\n   Reference implementation. */\nvoid kernel(uint32_t a[16], uint32_t even[8], uint32_t odd[8]) {\n    for(int i=0;i<8;i++) even[i]=a[2*i];for(int j=0;j<8;j++) odd[j]=a[2*j+1];\n}\n\n```\n"
+          }
+        ],
+        "seed": 5292,
+        "temperature": 0.8,
+        "top_p": 0.95,
+        "max_tokens": 1536,
+        "stream": false
+      }
+    }
+  ]
+}

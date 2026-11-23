@@ -1,0 +1,168 @@
+{
+  "status": "not_equivalent",
+  "assumptions": [
+    "32-bit int and unsigned int; uint32_t is unsigned int",
+    "All array parameters are valid, separately allocated, and nonoverlapping",
+    "Functional equality at function completion; no cycle-level RTL guarantee"
+  ],
+  "execution_steps": 64,
+  "paths": {
+    "original": 1,
+    "candidate": 1
+  },
+  "z3_version": "5.1.0",
+  "normalization": "Z3 modular sum-of-monomials simplification of output differences",
+  "component_lemmas": [],
+  "main_query_requires_component_lemmas": false,
+  "counterexample": {
+    "a": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "x": [
+      225276076,
+      1148970730,
+      3995441905,
+      3405511665
+    ],
+    "y": [
+      0,
+      0,
+      848033791,
+      1984164336
+    ],
+    "out": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "original_outputs": {
+    "a": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "x": [
+      225276076,
+      1148970730,
+      3995441905,
+      3405511665
+    ],
+    "y": [
+      0,
+      0,
+      848033791,
+      1984164336
+    ],
+    "out": [
+      0,
+      0,
+      3172806484,
+      1655672128,
+      0,
+      0,
+      3628386582,
+      600360288,
+      0,
+      0,
+      2999901455,
+      1295065840,
+      0,
+      0,
+      787512335,
+      2323452656
+    ]
+  },
+  "candidate_outputs": {
+    "a": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "x": [
+      225276076,
+      1148970730,
+      3995441905,
+      3405511665
+    ],
+    "y": [
+      0,
+      0,
+      848033791,
+      1984164336
+    ],
+    "out": [
+      0,
+      0,
+      3172806484,
+      3172806484,
+      0,
+      0,
+      3628386582,
+      3628386582,
+      0,
+      0,
+      2999901455,
+      2999901455,
+      0,
+      0,
+      787512335,
+      787512335
+    ]
+  },
+  "elapsed_seconds": 0.538807
+}

@@ -1,0 +1,12 @@
+{
+  "id": "polybench_atax4",
+  "source": "benchmarks/two_model_study/polybench_atax4/original.c",
+  "function": "kernel",
+  "original_sha256": "9c80ac32ecce7877190da99f0a9cf906fe476396afdfba0e0cd3af57cbeef407",
+  "suite": "HLS-Eval / PolyBench",
+  "upstream_source": "datasets/hls-eval/hls_eval_data/polybench/atax/atax.cpp",
+  "upstream_sha256": "a91cae8312899fc28865b9cdffc14ec83a6597887bef3851d4c87782222a6ef2",
+  "preparation": "Adapt PolyBench source through HLS-Eval: replace double with uint32_t, flatten row-major arrays, reduce dimensions to4, rename kernel_atax to kernel, remove external includes and HLS pragma, and use literal loop limits. Rectangular38x42 dimensions become4x4. Preserve y/tmp initialization and both multiply-accumulation nests; tmp remains an observable output. This unsigned integer benchmark is a new domain; no equivalence to upstream floating point is claimed.",
+  "category": "adapted_kernel",
+  "integer_domain": "All data are unsigned32 with modulo-2^32 arithmetic; valid pairwise-nonoverlapping parameter arrays; unchanged array elements remain observable."
+}
